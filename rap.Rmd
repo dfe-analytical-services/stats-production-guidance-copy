@@ -39,11 +39,10 @@ The collection of, and routine checking of data as it is coming into the departm
 ---
 
 
+# What we need to do {#p1}
 
 
-
-# What do we need to do {#p1}
-
+---
 
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point.
 
@@ -380,48 +379,48 @@ More to follow.
 
 ---
 
-#### Naming conventions
+### Naming conventions
 
 
 Using those slides found a while back.
 
 ---
 
-#### Folder structures
+### Folder structures
 
 
 Something in here that is useful.
 
 ---
 
-#### Documentation
+### Documentation
 
 
 Linking to this from the checklist.
 
 ---
 
-### Version control software
+## Version control software
 
 
 More to follow.
 
 ---
 
-#### Introduction to git
+### Introduction to git
 
 More to follow.
 
 ---
 
-#### How to setup an azure devops area
+### How to setup an azure devops area
 
 
 Some text. Probably worth also pointing people towards how to set up a repo in prep for the following section.
 
 ---
 
-#### How to use git in practice
+### How to use git in practice
 
 
 Some more text, probably include something around collaboration too.

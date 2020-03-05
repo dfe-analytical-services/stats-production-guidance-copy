@@ -401,10 +401,15 @@ div.tocify {
 <hr />
 </div>
 </div>
-<div id="core-principles" class="section level1 unnumbered">
-<h1>Core principles</h1>
+<div id="p1" class="section level1">
+<h1>What do we need to do</h1>
+<p>Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point.</p>
+<p>Teams are expected to review their own processes and use the guidance on this site to start making improvements towards meeting the four core principles if they aren’t already.</p>
 <hr />
-<p>Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Regardless of how it is implemented, the goal is that we should be using the guidance on this site to ensure our production processes meet the following key principles, and in turn, free us up to focus on the fun stuff:</p>
+<div id="core-principles" class="section level2">
+<h2>Core principles</h2>
+<hr />
+<p>Regardless of how it is implemented, the goal is that we should be using the guidance on this site to ensure our production processes meet the following key principles, and in turn, free us up to focus on the fun stuff:</p>
 <ul>
 <li><p>Data sources for a publication are stored in the same database - <a href="#p3">Getting source data together</a></p></li>
 <li><p>Underlying data files are produced using code, with no manual steps - <a href="#p4">Using automation to process data</a></p></li>
@@ -412,37 +417,22 @@ div.tocify {
 <li><p>There should be basic automated quality assurance applied to outputs - <a href="#p6">Using automated QA</a></p></li>
 </ul>
 <hr />
-</div>
-<div id="p1" class="section level1">
-<h1>Assessing my work against RAP</h1>
-<hr />
-<div id="what-do-i-need-to-do" class="section level3">
-<h3>What do I need to do</h3>
-<p>Teams are expected to review their own pipelines and start making improvements towards meeting the four core principles:</p>
-<ul>
-<li><p><strong>Data sources for a publication are stored in the same database</strong></p></li>
-<li><p><strong>Underlying data files are produced using reproducible and auditable code, with no manual steps</strong></p></li>
-<li><p><strong>Files and scripts should be appropriately version controlled</strong></p></li>
-<li><p><strong>There should be basic automated quality assurance applied to outputs</strong></p></li>
-</ul>
-<hr />
-</div>
 <div id="where-i-need-to-focus" class="section level3">
 <h3>Where I need to focus</h3>
-<p>The standard pipeline for all teams will roughly resemble this:</p>
+<p>Most teams have already made progress with their production of tidy data files, and the release of the automated screener has now tied up that end point of the pipeline that we are all currently working towards. The standard pipeline for all teams will roughly resemble this:</p>
 <p><img src="images/RAP-Process-Overview.png" /><!-- --></p>
-<p>Most teams have already made progress with their production of tidy data files, and the release of the automated screener has now tied up that end point of the pipeline that we are all currently working towards.</p>
-<p>The key now is for us to build on the work so far and focus on how we improve the quality/efficiency of our production processes up to that point. To do this, we need to make a concerted effort to standardise how we store and access our data, before then automating what we can to reduce the burden of getting the numbers ready and see the benefits of RAP. The exact meaning of this will vary within teams.</p>
+<p>The key now is for us to build on the work so far and focus on how we improve the quality and efficiency of our production processes up to that point. To do this, we need to make a concerted effort to standardise how we store and access our data, before then automating what we can to reduce the burden of getting the numbers ready and see the benefits of RAP. The exact meaning of this will vary within teams.</p>
 <hr />
 </div>
-<div id="rap-process-checklists" class="section level3">
-<h3>RAP process checklists</h3>
+</div>
+<div id="rap-process-checklists" class="section level2">
+<h2>RAP process checklists</h2>
 <p>The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the minimum implementation of RAP by the end of their next production cycle. It’s worth acknowledging that some teams are already working around good and best practice levels.</p>
 <p><img src="images/RAP-in-practice.png" /><!-- --></p>
 <p>Below are checklists designed to make reviewing our processes based on the graphic above easier, giving a straightforward list of things to check our work against. This will flag areas that require improvement, once we know what it is we need to address at a publication level, we can then use the sidebar to go to the specific section with more guidance on how to get there.</p>
 <hr />
-<div id="minimum-expected" class="section level4">
-<h4>Minimum expected</h4>
+<div id="minimum-expected" class="section level3">
+<h3>Minimum expected</h3>
 <p>Do I have a sensible folder and file structure? - Explanation and links</p>
 <p>Do I have suitable documentation? - Explanation and links</p>
 <p>Are my underlying data files screened against the standards? - Explanation and links</p>
@@ -452,8 +442,8 @@ div.tocify {
 <p>Do I produce my data with no manual steps? - Explanation and links</p>
 <hr />
 </div>
-<div id="good-practice" class="section level4">
-<h4>Good practice</h4>
+<div id="good-practice" class="section level3">
+<h3>Good practice</h3>
 <p>Do I have recyclable code that can be used year-on-year? - Explanation and links</p>
 <p>Do I have a git-controlled repo with final versions of code and documentation saved in it? - Explanation and links</p>
 <p>Is the data-screener run within my own team? - Explanation and links</p>
@@ -462,8 +452,8 @@ div.tocify {
 <p>Do I use automation to produce summary reports of my data? - Explanation and links</p>
 <hr />
 </div>
-<div id="best-practice" class="section level4">
-<h4>Best practice</h4>
+<div id="best-practice" class="section level3">
+<h3>Best practice</h3>
 <p>Does my team actively collaborate and develop code in a git-controlled repo? - Explanation and links</p>
 <p>Do I use a single production script to get from source to underlying data, with intergrated QA and summary reports? - Explanation and links</p>
 <hr />
@@ -473,8 +463,8 @@ div.tocify {
 <div id="p2" class="section level1">
 <h1>Tools and learning resources</h1>
 <hr />
-<p>We’re developing resources to help you begin on your own RAP process. Below are the recommended tools to use that will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE.</p>
-<p><strong>We are happy for people to use whatever tools they want to meet the principles of RAP.</strong></p>
+<p><strong>We are happy for people to use whatever tools they want, as long as the proccesses meet the principles of RAP.</strong></p>
+<p>However, we’re developing resources to help you begin on your own RAP process. Below are the recommended tools to use that will be the easiest to pick up, and will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE, and are already working in our current IT setup.</p>
 <hr />
 <div id="recommended-tools" class="section level3">
 <h3>Recommended tools</h3>
@@ -512,6 +502,7 @@ div.tocify {
 <li><p>You should also ensure that your data follows the GSS Standards on symbols.</p></li>
 <li><p>And the last one for now is StyleR, less L+D and more a nifty package that helps you to standardise and style your R code in line with tidyverse formatting rules to make it easier to read and reuse for others.</p></li>
 </ul>
+<hr />
 <p>In general there is a widening knowledge of the methods within SQL and R that are commonly used to process the data in this format, so we recommended asking around production teams if you hit specific issues or want general advice on what experienced when changing their production processes. There is an ever growing list of teams that have their data aligned with the standards already, so you’ll never be too far away from someone who has already done something similar.</p>
 <p>Finally, if you are stuck at all, have any questions, or even just want a second pair of eyes to double check something, email <a href="mailto:cameron.race@education.gov.uk" class="email">cameron.race@education.gov.uk</a>.</p>
 <hr />
@@ -523,7 +514,7 @@ div.tocify {
 <hr />
 <div id="assumptions" class="section level3">
 <h3>Assumptions</h3>
-<p>Assumption that the process starts with clean datasets which hold data in the ‘rawest form’ and have been deemed fit for purpose by the production team. RAP can play a part in that data cleaning process but is out of scope here.</p>
+<p>The process starts with clean datasets which hold data in the ‘rawest form’ and have been deemed fit for purpose by the production team. RAP can play a part in that data cleaning process but is out of scope here.</p>
 <p>Teams may then have to manipulate that data, to varying degrees, before they can create their tidy data files in line with the tidy data guidance. This process should be saved as code, avoiding any manual steps.</p>
 <p>Then teams create tidy data files, ideally using one script per output file. Any metadata files would also need to be produced.</p>
 <p>Teams should use appropriate version control of files to keep track of their outputs.</p>
@@ -537,7 +528,8 @@ div.tocify {
 <div id="why-use-sql-server" class="section level3">
 <h3>Why use SQL Server?</h3>
 <p>SQL stands for Structured Query language and is a scripting language, which asks physical servers at a DfE site to process data.</p>
-<p>In order for us to be able to have an end-to-end data pipeline where we can replicate our analysis across the department, we should store all of the raw data needed to create aggregate statistics in a managed Microsoft SQL Server. This includes any lookup tables and all administrative data from collections prior to any manual processing. This allows us to then match and join the data together in an end-to-end process using SQL queries. SQL is a fantastic language for large scale data joining and manipulation; it allows us to replicate end-to-end from raw data to final aggregate statistics output. Having all the data in one place and processing it in one place helps us in auditing our work and ensuring reproducability of results.</p>
+<p>In order for us to be able to have an end-to-end data pipeline where we can replicate our analysis across the department, we should store all of the raw data needed to create aggregate statistics in a managed Microsoft SQL Server. This includes any lookup tables and all administrative data from collections prior to any manual processing. This allows us to then match and join the data together in an end-to-end process using SQL queries.</p>
+<p>SQL is a fantastic language for large scale data joining and manipulation; it allows us to replicate end-to-end from raw data to final aggregate statistics output. Having all the data in one place and processing it in one place helps us in auditing our work and ensuring reproducability of results.</p>
 <hr />
 </div>
 <div id="how-to-set-up-a-sql-working-area" class="section level3">

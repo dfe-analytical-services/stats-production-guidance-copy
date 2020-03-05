@@ -303,7 +303,7 @@ characteristic	Filter	Characteristic			Select the characteristics that you’re 
 
 ---
 
-### Indicators
+## Indicators
 
 The indicators are the variables showing the measurements/statistics themselves, such as the number of pupils. 
 These can be of different formats (e.g. text, numeric), although are numeric by default. 
@@ -401,14 +401,16 @@ The video has the following sections, the links are included for quick reference
 
 ---
 
-### Troubleshooting
+### Data-screener troubleshooting
 
+---
 
 #### Pandoc 
 
 
 If you do need to install a newer version of pandoc, then make sure you uncheck the box in the install wizard that will install for all users. Leaving this checked requires an admin password, and none of us have that.
 
+---
 
 #### Packages failing to install 
 

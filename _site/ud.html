@@ -404,7 +404,7 @@ div.tocify {
 <li><p><a href="#p5">How to screen your data against these standards and next steps</a></p></li>
 <li><p><a href="#p6">Next steps once your files are ready</a></p></li>
 </ul>
-<p>If you have any questions, or would like any further advice on what you read here, please contact the <a href="mailto:explore.statistics@education.gov.uk">Statistics Development Team</a>.</p>
+<p>If you have any questions, or would like any further advice on what you read here, contact the <a href="mailto:explore.statistics@education.gov.uk">Statistics Development Team</a>.</p>
 <hr />
 </div>
 <div id="p1" class="section level1">
@@ -485,15 +485,16 @@ div.tocify {
 <div id="p2" class="section level1">
 <h1>A detailed breakdown of your data</h1>
 <hr />
-<div id="observational-units" class="section level3">
-<h3>Observational Units</h3>
+<div id="observational-units" class="section level2">
+<h2>Observational Units</h2>
+<hr />
 <p>Every observation, or row, in all of the provided data files will have a set of observational units based on the time period and geographic level that the data relates to. The number of these columns will differ across files depending on the number of geographic levels included in the publication.</p>
 <p>Across every single dataset of official statistics produced by DfE, the following column names MUST be present at a minimum (example cell values):</p>
 <p>time_period time_identifier geographic_level country_code country_name</p>
 <p>201819 Academic year National E92000001 England</p>
 <hr />
-<div id="time-columns" class="section level4">
-<h4>Time columns</h4>
+<div id="time-columns" class="section level3">
+<h3>Time columns</h3>
 <p>We use the two columns time_period and time_identifier to generalise time across our underlying datasets. This is critical in driving the charts and tables in the Explore Education Statistics platform and making explicit reference to the time in which our measurements relate to. This is a compulsory element of any official statistics dataset for use on Explore Education Statistics.</p>
 <ul>
 <li>time_period must contain either a four digit year, or a 6 digit year (covering the two years that the year spans, such as 201718). This must be numeric. This so that the platform can calculate ranges and order periods in a logical manner.</li>
@@ -503,8 +504,8 @@ div.tocify {
 </ul>
 <hr />
 </div>
-<div id="specific-time-standards" class="section level4">
-<h4>Specific time standards</h4>
+<div id="specific-time-standards" class="section level3">
+<h3>Specific time standards</h3>
 <p>Producers should not mix different types of years in the same dataset. This is to prevent any chance of confusion for users selecting time periods with similar labels in the table tool. For example, you cannot have Academic year and Calendar year data in the same data file. You also cannot mix yearly breakdowns (e.g. full year, quarters, months, or terms) in the time identifier column. Instead, where it makes sense to mix these within a data file you should use a filter column as shown below. Note the use of ‘Total’, this is a part of the standards for categorical filters.</p>
 <p>time_period time_identifier … quarter 201718 Academic year … Total 201718 Academic year … Q1 201718 Academic year … Q1-2 time_period time_identifier … month 2017 Calendar year … Total 2017 Calendar year … July</p>
 <p>time_period time_identifier … starts_since_2010 201718 Academic year … 190 201617 Academic year … 173</p>
@@ -523,8 +524,8 @@ div.tocify {
 </ul>
 <hr />
 </div>
-<div id="geography-columns" class="section level4">
-<h4>Geography columns</h4>
+<div id="geography-columns" class="section level3">
+<h3>Geography columns</h3>
 <p>We publish at a number of different geography breakdowns and these vary from publication to publication. Every publication in the new platform must include the three compulsory columns - geographic_level, country_code and country_name in its data files. These are compulsory as the data we are producing must lie within a country boundary.</p>
 <ul>
 <li>Only the minimum number of columns need to be provided for each level as outlined in Appendix B – minimum required geographic columns by level.</li>
@@ -547,22 +548,23 @@ div.tocify {
 <hr />
 </div>
 </div>
-<div id="filters" class="section level3">
-<h3>Filters</h3>
+<div id="filters" class="section level2">
+<h2>Filters</h2>
+<hr />
 <p>A categorical filter is a variable that we break our data down by, such as school type, pupil characteristics, and NQT status. There are no required standards for these, you can include any filters that you feel benefit the users of your data. A suggested standards document, targeted at standardising the names and values of these variable is under development by the Database Champions working group and can be found here.</p>
 <ul>
 <li>Aggregates should be included for all filters where possible. For the aggregate rows you should refer to this as ‘Total’. For filters such as school type or FSM eligibility this can be quite simple, as shown in the example below:</li>
 </ul>
 <p>time_period time_identifier geographic_level country_code country_name school_type FSM_status 201819 Academic year National E92000001 England Total Eligible 201819 Academic year National E92000001 England Primary Eligible 201819 Academic year National E92000001 England Secondary Eligible</p>
 <hr />
-<div id="grouping-categorical-filters" class="section level4">
-<h4>Grouping categorical filters</h4>
+<div id="grouping-filters" class="section level3">
+<h3>Grouping filters</h3>
 <p>For some categorical filters, this can more complicated. You might have a great number of different filters that you would rather group together to help the end user navigate through them in the table tool. You can do this by grouping a selection of filters. This essentially provides another group level for the options in the user interface when creating tables. For example, you may want to group percentages into wider rate bands. You can also see an example with apprenticeship data file, including the corresponding metadata, which has a grouped filter in Example 2 – Grouped filters and indicators.</p>
 <p>time_period time_identifier geographic_level country_code country_name percentage_rate_absence_bands percentage_rate_absence 2018 Calendar year National E92000001 England 60.0 – 69.9 67.0 – 67.9 2018 Calendar year National E92000001 England 60.0 – 69.9 62.0 – 62.9 2018 Calendar year National E92000001 England 10.0 – 19.9 14.0 – 14.9</p>
 <hr />
 </div>
-<div id="cross-tabulation-when-grouping-filters" class="section level4">
-<h4>Cross tabulation when grouping filters</h4>
+<div id="cross-tabulation-when-grouping-filters" class="section level3">
+<h3>Cross tabulation when grouping filters</h3>
 <p>If you want to use cross tabulations in your data file while grouping filters, for example crossing Gender and FSM status and combining those into two grouped columns, your data file would look like the below.</p>
 <p>time_period time_identifier geographic_level country_code country_name characteristic_group characteristic gender fsm_status 2018 Calendar year National E92000001 England Gender Male Male Total 2018 Calendar year National E92000001 England Gender and FSM Status Male and Eligible Male Eligible 2018 Calendar year National E92000001 England Total Total Total Total</p>
 <p>Note that the white columns are optional and are not required when grouping as there are already referred to in the group. They are indicative columns that may be included if you feel that they would benefit the end user. In this situation these columns should not be referenced in the metadata file.</p>
@@ -580,7 +582,6 @@ div.tocify {
 </ul>
 <hr />
 </div>
-</div>
 <div id="indicators" class="section level3">
 <h3>Indicators</h3>
 <p>The indicators are the variables showing the measurements/statistics themselves, such as the number of pupils. These can be of different formats (e.g. text, numeric), although are numeric by default. The number of indicators will vary across publications and data files.</p>
@@ -591,6 +592,7 @@ div.tocify {
 <hr />
 </div>
 </div>
+</div>
 <div id="p3" class="section level1">
 <h1>Metadata</h1>
 <hr />
@@ -598,8 +600,9 @@ div.tocify {
 <p>This internal metadata is different to any metadata files you may provide alongside your data for your users, for clarity this is referred to as external metadata.</p>
 <p>We only need to provide internal metadata for filters and indicators, we do not need to provide any internal metadata for the Observational Units (Time and Geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields.</p>
 <hr />
-<div id="mandatory-metadata-columns" class="section level4">
-<h4>Mandatory metadata columns</h4>
+<div id="mandatory-metadata-columns" class="section level3">
+<h3>Mandatory metadata columns</h3>
+<hr />
 <ul>
 <li><p>col_name - This must exactly match the name of the column in the dataset.</p></li>
 <li><p>col_type - This MUST be either ‘Filter’ or ‘Indicator’.</p></li>
@@ -611,8 +614,8 @@ div.tocify {
 </ul>
 <hr />
 </div>
-<div id="example-metadata-file" class="section level4">
-<h4>Example metadata file</h4>
+<div id="example-metadata-file" class="section level3">
+<h3>Example metadata file</h3>
 <p>Here will be an example metadata file.</p>
 <hr />
 </div>
