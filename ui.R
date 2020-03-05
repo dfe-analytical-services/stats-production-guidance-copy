@@ -10,7 +10,7 @@ navbarPage("Stats Production Guidance",
                                      c("Scatter"="p", "Line"="l")
                         )
                       ),
-                      mainPanel("I will add something here that is relevant and useful.",
+                      mainPanel("I will add something here that is relevant and useful and not a plot that I copied from elsewhere while making this app run.",
                         plotOutput("plot")
                       )
                     )
@@ -24,8 +24,11 @@ navbarPage("Stats Production Guidance",
            ),
            tabPanel("RAP",
                     mainPanel("This is how you do RAP things.")),
-tabPanel("Content Design",
-         mainPanel("Here I will write things well about writing good.")),
+navbarMenu("Content Design",
+           tabPanel("Writing well",
+                    sidebarPanel("Here I will link to all the parts of the content design stuff, like you have on bookdown."),
+             mainPanel("Here I will write things well about writing good.")),
 tabPanel("Visualisations",
-         mainPanel("In here should be some guidance on producing visualations in official and national stats publications."))
+         sidebarPanel("Here I will link to all the parts of the content design stuff, like you have on bookdown."),
+         mainPanel("In here should be some guidance on producing visualations in official and national stats publications.")))
 )
