@@ -1,0 +1,433 @@
+---
+title: "Underlying Data Standards"
+---
+
+```{r include=FALSE}
+require(knitr)
+```
+
+---
+
+# Introduction
+
+---
+
+All underlying data accompanying Official and National Statistics publications on Explore Education Statistics must meet these standards. These standards also provide general principles of best practice that can be applied to any data that is produced. We are taking advantage of this oppurtunity to standardise the underlying data that accompanies our releases and better meet the needs of our users. Explore Education Statistics is a service being developed based on user needs, if you want to find out more about our research that informed the project, have a read of the [report](){target="_blank"} that we published after our discovery.
+
+These standards were developed by the Database Champions working group, based upon the principles of tidy data. Here is a [quick summary of what tidy data is](https://www.youtube.com/watch?v=oQuupzfX9OQ){target="_blank"}, and further details on tidy data, and where the ideas came from can be found by reading Hadley Wickham's paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. Tidy data is applying a consistent logical structure to data files so that they are easier to use and analyse, intended to minimise the time spent cleaning the data. Adopting these principles will give us more power to serve the needs of the users, saving them and us time in processing the data. This will also open up further opportunities for linking data, including connecting to cross government data initiatives such as the GSS data project.
+
+---
+
+
+> “Tidy datasets are all alike but every messy dataset is messy in its own way.” – Hadley Wickham
+
+
+---
+
+This guide aims to help statistical production teams understand and meet the standards required. This includes:
+
+- [How to structure and format your data](#p1)
+
+- [A detailed breakdown of your data file](#p2)
+
+- [Metadata requirements for Explore Education Statistics](#p3)
+
+- [Example data](#p4)
+
+- [How to screen your data against these standards and next steps](#p5)
+
+- [Next steps once your files are ready](#p6)
+
+If you have any questions, or would like any further advice on what you read here, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
+
+---
+
+# How to structure your data {#p1}
+
+---
+
+### What data should be uploaded?
+
+
+- All files uploaded to Explore Education Statistics will be downloadable, therefore everything in your data must be publishable. Please remember to apply all of your usual suppression policies.
+- The data files run the table and chart tools, so any data that you wish to create a table or chart with must be included.
+- We expect that multiple data files may be provided for each release.
+- Keep in mind that a data block can only have a single data source. However, many blocks can share one source. 
+- The data published varies by release, in granularity of breakdowns and the indicators included within data files. 
+- You should include all years of the data you available in your data file to facilitate time series analysis.
+
+---
+
+### Data format
+
+
+These standards give you the power to format the data in way that best meets the needs of the users. There are only a handful of formatting standards to follow to ensure consistency and that the platform can process the files.
+
+
+- All uploaded files must in comma separated values (.csv) format.
+- All variable names must be in the first row of your file as the header row, and be in snake case – underscores_separating_each_element.
+- There are no character limits in a csv file, but you should consider the restrictions the users will face when downloading and processing the data (excel has a cell character limit of 32,760 for example).
+- If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell. 
+- If you are including percentages and want to show 79%, you would have the value 79 in your data file and specify % as the unit for that column in the metadata.
+- Overall, you should consider how users will use the data files and make the data easy for them to interpret and use in their software.
+
+---
+
+### Data structure
+
+
+The move to the new platform is the ideal opportunity to standardise our production of underlying data to give the users the consistency that they ask for. More information on our user research can be found here. Our standards draw upon the ideas of tidy data from Hadley Wickham’s 2014 paper. Essentially it is applying a logical structure to datasets so that they are easier for use and analyse, minimising the time spent cleaning the data before use. The two principles to remember are:
+
+
+- Each variable forms a separate column.
+- Each observation forms a separate row.
+
+
+The variables (columns) in each of the uploaded (.csv) files will fall in to the following three categories. These standards for each category are discussed in detail later in the document:
+
+
+-	Observational units (time and geography identifiers)
+-	Categorical filters (the things we filter our data on, e.g. school types or learner characteristics)
+- Indicators (the things we measure, e.g. pupil numbers or percentage of online applications)
+
+---
+
+### Deciding what should be in a file
+
+Explore Education Statistics is designed to give production teams the freedom of controlling what data users can access, and how they access it. It is expected that most releases on the platform will have multiple data files, and teams have control over how they break these files up. 
+The first key consideration is that the table tool will only create tables from a single a data file, and cannot use multiple files as sources. Therefore any data that you want to compare within a single table must in the same data file. 
+
+
+The table tool itself is there to allow users to narrow down the amount of data they have to absorb and to be able to efficiently take away key statistics. 
+
+
+- As long as your data meets the standards, particularly around Observational units, you can include as much as you want in a single file. 
+- Remember though, the larger the file, the larger the file is to upload, and also the larger it is for users to download and then have to process.
+- A useful way to judge how to break up data files is to consider whether all of the data in the file is appropriate to show side-by-side in the same table. If there are data that are conceptually different or may be confusing to compare side by side, then these should be in separate data files.
+- Different types of years (academic/calendar) should not be mixed in the same file, see Observational units for more detail on this.
+  - This is in part because time periods within a single file cannot overlap, for instance you cannot have both 201718 Academic Year, and 201718 Financial year.
+- If you have a lot of blank or empty cells, for example if you’ve merged two different collections, then consider breaking the files up so that the filter and indicator columns are relevant to as many rows as possible, if not all rows.
+- If any data should not be able to be seen in the same table for any reason then the data file must be split. Any data file uploaded is usable by all users in the table tool, and users will be able to download the exact same files as you upload. 
+
+--- 
+
+
+### Is there a file size limit?
+
+
+Not yet, we are still testing the service with large files. Do remember that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
+
+---
+
+**Remember**
+
+
+- A table in Explore Education Statistics can only be created from a single file.
+- All data in a single data file can be directly compared in the table tool.
+- Users will be downloading the same files you upload, so consider how easy it will be for users to handle.
+- Break up files for different collections to avoid lots of blank or empty cells.
+- You cannot mix different types of year in the time_identifier column (i.e. you can’t have academic and calendar year together, these should go in separate files.
+
+---
+
+# A detailed breakdown of your data {#p2}
+
+---
+
+## Observational Units
+
+---
+
+Every observation, or row, in all of the provided data files will have a set of observational units based on the time period and geographic level that the data relates to. The number of these columns will differ across files depending on the number of geographic levels included in the publication.
+
+
+Across every single dataset of official statistics produced by DfE, the following column names MUST be present at a minimum (example cell values):
+
+
+time_period	time_identifier	geographic_level	country_code	country_name
+
+
+201819	Academic year	National	E92000001	England
+
+---
+
+### Time columns
+
+
+We use the two columns time_period and time_identifier to generalise time across our underlying datasets. This is critical in driving the charts and tables in the Explore Education Statistics platform and making explicit reference to the time in which our measurements relate to. This is a compulsory element of any official statistics dataset for use on Explore Education Statistics. 
+
+
+- time_period must contain either a four digit year, or a 6 digit year (covering the two years that the year spans, such as 201718). This must be numeric. This so that the platform can calculate ranges and order periods in a logical manner.
+- If you’re referring to a single term – you should use the 6 digit academic year (201718) not the calendar year (2017) in the time_period column.
+- Conceptually different years cannot be mixed in the same dataset, this is to prevent users being confused between different time periods with the same label in the table tool.
+- Conceptually different year breakdowns (e.g. term, quarter, month), can be mixed with a full year of the same type using a filter column, as shown on the next page
+
+
+---
+
+### Specific time standards
+
+Producers should not mix different types of years in the same dataset. This is to prevent any chance of confusion for users selecting time periods with similar labels in the table tool. For example, you cannot have Academic year and Calendar year data in the same data file. 
+You also cannot mix yearly breakdowns (e.g. full year, quarters, months, or terms) in the time identifier column. Instead, where it makes sense to mix these within a data file you should use a filter column as shown below. Note the use of ‘Total’, this is a part of the standards for categorical filters.
+
+
+time_period	time_identifier	…	quarter
+201718	Academic year	…	Total
+201718	Academic year	…	Q1
+201718	Academic year	…	Q1-2
+time_period	time_identifier	…	month
+2017	Calendar year	…	Total
+2017	Calendar year	…	July
+
+
+time_period	time_identifier	…	starts_since_2010
+201718	Academic year	…	190
+201617	Academic year	…	173
+
+
+- If your row of data spans multiple years (e.g. is a cumulative sum between 2010 and 2018), this should be made clear in the name of the indicator, with the year of the end of the time period listed as the time identifier. For example if you had been recording the number of enrolments in a Local authority since from the start of the 2010/11 Academic year to the end of the 2017/18 Academic year, your data would look like the example on the right.
+
+---
+
+**Remember**
+
+
+- You must include time_period and time_identifier columns in your data files.
+- Your data must match the allowable values set out in Appendix A – allowable time_identifier values.
+- You can use ‘Reporting year’ if your data collection does not fall under the other categories (i.e. collected on a specific day).
+- If you have different types of year (e.g. academic, calendar, financial) these should be in separate files.
+- You can use filters to add more detail if you have multiple time breakdowns in the same file (quarter/full year).
+- Where a measure spans multiple years, you should make this clear in the indicator label and set the time identifier as the year published.
+
+
+---
+
+
+### Geography columns
+
+
+We publish at a number of different geography breakdowns and these vary from publication to publication. Every publication in the new platform must include the three compulsory columns - geographic_level, country_code and country_name in its data files. These are compulsory as the data we are producing must lie within a country boundary.
+
+
+- Only the minimum number of columns need to be provided for each level as outlined in Appendix B – minimum required geographic columns by level. 
+- You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams may use additional columns as relevant such as including Regional columns for Local authority level data, this is optional.
+- If you have a level that isn’t covered in Appendix B, then you contact Cam Race at cameron.race@education.gov.uk.
+- Teams should make sure that they are regularly checking their geography codes if they are not using a lookup from a maintained database (such as in the PDR). ONS have the Open Geography portal, which can be a useful way of checking these. There is a wealth of data on there, however Local authority boundaries can be hard to find, they can be found using the tabs at the top – Boundaries > Administrative Boundaries > Counties and Unitary Authorities. 
+
+---
+
+For geographies that can be measured in multiple ways, you should include a filter such as level_methodology which states how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
+
+
+geographic_level	country_code	country_name	old_la_code	la_name	new_la_code	level_methodology
+Local authority	E92000001	England	373	Sheffield	E08000019	Pupil residence
+Local authority	E92000001	England	373	Sheffield	E08000019	Provider location
+
+---
+
+**Remember**
+
+
+- You must have the minimum expected geography columns, appropriate to the geographic level for each row of your data file.
+- You must ensure you match the names of the columns in Appendix B.
+- You do not have to publish at every level in the guide, you may publish at the selection of levels you feel is appropriate.
+- You should regularly check that you are using the most up to date geography names and codes if you are not already utilising a maintained database.
+- You can mix geographies in the same file, and should avoid separating files by geography.
+
+---
+
+## Filters
+
+---
+
+A categorical filter is a variable that we break our data down by, such as school type, pupil characteristics, and NQT status. There are no required standards for these, you can include any filters that you feel benefit the users of your data. A suggested standards document, targeted at standardising the names and values of these variable is under development by the Database Champions working group and can be found here. 
+
+
+- Aggregates should be included for all filters where possible. For the aggregate rows you should refer to this as ‘Total’. For filters such as school type or FSM eligibility this can be quite simple, as shown in the example below:
+
+
+time_period	time_identifier	geographic_level	country_code	country_name	school_type	FSM_status
+201819	Academic year	National	E92000001	England	Total	Eligible
+201819	Academic year	National	E92000001	England	Primary	Eligible
+201819	Academic year	National	E92000001	England	Secondary	Eligible
+
+---
+
+### Grouping filters
+
+
+For some categorical filters, this can more complicated. You might have a great number of different filters that you would rather group together to help the end user navigate through them in the table tool. You can do this by grouping a selection of filters. This essentially provides another group level for the options in the user interface when creating tables. For example, you may want to group percentages into wider rate bands.
+You can also see an example with apprenticeship data file, including the corresponding metadata, which has a grouped filter in Example 2 – Grouped filters and indicators.
+
+
+time_period	time_identifier	geographic_level	country_code	country_name	percentage_rate_absence_bands	percentage_rate_absence
+2018	Calendar year	National	E92000001	England	60.0 – 69.9	67.0 – 67.9
+2018	Calendar year	National	E92000001	England	60.0 – 69.9	62.0 – 62.9
+2018	Calendar year	National	E92000001	England	10.0 – 19.9	14.0 – 14.9
+
+---
+
+### Cross tabulation when grouping filters
+
+
+If you want to use cross tabulations in your data file while grouping filters, for example crossing Gender and FSM status and combining those into two grouped columns, your data file would look like the below.
+
+
+time_period	time_identifier	geographic_level	country_code	country_name	characteristic_group	characteristic	gender	fsm_status
+2018	Calendar year	National	E92000001	England	Gender	Male	Male	Total
+2018	Calendar year	National	E92000001	England	Gender and FSM Status 	Male and Eligible	Male	Eligible
+2018	Calendar year	National	E92000001	England	Total	Total	Total	Total
+
+
+Note that the white columns are optional and are not required when grouping as there are already referred to in the group. They are indicative columns that may be included if you feel that they would benefit the end user. In this situation these columns should not be referenced in the metadata file.
+
+
+Your metadata file for the above cross tabulation data file would look like the below. Notice how only the characteristic and characteristic_group filters are referenced, and that the characteristic_group is referenced in the grouping column for characteristic, rather than as a separate row. Even if you include the optional columns, your metadata would not change as they platform should not process them.
+
+
+col_name	col_type	label	indicator_grouping	indicator_unit	filter_hint	filter_grouping_column
+characteristic	Filter	Characteristic			Select the characteristics that you’re interested in	characteristic_group
+
+
+---
+
+**Remember**
+
+
+- All filters should have a ‘Total’ aggregation.
+- If a filter only have one level, you can choose to not include it in the metadata, as such filters may not benefit the users in the table tool.
+- Grouping filters is an option, you do not have to group filters unless you decide that this is better for your users.
+- If you are grouping filters, then you must define the grouping column in the metadata.
+- See Example 2 – Grouped filters and indicators for a further example of grouping filters.
+- See Example 3 – Cross tabulations with grouped filters for a further example of cross tabulation in grouped filters.
+
+---
+
+### Indicators
+
+The indicators are the variables showing the measurements/statistics themselves, such as the number of pupils. 
+These can be of different formats (e.g. text, numeric), although are numeric by default. 
+The number of indicators will vary across publications and data files.
+
+As an example, the number of teachers and pupil enrolments are the indicators in this dataset: 
+
+time_period	time_identifier	geographic_level	country_code	country_name	school_type	pupil_enrolments	teacher_numbers
+201819	Academic year	National	E92000001	England	Total	100	13
+201819	Academic year	National	E92000001	England	Primary	50	5
+201819	Academic year	National	E92000001	England	Secondary	50	8
+
+
+Many of our publications contain a large number of indicators. To improve the experience of the user in the platform we can group these under headings as shown on the right. In the example, you can see how the different indicators have been grouped into ‘Admissions’, ‘Applications’, and ‘Preferences breakdowns’. 
+
+This is not the same as grouping filters, as it only requires you to label the group in the metadata, you do not need to create any extra columns of indicators, or combine them in any way in your data file. Examples of how this looks in the metadata can be found in internal metadata example 2. 
+
+---
+
+
+# Metadata {#p3}
+
+
+---
+
+Metadata in a machine readable (.csv) format must accompany datasets uploaded to the Explore Education Statistics platform to ensure that the files can be processed correctly.
+
+
+This internal metadata is different to any metadata files you may provide alongside your data for your users, for clarity this is referred to as external metadata.
+
+
+We only need to provide internal metadata for filters and indicators, we do not need to provide any internal metadata for the Observational Units (Time and Geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields.
+
+---
+
+
+### Mandatory metadata columns
+
+---
+
+- col_name - This must exactly match the name of the column in the dataset.
+
+- col_type - This MUST be either ‘Filter’ or ‘Indicator’.
+
+- label	- This is the version of the column name that the users will see on the platform, therefore you must fill this in and not leave it blank. For example, pupil_headcount may be ‘Number of pupil enrolments’. You have the freedom to decide what is best to do for your users.
+
+- indicator_grouping - This column gives production teams the option to group indicators in order to benefit the user. In a statistics release, we may have many indicators. If this column is left blank, all indicators will be presented as one list of individual square radio boxes. The example on the right shows two groups of indicators (Admissions and Applications). This aim to make it clear to a user what the indicators relate to, rather than scrolling through say 40 individual indicators. See Example 2 – Grouped filters and indicators for an example metadata file including this.
+
+- indicator_unit - If this column is left blank then this will be a number by default, however you can add in units such as “%” to make your data show as a percentage within the table tool. The platform itself will format large numeric values to include commas, so you do not need to have commas in your data file. 
+
+- filter_hint - This column gives you the option to add in a hint for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. The example on the right shows what it would look like if the label coloumns was ‘School phase’ and this filter_hint column was ‘Filter by the phase of the school’. 
+
+- filter_grouping_column - This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the name of the column/variable that you wish to group by on the row containing the column of the filters you want to group on. See Example 2 – Grouped filters and indicators and Example 3 – Cross tabulations with grouped filters for example metadata files including this. By grouping a number of filters you effectively fold them under a single filter heading on the platform, this is shown on the right, where a number of characteristics filters were grouped under the column ‘Characteristic’.
+
+---
+
+
+### Example metadata file
+
+
+Here will be an example metadata file.
+
+---
+
+
+# Example data files {#p4}
+
+---
+
+Some examples should go here.
+
+---
+
+
+# How to check against the standards {#p5}
+
+---
+
+A data-screener has been developed in R to automate checks against the standards. The R project can be found on GitHub, from here you can download or clone the code and run this yourself. 
+
+
+[Access the GitHub repository here](https://github.com/dfe-analytical-services/ees-data-screener){target="_blank"}.
+
+
+**All data and metadata files must be run through the data-screener before upload to the platform,** teams can either do this themselves if they are comfortable with R - watch the [how to video](https://www.youtube.com/watch?v=D60UU5r_TrM&feature=youtu.be){target="_blank"} if you need help with setting this up on your machine - or by contacting Cam Race (cameron.race@education.gov.uk) to do this for you.
+
+The video has the following sections, the links are included for quick reference if you only need a specific section:
+
+- [Pre-requisites - 0:00](https://www.youtube.com/watch?v=D60UU5r_TrM&t=0s){target="_blank"}
+- [Proxy settings - 2:40](https://www.youtube.com/watch?v=D60UU5r_TrM&t=160s){target="_blank"}
+- [Downloading the R project - 4:00](https://www.youtube.com/watch?v=D60UU5r_TrM&t=240s){target="_blank"}
+- [Using for the first time - 5:15](https://www.youtube.com/watch?v=D60UU5r_TrM&t=315s){target="_blank"}
+- [Running the Data-screener - 8:00](https://www.youtube.com/watch?v=D60UU5r_TrM&t=480s){target="_blank"}
+- [Output report - 11:05](https://www.youtube.com/watch?v=D60UU5r_TrM&t=665s){target="_blank"}
+
+---
+
+### Troubleshooting
+
+
+#### Pandoc 
+
+
+If you do need to install a newer version of pandoc, then make sure you uncheck the box in the install wizard that will install for all users. Leaving this checked requires an admin password, and none of us have that.
+
+
+#### Packages failing to install 
+
+
+This can be from a number of causes:
+
+
+- Make sure it is saved to your c: drive or a desktop/downloads/documents folder, having it on a shared drive or area seems to cause issues.
+- Ensure that you have both R and RTools installed, and the versions are at least those shown in the video
+- Ensure your proxy settings are correct as per the video, there's no harm in resetting them to make sure
+- Sometimes, if the above fails you will need to uninstall and reinstall RStudio (if you had it before using this project) for it to work
+- Failing all of the above, contact cameron.race@education.gov.uk, making sure to include your error messages in the email
+
+---
+
+# Next steps
+
+---
+
+Once your data has been screened and you have a report that shows your data has passed with 100% of tests you can then upload your data and meta data files to Explore Education Statistics. If your data fails for any reason on upload after passing the screening tests, please contact explore.statistics@education.gov.uk, with copies of the files and the error message you receive.
+
+---

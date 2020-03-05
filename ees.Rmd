@@ -1,0 +1,50 @@
+---
+title: "Explore Education Statistics"
+---
+
+---
+
+# Introduction
+
+---
+
+Something like embedding the slides maybe.
+
+
+Do we want to add a pre-platform checklist of what teams should expect to have done?
+
+---
+
+# One pagers
+
+---
+
+Laura is making pretty diagrams.
+
+---
+
+### Analysts
+
+How to use the platform.
+
+---
+
+### Pre-release
+
+How it works and what to expect.
+
+---
+
+### Another one that I forget what it is
+
+Possibly the release service and how publishing works.
+
+---
+
+# Admin guidance
+
+---
+
+Laura - do you want to add in your things here. Definitely add in a link to the admin system too. Worth putting the test environment here as well.
+
+---

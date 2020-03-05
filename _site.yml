@@ -1,0 +1,22 @@
+name: "stats-prod-guide"
+navbar:
+  title: "Statistics Production Guidance"
+  left:
+    - text: "Reproducible Analytical Pipelines"
+      href: rap.html
+    - text: "Underlying Data Standards"
+      href: ud.html
+    - text: "Content Design"
+      href: cd.html
+    - text: "Explore Education Statistics"
+      href: ees.html
+  right:
+    - icon: fa-envelope-o
+      href: mailto:Explore.STATISTICS@education.gov.uk
+output:
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    theme: cosmo
+    highlight: textmate
+    css: styles.css

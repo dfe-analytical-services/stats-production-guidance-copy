@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Content Design</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Statistics Production Guidance</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="rap.html">Reproducible Analytical Pipelines</a>
+</li>
+<li>
+  <a href="ud.html">Underlying Data Standards</a>
+</li>
+<li>
+  <a href="cd.html">Content Design</a>
+</li>
+<li>
+  <a href="ees.html">Explore Education Statistics</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:Explore.STATISTICS@education.gov.uk">
+    <span class="fa fa-envelope-o"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Content Design</h1>
+
+</div>
+
+
+<hr />
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<hr />
+<p>DfE publishes over 60 distinct Official Statistics collections each year, as well as numerous experimental and ad hoc releases.</p>
+<p>The layout, structure, and length of these releases vary significantly across the Department – this is confusing for users and makes it hard to navigate across releases.</p>
+<p>In many cases, our drafting is lengthy and overly-technical – again, this is confusing for users and out of line with best practice guidance on content design across Government.</p>
+<p>Migration to a new statistics dissemination platform – Explore Education Statistics – presents an opportunity for us to systematically review and redesign our content to consistent and accessible standards. </p>
+<hr />
+</div>
+<div id="why-are-we-doing-this" class="section level1">
+<h1>Why are we doing this</h1>
+<hr />
+<p>There is a clear need for clearer publications. For many of our statistics there is a big gap between public understanding and the truth of our work, and we rely too far on media and other third party organisations to interpret and present our statistics for that audience.</p>
+<p><a href="https://style.ons.gov.uk/category/writing-a-statistical-bulletin/" target="_blank">GSS guidance</a> sets out that <strong>“A statistical bulletin is a short summary of findings and essential commentary related to a new release of data.” Instead, in many instances, we currently produce lengthy technical compendiums of statistics.</strong></p>
+<p>Writing well and accessibly about our statistics is not a ‘nice to have’ – it is a core part of our role as producers of Official Statistics. ‘Value’ is one of the three pillars of the <a href="https://www.statisticsauthority.gov.uk/code-of-practice/the-code/" target="_blank">Code of Practice</a> and sets out how our releases should aim to <strong>“communicate effectively with the widest possible audience [whilst presenting information] in a clear, unambiguous way that supports and promotes use by all types of users”.</strong></p>
+<p>All our releases should be targeted at the ‘inquiring citizen’ type user and closer to journalistic articles than academic papers. More experienced and expert users will continue to be supported by detailed information available via publication tables and methodology documentation.</p>
+<hr />
+</div>
+<div id="templates" class="section level1">
+<h1>Templates</h1>
+<hr />
+<p>The layout of the new platform provides a natural template and enforces a base level of consistency across publications, whilst leaving enough flexibility to meet the needs of a range of publications. All design aspects of this layout have been iteratively user-tested to ensure it’s as navigable, accessible, and understandable as possible.</p>
+<p>Essentially, your release should have a headline statistics part, followed by up to 10 headered sections, most releases are already structured this way in the pdf’s.</p>
+<hr />
+</div>
+<div id="design-principles-and-standards" class="section level1">
+<h1>Design Principles and Standards</h1>
+<hr />
+<p>The following are some high-level principles to inform good content design. This are based heavily on good practice guidance across Government; in turn based on wider user research and guidance.</p>
+<p>That said, writing good content is an art not a science – there will be legitimate reasons to depart from these principles and difference of opinions over how best to present findings to best improve understanding.</p>
+<ul>
+<li><strong>Length</strong> – be brief, clear, and concise. Shorter publications are easier to read, write, and check. As crude rules of thumb our reports should aim to be no longer than around 10 pages and/or take roughly 10minutes to read.</li>
+<li><strong>Structure</strong> – as far as possible each report should be broken down into sections – each focusing on communicating one or two key messages. As a rule of thumb these should be no longer than a page each, towards a maximum of 10 sub-sections for each report. </li>
+<li><strong>Headlines</strong> – each report should have the 3-4 most important headline messages clearly upfront. Choose which these are and write about theme in a clear engaging way - if you glance at the report for only a few seconds this should be the information you take away.</li>
+<li><strong>Text</strong> – avoid large blocks of text – they’re very hard to read and users end up scanning and missing all the detail anyway. Remove unnecessary content wherever possible and use headings, white space, and charts to break up text.</li>
+<li><strong>Audience</strong> – write for the audience i.e. the general public. Explain key terms and statistical concepts, and use simple language throughout. Remember that this isn’t an update to last year’s report – this is the first time most users will be engaging with the topic.</li>
+<li><strong>Language</strong> – use plain English and shorter sentences – aim for an average of 15-20words per sentence. Research shows that even expert users find this type of drafting preferable.</li>
+<li><strong>Quality and Methodology</strong> – be upfront about important caveats (especially in relation to what you can and can’t conclude from the statistics) but the majority of explanatory material can be saved for supporting technical documentation. This is in line with best practice guidance to take a tiered approach to dissemination.</li>
+<li><strong>Story-telling</strong> – add context and insight rather than just describing outputs – explain why we’re seeing the results we are if possible. As part of this, don’t include information if there isn’t anything interesting to say – giving undue prominence to information that can be left to the supporting tables in the main report is misleading and confusing for users.</li>
+<li><strong>Independence</strong> – you are responsible for decisions around content. Views from policy colleagues, press and private offices can be weighted in these decisions as users of the statistics, but if they’re directly shaping content then that’s a breach of the Code of Practice. In some cases our outputs will give difficult messages for the Government and internal colleagues might take issue with our drafting, but our role is to present headline messages in a clear and unbiased way to inform debate appropriately.</li>
+</ul>
+<hr />
+</div>
+<div id="style-guidance" class="section level1">
+<h1>Style Guidance</h1>
+<hr />
+<p>We are in the process of finalising consistent style guidance – in line with GDS standards – around marginal presentational issues like, for example, choosing between %, ‘percent’ and ‘per cent’ in drafting. We will share links to this when it becomes available.</p>
+<hr />
+</div>
+<div id="charts-and-data-visualisation" class="section level1">
+<h1>Charts and Data Visualisation</h1>
+<hr />
+<p>Best practice guidance and advice on charting will be made available separately in due course.</p>
+<p>At a high level, it’s important to think carefully about the information you’re trying to communicate. Aim to keep charts as simple and intuitive as possible to be accessible to as wide a range of users as possible – if you can’t get the key interpretation easily within a few seconds then something’s gone wrong somewhere in design.</p>
+<hr />
+</div>
+<div id="advice-and-support" class="section level1">
+<h1>Advice and Support</h1>
+<hr />
+<p>There are no hard rules to follow on content design and the layout of individual statistics releases won’t be policed centrally. It’s ultimately a matter of judgement for individuals to ensure your statistics are as accessible and understandable as possible. There’s no rules.</p>
+<p>We’re all well-practiced at breaking complex results down into simple messages whether it’s for inducting new starters, providing briefing for new Ministers, or explaining our work for friends and family – we just need to apply the same standards to our headline reporting.</p>
+<p>For those looking for more targeted advice and support there’s a DfE Content Design Champions Group and we’re considering options around offering direct feedback and scrum sessions to review publications if there’s sufficient demand. Contact John Shale in the first instance for any advice.</p>
+<p>More detailed advice and guidance on good content design is available from a number of resources across Government and beyond.</p>
+<ul>
+<li><a href="https://gss.civilservice.gov.uk/wp-content/uploads/2018/11/Writing-about-statistics-Edition-2.0-October-2018-1.pdf" target="_blank">GSS best practice guidance</a></li>
+<li><a href="https://teams.microsoft.com/_" target="_blank">GSS best practice hints and tips</a></li>
+<li><a href="https://style.ons.gov.uk/category/writing-a-statistical-bulletin/" target="_blank">ONS style guide</a></li>
+<li><a href="http://www.unece.org/stats/documents/writing.html" target="_blank">UNECE drafting guidance</a></li>
+<li><a href="https://support.office.com/en-gb/article/test-your-document-s-readability-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2" target="_blank">This link</a> provides details on how to get readability scores on your drafting in Word.</li>
+<li>Similarly, the <a href="http://www.hemingwayapp.com/">Hemingway app</a> is an online tool to assess readability. Whilst we might not want to use this directly for final drafting, it is useful to highlight areas of particular complexity in our current narrative. Relatedly, the GSS Good Practice team set an exercise to try to write about your results without using any numbers – this can be really helpful to help understand the story you’re trying to tell with your statistics.</li>
+<li>As an illustrative example of work in other Departments – DWP’s Fraud &amp; Error statistics <a href="https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-201213-estimates" target="_blank">before</a> (128 page release), and <a href="https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-financial-year-2017-to-2018-estimates" target="_blank">after</a> their own modernisation work are worth a look.</li>
+</ul>
+<hr />
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
