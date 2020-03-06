@@ -47,7 +47,7 @@ The collection of, and routine checking of data as it is coming into the departm
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point.
 
 
-Teams are expected to review their own processes and use the guidance on this site to start making improvements towards meeting the four core principles if they aren't already.
+**Teams are expected to review their own processes and use the guidance on this site** to start making improvements towards meeting the four core principles if they aren't already.
 
 
 ---
