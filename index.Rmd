@@ -8,7 +8,7 @@ date: "Last updated: `r Sys.Date()`"
 **What is on here**
 
 
-Could provide a contents page to link off to the separate pages, also could add in some L+D (maybe worth it's own page? although often the links and resources are interwoven into the other sections, such as help with learning git is in the version control stuff), and point to anything useful, such as useful teams channels to be in? (well, as useful as any teams channel ever can be...).
+Could provide a contents page to link off to the separate pages? Also could add in some L+D (maybe worth it's own page? although often the links and resources are interwoven into the other sections, such as help with learning git is in the version control stuff), and point to anything useful, such as useful teams channels to be in? (well, as useful as any teams channel ever can be...).
 
 
 Is it worth adding something about the stats development team (us) as centralised support for teams? Could add a footer that explains who the team is, what we do (i.e. what we can help with) and contact details.
