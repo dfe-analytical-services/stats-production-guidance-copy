@@ -111,4 +111,285 @@ More detailed advice and guidance on good content design is available from a num
 - As an illustrative example of work in other Departments – DWP’s Fraud & Error statistics [before](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-201213-estimates){target="_blank"} (128 page release), and [after](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-financial-year-2017-to-2018-estimates){target="_blank"} their own modernisation work are worth a look.
 
 
+
+---
+
+
+# Statistical commentary guidance for creating your release on EES
+
+---
+
+
+Aims:
+
+•	Make sure teams have all the essential information in their publication to meet the Code of Practice
+•	Provide the floor standard of layout and commentary expected for releases published on EES
+•	There is separate guidance on use of the platform to write the release
+
+HOP Office will be monitoring releases on EES to make sure the platform is being used as intended.
+
+
+National Statistics
+
+The National Statistics logo
+
+There will be a part of the platform for you to select if your statistics are badged as National Statistics, which will then display the OSR tick mark logo at the top of the release page.
+
+National Statistics designation statement
+
+There is a requirement for National Statistics publications to include: 
+
+•	the date they were designated as National Statistics; 
+•	a link to the assessment report; 
+•	a statement of how the Code of Practice has continued to be met since the assessment (this information should be included in your methodology document not the main release)
+
+This section will be automatically populated if you select National Statistics as the release type. You need to edit the text in red to meet the requirement to include the date the statistics were designated as National statistics. You can read more about this in this post on Teams.
+
+You should include a section towards the end of your release titled “National Statistics” with the following text:
+
+X.	National Statistics 
+
+The United Kingdom Statistics Authority designated these statistics as National Statistics in Month Year <hyperlink to report>, in accordance with the Statistics and Registration Service Act 2007 and signifying compliance with the Code of Practice for Statistics.  
+
+Designation can be broadly interpreted to mean that the statistics:  
+
+•	meet identified user needs;  
+•	are well explained and readily accessible;  
+•	are produced according to sound methods, and  
+•	are managed impartially and objectively in the public interest.  
+
+Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed. Information on improvements made to these statistics to continue their compliance with the Code of Practice are provided in this accompanying document <hyperlink to document>. 
+
+The Department has a set of statistical policies in line with the Code of Practice for Statistics.  
+
+You can read more about this in this post on Teams.
+
+If you are including new official or experimental statistics in a National Statistics publication, you must add the following statement(s) to the above section: 
+
+XXXX statistics are classified as official statistics and have been produced in line with the Code of Practice for Statistics, but have not been designated as National Statistics by the United Kingdom Statistics Authority.
+
+XXXX statistics are experimental statistics undergoing evaluation. They have been developed under the guidance of the Head of Profession for Statistics and published to involve users and stakeholders at an early stage in assessing their suitability and quality.
+
+
+Official Statistics
+
+You should include in your description at the top of the page that these are official statistics. 
+
+You should include a section towards the end of your release titled “Official Statistics” with the following text:
+
+XI.	Official Statistics 
+
+These are official statistics and have been produced in line with the Code of Practice for Statistics. 
+
+This can be broadly interpreted to mean that the statistics: 
+
+•	meet identified user needs; 
+•	are well explained and readily accessible; 
+•	are produced according to sound methods, and 
+•	are managed impartially and objectively in the public interest. 
+
+The Department has a set of statistical policies in line with the Code of Practice for Official Statistics. 
+
+If you are including experimental statistics in an official statistics publication, you should include the following statement in the above section:
+
+Statistics on insert short description are experimental statistics undergoing evaluation. They have been developed under the guidance of the Head of Profession for Statistics and published to involve users and stakeholders at an early stage in assessing their suitability and quality.
+
+Experimental Statistics
+
+You should include that they are experimental statistics in the title or as a minimum in the description at the top of the page.
+
+You should include a section towards the end of your release titled “Experimental Official Statistics” with the following text:
+
+XII.	Experimental Official Statistics 
+
+Experimental official statistics are newly developed or innovative official statistics that are undergoing evaluation. They have been developed under the guidance of the Head of Profession for Statistics and published to involve users and stakeholders at an early stage in assessing their suitability and quality.   
+
+Experimental official statistics and have been produced as far as possible in line with the Code of Practice for Statistics. This can be broadly interpreted to mean that the statistics aim to: 
+
+•	meet identified user needs; 
+•	are well explained and readily accessible; 
+•	are produced according to sound methods, and 
+•	are managed impartially and objectively in the public interest. 
+
+The Department has a set of statistical policies in line with the Code of Practice for Official Statistics. 
+
+Next update
+
+When you publish you should put the planned month and year of the next publication – you should have already provided this to HOP Office for the 12 month forward look on the gov.uk release calendar. It is your responsibility to update this month should it change, HOP Office will only update the date on the gov.uk release calendar. 
+
+Headline facts and figures
+
+Your publication on the platform will have a summary box at the top that contains the top facts and headlines for your release – you should consider this the equivalent of the front page of the PDF version of your release. 
+
+It is recommended to have 3 headline facts but you can have more or fewer. Headline facts are split into 4 elements. 
+
+Indicator name	A few words in plain English 
+
+Latest value	Consider rounding large numbers    
+
+Background data for table and chart	Need more here on how this in provided and whether non-standard chart types can be used
+
+Short outline of trend	A one-sentence description of the longer-term trend; try to avoid always stating the change from the previous year
+
+Define ‘Indicator name’	A simple description in plain English  
+
+Use the bullet points under the boxes to pull out the top headlines from your publication. Here are some top tips for writing headlines:
+
+•	When choosing headlines ask yourself: if this the most important, useful and relevant point to make? So what? What is new? 
+•	We recommend a maximum of six top headlines, aiming for four or five – you aren’t trying to summarise all the findings in the publication, just highlight the main points of interest
+•	Headlines won’t necessarily be the same every year
+•	Headlines should be a single sentence making a single point, be able to stand alone from the publication, and make sense to everyone (no jargon)
+•	Structure headlines as: what has happened; why is this important – don’t give numbers out of context 
+•	One of your headlines should put the latest figures in the context of the longer-term change
+•	Round figures in headlines – see the DfE rounding guidance
+•	If there is something that is absolutely essential to know for people to use the headline facts then put this here
+
+Links to examples to be added once service is live.
+
+Glossary
+
+The glossary is intended for definitions used across multiple publications and will be maintained by HOP Office in the first instance. When you write your publication send any definitions you think need adding to the glossary to HOP Office, in plenty of time for them to be added before the publication date .
+Before creating a new definition, check the glossary to see if one is already there. When creating glossary entries you should use standard DfE definitions , only write your own if it is something that relates specifically to your statistics. Do not use other technical terms in your definition, stick to plain English. 
+
+Include essential definitions in the commentary the first time you mention them, you should not expect users to go to the glossary or about these statistics section for information they need to understand the statistics. Do not use the glossary to explain methodology such as classification decisions, explain these in the text if essential or otherwise in the methodology document.
+
+About these statistics
+
+This should be the first accordion section but do not assume that users will read it, include essential information in the section to which it refers.
+
+What not to include in this section:
+
+•	Crucial caveats or information necessary for accurate interpretation of the statistics should be included within the main commentary next to the point they relate to
+•	Technical information that is not relevant to the interpretation of the statistics should be included in the methodology document
+•	Definitions should be included within the main commentary when they are first mentioned
+•	Lists or descriptions of what is in the commentary as these should be clear from the contents and accordion headings
+
+Things you should include in this section are:
+
+•	Put the statistics in context – say why the data are collected and what they are used for or could be used for, including relevant policies and targets
+•	The different geographical levels for which data is published
+•	Non-essential but important information about the statistics, such as:
+o	The data collection window, mode of data collection and response rates in terms of whether these are representative
+o	Clarification of the population coverage
+o	Changes in data collection or analysis methods from previous releases
+•	Links to relevant related statistics including the cause of any differences
+•	Further useful detail on specific measures used in the release
+•	Non-urgent notices to users such as minor error corrections and delays or changes to the next publication. If there is something important which you want all users to know about then give it its own accordion section. 
+
+Accordion section content
+
+You should split your release into sections that each focus on one or two key messages, with a recommended maximum of 10 sections in the release. The whole release should take no more than 10 minutes to read.  
+To keep the release short only include information if there is something interesting to say – the commentary is there to tell a story, people looking for specific figures should look in the data tablesuse the table tool, or download the underlying data instead.
+
+Avoid having large blocks of text as they are hard to read and users scan them and miss the detail. Graphs and tables break up the content but only include these where they add value; you do not need a graph or chart in every section.
+
+Use plain English and shorter sentences, aim for an average of 15-20 words per sentence. Do not overload sentences with numbers and avoid ‘elevator commentary’ that describes small movements in the whole series without giving any insight (use a summary table instead if it is interesting, or leave it out entirely). Be impartial and objective; avoid using sensationalist terms or terms that reflect a judgement such as “very few” “only” or “strong”. 
+
+Explain complex concepts in plain English within the text. An example of a complex concept is a confidence interval or a significant difference.
+
+Information that used to be in the “blue boxes”
+
+Where this is essential, include it in the commentary alongside the point it refers to. You can use different text formats in markdown (TBC by Laura) if you want to make it easy for regular users to skip past.
+
+For essential definitions write them into the commentary or make your commentary less technical. For common terms add them to the glossary and use a link.
+
+Move other nice to know information into the “about these statistics” accordion section at the start of the release, delete unimportant information or move it to the methodology document.  
+
+Active headings and titles
+
+Active sub-headings outline the main message making them memorable for users, and can be better than a technically correct heading for letting users know what is in the rest of the section. They should be a short summary – aim for 10 words or less – rather than a full statistical headline and generally only include one number. Avoid using exaggerated or sensationalist language that you would not use in your main commentary such as “highest ever” or “only”. Be neutral in selecting the message to use in the heading rather than favouring positive messages.
+
+Examples of active section headings:
+
+Active titles are descriptive titles for charts and tables that tell the trend or highlight the main story. They should be short – aim for 10 words or less and avoid going over more than one line – rather than giving a detailed commentary on the trend or story. Active titles give users the main message without having to find the text that accompanies the chart, and makes it easier for journalists to use your chart directly without having to write their own summary. Put information such as the measure, source, population, geographical coverage and time period in a sub-heading if they are not obvious from the chart content. Add further context and information in the main text.
+
+Examples of active titles:
+
+Presentation tables 
+
+Presentation tables are the tables you include within the accordion sections of your release to quickly visualise numbers. These are distinct from the underlying data files, instead focusing on specific parts of the story you are telling, and should never be a copy of an underlying data file. You should only be including small tables sparingly where they add value to your release and not use them as a straight copy of the pre-canned Excel tables previously published on gov.uk. The ‘table tool’ is there for users to create their own tables if they would like to.The data is there for users to access through other means, the commentary should be focussed on the story. Aim for fewer tables, and keep them small. 
+You do not need to recreate all of the old excel tables, users can find the numbers they are interested in using the table tool, or analyse the underlying data if they want the data behind the release. 
+As a guide, we suggest no more than one table per accordion section.  
+
+Charts not using the chart builder
+
+For each summary table you also have the option of adding an accompanying chart – though you do not need to add one to every table, you should use charts where they complement the story you are trying to tell. 
+Only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. Where there is a need for a chart which cannot be produced using the chart builder you should follow these guidelines:
+INSERT GUIDELINES HERE including RGB colour codes, font types and sizes, placement of legends and axis labels
+
+Methodology
+
+You should have an accordion section in the “help and support” section which links to the methodology document. You can use the standard text in the example below. 
+
+It is recommended to write your methodology document as HTML on the platform. If you do not have time to do this you can upload a PDF version. If your methodology document is in PDF format you need to make sure this is accessible. Insert link to accessibility guidance.
+
+Pupil absence in schools in England: methodology
+Find out how and why we collect, process and publish these statistics.
+Read our Pupil absence in schools in England: methodology guidance.
+
+Contact Us
+
+You must have a named statistical contact in the contact us section of the release, this is a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. The platform works on contact cards so these names and numbers will be automatically updated as the lead statistician changes. Have I got that right? How do they insert the contact card?  
+
+Do we want something here about feedback? 
+
+Titles and descriptions
+
+It is important to use plain English in the title and description of the release so that your statistics are the top response when people do a Google search, or use the search in EES or on the gov.uk release calendar. 
+
+Please use these guidelines when writing the title, short description and detailed description of your release for gov.uk (submitted via the HOP Office metadata form):
+
+Publication titles
+
+The title should be output-focused rather than producer focused, meaning it should reflect the statistics published and not how they were collected. 
+
+Publication titles should contain in a maximum of 65 characters - this is the character limit on .gov.uk release calendar and must match the title on the GOV.UK publication page. Sometimes a short simple title is more effective than a long and technically accurate title.
+
+We do not expect you to make large changes to publication titles as consistency is important, but you should include:
+
+•	Include the time period to which the statistics refer not when they are published
+•	Use plain English where possible
+•	Include the geographical coverage (optional if England)
+•	Whether the data are provisional or revised
+
+Publication descriptions
+
+Publication descriptions in the announcement can be a maximum of 140 characters (this is the character limit on the .gov.uk release calendar). You can have a much longer description on your publication page on .gov.uk under the “details” section or on EES.
+
+As a minimum for the 140 character description which goes on the release calendar:
+•	Do not repeat information in the title – the description should add more information that what is in the title
+•	Use plain English words which people would use to search for your statistics, particularly if the technical terms are used in the title
+•	Don’t use jargon or technical language
+•	State if they are experimental statistics
+•	For the longer description which is included in the details section on the publication page include:
+•	Geographical coverage and the geographical breakdowns provided
+•	Characteristic breakdowns provided
+•	Include plain English key words which the public may use to search for your statistics e.g. teachers, pay, class size, university, GCSE, results, college
+•	Explain what is in the additional tables and underlying data
+Good examples
+
+These are examples of titles and 140 character descriptions for the release calendar that meet the above criteria
+
+School capacity: academic year 2017 to 2018
+Statistics on school places, unfilled school places, pupils over capacity, pupil number forecasts and place planning in England.
+
+30 hours free childcare: Spring term 2019 
+Experimental statistics on the use of 30 hours free childcare from January to March 2019.
+
+Outcomes for children looked after by local authorities in England: 31 March 2018 
+A range of outcome measures at national and local authority level for children looked after continuously for at least 12 months.
+
+Pupil absence in schools in England: autumn term 2018 
+Indicative figures on overall, authorised, unauthorised and persistent absence by school type. 
+
+Secondary and primary school applications and offers: March to April 2019 
+Local authority-level data from the application and offer process for a place in secondary and primary schools starting in September 2019.
+
+Widening Participation in Higher Education: 2019 
+Annual statistics on young peoples' participation in higher education, including their social background and occupation after graduating.
+
+
+
+
+
 ---
