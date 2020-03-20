@@ -8,8 +8,6 @@ navbar:
       href: ud.html
     - text: "Content"
       href: cd.html
-    - text: "Visualisations"
-      href: cd.html
     - text: "Explore Education Statistics"
       href: ees.html
     - text: "Publishing"
