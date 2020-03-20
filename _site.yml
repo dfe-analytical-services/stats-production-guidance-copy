@@ -4,11 +4,13 @@ navbar:
   left:
     - text: "RAP"
       href: rap.html
-    - text: "Data Standards"
+    - text: "Underlying Data Standards"
       href: ud.html
     - text: "Content"
       href: cd.html
-    - text: "EES"
+    - text: "Visualisations"
+      href: cd.html
+    - text: "Explore Education Statistics"
       href: ees.html
     - text: "Publishing"
       href: ees.html
