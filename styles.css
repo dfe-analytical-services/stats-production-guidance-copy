@@ -3,9 +3,5 @@ blockquote {
 }
 
 #remember {
-   background-color: blue;
-}
-
-.emphasized {
-   font-size: 1em;
+   border-color: black;
 }
