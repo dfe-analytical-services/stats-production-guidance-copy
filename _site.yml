@@ -2,13 +2,15 @@ name: "stats-prod-guide"
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Reproducible Analytical Pipelines"
+    - text: "RAP"
       href: rap.html
     - text: "Underlying Data Standards"
       href: ud.html
-    - text: "Content Design"
+    - text: "Content"
       href: cd.html
     - text: "Explore Education Statistics"
+      href: ees.html
+    - text: "Publishing"
       href: ees.html
   right:
     - icon: fa-envelope-o
