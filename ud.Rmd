@@ -51,7 +51,7 @@ If you have any questions, or would like any further advice on what you read her
 
 ---
 
-# General file requirements {#p1}
+# General requirements {#p1}
 
 ---
 
@@ -410,7 +410,7 @@ You can also see an example with apprenticeship data file, including the corresp
 
 `r knitr::kable(apprenticeship, caption = "Data file")`
 
-: Corresponding metadata file:
+: Corresponding metadata file.
 
 | col_name | col_type | label | indicator_grouping | indicator_unit | filter_hint | filter_grouping_column |
 |----------|----------|-------|--------------------|----------------|-------------|------------------------|
@@ -512,7 +512,7 @@ We only need to provide internal metadata for filters and indicators, we do not 
 
 ---
 
-### Example metadata
+## Example metadata
 
 : Each row represents a corresponding column in the data file.
 
@@ -524,7 +524,7 @@ We only need to provide internal metadata for filters and indicators, we do not 
 | percent_children | Indicator | Percentage of children | | % | | |
 
 
-`r knitr::kable(metadata_data_example, caption = "The corresponding data file:")`
+`r knitr::kable(metadata_data_example, caption = "The corresponding data file.")`
 
 
 ---
