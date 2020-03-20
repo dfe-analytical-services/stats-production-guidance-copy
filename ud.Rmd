@@ -4,6 +4,11 @@ title: "Underlying Data Standards"
 
 ```{r include=FALSE}
 require(knitr)
+require(readxl)
+
+apprenticeship <- read_excel("data_examples/apprenticeship_example.xlsx")
+metadata_data_example <- read_excel("data_examples/metadata_data_example.xlsx")
+
 ```
 
 ---
@@ -38,9 +43,7 @@ This guide aims to help statistical production teams understand and meet the sta
 
 - [Metadata requirements for Explore Education Statistics](#p5)
 
-- [Example data](#p6)
-
-- [How to screen your data against these standards and next steps](#p7)
+- [How to screen your data against these standards and next steps](#p6)
 
 
 If you have any questions, or would like any further advice on what you read here, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
@@ -295,7 +298,7 @@ You can only mix time_identifiers if they appear within the same table below. If
 - You should use ‘Reporting year’ if your data does not fit in the other categories, i.e. collected on a specific day.
 - If you have different types of year (e.g. academic, calendar, financial) these should be in separate files.
 - You can use filters to add more detail if you have multiple time breakdowns in the same file (quarter/full year).
-- Where a measure spans multiple years, you should make the starting year clear and set the time_period as the year published.
+- Where a measure spans multiple years, you should name the starting year, and set the time_period as the year published.
 
 
 ---
@@ -371,9 +374,12 @@ If you have a level that isn’t covered above, then you should contact cameron.
 
 ---
 
-A categorical filter is a variable that we break our data down by, such as school type, pupil characteristics, or NQT status. There are no required standards for these, you can include any filters that you feel benefit the users of your data. Aggregates should be included for all filters where possible. In general, if you can't aggregate, e.g. if you have headcount and fte, then this is an indication that they are instead seperate measures and should have separate indicator columns. There will be some situations in which aggregation does not work, this will not break the platform, though may make the data less user-friendly. 
+A categorical filter is a variable that we break our data down by, such as school type, pupil characteristics, or NQT status. There are no required standards for these, you can include any filters that you feel benefit the users of your data. 
 
-**For the aggregate rows you should refer to these as ‘Total’.** When using filters such as school type or FSM eligibility this can be quite simple, as shown in the example below:
+
+Aggregates should be included for all filters where possible. In general, if you can't aggregate, e.g. if you have headcount and fte, then this is an indication that they are instead seperate measures and should have separate indicator columns. There will be some situations where aggregation does not work, this will not break the platform, though may make the data less user-friendly. 
+
+**For aggregate rows you should refer to these as ‘Total’.** When using filters such as school type or FSM eligibility this can be quite simple, as shown in the example below:
 
 
 | time_period | time_identifier | geographic_level | country_code | country_name | school_type | FSM_status | headcount |
@@ -390,40 +396,29 @@ It is possible that you wish to include a filter that only has a single level, l
 ### Grouping filters
 
 
-For some categorical filters, this can more complicated. You might have a great number of different filters that you would rather group together to help the end user navigate through them in the table tool. You can do this by grouping a selection of filters. This essentially provides another group level for the options in the user interface when creating tables. For example, you may want to group percentages into wider rate bands.
+For some categorical filters, this can more complicated. You might have a great number of different filters that you would rather group together in a hierarchy to help the end user navigate through them in the table tool. You can do this by grouping a filter by a filter group. This essentially uses another filter column to provide a higher group level for the options in the user interface when creating tables. For example, you may want to group percentages into wider rate bands.
 
 
-| time_period | time_identifier | geographic_level | country_code | country_name | absence_rate_bands | absence_rate | 
+| time_period | time_identifier | geographic_level | country_code | country_name | absence_rate_band | absence_rate | 
 |-------------|-----------------|------------------|--------------|--------------|--------------------|--------------|
-| 2018        | Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 67.0 – 67.9  |
-| 2018        |	Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 62.0 – 62.9  |
-| 2018        |	Calendar year   |	National         | E92000001    |	England      | 10.0 – 19.9        | 14.0 – 14.9  |
+| 2018        | Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 67.5  |
+| 2018        |	Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 62.0  |
+| 2018        |	Calendar year   |	National         | E92000001    |	England      | 10.0 – 19.9        | 16.2  |
 
 
 You can also see an example with apprenticeship data file, including the corresponding metadata, below.
 
-HERE!!!
 
-If you want to use cross tabulations in your data file while grouping filters, for example crossing Gender and FSM status and combining those into two grouped columns, your data file would look like the below.
+`r knitr::kable(apprenticeship, caption = "Data file")`
 
+: Corresponding metadata file:
 
-| time_period | ... | country_name | characteristic_group  | characteristic    | gender | fsm_status |
-|-------------|-----|--------------|-----------------------|-------------------|--------|------------|
-| 2018        | ... | England      | Gender                | Male              | Male   | Total      |
-| 2018        |	... |	England      | Gender and FSM Status | Male and Eligible | Male   | Eligible   |
-| 2018        | ...	| England      | Total                 | Total             | Total  | Total      |
-
-
-Note that the gender and fsm columns are optional and are not required when grouping as they are already referred to in the group. They are indicative columns that may be included if you feel that they would benefit the end user. In this situation these columns should not be referenced in the metadata file.
-
-
-Your metadata file for the above cross tabulation data file would look like the below. Notice how only the characteristic and characteristic_group filters are referenced, and that the characteristic_group is referenced in the grouping column for characteristic, rather than as a separate row.
-
-
-| col_name       | col_type | label          | indicator_grouping | indicator_unit | filter_hint      | filter_grouping_column |
-|----------------|----------|----------------|--------------------|----------------|------------------------------------------------------|------------------------|
-| characteristic | Filter	  | Characteristic |                    |                | Select the characteristics that you are interested in | characteristic_group   |
-
+| col_name | col_type | label | indicator_grouping | indicator_unit | filter_hint | filter_grouping_column |
+|----------|----------|-------|--------------------|----------------|-------------|------------------------|
+| starters | Indicator | Number of learners starting an apprenticeship | Apprentice starts | | | |
+| drop_outs | Indicator | Number of learners not completing an apprencticeship | Apprentice drop-outs | | | |
+| drop_out_rate | Indicator | Percentage of pupils not completing an apprenticeship | Apprentice drop-outs | % | | |
+| appr_exact | Filter | Type of apprenticeship | | | Select the apprenticeship types you're interested in | appr_type | |
 
 **You must not include grouping filters as separate rows in the metadata, they should only be referenced in the filter_grouping_column.**
 
@@ -435,7 +430,6 @@ Your metadata file for the above cross tabulation data file would look like the 
 - All filters should have a ‘Total’ aggregation where possible.
 - If a filter has one level, you should not include it in the metadata, as such filters do not benefit the users in the table tool.
 - Grouping filters is an option, you do not have to group filters unless you decide that this is better for your users.
-- If you are grouping filters, then you must define the grouping column in the same row of the metadata.
 - If a filter is used to group another, then it should not appear as a separate row in the metadata.
 
 ---
@@ -451,16 +445,39 @@ As an example, the number of teachers and pupil enrolments are the indicators in
 
 | time_period | ... | country_name | school_type  | enrolments | teachers |
 |-------------|-----|--------------|--------------|------------|----------|
-| 201819      | ... | England	     | Total        | 100        | 13       |
+| 201819      | ... | England      | Total        | 100        | 13       |
 | 201819      | ... | England      | Primary      | 50         | 5        |
 | 201819      | ... | England      | Secondary    | 50         | 8        |
 
 
 The platform itself will format large numeric values to include commas, so you do not need to have commas in your data file.
 
-Many of our publications contain a large number of indicators. To improve the experience of the user in the platform we can group these under headings as shown on the right. In the example, you can see how the different indicators have been grouped into ‘Admissions’, ‘Applications’, and ‘Preferences breakdowns’. 
+---
 
-EXMAPLE
+### Indicator grouping
+
+---
+
+Many of our publications contain a large number of indicators. To improve the experience of the user in the platform we can group these under headings as shown on the right. In the example, you can see how the different indicators have been grouped into ‘Admissions’, ‘Applications’, and ‘Preferences breakdowns’ in the metadata, followed by how this will appear in the table tool for users.
+
+| col_name | col_type | label | indicator_grouping | indicator_unit | filter_hint | filter_grouping_column |
+|----------|----------|-------|--------------------|----------------|-------------|------------------------|
+| nc_year | Filter | NC Year | | | Filter by national curriculum year | |
+| admissions | Indicator | Number of admissions | Admissions | | | |
+| applications | Indicator | Number of applications received | Applications | | | |
+| online_apps | Indicator | Number of online applications | Applications | | | |
+| online_apps_% | Indicator | Percentage of online applications | Applications | | | |
+| no_of_preferences | Indicator | Number of preferences offered | Preferences | | | |
+| preferred_offer | Indicator | Number that received their preferred offer | Preferences | | | |
+| non_preferred_offer | Indicator | Number that received an offer for an unpreferred school | Preferences | | | |
+| no_offer | Indicator | Number that did not receive an offer | Preferences | | | |
+
+---
+
+#### Example of how this would look in Explore Education Statistics:
+
+
+`r knitr::include_graphics("images/indicator_group.png")`
 
 ---
 
@@ -492,39 +509,29 @@ We only need to provide internal metadata for filters and indicators, we do not 
 | indicator_grouping     | This column gives production teams the option to add subheadings to group indicators in order to benefit the user. If this column is left blank, all indicators will be presented as one list of individual square radio boxes with no subheadings.|
 | indicator_unit         | If this column is left blank then this will be a number by default, alternatively you can use either of the following units for financial or percentage measures - "£", "%". | 
 | filter_hint            | This column gives you the option to add in a hint for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. | 
-| filter_grouping_column | This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the exact name of the column/variable that you wish to group by. |
+| filter_grouping_column | This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the exact name of the column/variable that you wish to group by. It is good practice to use the same variable name as that you are grouping, with _group appended at the end, i.e. 'filter' and 'filter_group' |
 
 ---
 
-### Example
+### Example metadata
 
 : Each row represents a corresponding column in the data file.
 
 | col_name | col_type | label | indicator_grouping | indicator_unit | filter_hint | filter_grouping_column |
 |----------|----------|-------|--------------------|----------------|-------------|------------------------|
-| count | Filter | Count type | | | Filter by count | |
-| characteristic | Filter | Pupil characteristic | | | Filter by pupil characteristic | characteristic_group |
+| gender | Filter | Gender | | | Filter by pupil gender | |
+| school_phase | Filter | School phase | | | Filter by the phase of the school | |
 | number_children | Indicator | Number of children | | | |
 | percent_children | Indicator | Percentage of children | | % | | |
 
 
-The corresponding data file may look like the following:
+`r knitr::kable(metadata_data_example, caption = "The corresponding data file:")`
 
-HERE!!!
 
 ---
 
 
-# Example files {#p6}
-
----
-
-Some examples should go here.
-
----
-
-
-# How to check against the standards {#p7}
+# How to check against the standards {#p6}
 
 ---
 
