@@ -33,7 +33,7 @@ Tidy data is applying a consistent logical structure to data files so that they 
 
 This guide aims to help statistical production teams understand and meet the standards required. This includes:
 
-- [How to structure and format your data](#p1)
+- [General file requirements](#p1)
 
 - [Observational units](#p2)
 
@@ -48,13 +48,12 @@ This guide aims to help statistical production teams understand and meet the sta
 
 If you have any questions, or would like any further advice on what you read here, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
 
----
-
-# How to structure your data {#p1}
 
 ---
 
-### What should be uploaded?
+# General file requirements {#p1}
+
+---
 
 You should upload all of your data as underlying data files. They will need to adhere to the standards in this document and each file must be accompanied by a .csv metadata file as outlined under [metadata](#p5). Please note the following points:
 
@@ -119,10 +118,10 @@ A useful way to judge how to break up data files is to consider whether all of t
 --- 
 
 
-### Is there a file size limit?
+### File size
 
 
-No, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
+There is no size limit, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
 
 Excel has a row limit of 1,048,576. In general it is best to avoid exceeding this some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files. With the data all being in a tidy format they are easy enough for secondary analysts to stitch back together if needed.
 
@@ -132,7 +131,7 @@ People can tend to obsess over file size, however this is not everything, and th
 - 10mb to 100mb is a fairly common and normal file size that many teams have
 - 100mb to 500mb is fairly large file
 - 500mb and over are pretty large and can start to be difficult to handle (as you may be aware if you have one!)
-- If you have files that are over 1gb in size then they may have currently issues in the platform, please [contact us](mailto:explore.statistics@education.gov.uk).
+- Files that are over 1gb in size may currently have issues in the platform, please [contact us](mailto:explore.statistics@education.gov.uk) if you have any.
 
 
 We generally recommend fewer large files over a larger number of smaller files. If you think you are having issues with file size please tell us so that we can investigate and work towards a solution with you. The platform is always in development, and we do not want teams to arbitrarily make decisions about their data (and potentially waste a lot of time) due to something that could be addressed if we are told about it.
