@@ -17,11 +17,7 @@ metadata_data_example <- read_excel("data_examples/metadata_data_example.xlsx")
 
 ---
 
-All underlying data accompanying Official and National Statistics publications on Explore Education Statistics must meet these standards. These standards also provide general principles of best practice that can be applied to any data that is produced. We are taking advantage of this oppurtunity to standardise the underlying data that accompanies our releases and better meet the needs of our users. Explore Education Statistics is a service being developed based on user needs, if you want to find out more about our research that informed the project, have a read of the [report](){target="_blank"} that we published after our discovery.
-
-These standards were developed by the Database Champions working group, based upon the principles of tidy data. Here is a [quick summary of what tidy data is](https://www.youtube.com/watch?v=oQuupzfX9OQ){target="_blank"}, and further details on tidy data, and where the ideas came from can be found by reading Hadley Wickham's paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. 
-
-Tidy data is applying a consistent logical structure to data files so that they are easier to use and analyse, intended to minimise the time spent cleaning the data. Adopting these principles will give us more power to serve the needs of the users, saving them and us time in processing the data. This will also open up further opportunities for linking data, including connecting to cross government data initiatives such as the GSS data project.
+These standards provide general principles of best practice that can be applied to any data that is produced. The aim is to apply a consistent, logical, structure to all data files so that they are easier to use and analyse, intended to minimise the time spent cleaning the data. Adopting these principles will give us more power to serve the needs of the users, saving both us and them time when producing and using the data. This will also open up further opportunities for linking data, including connecting to cross government data initiatives such as the GSS data project.
 
 ---
 
@@ -37,7 +33,7 @@ This guide aims to help statistical production teams understand and meet the sta
 
 - [Observational units](#p2)
 
-- [Categorical filters](#p3)
+- [Filters](#p3)
 
 - [Indicators](#p4)
 
@@ -66,7 +62,7 @@ You should upload all of your data as underlying data files. They will need to a
 - You should include all years of the data you available in your data file to facilitate time series analysis.
 
 
-**In light of recent acessibility legislation, you should aim to include at least 3 years of data in the platform where possible.**
+**In light of recent acessibility legislation, you should aim to include at least 3 years of data in the platform where it exists.**
 
 ---
 
@@ -78,15 +74,12 @@ These standards give you the power to format the data in way that best meets the
 
 Data files must in comma separated values (.csv) format. Variable names must be in the first row of your file as the header row, and be in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank"}. If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell (this is often done automatically for you). If you are including percentages and want to show 79%, you would have the value 79 in your data file and specify % as the unit for that column in the metadata.
 
-
-There are no character or size limits in a csv file, but you should consider the restrictions the users will face when downloading and processing the data (excel has a cell character limit of 32,760 for example). Overall, you should consider how users will use the data files and make the data easy for them to interpret and use in their software.
-
 ---
 
 ### Tidy Data structure
 
 
-The move to the new platform provided the ideal opportunity to standardise our production of underlying data to give the users the consistency that they ask for. Our standards draw upon the ideas of tidy data from [Hadley Wickham’s 2014 paper](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. Essentially it is applying a logical structure to datasets so that they are easier for use and analyse, minimising the time spent cleaning the data before use. The key principles to remember are:
+The move to the new platform provided the ideal opportunity to standardise our production of underlying data to give the users the consistency that they ask for. Our standards draw upon the ideas of tidy data, essentially this means applying a logical structure to datasets so that they are easier for use and analyse, minimising the time spent cleaning the data before use. Here is a [quick summary of what tidy data is](https://www.youtube.com/watch?v=oQuupzfX9OQ){target="_blank"}, and further details on tidy data, and where the ideas came from can be found by reading Hadley Wickham's paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. The key principles to remember are:
 
 - **Each variable forms a separate column.**
 - **Each observation forms a separate row.**
@@ -121,7 +114,7 @@ A useful way to judge how to break up data files is to consider whether all of t
 ### File size
 
 
-There is no size limit, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
+There are no character or size limits in a csv file, but you should consider the restrictions the users will face when downloading and processing the data (excel has a cell character limit of 32,760 for example). There is no size limit for EES, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
 
 Excel has a row limit of 1,048,576. In general it is best to avoid exceeding this some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files. With the data all being in a tidy format they are easy enough for secondary analysts to stitch back together if needed.
 
@@ -137,6 +130,10 @@ People can tend to obsess over file size, however this is not everything, and th
 We generally recommend fewer large files over a larger number of smaller files. If you think you are having issues with file size please tell us so that we can investigate and work towards a solution with you. The platform is always in development, and we do not want teams to arbitrarily make decisions about their data (and potentially waste a lot of time) due to something that could be addressed if we are told about it.
 
 ---
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding; 20px;}
+</style>
+<div class = "blue">
 
 ### Remember
 
@@ -147,6 +144,8 @@ We generally recommend fewer large files over a larger number of smaller files. 
 - Users will be downloading the same files you upload, so consider how easy it will be for users to handle.
 - Break up files for different collections to avoid lots of blank or empty cells.
 - You cannot mix different types of year in the time_identifier column.
+
+</div>
 
 ---
 
@@ -169,7 +168,9 @@ Across every single dataset of official statistics produced by DfE, the followin
 
 ---
 
-We use the two columns, time_period and time_identifier, to generalise time across our underlying datasets. This is critical in driving the charts and tables in the Explore Education Statistics platform and making explicit reference to the time in which our measurements relate to. This is a compulsory element of any official statistics dataset for use on Explore Education Statistics. 
+We use the two columns, time_period and time_identifier, to generalise time across our underlying datasets. This is a important for general useability of our data, as well as being critical in driving the charts and tables in the Explore Education Statistics platform and making explicit reference to the time in which our measurements relate to. This is a compulsory element of any official statistics dataset. 
+
+If you think that your data can't follow this format, please contact explore.statistics@education.gov.uk with details so that we can discuss this.
 
 
 - time_period must contain either a four digit year, or a 6 digit year. 
@@ -288,6 +289,7 @@ You can only mix time_identifiers if they appear within the same table below. If
 | Tax year Q4                      | 6 digits                  |
 
 ---
+<div class = "blue">
 
 ### Remember
 
@@ -299,6 +301,7 @@ You can only mix time_identifiers if they appear within the same table below. If
 - You can use filters to add more detail if you have multiple time breakdowns in the same file (quarter/full year).
 - Where a measure spans multiple years, you should name the starting year, and set the time_period as the year published.
 
+</div>
 
 ---
 
@@ -316,7 +319,7 @@ Teams should make sure that they are regularly checking their geography codes if
 
 ### Different measures of geography
 
-When using geographies that can be measured in multiple ways, you should include a filter such as level_methodology which states how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
+When using geographies that can be measured in multiple ways, you can achieve this by including a [filter](#p3) such as level_methodology which states how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
 
 
 | geographic_level | old_la_code | la_name    | new_la_code | level_methodology | headcount |
@@ -353,9 +356,11 @@ Please do not force these levels into the platform through using filters as that
 | Provider | No required columns, you can use any you have, though we recommend you include the name and at least one code (urn, ukprn, upin) if possible to make data matching easier | |
 | Institution | No required columns, you can use any you have, though we recommend you include institution_id and institution_name to make data matching easier | |
 
-If you have a level that isn’t covered above, then you should contact cameron.race@education.gov.uk with details and example data.
+If you have a level that isn’t covered above, then you should contact explore.statistics@education.gov.uk with details and example data.
 
 ---
+
+<div class = "blue">
 
 ### Remember
 
@@ -366,6 +371,8 @@ If you have a level that isn’t covered above, then you should contact cameron.
 - You do not have to publish at every level in the guide, you may publish at the selection of levels you feel is appropriate.
 - You should regularly check that you are using the most up to date geography names and codes.
 - You can mix geographies in the same file, and should avoid separating files by geography unless size is an issue.
+
+</div>
 
 ---
 
@@ -395,7 +402,7 @@ It is possible that you wish to include a filter that only has a single level, l
 ### Grouping filters
 
 
-For some categorical filters, this can more complicated. You might have a great number of different filters that you would rather group together in a hierarchy to help the end user navigate through them in the table tool. You can do this by grouping a filter by a filter group. This essentially uses another filter column to provide a higher group level for the options in the user interface when creating tables. For example, you may want to group percentages into wider rate bands.
+For some categorical filters, this can be more complicated. You might have a great number of different filters that you would rather group together in a hierarchy to help the end user navigate through them in the table tool. You can do this by grouping a filter by a filter group. This essentially uses another filter column to provide a higher group level for the options in the user interface when creating tables. For example, you may want to group percentages into wider rate bands.
 
 
 | time_period | time_identifier | geographic_level | country_code | country_name | absence_rate_band | absence_rate | 
@@ -423,6 +430,8 @@ You can also see an example with apprenticeship data file, including the corresp
 
 ---
 
+<div class = "blue">
+
 ### Remember
 
 
@@ -430,6 +439,8 @@ You can also see an example with apprenticeship data file, including the corresp
 - If a filter has one level, you should not include it in the metadata, as such filters do not benefit the users in the table tool.
 - Grouping filters is an option, you do not have to group filters unless you decide that this is better for your users.
 - If a filter is used to group another, then it should not appear as a separate row in the metadata.
+
+</div>
 
 ---
 
@@ -507,7 +518,7 @@ We only need to provide internal metadata for filters and indicators, we do not 
 | label                  | This is the version of the column name that the users will see on the platform, therefore you must fill this in and not leave it blank. For example, pupil_headcount may be ‘Number of pupil enrolments’. You have the freedom to decide what is best to do for your users. |
 | indicator_grouping     | This column gives production teams the option to add subheadings to group indicators in order to benefit the user. If this column is left blank, all indicators will be presented as one list of individual square radio boxes with no subheadings.|
 | indicator_unit         | If this column is left blank then this will be a number by default, alternatively you can use either of the following units for financial or percentage measures - "£", "%". | 
-| filter_hint            | This column gives you the option to add in a hint for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. | 
+| filter_hint            | This column gives you the option to add in a hint such as 'Filter by school type' for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. | 
 | filter_grouping_column | This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the exact name of the column/variable that you wish to group by. It is good practice to use the same variable name as that you are grouping, with _group appended at the end, i.e. 'filter' and 'filter_group' |
 
 ---
@@ -575,7 +586,7 @@ This can be from a number of causes:
 - Ensure your proxy settings are correct as per the video, there's no harm in resetting them to make sure.
 - If the above fails you may need to uninstall and reinstall RStudio for it to work.
 
-Failing all of the above, contact cameron.race@education.gov.uk, making sure to include what steps you have taken so far, and your error messages in the email.
+Failing all of the above, explore.statistics@education.gov.uk, making sure to include what steps you have taken so far, and your error messages in the email.
 
 ---
 
