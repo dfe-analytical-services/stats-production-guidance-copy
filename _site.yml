@@ -2,9 +2,9 @@ name: "stats-prod-guide"
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "RAP"
+    - text: "Reproducible Analytical Pipelines"
       href: rap.html
-    - text: "Underlying Data Standards"
+    - text: "Underlying Data"
       href: ud.html
     - text: "Content"
       href: cd.html

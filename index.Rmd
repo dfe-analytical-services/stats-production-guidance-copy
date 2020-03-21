@@ -5,28 +5,14 @@ date: "Last updated: `r Sys.Date()`"
 
 ---
 
-**What is on here**
-
-
-Could provide a contents page to link off to the separate pages? Also could add in some L+D (maybe worth it's own page? although often the links and resources are interwoven into the other sections, such as help with learning git is in the version control stuff), and point to anything useful, such as useful teams channels to be in? (well, as useful as any teams channel ever can be...).
-
-
-Is it worth adding something about the stats development team (us) as centralised support for teams? Could add a footer that explains who the team is, what we do (i.e. what we can help with) and contact details.
-
-
----
-
 **Design and purpose**
 
 
-This is aimed as a guide for anyone producing official stats. It manages to provide a walkthrough guide from start to finish, as well as being a reference place that is easy to navigate if you just need to check on a specific part of the process.
+This is a guide aimed at anyone producing official statistics. It is particularly important for those publishing through EES, though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walkthrough guide from processing to publication, as well as being a reference place that is easy to navigate if you just need to check on a specific part of the process, or access specific resources.
 
 
-Genuinely, follow each page from left to right and from top to bottom, and it takes you through having a SQL server area set up for your data, through the analysis, QA, the standards and what you're aiming for in your files, how to check against those standards, then how to write content after you've produced the data, and then how to use the platform itself to load the files you've made, build your release, arrange pre-release access, and publish it.
+The ordering is completely intentional. Teams should be taking a data-first approach to releases. Building the data files using the principles of RAP, before then writing about them and publishing it all.
 
 
-This ordering is completely intentional. Teams should be taking a data-first approach to releases. Building the data files and then running any further analysis and writing about them afterwards.
-
-
-Obviously there are some things that this site does not have. It is likely to build and change over time. Hopefully it can prove a useful resource for everyone from the most experienced of producers right through to those who are working on their very first publication.
+Obviously there are some things that this site does not have. It will build and change over time. We hope it can prove a useful resource for everyone from the most experienced of producers right through to those who are working on their very first publication. If you have any feedback or suggested additions, please contact us using the envelope button in the top right corner.
 
