@@ -5,6 +5,9 @@ title: "RAP Guidance for Statistics Producers"
 ```{r include=FALSE}
 require(knitr)
 ```
+
+>Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP). 
+
 ---
 
 
@@ -105,10 +108,10 @@ Below are checklists designed to make reviewing our processes based on the graph
 ### Minimum expected
 
 
-Do I have a sensible folder and file structure? 
+- [ ] Do I have a sensible folder and file structure? 
 - Explanation and links
 
-Do I have suitable documentation?
+- [x] Do I have suitable documentation?
 - Explanation and links
 
 Are my underlying data files screened against the standards?
