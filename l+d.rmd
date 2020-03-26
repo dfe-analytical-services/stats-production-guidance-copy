@@ -1,0 +1,98 @@
+---
+title: "Learning resources"
+---
+
+<p class="text-muted">A collection of useful learning resources to get you started.</p>
+
+
+---
+
+
+# Tools and learning resources
+
+
+---
+
+<div class="alert alert-dismissible alert-warning">
+We are happy for people to use whatever tools they want, as long as the proccesses meet the principles of RAP.
+</div>
+
+That being said, we're developing resources to help you begin on your own RAP process. Below are the recommended tools that will be the easiest to pick up, and will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE, and are already working in our current IT setup.
+
+---
+
+### Recommended tools
+
+---
+
+**Database management - Microsoft SQL Server and SQL**
+
+- SQL servers are where most of DfE's data is held, and with a wide usage community already in place and a language that is pleasantly intuitive and easy to use, it is an obvious choice for this task. The majority of us already have Microsoft SQL Server Management Studio (MSSMS) downloaded through the software centre. Moreover, SQL (Structured Query Language) allows us to carry out a lot of data manipulation and basic analysis that meets the entire needs of some publications. Note that SQL is the language, and MSSMS is the environment that we mostly use to write and run it in DfE.
+
+**Data manipulation and analysis - RStudio and R** 
+
+- We recommend to use R where SQL can't do everything that you need in terms of manipulation and analysis as it already has a strong community within DfE, it can pull in data stored in SQL servers and integrate SQL queries, as well as fast becoming a leading language in the world of statistics and data. R (the language), RStudio (the best environment to write and run R), and RTools (a useful package), are all available from the software centre.
+
+**Version control - AzureDevOps and Git** 
+
+- Version control can be implemented through having a sensible folder structure and file naming conventions, however we do recommend that in the longer term we move towards to using Git. It is widely used across DfE and integrates neatly with our use of Azure DevOps, as well as being the current leading version control software in the world of coding with over [87% of 74,298 stack overflow users using it](https://insights.stackoverflow.com/survey/2018#work-_-version-control){target="_blank"}. To highlight the scale of this dominance, Subversion came in in second place at a paltry 16%.
+
+---
+
+### Learning these tools 
+
+---
+
+We are always on the look out for resources that will help you to have the skills needed to incorporate the principles of RAP into your own processes. There will be many more just a google away, and genuinely, Google is the single most powerful learning resource out there, whether it leads you to a StackOverflow answer to your problem, or to an online training course, it will have your needs covered. To help speed up your search, links are included below for some of the resources that are particularly relevant that we're aware of.
+
+
+As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first, before then getting a friend or colleague to show them around the environment to use the language in so that they can begin to use them on their own data. 
+
+---
+
+#### General
+
+
+- [Google](www.google.co.uk){target="_blank"} - it's so important that it's worth repeating again, do not be afraid to type your questions into a search engine, even the most experienced professionals spend a lot of time on forums such as [Stack Overflow](https://stackoverflow.com/){target="_blank"}.
+
+- The [DfE Data Science resource tool](https://rsconnect/rsc/DS-Resources/){target="_blank"}, in here you can access a plethora of materials, from coffee and coding talks to online guidebooks.
+
+- There is also a fantastic [general data science resources list](https://github.com/Chris-Engelhardt/data_sci_guide){target="_blank"}, that includes plenty of resources for R and SQL, with Python, Git, and shell included in there too.
+
+- [DataCamp](https://learn.datacamp.com/){target="_blank"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email Learning.Academy@ons.gov.uk, they can guide you through the process of getting access to one of their premium subsriptions for a few weeks, which allows you to access the rest of the courses.
+
+- Zach Waller has produced [guidance of how to use git in Azure DevOps (formally VSTS)](https://dfe-analytical-services.github.io/vsts-for-analysis/){target="_blank"}, which gives a very detailed guide on how to use version control software with use in DfE analysis.
+
+- Earlier this year we had our Data Science week, which contained a wide variety of talks across Data Science within the department, everything was recorded and can be found on the [associated microsoft stream page](https://web.microsoftstream.com/group/df01862c-7ad4-4f25-b7f2-df7353af52a9){target="_blank"}.
+
+- ESFA have also produced a useful [guide to using R and Git](https://rsconnect/rsc/esfa-r-training/){target="_blank"}. This also includes some information on Shiny apps. For more information on these, I'd recommended joining the [R Shiny Developers](https://teams.microsoft.com/l/channel/19%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/tab%3A%3A1fc89e11-fa70-473d-b993-df467ca0d459?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9) teams group.
+
+- Finally, if after reading through this website you still need any convincing as to why R and Git are worth your time, then have a look at the [Boons of R and Git](https://psysandsy.github.io/boons-r-git.html){target="_blank"} by David Sands.
+
+
+#### SQL
+
+
+- Our very own Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL).
+
+- The [Khan academy](https://www.khanacademy.org/computing/computer-programming/sql){target="_blank"} offer a great free introduction to the basics of SQL.
+
+- [w3schools.com](https://www.w3schools.com/sql/default.asp){target="_blank"} offers a useful guide through the most common SQL commands.
+
+
+#### R
+
+
+- There is the [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}, which is aimed at giving users a good introduction into how to get started with using R and RStudio.
+
+- There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank"}.
+
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank"}, hopefully this one should be relatively self-explanatory!
+
+---
+
+
+In general there is a widening knowledge of the methods within SQL, R, and Git, that are commonly used to process our data, so we recommended asking around similar production teams. If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.
+
+
+---
