@@ -2,7 +2,7 @@
 title: "Publishing statistics"
 ---
 
-<p class="text-muted">Guidance for how to publish Official Statistics via the new Explore Education Statistics platform..</p>
+<p class="text-muted">Guidance for how to publish Official Statistics via the new Explore Education Statistics platform.</p>
 
 ---
 
@@ -84,6 +84,13 @@ Within this dashboard you can access existing publications to create/edit their 
 
 Help and guidance for how to use the the admin website is available via the administrators guide. 
 
+## Publications 
+
+`set out hierarchy and publication specific things (contacts and methodology)`
+
+`You must have a named statistical contact in the contact us section of the release, this is a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. The platform works on contact cards so these names and numbers will be automatically updated as the lead statistician changes. Have I got that right? How do they insert the contact card?`
+
+
 ## Instructions for creating and publishing a new release
 
 `r knitr::include_graphics("images/EES-create-release.png")`
@@ -94,9 +101,11 @@ After finding the publication you want to create a release for, just press the b
 
 Currently the following tyes of release can be created in EES - 
 
-* National Statistics  
+* National Statistics (includes OSR tick mark logo at the top of the release page.)  
 * Official Statistics
 * Adhoc Statistics
+
+`When you publish you should put the planned month and year of the next publication – you should have already provided this to HOP Office for the 12 month forward look on the gov.uk release calendar. It is your responsibility to update this month should it change, HOP Office will only update the date on the gov.uk release calendar. `
 
 In the production environment, in the short term creating new releases can only be done by the BAU team – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
 
