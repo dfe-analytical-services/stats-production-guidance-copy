@@ -1,14 +1,14 @@
 ---
-title: "Learning resources"
+title: "Tools and learning resources"
 ---
 
-<p class="text-muted">A collection of useful learning resources to get you started.</p>
+<p class="text-muted">A collection of useful learning resources, and information on the recommended tools to get you started.</p>
 
 
 ---
 
 
-# Tools and learning resources
+## Introduction
 
 
 ---
@@ -21,7 +21,7 @@ That being said, we're developing resources to help you begin on your own RAP pr
 
 ---
 
-### Recommended tools
+## Recommended tools
 
 ---
 
@@ -39,7 +39,7 @@ That being said, we're developing resources to help you begin on your own RAP pr
 
 ---
 
-### Learning these tools 
+## Learning these tools 
 
 ---
 
@@ -50,8 +50,9 @@ As a general approach, many people find it useful to use the resources below to 
 
 ---
 
-#### General
+### General
 
+---
 
 - [Google](www.google.co.uk){target="_blank"} - it's so important that it's worth repeating again, do not be afraid to type your questions into a search engine, even the most experienced professionals spend a lot of time on forums such as [Stack Overflow](https://stackoverflow.com/){target="_blank"}.
 
@@ -69,9 +70,11 @@ As a general approach, many people find it useful to use the resources below to 
 
 - Finally, if after reading through this website you still need any convincing as to why R and Git are worth your time, then have a look at the [Boons of R and Git](https://psysandsy.github.io/boons-r-git.html){target="_blank"} by David Sands.
 
+---
 
-#### SQL
+### SQL
 
+---
 
 - Our very own Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL).
 
@@ -79,9 +82,11 @@ As a general approach, many people find it useful to use the resources below to 
 
 - [w3schools.com](https://www.w3schools.com/sql/default.asp){target="_blank"} offers a useful guide through the most common SQL commands.
 
+---
 
-#### R
+### R
 
+---
 
 - There is the [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}, which is aimed at giving users a good introduction into how to get started with using R and RStudio.
 
@@ -90,6 +95,9 @@ As a general approach, many people find it useful to use the resources below to 
 - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank"}, hopefully this one should be relatively self-explanatory!
 
 ---
+
+
+For more information on how to use these tools in your production processes, please see the [Proccessing Statistics]() page.
 
 
 In general there is a widening knowledge of the methods within SQL, R, and Git, that are commonly used to process our data, so we recommended asking around similar production teams. If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.
