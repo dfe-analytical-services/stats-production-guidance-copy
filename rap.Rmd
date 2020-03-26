@@ -56,33 +56,21 @@ The collection of, and routine checking of data as it is coming into the departm
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
 
 
-<div class="alert alert-dismissible alert-info">
+<div class="alert alert-dismissible alert-secondary">
   <h2>Core principles</h2>
   <hr class="my-4">
 
 
-**Data sources for a publication are stored in the same database**
+**Data sources for a publication are stored in the same database** _- [Getting source data together](#getting-your-data-together-in-sql-p3)_
 
 
-_- [Getting source data together](#getting-your-data-together-in-sql-p3)_
+**Underlying data files are produced using code, with no manual steps** _- [Using automation to process data](#using-code-to-process-data-p4)_
 
 
-**Underlying data files are produced using code, with no manual steps**
+**Files and scripts should be appropriately version controlled** _- [Using version control](#version-control-p5)_
 
 
-_- [Using automation to process data](#using-code-to-process-data-p4)_
-
-
-**Files and scripts should be appropriately version controlled**
-
-
-_- [Using version control](#version-control-p5)_
-
-
-**There should be basic automated quality assurance applied to outputs**
-
-
-_- [Using automated QA](#automated-qa-p6)_
+**There should be basic automated quality assurance applied to outputs** _- [Using automated QA](#automated-qa-p6)_
 
 
 </div>
