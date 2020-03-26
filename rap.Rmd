@@ -56,17 +56,34 @@ The collection of, and routine checking of data as it is coming into the departm
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
 
 
-<div class="jumbotron">
-  <h2 class="display-3">Core principles</h2>
+<div class="alert alert-dismissible alert-info">
+  <h2>Core principles</h2>
   <hr class="my-4">
-<p>Data sources for a publication are stored in the same database</p>
-<p>[Getting source data together](#getting-your-data-together-in-sql-p3)</p>
-<p>Underlying data files are produced using code, with no manual steps</p>
-<p>[Using automation to process data](#using-code-to-process-data-p4)</p>
-<p>Files and scripts should be appropriately version controlled</p>
-<p>[Using version control](#version-control-p5)</p>
-<p>There should be basic automated quality assurance applied to outputs</p>
-<p>[Using automated QA](#automated-qa-p6)</p>
+
+
+**Data sources for a publication are stored in the same database**
+
+
+_- [Getting source data together](#getting-your-data-together-in-sql-p3)_
+
+
+**Underlying data files are produced using code, with no manual steps**
+
+
+_- [Using automation to process data](#using-code-to-process-data-p4)_
+
+
+**Files and scripts should be appropriately version controlled**
+
+
+_- [Using version control](#version-control-p5)_
+
+
+**There should be basic automated quality assurance applied to outputs**
+
+
+_- [Using automated QA](#automated-qa-p6)_
+
 
 </div>
 

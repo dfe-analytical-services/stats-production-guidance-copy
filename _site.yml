@@ -2,13 +2,13 @@ name: "stats-prod-guide"
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Production Process"
+    - text: "Processing Statistics and Learning Resources"
       href: rap.html
     - text: "Data Standards"
       href: ud.html
-    - text: "Writing and Visualising"
+    - text: "Writing and Visualising Statistics"
       href: cd.html
-    - text: "Publishing"
+    - text: "Publishing Statistics"
       href: ees.html
   right:
     - icon: fa-envelope-o
