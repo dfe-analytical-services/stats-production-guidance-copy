@@ -1,16 +1,18 @@
 ---
-title: "Explore Education Statistics"
+title: "Publishing statistics"
 ---
 
->Guidance for how to publish Official Statistics via the new Explore Education Statistics platform. 
-
----
-
-# What is EES?
+<p class="text-muted">Guidance for how to publish Official Statistics via the new Explore Education Statistics platform..</p>
 
 ---
 
-Explore Education Statistics (EES) is a new platform designed to make DFE’s published statistics and data easier to find, access, use and understand. The admin service has been built so DFE statisticians can prepare their statistical releases and publish them in accordance with the predefined department release schedule.
+# Routes for publishing
+
+---
+
+Explore Education Statistics (EES) is the Department's new dissemiantion platform, designed to make DFE’s published statistics and data easier to find, access, use and understand. 
+
+The platform moved into Public Beta in March 2020 and over the next year will operate in parallel with existing statistics pages on gov.uk as publications are moved to the new platform.
 
 More information on why EES was introduced and the functionality within the platform can be found in these [slides.](https://docs.google.com/presentation/d/1CJMLxEPngGbTZbn1n4M6huGIeizUmjysthLwU3Zxoq4/edit?usp=sharing){target="_blank"}
 
@@ -22,17 +24,19 @@ At a high level the following table outlines the key differences between publish
 | Release attachments are reviewed and approved via emails | Releases are reviewed and approved within the service |
 | Release attachments are circulated for pre-release via email 24hours prior to publication date | Pre-release users are invited to preview releases within the service 24 hours prior to publication date | 
 
-The service is currently in public beta and has been launched as a MVP service, we will be iterating and improving the functionality based on user feedback throughout 2020. 
-
 The EES platform consists of two applications - 
 
 1. The public website  
-Where users access stats
+Where users access stats - https://explore-education-statistics.service.gov.uk/
 
 2. The admin website  
-Where production teams create their statistics
+Where production teams create their statistics - https://admin.explore-education-statistics.service.gov.uk/
 
-`add something about support for EES and who BAU is as we mention them in the next section`
+Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020. 
+
+Maintence and BAU running of the platform is supported by the Statistics Development Team.
+
+If you are unsure which route to use for publication please contact HoP Office (`add email address`)
 
 ---
 
@@ -40,9 +44,9 @@ Where production teams create their statistics
 
 ---
 
-The public website is available at: explore-education-statistics.service.gov.uk
+The public website is available at: https://explore-education-statistics.service.gov.uk/ 
 
-The admin website is available at: admin.explore-education-statistics.service.gov.uk
+The admin website is available at: https://admin.explore-education-statistics.service.gov.uk/ 
 
 Access to the admin service is limited to DFE AD accounts only and users have to have been invited to the service by either the BAU team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
@@ -53,23 +57,18 @@ The BAU team will be responsible for setting up and maintaining user permissions
 `add the getting access diagram`
 
 
-At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is just so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. However, all analysts will be able to continue to test the service within our test environment:
+At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is just so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
 
-test.admin.explore-education-statistics.service.gov.uk
+Analysts are able to test the service within our the platorms test environment (again, please contact the BAU team to request access):
 
-test.explore-education-statistics.service.gov.uk
+https://test.admin.explore-education-statistics.service.gov.uk
 
----
+https://test.explore-education-statistics.service.gov.uk
 
-# Using the public site
-
----
-
-`add a very short overview of what the public site is and what users can do there`
 
 ---
 
-# Using the admin site
+# Using the EES admin site
 
 ---
 
@@ -85,11 +84,19 @@ Within this dashboard you can access existing publications to create/edit their 
 
 Help and guidance for how to use the the admin website is available via the administrators guide. 
 
-## Instructions for creating and publishing a new release:
+## Instructions for creating and publishing a new release
+
+`r knitr::include_graphics("images/EES-create-release.png")`
 
 ### Create new release
 
 After finding the publication you want to create a release for, just press the button to create a new release. 
+
+Currently the following tyes of release can be created in EES - 
+
+* National Statistics  
+* Official Statistics
+* Adhoc Statistics
 
 In the production environment, in the short term creating new releases can only be done by the BAU team – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
 
@@ -113,12 +120,12 @@ Here you will update your tidy date files and accompanying metadata. You need to
 
 Once you click to upload the file a ‘Status’ will be visible that shows the progress of the import process. It will go through the following stages:
 
-•	Queued
-•	Validating
-•	Importing
-•	Complete
+* Queued
+* Validating
+* Importing
+* Complete
 
-This may take a little while depending on the size of your file and if there are numerous files queued for import. A XX MB file takes around X minutes to get to ‘COMPLETE’. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
+This may take a little while depending on the size of your file and if there are numerous files queued for import. `A XX MB file takes around X minutes to get to ‘COMPLETE’. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.`
 
 If you believe your file is ‘stuck’ please contact the BAU team.
 
@@ -141,9 +148,9 @@ If you create your chart and then change your mind as to what chart type would b
 
 Note, within the vertical and horizontal bar chart types you can also create stacked bar charts via the chart configuration options.
 
-You can create maps too, though there are a few bugs around that at the moment – it should work fine for region, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
+You can create maps too, currently this is possible for region, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
 
-Remember to save your chart when you’re done
+Remember to save your chart when you’re done.
 
 ### Writing content
 
@@ -179,7 +186,7 @@ This preview is only accessible for the 24hours before the publication date (tho
 
 ---
 
-# Publishing on EES - checklist
+# Publishing a new release on EES - checklist
 
 ---
 
@@ -187,28 +194,41 @@ Before releasing statistics for the first time you may want to discuss the new p
 
 ## Checklist:
 
-Before you create a new release in the platform: 
+Before you start creating a release in the platform you should have: 
 
-* Announced on gov.uk
-* Metadata to HoP
-* Contacting BAU team 
-* Produced tidy data with disclosure control
-* Produced metadata files
-* Run data through screener checks
+* Announced the upcoming release via gov.uk
+* Sent metadata form to HoP
+* Contacted the BAU team so we can support you with your first release
+* Produced your tidy csv data files with appropriate disclosure control
+* Produced metadata files for each csv data file
+* Ran your data and metadata through our screener checks
 
-Before you publish a release in the platform: 
+Before you publish a release you have created in the platform you should have: 
 
-* All the data has loaded successfully
+* Checked all the data has loaded successfully
 * Written footnotes
 * Written content (including tables and charts)
-* Pass higher review (G6+ clearance)
-* Preview your release
-* Schedule release date
-* Agreed PRA list
-* Raise a web ticket for gov.uk page (guidance coming)
+* Passed the release for higher review (G6+ clearance)
+* Previewed your release
+* Scheduled the release date
+* Invited your PRA list to preview 24 hours before it goes live
+* Raised a web ticket for the associated gov.uk page 
 
 
 `Add a section about onboarding and step-by-step for republishing a gov.uk release on gov.uk`
+
+
+---
+
+# Re-publishing an old release on EES
+
+---
+
+To fill out the content on EES and help teams and users prepare for the tranistion to the new platform we are asking teams to re-publish their latest releases (that were published via gov.uk) on EES where they are abe to. 
+
+The main requirement to be able to do this is having tidy data prepared. 
+
+`Add flow chart for re-publishing stats on EES`
 
 ---
 
@@ -218,7 +238,7 @@ Before you publish a release in the platform:
 
 ## How to create a release.
 
-`r knitr::include_graphics("images/EES-create-release.png")`
+
 
 ---
 
