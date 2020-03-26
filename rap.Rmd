@@ -6,7 +6,7 @@ title: "RAP Guidance for Statistics Producers"
 require(knitr)
 ```
 
-<p class="text-muted">Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into your production proccesses.</p>
+<p class="text-muted">Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses.</p>
 
 ---
 
@@ -27,57 +27,56 @@ We already have 'analytical pipelines' and have done for many years. The aim of 
 
 ### Our scope {-}
 
+---
 
 We want to focus on the parts of the production process that we have ownership and control over – so we are focussing on the process from data sources to publishable data files. This is the part of the process where RAP can currently add the most value - automating the production and quality assurance of our outputs currently takes up huge amount of analytical resource, which could be better spent providing insight and other value adding activity. 
 
 `r knitr::include_graphics("images/RAP-Scope-Arrow.png")`
 
-In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to assess our own work against that - [assessing my work against RAP](#p1).
+In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to assess our own work against that - [assessing our work against RAP](#what-we-need-to-do).
 
-Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see - [what tools I will need to use](#p2).
+Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see - [what tools we will need to use](#tools-and-learning-resources).
 
-The collection of, and routine checking of data as it is coming into the department is an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to contact cameron.race@education.gov.uk.
-
-
----
-
-
-# What we need to do {#p1}
-
-
----
-
-Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point.
-
-
-**Teams are expected to review their own processes and use the guidance on this site** to start making improvements towards meeting the four core principles if they aren't already.
-
-
----
-
-## Core principles
-
----
-
-
-Regardless of how it is implemented, the goal is that we should be using the guidance on this site to ensure our production processes meet the following key principles, and in turn, free us up to focus on the fun stuff:
-
-
-- **Data sources for a publication are stored in the same database** - [Getting source data together](#p3)
-
-- **Underlying data files are produced using code, with no manual steps** - [Using automation to process data](#p4)
-
-- **Files and scripts should be appropriately version controlled** - [Using version control](#p5)
-
-- **There should be basic automated quality assurance applied to outputs** - [Using automated QA](#p6)
-
+The collection of, and routine checking of data as it is coming into the department is an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to contact us.
 
 
 ---
 
 
-### Where I need to focus
+# What we need to do
 
+
+---
+
+<div class="alert alert-dismissible alert-danger">
+<strong>Teams are expected to review their own processes and use the guidance on this site</strong> to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
+</div>
+
+
+Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
+
+
+<div class="jumbotron">
+  <h2 class="display-3">Core principles</h2>
+  <hr class="my-4">
+<p>Data sources for a publication are stored in the same database</p>
+<p>[Getting source data together](#getting-your-data-together-in-sql-p3)</p>
+<p>Underlying data files are produced using code, with no manual steps</p>
+<p>[Using automation to process data](#using-code-to-process-data-p4)</p>
+<p>Files and scripts should be appropriately version controlled</p>
+<p>[Using version control](#version-control-p5)</p>
+<p>There should be basic automated quality assurance applied to outputs</p>
+<p>[Using automated QA](#automated-qa-p6)</p>
+
+</div>
+
+
+---
+
+
+## Where we need to focus
+
+---
 
 Most teams have already made progress with their production of tidy data files, and the release of the automated screener has now tied up that end point of the pipeline that we are all currently working towards. The standard pipeline for all teams will roughly resemble this:
 
@@ -91,78 +90,93 @@ The key now is for us to build on the work so far and focus on how we improve th
 ---
 
 
-## RAP process checklists
+## RAP in practice
 
+---
 
 The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the minimum implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around good and best practice levels.
 
 
 `r knitr::include_graphics("images/RAP-in-practice.png")`
 
+---
 
-Below are checklists designed to make reviewing our processes based on the graphic above easier, giving a straightforward list of quesitons to check our work against. This will flag areas that require improvement, once we know what it is we need to address at a publication level, we can then use the sidebar to go to the specific section with more guidance on how to get there.
-
+## Review checklists
 
 ---
 
-### Minimum
-
-- [Do we have a sensible folder and file structure?]()
+Below are checklists designed to make reviewing our processes based on the graphic above easier, giving a straightforward list of quesitons to check our work against. This will flag areas that require improvement, and we can then use the links or sidebar to go to the specific section with more detail and guidance on how to get there.
 
 
-- Do we have suitable documentation?
-
-
-- Are our underlying data files screened against the standards?
-
-
-- Are all of our source data stored in a single SQL database?(Link to part about setting up a sql data)
-
-
-- Do I produce my data with no manual steps?(link to coding section)
-
-
-- Do I have a clean final version of the code used to produce my data?
-
-
-- Do I use the basic level of automated QA?(link to automate QA)
+Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points.
 
 ---
 
 ### Good practice
 
-- Can the script that you used this year be used again next year with minimal alterations (i.e. less than half an hour of editing)?
+---
 
-- Do I have a git-controlled repo with final versions of code and documentation saved in it?(Link to setting up a git-controlled repo on azure dev ops)
+- Do we have a [sensible folder and file structure](#folder-structures)?
 
-- Do I have the data-screener setup and run within my own team?(Link to set up video)
 
-- Do I use a single production script to get from source data to underlying data?
+- Do we have suitable [documentation](#documentation)?
 
-- Do I use publication-specific automated QA?(link to Automated QA) - point towards packages to look at like test that
 
-- Do I use automation to produce summary reports of my data?(Link to Automated QA/summary reports)
+- Are our underlying data files [screened against the standards](#data-standards-screening)?
+
+
+- Are all of our source data stored in a [single SQL database](#how-to-set-up-a-sql-working-area)?
+
+
+- Do we produce our data with [no manual steps](#using-code-to-process-data-p4)?
+
+
+- Do we have a clean final version of the code used to produce the data?
+
+
+- Do we use the [basic level of automated QA](#automated-qa-p6)?
+
+---
+
+### Great practice
+
+---
+
+- Can the script that we used this year be used again next year with minimal alterations ( < 30 minutes of editing)?
+
+- Do we have a [git-controlled repo](#how-to-setup-an-azure-devops-area) with final versions of code and documentation saved in it?
+
+- Do we have the [data-screener setup](#data-standards-screening) and run within our team?
+
+- Do we use a [single production script](#using-code-to-process-data-p4) to get from source data to underlying data?
+
+- Do we use publication-specific [automated QA](#automated-qa-p6)?
+
+- Do we use automation to produce [summary reports](#automating-summary-statistics) of our data?
 
 ---
 
 ### Best practice
 
+---
 
-Do I have active version control developing code in a git-controlled repo?(Link to how to use git for version control, commits etc)
+- Do we actively use [git](#how-to-use-git-in-practice) when developing code?
 
 
-Do I have a single production script to get from source to underlying data, with intergrated QA and summary reports?
+- Do we have a single production script to get from source to underlying data, with intergrated QA and summary reports?
 
 
 ---
 
 
-# Tools and learning resources {#p2}
+# Tools and learning resources
+
 
 ---
 
-**We are happy for people to use whatever tools they want, as long as the proccesses meet the principles of RAP.**
-
+<div class="alert alert-dismissible alert-warning">
+We are happy for people to use whatever tools they want, as long as the proccesses meet the principles of RAP.
+</div>
 
 That being said, we're developing resources to help you begin on your own RAP process. Below are the recommended tools that will be the easiest to pick up, and will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE, and are already working in our current IT setup.
 
@@ -170,70 +184,82 @@ That being said, we're developing resources to help you begin on your own RAP pr
 
 ### Recommended tools
 
+---
 
-**Database management - Microsoft SQL Server**
+**Database management - Microsoft SQL Server and SQL**
 
-- SQL servers are where most of DfE's data is held, and with a wide usage community already in place and a language/interface that is pleasantly intuitive and easy to use, it is an obvious choice for this task. Moreover, SQL allows us to carry out a lot of data manipulation and basic analysis that meets the entire needs of some publications.
+- SQL servers are where most of DfE's data is held, and with a wide usage community already in place and a language that is pleasantly intuitive and easy to use, it is an obvious choice for this task. The majority of us already have Microsoft SQL Server Management Studio (MSSMS) downloaded through the software centre. Moreover, SQL (Structured Query Language) allows us to carry out a lot of data manipulation and basic analysis that meets the entire needs of some publications. Note that SQL is the language, and MSSMS is the environment that we mostly use to write and run it in DfE.
 
-**Data manipulation and analysis - R** 
+**Data manipulation and analysis - RStudio and R** 
 
-- We recommend to use R where SQL can't do everything that you need in terms of manipulation and analysis as it already has a strong community within DfE, it can pull in data stored in SQL servers and integrate SQL queries, as well as becoming a standard language in the world of statistics and data.
+- We recommend to use R where SQL can't do everything that you need in terms of manipulation and analysis as it already has a strong community within DfE, it can pull in data stored in SQL servers and integrate SQL queries, as well as fast becoming a leading language in the world of statistics and data. R (the language), RStudio (the best environment to write and run R), and RTools (a useful package), are all available from the software centre.
 
-**Version control - Git** 
+**Version control - AzureDevOps and Git** 
 
-- Version control can be implemented through having a sensible folder structure and file naming conventions, however we do recommend that in the longer term we move towards to using Git. It is widely used across DfE and integrates neatly with Azure DevOps, as well as being the current leading version control software in the world of coding. (Add the citation here)
+- Version control can be implemented through having a sensible folder structure and file naming conventions, however we do recommend that in the longer term we move towards to using Git. It is widely used across DfE and integrates neatly with our use of Azure DevOps, as well as being the current leading version control software in the world of coding with over [87% of 74,298 stack overflow users using it](https://insights.stackoverflow.com/survey/2018#work-_-version-control){target="_blank"}. To highlight the scale of this dominance, Subversion came in in second place at a paltry 16%.
 
 ---
 
 ### Learning these tools 
 
-We are always on the look out for resources that will help you to have the skills needed to incorporate the principles of RAP into your own processes. There will be many more just a google away, and genuinely, Google is the single most powerful learning resource out there, whether it leads you to a StackOverflow answer to your problem, or to an online training course, it will have your needs covered. To help speed up your search, links are included below for some of the resources that are particularly relevenat that we're aware of.
+---
+
+We are always on the look out for resources that will help you to have the skills needed to incorporate the principles of RAP into your own processes. There will be many more just a google away, and genuinely, Google is the single most powerful learning resource out there, whether it leads you to a StackOverflow answer to your problem, or to an online training course, it will have your needs covered. To help speed up your search, links are included below for some of the resources that are particularly relevant that we're aware of.
+
+
+As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first, before then getting a friend or colleague to show them around the environment to use the language in so that they can begin to use them on their own data. 
 
 ---
 
 #### General
 
 
-- How to name files(link) - general good practice with naming conventions
-
-- [DataCamp](https://learn.datacamp.com/){target="_blank"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email 
+- [Google](www.google.co.uk){target="_blank"} - it's so important that it's worth repeating again, do not be afraid to type your questions into a search engine, even the most experienced professionals spend a lot of time on forums such as [Stack Overflow](https://stackoverflow.com/){target="_blank"}.
 
 - The [DfE Data Science resource tool](https://rsconnect/rsc/DS-Resources/){target="_blank"}, in here you can access a plethora of materials, from coffee and coding talks to online guidebooks.
 
-- There is also a fantastic [general data science resources list](https://github.com/Chris-Engelhardt/data_sci_guide){target="_blank"}, that includes plenty of things for R and SQL, with Python, Git, and shell included in there too!
+- There is also a fantastic [general data science resources list](https://github.com/Chris-Engelhardt/data_sci_guide){target="_blank"}, that includes plenty of resources for R and SQL, with Python, Git, and shell included in there too.
 
-- Zach Waller has produced [guidance of how to use git in Azure DevOps (formally VSTS)](https://dfe-analytical-services.github.io/vsts-for-analysis/){target="_blank"}, which aims to give a very detailed guide on how to use version control software with use in the production of official statistics.
+- [DataCamp](https://learn.datacamp.com/){target="_blank"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email Learning.Academy@ons.gov.uk, they can guide you through the process of getting access to one of their premium subsriptions for a few weeks, which allows you to access the rest of the courses.
+
+- Zach Waller has produced [guidance of how to use git in Azure DevOps (formally VSTS)](https://dfe-analytical-services.github.io/vsts-for-analysis/){target="_blank"}, which gives a very detailed guide on how to use version control software with use in DfE analysis.
 
 - Earlier this year we had our Data Science week, which contained a wide variety of talks across Data Science within the department, everything was recorded and can be found on the [associated microsoft stream page](https://web.microsoftstream.com/group/df01862c-7ad4-4f25-b7f2-df7353af52a9){target="_blank"}.
 
-- Finally, if after reading through this webiste you still need any convincing as to why R and Git are worth your time, then have a look at the [Boons of R and Git](https://psysandsy.github.io/boons-r-git.html){target="_blank"} by David Sands.
+- ESFA have also produced a useful [guide to using R and Git](https://rsconnect/rsc/esfa-r-training/){target="_blank"}. This also includes some information on Shiny apps. For more information on these, I'd recommended joining the [R Shiny Developers](https://teams.microsoft.com/l/channel/19%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/tab%3A%3A1fc89e11-fa70-473d-b993-df467ca0d459?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9) teams group.
+
+- Finally, if after reading through this website you still need any convincing as to why R and Git are worth your time, then have a look at the [Boons of R and Git](https://psysandsy.github.io/boons-r-git.html){target="_blank"} by David Sands.
+
 
 #### SQL
 
+
 - Our very own Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL).
 
+- The [Khan academy](https://www.khanacademy.org/computing/computer-programming/sql){target="_blank"} offer a great free introduction to the basics of SQL.
+
+- [w3schools.com](https://www.w3schools.com/sql/default.asp){target="_blank"} offers a useful guide through the most common SQL commands.
 
 
 #### R
 
-- We've produced the [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}, which is aimed at giving users a good introduction into how to get started with using R and RStudio.
+
+- There is the [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}, which is aimed at giving users a good introduction into how to get started with using R and RStudio.
 
 - There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank"}.
 
 - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank"}, hopefully this one should be relatively self-explanatory!
 
-- And the last one for now is [StyleR](https://styler.r-lib.org/){target="_blank"}, less L+D and more a nifty package that helps you to standardise and style your R code in line with tidyverse formatting rules to make it easier to read and reuse for others.
+---
+
+
+In general there is a widening knowledge of the methods within SQL, R, and Git, that are commonly used to process our data, so we recommended asking around similar production teams. If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.
+
 
 ---
 
 
-In general there is a widening knowledge of the methods within SQL and R that are commonly used to process our data, so we recommended asking around similar production teams. If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.
-
-
----
-
-
-# Getting your data together in SQL {#p3}
+# Getting your data together in SQL
 
 ---
 
@@ -243,8 +269,9 @@ The first place to start for your teams RAP is to store the raw data you use to 
 
 ### Introduction to SQL
 
+---
 
-SQL stands for Structured Query language and is a scripting language, which asks physical servers at a DfE site to process data.
+SQL stands for Structured Query language and is a scripting language, which asks DfE servers to process data.
 
 
 In order for us to be able to have an end-to-end data pipeline where we can replicate our analysis across the department, we should store all of the raw data needed to create aggregate statistics in a managed Microsoft SQL Server. This includes any lookup tables and all administrative data from collections prior to any manual processing. This allows us to then match and join the data together in an end-to-end process using SQL queries. 
@@ -256,6 +283,7 @@ SQL is a fantastic language for large scale data joining and manipulation; it al
 
 ### How to set up a SQL working area
 
+---
 
 More to follow.
 
@@ -263,6 +291,7 @@ More to follow.
 
 ### How to get your data into SQL
 
+---
 
 More to follow.
 
@@ -270,6 +299,7 @@ More to follow.
 
 #### Copying data from iStore
 
+---
 
 More to follow.
 
@@ -277,68 +307,75 @@ More to follow.
 
 #### Uploading data to SQL Server
 
+---
 
-There's lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including [this guide](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017){target="_blank"}. It's important to upload them with consistent, throught-through naming conventions. 
+There's lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including [this guide](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017){target="_blank"}.
+
+
+Remember that it is important to upload them with consistent, throught-through [naming conventions](#naming-conventions). You will thank yourself later.
 
 
 ---
 
 ### How to grant access to your area
 
-
-More to follow.
-
----
-
-
-# Using code to process data {#p4}
-
 ---
 
 More to follow.
 
 ---
 
-### Something in here about using code
+
+# Using code to process data
+
+---
 
 
 It is as simple as telling your computer what to do. Like in SPSS where you write the syntax. Talk about the benefits of it.
 
-Any particular useful things to know - use sensible variable names.
+Any particular useful things to know, collate key tips such as using sensible variable names.
 
-General good practice around writing code.
+General good practice around writing code. [StyleR](https://styler.r-lib.org/){target="_blank"}, is a nifty package that helps you to standardise and style your R code in line with tidyverse formatting rules to make it easier to read and reuse for others.
 
 ---
 
 ### Producing tidy underlying data in SQL
 
+---
 
-Any particularly useful tips specific to SQL.
+[Data tidying tutorial in SQL](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"}, this is a SQL query that you can run on your own machine and walks you through the basics of tidying a simple exmample dataset in SQL.
 
-- [Data tidying tutorial in SQL](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"}, this is a SQL query that you can run on your own machine and walks you through the basics of tidying a simple exmample dataset in SQL.
+
+More to follow.
 
 ---
 
 ### Connecting R to SQL
 
+---
 
-- In here there will be things.
+More to follow.
+
 
 ---
 
 ### Tidying and processing data in R
 
+---
 
-- Hadley wickham video
+Something about R?
 
-- Other useful things?
 
-- [Applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"} 
+[Here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R.
+
+
+[Applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
 ---
 
 ### Further resources
 
+---
 
 More to follow.
 
@@ -346,7 +383,7 @@ More to follow.
 ---
 
 
-# Version control {#p5}
+# Version control
 
 ---
 
@@ -354,37 +391,92 @@ Version control can mean a lot of things. Ultimately the aim should be to leave 
 
 ---
 
-### Folder structures and naming conventions
+### Folder structures
 
-There's not a huge amount to be said on this, we all know a messy folder structure when we see one. As a minimum you should have a folder that includes all of the final versions of documents produced and published per release. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate?
+---
+
+How you organize and name your files will have a big impact on your ability to find those files later and to understand what they contain. You should be consistent and descriptive in naming and organizing files so that it is obvious where to find specific data and what the files contain.
+
+
+As a minimum you should have a folder that includes all of the final versions of documents produced and published per release. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate?
  
- a sensible naming convention(link this to some guidance on naming conventions and good practice) across all of your files?
+---
+
+### Naming conventions
+
+---
+
+Having a **clear** and **consistent** naming convention for your files is critical. Remember that file names should:
+
+
+**Be machine readable** 
+
+- Avoid spaces.
+- Avoid special characters such as: ~ ! @ # $ % ^ & * ( ) ` ; < > ? , [ ] { } ‘ “.
+- Be as short as practicable; overly long names do not work well with all types of software.
+
+
+**Be human readable** 
+
+- Be easy to understand the contents from the name.
+
+
+**Play well with default ordering**
+
+- Have numbers first.
+- Follow the ISO 8601 date standard (YYYYMMDD) to ensure that all of your files stay in chronological order.
+- Use leading zeros to left pad numbers and ensure files sort properly and avoid 1,10,2,3.
+
+
+If in doubt, take a look at this [presentation](https://speakerdeck.com/jennybc/how-to-name-files){target="_blank"}, or this [naming convention guide by Stanford](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming){target="_blank"}, for examples reinforcing the above.
+
+---
+
+#### EES naming conventions
+
+---
+
+Use the principles above to decide on a name for each data file and your wider publication. Then apply those to the following conventions. Remember that the general public will be using these.
+
+
+| File | Name |
+|------|------|
+| Data | data_file.csv |
+| Metadata (EES) | data_file.meta.csv |
+| Metadata (external guidance) | publication_name.year.metadata.pdf |
+| PRA list | publication_name.year.pra-list.pdf |
+| Methodology (if not in the platform as .html or link) | publication_name.methodology.pdf |
 
 
 ---
 
 ### Documentation
 
-When you assume you make an ass out of u and me. Everyone knows this saying, yet not all of us heed it's warning. When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and highlight where y
+---
+
+_When you assume you make an 'ass' out of 'u' and 'me'_. Everyone knows this saying, yet not all of us heed it's warning. When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. Thorough documentation saves us time, and provides a clear audit trail of what we do.
+
+
+You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and highlight where y
+
 
 An analyst from another area should be able to pick up your data and use your documentation to produce fully QA'd data files ready for publication. Teams may achieve this in different ways, as a guide we'd recommend that teams have:
-    - Document 1
-    - Document 2
 
-Something around commenting in code.
-
-Add something around R code following the tidyverse styling, and something for SQL styling?
-
----
-
-## Version control software
+- Document 1
+- Document 2
 
 
-More to follow.
+Something around commenting in code and good practices there?
+
+
+You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files.
+
 
 ---
 
-### Introduction to git
+## Introduction to git
+
+---
 
 More to follow.
 
@@ -392,6 +484,7 @@ More to follow.
 
 ### How to setup an azure devops area
 
+---
 
 More to follow.
 
@@ -399,9 +492,9 @@ More to follow.
 
 ### How to use git in practice
 
+---
 
-More to follow, for now please reference the [learning resources](#2) section.
-
+More to follow, for now please refer to the [learning resources](#tools-and-learning-resources) section.
 
 ---
 
@@ -412,7 +505,9 @@ More to follow, for now please reference the [learning resources](#2) section.
 
 Any data files that have been created will need to be quality assured. These checks should be automated where possible, so the computer is doing the hard work, and to ensure their reliability.
 
+
 The Statistics Development Team will provide generalised code that teams can use as a starting point for automated QA and they should run this as a minimum as part of their pipeline, they can then choose to add more area specific checks to the script and/or continue with current checking processes in tandem.
+
 
 It is assumed that when using R, automated scripts will output html reports that the team can read through to understand their data and identify any issues.
 
@@ -420,13 +515,18 @@ It is assumed that when using R, automated scripts will output html reports that
 
 ### Recommended generic checks
 
+---
 
 More to follow.
+
+
+Point towards packages to look at like test that for developing more publication specific QA.
 
 ---
 
 ### Examples of this in practice
 
+---
 
 More to follow.
 
@@ -435,6 +535,7 @@ More to follow.
 
 ### Example code
 
+---
 
 More to follow.
 
@@ -443,6 +544,7 @@ More to follow.
 
 ### Automating summary statistics
 
+---
 
 More to follow.
 
@@ -454,7 +556,9 @@ More to follow.
 
 The final part of quality assurance for underlying data files, will be to check that they meet the standards that have been agreed upon. Once teams have quality assured the data files, they can then run them through the data screener to check they meet the standards required for the EES platform. This forms the final part of the automated QA process. 
 
+
 The screener outputs a .html report that we can read through to make sure all checks have passed. If any checks fail, teams should make the required changes to the data (potentially running full QA again) and then re-run the screener. If all the screener checks pass, and only if they all pass and the report shows 100%, the file is then ready to be loaded into the EES platform. 
+
 
 The data-screener can found on [GitHub](https://github.com/dfe-analytical-services/ees-data-screener){target="_blank"}, and from there can be either downloaded or cloned. A [tutorial video](https://www.youtube.com/watch?v=D60UU5r_TrM&feature=youtu.be){target="_blank"} has been made to walk you through the initial set-up and use of the project.
 
