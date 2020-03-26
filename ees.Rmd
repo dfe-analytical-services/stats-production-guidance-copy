@@ -74,7 +74,7 @@ https://test.explore-education-statistics.service.gov.uk
 
 Use Google Chrome or Microsoft Edge.
 
-`add the dashboard screenshot`
+`r knitr::include_graphics("images/EES-admin-dashboard.png")`
 
 When you enter the service you’ll see the admin dashboard, here what you can see will be dependent on your access permissions i.e. you’ll only see the publications that you have been granted access to. Within the test environment users are set up with full permissions (i.e. they can see/do everything) though in our production environment this will be restricted. 
 
@@ -111,7 +111,7 @@ In the production environment, in the short term creating new releases can only 
 
 Once you have created your release you will see enter the ‘create release dashboard’:
 
-`add screenshot of create release dashboard`
+`r knitr::include_graphics("images/EES-create-release-dashboard.png")`
 
 Here, you need to work through the following tabs to create your release:
 
@@ -189,6 +189,8 @@ To invite a user, just add their email address. All invited users will receive a
 
 This preview is only accessible for the 24hours before the publication date (though the emails may go out to users before then). We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
 
+`r knitr::include_graphics("images/EES-PRA.png")`
+
 ### Methodology
 
 `TBA`
@@ -253,7 +255,7 @@ The main requirement to be able to do this is having tidy data prepared.
 
 ## How pre-release works and what to expect.
 
-`r knitr::include_graphics("images/EES-PRA.png")`
+
 
 ---
 
