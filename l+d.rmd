@@ -4,12 +4,9 @@ title: "Tools and learning resources"
 
 <p class="text-muted">A collection of useful learning resources, and information on the recommended tools to get you started.</p>
 
-
 ---
 
-
-## Introduction
-
+# Introduction
 
 ---
 
@@ -21,7 +18,7 @@ That being said, we're developing resources to help you begin on your own RAP pr
 
 ---
 
-## Recommended tools
+# Recommended tools
 
 ---
 
@@ -39,7 +36,7 @@ That being said, we're developing resources to help you begin on your own RAP pr
 
 ---
 
-## Learning these tools 
+# Learning these tools 
 
 ---
 
@@ -50,7 +47,7 @@ As a general approach, many people find it useful to use the resources below to 
 
 ---
 
-### General
+## General
 
 ---
 
@@ -72,7 +69,7 @@ As a general approach, many people find it useful to use the resources below to 
 
 ---
 
-### SQL
+## SQL
 
 ---
 
@@ -84,7 +81,7 @@ As a general approach, many people find it useful to use the resources below to 
 
 ---
 
-### R
+## R
 
 ---
 
