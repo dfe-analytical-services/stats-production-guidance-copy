@@ -308,9 +308,9 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 - You must include time_period and time_identifier columns in your data files.
 - Your data must match the allowable values above.
-- You should use ‘Reporting year’ if your data does not fit in the other categories, i.e. collected on a specific day.
+- Use ‘Reporting year’ if your data does not fit in other categories, i.e. collected on a specific day.
 - If you have different types of year such academic, calendar, and financial, these should be in separate files.
-- You can use filters to add more detail if you have multiple time breakdowns in the same file (quarter/full year).
+- Use filters to add more detail if you have multiple time breakdowns in the same file (quarter/full year).
 - Where a measure spans multiple years, you should name the starting year, and set the time_period as the year published.
 
 </div>
