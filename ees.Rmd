@@ -241,28 +241,10 @@ The main requirement to be able to do this is having tidy data prepared.
 
 `Add flow chart for re-publishing stats on EES`
 
----
-
-# One pagers
-
----
-
-## How to create a release.
 
 
 
----
-
-## How pre-release works and what to expect.
-
-
-
----
-
-## Types of outputs
-
-
-`r knitr::include_graphics("images/EES-outputs.png")`
+<!-- `r knitr::include_graphics("images/EES-outputs.png")` -->
 
 
 
