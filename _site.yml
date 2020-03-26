@@ -17,6 +17,6 @@ output:
   html_document:
     toc: TRUE
     toc_float: TRUE
-    theme: cosmo
-    highlight: textmate
+    theme: simplex
+    highlight: monochrome
     css: styles.css

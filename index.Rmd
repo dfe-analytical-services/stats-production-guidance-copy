@@ -5,14 +5,17 @@ date: "Last updated: `r Sys.Date()`"
 
 ---
 
+
 **Design and purpose**
 
 
-This is a guide aimed at anyone producing official statistics. It is particularly important for those publishing through EES, though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walkthrough guide from processing to publication, as well as being a reference place that is easy to navigate if you just need to check on a specific part of the process, or access specific resources.
+This is a guide aimed at anyone producing official statistics. It is particularly important for those publishing through EES, though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walkthrough guide from processing to publication, as well as being a single resource to refer to that is easy to navigate if you just need to check on a specific part of the process, or access specific guidance.
 
 
-The ordering is completely intentional. Teams should be taking a data-first approach to releases. Building the data files using the principles of RAP, before then writing about them and publishing it all.
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">David Simpson</footer>
+</blockquote>
 
 
-Obviously there are some things that this site does not have. It will build and change over time. We hope it can prove a useful resource for everyone from the most experienced of producers right through to those who are working on their very first publication. If you have any feedback or suggested additions, please contact us using the envelope button in the top right corner.
-
+Obviously there are some things that this site does not have. It will build and change over time. We hope it can prove a useful resource for everyone from the most experienced of producers right through to those who are working on their very first publication. If you have any feedback, suggested additions, or wish to challenge any of the guidance, please contact us using the envelope button in the top right corner.
