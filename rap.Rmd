@@ -33,9 +33,9 @@ We want to focus on the parts of the production process that we have ownership a
 
 `r knitr::include_graphics("images/RAP-Scope-Arrow.png")`
 
-In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to assess our own work against that - [assessing our work against RAP](#what-we-need-to-do).
+In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to [assess our own work against the principles of RAP](#what-we-need-to-do).
 
-Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see - [what tools we will need to use](#tools-and-learning-resources).
+Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see our [learning resources](https://rsconnect/rsc/stats-production-guidance/l+d.html){target="_blank"} page.
 
 The collection of, and routine checking of data as it is coming into the department is an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to contact us.
 
@@ -55,7 +55,6 @@ The collection of, and routine checking of data as it is coming into the departm
 
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
 
-
 ---
 
 # Core principles
@@ -63,16 +62,16 @@ Teams will start from different places and implement changes at different rates,
 ---
 
 
-1 - **Data sources for a publication are stored in the same database** _- [Getting source data together](#getting-your-data-together-in-sql-p3)_
+1. **Data sources for a publication are stored in the same database** _- [Getting source data together](#getting-your-data-together-in-sql)_
 
 
-2 - **Underlying data files are produced using code, with no manual steps** _- [Using automation to process data](#using-code-to-process-data-p4)_
+2. **Underlying data files are produced using code, with no manual steps** _- [Using automation to process data](#using-code-to-process-data)_
 
 
-3 - **Files and scripts should be appropriately version controlled** _- [Using version control](#version-control-p5)_
+3. **Files and scripts should be appropriately version controlled** _- [Using version control](#version-control)_
 
 
-4 - **There should be basic automated quality assurance applied to outputs** _- [Using automated QA](#automated-qa-p6)_
+4. **There should be basic automated quality assurance applied to outputs** _- [Using automated QA](#automated-qa)_
 
 
 ---
@@ -132,13 +131,13 @@ Some teams will already be looking at best practice, while others will still hav
 - Are all of our source data stored in a [single SQL database](#how-to-set-up-a-sql-working-area)?
 
 
-- Do we produce our data with [no manual steps](#using-code-to-process-data-p4)?
+- Do we produce our data with [no manual steps](#using-code-to-process-data)?
 
 
 - Do we have a clean final version of the code used to produce the data?
 
 
-- Do we use the [basic level of automated QA](#automated-qa-p6)?
+- Do we use the [basic level of automated QA](#automated-qa)?
 
 ---
 
@@ -152,9 +151,9 @@ Some teams will already be looking at best practice, while others will still hav
 
 - Do we have the [data-screener setup](#data-standards-screening) and run within our team?
 
-- Do we use a [single production script](#using-code-to-process-data-p4) to get from source data to underlying data?
+- Do we use a [single production script](#using-code-to-process-data) to get from source data to underlying data?
 
-- Do we use publication-specific [automated QA](#automated-qa-p6)?
+- Do we use publication-specific [automated QA](#automated-qa)?
 
 - Do we use automation to produce [summary reports](#automating-summary-statistics) of our data?
 
@@ -245,9 +244,9 @@ More to follow.
 ---
 
 
-It is as simple as telling your computer what to do. Like in SPSS where you write the syntax. Talk about the benefits of it.
+It is as simple as telling your computer what to do. `Like in SPSS where you write the syntax. Talk about the benefits of it.`
 
-Any particular useful things to know, collate key tips such as using sensible variable names.
+`Any particular useful things to know, collate key tips such as using sensible variable names.`
 
 General good practice around writing code. [StyleR](https://styler.r-lib.org/){target="_blank"}, is a nifty package that helps you to standardise and style your R code in line with tidyverse formatting rules to make it easier to read and reuse for others.
 
@@ -257,7 +256,7 @@ General good practice around writing code. [StyleR](https://styler.r-lib.org/){t
 
 ---
 
-[Data tidying tutorial in SQL](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"}, this is a SQL query that you can run on your own machine and walks you through the basics of tidying a simple exmample dataset in SQL.
+[Data tidying tutorial in SQL](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"}, this is a SQL query that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
 
 
 More to follow.
@@ -277,7 +276,6 @@ More to follow.
 
 ---
 
-Something about R?
 
 
 [Here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R.
@@ -285,14 +283,8 @@ Something about R?
 
 [Applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
----
 
-### Further resources
-
----
-
-More to follow.
-
+For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](https://rsconnect/rsc/stats-production-guidance/l+d.html){target="_blank"} page.
 
 ---
 
@@ -368,11 +360,16 @@ Use the principles above to decide on a name for each data file and your wider p
 
 ---
 
-_When you assume you make an 'ass' out of 'u' and 'me'_. Everyone knows this saying, yet not all of us heed it's warning. When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. Thorough documentation saves us time, and provides a clear audit trail of what we do.
+_When you assume you make an 'ass' out of 'u' and 'me'_. Everyone knows this saying, yet not all of us heed it's warning. 
+
+
+When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. Thorough documentation saves us time, and provides a clear audit trail of what we do.
 
 
 You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team.
 
+
+When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work. We recommend that you try to follow [tidyverse](https://style.tidyverse.org/){target="_blank"} styling where you can, as this makes your code easier to read. The [styler package](){target="_blank"} helps to make this delightfully easy. There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
 
 ---
 
@@ -386,7 +383,7 @@ Use commented lines of - and = to break up your files into scannable chunks. Exa
 
 `# -----------------------------------------------------------------------------------`
 
-You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"}.
+You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"} as well.
 
 
 ---
