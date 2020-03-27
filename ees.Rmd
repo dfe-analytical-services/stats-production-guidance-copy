@@ -98,7 +98,7 @@ When you enter the service you’ll see the admin dashboard, here what you can s
 The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
 
-`r knitr::include_graphics("images/EES-admin-dashboard.png")`
+`r knitr::include_graphics("images/EES-admin-dashboard.PNG")`
 
 
 Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and schedule releases tabs to see releases that are in progress. 
@@ -151,7 +151,7 @@ Once you have created your release you will see enter the ‘create release dash
 4.	Release status (moving through the approval process)
 
 
-`r knitr::include_graphics("images/EES-create-release-dashboard.png")`
+`r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
 
 ---
 
