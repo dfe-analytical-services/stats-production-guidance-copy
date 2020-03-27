@@ -307,6 +307,9 @@ Before you publish a release you have created in the platform you should have:
 * Checked all the data has loaded successfully
 * Written footnotes
 * Written content (including tables and charts)
+* Attached a public metadata document
+* Attached a public pre-release access list
+* Enusured methodology information is either linked off to or attached to the release
 * Passed the release for higher review (senior sign-off)
 * Previewed your release
 * Scheduled the release date
