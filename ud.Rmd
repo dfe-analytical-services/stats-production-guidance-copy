@@ -33,17 +33,17 @@ Our publication data is released under the terms of the [Open Government License
 
 This guide aims to help statistical production teams understand and meet the standards required. This includes:
 
-- [General file requirements](#p1)
+- [General file requirements](#general-requirements)
 
-- [Observational units](#p2)
+- [Observational units](#observational-units)
 
-- [Filters](#p3)
+- [Filters](#filters)
 
-- [Indicators](#p4)
+- [Indicators](#indicators)
 
-- [Metadata requirements for Explore Education Statistics](#p5)
+- [Metadata requirements for Explore Education Statistics](#ees-metadata)
 
-- [How to screen your data against these standards and next steps](#p6)
+- [How to screen your data against these standards and next steps](#how-to-check-against-the-standards)
 
 
 If you have any questions, or would like any further advice on what you read here, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
@@ -51,7 +51,7 @@ If you have any questions, or would like any further advice on what you read her
 
 ---
 
-# General requirements {#p1}
+# General requirements
 
 ---
 
@@ -68,7 +68,7 @@ For publishing on EES specifically, please note the following points:
 - Keep in mind that a data block can only have a single data source. However, many blocks can share one source. 
 - The data published varies by release, in granularity of breakdowns and the indicators included within data files. 
 - You should include all years of the data you available in your data file to facilitate time series analysis.
-- Each data file must be accompanied by a corresponding .csv metadata file as outlined under [EES Metadata](#p5).
+- Each data file must be accompanied by a corresponding .csv metadata file as outlined under [EES Metadata](#ees-metadata).
 
 <div class="alert alert-dismissible alert-danger">
   In light of recent acessibility legislation, you should aim to include at least 3 years of data in EES where it exists.
@@ -82,8 +82,11 @@ For publishing on EES specifically, please note the following points:
 
 These standards give you the power to format the data in way that best meets the needs of the users. There are only a handful of formatting standards to follow to ensure best practice and consistency across all of our data.
 
+<div class="alert alert-dismissible alert-danger">
+Data files must in comma separated values (.csv) format, and use UTF-8 encoding. You can specify this when saving the file in excel, or exporting from elsewhere.
+</div>
 
-Data files must in comma separated values (.csv) format, and use UTF-8 encoding. Variable names must be in the first row of your file as the header row, and be in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank"}. If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell (this is often done automatically for you). 
+Variable names must be in the first row of your file as the header row, and be in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank"}. If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell (this is often done automatically for you). 
 
 
 You should also ensure that your data follows the [GSS Standards on symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"}, though be aware to ignore the ask that symbols are included in separate cells from the data, which is unpractical and unrealistic at best.
@@ -103,9 +106,9 @@ The move to the new platform provided the ideal opportunity to standardise our p
 The variables (columns) in each of the uploaded data files will fall in to the following three categories. The standards for each category are discussed in detail later on this page.
 
 
-- **Observational units** - time and geography identifiers
-- **Filters** - the things we filter our data on, e.g. school types or learner characteristics
-- **Indicators** - the things we measure, e.g. pupil numbers or percentage of online applications
+- **[Observational units](#observational-units)** - time and geography identifiers
+- **[Filters](#filters)** - the things we filter our data on, e.g. school types or learner characteristics
+- **[Indicators](#indicators)** - the things we measure, e.g. pupil numbers or percentage of online applications
 
 ---
 
@@ -122,7 +125,7 @@ A useful way to judge how to break up data files is to consider whether all of t
 
 - As long as your data meets the standards, you can include as much as you want in a single file. 
 - Remember that the larger the file is to upload, and also the larger it is for users to download and then have to process.
-- Different types of years (academic/calendar) should not be mixed in the same file, see [observational units](#observational-units-p2).
+- Different types of years (academic/calendar) should not be mixed in the same file, see [observational units](#observational-units).
 - If you have a lot of blank or empty indicator cells, consider breaking the files up so that the indicator columns are relevant to as many rows as possible.
 
 --- 
@@ -155,19 +158,18 @@ We generally recommend fewer large files over a larger number of smaller files. 
 
   <hr class="my-4">
 
-- All files will include [observational units](#observational-units-p2) and [indicators](#indicators-p4).
-- The overwhelming majority of files will also have [filters](#filters-p3).
+- All files will include [observational units](#observational-units) and [indicators](#indicators).
+- The overwhelming majority of files will also have [filters](#filters).
 - A table in Explore Education Statistics can only be created from a single file.
 - All data in a single data file can be directly compared in the table tool.
 - Break up files for different collections to avoid lots of blank or empty cells.
 - You cannot mix different types of year in the time_identifier column.
-- Users will be downloading the same files you upload, so consider how easy it will be for users to handle.
 
 </div>
 
 ---
 
-# Observational units {#p2}
+# Observational units
 
 ---
 
@@ -345,7 +347,7 @@ Teams should make sure that they are regularly checking their geography codes if
 
 ---
 
-When using geographies that can be measured in multiple ways, you can achieve this by including a [filter](#filters-p3) such as level_methodology which states how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
+When using geographies that can be measured in multiple ways, you can achieve this by including a [filter](#filters) such as level_methodology which states how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
 
 
 | geographic_level | old_la_code | la_name    | new_la_code | level_methodology | headcount |
@@ -408,7 +410,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 
 ---
 
-# Filters {#p3}
+# Filters
 
 ---
 
@@ -509,7 +511,7 @@ else '' end as characteristic_group
 
 ---
 
-# Indicators {#p4}
+# Indicators
 
 ---
 
@@ -558,7 +560,7 @@ knitr::include_graphics("images/indicator_group.png")
 ---
 
 
-# EES metadata {#p5}
+# EES metadata
 
 
 ---
@@ -607,7 +609,7 @@ We only need to provide EES metadata for filters and indicators, we do not need 
 ---
 
 
-# How to check against the standards {#p6}
+# How to check against the standards
 
 ---
 

@@ -316,15 +316,19 @@ Before you publish a release you have created in the platform you should have:
 * Invited your PRA list to preview 24 hours before it goes live
 * Raised a web ticket for the associated gov.uk page 
 
+<div class="alert alert-dismissible alert-info">
+Word templates for the external metadata, pra-list, and content can be found on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy){target="_blank"}.
+</div>
+
 ---
 
 # Re-publishing an old release on EES
 
 ---
 
-To fill out the content on EES and help teams and users prepare for the tranistion to the new platform we are asking teams to re-publish their latest releases (that were published via gov.uk) on EES where they are abe to. 
+To fill out the content on EES and help teams and users prepare for the transistion to the new platform we are asking teams to re-publish their latest releases (that were published via gov.uk) on EES where they are abe to. 
 
-The main requirement to be able to do this is having your data prepared. 
+The main requirement to be able to do this is having your data prepared.
 
  
  
@@ -338,8 +342,30 @@ The main requirement to be able to do this is having your data prepared.
 </body>
 </html>
 
+---
+
+## Republishing checklist
+
+---
+
+ Before you republish a release you have created in the platform you should have: 
+
+* Ran your data and metadata through our screener checks
+* Checked all the data has loaded successfully
+* Written footnotes
+* Written content (including tables and charts)
+* Attached a public metadata document
+* Enusured methodology information is either linked off to or attached to the release
+* Passed the release for higher review (senior sign-off)
+* Previewed your release
+* Scheduled the release date
+* Raised a web ticket for the associated gov.uk page 
+
+<div class="alert alert-dismissible alert-info">
+Word templates for the external metadata, pra-list, and content can be found on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy){target="_blank"}.
  
- 
-If you're ready to recreate a previous gov.uk release on EES please email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk)
+If you're ready to recreate a previous gov.uk release on EES please email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
+
+</div>
 
 ---
