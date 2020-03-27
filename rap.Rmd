@@ -56,24 +56,23 @@ The collection of, and routine checking of data as it is coming into the departm
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
 
 
-<div class="alert alert-dismissible alert-secondary">
-  <h2>Core principles</h2>
-  <hr class="my-4">
+---
+
+# Core principles
+
+---
 
 
-**Data sources for a publication are stored in the same database** _- [Getting source data together](#getting-your-data-together-in-sql-p3)_
+1 - **Data sources for a publication are stored in the same database** _- [Getting source data together](#getting-your-data-together-in-sql-p3)_
 
 
-**Underlying data files are produced using code, with no manual steps** _- [Using automation to process data](#using-code-to-process-data-p4)_
+2 - **Underlying data files are produced using code, with no manual steps** _- [Using automation to process data](#using-code-to-process-data-p4)_
 
 
-**Files and scripts should be appropriately version controlled** _- [Using version control](#version-control-p5)_
+3 - **Files and scripts should be appropriately version controlled** _- [Using version control](#version-control-p5)_
 
 
-**There should be basic automated quality assurance applied to outputs** _- [Using automated QA](#automated-qa-p6)_
-
-
-</div>
+4 - **There should be basic automated quality assurance applied to outputs** _- [Using automated QA](#automated-qa-p6)_
 
 
 ---
@@ -165,14 +164,14 @@ Some teams will already be looking at best practice, while others will still hav
 
 ---
 
-- Do we actively use [git](#how-to-use-git-in-practice) when developing code?
+
+- Do we actively use git when developing code?
 
 
 - Do we have a single production script to get from source to underlying data, with intergrated QA and summary reports?
 
 
 ---
-
 
 # Getting your data together in SQL
 
@@ -306,7 +305,7 @@ Version control can mean a lot of things. Ultimately the aim should be to leave 
 
 ---
 
-### Folder structures
+## Folder structures
 
 ---
 
@@ -317,7 +316,7 @@ As a minimum you should have a folder that includes all of the final versions of
  
 ---
 
-### Naming conventions
+## Naming conventions
 
 ---
 
@@ -338,9 +337,9 @@ Having a **clear** and **consistent** naming convention for your files is critic
 
 **Play well with default ordering**
 
-- Have numbers first.
+- Often (though not always!) you should have numbers first, particularly if you file names include dates.
 - Follow the ISO 8601 date standard (YYYYMMDD) to ensure that all of your files stay in chronological order.
-- Use leading zeros to left pad numbers and ensure files sort properly and avoid 1,10,2,3.
+- Use leading zeros to left pad numbers and ensure files sort properly, avoiding 1,10,2,3.
 
 
 If in doubt, take a look at this [presentation](https://speakerdeck.com/jennybc/how-to-name-files){target="_blank"}, or this [naming convention guide by Stanford](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming){target="_blank"}, for examples reinforcing the above.
@@ -365,35 +364,42 @@ Use the principles above to decide on a name for each data file and your wider p
 
 ---
 
-### Documentation
+## Documentation
 
 ---
 
 _When you assume you make an 'ass' out of 'u' and 'me'_. Everyone knows this saying, yet not all of us heed it's warning. When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. Thorough documentation saves us time, and provides a clear audit trail of what we do.
 
 
-You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and highlight where y
-
-
-An analyst from another area should be able to pick up your data and use your documentation to produce fully QA'd data files ready for publication. Teams may achieve this in different ways, as a guide we'd recommend that teams have:
-
-- Document 1
-- Document 2
-
-
-Something around commenting in code and good practices there?
-
-
-You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files.
+You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team.
 
 
 ---
+
+### Commenting in code
+
+---
+
+When writing code, whether that is SQL, R, or something else, make sure you're commenting as you go. Start off every file by outlining the date, author, and purpose of the file. Entire commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.**
+
+Use commented lines of - and = to break up your files into scannable chunks. Example below:
+
+`# -----------------------------------------------------------------------------------`
+
+You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"}.
+
+
+---
+
 
 ## Introduction to git
 
+
 ---
 
+
 More to follow.
+
 
 ---
 
@@ -412,7 +418,6 @@ More to follow.
 More to follow, for now please refer to the learning resources page.
 
 ---
-
 
 # Automated QA
 
