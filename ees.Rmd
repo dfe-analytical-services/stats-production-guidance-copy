@@ -304,10 +304,15 @@ The main requirement to be able to do this is having your data prepared.
 `Add flow chart for re-publishing stats on EES`
 
 
-
-
-<!-- `r knitr::include_graphics("images/EES-outputs.png")` -->
-
+<html>
+<head>
+<title>republishing on EES</title>
+<meta charset="utf-8"/>
+</head>
+<body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-03-27T13:25:30.683Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\&quot; etag=\&quot;ZpWw1BtnOeR_RChKArdU\&quot; version=\&quot;12.9.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;0BsGW_UzoaeiKulbeKoH\&quot; name=\&quot;Page-1\&quot;&gt;5Vpbd6M2EP41PvuUPeJuP3bjpNm2adrj9nSzbzLIoA0gVojE3l9fjRAGjGOT2A5O+xKj0YXRfN/MoFFG1mWy/JnjLLplAYlHJgqWI2s6Mk3DQKb8AcmqlFiOUwpCToNShGrBjP4gemYlLWhA8tZAwVgsaKaFRin0WZoSX7RkmHP21B62YHHQEmQ4JK3VQTDzcUw6w/6hgYhK6dj0avkNoWFUvdlwJ2VPgqvBeuE8wgF7aoisq5F1yRkT5VOyvCQxGK9tl+tneteKcZKKPhNS7+vtL3+ubn69NYr0q4es73f4wnXLZR5xXOgdj0wXJ9nI+pTOc/XDNiV6P2JVGYkE0ma6ybiIWMhSHF/V0k+cFWlAQBMkW/WY3xiTK04NKfxGhFhpAuBCMCmKRBLrXrlJvvqi56vGPTQ+OlVzumx2Tle6VeoKCj5rNi3KWcF9ssNWlmauwDwkYtdAdw2v9AvCEiI1khM5ibGgj21NsCZouB63nvoHo1JHE2lnMl27nKJdya0UqpYoFdOzaibIh4YatUjx4wVcqV7X4MrnHNSRhit3R3BOQJ9U/rlbLKhPMazKoPt3uXVAXD7OhHzOBfVH1nWHSzVTAPaniAoyy7AC5kmGmDYrtEKEC7LcjW8XDT3BmrSM6kz0Lp9qbzeRduGo4ek2eh6/luVfbGavY+aVjIBD+NySii+1l8nWfaOndjho7PG34zmXbfVG+EB/MyqIK39zNyAvN3Uyf7PNXrEZwYtN9BmSLEs/wAYeUploziFoawIZDfrUZNpOoCMH+r3Eq/i0n3j2WxFvMyZ5ltmLeJ2FrIm3e6ETZ4zKtg0GT+UElTLAksU8pnkExMUCw9cZjSHSIRFh2EVCCPyU6UUPyQVOA8yD/Axzh4eMgXOH3U3RA+WOk7uj0x+tQ/PABsxjp587HsuLHPTe88BryVBhvJ8M5vHJcJAjet1z1Xk54msOQL3h8Aa1faXm3qzjs1QQ5emNhJOvMw6UHnAKFjm7TDNG3sCZxumm9vMi+H429z1xOF5vtN6I4HavhPCO435vaNxzg6b7AXaDH8k6+MwJgeIITR9Z/EgC5cECYtHV1Qz0CRIK/YLkgqbhGUYeAxmToUNPN7fes+IDJwplHIDygqmGL9uCqABP81GzRsXStdHnhYr9SnMTpUTBAmeNOVXHjwUAUGSZdIBq5VAdTORZRBoWRl/obIJ9kM+mf+31vhfBKM9F8SWLGVdzrcAh48CW8lxw9kAaPWNzbrnusYD3NpBHPZHfrJMcD/luaewg5LfAthXfd4hdGzrD6FnVPB104y056x1lpEnPjFTVMc8nI006hp8Br7vWj2Oa5WQ/o3GelTdtC7oELI5BWMNo32041f1fg7DOFr46J6vCd5NMGTMSDGqnTLSyQucORKwyoiOMNBd+qCJL0f1GPiScLMY+8f1t4WQ+dmwHnSYVDH9JYnc/gS8j4iszR2B4mYBjAWQFjThZqDHu9wJuW6U9BVwf/6QqJtc8ry6P1bP8KwO/yC8yzoLCh1uri/VR0Lwugo8KjvVi8imE33pM+WY5Fld9x8V8sTC3Yx64c9c5Ufr3UNcj3/i7zxwKc/9/ivnwZQave576b9Q+X1N/83rX3+whvzi8s7nAHsL2ZQVgMNt3a5+t+kOovlsgQMr3RSyQcSRcKa/xi6RVC9WnpsahKmFqIfVcBtxMbmnBeHKGdYoJsvqFrleceP7OCb+bf1PZA8V4TuJhspHVwvDluWk3k5oxRFPvnSWzDUYY5smSmWw2SFGJ6v/tK68C6/+QtK7+BQ==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://app.diagrams.net/js/viewer.min.js"></script>
+</body>
+</html>
 
 
 ---
