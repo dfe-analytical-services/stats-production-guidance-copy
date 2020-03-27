@@ -1,5 +1,5 @@
 ---
-title: "Publishing statistics"
+title: "Publishing Statistics"
 ---
 
 <p class="text-muted">Guidance for how to publish Official Statistics via the new Explore Education Statistics platform.</p>
@@ -10,13 +10,13 @@ title: "Publishing statistics"
 
 ---
 
-Explore Education Statistics (EES) is the Department's new dissemiantion platform, designed to make DFE’s published statistics and data easier to find, access, use and understand. 
+[Explore Education Statistics](https://explore-education-statistics.service.gov.uk/){target="_blank"} (EES) is the Department's new dissemiantion platform, designed to make DFE’s published statistics and data easier to find, access, use and understand. 
 
 The platform moved into Public Beta in March 2020 and over the next year will operate in parallel with existing statistics pages on gov.uk as publications are moved to the new platform.
 
 More information on why EES was introduced and the functionality within the platform can be found in these [slides.](https://docs.google.com/presentation/d/1CJMLxEPngGbTZbn1n4M6huGIeizUmjysthLwU3Zxoq4/edit?usp=sharing){target="_blank"}
 
-At a high level the following table outlines the key differences between publishing via EES and the old method via gov.uk:
+The following table outlines the key differences between publishing via EES and the old method via [gov.uk.](https://www.gov.uk/government/organisations/department-for-education/about/statistics){target="_blank"}:
 
 | Previous service: Statistics collections on gov.uk | New service: Explore Education Statistics |
 |:------|:------|
@@ -24,7 +24,9 @@ At a high level the following table outlines the key differences between publish
 | Release attachments are reviewed and approved via emails | Releases are reviewed and approved within the service |
 | Release attachments are circulated for pre-release via email 24hours prior to publication date | Pre-release users are invited to preview releases within the service 24 hours prior to publication date | 
 
-The EES platform consists of two applications - 
+---
+
+**The EES platform consists of two applications:**
 
 1. The public website  
 Where users access stats - https://explore-education-statistics.service.gov.uk/
@@ -36,7 +38,7 @@ Both applications were initially released to Minimal Viable Product (MVP) standa
 
 Maintence and BAU running of the platform is supported by the Statistics Development Team.
 
-If you are unsure which route to use for publication please contact HoP Office (`add email address`)
+If you are unsure which route to use for publication please contact the [HoP Office](mailto:Hop.STATISTICS@education.gov.uk).
 
 ---
 
@@ -48,23 +50,31 @@ The public website is available at: https://explore-education-statistics.service
 
 The admin website is available at: https://admin.explore-education-statistics.service.gov.uk/ 
 
-Access to the admin service is limited to DFE AD accounts only and users have to have been invited to the service by either the BAU team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
+Access to the admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
-To be invited to the service for full access the analyst would have to email a member of the BAU team (explore.statistics@education.gov.uk) to request access, stating what permissions they require and which publications they need access to. This should be accompanied with the relevant Team Leader’s approval. 
+To be invited to the service for full access the analyst would have to email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access, stating what permissions they require and which publications they need access to. This should be accompanied with the relevant Team Leader’s approval. 
 
-The BAU team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via the BAU mailbox (explore.statistics@education.gov.uk). 
+The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
 `add the getting access diagram`
 
 
-At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is just so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
+At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
 
-Analysts are able to test the service within our the platorms test environment (again, please contact the BAU team to request access):
+Analysts are able to test the service within our the platorms test environment (again, please contact us to request access):
 
-https://test.admin.explore-education-statistics.service.gov.uk
 
-https://test.explore-education-statistics.service.gov.uk
+Public test environment - https://test.explore-education-statistics.service.gov.uk
 
+Admin test environment - https://test.admin.explore-education-statistics.service.gov.uk
+
+---
+
+# Creating and publishing a new release
+
+---
+
+`r knitr::include_graphics("images/EES-create-release.png")`
 
 ---
 
@@ -72,48 +82,59 @@ https://test.explore-education-statistics.service.gov.uk
 
 ---
 
-Use Google Chrome or Microsoft Edge.
 
-`r knitr::include_graphics("images/EES-admin-dashboard.png")`
+<div class="alert alert-dismissible alert-warning">
+Use Google Chrome or Microsoft Edge to access and use the admin part of Explore Education Statistics.
+</div>
 
 When you enter the service you’ll see the admin dashboard, here what you can see will be dependent on your access permissions i.e. you’ll only see the publications that you have been granted access to. Within the test environment users are set up with full permissions (i.e. they can see/do everything) though in our production environment this will be restricted. 
 
-The BAU team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via the BAU mailbox (explore.statistics@education.gov.uk). 
+The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
+
+
+`r knitr::include_graphics("images/EES-admin-dashboard.png")`
+
 
 Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and schedule releases tabs to see releases that are in progress. 
 
-Help and guidance for how to use the the admin website is available via the administrators guide. 
+Help and guidance for how to use the the admin website is available via the [administrators guide](https://admin.explore-education-statistics.service.gov.uk/documentation){target="_blank"}, this is always accessible from the top bar of the admin side of EES, as shown in the image below. 
+
+`r knitr::include_graphics("images/admin_guide_access.png")`
+
+---
 
 ## Publications 
+
+---
 
 `set out hierarchy and publication specific things (contacts and methodology)`
 
 `You must have a named statistical contact in the contact us section of the release, this is a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. The platform works on contact cards so these names and numbers will be automatically updated as the lead statistician changes. Have I got that right? How do they insert the contact card?`
 
+---
 
-## Instructions for creating and publishing a new release
 
-`r knitr::include_graphics("images/EES-create-release.png")`
+## Create new release
 
-### Create new release
+---
 
 After finding the publication you want to create a release for, just press the button to create a new release. 
 
-Currently the following tyes of release can be created in EES - 
+Currently the following tyes of release can be created in EES: 
 
-* National Statistics (includes OSR tick mark logo at the top of the release page.)  
+* National Statistics (includes OSR tick mark logo at the top of the release page)  
 * Official Statistics
 * Adhoc Statistics
 
 `When you publish you should put the planned month and year of the next publication – you should have already provided this to HOP Office for the 12 month forward look on the gov.uk release calendar. It is your responsibility to update this month should it change, HOP Office will only update the date on the gov.uk release calendar. `
 
-In the production environment, in the short term creating new releases can only be done by the BAU team – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
 
-Once you have created your release you will see enter the ‘create release dashboard’:
+<div class="alert alert-dismissible alert-warning">
+For start of public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
+</div>
 
-`r knitr::include_graphics("images/EES-create-release-dashboard.png")`
 
-Here, you need to work through the following tabs to create your release:
+Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
 
 1.	Manage data (uploading data files and adding footnotes)
 
@@ -121,9 +142,16 @@ Here, you need to work through the following tabs to create your release:
 
 3.	Manage content (drafting release content)
 
-4.	Release status (moving through approval process)
+4.	Release status (moving through the approval process)
 
-### Uploading data
+
+`r knitr::include_graphics("images/EES-create-release-dashboard.png")`
+
+---
+
+## Uploading data
+
+---
 
 Here you will update your tidy date files and accompanying metadata. You need to make sure that the data has passed through our data screener checks before trying to upload it. 
 
@@ -134,13 +162,19 @@ Once you click to upload the file a ‘Status’ will be visible that shows the 
 * Importing
 * Complete
 
-This may take a little while depending on the size of your file and if there are numerous files queued for import. `A XX MB file takes around X minutes to get to ‘COMPLETE’. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.`
+This may take a little while depending on the size of your file and if there are numerous files queued for import. `Roughly, a 100mb file can take around X minutes to get to ‘COMPLETE’, though depending on the content of the file this will vary.` You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
 
-If you believe your file is ‘stuck’ please contact the BAU team.
+<div class="alert alert-dismissible alert-warning">
+If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
+</div>
 
 To add footnotes, go to the footnotes tab and click 'add footnote'. Here you can select the individual indicators and filters you want to assign footnotes to, or if you'd rather, you can assign a footnote to the whole subject (data file). You can assign footnotes across multiple subjects. 
 
-### Data blocks
+---
+
+## Data blocks
+
+---
 
 Once file imports are complete move to manage data blocks tab and use the admin table tool to create your summary tables. 
 
@@ -148,8 +182,7 @@ After building and saving a datablock table you will see there is now a ‘confi
 
 As you build your chart, you’ll be shown a live preview as you go. The configuration tabs can be done in any order, but it makes sense to add data first. You’ll add a series one at a time and can style each of them using the ‘change styling’ options.
 
-Within the ‘chart configuration’ tab you can add a title, move the legend and change chart dimensions. 
-Then move onto the x-axis configuration, here you can alter gridlines, labels, sort, limit and add reference lines.
+Within the ‘chart configuration’ tab you can add a title, move the legend and change chart dimensions. Then move onto the x-axis configuration, here you can alter gridlines, labels, sort, limit and add reference lines.
 
 Same for y-axis configuration, play around until the chart looks how you want it to.
 
@@ -157,55 +190,76 @@ If you create your chart and then change your mind as to what chart type would b
 
 Note, within the vertical and horizontal bar chart types you can also create stacked bar charts via the chart configuration options.
 
-You can create maps too, currently this is possible for region, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
+You can create maps too, currently this is possible for regional, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
 
-Remember to save your chart when you’re done.
+**Remember to save your chart when you’re done.**
 
-### Writing content
+---
+
+## Writing content
+
+---
 
 In the manage content tab you can now start creating your release, embedding the datablocks you’ve created as you go. 
 
-You can use the page view toggles (bottom left of the page) to jump between edit and preview mode.
+You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode.
 
 Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. Key stats tiles also need to be created as a datablock table (creating a table as a single number only).
 
-### Changing release status
+---
+
+## Changing release status
+
+---
 
 Once you’re happy with your release you need to change it’s status in order to move it through the release pipeline. 
 
 There are three statuses:
 
-1.	In draft (where the production team work on drafting the release)
-2.	Ready for higher review (where the senior statistician checks over the release before approving)
-3.	Approved for publication (when drafting and sign off is finished, releases in this status will be published on their scheduled go live date)
+1.	**In draft** (where the production team work on drafting the release)
+2.	**Ready for higher review** (where the senior statistician checks over the release before approving)
+3.	**Approved for publication** (after approval has been given, releases in this status will be published on their scheduled date)
 
+<div class="alert alert-dismissible alert-warning">
 Only users with ‘responsible statistician’ permissions (usually G6 or above) can sign off the release for publication.  
+</div>
 
-### Pre-release
+---
 
-Prior to each release going live the production team are also able to grant pre-release access to a named group of users 24 hours before it goes live. These users do not require full access (to the whole admin service) but will be able to see preview versions of any releases they have been granted access to. 
+## Pre-release
+
+---
+
+Prior to each release going live the production team are also able to grant pre-release access to a named group of users 24 hours before it goes live. These users do not require full access to the whole admin service. They will be able to see preview versions of any releases they have been granted access to. 
 
 To invite a user, just add their email address. All invited users will receive an email to say that they have been given pre-release access and will get a url where the preview release will be available. 
 
-This preview is only accessible for the 24hours before the publication date (though the emails may go out to users before then). We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
+This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
 
-`r knitr::include_graphics("images/EES-PRA.png")`
 
-### Methodology
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/EES-PRA.png")
+```
+
+---
+
+## Methodology
+
+---
 
 `TBA`
 
 ---
 
-# Publishing a new release on EES - checklist
+# Publication Checklist
 
 ---
 
-Before releasing statistics for the first time you may want to discuss the new process with key stakeholders and/or pre-release users to make them aware of the new service. You should also inform the BAU/HOP teams. 
+Before releasing statistics for the first time you may want to discuss the new process with key stakeholders and/or pre-release users to make them aware of the new service. You should also inform the [Statistics Development](mailto:explore.statistics@education.gov.uk) and [HoP Office](mailto:Hop.STATISTICS@education.gov.uk) teams.
 
-## Checklist:
 
 Before you start creating a release in the platform you should have: 
+
 
 * Announced the upcoming release via gov.uk
 * Sent metadata form to HoP
@@ -214,12 +268,14 @@ Before you start creating a release in the platform you should have:
 * Produced metadata files for each csv data file
 * Ran your data and metadata through our screener checks
 
+
 Before you publish a release you have created in the platform you should have: 
+
 
 * Checked all the data has loaded successfully
 * Written footnotes
 * Written content (including tables and charts)
-* Passed the release for higher review (G6+ clearance)
+* Passed the release for higher review (senior sign-off)
 * Previewed your release
 * Scheduled the release date
 * Invited your PRA list to preview 24 hours before it goes live
@@ -237,7 +293,7 @@ Before you publish a release you have created in the platform you should have:
 
 To fill out the content on EES and help teams and users prepare for the tranistion to the new platform we are asking teams to re-publish their latest releases (that were published via gov.uk) on EES where they are abe to. 
 
-The main requirement to be able to do this is having tidy data prepared. 
+The main requirement to be able to do this is having your data prepared. 
 
 `Add flow chart for re-publishing stats on EES`
 
