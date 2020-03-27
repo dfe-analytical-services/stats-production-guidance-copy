@@ -38,7 +38,9 @@ Both applications were initially released to Minimal Viable Product (MVP) standa
 
 Maintence and BAU running of the platform is supported by the Statistics Development Team.
 
+<div class="alert alert-dismissible alert-warning">
 If you are unsure which route to use for publication please contact the [HoP Office](mailto:Hop.STATISTICS@education.gov.uk).
+</div>
 
 ---
 
@@ -52,14 +54,11 @@ The admin website is available at: https://admin.explore-education-statistics.se
 
 Access to the admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
-To be invited to the service for full access the analyst would have to email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access, stating what permissions they require and which publications they need access to. This should be accompanied with the relevant Team Leader’s approval. 
-
-The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
-
-`add the getting access diagram`
-
+To be invited to the service for full access the analyst would have to email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access, stating what permissions they require and which publications they need access to. This should be accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform. 
 
 At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
+
+The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
 ---
 
@@ -80,7 +79,15 @@ Admin test environment - https://test.admin.explore-education-statistics.service
 
 ---
 
-`r knitr::include_graphics("images/EES-create-release.png")`
+<html>
+<head>
+<title>EES create release one pager</title>
+<meta charset="utf-8"/>
+</head>
+<body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-03-27T14:09:15.414Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\&quot; etag=\&quot;LfM61so5qS0tXgd9IPv1\&quot; version=\&quot;12.9.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;7_TV9NCpP6VJrDki679H\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://app.diagrams.net/js/viewer.min.js"></script>
+</body>
+</html>
 
 ---
 
@@ -113,12 +120,29 @@ Help and guidance for how to use the the admin website is available via the [adm
 
 ---
 
-`set out hierarchy and publication specific things (contacts and methodology)`
+The hierarchy of content within EES is as follows - 
 
-`You must have a named statistical contact in the contact us section of the release, this is a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. The platform works on contact cards so these names and numbers will be automatically updated as the lead statistician changes. Have I got that right? How do they insert the contact card?`
+`r knitr::include_graphics("images/ees-hierarchy.PNG")`
+
+
+Publications are organised into topics and themes (as shown on the EES Find Statistics page), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. 
+
+For example:
+
+| Level | Example |
+|:------|:------|
+| Theme | Pupils and Schools |
+| Topic | Pupil absence |
+| Publication | Pupil absence in schools in England |
+| Release | 2018/19 |
+
+Each publication should have a lead statisticians name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. 
+
+To request a change to the contact details for a publication contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
+
+Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be writtent to cover all releases for the given publication within the service. 
 
 ---
-
 
 ## Create new release
 
@@ -132,13 +156,13 @@ Currently the following tyes of release can be created in EES:
 * Official Statistics
 * Adhoc Statistics
 
-`When you publish you should put the planned month and year of the next publication – you should have already provided this to HOP Office for the 12 month forward look on the gov.uk release calendar. It is your responsibility to update this month should it change, HOP Office will only update the date on the gov.uk release calendar. `
+When creatign a release you will be asked to fill in some release summary fields, including the scheduled publication date. 
 
+You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) in the first instance.
 
 <div class="alert alert-dismissible alert-warning">
 For start of public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
 </div>
-
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
 
@@ -168,7 +192,7 @@ Once you click to upload the file a ‘Status’ will be visible that shows the 
 * Importing
 * Complete
 
-This may take a little while depending on the size of your file and if there are numerous files queued for import. `Roughly, a 100mb file can take around X minutes to get to ‘COMPLETE’, though depending on the content of the file this will vary.` You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
+This may take a little while depending on the size of your file and if there are numerous files queued for import. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
 
 <div class="alert alert-dismissible alert-warning">
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
@@ -243,9 +267,15 @@ To invite a user, just add their email address. All invited users will receive a
 This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
 
 
-```{r, echo=FALSE, fig.align='center'}
-knitr::include_graphics("images/EES-PRA.png")
-```
+<html>
+<head>
+<title>EES PRA one pager</title>
+<meta charset="utf-8"/>
+</head>
+<body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-03-27T14:23:39.805Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\&quot; etag=\&quot;uJeBKPPROtdrtWp7FDZ1\&quot; version=\&quot;12.9.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;GmQ-00HEmiX2ExrvTGiP\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://app.diagrams.net/js/viewer.min.js"></script>
+</body>
+</html>
 
 ---
 
@@ -263,9 +293,7 @@ knitr::include_graphics("images/EES-PRA.png")
 
 Before releasing statistics for the first time you may want to discuss the new process with key stakeholders and/or pre-release users to make them aware of the new service. You should also inform the [Statistics Development](mailto:explore.statistics@education.gov.uk) and [HoP Office](mailto:Hop.STATISTICS@education.gov.uk) teams.
 
-
 Before you start creating a release in the platform you should have: 
-
 
 * Announced the upcoming release via gov.uk
 * Sent metadata form to HoP
@@ -274,9 +302,7 @@ Before you start creating a release in the platform you should have:
 * Produced metadata files for each csv data file
 * Ran your data and metadata through our screener checks
 
-
 Before you publish a release you have created in the platform you should have: 
-
 
 * Checked all the data has loaded successfully
 * Written footnotes
@@ -286,10 +312,6 @@ Before you publish a release you have created in the platform you should have:
 * Scheduled the release date
 * Invited your PRA list to preview 24 hours before it goes live
 * Raised a web ticket for the associated gov.uk page 
-
-
-`Add a section about onboarding and step-by-step for republishing a gov.uk release on gov.uk`
-
 
 ---
 
@@ -301,9 +323,6 @@ To fill out the content on EES and help teams and users prepare for the tranisti
 
 The main requirement to be able to do this is having your data prepared. 
 
-`Add flow chart for re-publishing stats on EES`
-
-
 <html>
 <head>
 <title>republishing on EES</title>
@@ -314,5 +333,6 @@ The main requirement to be able to do this is having your data prepared.
 </body>
 </html>
 
+If you're ready - email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk)
 
 ---
