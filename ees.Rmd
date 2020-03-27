@@ -315,9 +315,6 @@ To fill out the content on EES and help teams and users prepare for the tranisti
 
 The main requirement to be able to do this is having your data prepared. 
 
-`Add flow chart for re-publishing stats on EES`
-
-
 <html>
 <head>
 <title>republishing on EES</title>
