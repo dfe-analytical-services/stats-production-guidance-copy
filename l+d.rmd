@@ -13,10 +13,10 @@ title: "Tools and learning resources"
 As statistics producers we require a variety of tools to be able to process our data. `More of a setence here around setting guidace for specific tools, and how to best use learning resources...`
 
 <div class="alert alert-dismissible alert-warning">
-We are happy for people to use whatever tools they want, as long as the proccesses meet the [principles of RAP]().
+We are happy for people to use whatever tools they want, as long as the proccesses meet the [principles of RAP](https://rsconnect/rsc/stats-production-guidance/rap.html#core_principles){target="_blank"}.
 </div>
 
-While we are happy for you to use any software or language to meet the [principles](), we're developing resources to help you begin on your own RAP process. Below are the recommended tools that will be the easiest to pick up, and will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE, and are already working in our current IT setup.
+While we are happy for you to use any software or language to meet the [principles](https://rsconnect/rsc/stats-production-guidance/rap.html#core_principles){target="_blank"}, we're developing resources to help you begin on your own RAP process. Below are the recommended tools that will be the easiest to pick up, and will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE, and are already working in our current IT setup.
 
 ---
 
@@ -42,10 +42,10 @@ While we are happy for you to use any software or language to meet the [principl
 
 ---
 
-We are always on the look out for resources that will help you to have the skills needed to incorporate the principles of RAP into your own processes. There will be many more just a google away, and genuinely, Google is the single most powerful learning resource out there, whether it leads you to a StackOverflow answer to your problem, or to an online training course, it will have your needs covered. To help speed up your search, links are included below for some of the resources that are particularly relevant that we're aware of.
+We are always on the look out for resources that will help you to have the skills needed to incorporate the principles of RAP into your own processes. There will be many more just a google away, and genuinely, Google is the single most powerful learning resource out there, whether it leads you to a StackOverflow answer to your problem, or to an online training course, it will have your needs covered. We appreciate that it can be daunting and overwhelming at first though. To help speed up your search, links are included below for some of the resources that are particularly relevant that we're aware of.
 
 
-As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first, before then getting a friend or colleague to show them around the environment to use the language in so that they can begin to use them on their own data. 
+As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first, before then getting a friend or colleague to show them around the environment to use the language in so that they can begin to use them on their own data. It's important not to overlook the practical element of how you use these tools on your own machine with your own data. 
 
 ---
 
@@ -75,9 +75,11 @@ As a general approach, many people find it useful to use the resources below to 
 
 ---
 
-- Our very own Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL).
+- This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Mircosoft SQL Server Management Studio (downloadable through the software centre), and start playing with that query.
 
-- The [Khan academy](https://www.khanacademy.org/computing/computer-programming/sql){target="_blank"} offer a great free introduction to the basics of SQL.
+- Our very own Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL){target="_blank"}.
+
+- The [Khan academy](https://www.khanacademy.org/computing/computer-programming/sql){target="_blank"} offers a great free introduction to the basics of SQL.
 
 - [w3schools.com](https://www.w3schools.com/sql/default.asp){target="_blank"} offers a useful guide through the most common SQL commands.
 
@@ -87,19 +89,35 @@ As a general approach, many people find it useful to use the resources below to 
 
 ---
 
-- There is the [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}, which is aimed at giving users a good introduction into how to get started with using R and RStudio.
+- There is the [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}, which is a great starting point, talking you through how to get started with using R and RStudio.
 
 - There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank"}.
 
 - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank"}, hopefully this one should be relatively self-explanatory!
 
+- If you want a useful reference point for R syntax or functions, then look no further than the [R Cheat Sheets](https://rstudio.com/resources/cheatsheets/){target="_blank"}, these can be an invaluable point of reference. Below we've included a few particularly relevant ones:
+    + Introduction to the [RStudio Environment](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf){target="_blank"}
+    + [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf){target="_blank"}
+    + Visualisations with the [ggplot2 package](){target="_blank"}
+    + [Regex](https://github.com/rstudio/cheatsheets/raw/master/regex.pdf){target="_blank"}
+    + [RMarkdown](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}
+    + [RShiny](https://github.com/rstudio/cheatsheets/raw/master/shiny.pdf){target="_blank"}
+    + Manipulating data with [dplyr](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf){target="_blank"}
+    + String manipulation with [stringr](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf){target="_blank"}
+    + Apply functions with [purrr](https://github.com/rstudio/cheatsheets/raw/master/purrr.pdf){target="_blank"}
+    + Finally, [importing data into R](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf){target="_blank"}
+
+
 ---
 
+# Further notes
 
-For more information on how to use these tools in your production processes, please see the [Proccessing Statistics]() page.
+---
+
+For more information on how to use these tools in your production processes, please see the [Production Processes](https://rsconnect/rsc/stats-production-guidance/rap.html){target="_blank"} page.
 
 
-This is by no means a finite list of resources, we want this to be added to and for it to develop over time - if you have any resources that you think should be added then we'd love to hear from you. 
+This is by no means a finite list of resources, we want this to be added to and for it to develop over time - if you have any resources that you think could be added then we'd love to [hear from you](mailto:explore.statistics@education.gov.uk). 
 
 
 If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.

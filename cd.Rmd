@@ -79,7 +79,7 @@ Use bullet points under the key indicator tiles to pull out the top headlines fr
 * Headlines should make sense to everyone and anyone (no jargon)
 * Structure headlines as: what has happened; why is this important – don’t give numbers without context 
 * One of your headlines should put the latest figures in the context of the longer-term change
-* Round figures in headlines – see the [DfE rounding guidance]()
+* Round figures in headlines, you don't need lots of decimal places
 * If there is essential context for the headline facts then put this here
 
 ---
