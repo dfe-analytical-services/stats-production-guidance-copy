@@ -326,6 +326,8 @@ To fill out the content on EES and help teams and users prepare for the tranisti
 
 The main requirement to be able to do this is having your data prepared. 
 
+ 
+ 
 <html>
 <head>
 <title>republishing on EES</title>
@@ -336,6 +338,8 @@ The main requirement to be able to do this is having your data prepared.
 </body>
 </html>
 
-If you're ready - email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk)
+ 
+ 
+If you're ready to recreate a previous gov.uk release on EES please email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk)
 
 ---
