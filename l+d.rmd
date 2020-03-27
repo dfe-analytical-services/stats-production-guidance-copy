@@ -10,11 +10,13 @@ title: "Tools and learning resources"
 
 ---
 
+As statistics producers we require a variety of tools to be able to process our data. `More of a setence here around setting guidace for specific tools, and how to best use learning resources...`
+
 <div class="alert alert-dismissible alert-warning">
-We are happy for people to use whatever tools they want, as long as the proccesses meet the principles of RAP.
+We are happy for people to use whatever tools they want, as long as the proccesses meet the [principles of RAP]().
 </div>
 
-That being said, we're developing resources to help you begin on your own RAP process. Below are the recommended tools that will be the easiest to pick up, and will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE, and are already working in our current IT setup.
+While we are happy for you to use any software or language to meet the [principles](), we're developing resources to help you begin on your own RAP process. Below are the recommended tools that will be the easiest to pick up, and will be supported with resources for developing the necessary skills to use them. These are also the tools that have the largest user communitites in DfE, and are already working in our current IT setup.
 
 ---
 
@@ -47,7 +49,7 @@ As a general approach, many people find it useful to use the resources below to 
 
 ---
 
-## General
+## General resources
 
 ---
 
@@ -97,7 +99,10 @@ As a general approach, many people find it useful to use the resources below to 
 For more information on how to use these tools in your production processes, please see the [Proccessing Statistics]() page.
 
 
-In general there is a widening knowledge of the methods within SQL, R, and Git, that are commonly used to process our data, so we recommended asking around similar production teams. If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.
+This is by no means a finite list of resources, we want this to be added to and for it to develop over time - if you have any resources that you think should be added then we'd love to hear from you. 
+
+
+If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.
 
 
 ---

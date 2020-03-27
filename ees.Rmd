@@ -61,7 +61,13 @@ The Statistics Development Team will be responsible for setting up and maintaini
 
 At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
 
-Analysts are able to test the service within our the platorms test environment (again, please contact us to request access):
+---
+
+## Test environment
+
+---
+
+Analysts are able to test the service within our the platorms test environment (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access):
 
 
 Public test environment - https://test.explore-education-statistics.service.gov.uk

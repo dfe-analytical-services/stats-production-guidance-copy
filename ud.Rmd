@@ -75,6 +75,7 @@ For publishing on EES specifically, please note the following points:
 
 ### Data format
 
+---
 
 These standards give you the power to format the data in way that best meets the needs of the users. There are only a handful of formatting standards to follow to ensure best practice and consistency across all of our data.
 
@@ -88,6 +89,7 @@ You should also ensure that your data follows the [GSS Standards on symbols](htt
 
 ### Tidy Data structure
 
+---
 
 The move to the new platform provided the ideal opportunity to standardise our production of underlying data to give the users the consistency that they ask for. Our standards draw upon the ideas of tidy data, essentially this means applying a logical structure to datasets so that they are easier for use and analyse, minimising the time spent cleaning the data before use. Here is a [quick summary of what tidy data is](https://www.youtube.com/watch?v=oQuupzfX9OQ){target="_blank"}, and further details on tidy data, and where the ideas came from can be found by reading Hadley Wickham's paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. The key principles to remember are:
 
@@ -106,6 +108,8 @@ The variables (columns) in each of the uploaded data files will fall in to the f
 
 ### Deciding what should be in a file
 
+---
+
 Explore Education Statistics is designed to give production teams the freedom of controlling what data users can access, and how they access it. It is expected that most releases on the platform will have multiple data files, and teams have control over how they break these files up.
 
 
@@ -123,6 +127,7 @@ A useful way to judge how to break up data files is to consider whether all of t
 
 ### File size
 
+---
 
 There are no character or size limits in a csv file, but you should consider the restrictions the users will face when downloading and processing the data (excel has a cell character limit of 32,760 for example). There is no size limit for EES, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
 
@@ -195,6 +200,8 @@ If you think that your data can't follow this format, please contact explore.sta
 
 ### Specific time standards
 
+---
+
 Producers should not mix different types of years in the same dataset. This is to prevent any chance of confusion for users selecting time periods with similar labels in the table tool. For example, you cannot have Academic year and Calendar year data in the same data file. 
 You also cannot mix yearly breakdowns (e.g. full year, quarters, months, or terms) in the time identifier column. Instead, where it makes sense to mix these within a data file you should use a filter column as shown below. Note the use of ‘Total’, this is a part of the standards for filters.
 
@@ -223,6 +230,8 @@ If your row of data spans multiple years (e.g. is a cumulative sum between 2010 
 ---
 
 ### List of allowable time values
+
+---
 
 All time_period values should be numeric only, below the number of digits (either 4 or 6) is defined per time_identifier below. Do not include dashes or slashes in six digit years.
 
@@ -331,6 +340,8 @@ Teams should make sure that they are regularly checking their geography codes if
 
 ### Different measures of geography
 
+---
+
 When using geographies that can be measured in multiple ways, you can achieve this by including a [filter](#p3) such as level_methodology which states how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
 
 
@@ -342,6 +353,8 @@ When using geographies that can be measured in multiple ways, you can achieve th
 ---
 
 ### Allowable geographic levels
+
+---
 
 All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams may use additional columns as relevant such as including Regional columns for Local authority level data, this is optional.
 
@@ -417,6 +430,7 @@ It is possible that you wish to include a filter that only has a single level, l
 
 ### Grouping filters
 
+---
 
 For some filters, this can be more complicated. You might have a great number of different filters that you would rather group together in a hierarchy. You can do this by grouping a filter by a filter group. This essentially uses another filter column to provide a higher group level. This also may be helpful for EES users when creating tables. For example, you may want to group percentages into wider rate bands.
 
@@ -449,6 +463,8 @@ You can also see an example with apprenticeship data file, including the corresp
 ---
 
 #### Creating a grouped filter in SQL
+
+---
 
 This example creates a characteristic and characteristic_group column from 'gender', 'fsm', and 'sen' columns. For this to work, each column must have a 'Total' aggregation. The column names will need to be tweaked to match your data, and depending on how much you cross-tab you may not need all of the rows, however this should show you the logic to create the filter and filter_group columns:
 
@@ -532,8 +548,13 @@ Many of our publications contain a large number of indicators. To improve the ex
 
 #### Example of how this would look in Explore Education Statistics:
 
+---
 
-`r knitr::include_graphics("images/indicator_group.png")`
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/indicator_group.png")
+```
+
 
 ---
 

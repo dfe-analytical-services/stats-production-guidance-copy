@@ -152,7 +152,9 @@ For tables and charts, active titles are descriptive and tell the trend or **hig
 
 **Aim for fewer tables, and keep them small. As a guide, we suggest no more than one table per accordion section.**
 
-Presentation tables are the tables you include within the accordion sections of your release to quickly visualise numbers. Unlike the underlying data files, the presentation tables focus on specific parts of the story you are telling. They are distinct from, and should never be a copy of an underlying data file. You should only be including small tables sparingly where they add value to your release and not use them as a straight copy of the pre-canned Excel tables previously published on gov.uk. The ‘table tool’ is there for users to create their own tables if they would like to.The data is there for users to access through other means, the commentary should be focussed on the story.
+Presentation tables are the tables you include within the accordion sections of your release to quickly visualise numbers. Unlike the underlying data files, the presentation tables focus on specific parts of the story you are telling. They are distinct from, and should never be a copy of an underlying data file. 
+
+You should only be including small tables sparingly where they add value to your release and not use them as a straight copy of the pre-canned Excel tables previously published on gov.uk; the ‘table tool’ is there for users to create their own tables if they would like to. The data is there for users to access through other means, therefore any data in the commentary should be focussed on the story.
 
 <div class="alert alert-dismissible alert-danger">
 You do not need to recreate all of the old excel tables, users can find the numbers they are interested in using the table tool, or analyse the underlying data if they want the data behind the release. 
