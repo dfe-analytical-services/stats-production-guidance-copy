@@ -328,18 +328,24 @@ The main requirement to be able to do this is having your data prepared.
 
 ---
 
- Before you republish a release you have created in the platform you should have: 
+If you have gone through the flowchart above and feel that you are ready to republish something on Explore Education Statistics, then we are here to help you do that. You have two options:
 
-* Ran your data and metadata through our screener checks
-* Checked all the data has loaded successfully
-* Written footnotes
-* Written content (including tables and charts)
-* Attached a public metadata document
-* Enusured methodology information is either linked off to or attached to the release
-* Passed the release for higher review (senior sign-off)
-* Previewed your release
-* Scheduled the release date
-* Raised a web ticket for the associated gov.uk page 
+1. The [Statistics Development Team](mailto:explore.statistics@education.gov.uk) can mock up a first draft in the platform for you to then review and edit. For this to happen you'll need to send us the following:
+   - Details of the release you want to republish
+   - Underlying data files that have passed the screening checks
+   - The link to the pdf commentary you previously published
+   - The link to the methodology you previously published
+   - Any other documents or information relating to the publication 
+
+2. [Contact us](mailto:explore.statistics@education.gov.uk) for permission to access the production environment, telling us about the release you plan to republish, then build your release following the checklist below:
+   * Run your data and metadata through our screener checks
+   * Upload your data to your release on EES
+   * Write footnotes
+   * Create content (including tables and charts)
+   * Attach a public metadata document
+   * Ensure methodology information is either linked off to or attached to the release
+   * Passed the release for higher review (senior sign-off)
+   * Scheduled the release date
 
 <div class="alert alert-dismissible alert-info">
 Word templates for the external metadata, pra-list, and content can be found on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy){target="_blank"}.
