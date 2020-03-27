@@ -122,7 +122,7 @@ A useful way to judge how to break up data files is to consider whether all of t
 
 - As long as your data meets the standards, you can include as much as you want in a single file. 
 - Remember that the larger the file is to upload, and also the larger it is for users to download and then have to process.
-- Different types of years (academic/calendar) should not be mixed in the same file, see [Observational units](#observational-units-p2).
+- Different types of years (academic/calendar) should not be mixed in the same file, see [observational units](#observational-units-p2).
 - If you have a lot of blank or empty indicator cells, consider breaking the files up so that the indicator columns are relevant to as many rows as possible.
 
 --- 
@@ -155,7 +155,7 @@ We generally recommend fewer large files over a larger number of smaller files. 
 
   <hr class="my-4">
 
-- All files will include [obersvational units](#observational-units-p2) and [indicators](#indicators-p4).
+- All files will include [observational units](#observational-units-p2) and [indicators](#indicators-p4).
 - The overwhelming majority of files will also have [filters](#filters-p3).
 - A table in Explore Education Statistics can only be created from a single file.
 - All data in a single data file can be directly compared in the table tool.
@@ -542,10 +542,6 @@ Many of our publications contain a large number of indicators. To improve the ex
 | applications | Indicator | Number of applications received | Applications | | | |
 | online_apps | Indicator | Number of online applications | Applications | | | |
 | online_apps_% | Indicator | Percentage of online applications | Applications | | | |
-| no_of_preferences | Indicator | Number of preferences offered | Preferences | | | |
-| preferred_offer | Indicator | Number that received their preferred offer | Preferences | | | |
-| non_preferred_offer | Indicator | Number that received an offer for an unpreferred school | Preferences | | | |
-| no_offer | Indicator | Number that did not receive an offer | Preferences | | | |
 
 ---
 
@@ -640,13 +636,15 @@ The video has the following sections, the links are included for quick reference
 
 ### Pandoc 
 
+---
 
-If you do need to install a newer version of pandoc, then make sure you uncheck the box in the install wizard that will install for all users. Leaving this checked requires an admin password, and that will prevent you from being able to install it.
+If you do need to install a newer version of pandoc, then the install wizard will start automatically for you. When going through the steps, make sure you uncheck the box that will install for all users. Leaving this checked requires an admin password, and that will prevent you from being able to install it.
 
 ---
 
 ### Packages failing to install 
 
+---
 
 This can be from a number of causes:
 
