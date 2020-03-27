@@ -409,12 +409,12 @@ More to follow.
 
 ---
 
-More to follow, for now please refer to the [learning resources](#tools-and-learning-resources) section.
+More to follow, for now please refer to the learning resources page.
 
 ---
 
 
-# Automated QA {#p6}
+# Automated QA
 
 ---
 
