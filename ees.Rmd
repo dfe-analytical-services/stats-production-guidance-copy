@@ -257,7 +257,7 @@ knitr::include_graphics("images/EES-PRA.png")
 
 ---
 
-# Publication Checklist
+# Publication checklist
 
 ---
 

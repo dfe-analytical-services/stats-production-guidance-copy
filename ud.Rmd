@@ -87,7 +87,7 @@ You should also ensure that your data follows the [GSS Standards on symbols](htt
 
 ---
 
-### Tidy Data structure
+### Tidy data structure
 
 ---
 
@@ -164,7 +164,7 @@ We generally recommend fewer large files over a larger number of smaller files. 
 
 ---
 
-# Observational Units {#p2}
+# Observational units {#p2}
 
 ---
 
@@ -559,7 +559,7 @@ knitr::include_graphics("images/indicator_group.png")
 ---
 
 
-# EES Metadata {#p5}
+# EES metadata {#p5}
 
 
 ---

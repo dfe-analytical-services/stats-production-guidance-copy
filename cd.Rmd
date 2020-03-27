@@ -172,7 +172,7 @@ It is recommended that you write your methodology document as a .html page on th
 
 ---
 
-# EES Glossary
+# EES glossary
 
 ---
 
@@ -185,7 +185,7 @@ Include essential definitions in the commentary where they are relevant, you sho
 ---
 
 
-# Content Principles and Standards
+# Content principles and standards
 
 ---
 
@@ -204,7 +204,7 @@ The following are some high-level principles to inform good content design. Thes
 ---
 
 
-# Style Guidance
+# Style guidance
 
 ---
 
@@ -218,7 +218,7 @@ If you have any particular things you would like to see in this, please contact 
 ---
 
 
-# Charts and Data Visualisation
+# Charts and data visualisation
 
 ---
 
@@ -234,7 +234,7 @@ Remember that visualisations should be useable even if taken out of the context 
 ---
 
 
-# Advice and Support
+# Advice and support
 
 ---
 
