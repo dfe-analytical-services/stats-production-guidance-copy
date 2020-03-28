@@ -10,7 +10,7 @@ title: "Publishing Statistics on EES"
 
 ---
 
-[Explore Education Statistics](https://explore-education-statistics.service.gov.uk/){target="_blank"} (EES) is the Department's new dissemiantion platform, designed to make DFE’s published statistics and data easier to find, access, use and understand. 
+[Explore Education Statistics](https://explore-education-statistics.service.gov.uk/){target="_blank"} (EES) is the Department's new dissemination platform, designed to make DFE’s published statistics and data easier to find, access, use and understand. 
 
 The platform moved into Public Beta in March 2020 and over the next year will operate in parallel with existing statistics pages on gov.uk as publications are moved to the new platform.
 
@@ -32,7 +32,7 @@ The following table outlines the key differences between publishing via EES and 
 Where users access stats - https://explore-education-statistics.service.gov.uk/
 
 2. The admin website  
-Where production teams create their statistics - https://admin.explore-education-statistics.service.gov.uk/
+Where production teams create their stats - https://admin.explore-education-statistics.service.gov.uk/
 
 Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020. 
 
@@ -115,7 +115,9 @@ Help and guidance for how to use the the admin website is available via the [adm
 
 The hierarchy of content within EES is as follows - 
 
-`r knitr::include_graphics("images/ees-hierarchy.PNG")`
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/ees-hierarchy.PNG")
+```
 
 
 Publications are organised into topics and themes (as shown on the EES Find Statistics page), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. 

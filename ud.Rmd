@@ -83,13 +83,14 @@ For publishing on EES specifically, please note the following points:
 These standards give you the power to format the data in way that best meets the needs of the users. There are only a handful of formatting standards to follow to ensure best practice and consistency across all of our data.
 
 <div class="alert alert-dismissible alert-danger">
-Data files must in comma separated values (.csv) format, and use UTF-8 encoding. You can specify this when saving the file in excel, or exporting from elsewhere.
+Data files must in comma separated values (.csv) format, and use UTF-8 encoding. You can specify this when saving the file in Excel, or exporting from elsewhere.
 </div>
 
-Variable names must be in the first row of your file as the header row, and be in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank"}. If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell (this is often done automatically for you). 
+Variable names must be in the first row of your file as the header row, must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank"} for ease of use. 
 
+If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell - this is often done automatically for you, though if you're unsure then you can open up your csv file in a texteditor such as notepad to check. 
 
-You should also ensure that your data follows the [GSS Standards on symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"}, though be aware to ignore the ask that symbols are included in separate cells from the data, which is unpractical and unrealistic at best.
+You should also ensure that your data follows the [GSS Standards on symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"}, though be aware to ignore the ask that symbols are included in separate cells from the data, which is unpractical and unrealistic.
 
 ---
 
@@ -97,7 +98,10 @@ You should also ensure that your data follows the [GSS Standards on symbols](htt
 
 ---
 
-The move to the new platform provided the ideal opportunity to standardise our production of underlying data to give the users the consistency that they ask for. Our standards draw upon the ideas of tidy data, essentially this means applying a logical structure to datasets so that they are easier for use and analyse, minimising the time spent cleaning the data before use. Here is a [quick summary of what tidy data is](https://www.youtube.com/watch?v=oQuupzfX9OQ){target="_blank"}, and further details on tidy data, and where the ideas came from can be found by reading Hadley Wickham's paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. The key principles to remember are:
+The move to the new platform provided the ideal opportunity to standardise and 'tidy' up our data to give users the consistency that they ask for. Our standards draw upon the ideas of tidy data - this means applying a logical structure to datasets so they are easier to use and analyse, minimising the time spent cleaning the data before use. 
+
+Here is a [quick 4 minute summary video](https://www.youtube.com/watch?v=oQuupzfX9OQ){target="_blank"} of tidy data. Further details on tidy data, can be found by reading Hadley Wickham's academic paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. The key principles to remember are:
+
 
 - **Each variable forms a separate column.**
 - **Each observation forms a separate row.**
@@ -121,12 +125,24 @@ Explore Education Statistics is designed to give production teams the freedom of
 
 The first key consideration is that the table tool will only create tables from a single a data file, and cannot use multiple files as sources. Therefore any data that you want to compare within a single table must in the same data file. The table tool itself is there to allow users to narrow down the amount of data they have to absorb and to be able to efficiently take away key statistics. 
 
-A useful way to judge how to break up data files is to consider whether all of the data in the file is appropriate to show side-by-side in the same table. If there are data that are conceptually different or may be confusing to compare side by side, then these should be in separate data files. Any data file uploaded to EES is usable by all users in the table tool, and users will be able to download the exact same files as you upload
 
+A useful way to judge how to break up data files is to consider whether all of the data in the file is appropriate to show side-by-side in the same table. If there are data that are conceptually different or may be confusing to compare side by side, then these should be in separate data files. Any data file uploaded to EES is usable by all users in the table tool, and users will be able to download the exact same files as you upload.
+
+---
+
+<div class="jumbotron">
+
+  <h3>Remember</h3>
+
+  <hr class="my-4">
+
+- Users will download a copy of the same file that you upload.
 - As long as your data meets the standards, you can include as much as you want in a single file. 
 - Remember that the larger the file is to upload, and also the larger it is for users to download and then have to process.
 - Different types of years (academic/calendar) should not be mixed in the same file, see [observational units](#observational-units).
 - If you have a lot of blank or empty indicator cells, consider breaking the files up so that the indicator columns are relevant to as many rows as possible.
+
+</div>
 
 --- 
 
@@ -137,18 +153,18 @@ A useful way to judge how to break up data files is to consider whether all of t
 
 There are no character or size limits in a csv file, but you should consider the restrictions the users will face when downloading and processing the data (excel has a cell character limit of 32,760 for example). There is no size limit for EES, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
 
-Excel has a row limit of 1,048,576. In general it is best to avoid exceeding this some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files. With the data all being in a tidy format they are easy enough for secondary analysts to stitch back together if needed.
+Excel has a row limit of 1,048,576. It is best to avoid exceeding this as some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files, providing school level data as a seperate file for example. With the data all being in a tidy format these are then easy enough for secondary analysts to stitch back together if needed.
 
-People can tend to obsess over file size, however this is not everything, and the balance of rows and columns can have a large impact on performance even for files of the same size. We don't yet know the full extent of this, and with that caveat, the very rough guide based on size would be:
+People can tend to obsess over file size, however this is not everything, and the balance of rows and columns, and the contents of them, has a large impact on performance. We don't yet know the full extent of this, and with that caveat, a **rough guide** based on size would be:
 
 - Anything under 10mb is relatively small
-- 10mb to 100mb is a fairly common and normal file size that many teams have
+- 10mb to 100mb is a fairly common file size that most teams have
 - 100mb to 500mb is fairly large file
 - 500mb and over are pretty large and can start to be difficult to handle (as you may be aware if you have one!)
-- Files that are over 1gb in size may currently have issues in the platform, please [contact us](mailto:explore.statistics@education.gov.uk) if you have any
+- Files that are over 1gb in size may currently have issues in the platform, please [contact us](mailto:explore.statistics@education.gov.uk) if you have any this large
 
 
-We generally recommend fewer large files over a larger number of smaller files. If you think you are having issues with file size please tell us so that we can investigate and work towards a solution with you. The platform is always in development, and we do not want teams to arbitrarily make decisions about their data (and potentially waste a lot of time) due to something that could be addressed if we are told about it.
+We generally recommend fewer large files over a larger number of smaller files. **If you think you are having issues with file size please tell us** so that we can investigate and work towards a solution with you. **The platform is always in development**, and we do not want teams to arbitrarily make decisions about their data (and potentially waste a lot of time) due to something that could be addressed if we are told about it.
 
 ---
 
@@ -188,7 +204,7 @@ Across every single dataset of official statistics produced by DfE, the followin
 
 ---
 
-We use the two columns, time_period and time_identifier, to generalise time across our underlying datasets. This is a important for general useability of our data, as well as being critical in driving the charts and tables in the Explore Education Statistics platform and making explicit reference to the time in which our measurements relate to. This is a compulsory element of any official statistics dataset. 
+We use the two columns, time_period and time_identifier, to generalise time across our underlying datasets. All data files must contain these. This is a important for general useability of our data, as well as being critical in driving the charts and tables in the Explore Education Statistics platform and making explicit reference to the time in which our measurements relate to. This is a compulsory element of any official statistics dataset. 
 
 If you think that your data can't follow this format, please contact explore.statistics@education.gov.uk with details so that we can discuss this.
 
@@ -336,7 +352,9 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 ---
 
-We publish at a number of different geography breakdowns and these vary from publication to publication. Every publication in the new platform must include the three compulsory columns - geographic_level, country_code and country_name in its data files. These are compulsory as the data we are producing must lie within a country boundary.
+We publish at a number of different geography breakdowns and these vary from publication to publication. Every publication in the new platform must include the three compulsory geography columns - geographic_level, country_code and country_name in its data files. These are compulsory as the data we are producing must lie within a country boundary. 
+
+The geographic_level column should describle the level of data present in that row. Therefore data for a collection from a specific local authority would have 'Local authority' as the geographic_level, while a National aggregation would have 'National' as the geographic_level.
 
 
 Teams should make sure that they are regularly checking their geography codes if they are not using a lookup from a maintained database (such as in the PDR). ONS have the [Open Geography portal](http://geoportal.statistics.gov.uk/){target="_blank"}, which can be a useful way of checking these. There is a wealth of data on there, though Local authority boundaries can be hard to find, they can be found using the tabs at the top – Boundaries > Administrative Boundaries > Counties and Unitary Authorities. 
@@ -347,7 +365,7 @@ Teams should make sure that they are regularly checking their geography codes if
 
 ---
 
-When using geographies that can be measured in multiple ways, you can achieve this by including a [filter](#filters) such as level_methodology which states how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
+When using geographies that can be measured in multiple ways, you can achieve this by including a [filter](#filters) such as level_methodology in the example below to state how you have measured the geographic level. For example, at Local authority level you may have data that was measured by the residence of the pupil and the location of the school:
 
 
 | geographic_level | old_la_code | la_name    | new_la_code | level_methodology | headcount |
@@ -364,7 +382,7 @@ When using geographies that can be measured in multiple ways, you can achieve th
 All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams may use additional columns as relevant such as including Regional columns for Local authority level data, this is optional.
 
 <div class="alert alert-dismissible alert-warning">
-  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in exactly the same format as they are uploaded.
+  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded.
 </div>
 
 
@@ -400,7 +418,7 @@ All rows must have country_code and country_name completed, regardless of geogra
   <hr class="my-4">
   
 - You must have the minimum expected geography columns, country_code and country_name.
-- You must also have the additional columns required for any geography included in your file.
+- You must also have the additional columns required for all geographies included in your file.
 - The additional columns must exactly match the names above.
 - You do not have to publish at every level in the guide, publish the selection of levels you feel appropriate.
 - You should regularly check that you are using the most up to date geography names and codes.
@@ -417,7 +435,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 A filter is a variable that we break our data down by, such as school type, pupil characteristics, or NQT status. There are no required standards for these, you can include any filters that you feel benefit the users of your data. 
 
 
-Aggregates should be included for all filters where possible. In general, if you can't aggregate, e.g. if you have headcount and fte, then this is an indication that they are instead seperate measures and should have separate indicator columns. There will be some situations where aggregation does not work, this will not break the platform, though may make the data less user-friendly. 
+Aggregates should be included for all filters where possible. There will be some situations where aggregation does not work, this will not break the platform, though may make the data less user-friendly. In general, if you can't aggregate, e.g. if you have headcount and fte, then this is an indication that they are instead seperate measures and should have separate indicator columns rather than forcing them into a filter column. 
 
 **For aggregate rows you should refer to these as ‘Total’.** When using filters such as school type or FSM eligibility this can be quite simple, as shown in the example below:
 
@@ -437,7 +455,7 @@ It is possible that you wish to include a filter that only has a single level, l
 
 ---
 
-For some filters, this can be more complicated. You might have a great number of different filters that you would rather group together in a hierarchy. You can do this by grouping a filter by a filter group. This essentially uses another filter column to provide a higher group level. This also may be helpful for EES users when creating tables. For example, you may want to group percentages into wider rate bands.
+For some filters, this can be more complicated. You might have a great number of different filters that you would rather group together in a two-level hierarchy. You can do this by grouping a filter by a filter group. This essentially uses another filter column to provide a higher group level. This also may be helpful for EES users when creating tables. For example, you may want to group percentages into wider rate bands.
 
 
 | time_period | time_identifier | geographic_level | country_code | country_name | absence_rate_band | absence_rate | 
@@ -446,11 +464,15 @@ For some filters, this can be more complicated. You might have a great number of
 | 2018        |	Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 62.0  |
 | 2018        |	Calendar year   |	National         | E92000001    |	England      | 10.0 – 19.9        | 16.2  |
 
+---
 
-You can also see an example with apprenticeship data file, including the corresponding EES metadata, below.
+You can also see an example with apprenticeship data file, including the corresponding EES metadata, below:
 
+---
 
 `r knitr::kable(apprenticeship, caption = "Data file")`
+
+---
 
 : Corresponding EES metadata file.
 
@@ -459,7 +481,9 @@ You can also see an example with apprenticeship data file, including the corresp
 | starters | Indicator | Number of learners starting an apprenticeship | Apprentice starts | | | |
 | drop_outs | Indicator | Number of learners not completing an apprencticeship | Apprentice drop-outs | | | |
 | drop_out_rate | Indicator | Percentage of pupils not completing an apprenticeship | Apprentice drop-outs | % | | |
-| appr_exact | Filter | Type of apprenticeship | | | Select the apprenticeship types you're interested in | appr_type | |
+| **appr_exact** | Filter | Type of apprenticeship | | | Select the apprenticeship types you're interested in | **appr_type** | |
+
+---
 
 <div class="alert alert-dismissible alert-danger">
   <p>You must not include grouping filters as separate rows in the EES metadata, they should only be referenced in the filter_grouping_column.</p>
@@ -471,7 +495,7 @@ You can also see an example with apprenticeship data file, including the corresp
 
 ---
 
-This example creates a characteristic and characteristic_group column from 'gender', 'fsm', and 'sen' columns. For this to work, each column must have a 'Total' aggregation. The column names will need to be tweaked to match your data, and depending on how much you cross-tab you may not need all of the rows, however this should show you the logic to create the filter and filter_group columns:
+This example creates a characteristic and characteristic_group column from 'gender', 'fsm', and 'sen' columns. For this to work, each column must have a 'Total' aggregation. The column names will need to be tweaked to match your data, and depending on how much you cross-tab you may not need all of the rows, however this should show you the logic needed:
 
 ```
 SELECT *,  -- select your data that includes the columns to combine below
@@ -504,7 +528,8 @@ else '' end as characteristic_group
 
 - All filters should have a ‘Total’ aggregation where possible.
 - If a filter has one level, you should not include it in the EES metadata.
-- Grouping filters is an option, only group filters where you decide it is better for your users.
+- Where filters do not aggregate, consider if you should have the levels as indicators instead.
+- Grouping filters is an option, but only group filters where you decide it is better for your users.
 - If a filter is used to group another, then it should not appear as a separate row in the EES metadata.
 
 </div>
@@ -527,7 +552,11 @@ As an example, the number of teachers and pupil enrolments are the indicators in
 | 201819      | ... | England      | Secondary    | 50         | 8        |
 
 
-In EES, the platform itself will format large numeric values to include commas, so you do not need to have commas in your data file. If you are including percentages and want to show 79%, you would have the value 79 in your data file and specify % as the unit for that column in the EES metadata.
+In EES, the platform itself will format large numeric values to include commas, so you do not need to have commas for separating large numbers in your data file. 
+
+If you are including percentages and want to show 79%, you would have the value 79 in your data file and specify % as the unit for that column in the EES metadata.
+
+Likewise with financial data, don't include £ in the data file, leave those cells as numeric only, include it as an indicator unit instead. In this situation it would be good practice to include a £ symbol at the end of the variable name like `total_expenditure_£`, to make it clear to users when downloading the csv file.
 
 ---
 
@@ -540,14 +569,14 @@ Many of our publications contain a large number of indicators. To improve the ex
 | col_name | col_type | label | indicator_grouping | indicator_unit | filter_hint | filter_grouping_column |
 |----------|----------|-------|--------------------|----------------|-------------|------------------------|
 | nc_year | Filter | NC Year | | | Filter by national curriculum year | |
-| admissions | Indicator | Number of admissions | Admissions | | | |
-| applications | Indicator | Number of applications received | Applications | | | |
-| online_apps | Indicator | Number of online applications | Applications | | | |
-| online_apps_% | Indicator | Percentage of online applications | Applications | | | |
+| admissions | Indicator | Number of admissions | **Admissions** | | | |
+| applications | Indicator | Number of applications received | **Applications** | | | |
+| online_apps | Indicator | Number of online applications | **Applications** | | | |
+| online_apps_% | Indicator | Percentage of online applications | **Applications** | | | |
 
 ---
 
-#### Example of how this would look in Explore Education Statistics:
+Example of how this would look in Explore Education Statistics:
 
 ---
 
@@ -571,7 +600,11 @@ Metadata in a machine readable (.csv) format must accompany datasets uploaded to
 This EES metadata is different to any metadata files you may provide alongside your data for your users.
 
 
-We only need to provide EES metadata for filters and indicators, we do not need to provide any EES metadata for the Observational Units (Time and Geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields.
+We only need to provide EES metadata for filters and indicators, we do not need to provide any EES metadata for the observational units (time and geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields. 
+
+<div class="alert alert-dismissible alert-warning">
+Note that any extra geography columns not specified in the [allowable values](#allowable-geographic-levels) above, or any time columns extra to time_period and time_identifier, are [filters](#filters), and should be included in EES metadata if they have two or more levels.
+</div>
 
 ---
 
@@ -593,6 +626,8 @@ We only need to provide EES metadata for filters and indicators, we do not need 
 
 ## Example EES metadata
 
+---
+
 : Each row represents a corresponding column in the data file.
 
 | col_name | col_type | label | indicator_grouping | indicator_unit | filter_hint | filter_grouping_column |
@@ -601,6 +636,8 @@ We only need to provide EES metadata for filters and indicators, we do not need 
 | school_phase | Filter | School phase | | | Filter by the phase of the school | |
 | number_children | Indicator | Number of children | | | |
 | percent_children | Indicator | Percentage of children | | % | | |
+
+---
 
 
 `r knitr::kable(metadata_data_example, caption = "The corresponding data file.")`
@@ -613,13 +650,13 @@ We only need to provide EES metadata for filters and indicators, we do not need 
 
 ---
 
-A data-screener has been developed in R to automate checks against the standards as a final stage of automated quality assurance before upload to EES. This can be run on any data file, though requires the EES metadata to be able to process the file. The R project can be found on GitHub, from here you can download or clone the code and run this yourself. [Access the GitHub repository here](https://github.com/dfe-analytical-services/ees-data-screener){target="_blank"}.
+A data-screener has been developed in R to automate checks against the standards as a final stage of automated quality assurance before upload to EES. This can be run on any data file, though requires the EES metadata to be able to process the file. The R project can be found on [GitHub](https://github.com/dfe-analytical-services/ees-data-screener){target="_blank"}, from there you can download or clone the code to your machine and run this yourself.
 
 <div class="alert alert-dismissible alert-danger">
   All data and EES metadata files must be run through the data-screener before uploading to EES.
 </div> 
 
-Teams can either run the files through the screening checks themselves - watch the [how to video](https://www.youtube.com/watch?v=D60UU5r_TrM&feature=youtu.be){target="_blank"} if you need help with setting this up on your machine - or by contacting the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to screen your files for you.
+Teams can either run the files through the screening checks themselves - watch the [how to video](https://www.youtube.com/watch?v=D60UU5r_TrM&feature=youtu.be){target="_blank"} if you need help with setting this up on your machine - or by sending your files to the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to screen them for you.
 
 The video has the following sections, the links are included for quick reference if you only need a specific section:
 
@@ -651,12 +688,12 @@ If you do need to install a newer version of pandoc, then the install wizard wil
 This can be from a number of causes:
 
 
-- Make sure it is saved to your c: drive or a desktop/downloads/documents folder, using a shared drive may cause issues.
-- Ensure that you have both R and RTools installed, and the versions are at least those shown in the video.
-- Ensure your proxy settings are correct as per the video, there's no harm in resetting them to make sure.
-- If the above fails you may need to uninstall and reinstall RStudio for it to work.
+1. Make sure the screener folder is saved to your c: drive or a desktop/downloads/documents folder, using a shared drive may cause issues.
+2. Ensure that you have both R and RTools installed, and the versions are at least those shown in the video.
+3. Ensure your proxy settings are correct as per [the video](https://www.youtube.com/watch?v=D60UU5r_TrM&t=160s){target="_blank"}, there's no harm in resetting them to make sure.
+4. If the above fails you may need to fully uninstall and reinstall RStudio and RTools for it to work.
 
-Failing all of the above, explore.statistics@education.gov.uk, making sure to include what steps you have taken so far, and your error messages in the email.
+Failing all of the above, email explore.statistics@education.gov.uk, making sure to include what steps you have taken so far, and your error messages in the email.
 
 ---
 

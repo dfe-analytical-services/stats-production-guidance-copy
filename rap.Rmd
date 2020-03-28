@@ -218,14 +218,14 @@ More to follow.
 
 ---
 
-#### Uploading data to SQL Server
+#### Importing data to SQL Server
 
 ---
 
 There's lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including [this guide](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017){target="_blank"}.
 
 
-Remember that it is important to upload them with consistent, throught-through [naming conventions](#naming-conventions). You will thank yourself later.
+Remember that it is important to import them with consistent, throught-through [naming conventions](#naming-conventions). You will thank yourself later.
 
 
 ---
@@ -256,7 +256,7 @@ More guidance will follow on best practice in writing code, as well as useful sn
 
 ---
 
-[Data tidying tutorial in SQL](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"}, this is a SQL query that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL. More guidance on this will follow.
+More guidance on this follow, for now, here is a [SQL query](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
 
 ---
 
@@ -390,16 +390,19 @@ When writing code, whether that is SQL, R, or something else, make sure you're c
 ----------------------------------------------------------------------------------------------
 ```
 
-Commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.** Use commented lines of - to break up your files into scannable chunks, you'll thank yourself later. Example below:
+Commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.** Use commented lines of - to break up your files into scannable chunks based upon the structure and subheadings, like the one below, you'll thank yourself later:
 
-`# -----------------------------------------------------------------------------------`
+```
+# -----------------------------------------------------------------------------------
+# 2 - Importing the data
+```
 
 You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"} as well.
 
 
 ---
 
-## Introduction to git
+## Introduction to Git
 
 ---
 
@@ -409,7 +412,7 @@ More to follow, for now, take a look at at the [resources for learning Git](http
 
 ---
 
-### How to setup an azure devops area
+### How to setup an Azure DevOps area
 
 ---
 
@@ -417,7 +420,7 @@ More to follow.
 
 ---
 
-### How to use git in practice
+### How to use Git in practice
 
 ---
 
@@ -443,7 +446,7 @@ It is assumed that when using R, automated scripts will output .html reports tha
 
 ---
 
-More will follow here as we work with teams to develop generalisable automated scripts for QA. For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://github.com/r-lib/testthat){target="_blank"} including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on testthat by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham.
+More will follow here as we work with teams to develop generalisable automated scripts for QA. For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://testthat.r-lib.org/){target="_blank"}, including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on it by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham.
 
 ---
 
