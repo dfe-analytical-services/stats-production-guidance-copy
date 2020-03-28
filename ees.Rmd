@@ -120,9 +120,7 @@ knitr::include_graphics("images/ees-hierarchy.PNG")
 ```
 
 
-Publications are organised into topics and themes (as shown on the EES Find Statistics page), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. 
-
-For example:
+Publications are organised into topics and themes (as shown on the EES Find Statistics page), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. For example:
 
 | Level | Example |
 |:------|:------|
@@ -135,7 +133,7 @@ Each publication should have a lead statisticians name and contact details attac
 
 To request a change to the contact details for a publication contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
 
-Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be writtent to cover all releases for the given publication within the service. 
+Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be written to cover all releases for the given publication within the service. 
 
 ---
 
