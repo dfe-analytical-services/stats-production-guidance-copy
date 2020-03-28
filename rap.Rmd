@@ -244,11 +244,11 @@ More to follow.
 ---
 
 
-It is as simple as telling your computer what to do. `Like in SPSS where you write the syntax. Talk about the benefits of it.`
+It is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand. This brings numerous benefits, computers are far quicker, more accurate, and far more reliable than humans in many of the tasks that we do. Writing out these instructions saves us significant amounts of time, particularly when it can be reused in future years, and also provides us with auditable documentation for our production processes, saving the need for writing down information in extra documents. 
 
-`Any particular useful things to know, collate key tips such as using sensible variable names.`
+Reliability is a huge benefit of the automation that RAP brings - when one of the lines of data has to be amended a week before publication, it's a life saver to know that you can re-run your process in minutes, and ressuring to know that it will give you the result you want. You can run the same code 100 times, and be confident that it will follow the same steps in the same order every single time.
 
-General good practice around writing code. [StyleR](https://styler.r-lib.org/){target="_blank"}, is a nifty package that helps you to standardise and style your R code in line with tidyverse formatting rules to make it easier to read and reuse for others.
+More guidance will follow on best practice in writing code, as well as useful snippets of code that everyone can make use of. For now, the key thing to remember is that **we should be automating everything we can**, avoiding any manual steps. This means that once teams have developed their code, they can then execute the code and have their underlying data files ready from a single click of a button. Designing our processes in this way will make them better documented, reduce human error, increasing effiency and reliability.
 
 ---
 
@@ -256,10 +256,7 @@ General good practice around writing code. [StyleR](https://styler.r-lib.org/){t
 
 ---
 
-[Data tidying tutorial in SQL](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"}, this is a SQL query that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
-
-
-More to follow.
+[Data tidying tutorial in SQL](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"}, this is a SQL query that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL. More guidance on this will follow.
 
 ---
 
@@ -267,7 +264,7 @@ More to follow.
 
 ---
 
-More to follow.
+For now, take a look at the materials from Cathy Atkinson's coffee and coding session on [connecting R to SQL using DBI and odbc](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7B2B35083D%2D7626%2D48E2%2D9615%2D451544742692%7D&id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL%2FConnecting%5Fto%5FSQL%5FRevA%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL).
 
 
 ---
@@ -277,11 +274,7 @@ More to follow.
 ---
 
 
-
-[Here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R.
-
-
-[Applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
+More will follow here, for now, [here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
 
 For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](https://rsconnect/rsc/stats-production-guidance/l+d.html){target="_blank"} page.
@@ -293,7 +286,7 @@ For further resources on learning R so that you're able to apply it to your ever
 
 ---
 
-Version control can mean a lot of things. Ultimately the aim should be to leave your work in a state that others (including future you!), can pick it up and immediately find what they need. Changes to files should be documented, and published versions should be clearly named and stored in their own folder. As we work with code to process our data more and more, we can begin to utilise version control software to make this process much easier, allowing simultaneous collaboration on files.
+The aim should be to leave your work in a state that others (including future you!), can pick it up and immediately find what they need, understanding the processes that have happened previously. Changes to files should be documented, and published versions should be clearly named and stored in their own folder. As we work with code to process our data more and more, we can begin to utilise version control software to make this process much easier, allowing simultaneous collaboration on files.
 
 ---
 
@@ -304,7 +297,7 @@ Version control can mean a lot of things. Ultimately the aim should be to leave 
 How you organize and name your files will have a big impact on your ability to find those files later and to understand what they contain. You should be consistent and descriptive in naming and organizing files so that it is obvious where to find specific data and what the files contain.
 
 
-As a minimum you should have a folder that includes all of the final versions of documents produced and published per release. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate?
+As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate?
  
 ---
 
@@ -329,7 +322,7 @@ Having a **clear** and **consistent** naming convention for your files is critic
 
 **Play well with default ordering**
 
-- Often (though not always!) you should have numbers first, particularly if you file names include dates.
+- Often (though not always!) you should have numbers first, particularly if your file names include dates.
 - Follow the ISO 8601 date standard (YYYYMMDD) to ensure that all of your files stay in chronological order.
 - Use leading zeros to left pad numbers and ensure files sort properly, avoiding 1,10,2,3.
 
@@ -360,13 +353,13 @@ Use the principles above to decide on a name for each data file and your wider p
 
 ---
 
-_When you assume you make an 'ass' out of 'u' and 'me'_. Everyone knows this saying, yet not all of us heed it's warning. 
+_When you assume you make an 'ass' out of 'u' and 'me'_. Everyone knows this saying, yet few of us heed it's warning. 
 
 
-When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. Thorough documentation saves us time, and provides a clear audit trail of what we do.
+When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. Thorough documentation saves us time, and provides a clear audit trail of what we do. This is key for the 'Reproducible' part of RAP, our processes must be easily reproducible and clear documentation is fundamental to that.
 
 
-You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team.
+You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team. Imagine you have a new starter who understands the tools you've used but has never worked in your area before, and then document in a way that they could pick it up without assistance.
 
 
 When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work. We recommend that you try to follow [tidyverse](https://style.tidyverse.org/){target="_blank"} styling where you can, as this makes your code easier to read. The [styler package](){target="_blank"} helps to make this delightfully easy. There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
@@ -377,9 +370,27 @@ When using R, it is generally best practice to use [R projects](https://support.
 
 ---
 
-When writing code, whether that is SQL, R, or something else, make sure you're commenting as you go. Start off every file by outlining the date, author, and purpose of the file. Entire commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.**
+When writing code, whether that is SQL, R, or something else, make sure you're commenting as you go. Start off every file by outlining the date, author, purpose, and if applicable, the structure of the file, like this: 
 
-Use commented lines of - and = to break up your files into scannable chunks. Example below:
+```
+----------------------------------------------------------------------------------------------
+-- Script Name:		Section 251 Table A 2019 - s251_tA_2019.sql
+-- Description:		Extraction of data from IStore and production of underlying data file
+-- Author:		    Cam Race
+-- Creation Date:   15/11/2019
+----------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------
+--//  Process
+-- 1. Extract the data for each available year
+-- 2. Match in extra geographical information
+-- 3. Create aggregations - both categorical and geographical totals
+-- 4. Tidy up and output results
+-- 5. Metadata creation
+----------------------------------------------------------------------------------------------
+```
+
+Commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.** Use commented lines of - to break up your files into scannable chunks, you'll thank yourself later. Example below:
 
 `# -----------------------------------------------------------------------------------`
 
@@ -388,14 +399,12 @@ You might be thinking that it would be nice if there was software that could hel
 
 ---
 
-
 ## Introduction to git
-
 
 ---
 
 
-More to follow.
+More to follow, for now, take a look at at the [resources for learning Git](https://rsconnect/rsc/stats-production-guidance/l+d.html#git){target="_blank"} on the learning resources page.
 
 
 ---
@@ -412,7 +421,7 @@ More to follow.
 
 ---
 
-More to follow, for now please refer to the learning resources page.
+More to follow, for now please refer to the resources above, or the other links on the [learning resources](https://rsconnect/rsc/stats-production-guidance/l+d.html#git){target="_blank"} page.
 
 ---
 
@@ -420,13 +429,13 @@ More to follow, for now please refer to the learning resources page.
 
 ---
 
-Any data files that have been created will need to be quality assured. These checks should be automated where possible, so the computer is doing the hard work, and to ensure their reliability.
+Any data files that have been created will need to be quality assured. These checks should be automated where possible, so the computer is doing the hard work - saving us time, and to ensure their reliability.
 
 
-The Statistics Development Team will provide generalised code that teams can use as a starting point for automated QA and they should run this as a minimum as part of their pipeline, they can then choose to add more area specific checks to the script and/or continue with current checking processes in tandem.
+Some teams are already making great progress with automated QA and realising the benefits of it. The Statistics Development Team are working with these to provide generalised code that teams can use as a starting point for automated QA. The intention is that teams can then run this as a minimum, before then looking to develop more area specific checks to the script and/or continue with current checking processes in tandem. If your team already use, or are working towards using, automated QA then get in touch as we'd be keen to see what you have.
 
 
-It is assumed that when using R, automated scripts will output html reports that the team can read through to understand their data and identify any issues.
+It is assumed that when using R, automated scripts will output .html reports that the team can read through to understand their data and identify any issues, and save as a part of their process documentation.
 
 ---
 
@@ -434,10 +443,7 @@ It is assumed that when using R, automated scripts will output html reports that
 
 ---
 
-More to follow.
-
-
-Point towards packages to look at like test that for developing more publication specific QA.
+More will follow here as we work with teams to develop generalisable automated scripts for QA. For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://github.com/r-lib/testthat){target="_blank"} including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on testthat by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham.
 
 ---
 
@@ -450,20 +456,11 @@ More to follow.
 ---
 
 
-### Example code
-
----
-
-More to follow.
-
----
-
-
 ### Automating summary statistics
 
 ---
 
-More to follow.
+As a part of automating QA, we should also be looking to automate the production of summary statistics alongside the tidy underlying data files, this then provides us with instant insight into the stories underneath the numbers. More guidance, including generalisable code, will be added here in the future.
 
 ---
 

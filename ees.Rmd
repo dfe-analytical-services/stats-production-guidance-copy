@@ -1,5 +1,5 @@
 ---
-title: "Publishing Statistics"
+title: "Publishing Statistics on EES"
 ---
 
 <p class="text-muted">Guidance for how to publish Official Statistics via the new Explore Education Statistics platform.</p>
@@ -270,7 +270,7 @@ This preview is only accessible for the 24 hours before the publication date, th
 
 ---
 
-`TBA`
+Guidance to follow soon.
 
 ---
 
