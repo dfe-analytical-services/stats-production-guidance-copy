@@ -149,7 +149,7 @@ Currently the following tyes of release can be created in EES:
 * Official Statistics
 * Adhoc Statistics
 
-When creatign a release you will be asked to fill in some release summary fields, including the scheduled publication date. 
+When creating a release you will be asked to fill in some release summary fields, including the scheduled publication date. 
 
 You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) in the first instance.
 

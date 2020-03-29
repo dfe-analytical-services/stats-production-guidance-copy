@@ -458,11 +458,11 @@ It is possible that you wish to include a filter that only has a single level, l
 For some filters, this can be more complicated. You might have a great number of different filters that you would rather group together in a two-level hierarchy. You can do this by grouping a filter by a filter group. This essentially uses another filter column to provide a higher group level. This also may be helpful for EES users when creating tables. For example, you may want to group percentages into wider rate bands.
 
 
-| time_period | time_identifier | geographic_level | country_code | country_name | absence_rate_band | absence_rate | 
+| time_period | time_identifier | geographic_level | country_code | country_name | absence_band_group | absence_band | 
 |-------------|-----------------|------------------|--------------|--------------|--------------------|--------------|
-| 2018        | Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 67.5  |
-| 2018        |	Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 62.0  |
-| 2018        |	Calendar year   |	National         | E92000001    |	England      | 10.0 – 19.9        | 16.2  |
+| 2018        | Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 67.0 - 67.9  |
+| 2018        |	Calendar year   | National         | E92000001    | England      | 60.0 – 69.9        | 62.0 - 62.9  |
+| 2018        |	Calendar year   |	National         | E92000001    |	England      | 10.0 – 19.9        | 16.0 - 16.9  |
 
 ---
 
@@ -554,7 +554,7 @@ As an example, the number of teachers and pupil enrolments are the indicators in
 
 In EES, the platform itself will format large numeric values to include commas, so you do not need to have commas for separating large numbers in your data file. 
 
-If you are including percentages and want to show 79%, you would have the value 79 in your data file and specify % as the unit for that column in the EES metadata.
+If you are including percentages and want to show 79%, you would have the value 79 in your data file and specify % as the unit for that column in the EES metadata. As a default EES will round decimals to 2 d.p., if you would prefer to display your data to 1 d.p. please apply this rounding to your data files before uploading to the platform.  
 
 Likewise with financial data, don't include £ in the data file, leave those cells as numeric only, include it as an indicator unit instead. In this situation it would be good practice to include a £ symbol at the end of the variable name like `total_expenditure_£`, to make it clear to users when downloading the csv file.
 

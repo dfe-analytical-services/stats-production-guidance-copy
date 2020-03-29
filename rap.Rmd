@@ -37,7 +37,7 @@ In Official Statistics production we are using RAP as a framework for best pract
 
 Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see our [learning resources](https://rsconnect/rsc/stats-production-guidance/l+d.html){target="_blank"} page.
 
-The collection of, and routine checking of data as it is coming into the department is an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to contact us.
+The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:explore.statistics@education.gov.uk).
 
 
 ---
@@ -97,7 +97,7 @@ The key now is for us to build on the work so far and focus on how we improve th
 
 ---
 
-The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the minimum implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around good and best practice levels.
+The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the good practice implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around great and best practice levels.
 
 
 `r knitr::include_graphics("images/RAP-in-practice.png")`

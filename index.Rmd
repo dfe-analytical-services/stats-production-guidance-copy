@@ -7,7 +7,7 @@ author: "By Cam Race and Laura Selby"
 ---
 
 
-This is a guide aimed at anyone producing official statistics. It is particularly important for those publishing through EES, though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walkthrough guide from processing to publication, as well as being a single reference point that is easy to navigate if you just need to check on a specific part of the process, link off to other resources, or access specific guidance.
+This is a guide aimed at anyone producing official statistics. It is particularly important for those publishing using Explore Education Statistics (EES), though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walkthrough guide from processing to publication, as well as being a single reference point that is easy to navigate if you just need to check on a specific part of the process, link off to other resources, or access specific guidance.
 
 Within this guide you can read about: 
 

@@ -99,8 +99,7 @@ We recommend that the first accordion section in each release should be 'About t
 
 ---
 
-* Crucial caveats or information necessary for accurate interpretation of the statistics
-    + These should be included within the main commentary next to the point they relate to
+* Crucial caveats or information necessary for accurate interpretation of the statistics, these should be included within the main commentary next to the point they relate to
 * Technical information that is not relevant to the interpretation of the statistics should be saved for the methodology
 * Definitions should be included within the main commentary when they are first mentioned
 * Lists or descriptions of what is in the commentary as these should be clear from the contents and accordion headings
