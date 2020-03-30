@@ -17,7 +17,7 @@ A collection of useful learning resources, and information on the recommended to
 * [Production Processes](rap.html)  
 Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses
 
-* [Data Standards](https://rsconnect/rsc/stats-production-guidance/ud.html)  
+* [Data Standards](ud.html)  
 Guidance on how to structure data files
 
 * [Writing and Visualising Statistics](cd.html)  
