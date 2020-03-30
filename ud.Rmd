@@ -564,11 +564,11 @@ Likewise with financial data, for don't include £ in the values in the data fil
 
 When communicating uncertainty, for confidence intervals you should report the upper and lower bounds as separate columns rather than as one confidence interval column:
 
-| time_period | ... | country_name | school_type  | estimate | est_lower_ci | est_upper_ci |
+| time_period | ... | country_name | school_type  | estimate | **est_lower_ci** | **est_upper_ci** |
 |-------------|-----|--------------|--------------|------------|----------|----------------|
-| 201819      | ... | England      | Total        | 100        | 96.7 | 103.3 |
-| 201819      | ... | England      | Primary      | 50         | 48.9 | 51.1 |
-| 201819      | ... | England      | Secondary    | 50         | 49.5 | 50.5 | 
+| 201819      | ... | England      | Total        | 100        | **96.7** | **103.3** |
+| 201819      | ... | England      | Primary      | 50         | **48.9** | **51.1** |
+| 201819      | ... | England      | Secondary    | 50         | **49.5** | **50.5** | 
 
 ---
 

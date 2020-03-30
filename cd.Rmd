@@ -68,7 +68,7 @@ It is recommended to have 3 headline facts but you can have more or fewer. Headl
 | Short outline of trend | A short one-sentence description of the trend; try to avoid only stating the change from the previous year and talk about the longer-term trend where appropriate |
 | Define ‘Indicator name’ | A simple description in plain English of what the indicator is |
  
-<div class="alert alert-dismissible alert-warning">
+<div class="alert alert-dismissible alert-info">
 You should also add a headline data block to this section, including a table and chart with the most note-worthy findings from the release. 
 </div>
 
