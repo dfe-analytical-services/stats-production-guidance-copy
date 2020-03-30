@@ -11,19 +11,19 @@ This is a guide aimed at anyone producing official statistics. It is particularl
 
 Within this guide you can read about: 
 
-* [Learning Resources](/l+d.html)  
+* [Learning Resources](/rsc/stats-production-guidance/l+d.html)  
 A collection of useful learning resources, and information on the recommended tools to get you started
 
-* [Production Processes](/rsc/stats-production-guidance/l+d.html)  
+* [Production Processes](/rsc/stats-production-guidance/rap.html)  
 Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses
 
-* [Data Standards](/ud.html)  
+* [Data Standards](/rsc/stats-production-guidance/ud.html)  
 Guidance on how to structure data files
 
-* [Writing and Visualising Statistics](/cd.html)  
+* [Writing and Visualising Statistics](/rsc/stats-production-guidance/cd.html)  
 Things to consider when writing statistical commentary
 
-* [Publishing Statistics](/_site/ees.html)  
+* [Publishing Statistics](/rsc/stats-production-guidance/ees.html)  
 Guidance for how to publish Official Statistics via the new Explore Education Statistics platform
 
 

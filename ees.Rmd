@@ -193,6 +193,11 @@ If you believe your file is ‘stuck’ please contact explore.statistics@educat
 
 To add footnotes, go to the footnotes tab and click 'add footnote'. Here you can select the individual indicators and filters you want to assign footnotes to, or if you'd rather, you can assign a footnote to the whole subject (data file). You can assign footnotes across multiple subjects. 
 
+<div class="alert alert-dismissible alert-info">
+When creating footnotes, make sure to add any symbols that you've used as footnotes - such as "c" for suppressed cells, so that they appear alongside tables ([GSS recommended symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"}).
+</div>
+
+
 ---
 
 ## Data blocks
