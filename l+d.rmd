@@ -44,7 +44,7 @@ Teams are welcome to use whatever tools they want, as long as the proccesses inv
 
 As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first and get their head around the concepts of writing code, and what it is we can do with it. Some of the guides below for R are particularly good for walking you through this step by step.
 
-Getting a friend or colleague to show us around the environment such as MSSMS or RStudio, and how to access real data is a critical step. It's important not to overlook the practical element of how you use these tools on your own machine with your own data, as you will need to be using these tools in your day to day processes to properly start learning. It's like driving a car, you can have as many lessons as you want, but the true experience comes from being left alone in full control of the machine!
+Getting a friend or colleague to show us around the environment on our own machine such as MSSMS or RStudio, and how to access real data using the code is a critical step. It's important not to overlook the practical element of how you use these tools on your own machine with your own data, as you will need to be using these tools in your day to day processes to properly start learning. It's like driving a car, you can have as many theory lessons as you want, but the true learning happens when you're left alone in full control of the machine!
 
 We are always on the look out for resources that will help you to have the skills needed to incorporate the principles of RAP into improving your own processes. There will be many more just a google away, and genuinely, **Google is the single most powerful learning resource out there**, whether it leads you to a StackOverflow answer to your problem, or to an online training course, it will have your needs covered. We appreciate that it can be daunting and overwhelming at first though, which is why we're pooling together links to particularly relevant resources on this page. Let us know if there's any you'd like to see added!
 
@@ -60,7 +60,9 @@ We are always on the look out for resources that will help you to have the skill
 
 - ESFA have also produced a useful [guide to using R and Git](https://rsconnect/rsc/esfa-r-training/){target="_blank"}. This takes you in from the beginning, teaching you how to use RStudio and later on even includes some information on Shiny apps and more complex topics. For more information on RShiny apps, I'd recommended joining the [R Shiny Developers](https://teams.microsoft.com/l/channel/19%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/tab%3A%3A1fc89e11-fa70-473d-b993-df467ca0d459?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9) teams group.
 
-- There is also a handy [general data science resources list](https://github.com/Chris-Engelhardt/data_sci_guide){target="_blank"}, that includes plenty of resources for R and SQL, with Python, Git, and shell included in there too.
+- There is also a handy [general data science resources list](https://github.com/Chris-Engelhardt/data_sci_guide){target="_blank"}, that includes plenty of open-source resources for R and SQL, with Python, Git, and shell included in there too.
+
+- If the above list doesn't have something for you then check out the resources in the [awesome lists](https://github.com/sindresorhus/awesome){target="_blank"} and [awesome R](https://github.com/qinwf/awesome-R){target="_blank"}, which contain more resources than you could shake a stick at.
 
 - [DataCamp](https://learn.datacamp.com/){target="_blank"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email Learning.Academy@ons.gov.uk, they can guide you through the process of getting access to one of their premium subsriptions for a few weeks, which allows you to access the rest of the courses.
 
@@ -94,7 +96,7 @@ SQL provides us with an intuitive language to query databases and manipulate the
 
 Once you've downloaded RStudio, R, and RTools from the software centre, you can open up RStudio and start writing code in the R language, and then execute that code on data. R is an incredibly powerful language, and you can extend the functions used in the standard 'base R' by installing extra packages such as ggplot2 for visualisations, or rmarkdown for producing reports. It is even possible to create your own packages, so the chances are that if you can think of it, there is a way to do it using R!
 
-- The [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"} is a great starting point to guide you through how to get started with R and RStudio.
+- The [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"} is a great starting point to guide you through how to get started using R and RStudio.
 
 - There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank"}.
 
@@ -125,6 +127,8 @@ Git is a version control software that tracks changes to files within a folder t
 - [Gooey Git](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit%2Fgooey%5Fgit%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit){target="_blank"} by David Sands, provides a handy overview to using git with R.
 
 - Avison Ho and Linda Bennett gave this coffee and coding presentation on [version controlling SQL with Git](https://github.com/avisionh/SQL-Titbits/wiki/User-Guide:-SQL-x-Git-Version-Control){target="_blank"}.
+
+- [Happy Git](https://happygitwithr.com/big-picture.html){target="_blank"} is a useful (though detailed) guide to setting up and using git.
 
 - Adam Robinson and Zach Waller have produced [guidance for how to use git in Azure DevOps (formally VSTS)](https://dfe-analytical-services.github.io/vsts-for-analysis/){target="_blank"}, which gives a detailed guide on how to use version control software in DfE analysis.
 
