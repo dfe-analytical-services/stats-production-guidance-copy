@@ -14,7 +14,7 @@ Within this guide you can read about:
 * [Learning Resources](/l+d.html)  
 A collection of useful learning resources, and information on the recommended tools to get you started
 
-* [Production Processes](/rap.html)  
+* [Production Processes](/rsc/stats-production-guidance/l+d.html)  
 Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses
 
 * [Data Standards](/ud.html)  
