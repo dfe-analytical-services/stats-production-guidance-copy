@@ -35,7 +35,7 @@ We want to focus on the parts of the production process that we have ownership a
 
 In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to [assess our own work against the principles of RAP](#what-we-need-to-do).
 
-Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see our [learning resources](l+d.html){target="_blank"} page.
+Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see our [learning resources](/rsc/stats-production-guidance/l+d.html){target="_blank"} page.
 
 The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:explore.statistics@education.gov.uk).
 
@@ -275,7 +275,7 @@ For now, take a look at the materials from Cathy Atkinson's coffee and coding se
 More will follow here, for now, [here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
 
-For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html){target="_blank"} page.
+For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](/rsc/stats-production-guidance/l+d.html){target="_blank"} page.
 
 ---
 
@@ -405,7 +405,7 @@ You might be thinking that it would be nice if there was software that could hel
 ---
 
 
-More to follow, for now, take a look at at the [resources for learning Git](l+d.html#git){target="_blank"} on the learning resources page.
+More to follow, for now, take a look at at the [resources for learning Git](/rsc/stats-production-guidance/l+d.html#git){target="_blank"} on the learning resources page.
 
 
 ---
@@ -422,7 +422,7 @@ More to follow.
 
 ---
 
-More to follow, for now please refer to the resources above, or the other links on the [learning resources](l+d.html#git){target="_blank"} page.
+More to follow, for now please refer to the resources above, or the other links on the [learning resources](/rsc/stats-production-guidance/l+d.html#git){target="_blank"} page.
 
 ---
 
