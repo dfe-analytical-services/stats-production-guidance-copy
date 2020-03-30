@@ -10,9 +10,9 @@ title: "Tools and learning resources"
 
 ---
 
-As statistics producers we require a variety of tools to be able to process our data, and as you probably know, there are a wealth of tools out there to process and analyse data.
+As statistics producers we require a variety of tools to be able to process our data, and as you probably know, there are a wealth of them out there to process and analyse data.
 
-As a part of developing resources to help us integrate the principle of RAP into our processes, it is important that we set a clear direction on what tools we will be actively supporting teams to use. Below are the recommended tools that will give us the most power to do what we need, and are the best supported with resources for developing the necessary skills to use them. These are tools that have large user communitites in DfE, and are already working in our current IT setup.
+As a part of developing resources to help us integrate the principle of RAP into our processes, it is important that we set a clear direction on what tools we will be actively supporting teams to use. Below are the recommended tools that will give us the most power to do what we need, and are the best supported with resources for developing the necessary skills to use them. These have large user communitites in DfE, and are already working in our current IT setup.
 
 <div class="alert alert-dismissible alert-warning">
 Teams are welcome to use whatever tools they want, as long as the proccesses involved meet the [principles of RAP](https://rsconnect/rsc/stats-production-guidance/rap.html#core_principles){target="_blank"}.

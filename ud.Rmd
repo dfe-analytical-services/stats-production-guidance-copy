@@ -19,7 +19,7 @@ metadata_data_example <- read_excel("data_examples/metadata_data_example.xlsx")
 
 ---
 
-These standards provide general principles of best practice that can be applied to any data that is produced. The aim is to apply a consistent, logical, structure to all data files so that they are easier to use and analyse, minimising the time spent cleaning the data. Adopting these principles will give us more power to serve the needs of the users, saving both us and them time when producing and using the data. This will also open up further opportunities for linking data, including connecting to cross government data initiatives such as the GSS data project. 
+These standards provide general principles of best practice that can be applied to any data that is produced. The aim is to apply a consistent, logical, structure to all data files so that they are easier to use and analyse, minimising the time spent cleaning the data. Adopting these principles will give us more power to serve the needs of the users, saving both us and them time when producing and using the data. This will also open up further opportunities for linking data, including connecting to cross government data initiatives such as the GSS data project. There is also an automated process for checking data against these standards, please see [how to check against the standards](#how-to-check-against-the-standards) at the bottom of the page. 
 
 Our publication data is released under the terms of the [Open Government License](http://www.nationalarchives.gov.uk/doc/open-government-licence/){target="_blank"} and by following these standards will meet at least 3 stars for [Open Data](https://www.gov.uk/government/policies/improving-the-transparency-and-accountability-of-government-and-its-services/supporting-pages/releasing-data-in-open-formats){target="_blank"}.
 
@@ -43,7 +43,7 @@ This guide aims to help statistical production teams understand and meet the sta
 
 - [Metadata requirements for Explore Education Statistics](#ees-metadata)
 
-- [How to screen your data against these standards and next steps](#how-to-check-against-the-standards)
+- [How to check your data against these standards and next steps](#how-to-check-against-the-standards)
 
 
 If you have any questions, or would like any further advice on what you read here, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
