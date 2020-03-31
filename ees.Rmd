@@ -66,7 +66,7 @@ The Statistics Development Team will be responsible for setting up and maintaini
 
 ---
 
-Analysts are able to test the service within our the platorms test environment (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access):
+Analysts are able to test the service within the platforms test environment (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access):
 
 
 Public test environment - https://test.explore-education-statistics.service.gov.uk
