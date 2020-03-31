@@ -344,8 +344,8 @@ If you have gone through the flowchart above and feel that you are ready to repu
 
 2. [Contact us](mailto:explore.statistics@education.gov.uk) for permission to access the production environment, telling us about the release you plan to republish, then build your release following the checklist below:
    * Run your data and metadata through our [screening checks](ud.html#how_to_check_against_the_standards){target="_blank"}
-   * [Upload your data](#uploading_data) to your release on EES
-   * [Write footnotes](#uploading_data)
+   * [Upload your data](#uploading-data) to your release on EES
+   * [Write footnotes](#uploading-data)
    * [Create content](cd.html){target="_blank"} (including tables and charts)
    * Attach a public metadata document
    * Ensure methodology information is either linked off to or attached to the release
