@@ -48,7 +48,6 @@ This guide aims to help statistical production teams understand and meet the sta
 
 If you have any questions, or would like any further advice on what you read here, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
 
-
 ---
 
 # General requirements
