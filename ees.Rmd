@@ -38,7 +38,7 @@ Both applications were initially released to Minimal Viable Product (MVP) standa
 
 Maintence and BAU running of the platform is supported by the Statistics Development Team.
 
-<div class="alert alert-dismissible alert-info">
+<div class="alert alert-dismissible alert-warning">
 If you are unsure which route to use for publication please contact the [HoP Office](mailto:Hop.STATISTICS@education.gov.uk).
 </div>
 
@@ -153,7 +153,7 @@ When creating a release you will be asked to fill in some release summary fields
 
 You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) in the first instance.
 
-<div class="alert alert-dismissible alert-info">
+<div class="alert alert-dismissible alert-warning">
 For start of public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
 </div>
 
@@ -187,16 +187,11 @@ Once you click to upload the file a ‘Status’ will be visible that shows the 
 
 This may take a little while depending on the size of your file and if there are numerous files queued for import. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
 
-<div class="alert alert-dismissible alert-danger">
+<div class="alert alert-dismissible alert-warning">
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
 </div>
 
 To add footnotes, go to the footnotes tab and click 'add footnote'. Here you can select the individual indicators and filters you want to assign footnotes to, or if you'd rather, you can assign a footnote to the whole subject (data file). You can assign footnotes across multiple subjects. 
-
-<div class="alert alert-dismissible alert-info">
-When creating footnotes, make sure to add any symbols that you've used as footnotes - such as "c" for suppressed cells, so that they appear alongside tables ([GSS recommended symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"}).
-</div>
-
 
 ---
 
@@ -222,6 +217,8 @@ You can create maps too, currently this is possible for regional, LA and LAD dat
 
 **Remember to save your chart when you’re done.**
 
+You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. If you have a an infographic or a chart that is too complex to build within our chart builder you can use the 'Choose an infographic as alternative' option to upload an image to your data block instead. These should be .png format and you can use the sizing options within the data block editor to size your image appropriately. 
+
 ---
 
 ## Writing content
@@ -232,7 +229,22 @@ In the manage content tab you can now start creating your release, embedding the
 
 You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode.
 
-Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. Key stats tiles also need to be created as a datablock table (creating a table as a single number only).
+Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. 
+
+Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock table - creating a table as a single number only.
+
+`r knitr::include_graphics("images/key-stat.PNG")`
+
+After embedding a key stat tile you can then edit it to add trend information and a desription of what the indicator is. 
+
+| Element | Content |
+|---------|---------|
+| Indicator name | Automatically generated from your data | 
+| Latest value | Automatically generated from your data |
+| Trend | A short one-sentence description of the trend; try to avoid only stating the change from the previous year and talk about the longer-term trend where appropriate |
+| Guidance title | Should be set to 'What is this?' |
+| Guidance text | A simple description in plain English of what the indicator is |
+
 
 ---
 
@@ -248,7 +260,7 @@ There are three statuses:
 2.	**Ready for higher review** (where the senior statistician checks over the release before approving)
 3.	**Approved for publication** (after approval has been given, releases in this status will be published on their scheduled date)
 
-<div class="alert alert-dismissible alert-danger">
+<div class="alert alert-dismissible alert-warning">
 Only users with ‘responsible statistician’ permissions (usually G6 or above) can sign off the release for publication.  
 </div>
 
