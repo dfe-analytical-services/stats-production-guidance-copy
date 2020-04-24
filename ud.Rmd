@@ -279,9 +279,12 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
-| Autumn term                      | 6 digits                  |
-| Spring term                      | 6 digits                  |
-| Summer term                      | 6 digits                  |
+| Autumn term                      | 4 digits                  |
+| Spring term                      | 4 digits                  |
+| Summer term                      | 4 digits                  |
+
+| Acceptable time_identifier value | Corresponding time_period |
+|----------------------------------|---------------------------|
 | Autumn and spring term           | 6 digits                  |
 
 | Acceptable time_identifier value | Corresponding time_period |
@@ -298,34 +301,6 @@ You can only mix time_identifiers if they appear within the same table below. If
 | October                          | 4 digits                  |
 | November                         | 4 digits                  |
 | December                         | 4 digits                  |
-
-| Acceptable time_identifier value | Corresponding time_period |
-|----------------------------------|---------------------------|
-| Calendar year Q1                 | 4 digits                  |
-| Calendar year Q2                 | 4 digits                  |
-| Calendar year Q3                 | 4 digits                  |
-| Calendar year Q4                 | 4 digits                  |
-
-| Acceptable time_identifier value | Corresponding time_period |
-|----------------------------------|---------------------------|
-| Academic year Q1                 | 6 digits                  |
-| Academic year Q2                 | 6 digits                  |
-| Academic year Q3                 | 6 digits                  |
-| Academic year Q4                 | 6 digits                  |
-
-| Acceptable time_identifier value | Corresponding time_period |
-|----------------------------------|---------------------------|
-| Financial year Q1                | 6 digits                  |
-| Financial year Q2                | 6 digits                  |
-| Financial year Q3                | 6 digits                  |
-| Financial year Q4                | 6 digits                  |
-
-| Acceptable time_identifier value | Corresponding time_period |
-|----------------------------------|---------------------------|
-| Tax year Q1                      | 6 digits                  |
-| Tax year Q2                      | 6 digits                  |
-| Tax year Q3                      | 6 digits                  |
-| Tax year Q4                      | 6 digits                  |
 
 ---
 
