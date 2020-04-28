@@ -62,7 +62,9 @@ The Statistics Development Team will be responsible for setting up and maintaini
 
 <div class="alert alert-dismissible alert-danger">
 The admin side of EES is only supported in Google Chrome and Microsoft Edge. It will not work correctly in Internet Explorer.
+</div>
 
+<div class="alert alert-dismissible alert-info">
 The public side does support Internet Explorer, though we still recommend that people use Chrome or Edge instead.
 </div>
 
