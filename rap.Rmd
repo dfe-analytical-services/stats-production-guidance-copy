@@ -190,9 +190,8 @@ In order for us to be able to have an end-to-end data pipeline where we can repl
 
 SQL is a fantastic language for large scale data joining and manipulation; it allows us to replicate end-to-end from raw data to final aggregate statistics output. Having all the data in one place and processing it in one place makes our lives easier, and also helps us when auditing our work and ensuring reproducibility of results. 
 
----
 
-#TODO - Something on learning SQL
+For a collection of the best resources to use when leanrning SQL, see our [learning resources](l+d.html) page, and for guidance on best practice when writing SQL queries, see the [using code to process data](#using-code-to-process-data) and [documentation](#documentation) sections below. 
 
 ---
 
@@ -239,13 +238,11 @@ More to follow.
 
 ---
 
-
 # Using code to process data
 
 ---
 
-
-It is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand. This brings numerous benefits, computers are far quicker, more accurate, and far more reliable than humans in many of the tasks that we do. Writing out these instructions saves us significant amounts of time, particularly when it can be reused in future years, and also provides us with auditable documentation for our production processes, saving the need for writing down information in extra documents. 
+It is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand. This brings numerous benefits, computers are far quicker, more accurate, and far more reliable than humans in many of the tasks that we do. Writing out these instructions saves us significant amounts of time, particularly when it can be reused in future years, or even next week when one specific number in the source file suddenly changes, and also provides us with auditable documentation for our production processes, saving the need for writing down information in extra documents. 
 
 Reliability is a huge benefit of the automation that RAP brings - when one of the lines of data has to be amended a week before publication, it's a life saver to know that you can re-run your process in minutes, and ressuring to know that it will give you the result you want. You can run the same code 100 times, and be confident that it will follow the same steps in the same order every single time.
 
@@ -257,19 +254,19 @@ More guidance will follow on best practice in writing code, as well as useful sn
 
 ---
 
-#TODO
+One great thing about code, and indeed coding standards, is that there are so many options to choose from. Well, that isn't always a great thing, and can lead to messy or inefficient code, and a lack of coherence in what we write. As such, we're outlining a few standards here to help you to follow best practice where possible and make your life easier.
 
 ---
 
-### SQL
+## SQL
 
 ---
 
-#TODO
+For best pratice on writing SQL code, here is a particularly useful [word document](resources/TSQL_Coding_Standards.docx){target="_blank"} produced by our [Data Hub](https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf){target="_blank"}. This outlines a variety of best practices, ranging from naming conventions, to  to formatting your SQL code so that it is easy to follow visually.
 
 ---
 
-#### Producing tidy underlying data in SQL
+### Producing tidy underlying data in SQL
 
 ---
 
@@ -277,24 +274,27 @@ More guidance on this follow, for now, here is a [SQL query](https://github.com/
 
 ---
 
-#### Connecting R to SQL
+### Connecting R to SQL
 
 ---
 
 For now, take a look at the materials from Cathy Atkinson's coffee and coding session on [connecting R to SQL using DBI and odbc](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7B2B35083D%2D7626%2D48E2%2D9615%2D451544742692%7D&id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL%2FConnecting%5Fto%5FSQL%5FRevA%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL).
 
+---
+
+## R
 
 ---
 
-### R
+When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work.
+
+The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank"}, which is fast becoming the recognised standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank"} package, which will literally style your code for you, and is well worth a look.
+
+There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
 
 ---
 
-
-
----
-
-#### Tidying and processing data in R
+### Tidying and processing data in R
 
 ---
 
@@ -304,18 +304,19 @@ More will follow here, for now, [here is a video](https://vimeo.com/33727555){ta
 
 Using the `%>%` pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren't yet familiar with this, have a look at [this article](https://seananderson.ca/2014/09/13/dplyr-intro/){target="_blank"} that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you wanto do within a pipe, googling 'how do I do X in dplyr r' will usually start to point you in the right direction, alternatively you can [contact us](mailto:explore.statistics@education.gov.uk), and we'll be happy to help you figure out how to do what you need.
 
-A quick example of how powerful this is is below, where my_data is proccesed to create new columns, have column names renamed, have the column names tidied using the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package, blank rows and columns removed, data filtered to only include specific geographic leves, and rows rearranged in order, all in a few lines of easy to follow code:
+A quick example of how powerful this is is below, where my_data is proccesed to create new columns, have column names renamed, have the column names tidied using the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package, blank rows and columns removed, data filtered to only include specific geographic levels, and rows rearranged in order, all in a few lines of easy to follow code:
+
 
 ```{r example, eval=FALSE}
-processed_data <- data %>% 
+processed_regional_data <- data %>% 
   mutate(new_percentage_column = (number_column / total_population_column) * 100) %>% 
   rename(new_percentage_column = percentage_rate,
          number_column = number,
          total_population_column = population) %>% 
   clean_names() %>% 
   remove_empty() %>% 
-  filter(geographic_level == "National" | geographic_level == "Regional")
-  arrange(time_period, geographic_level, region_name)
+  filter(geographic_level == "Regional") %>% 
+  arrange(time_period, region_name)
 ```
 
 
@@ -402,9 +403,6 @@ When documenting your processes you should leave nothing to chance, we all have 
 
 
 You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team. Imagine you have a new starter who understands the tools you've used but has never worked in your area before, and then document in a way that they could pick it up without assistance.
-
-
-When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work. We recommend that you try to follow [tidyverse](https://style.tidyverse.org/){target="_blank"} styling where you can, as this makes your code easier to read. The [styler package](){target="_blank"} helps to make this delightfully easy. There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
 
 ---
 
