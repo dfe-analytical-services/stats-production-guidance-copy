@@ -192,6 +192,10 @@ SQL is a fantastic language for large scale data joining and manipulation; it al
 
 ---
 
+#TODO - Something on learning SQL
+
+---
+
 ### How to set up a SQL working area
 
 ---
@@ -225,7 +229,6 @@ There's lots of guidance online of how to import flat files from shared areas in
 
 Remember that it is important to import them with consistent, throught-through [naming conventions](#naming-conventions). You will thank yourself later.
 
-
 ---
 
 ### How to grant access to your area
@@ -250,7 +253,23 @@ More guidance will follow on best practice in writing code, as well as useful sn
 
 ---
 
-### Producing tidy underlying data in SQL
+## Writing code
+
+---
+
+#TODO
+
+---
+
+### SQL
+
+---
+
+#TODO
+
+---
+
+#### Producing tidy underlying data in SQL
 
 ---
 
@@ -258,7 +277,7 @@ More guidance on this follow, for now, here is a [SQL query](https://github.com/
 
 ---
 
-### Connecting R to SQL
+#### Connecting R to SQL
 
 ---
 
@@ -267,7 +286,23 @@ For now, take a look at the materials from Cathy Atkinson's coffee and coding se
 
 ---
 
-### Tidying and processing data in R
+### R
+
+---
+
+#TODO
+
+---
+
+#### Examples of some basic functions in R, using dplyr package
+
+---
+
+#TODO
+
+---
+
+#### Tidying and processing data in R
 
 ---
 
@@ -444,7 +479,10 @@ It is assumed that when using R, automated scripts will output .html reports tha
 
 ---
 
-More will follow here as we work with teams to develop generalisable automated scripts for QA. For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://testthat.r-lib.org/){target="_blank"}, including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on it by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham.
+More will follow here as we work with teams to develop generalisable automated scripts for QA. For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://testthat.r-lib.org/){target="_blank"}, including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on it by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham. 
+
+
+The [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package in R also has some particularly useful functions, such as `clean_names()` to automatically clean up your variable names, `remove_empty()` to remove any completely empty rows and columns, and `get_dupes()` which retrieves any duplicate rows in your data - this last one is particularly powerful as you can feed it specific columns and see if there's any duplicate instances of values across those columns.
 
 ---
 
