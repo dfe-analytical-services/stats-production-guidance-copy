@@ -311,10 +311,10 @@ A quick example of how powerful this is is below, where my_data is proccesed to 
 
 ```{r example, eval=FALSE}
 processed_regional_data <- data %>% 
-  mutate(new_percentage_column = (number_column / total_population_column) * 100) %>% 
-  rename(new_percentage_column = percentage_rate,
-         number_column = number,
-         total_population_column = population) %>% 
+  mutate(newPercentageColumn = (numberColumn / totalPopulationColumn) * 100) %>% 
+  rename(newPercentageColumn = percentageRate,
+         numberColumn = number,
+         totalPopulationColumn = population) %>% 
   clean_names() %>% 
   remove_empty() %>% 
   filter(geographic_level == "Regional") %>% 
