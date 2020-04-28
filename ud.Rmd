@@ -107,7 +107,7 @@ Most of the time our data is exported as a .csv file it will have UTF-8 encoding
 
 Excel tends to save all .csv files as UTF-8, however this is not always the case, particularly if there are symbols in the file (such as £). To ensure that it saves with UTF-8 encoding you can select the following when saving a file:
 
-File > Save As > CSV UTF-8 (Comma delimited) (*.csv)
+`File > Save As > CSV UTF-8 (Comma delimited) (*.csv)`
 
 **SQL**
 
