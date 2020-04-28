@@ -290,15 +290,7 @@ For now, take a look at the materials from Cathy Atkinson's coffee and coding se
 
 ---
 
-#TODO
 
----
-
-#### Examples of some basic functions in R, using dplyr package
-
----
-
-#TODO
 
 ---
 
@@ -308,6 +300,23 @@ For now, take a look at the materials from Cathy Atkinson's coffee and coding se
 
 
 More will follow here, for now, [here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
+
+
+Using the `%>%` pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren't yet familiar with this, have a look at [this article](https://seananderson.ca/2014/09/13/dplyr-intro/){target="_blank"} that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you wanto do within a pipe, googling 'how do I do X in dplyr r' will usually start to point you in the right direction, alternatively you can [contact us](mailto:explore.statistics@education.gov.uk), and we'll be happy to help you figure out how to do what you need.
+
+A quick example of how powerful this is is below, where my_data is proccesed to create new columns, have column names renamed, have the column names tidied using the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package, blank rows and columns removed, data filtered to only include specific geographic leves, and rows rearranged in order, all in a few lines of easy to follow code:
+
+```{r example, eval=FALSE}
+processed_data <- data %>% 
+  mutate(new_percentage_column = (number_column / total_population_column) * 100) %>% 
+  rename(new_percentage_column = percentage_rate,
+         number_column = number,
+         total_population_column = population) %>% 
+  clean_names() %>% 
+  remove_empty() %>% 
+  filter(geographic_level == "National" | geographic_level == "Regional")
+  arrange(time_period, geographic_level, region_name)
+```
 
 
 For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html){target="_blank"} page.
