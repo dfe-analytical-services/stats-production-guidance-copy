@@ -97,6 +97,35 @@ Data and metadata .csv file names must not contain any spaces.
 
 ---
 
+#### How to export data with UTF-8 encoding
+
+---
+
+Most of the time our data is exported as a .csv file it will have UTF-8 encoding by default. However, there are times when this isn't the case, and therefore we'll quickly run through how to check this below in each of Excel, SQL, and R.
+
+**Excel**
+
+Excel tends to save all .csv files as UTF-8, however this is not always the case, particularly if there are symbols in the file (such as £). To ensure that it saves with UTF-8 encoding you can select the following when saving a file:
+
+File > Save As > CSV UTF-8 (Comma delimited) (*.csv)
+
+**SQL**
+
+For saving results out of SQL as a .csv file there isn't an option to specify the encoding, therefore the best bet is to either open the file in Excel and specify that as above, or to run your SQL query/read your data into R and follow the guidance below. 
+
+**R**
+
+When writing .csv files out of R, you'll mostly likely be using either `write.csv()` from base R, or `write_csv()` from the readr package. For the first one, you can specify encoding using `encoding = ` like the following example:
+
+
+`write.csv(my_data, file = "my_data_file.csv", encoding = "UTF-8")`
+
+
+For `write_csv()`, which some of you may be using for increased processing speed, automatically encodes as UTF-8 format, meaning that you don't have to do anything different!
+
+
+---
+
 ### Tidy data structure
 
 ---
