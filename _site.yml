@@ -20,5 +20,5 @@ output:
     toc: TRUE
     toc_float: TRUE
     theme: simplex
-    highlight: monochrome
+    highlight: 
     css: styles.css

@@ -310,7 +310,7 @@ A quick example of how powerful this is is below, where my_data is proccesed to 
 
 
 ```{r example, eval=FALSE}
-processed_regional_data <- data %>% 
+processed_regional_data <- my_data %>% 
   mutate(newPercentageColumn = (numberColumn / totalPopulationColumn) * 100) %>% 
   rename(newPercentageColumn = percentageRate,
          numberColumn = number,
