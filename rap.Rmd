@@ -254,7 +254,9 @@ More guidance will follow on best practice in writing code, as well as useful sn
 
 ---
 
-One great thing about code, and indeed coding standards, is that there are so many options to choose from. Well, that isn't always a great thing, and can lead to messy or inefficient code, and a lack of coherence in what we write. As such, we're outlining a few standards here to help you to follow best practice where possible and make your life easier.
+One great thing about code, and indeed coding standards, is that there are so many options to choose from. Well, that isn't always a great thing. It often leads to messy or inefficient code, and a lack of coherence in what we write. 
+
+As such, we've collected together a few standards here to help you to follow best practice where possible and make your life easier when using SQL and R.
 
 ---
 
