@@ -619,11 +619,18 @@ Metadata in a machine readable (.csv) format must accompany datasets uploaded to
 This EES metadata is different to any metadata files you may provide alongside your data for your users.
 
 
-We only need to provide EES metadata for filters and indicators, we do not need to provide any EES metadata for the observational units (time and geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields. 
+We only need to provide EES metadata for filters and indicators, we do not need to provide any EES metadata for the compulsory observational units (time and geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields. 
+
+
+We do not need to provide metadata for filters that only have a single level, as this data is not useful for EES, and is there for the benefit of end users downloading the files.
+
 
 <div class="alert alert-dismissible alert-info">
 Note that any extra geography columns not specified in the [allowable values](#allowable-geographic-levels) above, or any time columns extra to time_period and time_identifier, are [filters](#filters), and should be included in EES metadata if they have two or more levels.
 </div>
+
+
+With some files there may be more than one way to specify the metadata that will work in EES and give an accurate representation of the data itself. In these cases we recommend that publication teams test out different approaches and decide their approach based on what will best meet the needs of the users of their data.
 
 ---
 
