@@ -68,6 +68,8 @@ We are always on the look out for resources that will help you to have the skill
 
 - Earlier this year we had our Data Science week, which contained a wide variety of talks across Data Science within the department, everything was recorded and can be found on the [associated microsoft stream page](https://web.microsoftstream.com/group/df01862c-7ad4-4f25-b7f2-df7353af52a9){target="_blank"}.
 
+- There is a wealth of information on the [DfE Quality Assurance wiki](https://educationgovuk.sharepoint.com/sites/sarpi/g/AC/Quality%20Assurance.aspx){target="_blank"}, and while much of this is aimed at areas that use modelling, plenty of it is applicable to how we QA our data too.
+
 - Finally, if after reading through this website you still need any convincing as to why R and Git are worth your time, then have a look at the [Boons of R and Git](https://psysandsy.github.io/boons-r-git.html){target="_blank"} by David Sands.
 
 ---
@@ -126,7 +128,7 @@ Once you've downloaded RStudio, R, and RTools from the software centre, you can 
 
 Git is a version control software that tracks changes to files within a folder that you tell git to track. These folders are generally known as repositories, and can be held and managed securely on team areas within the [DfE Azure DevOps](https://dfe-gov-uk.visualstudio.com/){target="_blank"} subscription. More specific guidance on how to setup and use your own DevOps area will follow shortly on the [production processes](rap.html#how_to_setup_an_azure_devops_area){target="_blank"} page.
 
-- [Gooey Git](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit%2Fgooey%5Fgit%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit){target="_blank"} by David Sands, provides a handy overview to using git with R.
+- [Gooey Git](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit%2Fgooey%5Fgit%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit){target="_blank"} by David Sands, provides a very neat overview of using git with R.
 
 - Avison Ho and Linda Bennett gave this coffee and coding presentation on [version controlling SQL with Git](https://github.com/avisionh/SQL-Titbits/wiki/User-Guide:-SQL-x-Git-Version-Control){target="_blank"}.
 
@@ -136,7 +138,9 @@ Git is a version control software that tracks changes to files within a folder t
 
 - While also mentioned above as a resource for learning R, chapter 6 of ESFA's [guide to R and Git](https://rsconnect/rsc/esfa-r-training/git-building-intuition.html){target="_blank"} is also worth looking at for Git alone.
 
-- Microsoft have produced documentation on [using Git](https://docs.microsoft.com/en-us/azure/devops/user-guide/code-with-git?view=azure-devops) within [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops){target="_blank"}.
+- Microsoft have produced documentation on [using Git](https://docs.microsoft.com/en-us/azure/devops/user-guide/code-with-git?view=azure-devops){target="_blank"} within [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops){target="_blank"}.
+
+- For those wanting to go deeper into understand the variety of git commands and what they do, there is a great [online visual resource](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1){target="_blank"}
 
 ---
 
