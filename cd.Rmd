@@ -234,6 +234,8 @@ Only use complex charts where there is a clear user need, as simple charts are t
 
 Remember that visualisations should be useable even if taken out of the context of the release. You have the option of adding an accompanying chart for each table included in the release – you do not need to add one to every table, you should only use charts where they add value to the story you are trying to tell. 
 
+If needed, you can use the 'upload an infographic as an alternative' option to upload images of charts you have produced outside of the service. This should only be used where a chart cannot be made in EES. It is expected that teams use the EES chart builder where possible. If you have feedback on any functionality that you would like adding to the chart builder, please let us know.
+
 <div class="alert alert-dismissible alert-info">
 Best practice guidance and advice on visualisations will be added here in due course.
 </div>
