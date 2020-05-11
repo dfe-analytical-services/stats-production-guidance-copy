@@ -313,7 +313,13 @@ This preview is only accessible for the 24 hours before the publication date, th
 
 ---
 
-Guidance to follow soon.
+Methodologies work in a very similar way to the written content of a release, the text editor and static tables you can use are built on the same foundations. 
+
+On the production environment, teams need to request a blank methodology to be created for them, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to arrange this.
+
+Once the drafting has finished, a methodology should be set as 'appoved for publication'. After this has happened, it will then appear in the drop down menue to attach to a publication. The methodology will then be published to the public side of the platform with the next release.
+
+On the test environment, teams can test creating methodologies themselves by going into the 'manage methodologies' page that is accessible from the main admin dashboard.
 
 ---
 
