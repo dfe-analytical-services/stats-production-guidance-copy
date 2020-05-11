@@ -253,6 +253,8 @@ In the manage content tab you can now start creating your release, embedding the
 
 You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode.
 
+You can create static html tables for presenting information that isn't embedded in a datablock. However, these tables should only be used for data that is available in the underlying files (perhaps presented in a way that is not possible in a data block), or for textual information. All data included in your content should be available in the downloadable underlying data files.
+
 Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. 
 
 Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock table - creating a table as a single number only.
