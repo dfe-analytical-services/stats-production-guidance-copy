@@ -56,6 +56,8 @@ There is no overlap between the two environments and content create on one canno
 
 The core functionality across the two environments is identical except for new changes are deployed to the test environment before they make it to production. This test environment is where we test that things work and open new features up for user testing, therefore it is often more buggy by design as this is where we look for and try to pick up any issues before they make it to prod.
 
+On the test environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the test environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
+
 The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
 <div class="alert alert-dismissible alert-danger">
