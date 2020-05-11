@@ -27,7 +27,7 @@ Migration to a new statistics dissemination platform – Explore Education Stati
 
 ---
 
-There is a clear need for clearer publications. For many of our statistics there is a big gap between public understanding and the truth of our work, and we rely too far on media and other third party organisations to interpret and present our statistics for that audience.
+There is a clear need for clearer publications. For many of our statistics there is a big gap between public understanding and the truth of our work, and we rely too far on media and other third party organisations to interpret and present our statistics for that audience.
 
 [GSS guidance](https://style.ons.gov.uk/category/writing-a-statistical-bulletin/){target="_blank"} sets out that **“A statistical bulletin is a short summary of findings and essential commentary related to a new release of data.” Instead, in many instances, we currently produce lengthy technical compendiums of statistics.**
 
@@ -174,9 +174,14 @@ You do not need to recreate all of the old excel tables, users can find the numb
 
 ---
 
-You should have an accordion section in the “help and support” section which links to the methodology document. You can use the standard text in Explore Education Statistics for this. 
+Appropriate methodological information shuld be made available for all published Official Statistics releases. 
+
+You are able to create these methodology documents within the Explore Education Statistics platform and then can attach them to relevant releases. 
 
 It is recommended that you write your methodology document as a .html page on the platform. If you do not have time to do this, you can either contact us to help you with that, or you can upload a PDF version. If you are uploading a pdf version then you need to make sure this is accessible.
+
+For releases that have a .html methodology page the relevant link will display as an accordion section under the “help and support” section. 
+
 
 ---
 
