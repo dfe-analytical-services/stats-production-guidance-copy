@@ -28,17 +28,15 @@ The following table outlines the key differences between publishing via EES and 
 
 **The EES platform consists of two applications:**
 
-1. The public website  
-Where users access stats - https://explore-education-statistics.service.gov.uk/
+1. The public website, where users access stats
 
-2. The admin website  
-Where production teams create their stats - https://admin.explore-education-statistics.service.gov.uk/
+2. The admin website, where production teams create their stats.
 
-<div class="alert alert-dismissible alert-danger">
-If you are bookmarking links, please be careful to bookmark the links here exactly as they are shown here. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
+<div class="alert alert-dismissible alert-info">
+The admin side of EES is only supported in Google Chrome and Microsoft Edge. It will not work correctly in Internet Explorer. The public side does support Internet Explorer, though we still recommend that people use Chrome or Edge instead.
 </div>
 
-Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020. 
+Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
 
 Maintence and BAU running of the platform is supported by the Statistics Development Team.
 
@@ -52,25 +50,34 @@ If you are unsure which route to use for publication please contact the [HoP Off
 
 ---
 
-The public website is available at: https://explore-education-statistics.service.gov.uk/ 
+As stated above, EES consists of two parts. We also have two versions of EES, the main public facing one that we call our 'Production' environment, and a testing enironment that we call our 'Test' environment. On the admin side of both environments there will be a banner at the top informing you of which environment you are on. These banners are also colour coded - yellow for test, and red for production.   
 
-The admin website is available at: https://admin.explore-education-statistics.service.gov.uk/ 
+There is no overlap between the two environments and content create on one cannot be moved to the other. We recommend that teams use the test environment, you can dummy publishing a publication by following the process for publishing. Publications will go out every hour on test, as opposed to only 9:30 on production, this means you can schedule a release for today's date and watch it start the publishing process within a hour.
 
-Access to the admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
+The core functionality across the two environments is identical except for new changes are deployed to the test environment before they make it to production. This test environment is where we test that things work and open new features up for user testing, therefore it is often more buggy by design as this is where we look for and try to pick up any issues before they make it to prod.
+
+The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
+
+<div class="alert alert-dismissible alert-danger">
+If you are bookmarking links, please be careful to bookmark the links below exactly as they are shown. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
+</div>
+
+---
+
+## Production environment
+
+---
+
+Admin - https://admin.explore-education-statistics.service.gov.uk/
+
+Public - https://explore-education-statistics.service.gov.uk/
+
+Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
 To be invited to the service for full access the analyst would have to email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access, stating what permissions they require and which publications they need access to. This should be accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform. 
 
 At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
 
-The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
-
-<div class="alert alert-dismissible alert-danger">
-The admin side of EES is only supported in Google Chrome and Microsoft Edge. It will not work correctly in Internet Explorer.
-</div>
-
-<div class="alert alert-dismissible alert-info">
-The public side does support Internet Explorer, though we still recommend that people use Chrome or Edge instead.
-</div>
 
 ---
 
@@ -78,12 +85,11 @@ The public side does support Internet Explorer, though we still recommend that p
 
 ---
 
-Analysts are able to test the service within the EES test environment (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access):
+Admin test - https://admin.test.explore-education-statistics.service.gov.uk
 
-Public test environment - https://test.explore-education-statistics.service.gov.uk
+Public test - https://test.explore-education-statistics.service.gov.uk
 
-Admin test environment - https://admin.test.explore-education-statistics.service.gov.uk
-
+Analysts are able to test the service within the EES test environment, and it is reccommended that production teams start here and test using the service until they are confident they know how they want to build their release for real (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access).
 
 <div class="alert alert-dismissible alert-danger">
 Please note that the test environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
