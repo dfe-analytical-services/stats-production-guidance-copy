@@ -52,9 +52,9 @@ If you are unsure which route to use for publication please contact the [HoP Off
 
 As stated above, EES consists of two parts. We also have two versions of EES, the main public facing one that we call our 'Production' environment, and a testing enironment that we call our 'Test' environment. On the admin side of both environments there will be a banner at the top informing you of which environment you are on. These banners are also colour coded - yellow for test, and red for production.   
 
-There is no overlap between the two environments and content create on one cannot be moved to the other. We recommend that teams use the test environment, you can dummy publishing a publication by following the process for publishing. Publications will go out every hour on test, as opposed to only 9:30 on production, this means you can schedule a release for today's date and watch it start the publishing process within a hour.
+There is no overlap between the two environments and content create on one cannot be moved to the other. We recommend that teams use the test environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out every hour on test, as opposed to only 9:30 on production, this means you can schedule a release for today's date and watch it start the publishing process within a hour.
 
-The core functionality across the two environments is identical except for new changes are deployed to the test environment before they make it to production. This test environment is where we test that things work and open new features up for user testing, therefore it is often more buggy by design as this is where we look for and try to pick up any issues before they make it to prod.
+The core functionality across the two environments is identical except that new changes are deployed to the test environment before they make it to production. This test environment is where we test that things work and open new features up for user testing, therefore it is often more buggy by design as this is where we look for and try to pick up any issues before they make it to production.
 
 On the test environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the test environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
@@ -153,7 +153,7 @@ Publications are organised into topics and themes (as shown on the EES Find Stat
 | Publication | Pupil absence in schools in England |
 | Release | 2018/19 |
 
-Each publication should have a lead statisticians name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. 
+Each publication should have a lead statistician's name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. 
 
 To request a change to the contact details for a publication contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
 
@@ -253,8 +253,6 @@ In the manage content tab you can now start creating your release, embedding the
 
 You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode.
 
-You can create static html tables for presenting information that isn't embedded in a datablock. However, these tables should only be used for data that is available in the underlying files (perhaps presented in a way that is not possible in a data block), or for textual information. All data included in your content should be available in the downloadable underlying data files.
-
 Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. 
 
 Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock table - creating a table as a single number only.
@@ -271,6 +269,11 @@ After embedding a key stat tile you can then edit it to add trend information an
 | Guidance title | Should be set to 'What is this?' |
 | Guidance text | A simple description in plain English of what the indicator is |
 
+You can then create accordion sections to start adding your main release commentary. These sections are made up of text blocks and data blocks which can be reordered as needed. 
+
+Any data tables should be included as data blocks, however you can also embed static html tables within a text box. These should only be used to present textual tables or for any small presentations of data that are not possible to do in a data block at the moment. 
+
+You can create static html tables for presenting information that isn't embedded in a datablock. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable underlying data files.
 
 ---
 
@@ -317,7 +320,7 @@ Methodologies work in a very similar way to the written content of a release, th
 
 On the production environment, teams need to request a blank methodology to be created for them, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to arrange this.
 
-Once the drafting has finished, a methodology should be set as 'appoved for publication'. After this has happened, it will then appear in the drop down menue to attach to a publication. The methodology will then be published to the public side of the platform with the next release.
+Once the drafting has finished, a methodology should be set as 'appoved for publication'. After this has happened, it will then appear in the drop down menu to attach to a publication. The methodology will then be published to the public side of the platform with the next release.
 
 On the test environment, teams can test creating methodologies themselves by going into the 'manage methodologies' page that is accessible from the main admin dashboard.
 
