@@ -298,7 +298,7 @@ Only users with ‘responsible statistician’ permissions (usually G6 or above)
 
 Prior to each release going live the production team are also able to grant pre-release access to a named group of users 24 hours before it goes live. These users do not require full access to the whole admin service. They will be able to see preview versions of any releases they have been granted access to. 
 
-To invite a user, just add their email address. All invited users will receive an email to say that they have been given pre-release access and will get a url where the preview release will be available. 
+To invite a user, just add their email address. This option is only visible once the release has been marked as 'approved for release'. All invited users will receive an email to say that they have been given pre-release access and will get a url where the preview release will be available. 
 
 This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
 
