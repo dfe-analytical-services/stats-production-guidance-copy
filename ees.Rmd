@@ -34,6 +34,10 @@ Where users access stats - https://explore-education-statistics.service.gov.uk/
 2. The admin website  
 Where production teams create their stats - https://admin.explore-education-statistics.service.gov.uk/
 
+<div class="alert alert-dismissible alert-danger">
+If you are bookmarking links, please be careful to bookmark the links here exactly as they are shown here. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
+</div>
+
 Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020. 
 
 Maintence and BAU running of the platform is supported by the Statistics Development Team.
