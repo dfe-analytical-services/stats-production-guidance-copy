@@ -174,7 +174,7 @@ You do not need to recreate all of the old excel tables, users can find the numb
 
 ---
 
-Appropriate methodological information shuld be made available for all published Official Statistics releases. 
+Appropriate methodological information should be made available for all published Official Statistics releases. 
 
 You are able to create these methodology documents within the Explore Education Statistics platform and then can attach them to relevant releases. 
 
