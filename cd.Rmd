@@ -242,7 +242,7 @@ Remember that visualisations should be useable even if taken out of the context 
 If needed, you can use the 'upload an infographic as an alternative' option to upload images of charts you have produced outside of the service. This should only be used where a chart cannot be made in EES. It is expected that teams use the EES chart builder where possible. If you have feedback on any functionality that you would like adding to the chart builder, please let us know.
 
 <div class="alert alert-dismissible alert-info">
-Best practice guidance and advice on visualisations will be added here in due course.
+DfE specific best practice guidance and advice on visualisations will be added here in due course. In the meantime, here is the latest GSS-wide [guidance on visualising data](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank"}.
 </div>
 
 ---
