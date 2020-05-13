@@ -76,10 +76,9 @@ Public - https://explore-education-statistics.service.gov.uk/
 
 Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
-To be invited to the service for full access the analyst would have to email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access, stating what permissions they require and which publications they need access to. This should be accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform. 
+To be invited to the service for full access teams need to email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this respsonsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform.
 
 At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
-
 
 ---
 
