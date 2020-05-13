@@ -93,6 +93,8 @@ Public test - https://test.explore-education-statistics.service.gov.uk
 
 Analysts are able to test the service within the EES test environment, and it is recommended that production teams start here and test using the service until they are confident they know how they want to build their release for real (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access).
 
+When accessing the test environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
+
 <div class="alert alert-dismissible alert-danger">
 Please note that the test environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
