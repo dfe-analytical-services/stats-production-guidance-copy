@@ -50,11 +50,20 @@ If you are unsure which route to use for publication please contact the [HoP Off
 
 ---
 
-As stated above, EES consists of two parts. We also have two versions of EES, the main public facing one that we call our 'Production' environment, and a testing enironment that we call our 'Test' environment. On the admin side of both environments there will be a banner at the top informing you of which environment you are on. These banners are also colour coded - yellow for test, and red for production.   
+As stated above, EES consists of two parts. We also have four versions (environments) of EES, the banner for the admin part of each environment will inform you which environment you are on, this is also colour coded: 
 
-There is no overlap between the two environments and content created on one cannot be moved to the other. We recommend that teams use the test environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out every hour on test, as opposed to only 9:30 on production, this means you can schedule a release for today's date and watch it start the publishing process within a hour.
+- **Development** - Green - where changes are first merged in, and often the first time different pieces of work from different developers will interact properly
 
-The core functionality across the two environments is identical except for new changes are deployed to the test environment before they make it to production. This test environment is where we test that things work and open new features up for user testing, therefore it is often more buggy by design as this is where we look for and try to pick up any issues before they make it to production.
+- **Test** - Pink - where our tester carries out manual testing of any new features to make sure things work as expected 
+
+- **Pre-production** - Yellow - a sandbox area for admin champions and functionality testing
+
+- **Production** - Red - the real service (anyone creating real releases that they intend to publish should now be using this environment)
+
+
+There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out every hour on development, test and pre-production, as opposed to only 9:30 on production, this means you can schedule a release for today's date and watch it start the publishing process within a hour.
+
+The core functionality across the environments is identical except for new changes, which are deployed through the different environments before they make it to production.
 
 On the test environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the test environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
@@ -82,20 +91,20 @@ At first we'll be inviting analysts to the admin site in phases, depending upon 
 
 ---
 
-## Test environment
+## Pre-production environment
 
 ---
 
-Admin test - https://admin.test.explore-education-statistics.service.gov.uk
+Admin pre-production - https://admin.pre-production.explore-education-statistics.service.gov.uk
 
-Public test - https://test.explore-education-statistics.service.gov.uk
+Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
 
-Analysts are able to test the service within the EES test environment, and it is recommended that production teams start here and test using the service until they are confident they know how they want to build their release for real (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access).
+Analysts are able to test the service within the EES pre-production environment, and it is recommended that production teams start here until they are confident they know how they want to build their release for real (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access).
 
 When accessing the test environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
 <div class="alert alert-dismissible alert-danger">
-Please note that the test environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
+Please note that the pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
 
 ---
