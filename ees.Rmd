@@ -58,14 +58,14 @@ As stated above, EES consists of two parts. We also have four versions (environm
 
 - **Pre-production** - Yellow - a sandbox area for admin champions and functionality testing
 
-- **Production** - Red - the real service (anyone creating real releases that they intend to publish should now be using this environment)
+- **Production** - Red - the real service, anyone creating real releases that they intend to publish to the public should be using this environment
 
 
-There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out every hour on development, test and pre-production, as opposed to only 9:30 on production, this means you can schedule a release for today's date and watch it start the publishing process within a hour.
+There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out at 9:30am on the scheduled day on pre-production, mirroring the way that production works.
 
-The core functionality across the environments is identical except for new changes, which are deployed through the different environments before they make it to production.
+The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production.
 
-On the test environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the test environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
+On the pre-production environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
 The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
