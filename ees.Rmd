@@ -61,7 +61,7 @@ As stated above, EES consists of two parts. We also have four versions (environm
 - **Production** - Red - the real service, anyone creating real releases that they intend to publish to the public should be using this environment
 
 
-There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out at 9:30am on the scheduled day on pre-production, mirroring the way that production works.
+There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out at 8:30am on the scheduled day on pre-production, mirroring the way that production runs (though one hour earlier).
 
 The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production.
 
@@ -101,7 +101,7 @@ Public pre-production - https://pre-production.explore-education-statistics.serv
 
 Analysts are able to test the service within the EES pre-production environment, and it is recommended that production teams start here until they are confident they know how they want to build their release for real (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access).
 
-When accessing the test environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
+When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
 <div class="alert alert-dismissible alert-danger">
 Please note that the pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
