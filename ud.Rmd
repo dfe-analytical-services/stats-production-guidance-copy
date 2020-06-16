@@ -312,9 +312,9 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
-| Autumn term                      | 4 digits                  |
-| Spring term                      | 4 digits                  |
-| Summer term                      | 4 digits                  |
+| Autumn term                      | 6 digits                  |
+| Spring term                      | 6 digits                  |
+| Summer term                      | 6 digits                  |
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
