@@ -335,6 +335,12 @@ You can only mix time_identifiers if they appear within the same table below. If
 | November                         | 4 digits                  |
 | December                         | 4 digits                  |
 
+| Acceptable time_identifier value | Corresponding time_period |
+|----------------------------------|---------------------------|
+| Week 1                           | 4 digits                  |
+| Week ...                         | 4 digits                  |
+| Week 52                          | 4 digits                  |
+
 ---
 
 <div class="jumbotron">
