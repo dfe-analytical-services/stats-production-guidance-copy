@@ -92,7 +92,7 @@ If you need to use commas within a cell, then you must add a text delimiter such
 You should also ensure that your data follows the [GSS Standards on symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"}, though be aware to ignore the ask that symbols are included in separate cells from the data, which is unpractical and unrealistic.
 
 <div class="alert alert-dismissible alert-danger">
-Data and metadata .csv file names must not contain any spaces.
+Data and metadata .csv file names must not contain any spaces. All file names should be in lower case. Any upper case characters in filenames will be forced to lower case by EES, and will appear as lower case to the users. 
 </div>
 
 ---
