@@ -344,6 +344,23 @@ On the test environment, teams can test creating methodologies themselves by goi
 
 ---
 
+## HoP Office - linking from .GOV.UK
+
+---
+
+If you are publishing on EES then you are required to liaise with the web team to set up a GOV.UK landing page to direct to the new platform. The .GOV.UK landing page will host a link to ESS.
+
+To log a call with the Web Team follow the instructions on [MyServiceDesk](https://dfe.service-now.com/serviceportal?id=sc_category) under [Publish new content](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1f40a44ddb50fa005ca2fddabf961922) along with clearance from your DD.
+
+You will also need to raise a ticket to update your collection pages, please adopt the following text:
+
+> From <publication date>, the Department for Education will be publishing the [publication title] on a new statistics dissemination platform, Explore Education Statistics (EES), available at the following link: [insert link].
+
+If you are unsure of what your URL will be, please contact explore.statistics@education.gov.uk.
+
+
+---
+
 # Publication checklist
 
 ---
