@@ -189,6 +189,10 @@ Currently the following tyes of release can be created in EES:
 
 When creating a release you will be asked to fill in some release summary fields, including the scheduled publication date. 
 
+<div class="alert alert-dismissible alert-info">
+The time period for the release should reflect the time period of the data that this latest release adds to the time series.
+</div>
+
 You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) in the first instance.
 
 <div class="alert alert-dismissible alert-warning">
