@@ -650,10 +650,13 @@ With some files there may be more than one way to specify the metadata that will
 | col_type               | This must be either ‘Filter’ or ‘Indicator’. |
 | label                  | This is the version of the column name that the users will see on the platform, therefore you must fill this in and not leave it blank. For example, pupil_headcount may be ‘Number of pupil enrolments’. You have the freedom to decide what is best to do for your users. |
 | indicator_grouping     | This column gives production teams the option to add subheadings to group indicators in order to benefit the user. If this column is left blank, all indicators will be presented as one list of individual square radio boxes with no subheadings.|
-| indicator_unit         | If this column is left blank then this will be a number by default, alternatively you can use either of the following units for financial or percentage measures - "£", "%". | 
+| indicator_unit         | If this column is left blank then this will be a number by default, alternatively you can use either of the following units for financial or percentage measures - "£", "%", "pp". | 
 | indicator_dp           | This column allows you to set decimal place formatting for each of your indicators. If you leave it blank the platform will default to 2 d.p |
 | filter_hint            | This column gives you the option to add in a hint such as 'Filter by school type' for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. | 
 | filter_grouping_column | This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the exact name of the column/variable that you wish to group by. It is good practice to use the same variable name as that you are grouping, with _group appended at the end, i.e. 'filter' and 'filter_group' |
+
+
+Note that if you are using percentage points (pp) you must include a clear explanation in your release and methodology, so that users can understand what you are referring to. 
 
 ---
 
