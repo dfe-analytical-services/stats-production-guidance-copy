@@ -322,6 +322,9 @@ processed_regional_data <- my_data %>%
 ```
 
 
+[Helpful new functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank"} in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables. 
+
+
 For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html){target="_blank"} page.
 
 ---

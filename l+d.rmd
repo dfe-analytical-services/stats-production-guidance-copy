@@ -111,6 +111,7 @@ Once you've downloaded RStudio, R, and RTools from the software centre, you can 
     + [RMarkdown](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}
     + [RShiny](https://github.com/rstudio/cheatsheets/raw/master/shiny.pdf){target="_blank"}
     + Manipulating data with [dplyr](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf){target="_blank"}
+    + [5 handy tidyverse functions you should know (especially number 2!)](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank"}
     + String manipulation with [stringr](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf){target="_blank"}
     + Visualisations with the [ggplot2 package](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}
     + Apply functions with [purrr](https://github.com/rstudio/cheatsheets/raw/master/purrr.pdf){target="_blank"}

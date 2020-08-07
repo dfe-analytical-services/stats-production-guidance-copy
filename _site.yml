@@ -11,6 +11,8 @@ navbar:
     - text: "Writing and Visualising Statistics"
       href: cd.html
     - text: "Publishing Statistics"
+      href: pub.html
+    - text: "Using Explore Education Statistics"
       href: ees.html
   right:
     - icon: fa-envelope-o

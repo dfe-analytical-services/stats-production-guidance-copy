@@ -396,10 +396,10 @@ When using geographies that can be measured in multiple ways, you can achieve th
 
 ---
 
-All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams may use additional columns as relevant such as including Regional columns for Local authority level data, this is optional.
+All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams should use additional columns as relevant such as including Regional columns for Local authority level data.
 
 <div class="alert alert-dismissible alert-info">
-  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded.
+  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that only consist of these levels should be uploaded as an ancillary file, rather than as a data file.
 </div>
 
 
