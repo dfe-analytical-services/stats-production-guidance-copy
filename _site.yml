@@ -8,9 +8,9 @@ navbar:
       href: rap.html
     - text: "Data Standards"
       href: ud.html
-    - text: "Writing and Visualising Statistics"
+    - text: "Writing and Visualising"
       href: cd.html
-    - text: "Publishing Statistics"
+    - text: "Publishing"
       href: pub.html
     - text: "Using Explore Education Statistics"
       href: ees.html

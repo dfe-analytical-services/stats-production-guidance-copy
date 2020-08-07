@@ -20,10 +20,10 @@ Guidance for how to implement the principles of Reproducible Analytical Pipeline
 * [Data Standards](ud.html)  
 Guidance on how to structure data files
 
-* [Writing and Visualising Statistics](cd.html)  
+* [Writing and Visualising](cd.html)  
 Guidance for writing statistical commentary
 
-* [Publishing Statistics](pub.html)  
+* [Publishing](pub.html)  
 Guidance for how to publish Official and National Statistics
 
 * [Using Explore Education Statistics](ees.html)  

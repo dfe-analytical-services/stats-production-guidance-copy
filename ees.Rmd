@@ -6,11 +6,6 @@ title: "Using Explore Education Statistics"
 
 ---
 
-# Using the EES admin site
-
----
-
-
 <div class="alert alert-dismissible alert-warning">
 Use Google Chrome or Microsoft Edge to access and use the admin part of Explore Education Statistics.
 </div>
@@ -31,7 +26,7 @@ Help and guidance for how to use the the admin website is available via the [adm
 
 ---
 
-## Publications 
+# Publications 
 
 ---
 
@@ -59,7 +54,7 @@ Methodology documentation is also attached at a publication level within EES - m
 
 ---
 
-## Create new release
+# Create new release
 
 ---
 
@@ -98,7 +93,7 @@ Once you have created your release you will see enter the ‘create release dash
 
 ---
 
-## Uploading data
+# Uploading data
 
 ---
 
@@ -125,7 +120,7 @@ To add footnotes, go to the footnotes tab and click 'add footnote'. Here you can
 
 ---
 
-## Data block tables
+# Data block tables
 
 ---
 
@@ -166,7 +161,7 @@ Fast-track links are similar to permalinks however instead of linking to a stati
 
 ---
 
-## Data block charts
+# Data block charts
 
 ---
 
@@ -247,7 +242,7 @@ You should only use complex charts where there is a clear user need, as simple c
 
 ---
 
-## Writing content
+# Writing content
 
 ---
 
@@ -279,7 +274,7 @@ You can create static html tables for presenting information that isn't embedded
 
 ---
 
-## Changing release status
+# Changing release status
 
 ---
 
@@ -307,7 +302,7 @@ The approver also has the ability to approve the release to ‘publish as soon a
 
 ---
 
-## Pre-release
+# Pre-release
 
 ---
 
@@ -328,7 +323,7 @@ This preview is only accessible for the 24 hours before the publication date, th
 
 ---
 
-## Methodology
+# Methodology
 
 ---
 
@@ -342,7 +337,7 @@ On the test environment, teams can test creating methodologies themselves by goi
 
 ---
 
-## Amending a release
+# Amending a release
 
 ---
 
