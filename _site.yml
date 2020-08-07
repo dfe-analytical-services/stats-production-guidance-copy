@@ -12,7 +12,7 @@ navbar:
       href: cd.html
     - text: "Publishing"
       href: pub.html
-    - text: "Using Explore Education Statistics"
+    - text: "Using EES"
       href: ees.html
   right:
     - icon: fa-envelope-o

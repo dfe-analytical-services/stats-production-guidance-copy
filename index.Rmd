@@ -26,7 +26,7 @@ Guidance for writing statistical commentary
 * [Publishing](pub.html)  
 Guidance for how to publish Official and National Statistics
 
-* [Using Explore Education Statistics](ees.html)  
+* [Using Explore Education Statistics (EES)](ees.html)  
 Guidance for how to use the features in the Explore Education Statistics platform
 
 
