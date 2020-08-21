@@ -11,13 +11,13 @@ This is a guide aimed at anyone producing official statistics. It is particularl
 
 Within this guide you can read about: 
 
-* [Learning Resources](l+d.html)  
+* [Learning resources](l+d.html)  
 A collection of useful learning resources, and information on the recommended tools to get you started
 
-* [Production Processes](rap.html)  
+* [Production processes](rap.html)  
 Guidance for how to process data, including implementing the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses
 
-* [Data Standards](ud.html)  
+* [Data standards](ud.html)  
 Guidance on how to structure data files
 
 * [Content standards](cd.html)  
