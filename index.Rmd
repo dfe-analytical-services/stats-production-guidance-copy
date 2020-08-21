@@ -15,16 +15,16 @@ Within this guide you can read about:
 A collection of useful learning resources, and information on the recommended tools to get you started
 
 * [Production Processes](rap.html)  
-Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses
+Guidance for how to process data, including implementing the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses
 
 * [Data Standards](ud.html)  
 Guidance on how to structure data files
 
-* [Writing and Visualising](cd.html)  
+* [Content standards](cd.html)  
 Guidance for writing statistical commentary
 
-* [Publishing](pub.html)  
-Guidance for how to publish Official and National Statistics
+* [Publishing statistics](pub.html)  
+Guidance for where and how to publish Official and National Statistics
 
 * [Using Explore Education Statistics (EES)](ees.html)  
 Guidance for how to use the features in the Explore Education Statistics platform
