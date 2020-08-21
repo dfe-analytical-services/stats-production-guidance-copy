@@ -1,5 +1,5 @@
 ---
-title: "Writing and Visualising Statistics"
+title: "Content Standards"
 ---
 
 <p class="text-muted">Things to consider when writing statistical commentary.</p>
