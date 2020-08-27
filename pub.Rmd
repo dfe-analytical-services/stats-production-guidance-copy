@@ -113,7 +113,7 @@ Please note that the pre-production environment is not suitable for unpublished 
 
 ---
 
-# Creating and publishing a new release
+# Publishing a new release
 
 ---
 

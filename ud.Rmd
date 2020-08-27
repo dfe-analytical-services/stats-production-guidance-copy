@@ -420,8 +420,8 @@ All rows must have country_code and country_name completed, regardless of geogra
 | MAT | trust_id, trust_name | Note that Trust ID is shown as Group ID on GIAS when looking at a Trust. MAT’s also have a ‘company number’, this can be included but is not mandatory. |
 | Sponsor | sponsor_id, sponsor_name | Note that Sponsor ID is shown as Group ID on GIAS when looking at a Sponsor. |
 | Planning area | No required columns, though we recommend both planning_area_code and planning_area_name | |
-| School | No required columns, you can use any you have, though we recommend you include laestab and/or urn with the name to make data matching easier | |
-| Provider | No required columns, you can use any you have, though we recommend you include the name and at least one code (urn, ukprn, upin) if possible to make data matching easier | |
+| School | No required columns, you can use any you have, though we recommend you include laestab and/or urn with the name in the style of 'school_laestab' to make data matching easier | |
+| Provider | No required columns, you can use any you have, though we recommend you include the name and at least one code (urn, ukprn, upin) in the style 'provider_name' if possible to make data matching easier | |
 | Institution | No required columns, you can use any you have, though we recommend you include institution_id and institution_name to make data matching easier | |
 
 
@@ -687,6 +687,10 @@ Note that if you are using percentage points (pp) you must include a clear expla
 # How to check against the standards
 
 ---
+
+<div class="alert alert-dismissible alert-info">
+  An [interactive app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank"} has been developed to eventually replace the screener below. Feel free to test it out and give us any feedback you have.
+</div> 
 
 A data-screener has been developed in R to automate checks against the standards as a final stage of automated quality assurance before upload to EES. This can be run on any data file, though requires the EES metadata to be able to process the file. The R project can be found on [GitHub](https://github.com/dfe-analytical-services/ees-data-screener){target="_blank"}, from there you can download or clone the code to your machine and run this yourself.
 
