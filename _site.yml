@@ -12,7 +12,7 @@ navbar:
       href: cd.html
     - text: "Publishing Statistics"
       href: pub.html
-    - text: "Using EES"
+    - text: "EES"
       href: ees.html
   right:
     - icon: fa-envelope-o
@@ -21,6 +21,4 @@ output:
   html_document:
     toc: TRUE
     toc_float: TRUE
-    theme: simplex
-    highlight: 
-    css: styles.css
+    css: images/acalat_theme.css

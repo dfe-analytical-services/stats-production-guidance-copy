@@ -435,11 +435,11 @@ When writing code, whether that is SQL, R, or something else, make sure you're c
 ----------------------------------------------------------------------------------------------
 ```
 
-Commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.** Use commented lines of - to break up your files into scannable chunks based upon the structure and subheadings, like the one below, you'll thank yourself later:
+Commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.** Use commented lines of - to break up your files into scan-able chunks based upon the structure and subheadings, like the one below, you'll thank yourself later:
 
 ```
-# -----------------------------------------------------------------------------------
-# 2 - Importing the data
+# Importing the data -----------------------------------------------------------------------------------
+
 ```
 
 You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"} as well.
