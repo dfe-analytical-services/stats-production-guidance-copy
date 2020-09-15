@@ -371,8 +371,11 @@ We publish at a number of different geography breakdowns and these vary from pub
 
 The geographic_level column should describle the level of data present in that row. Therefore data for a collection from a specific local authority would have 'Local authority' as the geographic_level, while a National aggregation would have 'National' as the geographic_level.
 
-
 Teams should make sure that they are regularly checking their geography codes if they are not using a lookup from a maintained database (such as in the PDR). ONS have the [Open Geography portal](http://geoportal.statistics.gov.uk/){target="_blank"}, which can be a useful way of checking these. There is a wealth of data on there, though Local authority boundaries can be hard to find, they can be found using the tabs at the top – Boundaries > Administrative Boundaries > Counties and Unitary Authorities. 
+
+If you have data from an 'Unknown' location, the standard is to use 'Not available' as name, and ':' as the code/s, this clearly marks that the geographical data for that row is unavailable, and does so in a consistent way with the wider GSS.
+
+We expect that any country codes used will come from [this list](https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data), please contact us if you have data that doesn't match this.
 
 <div class="alert alert-dismissible alert-info">
 Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead.
