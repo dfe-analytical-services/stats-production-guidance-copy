@@ -375,7 +375,7 @@ Teams should make sure that they are regularly checking their geography codes if
 
 If you have data from an 'Unknown' location, the standard is to use 'Not available' as name, and ':' as the code/s, this clearly marks that the geographical data for that row is unavailable, and does so in a consistent way with the wider GSS.
 
-We expect that any country codes used will come from [this list](https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data), please contact us if you have data that doesn't match this.
+We expect that any country codes used will come from [this list](https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data){target="_blank"}, please contact us if you have data that doesn't match this.
 
 <div class="alert alert-dismissible alert-info">
 Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead.
