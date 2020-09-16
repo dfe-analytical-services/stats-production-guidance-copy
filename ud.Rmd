@@ -686,59 +686,17 @@ Note that if you are using percentage points (pp) you must include a clear expla
 
 ---
 
-
 # How to check against the standards
 
 ---
 
-<div class="alert alert-dismissible alert-info">
-  An [interactive app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank"} has been developed to eventually replace the screener below. Feel free to test it out and give us any feedback you have.
-</div> 
+An [interactive app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank"} has been developed to automate checks against the standards as a final stage of automated quality assurance before upload to EES. 
 
-A data-screener has been developed in R to automate checks against the standards as a final stage of automated quality assurance before upload to EES. This can be run on any data file, though requires the EES metadata to be able to process the file. The R project can be found on [GitHub](https://github.com/dfe-analytical-services/ees-data-screener){target="_blank"}, from there you can download or clone the code to your machine and run this yourself.
+This can be run on any data file, though requires the EES metadata to be able to process the file. The app runs on our rsconnect servers, and is only available when using DfE kit. The app is mostly self-explanatory, though if you have any questions about it, or are curious to know more about how it works, get in touch with us at explore.statistics@education.gov.uk.
 
 <div class="alert alert-dismissible alert-danger">
-  All data and EES metadata files must be run through the data-screener before uploading to EES.
+  All data and EES metadata files must be run through the [screening app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank"} before uploading to EES.
 </div> 
-
-Teams can either run the files through the screening checks themselves - watch the [how to video](https://www.youtube.com/watch?v=D60UU5r_TrM&feature=youtu.be){target="_blank"} if you need help with setting this up on your machine - or by sending your files to the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to screen them for you.
-
-The video has the following sections, the links are included for quick reference if you only need a specific section:
-
-- [Pre-requisites - 0:00](https://www.youtube.com/watch?v=D60UU5r_TrM&t=0s){target="_blank"}
-- [Proxy settings - 2:40](https://www.youtube.com/watch?v=D60UU5r_TrM&t=160s){target="_blank"}
-- [Downloading the R project - 4:00](https://www.youtube.com/watch?v=D60UU5r_TrM&t=240s){target="_blank"}
-- [Using for the first time - 5:15](https://www.youtube.com/watch?v=D60UU5r_TrM&t=315s){target="_blank"}
-- [Running the Data-screener - 8:00](https://www.youtube.com/watch?v=D60UU5r_TrM&t=480s){target="_blank"}
-- [Output report - 11:05](https://www.youtube.com/watch?v=D60UU5r_TrM&t=665s){target="_blank"}
-
----
-
-## Data-screener troubleshooting
-
----
-
-### Pandoc 
-
----
-
-If you do need to install a newer version of pandoc, then the install wizard will start automatically for you. When going through the steps, make sure you uncheck the box that will install for all users. Leaving this checked requires an admin password, and that will prevent you from being able to install it.
-
----
-
-### Packages failing to install 
-
----
-
-This can be from a number of causes:
-
-
-1. Make sure the screener folder is saved to your c: drive or a desktop/downloads/documents folder, using a shared drive may cause issues.
-2. Ensure that you have both R and RTools installed, and the versions are at least those shown in the video.
-3. Ensure your proxy settings are correct as per [the video](https://www.youtube.com/watch?v=D60UU5r_TrM&t=160s){target="_blank"}, there's no harm in resetting them to make sure.
-4. If the above fails you may need to fully uninstall and reinstall RStudio and RTools for it to work.
-
-Failing all of the above, email explore.statistics@education.gov.uk, making sure to include what steps you have taken so far, and your error messages in the email.
 
 ---
 
