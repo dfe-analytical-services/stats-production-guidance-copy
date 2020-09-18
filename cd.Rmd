@@ -44,10 +44,10 @@ All our releases should be targeted at the ‘inquiring citizen’ type user and
 
 The layout of the new platform provides a natural template and enforces a base level of consistency, whilst leaving enough flexibility to meet the needs of a range of publications. All design aspects of this layout have been iteratively user-tested to ensure it’s as navigable, accessible, and understandable as possible. 
 
-Essentially, your release should have a headline statistics part, followed by up to 10 headered accordion sections, most releases are already structured this way in the pdf's.
+Essentially, your release should have a headline statistics part, followed by up to 10 headered accordion sections, most releases are already structured this way in the PDFs.
 
 <div class="alert alert-dismissible alert-info">
-Word templates for drafting the commentary, and for creating pdf's for the external metadata and pre-release-access list are saved on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=qPdc7s){target="_blank"}.
+Word templates for drafting the commentary, and for creating PDFs for the external metadata and pre-release-access list are saved on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=qPdc7s){target="_blank"}.
 </div>
 
 ---
@@ -204,15 +204,22 @@ Include essential definitions in the commentary where they are relevant, you sho
 
 The following are some high-level principles to inform good content design. These are based on best practice guidance across Government; and in turn based on wider user research and guidance in this area.
 
-- **Length** – be brief, clear, and concise. Shorter publications are easier to read, write, and check. As a crude rule of thumb our reports should take less than 10 minutes to read.
-- **Structure** – as far as possible, each report should be broken down into sections – each focusing on communicating one or two key messages. These should be no longer than a page each, with a maximum of 10 sub-sections for each report.
-- **Headlines** – each report should have the 3-4 most important headline messages clearly upfront. Choose which these are and write about theme in a clear and engaging way - you should be able to get the key information within only seconds of looking at the report.
-- **Text** – avoid large blocks of text – they’re hard to read and users will end up scanning and missing all the detail anyway. Get help from someone else to remove unnecessary content wherever possible and use headings, white space, and charts to break up text.
-- **Audience** – write for the general public. Explain key terms and statistical concepts, and use simple language throughout. Remember that this isn’t an update to last year’s report – this is the first time most users will be engaging with the topic.
-- **Language** – use plain English and shorter sentences – aim for an average of 15-20 words per sentence. Research shows that even expert users find short and simple sentences preferable.
-- **Quality and Methodology** – be upfront about important caveats - especially in relation to what you can and can’t conclude from the statistics. However, save the majority of explanatory material for supporting technical documentation. Take a tiered approach to dissemination.
-- **Story-telling** – add context and insight rather than just describing outputs – explain why we’re seeing the results we are if possible. As part of this, don’t include information if there isn’t anything interesting to say – including numbers without reason overwhelms and confuses users.
-- **Independence** – you are responsible for decisions around content. Views from policy colleagues, press and private offices can be weighted in these decisions as users of the statistics, but if they’re directly shaping content then that’s a breach of the [Code of Practice](https://www.statisticsauthority.gov.uk/code-of-practice/){target="_blank"}. In some cases our outputs will give difficult messages for the Government and internal colleagues might take issue with our drafting. Our role is to present headline messages in a clear and unbiased way to inform debate appropriately.
+
+
+| Principle      | Checklist for content                                        | Why this is important                               |        
+|-------------|-----------------------------------------------|-----------------------------------------------------------|
+| Length  | Is it brief, clear and concise? Does it take <10 minutes to read?    | Shorter publications are easier to read, write, and check |
+| Structure     | Is it broken into sections focusing on one or two key messages each? Are sections less than one page long? Are there 10 or less sub-sections? | Well-structured content is easier for the reader to navigate and draw out key messages|
+| Headlines     | Are there 3-4 headline messages up front? Are they written in a clear and engaging way?| Users should be able to get the key information within only seconds of looking at the report|
+| Text     | Are there no large blocks of text? Has someone else reviewed to remove unnecessary content? | Large blocks of text are hard for the reader to digest|
+| Audience     | Could a member of the general public understand this? Are key terms and statistical concepts explained? | The general public are the key users of our statistics. This may be the first time they are engaging with the topic|
+| Language     | Is this written in plain English? Are sentences an average of 15-20 words long?| Research shows that even expert users find short and simple sentences preferable|
+| Quality and Methodology     | Are you upfront about important caveats, especially in relation to what you can and can't conclude from the statistics? Is the majority of explanatory material in the supporting documentation?| Users need to be aware of the limitations of the data, but not overwhelmed with information in the main text. Take a tiered approach to dissemination |
+| Story-telling     | Does it add context and insight rather than just describing the outputs? Does it explain why we see the results if possible?  | Including numbers without reason overwhelms and confuses users|
+| Independence     | Have you presented headline messages in a clear and unbiased way to inform debate appropriately?| You are responsible for decisions around content. Views from policy colleagues, press and private offices can be weighted in these decisions as users of the statistics, but if they’re directly shaping content then that’s a breach of the [Code of Practice](https://www.statisticsauthority.gov.uk/code-of-practice/){target="_blank"}. In some cases our outputs will give difficult messages for the Government and internal colleagues might take issue with our drafting|
+
+
+
 
 ---
 

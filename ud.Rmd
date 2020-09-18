@@ -178,6 +178,20 @@ A useful way to judge how to break up data files is to consider whether all of t
 
 </div>
 
+---
+
+### Handling N/A values
+
+---
+
+In line with [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf), values that are not applicable or available should be treated as follows:
+
+
+| Symbol      | Usage                                         | Example                                                   |        
+|-------------|-----------------------------------------------|-----------------------------------------------------------|
+| z           | When an observation is **not applicable**     | No data for at gender level for boys at an all-girls school|
+| :           | When data is **unavailable** for other reasons| Data for an indicator is not collected in a certain region|
+
 --- 
 
 
@@ -378,7 +392,7 @@ If you have data from an unknown location, the standard is to use 'Not available
 We expect that any country codes used will come from [this list](https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data){target="_blank"}, please contact us if you have data that doesn't match this.
 
 <div class="alert alert-dismissible alert-info">
-Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead.
+Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead. Aside from blanks, no two rows should have the same code.
 </div>
 
 ---
@@ -404,7 +418,7 @@ When using geographies that can be measured in multiple ways, you can achieve th
 All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams should use additional columns as relevant such as including Regional columns for Local authority level data.
 
 <div class="alert alert-dismissible alert-info">
-  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that only consist of these levels should be uploaded as an ancillary file, rather than as a data file.
+  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that **only** consist of these levels should be uploaded as an ancillary file, rather than as a data file.
 </div>
 
 
@@ -444,6 +458,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 - The additional columns must exactly match the names above.
 - You do not have to publish at every level in the guide, publish the selection of levels you feel appropriate.
 - You should regularly check that you are using the most up to date geography names and codes.
+- Aside from blanks, no two rows should have the same code.
 - You can mix geographies in the same file, and should avoid separating files by geography unless size is an issue.
 
 </div>
