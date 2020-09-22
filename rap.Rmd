@@ -118,25 +118,19 @@ Some teams will already be looking at best practice, while others will still hav
 
 ---
 
-- Do we have a [sensible folder and file structure](#folder-structures)?
 
 
-- Do we have suitable [documentation](#documentation)?
+| RAP level | Checklist questions    | If no, take these steps                                                  |        
+|--------------|-----------------------------------------------|-------------------------------------------------------|
+|[Processing is done with code](#using-code-to-process-data) | - Is there final code for each step in your production pipeline? <br> - Are there no manual steps (e.g. pasting of outputs/finding and replacing in excel)?|- Agree a final version of each step of code. <br> - Move manual steps into the code. Manual steps like copy/pasting, applying formulas, finding and replacing can all be carried out in code.|
+|[Sensible folder/file structure](#folder-structures)|  - Are all documentation, code and outputs for the publication saved in one folder area? <br> - Is simple version control clearly applied (e.g. having final files in a folder named "final"?| - Create a folder to save all the data in to. Give the folder a sensible structure, with subfolders like 'code', 'documentation'', 'outputs' and 'final' to save the relevant files. <br> - Make sure that final files are saved clearly in a "final" folder. Try to keep a log of changes as you are developing.|
+|[Documentation](#documentation)| - Is there a README document that clearly outlines the steps to output the publication? <br> - Could another analyst pick it up and use it?| - Write up a simple word/notepad document named README with clear steps on how to run the code to output the publication (e.g. what order to run each chunk of code in, what each output is and where key info is saved) <br> - Ensure any specialist terms are explained if required (e.g. The NFTYPE lookup can be found in xxxxx. "NFTYPE" means school type)|
+|[All source data stored in single database](#how-to-set-up-a-sql-working-area)| - Are all data saved in the same database?| - Save all data in the same database|
+|[Files meet data standards](#data-standards-screening)| - Are data files produced in a tidy format? <br> - Do all files pass the screener checks?|  - Follow the guidance/seek help from EES team to produce data in tidy format. <br> - Use the screener prompts from failed tests to fix the file until it passes. Ensure this is reflected in code and not just a manual fix.|
+|[Basic automated QA](#automated-qa)| - Do the automated sense checks on the screener app produce sensible outputs?|  - Revisit the sections of code that create the outputs which do not look sensible, check for errors in calculations, typos etc.|
+|[Use appropriate tools](#using-code-to-process-data) | - Is SQL being used to query data? <br> - Is R or another open source software being used for data manipulation?| - Move data extraction and processing steps to SQL.<br> - Move data manipulation steps to R.|
 
 
-- Are our underlying data files [screened against the standards](#data-standards-screening)?
-
-
-- Are all of our source data stored in a [single SQL database](#how-to-set-up-a-sql-working-area)?
-
-
-- Do we produce our data with [no manual steps](#using-code-to-process-data)?
-
-
-- Do we have a clean final version of the code used to produce the data?
-
-
-- Do we use the [basic level of automated QA](#automated-qa)?
 
 ---
 
@@ -144,17 +138,16 @@ Some teams will already be looking at best practice, while others will still hav
 
 ---
 
-- Can the script that we used this year be used again next year with minimal alterations ( < 30 minutes of editing)?
+| RAP level | Checklist questions    | If no, take these steps                                                  |        
+|--------------|-----------------------------------------------|-------------------------------------------------------|
+|Recyclable code for future use|  - Is code future-proof (would it take less than 30 minutes of editing to produce the next iteration of the publication?)|  - Consider steps that need re-editing. Can you move all variables that require manual input (e.g. table names, years) to be assigned at the top of the code, so it's easy to edit in one place with each iteration?|
+|[Publication specific automated QA](#automated-qa)| - Have you built your own automated QA scripts, specific to your publication? <br> - Do outputs pass automated sense checks specific to your publication? (E.g. does adding up entrants to the separate subjects equal data for "total subjects"?)| - Revisit the sections of code that create the outputs which do not look sensible, check for errors in calculations, typos etc.|
+|[Version controlled final versions of code](#how-to-setup-an-azure-devops-area)| - Are final versions of code saved into a git repository so members of your team can access it?| - Set up a git repository and upload your final code onto it, clearly labeled as final. <br> - Test with all team members that they can access it|
+|[Single production script(s)](#using-code-to-process-data)| - Does every data file have one final code script that goes from source to final output at the push of a button? Includes any manipulation, aggregation, suppression etc.|  - If still in separate files, move into one file to reduce steps needed to run off the outputs|
+|[Automated summaries generated for insight](#automating-summary-statistics) | - Have you used the outputs of the automated QA from the screener to understand the data?| - Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text|
+|Peer review of code within team| - Has someone else in the team reviewed the code? Are they able to generate the same outputs?<br> - Have you taken on their feedback and improved the code?|  - Get a member of the team to run the code using only your documentation.<br>- Use their feedback to improve documentation/in-line comments in code|
 
-- Do we have a [git-controlled repo](#how-to-setup-an-azure-devops-area) with final versions of code and documentation saved in it?
 
-- Do we have the [data-screener setup](#data-standards-screening) and run within our team?
-
-- Do we use a [single production script](#using-code-to-process-data) to get from source data to underlying data?
-
-- Do we use publication-specific [automated QA](#automated-qa)?
-
-- Do we use automation to produce [summary reports](#automating-summary-statistics) of our data?
 
 ---
 
@@ -163,11 +156,13 @@ Some teams will already be looking at best practice, while others will still hav
 ---
 
 
-- Do we actively use git when developing code?
-
-
-- Do we have a single production script to get from source to underlying data, with intergrated QA and summary reports?
-
+| RAP level | Checklist questions    | If no, take these steps                                                  |        
+|--------------|-----------------------------------------------|-------------------------------------------------------|
+|[Collab and develop code using git](#how-to-use-git-in-practice)| - Has code development taken place in git, collaboratively across the team? <br> - Is there a clear paper trail of changes to code, and who has Qad each change?| - Get code up onto git in whatever version it is currently in. Ensure all team members have access to the area <br> - Make use of branches, commits, and pull requests for detailed version control and team working|
+|Subject specific automated insights| - Have you gone beyond the outputs of the screener to consider automating further insights for your publication specifically? E.g. year on year changes for specific measures, comparisons of different characteristics that are of interest to the general public <br> - Are you using these outputs to write your commentary?|  - Integrate extra publication-specific QA into the production process <br> - Consider outputs to write commentary/draw out interesting analysis|
+|Single production script(s) with integrated QA|  - Does your publication have one 'run' code script that goes from source to final output, including all files and QA/insight at the push of a button?|  - Move all code into sensible places in the repo and create a 'run' script that runs all code in the repo for you, creating all outputs, to reduce steps needed to run off the outputs. Ensure that this script allows you to run individual outputs by themselves too (i.e. have a line per output)| 
+|["Clean" final code](#writing-code)| - Do files meet coding standards? <br> - Is all documentation embedded within the code?| - Run your R code through the styler package to stylise your code in a readable format (and equivalent for SQL - more to follow) <br> - Move specific documentation from your README file to in-line comments/comment chunks in the code|
+|Peer review of code from outside the team|  - Has someone outside the team reviewed the code? Are they able to generate the same outputs? <br> - Have you taken on their feedback and improved the code?|  - Get another analyst outside your team to run the code using only your documentation. <br> - Use their feedback to improve your comment documentation in the code|
 
 ---
 
