@@ -392,7 +392,7 @@ If you have data from an unknown location, the standard is to use 'Not available
 We expect that any country codes used will come from [this list](https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data){target="_blank"}, please contact us if you have data that doesn't match this.
 
 <div class="alert alert-dismissible alert-info">
-Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead. Aside from blanks, no two rows should have the same code.
+Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead. Aside from blanks, no two geographic locations should have the same code.
 </div>
 
 ---
@@ -458,7 +458,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 - The additional columns must exactly match the names above.
 - You do not have to publish at every level in the guide, publish the selection of levels you feel appropriate.
 - You should regularly check that you are using the most up to date geography names and codes.
-- Aside from blanks, no two rows should have the same code.
+- Aside from blanks, no two geographic locations should have the same code.
 - You can mix geographies in the same file, and should avoid separating files by geography unless size is an issue.
 
 </div>
