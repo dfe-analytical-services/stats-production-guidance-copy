@@ -116,7 +116,30 @@ This may take a little while depending on the size of your file and if there are
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
 </div>
 
-To add footnotes, go to the footnotes tab and click 'add footnote'. Here you can select the individual indicators and filters you want to assign footnotes to, or if you'd rather, you can assign a footnote to the whole subject (data file). You can assign footnotes across multiple subjects. 
+---
+
+# Adding footnotes
+
+---
+
+To add footnotes, go to the footnotes tab and click 'add another footnote'. Rather than writing multiple tables and assigning individual footnotes, you write footnotes and assign them to certain indicators and filters so they appear when users select them in the table builder. For example in the below, the footnote "This is a footnote" is assigned to "the number of pupils entering each exam" for all filters.
+
+`r knitr::include_graphics("images/footnote_example.PNG")`
+
+Now, when a user goes to build a table with this indicator, the footnote automatically appears.
+
+`r knitr::include_graphics("images/footnote_output_example.PNG")`
+
+
+If you'd rather, you can assign a footnote to the whole data file by ticking this box. 
+
+`r knitr::include_graphics("images/All_indicators.PNG")`
+
+You can assign footnotes across multiple data files.  
+
+<div class="alert alert-dismissible alert-danger">
+You should only add footnotes once you are certain the data file is final. If you delete a data file, all the assigned footnotes will be deleted alongside it.
+</div> 
 
 ---
 
@@ -124,7 +147,7 @@ To add footnotes, go to the footnotes tab and click 'add footnote'. Here you can
 
 ---
 
-Once file imports are complete move to manage data blocks tab and use the admin table tool to create your summary tables. Here you can also use the reorder table headers tool to restructure your table howwver you want it. 
+Once file imports are complete move to manage data blocks tab and use the admin table tool to create your summary tables. Here you can also use the reorder table headers tool to restructure your table however you want it. 
 
 Once you're happy with your table, give it a title and some source information before clicking save. 
 
