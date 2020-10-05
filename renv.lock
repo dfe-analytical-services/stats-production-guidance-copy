@@ -109,10 +109,10 @@
     },
     "htmltools": {
       "Package": "htmltools",
-      "Version": "0.4.0",
+      "Version": "0.5.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "2d7691222f82f41e93f6d30f169bd5e1"
+      "Hash": "7d651b7131794fe007b1ad6f21aaa401"
     },
     "jsonlite": {
       "Package": "jsonlite",
@@ -200,10 +200,15 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.9.3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "c1a367437d8a8a44bec4b9d4974cb20c"
+      "Version": "0.12.0-17",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "rstudio",
+      "RemoteRepo": "renv",
+      "RemoteRef": "master",
+      "RemoteSha": "06f682bd587e844797797d87a9195fb98cb0e5b6",
+      "Hash": "2a4e5e2efe605b522c2d4d499487cfd4"
     },
     "rlang": {
       "Package": "rlang",
