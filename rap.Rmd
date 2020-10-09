@@ -35,7 +35,7 @@ We want to focus on the parts of the production process that we have ownership a
 
 In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to [assess our own work against the principles of RAP](#what-we-need-to-do).
 
-Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in thoses areas, see our [learning resources](l+d.html){target="_blank"} page.
+Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in those areas, see our [learning resources](l+d.html){target="_blank"} page.
 
 The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:explore.statistics@education.gov.uk).
 
@@ -107,7 +107,10 @@ The diagram below highlights what RAP means for us, and the varying levels in wh
 
 ---
 
-Below are checklists designed to make reviewing our processes based on the graphic above easier, giving a straightforward list of quesitons to check our work against. This will flag areas that require improvement, and we can then use the links or sidebar to go to the specific section with more detail and guidance on how to get there.
+Below are checklists designed to make reviewing our processes based on the graphic above easier, giving a straightforward list of questions to check our work against. This will flag areas that require improvement, and we can then use the links or sidebar to go to the specific section with more detail and guidance on how to get there.
+
+
+<div info box pointing to the publication tracker app?>
 
 
 Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points.
@@ -118,18 +121,19 @@ Some teams will already be looking at best practice, while others will still hav
 
 ---
 
+- Is all [data processing done with code script(s)](#using-code-to-process-data)?
 
+- Is there a [sensible folder/file structure](#folder-structures)?
 
-| RAP level | Checklist questions    | If no, take these steps                                                  |        
-|--------------|-----------------------------------------------|-------------------------------------------------------|
-|[Processing is done with code](#using-code-to-process-data) | - Is there final code for each step in your production pipeline? <br> - Are there no manual steps (e.g. pasting of outputs/finding and replacing in excel)?|- Agree a final version of each step of code. <br> - Move manual steps into the code. Manual steps like copy/pasting, applying formulas, finding and replacing can all be carried out in code.|
-|[Sensible folder/file structure](#folder-structures)|  - Are all documentation, code and outputs for the publication saved in one folder area? <br> - Is simple version control clearly applied (e.g. having final files in a folder named "final"?| - Create a folder to save all the data in to. Give the folder a sensible structure, with subfolders like 'code', 'documentation'', 'outputs' and 'final' to save the relevant files. <br> - Make sure that final files are saved clearly in a "final" folder. Try to keep a log of changes as you are developing.|
-|[Documentation](#documentation)| - Is there a README document that clearly outlines the steps to output the publication? <br> - Could another analyst pick it up and use it?| - Write up a simple word/notepad document named README with clear steps on how to run the code to output the publication (e.g. what order to run each chunk of code in, what each output is and where key info is saved) <br> - Ensure any specialist terms are explained if required (e.g. The NFTYPE lookup can be found in xxxxx. "NFTYPE" means school type)|
-|[All source data stored in single database](#how-to-set-up-a-sql-working-area)| - Are all data saved in the same database?| - Save all data in the same database|
-|[Files meet data standards](#data-standards-screening)| - Are data files produced in a tidy format? <br> - Do all files pass the screener checks?|  - Follow the guidance/seek help from EES team to produce data in tidy format. <br> - Use the screener prompts from failed tests to fix the file until it passes. Ensure this is reflected in code and not just a manual fix.|
-|[Basic automated QA](#automated-qa)| - Do the automated sense checks on the screener app produce sensible outputs?|  - Revisit the sections of code that create the outputs which do not look sensible, check for errors in calculations, typos etc.|
-|[Use appropriate tools](#using-code-to-process-data) | - Is SQL being used to query data? <br> - Is R or another open source software being used for data manipulation?| - Move data extraction and processing steps to SQL.<br> - Move data manipulation steps to R.|
+- Are [appropriate tools](#using-code-to-process-data) being used to create data files?
 
+- Is all [source data stored in a single database](#getting-your-data-together-in-sql)?
+
+- Is there [suitable documentation](#documentation)?
+
+- Do all data files meet the [data standards](ud.html#how_to_check_against_the_standards)?
+
+- Are there [basic automated QA checks](#basic-automated-qa)?
 
 
 ---
@@ -138,15 +142,17 @@ Some teams will already be looking at best practice, while others will still hav
 
 ---
 
-| RAP level | Checklist questions    | If no, take these steps                                                  |        
-|--------------|-----------------------------------------------|-------------------------------------------------------|
-|Recyclable code for future use|  - Is code future-proof (would it take less than 30 minutes of editing to produce the next iteration of the publication?)|  - Consider steps that need re-editing. Can you move all variables that require manual input (e.g. table names, years) to be assigned at the top of the code, so it's easy to edit in one place with each iteration?|
-|[Publication specific automated QA](#automated-qa)| - Have you built your own automated QA scripts, specific to your publication? <br> - Do outputs pass automated sense checks specific to your publication? (E.g. does adding up entrants to the separate subjects equal data for "total subjects"?)| - Revisit the sections of code that create the outputs which do not look sensible, check for errors in calculations, typos etc.|
-|[Version controlled final versions of code](#how-to-setup-an-azure-devops-area)| - Are final versions of code saved into a git repository so members of your team can access it?| - Set up a git repository and upload your final code onto it, clearly labeled as final. <br> - Test with all team members that they can access it|
-|[Single production script(s)](#using-code-to-process-data)| - Does every data file have one final code script that goes from source to final output at the push of a button? Includes any manipulation, aggregation, suppression etc.|  - If still in separate files, move into one file to reduce steps needed to run off the outputs|
-|[Automated summaries generated for insight](#automating-summary-statistics) | - Have you used the outputs of the automated QA from the screener to understand the data?| - Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text|
-|Peer review of code within team| - Has someone else in the team reviewed the code? Are they able to generate the same outputs?<br> - Have you taken on their feedback and improved the code?|  - Get a member of the team to run the code using only your documentation.<br>- Use their feedback to improve documentation/in-line comments in code|
+- Is the code [recyclable for future use](#writing-recyclable-code)?
 
+- Is each data file produced with a [single code script](#using-code-to-process-data)?
+
+- Are final code script(s) saved in a [version controlled repository](#how-to-setup-an-azure-devops-area)?
+
+- Are [automated summaries](#automating-summary-statistics) generated for insight?
+
+- Has all code been [peer reviewed](#peer-reviewing-code) within the team?
+
+- Are there [publication specific automated QA](#publication-specific-qa) checks?
 
 
 ---
@@ -155,14 +161,18 @@ Some teams will already be looking at best practice, while others will still hav
 
 ---
 
+- Is code [collaboratively developed using git](#using-git-in-practice)?
 
-| RAP level | Checklist questions    | If no, take these steps                                                  |        
-|--------------|-----------------------------------------------|-------------------------------------------------------|
-|[Collab and develop code using git](#how-to-use-git-in-practice)| - Has code development taken place in git, collaboratively across the team? <br> - Is there a clear paper trail of changes to code, and who has Qad each change?| - Get code up onto git in whatever version it is currently in. Ensure all team members have access to the area <br> - Make use of branches, commits, and pull requests for detailed version control and team working|
-|Subject specific automated insights| - Have you gone beyond the outputs of the screener to consider automating further insights for your publication specifically? E.g. year on year changes for specific measures, comparisons of different characteristics that are of interest to the general public <br> - Are you using these outputs to write your commentary?|  - Integrate extra publication-specific QA into the production process <br> - Consider outputs to write commentary/draw out interesting analysis|
-|Single production script(s) with integrated QA|  - Does your publication have one 'run' code script that goes from source to final output, including all files and QA/insight at the push of a button?|  - Move all code into sensible places in the repo and create a 'run' script that runs all code in the repo for you, creating all outputs, to reduce steps needed to run off the outputs. Ensure that this script allows you to run individual outputs by themselves too (i.e. have a line per output)| 
-|["Clean" final code](#writing-code)| - Do files meet coding standards? <br> - Is all documentation embedded within the code?| - Run your R code through the styler package to stylise your code in a readable format (and equivalent for SQL - more to follow) <br> - Move specific documentation from your README file to in-line comments/comment chunks in the code|
-|Peer review of code from outside the team|  - Has someone outside the team reviewed the code? Are they able to generate the same outputs? <br> - Have you taken on their feedback and improved the code?|  - Get another analyst outside your team to run the code using only your documentation. <br> - Use their feedback to improve your comment documentation in the code|
+- Are publication specific [automated summaries](#automating-summary-statistics) generated for insight?
+
+- Are data files produced via [single code script(s)](#using-code-to-process-data) with integrated QA?
+
+- Can the publication be reproduced using a [single code script](#using-code-to-process-data)?
+
+- Are final code script(s) [cleanly formatted](#using-code-to-process-data)?
+
+- Has all code been [peer reviewed](#peer-reviewing-code) from outside the team?
+
 
 ---
 
@@ -171,6 +181,11 @@ Some teams will already be looking at best practice, while others will still hav
 ---
 
 The first place to start for your teams RAP is to store the raw data you use to create underlying data in a Microsoft SQL Server database. This is similar to a sharepoint area or a shared folder, but it's a dedicated data storage area which allows multiple users to use the same file at once, and for you to run code against the data in one place.
+
+As far as meeting the requirement to have all source data in the same database, databases other than SQL are acceptable, though we can't support them in the same way.
+
+When we refer to 'source data', we take this to mean the data you use at the start of the process to create the underlying data files. Any cleaning at the end of a collection will happen before this. The principle is that this source data will remain stable and is the point you can go back to and re-run the processes from if necessary. If for any reason the source data needs to change, your processes will be set up in a way that you can easily re-run them to get updated outputs based on the amended source data with minimal effort.
+
 
 ---
 
@@ -222,7 +237,7 @@ More to follow.
 There's lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including [this guide](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017){target="_blank"}.
 
 
-Remember that it is important to import them with consistent, throught-through [naming conventions](#naming-conventions). You will thank yourself later.
+Remember that it is important to import them with consistent, thought-through [naming conventions](#naming-conventions). You will thank yourself later.
 
 ---
 
@@ -238,29 +253,79 @@ More to follow.
 
 ---
 
-It is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand. This brings numerous benefits, computers are far quicker, more accurate, and far more reliable than humans in many of the tasks that we do. Writing out these instructions saves us significant amounts of time, particularly when it can be reused in future years, or even next week when one specific number in the source file suddenly changes, and also provides us with auditable documentation for our production processes, saving the need for writing down information in extra documents. 
+We should all be using code to process our data, moving away from a reliance on Excel, SPSS, and manual processing. In order to carry out our jobs to the best of our ability it is imperative that we use the [appropriate tools](l+d.html#open-source) for the work that we do.
 
-Reliability is a huge benefit of the automation that RAP brings - when one of the lines of data has to be amended a week before publication, it's a life saver to know that you can re-run your process in minutes, and ressuring to know that it will give you the result you want. You can run the same code 100 times, and be confident that it will follow the same steps in the same order every single time.
+Using code is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand. This brings numerous benefits, computers are far quicker, more accurate, and far more reliable than humans in many of the tasks that we do. Writing out these instructions saves us significant amounts of time, particularly when it can be reused in future years, or even next week when one specific number in the source file suddenly changes, and also provides us with editable documentation for our production processes, saving the need for writing down information in extra documents. 
 
-More guidance will follow on best practice in writing code, as well as useful snippets of code that everyone can make use of. For now, the key thing to remember is that **we should be automating everything we can**, avoiding any manual steps. This means that once teams have developed their code, they can then execute the code and have their underlying data files ready from a single click of a button. Designing our processes in this way will make them better documented, reduce human error, increasing effiency and reliability.
+Reliability is a huge benefit of the automation that RAP brings - when one of the lines of data has to be amended a week before publication, it's a life saver to know that you can re-run your process in minutes, and reassuring to know that it will give you the result you want. You can run the same code 100 times, and be confident that it will follow the same steps in the same order every single time.
 
----
+The key thing to remember is that **we should be automating everything we can**, avoiding any manual steps. Even steps such as copy and pasting data are fraught with danger, and these risks should be minimised by using code to document and execute these processes instead. This means that once teams have developed their code, they can then execute the code and have their underlying data files ready from a single click of a button. Designing processes in this way will make them better documented and reduce human error, increasing efficiency and reliability. 
 
-## Writing code
-
----
-
-One great thing about code, and indeed coding standards, is that there are so many options to choose from. Well, that isn't always a great thing. It often leads to messy or inefficient code, and a lack of coherence in what we write. 
-
-As such, we've collected together a few standards here to help you to follow best practice where possible and make your life easier when using SQL and R.
+Ensure that any fixes to the process are written in code and not done with manual changes. This way you will keep an audit trail of what has happened, which brings numerous benefits and assurances.
 
 ---
 
-## SQL
+## Using single code scripts
 
 ---
 
-For best pratice on writing SQL code, here is a particularly useful [word document](resources/TSQL_Coding_Standards.docx){target="_blank"} produced by our [Data Hub](https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf){target="_blank"}. This outlines a variety of best practices, ranging from naming conventions, to  to formatting your SQL code so that it is easy to follow visually.
+Great practice ensures that each file can be creatde using a single script. This script should take the source data right through to final output at the push of a button. Furthermore, this should includes any manipulation, aggregation, suppression etc.	Having a single script for this saves time when needing to rerun processes, and provides a clear documentation of how a file is produced.
+
+Best practice ensures that all quality assurance for a file is also included in this single script. Even better is to have all automated summaries generated from there too, so that all of that is immediately available if you ever need to make changes to a file.
+
+Finally, the ultimate aim is to utilise a single script to run off everything for a publication, this carries all of the same benefits as having a single master script for a file, but at a wider publication level, effectively documenting the entire publication process in one place. This script should allow you to run individual outputs by themselves as well, so make sure that each data file can be run in isolation by running single lines of this script.
+
+---
+
+## Writing recyclable code
+
+---
+
+ One huge benefit that comes with using code in our processes, is that we can pick them up in future years and reuse with minimum effort, saving us huge amounts of resource. To be able to do this, we need to be consious of how we write our code, and write it in a way that makes it easy to use in future releases for the publication. 
+ 
+ We'd expect that any recyclable code would take less than 30 minutes of editing before being able to run again in a future iteration of the publication. When writing the code you should consider:
+ 
+ - What steps might need re-editing or could become irrelevant?
+ - Can you move all variables that require manual input (e.g. table names, years) to be assigned at the top of the code, so it's easy to edit in one place with each iteration?
+ - Are there any fixed variables that are prone to changing such as geographic boundaries, that you could start preparing for changes now by making it easy to adapt in future?
+
+---
+
+## Standards for coding
+
+---
+
+Clean code is efficient, easy to write, easy to review, and easy to amend for future use. Below are some recommended standards to follow when writing code in SQL and R. 
+
+Clean code should also include comments, though remember to comment why you've made decisions, rather than what you are doing. The code itself describes what you are doing. If in doubt, more comments are better than too few. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.
+
+---
+
+### SQL
+
+---
+
+For best practice on writing SQL code, here is a particularly useful [word document](resources/TSQL_Coding_Standards.docx){target="_blank"} produced by our [Data Hub](https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf){target="_blank"}. This outlines a variety of best practices, ranging from naming conventions, to  to formatting your SQL code so that it is easy to follow visually.
+
+---
+
+### R
+
+---
+
+When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work.
+
+The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank"}, which is fast becoming the global standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank"} package, which will literally style your code for you, and is well worth a look.
+
+There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
+
+---
+
+## Coding examples
+
+---
+
+Below are some examples of common processes to help ease the transition to using code in processing data. More resources can be found on our [learning resources page](l+d.html).
 
 ---
 
@@ -280,22 +345,9 @@ For now, take a look at the materials from Cathy Atkinson's coffee and coding se
 
 ---
 
-## R
-
----
-
-When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work.
-
-The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank"}, which is fast becoming the recognised standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank"} package, which will literally style your code for you, and is well worth a look.
-
-There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
-
----
-
 ### Tidying and processing data in R
 
 ---
-
 
 More will follow here, for now, [here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
@@ -325,8 +377,32 @@ For further resources on learning R so that you're able to apply it to your ever
 
 ---
 
+## Peer reviewing code
 
-# Version control
+---
+
+Something here on peer reviewing within the team, good practices and things to do.
+
+
+Ask yourself:
+
+- Has someone else in the team reviewed the code? Are they able to generate the same outputs?
+
+- Have you taken on their feedback and improved the code?
+
+If you can't answer yes, then:
+
+- Get a member of the team to run the code using only your documentation
+
+- Use their feedback to improve documentation/in-line comments in code
+
+
+While peer reviewing code within the team is often practice, having external analysts peer review your code can bring a fresh perspective. If you're interested in this, please contact us, and we can help you to arrange someone external to your team to review your processes. For this to work smoothly, we recommend that your code is [open](#link to a section I should have somewhere).
+
+
+---
+
+# Version control and documentation
 
 ---
 
@@ -340,9 +416,15 @@ The aim should be to leave your work in a state that others (including future yo
 
 How you organize and name your files will have a big impact on your ability to find those files later and to understand what they contain. You should be consistent and descriptive in naming and organizing files so that it is obvious where to find specific data and what the files contain.
 
+As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate? 
 
-As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate?
- 
+Other questions to help you consider whether your folder structure is sensible are:
+
+- Are all documentation, code and outputs for the publication saved in one folder area?
+- Is simple version control clearly applied (e.g. having all final files in a folder named "final"?
+- Are there subfolders like 'code', 'documentation'', 'outputs' and 'final' to save the relevant working files in? 
+- Are you keeping a version log up to date with any changes made to files in this final folder?
+
 ---
 
 ## Naming conventions
@@ -405,6 +487,10 @@ When documenting your processes you should leave nothing to chance, we all have 
 
 You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team. Imagine you have a new starter who understands the tools you've used but has never worked in your area before, and then document in a way that they could pick it up without assistance.
 
+
+Ultimately your documentation should allow another analyst from a different area to pick up your process and use it. There should be a README notes file, that clearly details the steps in the process, any dependencies (such as places where access needs to be requested to) and how to carry out the process. Any specialist terms should also be defined if required (e.g. The NFTYPE lookup can be found in xxxxx. "NFTYPE" means school type).
+
+
 ---
 
 ### Commenting in code
@@ -431,12 +517,15 @@ When writing code, whether that is SQL, R, or something else, make sure you're c
 ----------------------------------------------------------------------------------------------
 ```
 
-Commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.** Use commented lines of - to break up your files into scan-able chunks based upon the structure and subheadings, like the one below, you'll thank yourself later:
+Commented lines should begin with -- (SQL) or # (R), followed by one space and your comment. Remember that **comments should explain the why, not the what.** Use commented lines of - to break up your files into scan-able chunks based upon the structure and subheadings, like the R example below, you'll thank yourself later:
+
 
 ```
 # Importing the data -----------------------------------------------------------------------------------
 
 ```
+
+For R in particular, there's a number of ways you can section up and even fold chunks of your code to make your life easier when working on it - [RStudio guidance on folding and sectioning code](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank"}.
 
 You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"} as well.
 
@@ -457,15 +546,35 @@ More to follow, for now, take a look at at the [resources for learning Git](l+d.
 
 ---
 
-More to follow.
+We have a specific area set up for you to host your publication code in. More details on how to set this up will follow shortly, in the meantime please contact us if you're interested in this.
 
 ---
 
-### How to use Git in practice
+### Using Git in practice
 
 ---
 
-More to follow, for now please refer to the resources above, or the other links on the [learning resources](l+d.html#git){target="_blank"} page.
+To get started you should:
+
+- Get code into a git controlled folder in whatever version it is currently in. 
+
+- Ensure all team members have access to the area 
+
+- Build capability within the team to understand git and version control
+
+- Make use of branches, commits, and pull requests for detailed version control and collaborative working
+
+
+Questions to ask when checking if you meet the criteria:
+
+- Has code development taken place in git, collaboratively across the team? 
+
+- Are you making use of pull requests for team members to review and comment on code updates?
+
+- Is there a clear paper trail of changes to code (commits)?
+
+
+For now please refer to the resources above, or the other links on the [learning resources](l+d.html#git){target="_blank"} page in order to learn how to use git in practice.
 
 ---
 
@@ -483,7 +592,7 @@ It is assumed that when using R, automated scripts will output .html reports tha
 
 ---
 
-### Recommended generic checks
+## Basic automated QA
 
 ---
 
@@ -492,36 +601,40 @@ More will follow here as we work with teams to develop generalisable automated s
 
 The [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package in R also has some particularly useful functions, such as `clean_names()` to automatically clean up your variable names, `remove_empty()` to remove any completely empty rows and columns, and `get_dupes()` which retrieves any duplicate rows in your data - this last one is particularly powerful as you can feed it specific columns and see if there's any duplicate instances of values across those columns.
 
----
-
-### Examples of this in practice
+Example to follow.
 
 ---
 
-More to follow.
+## Publication specific QA
 
 ---
 
-
-### Automating summary statistics
-
----
-
-As a part of automating QA, we should also be looking to automate the production of summary statistics alongside the tidy underlying data files, this then provides us with instant insight into the stories underneath the numbers. More guidance, including generalisable code, will be added here in the future.
+We expect that the basic level of automated QA will cover most needs that publication teams have. However, we also expect that each publication will have it's own quirks that require a more bespoke approach. An example of a publication with it's own bespoke QA checks will appear in this space shortly. For the time being, try to consider what things you'd usually check as flags that something hasn't gone right with your data. What are the unique aspects of your publication's data, and how can you automate checks against them to give you confidence in it's accuracy and reliability?
 
 ---
 
-# Data standards screening
+## Automating summary statistics
 
 ---
 
-The final part of quality assurance for underlying data files, will be to check that they meet the standards that have been agreed upon. Once teams have quality assured the data files, they can then run them through the data screener to check they meet the standards required for the EES platform. This forms the final part of the automated QA process. 
+As a part of automating QA, we should also be looking to automate the production of summary statistics alongside the tidy underlying data files, this then provides us with instant insight into the stories underneath the numbers.
 
-The [data screener](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank"} can be run on any data file, though requires the EES metadata to be able to process the file. The app runs on our rsconnect servers, and is only available when using DfE kit. The app is mostly self-explanatory, though if you have any questions about it, or are curious to know more about how it works, get in touch with us at explore.statistics@education.gov.uk.
+At a basic level we want teams to make use of the QA app to explore their data:
 
-<div class="alert alert-dismissible alert-danger">
-  All data and EES metadata files must be run through the [screening app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank"} before uploading to EES.
-</div> 
+- Have you used the outputs of the automated QA from the screener to understand the data?
 
+- Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text
+
+However, the best practice is for teams to write their own bespoke automated summaries: 
+
+- Have you gone beyond the outputs of the QA app to consider automating further insights for your publication specifically? E.g. year on year changes for specific measures, comparisons of different characteristics that are of interest to the general public 
+
+- Are you using these outputs to write your commentary?
+
+If you can't say yes to the above, then consider:
+
+- Integrating extra publication-specific QA into the production process
+ 
+- Consider outputs to write commentary/draw out interesting analysis
 
 ---
