@@ -8,11 +8,11 @@ require(knitr)
 
 <p class="text-muted">Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production proccesses.</p>
 
+<!-------------------------------- What is RAP -------------------------------->
+
 ---
 
-
 # What is RAP
-
 
 ---
 
@@ -22,12 +22,7 @@ require(knitr)
 We already have 'analytical pipelines' and have done for many years. The aim of RAP, is to automate the parts of these pipelines that can be automated, to increase efficiency and accuracy, while creating a clear audit trail to allow analyses to easily be re-run if needed. This will free us up to focus on the parts of our work where our human input can really add value. RAP is something we can use to reduce the burden on us by getting rid of some of the boring stuff, what's not to like!
 
 
----
-
-
-### Our scope
-
----
+## Our scope
 
 We want to focus on the parts of the production process that we have ownership and control over – so we are focussing on the process from data sources to publishable data files. This is the part of the process where RAP can currently add the most value - automating the production and quality assurance of our outputs currently takes up huge amount of analytical resource, which could be better spent providing insight and other value adding activity. 
 
@@ -40,12 +35,16 @@ Implementing RAP for us will involve combining the use of SQL, R, and clear, con
 The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:explore.statistics@education.gov.uk).
 
 
+
+<!-------------------------------- RAP in practice -------------------------------->
+
 ---
 
-# Core principles
+# RAP in practice
 
 ---
 
+Key principles for RAP: 
 
 1. **Data sources for a publication are stored in the same database** _- [Getting source data together](#getting-your-data-together-in-sql)_
 
@@ -59,11 +58,30 @@ The collection of, and routine checking of data as it is coming into the departm
 4. **There should be basic automated quality assurance applied to outputs** _- [Using automated QA](#automated-qa)_
 
 
+RAP levels: 
+
+The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the good practice implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around great and best practice levels.
+
+
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
+<html>
+<head>
+<title>hex-diagram</title>
+<meta charset="utf-8"/>
+</head>
+<body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-10-09T18:17:28.403Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36\&quot; etag=\&quot;Cq_OruoN0gj1kqrIQCnZ\&quot; version=\&quot;13.7.4\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;_ltWYIdbVKAG_Xyvna0Y\&quot; name=\&quot;Page-1\&quot;&gt;7Ztbc6M2FIB/jWfbB3e42TiPviRpZ9rddD1tHzsyHIMSQKwQsbO/vjoIGXCcpJ1mI8g6DzE6up/z6XYEI3eZ7q85yePfWAjJyLHC/chdjRzHdl1L/qDkQUl8x1WCiNOwTtQI1vQr1MI6X1TSEIpOQsFYImjeFQYsyyAQHRnhnO26ybYs6daak6iu0WoE64Ak8CjZXzQUsZLOHL+R/ww0inXN9vRCxaREJ64LLmISsl1L5F6O3CVnTKindL+EBJWn9aLyXT0Re2gYh0ycyPBHAfzT5hZ14lgJ2Ui7VInWkBV0I7unlAEcFZWFGKSVtBC8DETJQVWQ0OxO5YyFQKXPsQrnihda5dWz/F8IIopxzlko81OWjdF2JAsAU5D8p1ikiSpT90E4n6KPX8jFx93N8vbq7/XD7d0v48lBN4c+F+JB20NqMcfHGPYkYtnIXeTAaQpCduQgvdEiWdBiF1MB65wEmG0nGyJlVVPclS0ft3QPmjsMcya7QbHk1YUlw4WKcvE5pByCOhJIIbAkxulXlgmC5WGarQwsWcJ41V73qvrDcgRnd6BjMpZBVXmStBJ7nu8sPUwsm0uz6FfYomn9RvK5Rg1FKbsnm0ovWC8H2dJ2GPvRCsuBCe0whLQdrI3ZkmBHtF6wTcp098AF7J9E0G4Z7xqYNAJ/kEnqDHps1HOB60xVeNeMLFsPl7g9qrSQ1KM5OhTdAC8famB0sDUEnh0SUo5l5xLdnFMioJ5kCkMjYPo+R8D/gp2zMgshrKs4zKVV4A5EENeBDQnuoirxp1JIy2maI05CKjFdtTqQMY7YPTE0Xx//8WTSS/5vOAugKKTGkcwCV2vUAbZLNgvX1tDUYuC/z6Hw+ovBN8DV78DqaQYNw7ogBQ2w9FIwuccC3Ln8PjeE5+yMpzE8bdfpJaBzhQErOdJkhXIXVmHBeMUqzTAk1ZPo2A0pTE2vF2d+jfE7tu1ZLwG+kudA3ASkAKINsDwlEh6a2hTb1plVc6we7VwnsuA+oLpiQZnKPijLGALTPoNpDMwjj0JfuPwTeFERiX5JqcckAeVhy0iiuozROMmyrdkDlu0MnN4ukL41X3n+c2f6k6gbotezph18++IQ+AzBQ5AQ5SVWcFpbhp7ibak8w1ZpbM9qu2dijRHrzJxeErvWB6oGL8Qi4DQXPxQ/mkLVO6NqDFW5Oenl8eqm3CQ0IBrRHAK67Y9Hyx769duQkfWOtrN9QXbeIrMo05RwCsb8AEO/EhgyoMfLf1/OWzdQvcfA4Z7Crnuqqi6xKqerAJKagnboFwVDhvb4lNUXaKWOZGikX78J4R4SljfglvWNbESFKWyHfj/QxfZy5a9ceyjY+l4/j1oflgmQ7EPLnWXQfeUM/VZgyIROjy6w+kLoi84A/WILzQRE3PSRyxn6BcKgGZ5ZvTxyNQx33AUniDZF7fu6OBgWtTNr0k9qSy18wq9l2nvgvK/Lg2FRe7xf6MtB7DnvwZazFEWlKGglEDGY9SU47+tSYVgIHx/K3hrhR58BnUakXh3uSVLWWIycaSJqnXSAmX4pmY4YK1tKgi3XyfdNZDUetBUaYfX+R+C1RdMIf68ZC6vdCpE0IOCqctkhVb9KpRrZYlfaRXThIwmNEKZA2gcBXqD15HYomdcRKQ1DzP7o+5ecyd19pevJYjRZYVlyHSoajp9C6xUoGbvd5dmZPl6eD1+4tSlx/zsk/5KI6RsR4Vsk9PwTRHAg4jtGwrXcl5E4NXF8OyT8N0ICQj+UM/wjJBZQfM9ETL2Ll4mwXocI3GEcPjSt4lqf67qX/wA=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+</body>
+</html>
+
+<!-------------------------------- What's expected -------------------------------->
+
 ---
 
-# What we need to do
+# What's expected
 
 ---
+
 
 <div class="alert alert-dismissible alert-danger">
 <strong>Teams are expected to review their own processes and use the guidance on this site</strong> to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
@@ -72,12 +90,8 @@ The collection of, and routine checking of data as it is coming into the departm
 
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
 
----
-
 
 ## Where we need to focus
-
----
 
 Most teams have already made progress with their production of tidy data files, and the release of the automated screener has now tied up that end point of the pipeline that we are all currently working towards. The standard pipeline for all teams will roughly resemble this:
 
@@ -89,25 +103,15 @@ Most teams have already made progress with their production of tidy data files, 
 The key now is for us to build on the work so far and focus on how we improve the quality and efficiency of our production processes up to that point. To do this, we need to make a concerted effort to standardise how we store and access our data, before then automating what we can to reduce the burden of getting the numbers ready and see the benefits of RAP. The exact meaning of this will vary within teams.
 
 
----
-
-
-## RAP in practice
+<!-------------------------------- How to assess a publication -------------------------------->
 
 ---
 
-The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the good practice implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around great and best practice levels.
-
-
-`r knitr::include_graphics("images/RAP-in-practice.png")`
+# How to assess your publication
 
 ---
 
-# Review checklists
-
----
-
-Below are checklists designed to make reviewing our processes based on the graphic above easier, giving a straightforward list of questions to check our work against. This will flag areas that require improvement, and we can then use the links or sidebar to go to the specific section with more detail and guidance on how to get there.
+Below are checklists designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check our work against. This will flag areas that require improvement, and we can then use the links or sidebar to go to the specific section with more detail and guidance on how to get there.
 
 
 <div info box pointing to the publication tracker app?>
@@ -115,68 +119,91 @@ Below are checklists designed to make reviewing our processes based on the graph
 
 Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points.
 
----
-
-## Good practice
+<!-------------------------------- Getting started -------------------------------->
 
 ---
 
-- Is all [data processing done with code script(s)](#using-code-to-process-data)?
-
-- Is there a [sensible folder/file structure](#folder-structures)?
-
-- Are [appropriate tools](#using-code-to-process-data) being used to create data files?
-
-- Is all [source data stored in a single database](#getting-your-data-together-in-sql)?
-
-- Is there [suitable documentation](#documentation)?
-
-- Do all data files meet the [data standards](ud.html#how_to_check_against_the_standards)?
-
-- Are there [basic automated QA checks](#basic-automated-qa)?
-
+# Getting started
 
 ---
 
-## Great practice
+## Use appropriate tools <!------- Hexagon / Good ------>
+`r knitr::include_graphics("images/good.svg")`
+
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
+
+
+## Sensible folder and file structure <!------- Hexagon / Good ------>
+`r knitr::include_graphics("images/good.svg")`
+
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
+
+How you organize and name your files will have a big impact on your ability to find those files later and to understand what they contain. You should be consistent and descriptive in naming and organizing files so that it is obvious where to find specific data and what the files contain.
+
+As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate? 
+
+Other questions to help you consider whether your folder structure is sensible are:
+
+- Are all documentation, code and outputs for the publication saved in one folder area?
+- Is simple version control clearly applied (e.g. having all final files in a folder named "final"?
+- Are there subfolders like 'code', 'documentation'', 'outputs' and 'final' to save the relevant working files in? 
+- Are you keeping a version log up to date with any changes made to files in this final folder?
+
+
+### Naming conventions
+
+Having a **clear** and **consistent** naming convention for your files is critical. Remember that file names should:
+
+
+**Be machine readable** 
+
+- Avoid spaces.
+- Avoid special characters such as: ~ ! @ # $ % ^ & * ( ) ` ; < > ? , [ ] { } ‘ “.
+- Be as short as practicable; overly long names do not work well with all types of software.
+
+
+**Be human readable** 
+
+- Be easy to understand the contents from the name.
+
+
+**Play well with default ordering**
+
+- Often (though not always!) you should have numbers first, particularly if your file names include dates.
+- Follow the ISO 8601 date standard (YYYYMMDD) to ensure that all of your files stay in chronological order.
+- Use leading zeros to left pad numbers and ensure files sort properly, avoiding 1,10,2,3.
+
+
+If in doubt, take a look at this [presentation](https://speakerdeck.com/jennybc/how-to-name-files){target="_blank"}, or this [naming convention guide by Stanford](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming){target="_blank"}, for examples reinforcing the above.
+
+
+### EES naming conventions
+
+
+Use the principles above to decide on a name for each data file and your wider publication. Then apply those to the following conventions. Remember that the general public will be using these.
+
+
+| File | Name |
+|------|------|
+| Data | data_file.csv |
+| Metadata (EES) | data_file.meta.csv |
+| Metadata (external guidance) | publication_name.year.metadata.pdf |
+| PRA list | publication_name.year.pra-list.pdf |
+| Methodology (if not in the platform as .html or link) | publication_name.methodology.pdf |
+
+<!-------------------------------- Preparing data -------------------------------->
 
 ---
 
-- Is the code [recyclable for future use](#writing-recyclable-code)?
-
-- Is each data file produced with a [single code script](#using-code-to-process-data)?
-
-- Are final code script(s) saved in a [version controlled repository](#how-to-setup-an-azure-devops-area)?
-
-- Are [automated summaries](#automating-summary-statistics) generated for insight?
-
-- Has all code been [peer reviewed](#peer-reviewing-code) within the team?
-
-- Are there [publication specific automated QA](#publication-specific-qa) checks?
-
-
----
-
-## Best practice
-
----
-
-- Is code [collaboratively developed using git](#using-git-in-practice)?
-
-- Are publication specific [automated summaries](#automating-summary-statistics) generated for insight?
-
-- Are data files produced via [single code script(s)](#using-code-to-process-data) with integrated QA?
-
-- Can the publication be reproduced using a [single code script](#using-code-to-process-data)?
-
-- Are final code script(s) [cleanly formatted](#using-code-to-process-data)?
-
-- Has all code been [peer reviewed](#peer-reviewing-code) from outside the team?
-
-
----
-
-# Getting your data together in SQL
+# Preparing data
 
 ---
 
@@ -186,12 +213,18 @@ As far as meeting the requirement to have all source data in the same database, 
 
 When we refer to 'source data', we take this to mean the data you use at the start of the process to create the underlying data files. Any cleaning at the end of a collection will happen before this. The principle is that this source data will remain stable and is the point you can go back to and re-run the processes from if necessary. If for any reason the source data needs to change, your processes will be set up in a way that you can easily re-run them to get updated outputs based on the amended source data with minimal effort.
 
+## All source data stored in single database <!------- Hexagon / Good ------>
+`r knitr::include_graphics("images/good.svg")`
 
----
+**What does this mean?**
+
+
+**Why do it?**
+
+
+**How to get started**
 
 ### Introduction to SQL
-
----
 
 SQL stands for Structured Query language and is a scripting language, which asks DfE servers to process data.
 
@@ -204,52 +237,34 @@ SQL is a fantastic language for large scale data joining and manipulation; it al
 
 For a collection of the best resources to use when leanrning SQL, see our [learning resources](l+d.html) page, and for guidance on best practice when writing SQL queries, see the [using code to process data](#using-code-to-process-data) and [documentation](#documentation) sections below. 
 
----
-
 ### How to set up a SQL working area
 
----
-
 More to follow.
-
----
 
 ### How to get your data into SQL
 
----
+More to follow.
+
+### Copying data from iStore
 
 More to follow.
 
----
-
-#### Copying data from iStore
-
----
-
-More to follow.
-
----
-
-#### Importing data to SQL Server
-
----
+### Importing data to SQL Server
 
 There's lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including [this guide](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017){target="_blank"}.
 
 
 Remember that it is important to import them with consistent, thought-through [naming conventions](#naming-conventions). You will thank yourself later.
 
----
-
 ### How to grant access to your area
-
----
 
 More to follow.
 
+<!-------------------------------- Writing code -------------------------------->
+
 ---
 
-# Using code to process data
+# Writing code
 
 ---
 
@@ -263,31 +278,61 @@ The key thing to remember is that **we should be automating everything we can**,
 
 Ensure that any fixes to the process are written in code and not done with manual changes. This way you will keep an audit trail of what has happened, which brings numerous benefits and assurances.
 
----
-
 ## Using single code scripts
 
----
+### Single production script(s) <!------- Hexagon / Great ------>
+`r knitr::include_graphics("images/great.svg")`
+
+**What does this mean?**
 
 Great practice ensures that each file can be creatde using a single script. This script should take the source data right through to final output at the push of a button. Furthermore, this should includes any manipulation, aggregation, suppression etc.	Having a single script for this saves time when needing to rerun processes, and provides a clear documentation of how a file is produced.
 
+**Why do it?**
+
+**How to get started**
+
+### Single production scripts(s) with integrated QA <!------- Hexagon / Best ------>
+`r knitr::include_graphics("images/best.svg")`
+
+**What does this mean?**
+
 Best practice ensures that all quality assurance for a file is also included in this single script. Even better is to have all automated summaries generated from there too, so that all of that is immediately available if you ever need to make changes to a file.
+
+**Why do it?**
+
+**How to get started**
+
+### Single publication production script <!------- Hexagon / Best ------>
+`r knitr::include_graphics("images/best.svg")`
+
+**What does this mean?**
 
 Finally, the ultimate aim is to utilise a single script to run off everything for a publication, this carries all of the same benefits as having a single master script for a file, but at a wider publication level, effectively documenting the entire publication process in one place. This script should allow you to run individual outputs by themselves as well, so make sure that each data file can be run in isolation by running single lines of this script.
 
----
+**Why do it?**
 
-## Writing recyclable code
+**How to get started**
 
----
 
- One huge benefit that comes with using code in our processes, is that we can pick them up in future years and reuse with minimum effort, saving us huge amounts of resource. To be able to do this, we need to be consious of how we write our code, and write it in a way that makes it easy to use in future releases for the publication. 
- 
+## Recyclable code for future use <!------- Hexagon / Great ------>
+`r knitr::include_graphics("images/great.svg")`
+
+**What does this mean?**
+
  We'd expect that any recyclable code would take less than 30 minutes of editing before being able to run again in a future iteration of the publication. When writing the code you should consider:
  
  - What steps might need re-editing or could become irrelevant?
  - Can you move all variables that require manual input (e.g. table names, years) to be assigned at the top of the code, so it's easy to edit in one place with each iteration?
  - Are there any fixed variables that are prone to changing such as geographic boundaries, that you could start preparing for changes now by making it easy to adapt in future?
+
+**Why do it?**
+
+ One huge benefit that comes with using code in our processes, is that we can pick them up in future years and reuse with minimum effort, saving us huge amounts of resource. To be able to do this, we need to be consious of how we write our code, and write it in a way that makes it easy to use in future releases for the publication. 
+ 
+**How to get started**
+
+
+
 
 ---
 
@@ -295,23 +340,33 @@ Finally, the ultimate aim is to utilise a single script to run off everything fo
 
 ---
 
+### Processing is done with code <!------- Hexagon / Good ------>
+`r knitr::include_graphics("images/good.svg")`
+
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
+
+### ‘Clean’ final code <!------- Hexagon / Best ------>
+`r knitr::include_graphics("images/best.svg")`
+
+**What does this mean?**
+
+**Why do it?**
+
 Clean code is efficient, easy to write, easy to review, and easy to amend for future use. Below are some recommended standards to follow when writing code in SQL and R. 
+
+**How to get started**
 
 Clean code should also include comments, though remember to comment why you've made decisions, rather than what you are doing. The code itself describes what you are doing. If in doubt, more comments are better than too few. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.
 
----
-
-### SQL
-
----
+#### SQL
 
 For best practice on writing SQL code, here is a particularly useful [word document](resources/TSQL_Coding_Standards.docx){target="_blank"} produced by our [Data Hub](https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf){target="_blank"}. This outlines a variety of best practices, ranging from naming conventions, to  to formatting your SQL code so that it is easy to follow visually.
 
----
-
-### R
-
----
+#### R
 
 When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work.
 
@@ -319,35 +374,27 @@ The recommended standard for styling your code in R, is the [tidyverse styling](
 
 There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
 
----
 
-## Coding examples
+### Coding examples
 
----
 
 Below are some examples of common processes to help ease the transition to using code in processing data. More resources can be found on our [learning resources page](l+d.html).
 
----
 
-### Producing tidy underlying data in SQL
+#### Producing tidy underlying data in SQL
 
----
 
 More guidance on this follow, for now, here is a [SQL query](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
 
----
 
-### Connecting R to SQL
+#### Connecting R to SQL
 
----
 
 For now, take a look at the materials from Cathy Atkinson's coffee and coding session on [connecting R to SQL using DBI and odbc](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7B2B35083D%2D7626%2D48E2%2D9615%2D451544742692%7D&id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL%2FConnecting%5Fto%5FSQL%5FRevA%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL).
 
----
 
-### Tidying and processing data in R
+#### Tidying and processing data in R
 
----
 
 More will follow here, for now, [here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
@@ -381,8 +428,14 @@ For further resources on learning R so that you're able to apply it to your ever
 
 ---
 
-Something here on peer reviewing within the team, good practices and things to do.
+### Peer review of code within team <!------- Hexagon / Great ------>
+`r knitr::include_graphics("images/great.svg")`
 
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
 
 Ask yourself:
 
@@ -397,8 +450,106 @@ If you can't answer yes, then:
 - Use their feedback to improve documentation/in-line comments in code
 
 
+### Peer review of code from outside the team <!------- Hexagon / Best ------>
+`r knitr::include_graphics("images/best.svg")`
+
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
+
 While peer reviewing code within the team is often practice, having external analysts peer review your code can bring a fresh perspective. If you're interested in this, please contact us, and we can help you to arrange someone external to your team to review your processes. For this to work smoothly, we recommend that your code is [open](#link to a section I should have somewhere).
 
+
+---
+
+## Automated QA
+
+---
+
+Any data files that have been created will need to be quality assured. These checks should be automated where possible, so the computer is doing the hard work - saving us time, and to ensure their reliability.
+
+
+Some teams are already making great progress with automated QA and realising the benefits of it. The Statistics Development Team are working with these to provide generalised code that teams can use as a starting point for automated QA. The intention is that teams can then run this as a minimum, before then looking to develop more area specific checks to the script and/or continue with current checking processes in tandem. If your team already use, or are working towards using, automated QA then get in touch as we'd be keen to see what you have.
+
+
+It is assumed that when using R, automated scripts will output .html reports that the team can read through to understand their data and identify any issues, and save as a part of their process documentation.
+
+### Basic automated QA <!------- Hexagon / Good ------>
+`r knitr::include_graphics("images/good.svg")`
+
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
+
+More will follow here as we work with teams to develop generalisable automated scripts for QA. For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://testthat.r-lib.org/){target="_blank"}, including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on it by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham. 
+
+
+The [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package in R also has some particularly useful functions, such as `clean_names()` to automatically clean up your variable names, `remove_empty()` to remove any completely empty rows and columns, and `get_dupes()` which retrieves any duplicate rows in your data - this last one is particularly powerful as you can feed it specific columns and see if there's any duplicate instances of values across those columns.
+
+Example to follow.
+
+### Publication specific automated QA <!------- Hexagon / Great ------>
+`r knitr::include_graphics("images/great.svg")`
+
+
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
+
+We expect that the basic level of automated QA will cover most needs that publication teams have. However, we also expect that each publication will have it's own quirks that require a more bespoke approach. An example of a publication with it's own bespoke QA checks will appear in this space shortly. For the time being, try to consider what things you'd usually check as flags that something hasn't gone right with your data. What are the unique aspects of your publication's data, and how can you automate checks against them to give you confidence in it's accuracy and reliability?
+
+---
+
+## Automating summary statistics
+
+---
+
+As a part of automating QA, we should also be looking to automate the production of summary statistics alongside the tidy underlying data files, this then provides us with instant insight into the stories underneath the numbers.
+
+### Automated summaries <!------- Hexagon / Great ------>
+`r knitr::include_graphics("images/great.svg")`
+
+**What does this mean?**
+
+At a basic level we want teams to make use of the QA app to explore their data:
+
+- Have you used the outputs of the automated QA from the screener to understand the data?
+
+- Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text
+
+**Why do it?**
+
+**How to get started**
+
+### Subject specific automated summaries <!------- Hexagon / Best ------>
+`r knitr::include_graphics("images/best.svg")`
+
+**What does this mean?**
+
+However, the best practice is for teams to write their own bespoke automated summaries: 
+
+- Have you gone beyond the outputs of the QA app to consider automating further insights for your publication specifically? E.g. year on year changes for specific measures, comparisons of different characteristics that are of interest to the general public 
+
+- Are you using these outputs to write your commentary?
+
+If you can't say yes to the above, then consider:
+
+- Integrating extra publication-specific QA into the production process
+ 
+- Consider outputs to write commentary/draw out interesting analysis
+
+**Why do it?**
+
+**How to get started**
+
+
+<!-------------------------------- Version control and documentation -------------------------------->
 
 ---
 
@@ -408,79 +559,18 @@ While peer reviewing code within the team is often practice, having external ana
 
 The aim should be to leave your work in a state that others (including future you!), can pick it up and immediately find what they need, understanding the processes that have happened previously. Changes to files should be documented, and published versions should be clearly named and stored in their own folder. As we work with code to process our data more and more, we can begin to utilise version control software to make this process much easier, allowing simultaneous collaboration on files.
 
----
 
-## Folder structures
+## Documentation <!------- Hexagon / Good ------>
+`r knitr::include_graphics("images/good.svg")`
 
----
-
-How you organize and name your files will have a big impact on your ability to find those files later and to understand what they contain. You should be consistent and descriptive in naming and organizing files so that it is obvious where to find specific data and what the files contain.
-
-As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate? 
-
-Other questions to help you consider whether your folder structure is sensible are:
-
-- Are all documentation, code and outputs for the publication saved in one folder area?
-- Is simple version control clearly applied (e.g. having all final files in a folder named "final"?
-- Are there subfolders like 'code', 'documentation'', 'outputs' and 'final' to save the relevant working files in? 
-- Are you keeping a version log up to date with any changes made to files in this final folder?
-
----
-
-## Naming conventions
-
----
-
-Having a **clear** and **consistent** naming convention for your files is critical. Remember that file names should:
-
-
-**Be machine readable** 
-
-- Avoid spaces.
-- Avoid special characters such as: ~ ! @ # $ % ^ & * ( ) ` ; < > ? , [ ] { } ‘ “.
-- Be as short as practicable; overly long names do not work well with all types of software.
-
-
-**Be human readable** 
-
-- Be easy to understand the contents from the name.
-
-
-**Play well with default ordering**
-
-- Often (though not always!) you should have numbers first, particularly if your file names include dates.
-- Follow the ISO 8601 date standard (YYYYMMDD) to ensure that all of your files stay in chronological order.
-- Use leading zeros to left pad numbers and ensure files sort properly, avoiding 1,10,2,3.
-
-
-If in doubt, take a look at this [presentation](https://speakerdeck.com/jennybc/how-to-name-files){target="_blank"}, or this [naming convention guide by Stanford](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming){target="_blank"}, for examples reinforcing the above.
-
----
-
-#### EES naming conventions
-
----
-
-Use the principles above to decide on a name for each data file and your wider publication. Then apply those to the following conventions. Remember that the general public will be using these.
-
-
-| File | Name |
-|------|------|
-| Data | data_file.csv |
-| Metadata (EES) | data_file.meta.csv |
-| Metadata (external guidance) | publication_name.year.metadata.pdf |
-| PRA list | publication_name.year.pra-list.pdf |
-| Methodology (if not in the platform as .html or link) | publication_name.methodology.pdf |
-
-
----
-
-## Documentation
-
----
 
 _When you assume you make an 'ass' out of 'u' and 'me'_. Everyone knows this saying, yet few of us heed it's warning. 
 
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
 
 When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone elses work. Thorough documentation saves us time, and provides a clear audit trail of what we do. This is key for the 'Reproducible' part of RAP, our processes must be easily reproducible and clear documentation is fundamental to that.
 
@@ -491,11 +581,7 @@ You should be annotating as you go, ensuring that every process and decision mad
 Ultimately your documentation should allow another analyst from a different area to pick up your process and use it. There should be a README notes file, that clearly details the steps in the process, any dependencies (such as places where access needs to be requested to) and how to carry out the process. Any specialist terms should also be defined if required (e.g. The NFTYPE lookup can be found in xxxxx. "NFTYPE" means school type).
 
 
----
-
 ### Commenting in code
-
----
 
 When writing code, whether that is SQL, R, or something else, make sure you're commenting as you go. Start off every file by outlining the date, author, purpose, and if applicable, the structure of the file, like this: 
 
@@ -530,29 +616,25 @@ For R in particular, there's a number of ways you can section up and even fold c
 You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"} as well.
 
 
----
-
-## Introduction to Git
-
----
+## Version control with git
 
 
 More to follow, for now, take a look at at the [resources for learning Git](l+d.html#git){target="_blank"} on the learning resources page.
 
+### Version controlled final versions of code <!------- Hexagon / Great ------>
+`r knitr::include_graphics("images/great.svg")`
 
----
+**What does this mean?**
 
-### How to setup an Azure DevOps area
+**Why do it?**
 
----
+**How to get started**
+
+#### How to setup an Azure DevOps area
 
 We have a specific area set up for you to host your publication code in. More details on how to set this up will follow shortly, in the meantime please contact us if you're interested in this.
 
----
-
-### Using Git in practice
-
----
+#### Using Git in practice
 
 To get started you should:
 
@@ -576,65 +658,16 @@ Questions to ask when checking if you meet the criteria:
 
 For now please refer to the resources above, or the other links on the [learning resources](l+d.html#git){target="_blank"} page in order to learn how to use git in practice.
 
----
-
-# Automated QA
-
----
-
-Any data files that have been created will need to be quality assured. These checks should be automated where possible, so the computer is doing the hard work - saving us time, and to ensure their reliability.
 
 
-Some teams are already making great progress with automated QA and realising the benefits of it. The Statistics Development Team are working with these to provide generalised code that teams can use as a starting point for automated QA. The intention is that teams can then run this as a minimum, before then looking to develop more area specific checks to the script and/or continue with current checking processes in tandem. If your team already use, or are working towards using, automated QA then get in touch as we'd be keen to see what you have.
+### Collab and develop code using git <!------- Hexagon / Best ------>
+`r knitr::include_graphics("images/best.svg")`
+
+**What does this mean?**
+
+**Why do it?**
+
+**How to get started**
 
 
-It is assumed that when using R, automated scripts will output .html reports that the team can read through to understand their data and identify any issues, and save as a part of their process documentation.
 
----
-
-## Basic automated QA
-
----
-
-More will follow here as we work with teams to develop generalisable automated scripts for QA. For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://testthat.r-lib.org/){target="_blank"}, including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on it by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham. 
-
-
-The [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package in R also has some particularly useful functions, such as `clean_names()` to automatically clean up your variable names, `remove_empty()` to remove any completely empty rows and columns, and `get_dupes()` which retrieves any duplicate rows in your data - this last one is particularly powerful as you can feed it specific columns and see if there's any duplicate instances of values across those columns.
-
-Example to follow.
-
----
-
-## Publication specific QA
-
----
-
-We expect that the basic level of automated QA will cover most needs that publication teams have. However, we also expect that each publication will have it's own quirks that require a more bespoke approach. An example of a publication with it's own bespoke QA checks will appear in this space shortly. For the time being, try to consider what things you'd usually check as flags that something hasn't gone right with your data. What are the unique aspects of your publication's data, and how can you automate checks against them to give you confidence in it's accuracy and reliability?
-
----
-
-## Automating summary statistics
-
----
-
-As a part of automating QA, we should also be looking to automate the production of summary statistics alongside the tidy underlying data files, this then provides us with instant insight into the stories underneath the numbers.
-
-At a basic level we want teams to make use of the QA app to explore their data:
-
-- Have you used the outputs of the automated QA from the screener to understand the data?
-
-- Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text
-
-However, the best practice is for teams to write their own bespoke automated summaries: 
-
-- Have you gone beyond the outputs of the QA app to consider automating further insights for your publication specifically? E.g. year on year changes for specific measures, comparisons of different characteristics that are of interest to the general public 
-
-- Are you using these outputs to write your commentary?
-
-If you can't say yes to the above, then consider:
-
-- Integrating extra publication-specific QA into the production process
- 
-- Consider outputs to write commentary/draw out interesting analysis
-
----
