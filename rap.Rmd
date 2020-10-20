@@ -30,7 +30,7 @@ We want to focus on the parts of the production process that we have ownership a
 
 `r knitr::include_graphics("images/RAP-Scope-Arrow.png")`
 
-In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to [assess our own work against the principles of RAP](#what-we-need-to-do).
+In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to [assess our own work against the principles of RAP](#what-is-expected).
 
 Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in those areas, see our [learning resources](l+d.html){target="_blank"} page.
 
@@ -58,7 +58,7 @@ The collection of, and routine checking of data as it is coming into the departm
 
 ---
 
-The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the good practice implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around great and best practice levels.
+The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the good practice implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around great and best practice levels, and that we appreciate every team's situation is unique.
 
 
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
@@ -74,16 +74,28 @@ The diagram below highlights what RAP means for us, and the varying levels in wh
 
 ---
 
-# What's expected
+# What is expected
 
 ---
 
-<div class="alert alert-dismissible alert-danger">
-<strong>Teams are expected to review their own processes and use the guidance on this site</strong> to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
+<div class="alert alert-dismissible alert-info">
+<strong>Teams are expected to review their own processes using the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} and use the guidance on this site</strong> to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
 </div>
 
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
 
+
+---
+
+## How to assess your publication
+
+---
+
+
+The checklist provided in the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} is designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag areas that require improvement, and you can then use the links or sidebar to go to the specific section with more detail and guidance on how to meet the expectation.
+
+
+Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points, and are here to support all teams from their respective starting positions.
 
 ---
 
@@ -94,29 +106,14 @@ Teams will start from different places and implement changes at different rates,
 
 Most teams have already made progress with their production of tidy data files, and the release of the automated screener has now tied up that end point of the pipeline that we are all currently working towards. The standard pipeline for all teams will roughly resemble this:
 
-<!-- this link doesn't seem right, can we point at the repo rather than specifically at prod? -->
-[![](images/RAP-Process-Overview.png)](https://rsconnect/rsc/stats-production-guidance/images/RAP-Process-Overview.png)
 
+`r knitr::include_graphics("images/RAP-Process-Overview.png")`
 
 
 The key now is for us to build on the work so far and focus on how we improve the quality and efficiency of our production processes up to that point. To do this, we need to make a concerted effort to standardise how we store and access our data, before then automating what we can to reduce the burden of getting the numbers ready and see the benefits of RAP. The exact meaning of this will vary within teams.
 
 
----
 
-# How to assess your publication
-
----
-
-<!--
-
- div info box pointing to the publication tracker app?
- 
-Below are checklists designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag areas that require improvement, and you can then use the links or sidebar to go to the specific section with more detail and guidance on how to meet the expectation. -->
-
-
-
-<!-- Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points, and are here to support all teams from their respective starting positions. -->
 
 ---
 
