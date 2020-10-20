@@ -32,7 +32,7 @@ We want to focus on the parts of the production process that we have ownership a
 
 In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to [assess our own work against the principles of RAP](#what-is-expected).
 
-Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help upskill in those areas, see our [learning resources](l+d.html){target="_blank"} page.
+Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help up-skill in those areas, see our [learning resources](l+d.html) page.
 
 The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:explore.statistics@education.gov.uk).
 
@@ -121,7 +121,7 @@ The key now is for us to build on the work so far and focus on how we improve th
 
 ---
 
-Before we can improve our processes, we have to make sure that our data is in the right shape to be processed, and preparing your source data is a critical step towards implementing the principles of RAP.
+The first place to start for your teams RAP is to store the raw data you use to create underlying data in a Microsoft SQL Server database. This is similar to a sharepoint area or a shared folder, but it's a dedicated data storage area which allows multiple users to use the same file at once, and for you to run code against the data in one place.
 
 ---
 
@@ -133,11 +133,10 @@ Before we can improve our processes, we have to make sure that our data is in th
 
 **What does this mean?** 
 
-The first place to start for your teams RAP is to store the raw data you use to create underlying data in a Microsoft SQL Server database. This is similar to a sharepoint area or a shared folder, but it's a dedicated data storage area which allows multiple users to use the same file at once, and for you to run code against the data in one place.
 
 When we refer to 'source data', we take this to mean the data you use at the start of the process to create the underlying data files. Any cleaning at the end of a collection will happen before this. The principle is that this source data will remain stable and is the point you can go back to and re-run the processes from if necessary. If for any reason the source data needs to change, your processes will be set up in a way that you can easily re-run them to get updated outputs based on the amended source data with minimal effort.
 
-As far as meeting the requirement to have all source data in the same database, databases other than SQL are acceptable, though we can't support them in the same way.
+As far as meeting the requirement to have all source data in the same database, databases other than SQL may be acceptable, though we can't support them in the same way.
 
 
 **Why do it?**
@@ -271,7 +270,7 @@ processed_regional_data <- my_data %>%
 [Helpful new functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank"} in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables. 
 
 
-For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html){target="_blank"} page.
+For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html) page.
 
 ---
 
@@ -310,7 +309,7 @@ Go to our [learning resources](l+d.html) page to read more about the [recommende
 
 We strongly recommend that teams make use of open source software where possible, as well as making sure that our own work adheres to the same principles. There will be obvious data protection issues around sensitive data, however the code we use to process it can and should be made widely available. In practical terms this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository.
 
-By following [our guidance](#version-controlled-final-versions-of-code) in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.
+By following [our guidance](#version-controlled-final-code-script(s)) in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.
 
 Open source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open source](https://opensource.com/resources/what-open-source){target="_blank"}, as well as this guide to [working in an open source way](https://opensource.com/open-source-way){target="_blank"}.
 
@@ -583,7 +582,7 @@ Automating these checks ensures their accuracy and reliability, as well as being
 
 **How to get started**
 
-Example to follow.
+More to follow, in the meantime please contact us for advice.
 
 <!-- there will also be a link to the QA app as well when that is ready -->
 
@@ -697,7 +696,7 @@ As we work with code to process our data more and more, we can begin to utilise 
 
 **What does this mean?**
 
-As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intituitive to navigate? 
+As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intuitive to navigate? 
 
 
 **Why do it?**
@@ -836,11 +835,11 @@ More to follow, in the meantime please contact us for advice.
 
 ---
 
-For now, take a look at at the [resources for learning Git](l+d.html#git){target="_blank"} on the learning resources page.
+For now, take a look at at the [resources for learning Git](l+d.html#git) on the learning resources page.
 
 ---
 
-### Version controlled final code script/s 
+### Version controlled final code script(s) 
 
 ---
 
@@ -870,8 +869,6 @@ We have a specific area set up for you to host your publication code in. More de
 
 **What does this mean?**
 
-Questions to ask when checking if you meet the criteria:
-
 - Has code development taken place in git, collaboratively across the team? 
 
 - Are you making use of pull requests for team members to review and comment on code updates?
@@ -895,6 +892,6 @@ To get started you should:
 
 - Make use of branches, commits, and pull requests for detailed version control and collaborative working
 
-Until more guidance appears here, please refer to the resources above, or the other links on the [learning resources](l+d.html#git){target="_blank"} page in order to learn how to use git in practice.
+Until more guidance appears here, please refer to the resources above, or the other links on the [learning resources](l+d.html#git) page in order to learn how to use git in practice.
 
 ---
