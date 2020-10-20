@@ -337,6 +337,7 @@ Please note that jobshare emails should not be sent invites for pre-release. The
 
 This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
 
+<centre>
 <html>
 <head>
 <title>EES PRA one pager</title>
@@ -346,6 +347,7 @@ This preview is only accessible for the 24 hours before the publication date, th
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 </body>
 </html>
+</centre>
 
 Inviting users for pre-release access and building the public pre-release list can be found within the ‘Pre-release access’ tab on the dashboard. 
 
