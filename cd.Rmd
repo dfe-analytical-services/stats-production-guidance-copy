@@ -37,6 +37,13 @@ All our releases should be targeted at the ‘inquiring citizen’ type user and
 
 ---
 
+# Content checklist
+
+---
+
+A checklist to use when reviewing content will appear here shortly.
+
+---
 
 # Structure within EES
 
