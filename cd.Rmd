@@ -254,6 +254,16 @@ DfE specific best practice guidance and advice on visualisations will be added h
 
 ---
 
+# Peer review
+<!-- keep this heading the same on this page, even if moved, as the self-assessment tool links from it -->
+
+---
+
+Peer review is an important element of quality assuring our work. We often do it without realising by bouncing ideas off of one another and by getting others to 'idiot check' our work. When writing content, ensuring that we get our work formally peer reviewed is particularly important for ensuring it's clarity and value. Can others easily understand what you've written? Does it all feel important and worth writing about to them? 
+More will follow in this space, though in the meantime please contact us if you're interested in having your content peer reviewed.
+
+---
+
 
 # Advice and support
 

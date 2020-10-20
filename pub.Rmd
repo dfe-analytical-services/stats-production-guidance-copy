@@ -210,6 +210,19 @@ When you raise the ticket please ensure that all the documents you submit are in
 
 ---
 
+# User engagement
+<!-- keep this heading the same on this page, even if moved, as the self-assessment tool links from it -->
+
+---
+
+
+Being user centred is a key departmental priority. It is critical that we actively engage with the users of our statistics, and not just the ones who shout the loudest. There are thousands of users out there and teams should be actively be getting feedback on their publications from a variety of users - policy colleagues, local authorities, schools, media, and the general public to name but a few.
+
+More information will follow here, though for now if you'd like assistance with this, please contact us.
+
+
+---
+
 # Re-publishing an old release on EES
 
 ---
