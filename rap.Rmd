@@ -65,7 +65,7 @@ The diagram below highlights what RAP means for us, and the varying levels in wh
 <title>hex-diagram</title>
 <meta charset="utf-8"/>
 </head>
-<body><div class="mxgraph" style="max-width:100%;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;target&quot;:&quot;self&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-10-20T15:03:53.471Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36\&quot; etag=\&quot;g84QSGOyYrANLIcKe40Z\&quot; version=\&quot;13.8.1\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;_ltWYIdbVKAG_Xyvna0Y\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<body><div class="mxgraph" style="max-width:100%;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;target&quot;:&quot;self&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-10-20T15:13:28.533Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36\&quot; etag=\&quot;Rv_6eg49Fxt5gBKZxgsw\&quot; version=\&quot;13.8.1\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;_ltWYIdbVKAG_Xyvna0Y\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 </body>
 </html>
@@ -333,7 +333,7 @@ In order to create a single script to run all processes from, it is likely that 
 
 ---
 
-### Single production script(s) 
+### Single production scripts 
 
 ---
 
@@ -358,7 +358,7 @@ More to follow, in the meantime please contact us for advice.
 
 ---
 
-### Single production scripts(s) with integrated QA 
+### Single production scripts with integrated QA 
 
 ---
 
@@ -550,7 +550,7 @@ While peer reviewing code within the team is often practical, having external an
 
 ---
 
-## Automated Quality Assurance
+## Automated quality assurance
 
 ---
 
@@ -847,7 +847,7 @@ For now, take a look at at the [resources for learning Git](l+d.html#git) on the
 
 ---
 
-### Version controlled final code script(s) 
+### Version controlled final code scripts 
 
 ---
 
