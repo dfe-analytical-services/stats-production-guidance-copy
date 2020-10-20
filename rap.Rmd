@@ -47,7 +47,7 @@ The collection of, and routine checking of data as it is coming into the departm
 
 
 **Underlying data files are produced using code, with no manual steps** _- [Writing code](#writing-code)_
-
+1
 
 **Files and scripts should be appropriately version controlled** _- [Using version control](#version-control)_
 
@@ -574,6 +574,8 @@ It is assumed that when using R, automated scripts will output .html reports tha
 
 The list of basic automated QA checks, with examples, will appear here shortly.
 
+The Statistics Development Team are developing the QA app to include basic QA outputs, more will follow in this space when this is ready.
+
 **Why do it?**
 
 Quality is one of the three pillars that our [code of practice](https://code.statisticsauthority.gov.uk/the-code/quality/){target="_blank"} is built upon. These basic level checks allow us to have confidence that we are accurately processing the data.
@@ -629,6 +631,10 @@ As a part of automating QA, we should also be looking to automate the production
 
 **What does this mean?**
 
+Summary outputs are automated and used to explore the stories of the data. 
+
+The Statistics Development Team are developing the QA app to include basic summary outputs, more will follow in this space when this is ready.
+
 <!-- potential text after the qa app is ready for this
 
 At a basic level we want teams to make use of the QA app to explore their data:
@@ -641,7 +647,9 @@ At a basic level we want teams to make use of the QA app to explore their data:
 
 **Why do it?**
 
-<!-- #insight -->
+Value is one of the three pillars of our [code of practice](https://code.statisticsauthority.gov.uk/the-code/value/){target="_blank"}. Even more specifically it states that __'Statistics and data should be presented clearly, explained meaningfully and provide authoritative insights that serve the public good.'__.
+
+As a result, we should be developing automated summaries to help us to better understand the story of the data and be authorative and rigorous in our telling of it.
 
 **How to get started**
 
@@ -664,7 +672,7 @@ More to follow, in the meantime please contact us for advice.
 
 **Why do it?**
 
-<!-- #insight -->
+All data files are different, and therefore it is important that for each publication, teams go beyond the basics and produce automated summaries specific to their area.
 
 **How to get started**
 
@@ -853,7 +861,7 @@ This means having the final copies of code and documentation saved in a git-cont
 
 **Why do it?**
 
-<!-- reasons -->
+Having the final copy of the scripts version controlled gives assurance around how the data was created. It also allows teams to easily record any last minute changes to the code after the initial final version by using the version control to log this. 
 
 **How to get started**
 
