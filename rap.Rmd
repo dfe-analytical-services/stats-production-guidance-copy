@@ -47,7 +47,7 @@ The collection of, and routine checking of data as it is coming into the departm
 
 
 **Underlying data files are produced using code, with no manual steps** _- [Writing code](#writing-code)_
-1
+
 
 **Files and scripts should be appropriately version controlled** _- [Using version control](#version-control)_
 

@@ -70,7 +70,7 @@ For publishing on EES specifically, please note the following points:
 - Each data file must be accompanied by a corresponding .csv metadata file as outlined under [EES Metadata](#ees-metadata).
 
 <div class="alert alert-dismissible alert-danger">
-  In light of recent acessibility legislation, you should aim to include at least 3 years of data in EES where it exists.
+  In light of recent accessibility legislation, you should aim to include at least 3 years of data in EES where it exists.
 </div>
 
 ---
@@ -87,7 +87,7 @@ If you are not providing a full timeseries, make sure that any old published dat
 
 ---
 
-### Data format
+## Data format
 
 ---
 
@@ -111,7 +111,7 @@ Data and metadata .csv file names must not contain any spaces. All file names sh
 
 ---
 
-#### How to export data with UTF-8 encoding
+### How to export data with UTF-8 encoding
 
 ---
 
@@ -140,7 +140,7 @@ For `write_csv()`, which some of you may be using for increased processing speed
 
 ---
 
-### Tidy data structure
+## Tidy data structure
 
 ---
 
@@ -162,7 +162,7 @@ The variables (columns) in each of the uploaded data files will fall in to the f
 
 ---
 
-### Deciding what should be in a file
+## Deciding what should be in a file
 
 ---
 
@@ -192,7 +192,7 @@ A useful way to judge how to break up data files is to consider whether all of t
 
 ---
 
-### Handling N/A values
+## Handling N/A values
 
 ---
 
@@ -207,7 +207,7 @@ In line with [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2
 --- 
 
 
-### File size
+## File size
 
 ---
 
@@ -219,9 +219,9 @@ People can tend to obsess over file size, however this is not everything, and th
 
 - Anything under 10mb is relatively small
 - 10mb to 100mb is a fairly common file size that most teams have
-- 100mb to 500mb is fairly large file and may sometimes struggle to upload - [contact us](mailto:explore.statistics@education.gov.uk) if you have any issues
-- 500mb and over are pretty large, will face issues uploading to EES currently (though we are working on a solution), and can also start to be difficult to handle, as you may be aware if you have one!
-- Files that are over 1gb in size may currently have issues in the platform, please [contact us](mailto:explore.statistics@education.gov.uk) if you have any this large
+- 100mb to 500mb is fairly large file and may struggle to upload if not compressed - [contact us](mailto:explore.statistics@education.gov.uk) if you have any issues
+- 500mb and over are pretty large, and sometimes may struggle to compress small enough to upload, and can also start to be difficult to handle, as you may be aware if you have one!
+- Files that are over 1gb in size will likely have issues in the platform, please [contact us](mailto:explore.statistics@education.gov.uk) if you have any this large
 
 
 We generally recommend fewer large files over a larger number of smaller files. **If you think you are having issues with file size please tell us** so that we can investigate and work towards a solution with you. **The platform is always in development**, and we do not want teams to arbitrarily make decisions about their data (and potentially waste a lot of time) due to something that could be addressed if we are told about it.
