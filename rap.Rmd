@@ -133,16 +133,16 @@ The first place to start for your teams RAP is to store the raw data you use to 
 
 **What does this mean?** 
 
+When we refer to 'source data', we take this to mean the data you use at the start of the process to create the underlying data files. Any cleaning at the end of a collection will happen before this. 
 
-When we refer to 'source data', we take this to mean the data you use at the start of the process to create the underlying data files. Any cleaning at the end of a collection will happen before this. The principle is that this source data will remain stable and is the point you can go back to and re-run the processes from if necessary. If for any reason the source data needs to change, your processes will be set up in a way that you can easily re-run them to get updated outputs based on the amended source data with minimal effort.
+In order for us to be able to have an end-to-end data pipeline where we can replicate our analysis across the department, we should store all of the raw data needed to create aggregate statistics in a managed Microsoft SQL Server. This includes any lookup tables and all administrative data from collections prior to any manual processing. This allows us to then match and join the data together in an end-to-end process using SQL queries. 
 
 As far as meeting the requirement to have all source data in the same database, databases other than SQL may be acceptable, though we can't support them in the same way.
 
 
 **Why do it?**
 
-In order for us to be able to have an end-to-end data pipeline where we can replicate our analysis across the department, we should store all of the raw data needed to create aggregate statistics in a managed Microsoft SQL Server. This includes any lookup tables and all administrative data from collections prior to any manual processing. This allows us to then match and join the data together in an end-to-end process using SQL queries. 
-
+The principle is that this source data will remain stable and is the point you can go back to and re-run the processes from if necessary. If for any reason the source data needs to change, your processes will be set up in a way that you can easily re-run them to get updated outputs based on the amended source data with minimal effort.
 
 SQL is a fantastic language for large scale data joining and manipulation; it allows us to replicate end-to-end from raw data to final aggregate statistics output. Having all the data in one place and processing it in one place makes our lives easier, and also helps us when auditing our work and ensuring reproducibility of results. 
 
@@ -201,7 +201,7 @@ More to follow, in the meantime please contact us for advice.
 
 ---
 
-Using code is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand.
+The key thing to remember is that **we should be automating everything we can**, and the key to automation is writing code. Using code is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand.
 
 ---
 
@@ -213,11 +213,9 @@ Using code is as simple as telling your computer what to do. Code is just a list
 
 **What does this mean?**
 
-The key thing to remember is that **we should be automating everything we can**, avoiding any manual steps. Even steps such as copy and pasting data are fraught with danger, and these risks should be minimised by using code to document and execute these processes instead. This means that once teams have developed their code, they can then execute the code and have their underlying data files ready from a single click of a button. Designing processes in this way will make them better documented and reduce human error, increasing efficiency and reliability. 
+All extraction, and processing of data should be done using code, avoiding any manual steps and moving away from a reliance on Excel, SPSS, and other manual processing. In order to carry out our jobs to the best of our ability it is imperative that we use the [appropriate tools](#appropriate-tools) for the work that we do.
 
-We should all be using code to process our data, moving away from a reliance on Excel, SPSS, and manual processing. In order to carry out our jobs to the best of our ability it is imperative that we use the [appropriate tools](#appropriate-tools) for the work that we do.
-
-Ensure that any fixes to the process are written in code and not done with manual changes. This way you will keep an audit trail of what has happened, which brings numerous benefits and assurances.
+Even steps such as copy and pasting data, or pointing and clicking, are fraught with danger, and these risks should be minimised by using code to document and execute these processes instead. 
 
 **Why do it?**
 
@@ -231,6 +229,8 @@ Reliability is a huge benefit of the automation that RAP brings - when one of th
 See our [learning resources](l+d.html) for a wealth of resources on SQL and R to learn the skills required to translate your process into code. 
 
 There are also two sections below with examples of tidying data in SQL and R to get you started.
+
+Ensure that any last-minute fixes to the process are written in the code and not done with manual changes.
 
 ---
 
@@ -444,11 +444,11 @@ Code can often be written in many different ways, and in languages such as R, th
 
 **What does this mean?**
 
-Clean code is the final version of code that was used to produce the files for the publication. This code should meet the best practice standards below (for SQL and R). If you are using a different language, such as Python, then contact us for advice on the best standards to use when writing code. 
+- This code should meet the best practice standards below (for SQL and R). If you are using a different language, such as Python, then contact us for advice on the best standards to use when writing code. 
 
-There should be no redundant or duplicated code, even if this has been commented out. It should be removed from the files to prevent confusion further down the line.
+- There should be no redundant or duplicated code, even if this has been commented out. It should be removed from the files to prevent confusion further down the line.
 
-The only comments left in the code should be those describing the decisions you have made to help other analysts (and future you) to understand your code. More guidance on [commenting in code](#commenting-in-code) can be found later on this page.
+- The only comments left in the code should be those describing the decisions you have made to help other analysts (and future you) to understand your code. More guidance on [commenting in code](#commenting-in-code) can be found later on this page.
 
 
 **Why do it?**
@@ -696,7 +696,7 @@ As we work with code to process our data more and more, we can begin to utilise 
 
 **What does this mean?**
 
-As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Try asking yourself if it would be easy for someone who isn't in the team to find this folder, and if not, is there a better way that you could name and structure your folders to make them more intuitive to navigate? 
+As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Ask yourself if it would be easy for someone who isn't in the team to find specific files, and if not, is there a better way that you could name and structure your folders to make them more intuitive to navigate? 
 
 
 **Why do it?**
@@ -710,7 +710,7 @@ Some questions to help you consider whether your folder structure is sensible ar
 
 - Are all documentation, code and outputs for the publication saved in one folder area?
 - Is simple version control clearly applied (e.g. having all final files in a folder named "final"?
-- Are there subfolders like 'code', 'documentation'', 'outputs' and 'final' to save the relevant working files in? 
+- Are there sub-folders like 'code', 'documentation'', 'outputs' and 'final' to save the relevant working files in? 
 - Are you keeping a version log up to date with any changes made to files in this final folder?
 
 ---
@@ -753,9 +753,11 @@ If in doubt, take a look at this [presentation](https://speakerdeck.com/jennybc/
 
 **What does this mean?**
 
-You should be annotating as you go, ensuring that every process and decision made is written down. Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team.
+- You should be annotating as you go, ensuring that every process and decision made is written down. Processes are ideally written with code, and decisions in comments. 
 
-Ultimately your documentation should allow another analyst from a different area to pick up your process and use it. There should be a [README](#writing-a-readme-file) notes file, that clearly details the steps in the process, any dependencies (such as places where access needs to be requested to) and how to carry out the process. Any specialist terms should also be defined if required (e.g. The NFTYPE lookup can be found in xxxxx. "NFTYPE" means school type).
+- There should be a [README](#writing-a-readme-file) notes file, that clearly details the steps in the process, any dependencies (such as places where access needs to be requested to) and how to carry out the process. 
+
+- Any specialist terms should also be defined if required (e.g. The NFTYPE lookup can be found in xxxxx. "NFTYPE" means school type).
 
 **Why do it?**
 
@@ -763,7 +765,7 @@ When documenting your processes you should leave nothing to chance, we all have 
 
 **How to get started**
 
-Look at your current publications and imagine you have a new starter who understands the tools you've used but has never worked in your area before, and then review if you have documented your processes in a way that they could pick it up without assistance from your or anyone else.
+Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don't feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team.
 
 Take a look at the sections below for further guidance on improving your documentation.
 
@@ -878,7 +880,7 @@ We have a specific area set up for you to host your publication code in. More de
 
 **Why do it?**
 
-<!-- because it's the best thing since sliced bread? -->
+Using git allows multiple people to simultaneously develop the same code using branches, all with a crystal clear audit trail showing what changes were made when using commits. It makes it easy for team members to review changes via pull requests.
 
 **How to get started**
 
