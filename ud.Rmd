@@ -79,9 +79,9 @@ For publishing on EES specifically, please note the following points:
 
 ---
 
-You should publish as many years of data that you have. If you have at least 3 years of data then you should be publishing 3 years at a bare minimum, though ideally as much as is practicable.
+You should publish as many years of data that you have and is practicable to do so. 
 
-There will be scenarios were significant methodological changes impact the ability to have all of your data in a single file, and in these cases it is practical to use a 'cut-off' point.
+There will be scenarios were significant methodological changes impact the ability to have all of your data in a single file, and in these cases it may be practical to use a 'cut-off' point and link to any older publications containing data before that cut-off. These cut off points should be 4 or more years going backwards. We expect a minimum of 3 years of data in all time-series where it exists.
 
 If you are not providing a full timeseries, make sure that any old published data is linked to from your publication, and that it's omission is explained in your methodology and metadata documents.
 

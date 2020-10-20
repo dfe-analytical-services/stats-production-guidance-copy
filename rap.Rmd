@@ -90,7 +90,7 @@ Teams will start from different places and implement changes at different rates,
 ---
 
 
-The checklist provided in the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} is designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag areas that require improvement, and you can then use the links or sidebar to go to the specific section with more detail and guidance on how to meet the expectation.
+The checklist provided in the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} is designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag potential areas of improvement, and you can then use the links to go to the specific section with more detail and guidance on how to develop your current processes in line with best practice.
 
 
 Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points, and are here to support all teams from their respective starting positions.
@@ -536,7 +536,7 @@ If you can't answer yes, then:
 
 **What does this mean?**
 
-- Has someone from outside of the team and publication are reviewed the code and given feedback? 
+- Has someone from outside of the team and publication area reviewed the code and given feedback? 
 
 - Have you taken on their feedback and improved the code?
 
@@ -855,7 +855,7 @@ For now, take a look at at the [resources for learning Git](l+d.html#git) on the
 
 **What does this mean?**
 
-This means having the final copies of code and documentation saved in a git-controlled Azure DevOps repo in the DISD Publications area.
+This means having the final copies of code and documentation saved in a git-controlled Azure DevOps repo in the official-statistics-production area.
 
 **Why do it?**
 
@@ -865,7 +865,7 @@ Having the final copy of the scripts version controlled gives assurance around h
 
 The first step is to get your final versions of code and documentation together in a single folder.
 
-We have a specific area set up for you to host your publication code in. More details on how to set this up will follow shortly, in the meantime please contact us if you're interested in this.
+We have a specific area set up for you to host your publication code in on the dfe-gov-uk instance of Azure DevOps, entitled official-statistics-production. More details on how to set this up will follow shortly, in the meantime please contact us if you're interested in this.
 
 ---
 
