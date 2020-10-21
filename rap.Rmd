@@ -366,8 +366,7 @@ More to follow, in the meantime please contact us for advice.
 
 **What does this mean?**
 
-All quality assurance for a file is also included in the single script that can be used to create a file from source data. Even better is to have all automated summaries generated from there too, 
-
+All quality assurance for a file is also included in the single script that can be used to create a file from source data.
 
 **Why do it?**
 
@@ -388,7 +387,7 @@ More to follow, in the meantime please contact us for advice.
 
 **What does this mean?**
 
-The ultimate aim is to utilise a single script to run off everything for a publication. This script should allow you to run individual outputs by themselves as well, so make sure that each data file can be run in isolation by running single lines of this script.
+The ultimate aim is to utilise a single script to run off everything for a publication, the data files, any QA, any summary reports. This script should allow you to run individual outputs by themselves as well, so make sure that each data file can be run in isolation by running single lines of this script.
 
 **Why do it?**
 
