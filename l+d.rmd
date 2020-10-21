@@ -12,11 +12,7 @@ title: "Tools and learning resources"
 
 As statistics producers we require a variety of tools to be able to process our data, and as you probably know, there are a wealth of them out there to process and analyse data.
 
-As a part of developing resources to help us integrate the principle of RAP into our processes, it is important that we set a clear direction on what tools we will be actively supporting teams to use. Below are the recommended tools that will give us the most power to do what we need, and are the best supported with resources for developing the necessary skills to use them. These have large user communitites in DfE, and are already working in our current IT setup.
-
-<div class="alert alert-dismissible alert-info">
-Teams are welcome to use whatever tools they want, as long as the proccesses involved meet the [principles of RAP](rap.html#core_principles){target="_blank"}.
-</div>
+As a part of developing resources to help us integrate the principle of RAP into our processes, it is important that we set a clear direction on what tools we will be actively supporting teams to use. Below are the recommended tools that will give us the most power to do what we need, and are the best supported with resources for developing the necessary skills to use them. These have large user communities in DfE, and are already working in our current IT setup.
 
 ---
 
@@ -24,17 +20,21 @@ Teams are welcome to use whatever tools they want, as long as the proccesses inv
 
 ---
 
+<div class="alert alert-dismissible alert-info">
+Teams are welcome to use whatever tools they want, as long as the processes involved meet the [principles of RAP](rap.html#core_principles){target="_blank"}.
+</div>
+
 **Database management - Microsoft SQL Server Management Studio and SQL (Structured Query Language)**
 
 - SQL servers are where most of DfE's data is held, and with a wide usage community already in place and a language that is pleasantly intuitive and easy to use, it is an obvious choice for this task. The majority of us already have Microsoft SQL Server Management Studio (MSSMS) downloaded through the software centre. Moreover, SQL allows us to do enough manipulation and analysis to production some of our publications. Note that SQL is the language, and MSSMS is the environment that we mostly use to write and run it in DfE.
 
 **Data manipulation and analysis - RStudio and R** 
 
-- We recommend to use R where SQL can't do everything that you need in terms of manipulation and analysis. It is also an extremely powerful tool to use when creating data visualisations. R already has a strong community within DfE, it can pull in data stored in SQL servers and integrate SQL queries, as well as being a leading language in the world of analyis and data. R (the language), RStudio (the best environment to write and run R), and RTools (a useful package), are all available from the software centre.
+- We recommend to use R where SQL can't do everything that you need in terms of manipulation and analysis. It is also an extremely powerful tool to use when creating data visualisations. R already has a strong community within DfE, it can pull in data stored in SQL servers and integrate SQL queries, as well as being a leading language in the world of analysis and data. R (the language), RStudio (the best environment to write and run R), and RTools (a useful package), are all available from the software centre.
 
-**Version control - AzureDevOps and Git** 
+**Version control - Azure DevOps and Git** 
 
-- Version control can be implemented through having a sensible folder structure and clear file naming conventions, however we do recommend that in the longer term we move towards to using Git to help us version control the code that we write. It is widely used across DfE and integrates neatly with our use of Azure DevOps, as well as being the current leading version control software in the world of coding with over [87% of 74,298 stack overflow users using it](https://insights.stackoverflow.com/survey/2018#work-_-version-control){target="_blank"}. To highlight the scale of this dominance, Subversion came in in second place at a paltry 16%.
+- Version control can be implemented through having a sensible folder structure and clear file naming conventions, however we do recommend that in the longer term we move towards to using Git to help us version control the code that we write. It is widely used across DfE and integrates neatly with our use of Azure DevOps, as well as being the current leading version control software in the world of coding with over [87% of 74,298 stack overflow users using it](https://insights.stackoverflow.com/survey/2018#work-_-version-control){target="_blank"}. To highlight the scale of this dominance, Subversion came in in second place at a paltry 16%. As far as making repositories publicly accessible is concerned we can easily mirror our repositories in the DfE Analytical Services area on [GitHub](https://github.com/dfe-analytical-services){target="_blank"}.
 
 ---
 
@@ -92,6 +92,28 @@ SQL provides us with an intuitive language to query databases and manipulate the
 
 ---
 
+## SQL bitesize sessions
+
+---
+
+Andy Brook's excellent Introduction to SQL session, giving a visual overview of the basics of querying with SQL:
+
+<div align="center">
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/2a42789f-5183-4a79-b159-ec4a46e530d7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+</div>
+
+
+---
+
+Andy's follow up 'intermediate' session, covering more advanced features of SQL:
+
+<div align="center">
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+</div>
+
+
+---
+
 # R
 
 ---
@@ -119,6 +141,7 @@ Once you've downloaded RStudio, R, and RTools from the software centre, you can 
     + Finally, [importing data into R](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf){target="_blank"}
 
 
+- Handy guide to [collapsing and sectioning R code](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank"} for easy navigation in RStudio.
 
 - Here are [5 handy tidyverse functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank"} that you should know if you're using R to process data. Number two is especially useful for those processing wide data into a tidy format!
 

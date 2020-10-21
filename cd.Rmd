@@ -37,6 +37,13 @@ All our releases should be targeted at the ‘inquiring citizen’ type user and
 
 ---
 
+# Content checklist
+
+---
+
+A checklist to use when reviewing content will appear here shortly.
+
+---
 
 # Structure within EES
 
@@ -251,6 +258,16 @@ If needed, you can use the 'upload an infographic as an alternative' option to u
 <div class="alert alert-dismissible alert-info">
 DfE specific best practice guidance and advice on visualisations will be added here in due course. In the meantime, here is the latest GSS-wide [guidance on visualising data](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank"}.
 </div>
+
+---
+
+# Peer review
+<!-- keep this heading the same on this page, even if moved, as the self-assessment tool links from it -->
+
+---
+
+Peer review is an important element of quality assuring our work. We often do it without realising by bouncing ideas off of one another and by getting others to 'idiot check' our work. When writing content, ensuring that we get our work formally peer reviewed is particularly important for ensuring it's clarity and value. Can others easily understand what you've written? Does it all feel important and worth writing about to them? 
+More will follow in this space, though in the meantime please contact us if you're interested in having your content peer reviewed.
 
 ---
 
