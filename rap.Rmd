@@ -110,8 +110,13 @@ Most teams have already made progress with their production of tidy data files, 
 
 The key now is for us to build on the work so far and focus on how we improve the quality and efficiency of our production processes up to that point. To do this, we need to make a concerted effort to standardise how we store and access our data, before then automating what we can to reduce the burden of getting the numbers ready and see the benefits of RAP. The exact meaning of this will vary within teams.
 
+---
 
+## How to get started
 
+---
+
+The Statistics Development Team invites teams to take part in our partnership programme to develop their skills and implement RAP principles to a relevant project. Visit our page on  [getting started with the partnership programme](l+d.html#Getting-started) for more details.
 
 ---
 
