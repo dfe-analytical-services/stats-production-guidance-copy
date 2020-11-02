@@ -206,7 +206,7 @@ Git is a version control software that tracks changes to files within a folder t
 For more information on how to use these tools in your production processes, please see the [production processes](rap.html){target="_blank"} page.
 
 
-This is by no means a finite list of resources, we want this to be added to and for it to develop over time - if you have any resources that you think could be added then we'd love to [hear from you](mailto:explore.statistics@education.gov.uk). 
+This is by no means a finite list of resources, we want this to be added to and for it to develop over time - if you have any resources that you think could be added then we'd love to [hear from you](mailto:statistics.development@education.gov.uk). 
 
 
 If you are stuck at all, have any questions, want to find a resource, or even just want a second pair of eyes to double check something, contact us using the envelope in the top right corner and we'll be more than happy to help.
