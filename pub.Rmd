@@ -89,7 +89,7 @@ Public - https://explore-education-statistics.service.gov.uk/
 
 Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
-To be invited to the service for full access teams need to email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this respsonsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform.
+To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this respsonsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform.
 
 At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
 
@@ -103,7 +103,7 @@ Admin pre-production - https://admin.pre-production.explore-education-statistics
 
 Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
 
-Analysts are able to test the service within the EES pre-production environment, and it is recommended that production teams start here until they are confident they know how they want to build their release for real (again, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) to request access).
+Analysts are able to test the service within the EES pre-production environment, and it is recommended that production teams start here until they are confident they know how they want to build their release for real (again, please contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) to request access).
 
 When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
@@ -135,7 +135,7 @@ Please note that the pre-production environment is not suitable for unpublished 
 
 ---
 
-Before releasing statistics for the first time you may want to discuss the new process with key stakeholders and/or pre-release users to make them aware of the new service. You should also inform the [Statistics Development](mailto:explore.statistics@education.gov.uk) and [HoP Office](mailto:Hop.STATISTICS@education.gov.uk) teams.
+Before releasing statistics for the first time you may want to discuss the new process with key stakeholders and/or pre-release users to make them aware of the new service. You should also inform the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) and [HoP Office](mailto:Hop.STATISTICS@education.gov.uk) teams.
 
 Before you start creating a release in the platform you should have: 
 
@@ -250,14 +250,14 @@ The main requirement to be able to do this is having your data prepared.
 
 If you have gone through the flowchart above and feel that you are ready to republish something on Explore Education Statistics, then we are here to help you do that. You have two options:
 
-1. The [Statistics Development Team](mailto:explore.statistics@education.gov.uk) can mock up a first draft in the platform for you to then review and edit. For this to happen you'll need to send us the following:
+1. The [Statistics Development Team](mailto:statistics.development@education.gov.uk) can mock up a first draft in the platform for you to then review and edit. For this to happen you'll need to send us the following:
    - Details of the release you want to republish
    - Underlying data files that have passed the screening checks
    - The link to the pdf commentary you previously published
    - The link to the methodology you previously published
    - Any other documents or information relating to the publication 
 
-2. [Contact us](mailto:explore.statistics@education.gov.uk) for permission to access the production environment, telling us about the release you plan to republish, then build your release following the checklist below:
+2. Contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) for permission to access the production environment, telling us about the release you plan to republish, then build your release following the checklist below:
    * Run your data and metadata through our screener checks
    * Upload your data to your release on EES
    * Write footnotes
@@ -270,7 +270,7 @@ If you have gone through the flowchart above and feel that you are ready to repu
 <div class="alert alert-dismissible alert-info">
 Word templates for the external metadata, pra-list, and content can be found on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy){target="_blank"}.
  
-If you're ready to recreate a previous gov.uk release on EES please email the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
+If you're ready to recreate a previous gov.uk release on EES please email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk).
 
 </div>
 
