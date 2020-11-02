@@ -16,7 +16,7 @@ navbar:
       href: ees.html
   right:
     - icon: fa-envelope-o
-      href: mailto:Explore.STATISTICS@education.gov.uk
+      href: mailto:statistics.development@education.gov.uk
 output:
   html_document:
     toc: TRUE
