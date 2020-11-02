@@ -280,7 +280,7 @@ There are no hard rules to follow on content design and the layout of individual
 
 We’re all well-practiced at breaking complex results down into simple messages whether it’s for inducting new starters, providing briefing for new Ministers, or explaining our work for friends and family – we just need to apply the same standards to our headline reporting.
 
-For those looking for more targeted advice and support there’s a DfE Content Design Champions Group and we’re open to offering direct feedback and scrum sessions to review publications if there’s sufficient demand. Contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk) if you're interested in these or would like any advice.
+For those looking for more targeted advice and support there’s a DfE Content Design Champions Group and we’re open to offering direct feedback and scrum sessions to review publications if there’s sufficient demand. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you're interested in these or would like any advice.
 
 More detailed advice and guidance on content design best practice is available from a number of resources across Government and beyond:
 
