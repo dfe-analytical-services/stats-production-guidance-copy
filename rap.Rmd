@@ -34,7 +34,7 @@ In Official Statistics production we are using RAP as a framework for best pract
 
 Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help up-skill in those areas, see our [learning resources](l+d.html) page.
 
-The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:explore.statistics@education.gov.uk).
+The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:statistics.development@education.gov.uk).
 
 ---
 
@@ -77,7 +77,7 @@ The diagram below highlights what RAP means for us, and the varying levels in wh
 ---
 
 <div class="alert alert-dismissible alert-info">
-Teams are expected to review their own processes using the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} and use the guidance on this site to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
+Teams are expected to review their own processes using the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} and use the guidance on this site to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
 </div>
 
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
@@ -110,8 +110,13 @@ Most teams have already made progress with their production of tidy data files, 
 
 The key now is for us to build on the work so far and focus on how we improve the quality and efficiency of our production processes up to that point. To do this, we need to make a concerted effort to standardise how we store and access our data, before then automating what we can to reduce the burden of getting the numbers ready and see the benefits of RAP. The exact meaning of this will vary within teams.
 
+---
 
+## How to get started
 
+---
+
+The Statistics Development Team invites teams to take part in our partnership programme to develop their skills and implement RAP principles to a relevant project. Visit our page on  [getting started with the partnership programme](l+d.html#getting_started) for more details.
 
 ---
 
@@ -247,7 +252,7 @@ More guidance on this follow, for now, here is a [SQL query](https://github.com/
 More will follow here, for now, [here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
 
-Using the `%>%` pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren't yet familiar with this, have a look at [this article](https://seananderson.ca/2014/09/13/dplyr-intro/){target="_blank"} that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you want to do within a pipe, googling 'how do I do X in dplyr r' will usually start to point you in the right direction, alternatively you can [contact us](mailto:explore.statistics@education.gov.uk), and we'll be happy to help you figure out how to do what you need.
+Using the `%>%` pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren't yet familiar with this, have a look at [this article](https://seananderson.ca/2014/09/13/dplyr-intro/){target="_blank"} that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you want to do within a pipe, googling 'how do I do X in dplyr r' will usually start to point you in the right direction, alternatively you can [contact us](mailto:statistics.development@education.gov.uk), and we'll be happy to help you figure out how to do what you need.
 
 A quick example of how powerful this is is below, where my_data is processed to create new columns, have column names renamed, have the column names tidied using the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package, blank rows and columns removed, data filtered to only include specific geographic levels, and rows rearranged in order, all in a few lines of easy to follow code:
 
