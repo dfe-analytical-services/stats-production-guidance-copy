@@ -147,7 +147,7 @@ The document will automatically update as you add new data files to your release
 
 A list of variables in each file with an associated label (taken from metadata uploads) will also be displayed with each file. 
 
-This template follows a similar format to our previous recommended [metadata template](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy) so for most releases this will be a copy/paste exercise. 
+This template follows a similar format to our previous recommended [metadata template](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy) so for most publications this will involve a copy/paste from existing content. 
 
 `r knitr::include_graphics("images/admin-public-meta-detail.PNG")`
 
