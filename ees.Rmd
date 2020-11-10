@@ -93,14 +93,18 @@ Once you have created your release you will see enter the ‘create release dash
 
 ---
 
-# Uploading data
+# Uploading data and files
 
 ---
+
+`r knitr::include_graphics("images/data-and-files.PNG")`
+
+## Data uploads
 
 Here you will update your tidy data files and accompanying metadata. You need to make sure that the data has passed through our data screener checks before trying to upload it. 
 
 <div class="alert alert-dismissible alert-info">
-  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that only consist of these levels should be uploaded as an ancillary file, rather than as a data file.
+Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that only consist of these levels should be uploaded as an ancillary file, rather than as a data file.
 </div>
 
 Once you click to upload the file a ‘Status’ will be visible that shows the progress of the import process. It will go through the following stages:
@@ -115,6 +119,44 @@ This may take a little while depending on the size of your file and if there are
 <div class="alert alert-dismissible alert-warning">
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
 </div>
+
+
+## Ancillary file uploads
+
+Any files you want to make available for users to download but aren't intended the table tool should be added as an ancillary file upload. These files will need to meet all requirements of the new [accesibility regulations](https://www.gov.uk/guidance/publishing-accessible-documents) before they can be published. 
+
+Examples of ancillary files may be: 
+
+* Infographic pages
+* Supplementary data that isn't intended for the table tool 
+* Additional technical documentation
+* Images
+
+<div class="alert alert-dismissible alert-info">
+Any data files that only consist of Planning area, School, Provider, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
+</div>
+
+
+## Metadata guidance
+
+Here you should also create your [public metadata](https://explore-education-statistics.service.gov.uk/find-statistics/permanent-and-fixed-period-exclusions-in-england/meta-guidance) guidance document, this replaces the information that would have previously been uploaded as a pdf and is designed to help users understand and use the data they download from your release.
+
+`r knitr::include_graphics("images/admin-public-meta-start.PNG")`
+
+The document will automatically update as you add new data files to your release, however you will need to add an overview of all the data included in the release and short summaries for each data file before the release can be published. 
+
+A list of variables in each file with an associated label (taken from metadata uploads) will also be displayed with each file. 
+
+This template follows a similar format to our previous recommended [metadata template](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy) so for most releases this will be a copy/paste exercise. 
+
+`r knitr::include_graphics("images/admin-public-meta-detail.PNG")`
+
+<div class="alert alert-dismissible alert-warning">
+Releases cannot be published without a completed metadata document.
+</div>
+
+`r knitr::include_graphics("images/admin-public-meta-signoff-error.PNG")`
+
 
 ---
 
