@@ -158,6 +158,35 @@ Releases cannot be published without a completed metadata document.
 `r knitr::include_graphics("images/admin-public-meta-signoff-error.PNG")`
 
 
+## Replacing data
+
+If you notice a mistake in your data file you can replace it with another.
+
+`r knitr::include_graphics("images/replace-data-start.PNG")`
+
+When replacing a data file the platform will attempt to recreate any data blocks and footnotes that were built using the previous file.
+
+The first step is to upload the new file.
+
+`r knitr::include_graphics("images/replace-data-step1.PNG")`
+
+One you've chosen and uploaded your replacement file it will need to go through the usual import process before it can check if retaining existing data blocks and footnotes will be possible,
+
+`r knitr::include_graphics("images/replace-data-step2.PNG")`
+
+Once the upload is finished a report will appear which highlights whether existing data blocks and footnotes can be replaced successfully. If you want to keep any data blocks and footnotes you've built you will need to make sure that your replacement data file still contains the information (indicators, filters, geographic_levels and time_periods) that was used to create them.
+
+`r knitr::include_graphics("images/replace-data-success.PNG")`
+
+If it's not possible for a data block or footnote to be recreated using the replacing data file a warning will appear and you'll be prompted to either edit or delete them before completing the replacement.
+
+`r knitr::include_graphics("images/replace-data-fail.PNG")`
+
+<div class="alert alert-dismissible alert-danger">
+Remember to double check any data blocks or footnotes that were recreated by the platform before publishing your release.
+</div>
+
+
 ---
 
 # Adding footnotes
