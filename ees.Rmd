@@ -172,7 +172,7 @@ The first step is to upload the new file.
 
 `r knitr::include_graphics("images/replace-data-step1.PNG")`
 
-One you've chosen and uploaded your replacement file it will need to go through the usual import process before it can check if retaining existing data blocks and footnotes will be possible,
+One you've chosen and uploaded your replacement file it will need to go through the usual import process before it can check if retaining existing data blocks and footnotes will be possible.
 
 `r knitr::include_graphics("images/replace-data-step2.PNG")`
 

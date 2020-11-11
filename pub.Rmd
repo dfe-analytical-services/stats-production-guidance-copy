@@ -144,14 +144,14 @@ Before you start creating a release in the platform you should have:
 * Contacted the BAU team so we can support you with your first release
 * Produced your tidy csv data files with appropriate disclosure control
 * Produced metadata files for each csv data file
-* Ran your data and metadata through our screener checks
+* Ran your data and metadata through our [screener checks](https://rsconnect/rsc/dfe-published-data-qa/) 
 
 Before you publish a release you have created in the platform you should have: 
 
 * Checked all the data has loaded successfully
 * Written footnotes
 * Written content (including tables and charts)
-* Attached a public metadata document
+* Created a public metadata document
 * Created a public pre-release access list
 * Ensured methodology information is either linked off to or attached to the release
 * Passed the release for higher review (senior sign-off)
