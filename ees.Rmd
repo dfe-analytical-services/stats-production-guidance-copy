@@ -155,7 +155,7 @@ This template follows a similar format to our previous recommended [metadata tem
 Releases cannot be published without a completed metadata document.
 </div>
 
-`r knitr::include_graphics("images/public-meta-signoff-error.PNG")`
+`r knitr::include_graphics("images/public-metadata-signoff-error.PNG")`
 
 
 ## Replacing data
