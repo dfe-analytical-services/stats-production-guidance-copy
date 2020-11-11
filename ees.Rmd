@@ -101,8 +101,6 @@ Once you have created your release you will see enter the ‘create release dash
 
 ---
 
-`r knitr::include_graphics("images/data-and-files.PNG")`
-
 ## Data uploads
 
 Here you will update your tidy data files and accompanying metadata. You need to make sure that the data has passed through our data screener checks before trying to upload it. 
@@ -119,6 +117,8 @@ Once you click to upload the file a ‘Status’ will be visible that shows the 
 * Complete
 
 This may take a little while depending on the size of your file and if there are numerous files queued for import. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
+
+For data files greater than 80mb we recommend uploading as a ZIP file.
 
 <div class="alert alert-dismissible alert-warning">
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
