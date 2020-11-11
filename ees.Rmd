@@ -339,11 +339,11 @@ You can create static html tables for presenting information that isn't embedded
 
 ---
 
-# Changing release status
+# Signing off a release
 
 ---
 
-Once you’re happy with your release you need to change it’s status in order to move it through the release pipeline. 
+Once you’re happy with your release you need to go to the sign off page and change it’s status in order to move it through the release pipeline.
 
 There are three statuses:
 
@@ -359,11 +359,11 @@ Only users with ‘responsible statistician’ permissions (usually G6 or above)
 
 **How to approve a release**
 
-Releases are approved via the release status tab. The release date is also set during this stage of the process. 
+Releases are approved via the sign off tab. The release date is also set during this stage of the process. 
 
 `r knitr::include_graphics("images/ees-approving-release.PNG")`
 
-The approver also has the ability to approve the release to ‘publish as soon as possible’ instead of scheduling the release for a specific day, this is primarily intended for when publishing amendments to existing releases. 
+The approver has the ability to approve the release to be published on a specific date or to publish as soon as possible. Publishing as soon as possible is useful for publishing amendments to existing releases. 
 
 ---
 
