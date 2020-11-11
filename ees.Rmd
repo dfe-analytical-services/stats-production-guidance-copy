@@ -365,6 +365,10 @@ Releases are approved via the sign off tab. The release date is also set during 
 
 The approver has the ability to approve the release to be published on a specific date or to publish as soon as possible. Publishing as soon as possible is useful for publishing amendments to existing releases. 
 
+<div class="alert alert-dismissible alert-info">
+This page also gives you the expected release url which may be useful to know for other things, for example, sending to the webteam to add to your gov.uk announcement page. 
+</div>
+
 ---
 
 # Pre-release
@@ -402,10 +406,6 @@ You should also create the public facing pre-release access page by clicking the
 After creating your pre-release access list a text editor will appear where you can list the roles that have been given early access to the release. This list will then appear in the list of file downloads at the top of each release. 
 
 `r knitr::include_graphics("images/EES-create-public-pra-list.PNG")`
-
-<div class="alert alert-dismissible alert-info">
-This page also gives you the link where the public pre-release list will be accessible. This is the expected release url which may be useful to know for other things, for example, sending to the webteam to add to your gov.uk announcement page. 
-</div>
 
 
 ---
