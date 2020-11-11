@@ -80,13 +80,17 @@ For start of public beta, the Statistics Development Team are the only ones who 
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
 
-1.	Manage data (uploading data files and adding footnotes)
+1.	Data and files (uploading data files, ancillary files and creating public metadata)
 
-2.	Manage data blocks (creating summary tables, charts and key stats indicators)
+2.  Footnotes (creating footnotes and assigning to relevant data)
 
-3.	Manage content (drafting release content)
+2.	Data blocks (creating summary tables, charts and key stats indicators)
 
-4.	Release status (moving through the approval process)
+3.	Content (drafting release content)
+
+4.	Sign off (moving through the approval process)
+
+5.  Pre-release access (invite users to pre-release and create public pre-release list)
 
 
 `r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
