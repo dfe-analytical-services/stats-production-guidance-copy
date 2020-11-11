@@ -258,11 +258,11 @@ If you have gone through the flowchart above and feel that you are ready to repu
    - Any other documents or information relating to the publication 
 
 2. Contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) for permission to access the production environment, telling us about the release you plan to republish, then build your release following the checklist below:
-   * Run your data and metadata through our screener checks
+   * Run your data and metadata through our [screener checks](https://rsconnect/rsc/dfe-published-data-qa/)
    * Upload your data to your release on EES
    * Write footnotes
    * Create content (including tables and charts)
-   * Attach a public metadata document
+   * Create a public metadata document
    * Ensure methodology information is either linked off to or attached to the release
    * Passed the release for higher review (senior sign-off)
    * Scheduled the release date
