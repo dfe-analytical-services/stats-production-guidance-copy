@@ -155,14 +155,14 @@ This template follows a similar format to our previous recommended [metadata tem
 Releases cannot be published without a completed metadata document.
 </div>
 
-`r knitr::include_graphics("images/admin-public-meta-signoff-error.PNG")`
+`r knitr::include_graphics("images/public-meta-signoff-error.PNG")`
 
 
 ## Replacing data
 
 If you notice a mistake in your data file you can replace it with another.
 
-`r knitr::include_graphics("images/replace-data-start.PNG")`
+`r knitr::include_graphics("images/replace-data-start.png")`
 
 When replacing a data file the platform will attempt to recreate any data blocks and footnotes that were built using the previous file.
 
