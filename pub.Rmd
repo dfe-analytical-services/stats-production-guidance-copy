@@ -196,7 +196,7 @@ Here are examples of how the page will look like:
 
 
 <div class="alert alert-dismissible alert-info">
-You can find what the link to your EES release will be by looking at the 'Public pre-release access list' page within the release release dashboard on EES.
+You can find what the link to your EES release will be by looking at the 'Sign off' page within the release dashboard on EES.
 </div>
 
 `r knitr::include_graphics("images/EES-public-url.PNG")`
