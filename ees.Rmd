@@ -211,7 +211,7 @@ If you'd rather, you can assign a footnote to the whole data file by ticking thi
 You can assign footnotes across multiple data files.  
 
 <div class="alert alert-dismissible alert-danger">
-We recommend only add footnotes once you are certain the data file is final. If you have to delete the data file, all the assigned footnotes will be deleted alongside it.
+We recommend that you only add footnotes once you are certain the data file is final. If you have to delete the data file, all the assigned footnotes will be deleted alongside it.
 </div> 
 
 ---
