@@ -4,11 +4,11 @@ navbar:
   left:
     - text: "Learning Resources"
       href: l+d.html
-    - text: "Production Processes"
+    - text: "Processes and RAP"
       href: rap.html
     - text: "Data Standards"
       href: ud.html
-    - text: "Content Standards"
+    - text: "Content Design"
       href: cd.html
     - text: "Publishing Statistics"
       href: pub.html
