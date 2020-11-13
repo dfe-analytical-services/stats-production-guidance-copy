@@ -20,7 +20,7 @@ Guidance for how to process data, including the principles of Reproducible Analy
 * [Data standards](ud.html)  
 Guidance on how to structure data files
 
-* [Content design](cd.html)  
+* [Writing content](cd.html)  
 Best practice for content design
 
 * [Publishing statistics](pub.html)  
