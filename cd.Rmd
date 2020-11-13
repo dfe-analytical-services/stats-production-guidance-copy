@@ -54,6 +54,16 @@ A content checklist, which breaks down the components of producing Best Practice
 
 ---
 
+## Aiming for Best Practice
+
+---
+
+Through the aid of this guidance we want producers of official statistics to be aiming for Best Practice. However, it is important to be realistic about what can be achieved with the tools we have available and identifying where the gaps are whilst finding solutions to make the necessary improvements. This check list should help teams identify what more could be done to take them to achieve Best Practice. The Central Statistics and Standards Unit will be on hand to help with this process. 
+
+Further information on each point can be obtained from the [GSS writing about Statistics: Guide for Producers](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/#page){target="_blank"}.
+
+---
+
 ## Writing about Statistics
 
 ---
@@ -66,10 +76,12 @@ People who write about statistics should seek to conduct a coherent statistical 
       c. Do you know who your users are and what they need (not want)?
 
 
+
 (2) **What are you going to say about the story - have you highlighted the key trends, big changes and explained them where appropriate, whilst using numbers in text sparingly?**
       a. **Interpretation** – why is it happening? Why are we seeing these changes? Is the series we’re looking at influenced by another factor
       b. **Context** – why is it interesting? Help the audience understand whether the numbers you’re describing are big/small, good/bad etc. Where possible place new figures in the context of longer-term trends; relevant policies or targets; international comparisons; any key limitations etc.
       c. Don’t treat it as an update to a previous iteration
+
 
 
 (3) **How are you going to tell the story– it should be concise, focus on the most interesting points and be intelligible for a lay reader?**
@@ -86,6 +98,7 @@ People who write about statistics should seek to conduct a coherent statistical 
       k. **Short paragraphs** - avoid large blocks of text, they are very hard to read and users end up scanning text and missing detail.
       l. **Tone** - Use active voice	
       m. **Balance accuracy and clarity** – from GSS guidance - Users will understand that even with a well understood term like “unemployment” there are detailed classificatory decisions taken. These do not need to be spelt out in the main messages.
+
 
 
 (4) **Check what you have written**
@@ -116,7 +129,7 @@ There have been no numbers presented yet, just a statement that establishes the 
 
 ---
 
-## Reporting and interpreting numbers
+# Reporting and interpreting numbers
 
 <p class="text-muted">Summarising patterns from tables and charts</p>
 
@@ -131,16 +144,6 @@ The description above simply lists statistics from charts without explaining how
 **Better**: “The total number of homicides rose until the mid-2000s and then declined until 2020. As shown in Figure 1, the increase and subsequent decrease in homicides were driven by trends in gun-related homicides. In 2020, there was roughly 1.5 times as many homicides were committed with guns as with other types of weapons (11,000 versus 7265; Figure 1); whereas in 2010, roughly 2 times as many homicides were committed with guns versus other weapons, 13000 and 6500, respectively.  Figure 2 examines whether gun-related homicides showed the same time trend among all age groups. As shown in Figure 2 in the two youngest groups of offenders, gun-related homicides increased substantially between 2000 and 2010, and then decreased steadily until 2020. In contrast, the number of gun related homicides committed by older offenders decreased slowly throughout the time-period shown”.  
 
 Try to use prose to summarise the patterns so your user can see the general relationship in the table or chart – the forest not the individual trees. Try not to report every number from the table or chart or pick a few arbitrary numbers to contrast in sentence form without considering whether or not those numbers represent an underlying general pattern. Paint the big picture rather than reiterating all the little details. This will help you tell a clear story with numbers as evidence. 
-
----
-
-# Aiming for Best Practice
-
----
-
-Through the aid of this guidance we want producers of official statistics to be aiming for Best Practice. However, it is important to be realistic about what can be achieved with the tools we have available and identifying where the gaps are whilst finding solutions to make the necessary improvements. This check list should help teams identify what more could be done to take them to achieve Best Practice. The Central Statistics and Standards Unit will be on hand to help with this process. 
-
-Further information on each point can be obtained from the [GSS writing about Statistics: Guide for Producers](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/#page){target="_blank"}.
 
 ---
 
