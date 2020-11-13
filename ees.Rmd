@@ -125,6 +125,20 @@ To request a change to the contact details for a publication contact the [Explor
 
 Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be written to cover all releases for the given publication within the service. 
 
+If you want to request a new publication, please be prepared to give the following:
+
++ The heading and subheading that you want the publication to sit under in our site (take a look at the current structure [here](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank"}), feel free to either use existing ones, or suggest new ones
++ The exact title of the publication
++ If the methodology already exists elsewhere and you have a URL for it, or if you want to [create one](#Methodology)
++ Team name
++ Team email address
++ Lead statistician name
++ Lead statistician contact number
++ The [year](https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values){target="_blank"} of the release you’re creating
++ Whether they are National statistics, an ad-hoc publication, or official statistics
++ List of email addresses of analysts who need access to edit the release
++ Email address for whoever is providing [senior sign off](#Signing_off_a_release)
+
 ---
 
 # Create new release
@@ -309,7 +323,11 @@ Once file imports are complete move to manage data blocks tab and use the admin 
 
 Once you're happy with your table, give it a title and some source information before clicking save. 
 
-**Table highlights**
+---
+
+## Table highlights
+
+---
 
 You can also choose to highlight a data block table as a ‘top table’ which means it will show in a list of table highlights within the table tool. This is designed to help users get to tables of interest more quickly (without having to create tables themselves).
 
@@ -321,8 +339,11 @@ Each highlight table will then be listed to the user within the table tool. High
 
 `r knitr::include_graphics("images/EES-table-tool-highlights.PNG")`
 
+---
 
-**Fast track links**
+## Fast track links
+
+---
 
 Any data block tables that are created and saved within the admin app will also be assigned a ‘fast-track link’, this url can then be used throughout your release as a way to direct users to specific tables (within the table tool) more quickly so they can interact and explore the data further.  It will appear at the top of the page like this:
 
@@ -352,7 +373,11 @@ The first step to creating a chart is choosing the chart type, currently the EES
 
 After choosing your chart type you then need to work through the following stages and you’ll be shown a live preview as you go: 
 
-**Chart configuration**
+---
+
+## Chart configuration
+
+---
 
 Within the ‘chart configuration’ tab you can add a title, alt text, move the legend and change chart dimensions. 
 
@@ -360,13 +385,21 @@ Within the ‘chart configuration’ tab you can add a title, alt text, move the
 
 Note, within the vertical and horizontal bar chart types you can also create stacked bar charts via the chart configuration options.
 
-**Data sets**
+---
+
+## Data sets
+
+---
 
 Here is where you add data to the chart. Each series is added one at a time and can be styled individually using the ‘change styling’ options.
 
 `r knitr::include_graphics("images/EES-charts-add-data.PNG")`
 
-**X axis (major axis)**
+---
+
+## X axis (major axis)
+
+---
 
 Here is where you configure the x-axis: You can alter gridlines, labels, sort, limit and add reference lines.
 
@@ -384,8 +417,11 @@ Here is where you configure the x-axis: You can alter gridlines, labels, sort, l
 |Label |Add an axis label, you can also choose the width for the space given to it|
 |Reference lines |Add/remove  reference lines to the chart|
 
+---
 
-**Y axis (minor axis)**
+## Y axis (minor axis)
+
+---
 
 Then follow a similar process for the y axis configuration, play around until the chart looks how you want it to.
 
@@ -403,7 +439,11 @@ Then follow a similar process for the y axis configuration, play around until th
 |Label |Add an axis label, you can also choose the width for the space given to it|
 |Reference lines |Add/remove  reference lines to the chart|
 
-**Changing chart type**
+---
+
+## Changing chart type
+
+---
 
 If you create your chart and then change your mind as to what chart type would be best you can just click to change it and it will try to save all the options that you had applied previously.
 
@@ -415,7 +455,11 @@ You can create maps too, currently this is possible for regional, LA and LAD dat
 Remember to save your chart when you’re done.
 </div>
 
-**What to do if the chart you want to build is not possible**
+---
+
+## Other chart types
+
+---
 
 You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. If you have a an infographic or a chart that is too complex to build within our chart builder you can use the 'Choose an infographic as alternative' option to upload an image to your data block instead. These should be .svg format and you can use the sizing options within the data block editor to size your image appropriately. 
 
@@ -429,11 +473,17 @@ You should only use complex charts where there is a clear user need, as simple c
 
 In the manage content tab you can now start creating your release, embedding the datablocks you’ve created as you go. 
 
+<!-- potential for gif? --> 
+
 You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode.
+
+<!-- potential for gif? --> 
 
 Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. 
 
-Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock table - creating a table as a single number only.
+<!-- potential for gif? --> 
+
+Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock with a only a single number.
 
 `r knitr::include_graphics("images/key-stat.PNG")`
 
