@@ -38,14 +38,13 @@ A content checklist, which breaks down the components of producing Best Practice
 
 ---
 
-# Aims of Guidance and Checklist
+## Aims of Guidance and Checklist
 
 ---
 
 1. **Encourage people to follow agreed best practice**. We want to co-produce with statistics producers an agreed set of best practice principles using a range of existing resources. 
 
 2. **Help people tell the statistical story**. It is our responsibility, as experts, to describe the patterns and trends in our statistics objectively in a way that is clearly and easy to understand to a range of audiences. It is our role to give insight and show users what the numbers mean and convey the important messages appropriately. 
-
 
 3. **Improve consistency across DfE**. Developing best practice standards and adhering to those standards will promote quality products that users will find useful. 
 
@@ -55,7 +54,7 @@ A content checklist, which breaks down the components of producing Best Practice
 
 ---
 
-# Writing about Statistics
+## Writing about Statistics
 
 ---
 
@@ -66,10 +65,12 @@ People who write about statistics should seek to conduct a coherent statistical 
       b. What are the messages that will pull in the reader?
       c. Do you know who your users are and what they need (not want)?
 
+
 (2) **What are you going to say about the story - have you highlighted the key trends, big changes and explained them where appropriate, whilst using numbers in text sparingly?**
       a. **Interpretation** – why is it happening? Why are we seeing these changes? Is the series we’re looking at influenced by another factor
       b. **Context** – why is it interesting? Help the audience understand whether the numbers you’re describing are big/small, good/bad etc. Where possible place new figures in the context of longer-term trends; relevant policies or targets; international comparisons; any key limitations etc.
       c. Don’t treat it as an update to a previous iteration
+
 
 (3) **How are you going to tell the story– it should be concise, focus on the most interesting points and be intelligible for a lay reader?**
       a. Reading is hard, we want users to be able to find and reuse our lines.
@@ -85,6 +86,7 @@ People who write about statistics should seek to conduct a coherent statistical 
       k. **Short paragraphs** - avoid large blocks of text, they are very hard to read and users end up scanning text and missing detail.
       l. **Tone** - Use active voice	
       m. **Balance accuracy and clarity** – from GSS guidance - Users will understand that even with a well understood term like “unemployment” there are detailed classificatory decisions taken. These do not need to be spelt out in the main messages.
+
 
 (4) **Check what you have written**
       a. Look over your work
