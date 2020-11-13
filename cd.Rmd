@@ -70,21 +70,21 @@ Further information on each point can be obtained from the [GSS writing about St
 
 People who write about statistics should seek to conduct a coherent statistical inquiry about the relationship between the concepts under study. When communicating this to a general audience, statisticians must explain the answers in words that the audience can understand. Unfortunately, few courses teach how to write a clear narrative linking numeric evidence to substantive questions, or how to present statistics in words that non-statisticians can comprehend easily. This can leave general audiences struggling to understand what questions those numbers are intended to answer or what conclusions they support. Below are some high-level questions/statements that producers of statistics can ask themselves to help write engaging and clear narrative:
 
-(1) **Start with a blank canvas decide what you are going to talk about**
+1. **Start with a blank canvas decide what you are going to talk about**
       a. If you were briefing someone senior on the statistics, which statistics would you highlight?
       b. What are the messages that will pull in the reader?
       c. Do you know who your users are and what they need (not want)?
 
 
 
-(2) **What are you going to say about the story - have you highlighted the key trends, big changes and explained them where appropriate, whilst using numbers in text sparingly?**
+2. **What are you going to say about the story - have you highlighted the key trends, big changes and explained them where appropriate, whilst using numbers in text sparingly?**
       a. **Interpretation** – why is it happening? Why are we seeing these changes? Is the series we’re looking at influenced by another factor
       b. **Context** – why is it interesting? Help the audience understand whether the numbers you’re describing are big/small, good/bad etc. Where possible place new figures in the context of longer-term trends; relevant policies or targets; international comparisons; any key limitations etc.
       c. Don’t treat it as an update to a previous iteration
 
 
 
-(3) **How are you going to tell the story– it should be concise, focus on the most interesting points and be intelligible for a lay reader?**
+3. **How are you going to tell the story– it should be concise, focus on the most interesting points and be intelligible for a lay reader?**
       a. Reading is hard, we want users to be able to find and reuse our lines.
       b. **Headlines** – aim for 3-4 headline bullets summarising the key points from your release. Follow a 30second rule
       c. **Length** – aim for no more than 10 pages. Shorter publications are easier to read, write and QA. Follow a 10-minute rule – if it takes longer than that to read through the report then it’s unlikely that anyone will.
@@ -101,7 +101,7 @@ People who write about statistics should seek to conduct a coherent statistical 
 
 
 
-(4) **Check what you have written**
+4. **Check what you have written**
       a. Look over your work
       b. Get others who do not know subject area to review (within pre-release access rules)
 
