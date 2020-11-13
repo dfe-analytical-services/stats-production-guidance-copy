@@ -62,36 +62,33 @@ A content checklist, which breaks down the components of producing Best Practice
 People who write about statistics should seek to conduct a coherent statistical inquiry about the relationship between the concepts under study. When communicating this to a general audience, statisticians must explain the answers in words that the audience can understand. Unfortunately, few courses teach how to write a clear narrative linking numeric evidence to substantive questions, or how to present statistics in words that non-statisticians can comprehend easily. This can leave general audiences struggling to understand what questions those numbers are intended to answer or what conclusions they support. Below are some high-level questions/statements that producers of statistics can ask themselves to help write engaging and clear narrative:
 
 (1) **Start with a blank canvas decide what you are going to talk about**
-a. If you were briefing someone senior on the statistics, which statistics would you highlight?
-b. What are the messages that will pull in the reader?
-c. Do you know who your users are and what they need (not want)?
+      a. If you were briefing someone senior on the statistics, which statistics would you highlight?
+      b. What are the messages that will pull in the reader?
+      c. Do you know who your users are and what they need (not want)?
 
 (2) **What are you going to say about the story - have you highlighted the key trends, big changes and explained them where appropriate, whilst using numbers in text sparingly?**
-
-a. **Interpretation** – why is it happening? Why are we seeing these changes? Is the series we’re looking at influenced by another factor
-b. **Context** – why is it interesting? Help the audience understand whether the numbers you’re describing are big/small, good/bad etc. Where possible place new figures in the context of longer-term trends; relevant policies or targets; international comparisons; any key limitations etc.
-c. Don’t treat it as an update to a previous iteration
+      a. **Interpretation** – why is it happening? Why are we seeing these changes? Is the series we’re looking at influenced by another factor
+      b. **Context** – why is it interesting? Help the audience understand whether the numbers you’re describing are big/small, good/bad etc. Where possible place new figures in the context of longer-term trends; relevant policies or targets; international comparisons; any key limitations etc.
+      c. Don’t treat it as an update to a previous iteration
 
 (3) **How are you going to tell the story– it should be concise, focus on the most interesting points and be intelligible for a lay reader?**
-
-a. Reading is hard, we want users to be able to find and reuse our lines.
-b. **Headlines** – aim for 3-4 headline bullets summarising the key points from your release. Follow a 30second rule
-c. **Length** – aim for no more than 10 pages. Shorter publications are easier to read, write and QA. Follow a 10-minute rule – if it takes longer than that to read through the report then it’s unlikely that anyone will.
-d. **Sections** – aim for no more than 10, each focussed on a few key messages, ideally no more than one page in length
-e. **Structure** – use structure to tell a logical and consistent story
-f. **Methodology** – be upfront about important caveats but the majority of explanatory or technical content and detailed definitions can be moved to supporting documentation. Where necessary, explain rather than define key concepts
-g. **Charts** –At a high level, try to keep charts as simple as possible. Follow a 10 second rule – if it takes longer than this to intuitively understand the key messages, something has gone wrong in design. 
-h. **Concision** - Use as few words as possible Be brief, clear, and concise.
-i. **Short words** – use short, easy ‘plain English’ words people already know. Avoid jargon that needs to be translated by journalists.
-j. **Short sentences** – aim for an average of 12-15 words per sentence. Avoid parentheses as far as possible.
-k. **Short paragraphs** - avoid large blocks of text, they are very hard to read and users end up scanning text and missing detail.
-l. **Tone** - Use active voice	
-m. **Balance accuracy and clarity** – from GSS guidance - Users will understand that even with a well understood term like “unemployment” there are detailed classificatory decisions taken. These do not need to be spelt out in the main messages.
+      a. Reading is hard, we want users to be able to find and reuse our lines.
+      b. **Headlines** – aim for 3-4 headline bullets summarising the key points from your release. Follow a 30second rule
+      c. **Length** – aim for no more than 10 pages. Shorter publications are easier to read, write and QA. Follow a 10-minute rule – if it takes longer than that to read through the report then it’s unlikely that anyone will.
+      d. **Sections** – aim for no more than 10, each focussed on a few key messages, ideally no more than one page in length
+      e. **Structure** – use structure to tell a logical and consistent story
+      f. **Methodology** – be upfront about important caveats but the majority of explanatory or technical content and detailed definitions can be moved to supporting documentation. Where necessary, explain rather than define key concepts
+      g. **Charts** –At a high level, try to keep charts as simple as possible. Follow a 10 second rule – if it takes longer than this to intuitively understand the key messages, something has gone wrong in design. 
+      h. **Concision** - Use as few words as possible Be brief, clear, and concise.
+      i. **Short words** – use short, easy ‘plain English’ words people already know. Avoid jargon that needs to be translated by journalists.
+      j. **Short sentences** – aim for an average of 12-15 words per sentence. Avoid parentheses as far as possible.
+      k. **Short paragraphs** - avoid large blocks of text, they are very hard to read and users end up scanning text and missing detail.
+      l. **Tone** - Use active voice	
+      m. **Balance accuracy and clarity** – from GSS guidance - Users will understand that even with a well understood term like “unemployment” there are detailed classificatory decisions taken. These do not need to be spelt out in the main messages.
 
 (4) **Check what you have written**
-
-a. Look over your work
-b. Get others who do not know subject area to review (within pre-release access rules)
+      a. Look over your work
+      b. Get others who do not know subject area to review (within pre-release access rules)
 
 ---
 
@@ -117,7 +114,9 @@ There have been no numbers presented yet, just a statement that establishes the 
 
 ---
 
-## Reporting and interpreting numbers – summarising patterns from tables or charts
+## Reporting and interpreting numbers
+
+<p class="text-muted">Summarising patterns from tables and charts</p>
 
 ---
 
@@ -139,11 +138,11 @@ Try to use prose to summarise the patterns so your user can see the general rela
 
 Through the aid of this guidance we want producers of official statistics to be aiming for Best Practice. However, it is important to be realistic about what can be achieved with the tools we have available and identifying where the gaps are whilst finding solutions to make the necessary improvements. This check list should help teams identify what more could be done to take them to achieve Best Practice. The Central Statistics and Standards Unit will be on hand to help with this process. 
 
-Further information on each point can be obtained from the [GSS writing about Statistics: Guide for Producers]( https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/#page){target="_blank"}.
+Further information on each point can be obtained from the [GSS writing about Statistics: Guide for Producers](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/#page){target="_blank"}.
 
 ---
 
-# Structure within EES
+# Writing in EES
 
 ---
 
@@ -242,7 +241,7 @@ To keep the release short only include information if there is something interes
 
 Avoid having large blocks of text as they are hard to read and users scan them and miss the detail. Graphs and tables break up the content but only include these where they add value; **you do not need a graph or chart in every section.**
 
-Use plain English and shorter sentences, aim for an average of 15-20 words per sentence. Do not overload sentences with numbers and avoid â€˜elevator commentary' that describes small movements in the whole series without giving any insight (use a summary table instead if it is interesting, or leave it out entirely). **Be impartial and objective; avoid using sensationalist terms or terms that reflect a judgement such as "very few" "only" or "strong".**
+Use plain English and shorter sentences, aim for an average of 15-20 words per sentence. Do not overload sentences with numbers and avoid 'elevator commentary' that describes small movements in the whole series without giving any insight (use a summary table instead if it is interesting, or leave it out entirely). **Be impartial and objective; avoid using sensationalist terms or terms that reflect a judgement such as "very few" "only" or "strong".**
 
 Explain complex concepts in plain English within the text. Remember that for many of our users, confidence intervals and significant differences are complex concepts that need explaining.
 
@@ -295,7 +294,7 @@ For releases that have a .html methodology page the relevant link will display a
 
 ---
 
-The [glossary in Explore Education Statistics](https://explore-education-statistics.service.gov.uk/glossary){target="_blank"} is intended for definitions used across multiple publications and will be maintained by HoP Office in the first instance. When you write your publication send any definitions you think need adding to the glossary to [HoP Office](mailto:Hop.STATISTICS@education.gov.uk), in plenty of time for them to be added before the publication date .
+The [glossary in Explore Education Statistics](https://explore-education-statistics.service.gov.uk/glossary){target="_blank"} is intended for definitions used across multiple publications and will be maintained by HoP Office in the first instance. When you write your publication send any definitions you think need adding to the glossary to [HoP Office](mailto:Hop.STATISTICS@education.gov.uk), in plenty of time for them to be added before the publication date.
 
 Before creating a new definition, check the glossary to see if one is already there. When creating glossary entries you should use standard DfE definitions, only write your own if it is something that relates specifically to your statistics. Do not use technical terms in your definition, stick to plain English. 
 
