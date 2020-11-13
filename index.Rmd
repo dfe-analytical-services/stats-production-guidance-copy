@@ -14,14 +14,14 @@ Within this guide you can read about:
 * [Learning resources](l+d.html)  
 A collection of useful learning resources, and information on the recommended tools to get you started
 
-* [Production processes](rap.html)  
+* [Processes and RAP](rap.html)  
 Guidance for how to process data, including the principles of Reproducible Analytical Pipelines (RAP)
 
 * [Data standards](ud.html)  
 Guidance on how to structure data files
 
-* [Content standards](cd.html)  
-Guidance for writing statistical commentary
+* [Content design](cd.html)  
+Best practice for content design
 
 * [Publishing statistics](pub.html)  
 Guidance for where and how to publish Official and National Statistics
