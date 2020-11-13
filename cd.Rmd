@@ -70,7 +70,9 @@ Further information on each point can be obtained from the [GSS writing about St
 
 People who write about statistics should seek to conduct a coherent statistical inquiry about the relationship between the concepts under study. When communicating this to a general audience, statisticians must explain the answers in words that the audience can understand. Unfortunately, few courses teach how to write a clear narrative linking numeric evidence to substantive questions, or how to present statistics in words that non-statisticians can comprehend easily. This can leave general audiences struggling to understand what questions those numbers are intended to answer or what conclusions they support. Below are some high-level questions/statements that producers of statistics can ask themselves to help write engaging and clear narrative:
 
-1. **Start with a blank canvas decide what you are going to talk about**
+<br>
+
+1. **Start with a blank canvas and decide what you are going to talk about**
       a. If you were briefing someone senior on the statistics, which statistics would you highlight?
       b. What are the messages that will pull in the reader?
       c. Do you know who your users are and what they need (not want)?
@@ -107,7 +109,7 @@ People who write about statistics should seek to conduct a coherent statistical 
 
 ---
 
-## Introducing the Statistics
+# Introducing the Statistics
 
 ---
 
