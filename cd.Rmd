@@ -75,15 +75,14 @@ People who write about statistics should seek to conduct a coherent statistical 
       b. What are the messages that will pull in the reader?
       c. Do you know who your users are and what they need (not want)?
 
----
+<br>
 
 2. **What are you going to say about the story - have you highlighted the key trends, big changes and explained them where appropriate, whilst using numbers in text sparingly?**
       a. **Interpretation** – why is it happening? Why are we seeing these changes? Is the series we’re looking at influenced by another factor
       b. **Context** – why is it interesting? Help the audience understand whether the numbers you’re describing are big/small, good/bad etc. Where possible place new figures in the context of longer-term trends; relevant policies or targets; international comparisons; any key limitations etc.
       c. Don’t treat it as an update to a previous iteration
 
-
-
+<br>
 
 3. **How are you going to tell the story– it should be concise, focus on the most interesting points and be intelligible for a lay reader?**
       a. Reading is hard, we want users to be able to find and reuse our lines.
@@ -100,7 +99,7 @@ People who write about statistics should seek to conduct a coherent statistical 
       l. **Tone** - Use active voice	
       m. **Balance accuracy and clarity** – from GSS guidance - Users will understand that even with a well understood term like “unemployment” there are detailed classificatory decisions taken. These do not need to be spelt out in the main messages.
 
-
+<br>
 
 4. **Check what you have written**
       a. Look over your work
