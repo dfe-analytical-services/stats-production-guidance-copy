@@ -24,21 +24,6 @@ The following table outlines the key differences between publishing via EES and 
 | Release attachments are reviewed and approved via emails | Releases are reviewed and approved within the service |
 | Release attachments are circulated for pre-release via email 24hours prior to publication date | Pre-release users are invited to preview releases within the service 24 hours prior to publication date | 
 
----
-
-**The EES platform consists of two applications:**
-
-1. The public website, where users access stats
-
-2. The admin website, where production teams create their stats.
-
-<div class="alert alert-dismissible alert-info">
-The admin side of EES is only supported in Google Chrome and Microsoft Edge. It will not work correctly in Internet Explorer. The public side does support Internet Explorer, though we still recommend that people use Chrome or Edge instead.
-</div>
-
-Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
-
-Maintence and BAU running of the platform is supported by the Statistics Development Team.
 
 <div class="alert alert-dismissible alert-warning">
 If you are unsure which route to use for publication please contact the [HoP Office](mailto:Hop.STATISTICS@education.gov.uk).
