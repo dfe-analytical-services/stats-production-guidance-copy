@@ -8,7 +8,7 @@ navbar:
       href: rap.html
     - text: "Data Standards"
       href: ud.html
-    - text: "Content Design"
+    - text: "Writing Content"
       href: cd.html
     - text: "Publishing Statistics"
       href: pub.html
