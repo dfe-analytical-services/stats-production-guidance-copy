@@ -158,6 +158,7 @@ For a collection of relevant resources to use when learning SQL, see our [learni
 ---
 
 ### How to set up a SQL working area
+
 ---
 
 More to follow, in the meantime please contact us for advice.
