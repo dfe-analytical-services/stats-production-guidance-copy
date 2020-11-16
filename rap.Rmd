@@ -152,24 +152,16 @@ SQL is a fantastic language for large scale data joining and manipulation; it al
 
 **How to get started**
 
-<!-- links to update -->
+<!-- needs example -->
 For a collection of relevant resources to use when learning SQL, see our [learning resources](l+d.html) page, and for guidance on best practice when writing SQL queries, see the [writing code](#writing-code) and [documentation](#documentation) sections on this page, as well as the guides immediately below on how to setup and use a SQL database. 
 
 ---
 
 ### How to set up a SQL working area
-
 ---
 
 More to follow, in the meantime please contact us for advice.
-
----
-
-### How to get your data into SQL
-
----
-
-More to follow, in the meantime please contact us for advice.
+<!-- needs example -->
 
 ---
 
@@ -178,6 +170,7 @@ More to follow, in the meantime please contact us for advice.
 ---
 
 More to follow, in the meantime please contact us for advice.
+<!-- needs example -->
 
 ---
 
@@ -197,6 +190,7 @@ Remember that it is important to import them with consistent, thought-through [n
 ---
 
 More to follow, in the meantime please contact us for advice.
+<!-- needs example -->
 
 ---
 
@@ -241,7 +235,7 @@ Ensure that any last-minute fixes to the process are written in the code and not
 
 ---
 
-More guidance on this follow, for now, here is a [SQL query](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
+To get started, here is a [SQL query](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
 
 ---
 
@@ -249,7 +243,9 @@ More guidance on this follow, for now, here is a [SQL query](https://github.com/
 
 ---
 
-More will follow here, for now, [here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
+<!-- could have better examples -->
+
+[Here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
 
 
 Using the `%>%` pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren't yet familiar with this, have a look at [this article](https://seananderson.ca/2014/09/13/dplyr-intro/){target="_blank"} that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you want to do within a pipe, googling 'how do I do X in dplyr r' will usually start to point you in the right direction, alternatively you can [contact us](mailto:statistics.development@education.gov.uk), and we'll be happy to help you figure out how to do what you need.
@@ -270,7 +266,7 @@ processed_regional_data <- my_data %>%
 ```
 
 
-[Helpful new functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank"} in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables. 
+[Helpful new functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank"} in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 in the linked article for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables. 
 
 
 For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html) page.
@@ -358,6 +354,8 @@ Having a single script for this saves time when needing to rerun processes, and 
 
 **How to get started**
 
+<!-- needs example -->
+
 More to follow, in the meantime please contact us for advice.
 
 
@@ -380,6 +378,8 @@ This documents the entire process around the data file in a single place. This m
 
 **How to get started**
 
+<!-- needs example -->
+
 More to follow, in the meantime please contact us for advice.
 
 ---
@@ -399,6 +399,8 @@ The ultimate aim is to utilise a single script to run off everything for a publi
 This carries all of the same benefits as having a single master script for a file, but at a wider publication level, effectively documenting the entire publication process in one place. 
 
 **How to get started**
+
+<!-- needs example -->
 
 More to follow, in the meantime please contact us for advice.
 
@@ -421,6 +423,9 @@ One huge benefit that comes with using code in our processes, is that we can pic
  
 
 **How to get started**
+
+<!-- could have a code example? -->
+
 
 Review your code and consider the following:
  
@@ -460,7 +465,7 @@ Clean code is efficient, easy to write, easy to review, and easy to amend for fu
 
 **How to get started**
 
-Clean code should also include comments, though remember to comment why you've made decisions, rather than what you are doing. The code itself describes what you are doing. If in doubt, more comments are better than too few. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.
+Clean code should also include comments. Comment why you've made decisions, don't comment what you are doing unless it is particularly complex as the code itself describes what you are doing. If in doubt, more comments are better than too few though. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.
 
 ---
 
@@ -656,6 +661,7 @@ As a result, we should be developing automated summaries to help us to better un
 **How to get started**
 
 More to follow, in the meantime please contact us for advice.
+<!-- needs example and link to the QA app when ready -->
 
 ---
 
@@ -840,6 +846,7 @@ It's an easy way to answer questions that your audience will likely have regardi
 **How to get started**
 
 More to follow, in the meantime please contact us for advice.
+<!-- needs example -->
 
 ---
 
