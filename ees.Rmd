@@ -208,7 +208,7 @@ Past publications on other services can be added to the previous releases links 
 The video below walks through this:
 
 <center>
-<video autosize: true controls>
+<video width="320" height="240" controls>
   <source src="images/manageLegacyReleases.mp4" type="video/mp4">
 </video>
 </center>
