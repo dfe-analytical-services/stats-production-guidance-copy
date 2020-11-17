@@ -6,6 +6,93 @@ title: "Using Explore Education Statistics"
 
 ---
 
+**The EES platform consists of two applications:**
+
+1. The public website, where users access stats
+
+2. The admin website, where production teams create their stats.
+
+<div class="alert alert-dismissible alert-info">
+The admin side of EES is only supported in Google Chrome and Microsoft Edge. It will not work correctly in Internet Explorer. The public side does support Internet Explorer, though we still recommend that people use Chrome or Edge instead.
+</div>
+
+Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
+
+Maintence and BAU running of the platform is supported by the Statistics Development Team.
+
+---
+
+# How to access EES
+
+---
+
+As stated above, EES consists of two parts. We also have four versions (environments) of EES, the banner for the admin part of each environment will inform you which environment you are on, this is also colour coded: 
+
+- **Development** - Green - where changes are first merged in, and often the first time different pieces of work from different developers will interact properly
+
+- **Test** - Pink - where our tester carries out manual testing of any new features to make sure things work as expected 
+
+- **Pre-production** - Yellow - a sandbox area for admin champions and functionality testing
+
+- **Production** - Red - the real service, anyone creating real releases that they intend to publish to the public should be using this environment
+
+
+There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out at 8:30am on the scheduled day on pre-production, mirroring the way that production runs (though one hour earlier).
+
+The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production.
+
+On the pre-production environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
+
+<div class="alert alert-dismissible alert-info">
+Please note that jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
+</div>
+
+The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
+
+<div class="alert alert-dismissible alert-danger">
+If you are bookmarking links, please be careful to bookmark the links below exactly as they are shown. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
+</div>
+
+---
+
+## Production environment
+
+---
+
+Admin - https://admin.explore-education-statistics.service.gov.uk/
+
+Public - https://explore-education-statistics.service.gov.uk/
+
+Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
+
+To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this respsonsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform.
+
+At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
+
+---
+
+## Pre-production environment
+
+---
+
+Admin pre-production - https://admin.pre-production.explore-education-statistics.service.gov.uk
+
+Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
+
+Analysts are able to test the service within the EES pre-production environment, and it is recommended that production teams start here until they are confident they know how they want to build their release for real (again, please contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) to request access).
+
+When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
+
+<div class="alert alert-dismissible alert-danger">
+Please note that the pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
+</div>
+
+---
+
+## Admin dashboard
+
+---
+
 <div class="alert alert-dismissible alert-warning">
 Use Google Chrome or Microsoft Edge to access and use the admin part of Explore Education Statistics.
 </div>
@@ -52,6 +139,20 @@ To request a change to the contact details for a publication contact the [Explor
 
 Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be written to cover all releases for the given publication within the service. 
 
+If you want to request a new publication, please be prepared to give the following:
+
++ The heading and subheading that you want the publication to sit under in our site (take a look at the current structure [here](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank"}), feel free to either use existing ones, or suggest new ones
++ The exact title of the publication
++ If the methodology already exists elsewhere and you have a URL for it, or if you want to [create one](#Methodology)
++ Team name
++ Team email address
++ Lead statistician name
++ Lead statistician contact number
++ The [year](https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values){target="_blank"} of the release you’re creating
++ Whether they are National statistics, an ad-hoc publication, or official statistics
++ List of email addresses of analysts who need access to edit the release
++ Email address for whoever is providing [senior sign off](#Signing_off_a_release)
+
 ---
 
 # Create new release
@@ -92,6 +193,7 @@ Once you have created your release you will see enter the ‘create release dash
 
 5.  Pre-release access (invite users to pre-release and create public pre-release list)
 
+--- 
 
 `r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
 
@@ -102,6 +204,8 @@ Once you have created your release you will see enter the ‘create release dash
 ---
 
 ## Data uploads
+
+---
 
 Here you will update your tidy data files and accompanying metadata. You need to make sure that the data has passed through our data screener checks before trying to upload it. 
 
@@ -124,8 +228,11 @@ For data files greater than 80mb we recommend uploading as a ZIP file.
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
 </div>
 
+---
 
 ## Ancillary file uploads
+
+---
 
 Any files you want to make available for users to download but aren't intended the table tool should be added as an ancillary file upload. These files will need to meet all requirements of the new [accesibility regulations](https://www.gov.uk/guidance/publishing-accessible-documents) before they can be published. 
 
@@ -140,8 +247,11 @@ Examples of ancillary files may be:
 Any data files that only consist of Planning area, School, Provider, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
 </div>
 
+---
 
 ## Metadata guidance
+
+---
 
 Here you should also create your [public metadata](https://explore-education-statistics.service.gov.uk/find-statistics/permanent-and-fixed-period-exclusions-in-england/meta-guidance) guidance document, this replaces the information that would have previously been uploaded as a pdf and is designed to help users understand and use the data they download from your release.
 
@@ -159,8 +269,11 @@ This template follows a similar format to our previous recommended [metadata tem
 Releases cannot be published without a completed metadata document. If not filled in an error will be flagged during sign off. 
 </div>
 
+---
 
 ## Replacing data
+
+---
 
 If you notice a mistake in your data file you can replace it with another.
 
@@ -211,7 +324,7 @@ If you'd rather, you can assign a footnote to the whole data file by ticking thi
 You can assign footnotes across multiple data files.  
 
 <div class="alert alert-dismissible alert-danger">
-We recommend only add footnotes once you are certain the data file is final. If you have to delete the data file, all the assigned footnotes will be deleted alongside it.
+We recommend that you only add footnotes once you are certain the data file is final. If you have to delete the data file, all the assigned footnotes will be deleted alongside it.
 </div> 
 
 ---
@@ -224,7 +337,11 @@ Once file imports are complete move to manage data blocks tab and use the admin 
 
 Once you're happy with your table, give it a title and some source information before clicking save. 
 
-**Table highlights**
+---
+
+## Table highlights
+
+---
 
 You can also choose to highlight a data block table as a ‘top table’ which means it will show in a list of table highlights within the table tool. This is designed to help users get to tables of interest more quickly (without having to create tables themselves).
 
@@ -236,8 +353,11 @@ Each highlight table will then be listed to the user within the table tool. High
 
 `r knitr::include_graphics("images/EES-table-tool-highlights.PNG")`
 
+---
 
-**Fast track links**
+## Fast track links
+
+---
 
 Any data block tables that are created and saved within the admin app will also be assigned a ‘fast-track link’, this url can then be used throughout your release as a way to direct users to specific tables (within the table tool) more quickly so they can interact and explore the data further.  It will appear at the top of the page like this:
 
@@ -267,7 +387,11 @@ The first step to creating a chart is choosing the chart type, currently the EES
 
 After choosing your chart type you then need to work through the following stages and you’ll be shown a live preview as you go: 
 
-**Chart configuration**
+---
+
+## Chart configuration
+
+---
 
 Within the ‘chart configuration’ tab you can add a title, alt text, move the legend and change chart dimensions. 
 
@@ -275,13 +399,21 @@ Within the ‘chart configuration’ tab you can add a title, alt text, move the
 
 Note, within the vertical and horizontal bar chart types you can also create stacked bar charts via the chart configuration options.
 
-**Data sets**
+---
+
+## Data sets
+
+---
 
 Here is where you add data to the chart. Each series is added one at a time and can be styled individually using the ‘change styling’ options.
 
 `r knitr::include_graphics("images/EES-charts-add-data.PNG")`
 
-**X axis (major axis)**
+---
+
+## X axis (major axis)
+
+---
 
 Here is where you configure the x-axis: You can alter gridlines, labels, sort, limit and add reference lines.
 
@@ -299,8 +431,11 @@ Here is where you configure the x-axis: You can alter gridlines, labels, sort, l
 |Label |Add an axis label, you can also choose the width for the space given to it|
 |Reference lines |Add/remove  reference lines to the chart|
 
+---
 
-**Y axis (minor axis)**
+## Y axis (minor axis)
+
+---
 
 Then follow a similar process for the y axis configuration, play around until the chart looks how you want it to.
 
@@ -318,7 +453,11 @@ Then follow a similar process for the y axis configuration, play around until th
 |Label |Add an axis label, you can also choose the width for the space given to it|
 |Reference lines |Add/remove  reference lines to the chart|
 
-**Changing chart type**
+---
+
+## Changing chart type
+
+---
 
 If you create your chart and then change your mind as to what chart type would be best you can just click to change it and it will try to save all the options that you had applied previously.
 
@@ -330,7 +469,11 @@ You can create maps too, currently this is possible for regional, LA and LAD dat
 Remember to save your chart when you’re done.
 </div>
 
-**What to do if the chart you want to build is not possible**
+---
+
+## Other chart types
+
+---
 
 You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. If you have a an infographic or a chart that is too complex to build within our chart builder you can use the 'Choose an infographic as alternative' option to upload an image to your data block instead. These should be .svg format and you can use the sizing options within the data block editor to size your image appropriately. 
 
@@ -344,11 +487,17 @@ You should only use complex charts where there is a clear user need, as simple c
 
 In the manage content tab you can now start creating your release, embedding the datablocks you’ve created as you go. 
 
+<!-- potential for gif? --> 
+
 You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode.
+
+<!-- potential for gif? --> 
 
 Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. 
 
-Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock table - creating a table as a single number only.
+<!-- potential for gif? --> 
+
+Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock with a only a single number.
 
 `r knitr::include_graphics("images/key-stat.PNG")`
 
@@ -387,10 +536,13 @@ There are three statuses:
 Only users with ‘responsible statistician’ permissions (usually G6 or above) can sign off the release for publication.  
 </div>
 
+---
 
-**How to approve a release**
+## How to approve a release
 
-Releases are approved via the sign off tab. The release date is also set during this stage of the process. 
+---
+
+Releases are approved via the sign off tab. The release date is also set during this stage of the process. All releases scheduled for a specific date will be published at 9:30am on that day. 
 
 `r knitr::include_graphics("images/ees-approving-release.PNG")`
 
@@ -408,13 +560,20 @@ This page also gives you the expected release url which may be useful to know fo
 
 Prior to each release going live the production team are also able to grant pre-release access to a named group of users 24 hours before it goes live. These users do not require full access to the whole admin service. They will be able to see preview versions of any releases they have been granted access to. 
 
+This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
+
 <div class="alert alert-dismissible alert-info">
 Please note that jobshare emails should not be sent invites for pre-release. The personal emails for the specific individuals should be used instead, as jobshare emails do not have active accounts with DfE to access EES.
 </div>
 
-This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
+---
+
+## Overview
+
+---
 
 <html>
+<centre>
 <head>
 <title>EES PRA one pager</title>
 <meta charset="utf-8"/>
@@ -422,7 +581,14 @@ This preview is only accessible for the 24 hours before the publication date, th
 <body><div class="mxgraph" style="max-width:100%;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-10-20T16:01:02.280Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36\&quot; etag=\&quot;u54yy4Q2arZoT8qL_QMa\&quot; version=\&quot;13.8.1\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;GmQ-00HEmiX2ExrvTGiP\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 </body>
+</centre>
 </html>
+
+---
+
+## Walkthrough
+
+---
 
 Inviting users for pre-release access and building the public pre-release list can be found within the ‘Pre-release access’ tab on the dashboard. 
 
@@ -466,8 +632,12 @@ If you need to make an amendment to release that has already been published this
 
 Creating an amendment of a release will create a new version for which you can make any changes and then choose to republish, either as soon as possible or on a given date. 
 
-**Release notes**
+---
 
-When publishing a new amendment you should add a 'release note' to your release so users can be informed of what has changed - 
+## Release notes
+
+---
+
+When publishing a new amendment you should add a 'release note' to your release so users can be informed of what has changed:
 
 `r knitr::include_graphics("images/EES-release-note.PNG")`
