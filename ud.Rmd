@@ -75,15 +75,33 @@ For publishing on EES specifically, please note the following points:
 
 ---
 
-## How much data to publish
+## Tidy data structure
 
 ---
 
-You should publish as many years of data that you have and is practicable to do so. 
+The move to the new platform provided the ideal opportunity to standardise and 'tidy' up our data to give users the consistency that they ask for. Our standards draw upon the ideas of tidy data - this means applying a logical structure to datasets so they are easier to use and analyse, minimising the time spent cleaning the data before use. 
 
-There will be scenarios were significant methodological changes impact the ability to have all of your data in a single file, and in these cases it may be practical to use a 'cut-off' point and link to any older publications containing data before that cut-off. These cut off points should be 4 or more years going backwards. We expect a minimum of 3 years of data in all time-series where it exists.
+Here is a quick summary video of what exactly tidy data is. 
 
-If you are not providing a full timeseries, make sure that any old published data is linked to from your publication, and that it's omission is explained in your methodology and metadata documents.
+<center>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oQuupzfX9OQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+---
+
+Further details on tidy data, can be found by reading Hadley Wickham's academic paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. The key principles to remember are:
+
+
+- **Each variable forms a separate column.**
+- **Each observation forms a separate row.**
+
+
+The variables (columns) in each of the uploaded data files will fall in to the following three categories. The standards for each category are discussed in detail later on this page.
+
+
+- **[Observational units](#observational-units)** - time and geography identifiers
+- **[Filters](#filters)** - the things we filter our data on, e.g. school types or learner characteristics
+- **[Indicators](#indicators)** - the things we measure, e.g. pupil numbers or percentage of online applications
 
 ---
 
@@ -137,28 +155,17 @@ When writing .csv files out of R, you'll mostly likely be using either `write.cs
 
 For `write_csv()`, which some of you may be using for increased processing speed, automatically encodes as UTF-8 format, meaning that you don't have to do anything different!
 
+---
+
+## How much data to publish
 
 ---
 
-## Tidy data structure
+You should publish as many years of data that you have and is practicable to do so. 
 
----
+There will be scenarios were significant methodological changes impact the ability to have all of your data in a single file, and in these cases it may be practical to use a 'cut-off' point and link to any older publications containing data before that cut-off. These cut off points should be 4 or more years going backwards. We expect a minimum of 3 years of data in all time-series where it exists.
 
-The move to the new platform provided the ideal opportunity to standardise and 'tidy' up our data to give users the consistency that they ask for. Our standards draw upon the ideas of tidy data - this means applying a logical structure to datasets so they are easier to use and analyse, minimising the time spent cleaning the data before use. 
-
-Here is a [quick 4 minute summary video](https://www.youtube.com/watch?v=oQuupzfX9OQ){target="_blank"} of tidy data. Further details on tidy data, can be found by reading Hadley Wickham's academic paper on [Tidy Data](https://www.jstatsoft.org/index.php/jss/article/view/v059i10/v59i10.pdf){target="_blank"}. The key principles to remember are:
-
-
-- **Each variable forms a separate column.**
-- **Each observation forms a separate row.**
-
-
-The variables (columns) in each of the uploaded data files will fall in to the following three categories. The standards for each category are discussed in detail later on this page.
-
-
-- **[Observational units](#observational-units)** - time and geography identifiers
-- **[Filters](#filters)** - the things we filter our data on, e.g. school types or learner characteristics
-- **[Indicators](#indicators)** - the things we measure, e.g. pupil numbers or percentage of online applications
+If you are not providing a full timeseries, make sure that any old published data is linked to from your publication, and that it's omission is explained in your methodology and metadata documents.
 
 ---
 

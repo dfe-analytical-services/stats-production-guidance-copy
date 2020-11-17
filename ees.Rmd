@@ -199,6 +199,23 @@ Once you have created your release you will see enter the ‘create release dash
 
 ---
 
+# Managing legacy releases
+
+---
+
+Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
+
+The video below walks through this:
+
+<center>
+<video width="640" height="360" controls>
+  <source src="images/manageLegacyReleases.mp4" type="video/mp4">
+</video>
+</center>
+
+
+---
+
 # Uploading data and files
 
 ---
