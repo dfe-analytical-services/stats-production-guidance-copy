@@ -205,6 +205,10 @@ Once you have created your release you will see enter the ‘create release dash
 
 Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
 
+<div class="alert alert-dismissible alert-warning">
+For the time being this can only be done by the Statistics Development Team, please get in touch if you'd like us to add any legacy releases for your publication.
+</div>
+
 The video below walks through this:
 
 <center>
