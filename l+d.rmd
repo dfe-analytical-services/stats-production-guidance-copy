@@ -125,7 +125,7 @@ SQL provides us with an intuitive language to query databases and manipulate the
 Andy Brook's excellent Introduction to SQL session, giving a visual overview of the basics of querying with SQL:
 
 <div align="center">
-<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/2a42789f-5183-4a79-b159-ec4a46e530d7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/2a42789f-5183-4a79-b159-ec4a46e530d7?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
 
 
@@ -134,7 +134,7 @@ Andy Brook's excellent Introduction to SQL session, giving a visual overview of 
 Andy's follow up 'intermediate' session, covering more advanced features of SQL:
 
 <div align="center">
-<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
 
 

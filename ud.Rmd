@@ -214,7 +214,7 @@ In line with the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploa
 | ~        | Rounds to 0, but is not 0 | Rounding to the nearest thousand, 499 would otherwise show as 0. Only use 0 for true 0's |
 
 
-If you have any other conventions you've used in previous publications, or a scenario that isn't covered above, check the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"}, and contact us.
+If you have any other conventions you've used in previous publications, or a scenario that isn't covered above, check the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank"} (ignoring the part around separate columns for symbols), and contact us.
 
 --- 
 
