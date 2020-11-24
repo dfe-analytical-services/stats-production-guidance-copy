@@ -860,6 +860,8 @@ More to follow, in the meantime please contact us for advice.
 
 ---
 
+If you do not already have git downloaded, you can [download the latest version from their website](https://git-scm.com/downloads).
+
 For now, take a look at at the [resources for learning Git](l+d.html#git) on the learning resources page.
 
 ---
@@ -882,7 +884,18 @@ Having the final copy of the scripts version controlled gives assurance around h
 
 The first step is to get your final versions of code and documentation together in a single folder.
 
-We have a specific area set up for you to host your publication code in on the dfe-gov-uk instance of Azure DevOps, entitled official-statistics-production. More details on how to set this up will follow shortly, in the meantime please contact us if you're interested in this.
+We have a specific area set up for you to host your publication code in on the dfe-gov-uk instance of Azure DevOps, entitled official-statistics-production.
+
+To gain access to this area, please raise a request on service desk by navigating through the pages detailed in the animation below.
+
+
+`r knitr::include_graphics("images/servicedesk_request.gif")`
+
+Once you have navigated to this page, fill out the form with the following details and send your request off.
+
+`r knitr::include_graphics("images/devops_request_details.png")`
+
+Access is usually granted within a few working days. Alert the [Statistics Development Team](mailto:statistics.development@education.gov.uk) when this is confirmed, and we will set up/give you access to your repository.
 
 ---
 
@@ -909,14 +922,40 @@ Using git allows multiple people to simultaneously develop the same code using b
 
 To get started you should:
 
-- Get code into a git controlled folder in whatever version it is currently in. 
+Get code into a git controlled folder in whatever version it is currently in. Use the following steps to do so:
 
-- Ensure all team members have access to the area 
+1. Open the folder where your project is saved, right click anywhere in that window, and click "Git Bash Here".
+
+2. This will open a black box. Type in the following and hit enter
+
+``` {r git_init, eval=FALSE}
+git init
+```
+
+3. After hitting enter, type in the following and hit enter again after each line. You will need the URL of your azure devops repository to complete this step. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you are not sure what this is or do not have one.
+
+``` {r git_steps, eval=FALSE}
+git add .
+
+git commit -m "first commit"
+
+git remote add origin YOUR_URL_HERE
+
+git push -f origin --all
+```
+
+* You may be prompted for either your windows or git credentials at this stage. 
+
+  + If prompted for your **windows** credentials, enter the username and password combination you use to log into your DfE device.
+
+  + If prompted for your **git** credentials, visit your online repository, click on the blue "clone" box, and click "generate git credentials". This will generate a username and password for you to enter.
+
+4. Visit your repository online, and check that all the files have uploaded. Other members of your team will now be able to work from your code.
+
+- Ensure all team members have access to your project in the azure devops official-statistics-production area. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if there are any issues.
 
 - Build capability within the team to understand git and version control
 
 - Make use of branches, commits, and pull requests for detailed version control and collaborative working
 
 Until more guidance appears here, please refer to the resources above, or the other links on the [learning resources](l+d.html#git) page in order to learn how to use git in practice.
-
----
