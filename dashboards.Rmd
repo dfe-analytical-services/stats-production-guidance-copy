@@ -1,0 +1,156 @@
+---
+title: "Dashboards guidance"
+---
+
+```{r include=FALSE}
+require(knitr)
+```
+
+<p class="text-muted">Guidance for when to use a dashboard to accompany Official statistics and how to publish them.</p>
+
+
+---
+
+# When to use a dashboard
+
+---
+
+The primary route for publishing official statistics is via [Explore Education Statistics](https://explore-education-statistics.service.gov.uk/), however there may be times where you want to compliment official statistics with a dashboard. This may be to do a deeper piece of analysis for a specific user group, or to make use of functionality that isn’t available within the platform.
+
+All dashboards should have a clear use case and reasoning for why they are required. They also need to meet the latest accessibility regulations [include a link].
+
+When published dashboards can be directed to from existing EES releases [add instructions for where they should go].
+
+---
+
+# Options available
+
+---
+
+The main dashboarding options available to us are - 
+
+* R Shiny (using ShinyApp or ShinyDashboard)
+* PowerBI
+
+We recommend using R Shiny where possible as it’s Open Source and gives more flexibility in formatting [To meet accessibility regs?]. 
+
+This guide will focus on Shiny for now [until we can find any PowerBI stuff that’s been done well].
+
+
+---
+
+# R Shiny 
+
+---
+
+
+---
+
+## How to create them
+
+---
+
+
+When using R shiny you can choose to create an app or a dashboard. 
+
+A shiny app gives full flexibility, but may take more effort to get your dashboard to look how you want it to. A shiny dashboard is a simplified template for Shiny, it has less flexibility but gives quick and simple structures to help create your dashboard. 
+
+There are a lot of resources already available to support you when working with Shiny. 
+
+[List them]
+
+Our template shiny app [LINK] repo shuld be used a starting point for all public facing dashboards as it gives the right set up for publishing. 
+
+---
+
+## Standards to follow
+
+---
+
+<!-- ## Does it make more sense to move this to after publishing? Or within the external apps bit? -->
+
+---
+
+### Accessibility
+
+---
+
+All dashboards need to meet the latest accessibility regulations [include a link].
+
+Key things to be aware of are:
+
+[List main requirements for accessibility regs]
+
+There are existing tools/packages that can help ensure your dashboards are accessible - 
+
+[Pull from the resources Cam found: https://trello.com/c/PStG9EkN/1019-r-shiny-accessibility]
+
+
+---
+
+### Styling
+
+---
+
+We don’t have an agreed style for Shiny apps / dashboards yet so need to agree one. 
+
+Have a look at how transferable the https://github.com/moj-analytical-services/shinyGovstyle stuff is. 
+
+
+---
+
+### Testing
+
+---
+
+All apps/dashboards should have an appropriate amount of automated tests before they can be published.
+
+https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps 
+
+---
+
+## How to publish them 
+
+---
+
+How you choose to publish your app will depend on the type of access you require for it.  
+
+---
+
+### Internal apps
+
+---
+
+[Link to existing rsconnect guidance]
+
+You will need: 
+
+* A finished app, in line with the rsconnect people’s guidance [link to it]
+* Code in a devops repo
+* Anything else? I’m unfamiliar with this process...
+
+
+---
+
+### External apps
+
+---
+
+For public facing shiny apps you should publish via shinyapps.io. The statistics development team manage a subscription for this and can help you get set up. 
+
+You will need:
+
+* A finished app, in line with standards [standards TBC]
+* Code in a github repo
+* Github Actions set up 
+
+**Github Actions:**
+
+We use Github Actions to deploy the latest code whenever a push to your master branch occurs - this ensure the published version of your app stays up to date. 
+
+If you’ve started from our empty project template [we should provide this] this will mostly be set up for you, but if not you’ll need to add the following folder to your repo [LINK] 
+
+
+You should also use Github Actions to run the automated tests for your app, which we recommend are done on atleast every pull request. An example yaml file for running the tests is included in the template repo [LINK]. 
+
+
