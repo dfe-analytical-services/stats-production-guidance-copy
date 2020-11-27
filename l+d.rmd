@@ -44,6 +44,10 @@ Teams are welcome to use whatever tools they want, as long as the processes invo
 
 As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first and get their head around the concepts of writing code, and what it is we can do with it. Some of the guides below for R are particularly good for walking you through this step by step.
 
+<div class="alert alert-dismissible alert-info">
+If you're overwhelmed by the list of resources below, feel free to get in touch with us so that we can advise the most suitable ones for you to at.
+</div>
+
 Getting a friend or colleague to show us around the environment on our own machine such as MSSMS or RStudio, and how to access real data using the code is a critical step. It's important not to overlook the practical element of how you use these tools on your own machine with your own data, as you will need to be using these tools in your day to day processes to properly start learning. It's like driving a car, you can have as many theory lessons as you want, but the true learning happens when you're left alone in full control of the machine!
 
 We are always on the look out for resources that will help you to have the skills needed to incorporate the principles of RAP into improving your own processes. There will be many more just a google away, and genuinely, **Google is the single most powerful learning resource out there**, whether it leads you to a StackOverflow answer to your problem, or to an online training course, it will have your needs covered. We appreciate that it can be daunting and overwhelming at first though, which is why we're pooling together links to particularly relevant resources on this page. Let us know if there's any you'd like to see added!
@@ -59,6 +63,8 @@ We are always on the look out for resources that will help you to have the skill
 - The [DfE Data Science resource tool](https://rsconnect/rsc/DS-Resources/){target="_blank"}, in here you can access a plethora of materials, from coffee and coding talks to online guidebooks.
 
 - ESFA have also produced a useful [guide to using R and Git](https://rsconnect/rsc/esfa-r-training/){target="_blank"}. This takes you in from the beginning, teaching you how to use RStudio and later on even includes some information on Shiny apps and more complex topics. For more information on RShiny apps, I'd recommended joining the [R Shiny Developers](https://teams.microsoft.com/l/channel/19%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/tab%3A%3A1fc89e11-fa70-473d-b993-df467ca0d459?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9) teams group.
+
+- Connor Quinn has compiled a [list of resources for Data Engineering](https://educationgovuk.sharepoint.com/sites/sarpi/g/SitePages/DataEngineeringResources.aspx){target="_blank"}. There's a good amount of overlap with this page, though for more advanced SQL and database resources this is a fantastic place to go.
 
 - There is also a handy [general data science resources list](https://github.com/Chris-Engelhardt/data_sci_guide){target="_blank"}, that includes plenty of open-source resources for R and SQL, with Python, Git, and shell included in there too.
 
@@ -104,9 +110,9 @@ The time commitment of the programme will be dependent on the size of the work a
 
 SQL provides us with an intuitive language to query databases and manipulate the data that we have in them. Once you have downloaded MSSMS, and gained access to your particular server and database, you can start writing SQL queries to extract and manipulate your data.
 
-- This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Mircosoft SQL Server Management Studio (downloadable through the software centre), and start playing with that query.
+- This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio (downloadable through the software centre), and start playing with that query.
 
-- Our very own Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL){target="_blank"}.
+- Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL){target="_blank"}.
 
 - The [Khan academy](https://www.khanacademy.org/computing/computer-programming/sql){target="_blank"} offers a great free introduction to the basics of SQL.
 
@@ -123,7 +129,7 @@ SQL provides us with an intuitive language to query databases and manipulate the
 Andy Brook's excellent Introduction to SQL session, giving a visual overview of the basics of querying with SQL:
 
 <div align="center">
-<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/2a42789f-5183-4a79-b159-ec4a46e530d7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/2a42789f-5183-4a79-b159-ec4a46e530d7?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
 
 
@@ -132,7 +138,7 @@ Andy Brook's excellent Introduction to SQL session, giving a visual overview of 
 Andy's follow up 'intermediate' session, covering more advanced features of SQL:
 
 <div align="center">
-<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
 
 
