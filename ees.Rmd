@@ -107,7 +107,7 @@ The Statistics Development Team will be responsible for setting up and maintaini
 
 Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and schedule releases tabs to see releases that are in progress. 
 
-Help and guidance for how to use the the admin website is available via the [administrators guide](https://admin.explore-education-statistics.service.gov.uk/documentation){target="_blank"}, this is always accessible from the top bar of the admin side of EES, as shown in the image below. 
+Help and guidance for how to use the the admin website is available via the [administrators guide](https://admin.explore-education-statistics.service.gov.uk/documentation){target="_blank" rel="noopener noreferrer"}, this is always accessible from the top bar of the admin side of EES, as shown in the image below. 
 
 `r knitr::include_graphics("images/admin_guide_access.png")`
 
@@ -141,14 +141,14 @@ Methodology documentation is also attached at a publication level within EES - m
 
 If you want to request a new publication, please be prepared to give the following:
 
-+ The heading and subheading that you want the publication to sit under in our site (take a look at the current structure [here](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank"}), feel free to either use existing ones, or suggest new ones
++ The heading and subheading that you want the publication to sit under in our site (take a look at the current structure [here](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank" rel="noopener noreferrer"}), feel free to either use existing ones, or suggest new ones
 + The exact title of the publication
 + If the methodology already exists elsewhere and you have a URL for it, or if you want to [create one](#Methodology)
 + Team name
 + Team email address
 + Lead statistician name
 + Lead statistician contact number
-+ The [year](https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values){target="_blank"} of the release you’re creating
++ The [year](https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values){target="_blank" rel="noopener noreferrer"} of the release you’re creating
 + Whether they are National statistics, an ad-hoc publication, or official statistics
 + List of email addresses of analysts who need access to edit the release
 + Email address for whoever is providing [senior sign off](#Signing_off_a_release)

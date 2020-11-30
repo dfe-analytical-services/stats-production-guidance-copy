@@ -25,11 +25,11 @@ Migration to a new statistics dissemination platform - Explore Education Statist
 
 ---
 
-Below is a session by Robert Cuffe from the BBC talking to DfE statisticians about writing our publications in a way they can be used by journalists and the media. The session is a mix of a talk, interactive elements and a question and answer session to round off. For the interactive tasks, you follow along to help give you a sense of how journalists use our publications.
+Below is a session by Robert Cuffe from the BBC talking to DfE statisticians about writing our publications in a way they can be used by journalists and the media. The session is a mix of Robert talking about his experience, interactive elements and a question and answer session to round off. For the interactive tasks, you follow along to help give you a sense of how journalists use our publications.
 
-
+<div align=center>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b44d821a-9b5c-437a-b321-673c4304c350?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
-
+</div>
 
 ---
 
@@ -37,7 +37,7 @@ Below is a session by Robert Cuffe from the BBC talking to DfE statisticians abo
 
 ---
 
-This guidance and the below checklist, co-produced with local statisticians, and supported by the [Good Practice Team](https://gss.civilservice.gov.uk/the-good-practice-team-gpt/#:~:text=The%20Good%20Practice%20Team%20(GPT)%20is%20here%20to%20help%20the,for%20National%20Statistics%20(ONS)){target="_blank"} will build on ONS’s Best Practice guidance on [Data Visualisation](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank"} and [Writing about Statistics](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/){target="_blank"}. It is for producers of official statistics who want to create statistical bulletins that are informative, consistent across DfE, engaging and easy to understand. 
+This guidance and the below checklist, co-produced with local statisticians, and supported by the [Good Practice Team](https://gss.civilservice.gov.uk/the-good-practice-team-gpt/#:~:text=The%20Good%20Practice%20Team%20(GPT)%20is%20here%20to%20help%20the,for%20National%20Statistics%20(ONS)){target="_blank" rel="noopener noreferrer"} will build on ONS’s Best Practice guidance on [Data Visualisation](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank" rel="noopener noreferrer"} and [Writing about Statistics](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/){target="_blank" rel="noopener noreferrer"}. It is for producers of official statistics who want to create statistical bulletins that are informative, consistent across DfE, engaging and easy to understand. 
 
 ---
 
@@ -45,7 +45,7 @@ This guidance and the below checklist, co-produced with local statisticians, and
 
 ---
 
-A content checklist, which breaks down the components of producing Best Practice content into achievable pieces of work with supporting links to guidance can be found [in our sharepoint folder](https://educationgovuk.sharepoint.com/:w:/r/sites/DfEStatisticsCoherence/_layouts/15/Doc.aspx?sourcedoc=%7BA4DDCE2D-20E1-4ECA-AFA8-683CFB6993CC%7D&file=CHECKLIST%20TO%20AID%20PRODUCTION%20OF%20ENGAGING%20AND%20CLEAR%20STATISTICAL%20RELEASES%20v1.docx&action=default&mobileredirect=true){target="_blank"}.
+A content checklist, which breaks down the components of producing Best Practice content into achievable pieces of work with supporting links to guidance can be found [in our sharepoint folder](https://educationgovuk.sharepoint.com/:w:/r/sites/DfEStatisticsCoherence/_layouts/15/Doc.aspx?sourcedoc=%7BA4DDCE2D-20E1-4ECA-AFA8-683CFB6993CC%7D&file=CHECKLIST%20TO%20AID%20PRODUCTION%20OF%20ENGAGING%20AND%20CLEAR%20STATISTICAL%20RELEASES%20v1.docx&action=default&mobileredirect=true){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
@@ -71,7 +71,7 @@ A content checklist, which breaks down the components of producing Best Practice
 
 Through the aid of this guidance we want producers of official statistics to be aiming for Best Practice. However, it is important to be realistic about what can be achieved with the tools we have available and identifying where the gaps are whilst finding solutions to make the necessary improvements. This check list should help teams identify what more could be done to take them to achieve Best Practice. The Central Statistics and Standards Unit will be on hand to help with this process. 
 
-Further information on each point can be obtained from the [GSS writing about Statistics: Guide for Producers](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/#page){target="_blank"}.
+Further information on each point can be obtained from the [GSS writing about Statistics: Guide for Producers](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/#page){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
@@ -169,7 +169,7 @@ The layout of the new platform provides a natural template and enforces a base l
 Essentially, your release should have a headline statistics part, followed by up to 10 headered accordion sections, most releases are already structured this way in the PDFs.
 
 <div class="alert alert-dismissible alert-info">
-Word templates for drafting the commentary, and for creating PDFs for the external metadata and pre-release-access list are saved on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=qPdc7s){target="_blank"}.
+Word templates for drafting the commentary, and for creating PDFs for the external metadata and pre-release-access list are saved on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=qPdc7s){target="_blank" rel="noopener noreferrer"}.
 </div>
 
 
@@ -312,7 +312,7 @@ For releases that have a .html methodology page the relevant link will display a
 
 ---
 
-The [glossary in Explore Education Statistics](https://explore-education-statistics.service.gov.uk/glossary){target="_blank"} is intended for definitions used across multiple publications and will be maintained by HoP Office in the first instance. When you write your publication send any definitions you think need adding to the glossary to [HoP Office](mailto:Hop.STATISTICS@education.gov.uk), in plenty of time for them to be added before the publication date.
+The [glossary in Explore Education Statistics](https://explore-education-statistics.service.gov.uk/glossary){target="_blank" rel="noopener noreferrer"} is intended for definitions used across multiple publications and will be maintained by HoP Office in the first instance. When you write your publication send any definitions you think need adding to the glossary to [HoP Office](mailto:Hop.STATISTICS@education.gov.uk), in plenty of time for them to be added before the publication date.
 
 Before creating a new definition, check the glossary to see if one is already there. When creating glossary entries you should use standard DfE definitions, only write your own if it is something that relates specifically to your statistics. Do not use technical terms in your definition, stick to plain English. 
 
@@ -344,13 +344,13 @@ For those looking for more targeted advice and support there's a DfE Content Des
 
 More detailed advice and guidance on content design best practice is available from a number of resources across Government and beyond:
 
-- [GSS best practice guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2018/11/Writing-about-statistics-Edition-2.0-October-2018-1.pdf){target="_blank"}
-- [GSS best practice hints and tips](https://teams.microsoft.com/_){target="_blank"}
-- [ONS style guide](https://style.ons.gov.uk/category/writing-a-statistical-bulletin/){target="_blank"}
-- [UNECE drafting guidance](http://www.unece.org/stats/documents/writing.html){target="_blank"}
-- [This link](https://support.office.com/en-gb/article/test-your-document-s-readability-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2){target="_blank"} provides details on how to get readability scores on your drafting in Word.
+- [GSS best practice guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2018/11/Writing-about-statistics-Edition-2.0-October-2018-1.pdf){target="_blank" rel="noopener noreferrer"}
+- [GSS best practice hints and tips](https://teams.microsoft.com/_){target="_blank" rel="noopener noreferrer"}
+- [ONS style guide](https://style.ons.gov.uk/category/writing-a-statistical-bulletin/){target="_blank" rel="noopener noreferrer"}
+- [UNECE drafting guidance](http://www.unece.org/stats/documents/writing.html){target="_blank" rel="noopener noreferrer"}
+- [This link](https://support.office.com/en-gb/article/test-your-document-s-readability-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2){target="_blank" rel="noopener noreferrer"} provides details on how to get readability scores on your drafting in Word.
 - Similarly, the [Hemingway app](http://www.hemingwayapp.com/) is an online tool to assess readability. Whilst we might not want to use this directly for final drafting, it is useful to highlight areas of particular complexity in our current narrative. Additionally, the GSS Good Practice team set an exercise to try to write about your results without using any numbers: this can be really helpful to help understand the story you're trying to tell with your statistics.
-- As an illustrative example of work in other Departments - DWP's Fraud & Error statistics [before](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-201213-estimates){target="_blank"} (128 page release), and [after](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-financial-year-2017-to-2018-estimates){target="_blank"} their own modernisation work are worth a look.
+- As an illustrative example of work in other Departments - DWP's Fraud & Error statistics [before](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-201213-estimates){target="_blank" rel="noopener noreferrer"} (128 page release), and [after](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-financial-year-2017-to-2018-estimates){target="_blank" rel="noopener noreferrer"} their own modernisation work are worth a look.
 
 
 ---
