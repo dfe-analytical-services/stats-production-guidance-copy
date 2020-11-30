@@ -21,9 +21,11 @@ Migration to a new statistics dissemination platform - Explore Education Statist
 
 ---
 
-Needs some more context writing around it
+# Statistics in the media
 
-Robert Cuffe from the BBC talking to us about writing our publications in a way they can be used by journalistics and the media
+---
+
+Below is a session by Robert Cuffe from the BBC talking to DfE statisticians about writing our publications in a way they can be used by journalists and the media. The session is a mix of a talk, interactive elements and a question and answer session to round off. For the interactive tasks, you follow along to help give you a sense of how journalists use our publications.
 
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b44d821a-9b5c-437a-b321-673c4304c350?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>

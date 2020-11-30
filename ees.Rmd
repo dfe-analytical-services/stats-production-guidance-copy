@@ -18,7 +18,7 @@ The admin side of EES is only supported in Google Chrome and Microsoft Edge. It 
 
 Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
 
-Maintence and BAU running of the platform is supported by the Statistics Development Team.
+Maintenance and BAU running of the platform is supported by the Statistics Development Team.
 
 ---
 
