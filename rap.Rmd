@@ -893,7 +893,7 @@ To gain access to this area, please raise a request on service desk by navigatin
 
 Once you have navigated to this page, fill out the form with the following details and send your request off.
 
-`r knitr::include_graphics("images/devops_request_details.png")`
+`r knitr::include_graphics("images/devops_request_details.PNG")`
 
 Access is usually granted within a few working days. Alert the [Statistics Development Team](mailto:statistics.development@education.gov.uk) when this is confirmed, and we will set up/give you access to your repository.
 
