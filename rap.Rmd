@@ -14,7 +14,7 @@ require(knitr)
 
 ---
 
-[Reproducible Analytical Pipelines](https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/){target="_blank"}, or RAP for short. The full words still hide the true meaning behind buzzwords and jargon though. What it actually means is using automation to our advantage when analysing data, and this is as simple as writing code such as a SQL query that we can click a button to execute and do the job for us. 
+[Reproducible Analytical Pipelines](https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/){target="_blank" rel="noopener noreferrer"}, or RAP for short. The full words still hide the true meaning behind buzzwords and jargon though. What it actually means is using automation to our advantage when analysing data, and this is as simple as writing code such as a SQL query that we can click a button to execute and do the job for us. 
 
 
 We already have 'analytical pipelines' and have done for many years. The aim of RAP, is to automate the parts of these pipelines that can be automated, to increase efficiency and accuracy, while creating a clear audit trail to allow analyses to easily be re-run if needed. This will free us up to focus on the parts of our work where our human input can really add value. RAP is something we can use to reduce the burden on us by getting rid of some of the boring stuff, what's not to like!
@@ -77,7 +77,7 @@ The diagram below highlights what RAP means for us, and the varying levels in wh
 ---
 
 <div class="alert alert-dismissible alert-info">
-Teams are expected to review their own processes using the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} and use the guidance on this site to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
+Teams are expected to review their own processes using the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank" rel="noopener noreferrer"} and use the guidance on this site to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
 </div>
 
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
@@ -90,7 +90,7 @@ Teams will start from different places and implement changes at different rates,
 ---
 
 
-The checklist provided in the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank"} is designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag potential areas of improvement, and you can then use the links to go to the specific section with more detail and guidance on how to develop your current processes in line with best practice.
+The checklist provided in the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank" rel="noopener noreferrer"} is designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag potential areas of improvement, and you can then use the links to go to the specific section with more detail and guidance on how to develop your current processes in line with best practice.
 
 
 Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points, and are here to support all teams from their respective starting positions.
@@ -179,7 +179,7 @@ More to follow, in the meantime please contact us for advice.
 
 ---
 
-There's lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including [this guide](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017){target="_blank"}.
+There's lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including [this guide](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017){target="_blank" rel="noopener noreferrer"}.
 
 
 Remember that it is important to import them with consistent, thought-through [naming conventions](#naming-conventions). You will thank yourself later.
@@ -236,7 +236,7 @@ Ensure that any last-minute fixes to the process are written in the code and not
 
 ---
 
-To get started, here is a [SQL query](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank"} that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
+To get started, here is a [SQL query](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank" rel="noopener noreferrer"} that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.
 
 ---
 
@@ -246,12 +246,12 @@ To get started, here is a [SQL query](https://github.com/TomFranklin/sql-applied
 
 <!-- could have better examples -->
 
-[Here is a video](https://vimeo.com/33727555){target="_blank"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank"}.
+[Here is a video](https://vimeo.com/33727555){target="_blank" rel="noopener noreferrer"} of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at [applied data tidying in R, by RStudio](https://www.youtube.com/watch?v=1ELALQlO-yM){target="_blank" rel="noopener noreferrer"}.
 
 
-Using the `%>%` pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren't yet familiar with this, have a look at [this article](https://seananderson.ca/2014/09/13/dplyr-intro/){target="_blank"} that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you want to do within a pipe, googling 'how do I do X in dplyr r' will usually start to point you in the right direction, alternatively you can [contact us](mailto:statistics.development@education.gov.uk), and we'll be happy to help you figure out how to do what you need.
+Using the `%>%` pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren't yet familiar with this, have a look at [this article](https://seananderson.ca/2014/09/13/dplyr-intro/){target="_blank" rel="noopener noreferrer"} that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you want to do within a pipe, googling 'how do I do X in dplyr r' will usually start to point you in the right direction, alternatively you can [contact us](mailto:statistics.development@education.gov.uk), and we'll be happy to help you figure out how to do what you need.
 
-A quick example of how powerful this is is below, where my_data is processed to create new columns, have column names renamed, have the column names tidied using the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package, blank rows and columns removed, data filtered to only include specific geographic levels, and rows rearranged in order, all in a few lines of easy to follow code:
+A quick example of how powerful this is is below, where my_data is processed to create new columns, have column names renamed, have the column names tidied using the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank" rel="noopener noreferrer"} package, blank rows and columns removed, data filtered to only include specific geographic levels, and rows rearranged in order, all in a few lines of easy to follow code:
 
 
 ```{r example, eval=FALSE}
@@ -267,7 +267,7 @@ processed_regional_data <- my_data %>%
 ```
 
 
-[Helpful new functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank"} in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 in the linked article for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables. 
+[Helpful new functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank" rel="noopener noreferrer"} in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 in the linked article for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables. 
 
 
 For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html) page.
@@ -311,9 +311,9 @@ We strongly recommend that teams make use of open source software where possible
 
 By following [our guidance](#version-controlled-final-code-script(s)) in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.
 
-Open source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open source](https://opensource.com/resources/what-open-source){target="_blank"}, as well as this guide to [working in an open source way](https://opensource.com/open-source-way){target="_blank"}.
+Open source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}.
 
-This is a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank"} and is something that we as analysts and members of the Government Statistical Service can reap the benefits from. There are many benefits to adopting open source software and using the principles in our analytical processes.
+This is a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} and is something that we as analysts and members of the Government Statistical Service can reap the benefits from. There are many benefits to adopting open source software and using the principles in our analytical processes.
 
 
 ---
@@ -479,7 +479,7 @@ Clean code should also include comments. Comment why you've made decisions, don'
 
 ---
 
-For best practice on writing SQL code, here is a particularly useful [word document](resources/TSQL_Coding_Standards.docx){target="_blank"} produced by our [Data Hub](https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf){target="_blank"}. This outlines a variety of best practices, ranging from naming conventions, to  to formatting your SQL code so that it is easy to follow visually.
+For best practice on writing SQL code, here is a particularly useful [word document](resources/TSQL_Coding_Standards.docx){target="_blank" rel="noopener noreferrer"} produced by our [Data Hub](https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf){target="_blank" rel="noopener noreferrer"}. This outlines a variety of best practices, ranging from naming conventions, to  to formatting your SQL code so that it is easy to follow visually.
 
 ---
 
@@ -487,11 +487,11 @@ For best practice on writing SQL code, here is a particularly useful [word docum
 
 ---
 
-When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank"} as directories for your work.
+When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank" rel="noopener noreferrer"} as directories for your work.
 
-The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank"}, which is fast becoming the global standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank"} package, which will literally style your code for you, and is well worth a look.
+The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank" rel="noopener noreferrer"}, which is fast becoming the global standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank" rel="noopener noreferrer"} package, which will literally style your code for you, and is well worth a look.
 
-There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank"}.
+There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank" rel="noopener noreferrer"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
@@ -591,7 +591,7 @@ The Statistics Development Team are developing the QA app to include basic QA ou
 
 **Why do it?**
 
-Quality is one of the three pillars that our [code of practice](https://code.statisticsauthority.gov.uk/the-code/quality/){target="_blank"} is built upon. These basic level checks allow us to have confidence that we are accurately processing the data.
+Quality is one of the three pillars that our [code of practice](https://code.statisticsauthority.gov.uk/the-code/quality/){target="_blank" rel="noopener noreferrer"} is built upon. These basic level checks allow us to have confidence that we are accurately processing the data.
 
 Automating these checks ensures their accuracy and reliability, as well as being dramatically quicker than doing these manually.
 
@@ -615,15 +615,15 @@ Many teams will have aspects of their data and processes that require Quality As
 
 **Why do it?**
 
-Quality is one of the three pillars that our [code of practice](https://code.statisticsauthority.gov.uk/the-code/quality/){target="_blank"} is built upon. By building upon the basic checks to develop bespoke QA for our publications, we can increase our confidence in the quality of the processes and outputs that they produce.
+Quality is one of the three pillars that our [code of practice](https://code.statisticsauthority.gov.uk/the-code/quality/){target="_blank" rel="noopener noreferrer"} is built upon. By building upon the basic checks to develop bespoke QA for our publications, we can increase our confidence in the quality of the processes and outputs that they produce.
 
 **How to get started**
 
 We expect that the basic level of automated QA will cover most needs that publication teams have. However, we also expect that each publication will have it's own quirks that require a more bespoke approach. An example of a publication with it's own bespoke QA checks will appear in this space shortly. For the time being, try to consider what things you'd usually check as flags that something hasn't gone right with your data. What are the unique aspects of your publication's data, and how can you automate checks against them to give you confidence in it's accuracy and reliability?
 
-For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://testthat.r-lib.org/){target="_blank"}, including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank"} on it by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank"} by Hadley Wickham. 
+For those who are interested in starting writing their own QA scripts, it's worth looking at packages in R such as [testthat](https://testthat.r-lib.org/){target="_blank" rel="noopener noreferrer"}, including the [coffee and coding talk](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7b2B35083D-7626-48E2-9615-451544742692%7d){target="_blank" rel="noopener noreferrer"} on it by Peter Curtis, as well as this [guide on testing](http://r-pkgs.had.co.nz/tests.html){target="_blank" rel="noopener noreferrer"} by Hadley Wickham. 
 
-The [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package in R also has some particularly useful functions, such as `clean_names()` to automatically clean up your variable names, `remove_empty()` to remove any completely empty rows and columns, and `get_dupes()` which retrieves any duplicate rows in your data - this last one is particularly powerful as you can feed it specific columns and see if there's any duplicate instances of values across those columns.
+The [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank" rel="noopener noreferrer"} package in R also has some particularly useful functions, such as `clean_names()` to automatically clean up your variable names, `remove_empty()` to remove any completely empty rows and columns, and `get_dupes()` which retrieves any duplicate rows in your data - this last one is particularly powerful as you can feed it specific columns and see if there's any duplicate instances of values across those columns.
 
 
 ---
@@ -660,7 +660,7 @@ At a basic level we want teams to make use of the QA app to explore their data:
 
 **Why do it?**
 
-Value is one of the three pillars of our [code of practice](https://code.statisticsauthority.gov.uk/the-code/value/){target="_blank"}. Even more specifically it states that __'Statistics and data should be presented clearly, explained meaningfully and provide authoritative insights that serve the public good.'__.
+Value is one of the three pillars of our [code of practice](https://code.statisticsauthority.gov.uk/the-code/value/){target="_blank" rel="noopener noreferrer"}. Even more specifically it states that __'Statistics and data should be presented clearly, explained meaningfully and provide authoritative insights that serve the public good.'__.
 
 As a result, we should be developing automated summaries to help us to better understand the story of the data and be authorative and rigorous in our telling of it.
 
@@ -763,7 +763,7 @@ Having a **clear** and **consistent** naming convention for your files is critic
 - Use leading zeros to left pad numbers and ensure files sort properly, avoiding 1,10,2,3.
 
 
-If in doubt, take a look at this [presentation](https://speakerdeck.com/jennybc/how-to-name-files){target="_blank"}, or this [naming convention guide by Stanford](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming){target="_blank"}, for examples reinforcing the above.
+If in doubt, take a look at this [presentation](https://speakerdeck.com/jennybc/how-to-name-files){target="_blank" rel="noopener noreferrer"}, or this [naming convention guide by Stanford](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming){target="_blank" rel="noopener noreferrer"}, for examples reinforcing the above.
 
 ---
 
@@ -831,9 +831,9 @@ Use commented lines of - to break up your files into scannable chunks based upon
 
 ```
 
-Doing this can visually break up your code into sections that are easy to navigate around. It will also add that section to your outline, which can be used in RStudio using Ctrl-Shft-O. More details on the possibilities for this can be found in the [RStudio guidance on folding and sectioning code](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank"}.
+Doing this can visually break up your code into sections that are easy to navigate around. It will also add that section to your outline, which can be used in RStudio using Ctrl-Shft-O. More details on the possibilities for this can be found in the [RStudio guidance on folding and sectioning code](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank" rel="noopener noreferrer"}.
 
-You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank"} as well.
+You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you're at the stage where you are developing your own functions and packages in R, then take a look at [roxygen2](https://roxygen2.r-lib.org/){target="_blank" rel="noopener noreferrer"} as well.
 
 ---
 
@@ -860,6 +860,8 @@ More to follow, in the meantime please contact us for advice.
 
 ---
 
+If you do not already have git downloaded, you can [download the latest version from their website](https://git-scm.com/downloads).
+
 For now, take a look at at the [resources for learning Git](l+d.html#git) on the learning resources page.
 
 ---
@@ -882,7 +884,18 @@ Having the final copy of the scripts version controlled gives assurance around h
 
 The first step is to get your final versions of code and documentation together in a single folder.
 
-We have a specific area set up for you to host your publication code in on the dfe-gov-uk instance of Azure DevOps, entitled official-statistics-production. More details on how to set this up will follow shortly, in the meantime please contact us if you're interested in this.
+We have a specific area set up for you to host your publication code in on the dfe-gov-uk instance of Azure DevOps, entitled official-statistics-production.
+
+To gain access to this area, please raise a request on service desk by navigating through the pages detailed in the animation below.
+
+
+`r knitr::include_graphics("images/servicedesk_request.gif")`
+
+Once you have navigated to this page, fill out the form with the following details and send your request off.
+
+`r knitr::include_graphics("images/devops_request_details.PNG")`
+
+Access is usually granted within a few working days. Alert the [Statistics Development Team](mailto:statistics.development@education.gov.uk) when this is confirmed, and we will set up/give you access to your repository.
 
 ---
 
@@ -909,14 +922,40 @@ Using git allows multiple people to simultaneously develop the same code using b
 
 To get started you should:
 
-- Get code into a git controlled folder in whatever version it is currently in. 
+Get code into a git controlled folder in whatever version it is currently in. Use the following steps to do so:
 
-- Ensure all team members have access to the area 
+1. Open the folder where your project is saved, right click anywhere in that window, and click "Git Bash Here".
+
+2. This will open a black box. Type in the following and hit enter
+
+``` {r git_init, eval=FALSE}
+git init
+```
+
+3. After hitting enter, type in the following and hit enter again after each line. You will need the URL of your azure devops repository to complete this step. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you are not sure what this is or do not have one.
+
+``` {r git_steps, eval=FALSE}
+git add .
+
+git commit -m "first commit"
+
+git remote add origin YOUR_URL_HERE
+
+git push -f origin --all
+```
+
+* You may be prompted for either your windows or git credentials at this stage. 
+
+  + If prompted for your **windows** credentials, enter the username and password combination you use to log into your DfE device.
+
+  + If prompted for your **git** credentials, visit your online repository, click on the blue "clone" box, and click "generate git credentials". This will generate a username and password for you to enter.
+
+4. Visit your repository online, and check that all the files have uploaded. Other members of your team will now be able to work from your code.
+
+- Ensure all team members have access to your project in the azure devops official-statistics-production area. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if there are any issues.
 
 - Build capability within the team to understand git and version control
 
 - Make use of branches, commits, and pull requests for detailed version control and collaborative working
 
 Until more guidance appears here, please refer to the resources above, or the other links on the [learning resources](l+d.html#git) page in order to learn how to use git in practice.
-
----
