@@ -439,6 +439,21 @@ Review your code and consider the following:
  - Can you move all variables that require manual input (e.g. table names, years) to be assigned at the top of the code, so it's easy to edit in one place with each iteration?
  - Are there any fixed variables that are prone to changing such as geographic boundaries, that you could start preparing for changes now by making it easy to adapt in future?
 
+
+For example, if you refer to the year of publication in your code a lot, consider replacing every instance with a named variable, which you only need to change once at the start of your code. In the example below, the year is set at the top of the code, and is used to define "prev_year", both of which are used further down the code to filter the data based on year.
+
+``` {r this_last_year, eval=FALSE}
+
+this_year <- 2020
+prev_year <- this_year - 1
+
+data_filtered <- data %>% 
+  filter(year == this_year)
+
+data_filtered_last_year <- data %>% 
+  filter(year == prev_year)
+
+```
 ---
 
 ## Standards for coding
@@ -950,7 +965,7 @@ git config --global http.sslverify false
 
 ```
 
-3. After hitting enter, type in the following and hit enter again after each line. You will need the URL of your azure devops repository to complete this step. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you are not sure what this is or do not have one.
+3. After hitting enter, type in the following and hit enter again after each line. You will need the URL of your Azure DevOps repository to complete this step. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you are not sure what this is or do not have one.
 
 ``` {r git_steps, eval=FALSE}
 git add .
@@ -977,7 +992,7 @@ git push -f origin --all
 ---
 
 
-- Ensure all team members have access to your project in the azure devops official-statistics-production area. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if there are any issues.
+- Ensure all team members have access to your project in the Azure DevOps official-statistics-production area. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if there are any issues.
 
 - Get team members to clone your repository in to their personal area, so everyone is able to work on code at the same time.
 
@@ -1033,7 +1048,7 @@ Once you are happy with changes and want them to be in the latest "development" 
 
 When you have got to a place with the code and your committed changes where you are happy for it to be QAd, you can open a pull request. This means that the "development" branch will be merged into "master", and will become the latest QAd version of the production code that the team falls back on.
 
-* Navigate to "Pull Requests" in the "Repos" tab of azure devops and click the blue "New pull request" button.
+* Navigate to "Pull Requests" in the "Repos" tab of Azure DevOps and click the blue "New pull request" button.
 
 * This will take you to a new window. Here, you can add:
    + Title, tell your team what has changed
