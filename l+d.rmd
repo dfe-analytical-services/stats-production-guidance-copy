@@ -181,6 +181,49 @@ Once you've downloaded RStudio, R, and RTools from the software centre, you can 
 
 ---
 
+## Quick fixes
+
+---
+
+A selection of handy bits of code and workarounds for common issues.
+
+---
+
+### renv::restore()
+
+Sometimes renv::restore() can fail, and when in specific renv-controlled projects install.packages() will fail saying that packages aren't available even when they clearly are. This seems to be an issue that can be worked around by specifying the renv library as the install location. It's a bit of a fudge, though these lines are helpful to get the packages from the renv lockfile installed and you running the project when needed:
+
+```
+myPath <- .libPaths()[1]
+
+forceInstall <- function(pkg, path) {
+missing <- suppressWarnings(eval(parse(text= paste0("!require(",pkg,")"))))
+
+if(missing == FALSE){
+message(pkg, " is already installed.")
+} else{
+install.packages(pkg, lib = path)
+}
+}
+
+forceInstall("jsonlite", myPath)
+
+renvPackages <- names(jsonlite::fromJSON("renv.lock", flatten = TRUE)$Packages)
+
+invisible(lapply(renvPackages, forceInstall, path = myPath))
+```
+
+More manual equivalent to use for specific packages:
+
+```
+.libPaths() # note down output 1, and reuse in the lib argument of install.packages() as below
+
+install.packages("rmarkdown", lib = "C:/Users/swong/OneDrive - Department for Education/Documents/stats-production-guidance/renv/library/R-4.0/x86_64-w64-mingw32")
+
+```
+
+---
+
 # Git
 
 ---
