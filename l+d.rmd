@@ -224,6 +224,12 @@ install.packages("rmarkdown", lib = "C:/Users/swong/OneDrive - Department for Ed
 
 ---
 
+### Specifying a version of R to use
+
+This can be done most easily by navigating in RStudio through `Tools > Global options > General > Basic > R version (change)`. It's likely you'll need to restart RStudio for the changes to take affect. 
+
+---
+
 # Git
 
 ---
