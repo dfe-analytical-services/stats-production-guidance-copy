@@ -468,6 +468,7 @@ data_filtered_last_year <- data %>%
   filter(year == prev_year)
 
 ```
+
 ---
 
 ## Standards for coding
@@ -504,6 +505,12 @@ Watch the coffee and coding session introducing good code practice below:
 
 <center>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/624e3442-aa66-44e7-bb4f-717a6508b056?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
+</center>
+
+Then you should also watch the follow up intermediate session:
+
+<center>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/92d4ba05-d304-4009-b543-e5f4563f1d30?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
 </center>
 
 Clean code should include comments. Comment why you've made decisions, don't comment what you are doing unless it is particularly complex as the code itself describes what you are doing. If in doubt, more comments are better than too few though. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.
