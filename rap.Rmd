@@ -22,6 +22,8 @@ Cam ran an introduction to RAP session for DISD in December 2020, the slides can
 
 [Reproducible Analytical Pipelines](https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/){target="_blank" rel="noopener noreferrer"}, or RAP for short. The full words still hide the true meaning behind buzzwords and jargon though. What it actually means is using automation to our advantage when analysing data, and this is as simple as writing code such as a SQL query that we can click a button to execute and do the job for us. 
 
+The cross-government group of RAP champions have laid out a [minimum level of RAP](https://github.com/best-practice-and-impact/rap_mvp_maturity_guidance/blob/master/Reproducible-Analytical-Pipelines-MVP.md){target="_blank" rel="noopener noreferrer"} to aim for (note that we have our own levels of practice below, which are building blocks to reach this end goal)
+
 We already have 'analytical pipelines' and have done for many years. The aim of RAP, is to automate the parts of these pipelines that can be automated, to increase efficiency and accuracy, while creating a clear audit trail to allow analyses to easily be re-run if needed. This will free us up to focus on the parts of our work where our human input can really add value. RAP is something we can use to reduce the burden on us by getting rid of some of the boring stuff, what's not to like!
 
 Cam ran an introduction to RAP session for DISD in December 2020, the slides can be found on [github](https://github.com/cjrace/introduction-to-rap){target="_blank" rel="noopener noreferrer"}, and the recording is embedded below.
@@ -1081,7 +1083,7 @@ Please refer to the resources above, or the other links on the [learning resourc
 
 If you want to cherry pick specific commits for PR, you can do this by cherry picking the commits you want to use, and creatng a new branch that has only those new commits that you want.
 
-To start off you'll need to identify the commits you want. In the terminal, run `git log --oneline` to get a log of commits for your current branch, use `git log --online BRANCHNAME` to specific the branch for the log. This gives a list of commit hashes and messages ([stackoverflow response defining git hashes and commmit ID's](https://stackoverflow.com/questions/43763896/whats-the-difference-between-commit-id-and-sha1-hash-in-git){target="_blank" rel="noreferrer noopener"}). You can press enter to get more commits, or q to quit
+To start off you'll need to identify the commits you want. In the terminal, run `git log --oneline` to get a log of commits for your current branch, use `git log --online BRANCHNAME` to specific the branch for the log. This gives a list of commit hashes and messages ([stackoverflow response defining git hashes and commmit ID's](https://stackoverflow.com/questions/43763896/whats-the-difference-between-commit-id-and-sha1-hash-in-git){target="_blank" rel="noopener noreferrer"}). You can press enter to get more commits, or q to quit
 
 Then go to the branch you want the commit to appear on and cherry pick your commits. Often, if this is to hop around something on a development to master pr, you would create a second development branch, cherry pick commits to there, and then PR that to master and delete the branch after merging.
 
