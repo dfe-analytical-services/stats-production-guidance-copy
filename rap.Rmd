@@ -1090,3 +1090,9 @@ Then go to the branch you want the commit to appear on and cherry pick your comm
 On the branch you want to PR (i.e. your copy of a development branch purely for merging only cherry picked commits) run `git cherry-pick COMMITHASH` to add the specified commit, or `git cherry-pick HASH1^..HASH4` for a specified list of commits (inclusive).
 
 Happy days!
+
+**Tagging release versions** <!-- future best pratice?! -->
+
+It can be useful to tag specific commits or releases at key points in time. For us a common example will be each publication cycle, to tag the version of the code used to process data for a particular release or amendment.
+
+Guidance on how to tag releases using git can be found on the draft version of the [BPI code guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#releases-tagging){target="_blank" rel="noopener noreferrer"}
