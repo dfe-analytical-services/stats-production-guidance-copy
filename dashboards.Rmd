@@ -154,3 +154,48 @@ If you’ve started from our empty project template [we should provide this] thi
 You should also use Github Actions to run the automated tests for your app, which we recommend are done on atleast every pull request. An example yaml file for running the tests is included in the template repo [LINK]. 
 
 
+---
+
+## Useful things
+
+---
+
+Below are a bunch of tips and tricks that we've found useful when building R Shiny applications
+
+---
+
+### Creating PATs
+
+---
+
+PATs or Personal access tokens, are a preferred way to authenticate into repositories through code. [Creating a PAT in GitHub](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token){target="_blank" rel="noopener noreferrer"} is relatively intuitive. In Azure DevOps, you can do this by following [Microsoft's documentation on creating a PAT in Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#create-personal-access-tokens-to-authenticate-access){target="_blank" rel="noopener noreferrer"}.
+
+---
+
+### Storing secure variables
+
+---
+
+In Azure DevOps you can securely store variables that are then used by your pipelines by making use of variable groups. 
+
+First create a variable group by navigating to `Pipelines > Library`. Enter any variables you want to store here and make sure to change the variable type to secret if appropriate (i.e. login credentials or PATs).
+
+`r knitr::include_graphics("images/createVariableGroup.png")`
+
+Then, in the pipeline you want to use the variables in, go to `Variables > Variable groups` and link the variable group as shown below. You can then call upon the variables as needed in your pipeline.
+
+`r knitr::include_graphics("images/linkVariableGroup.png")`
+
+---
+
+### Mirroring repo's
+
+---
+
+There may be times when you have a repository in one place, such as Azure DevOps, but want to mirror the code and any changes to it in another place, such as GitHub. This can be for many different reasons, though commonly for us it will be to open up our code across government. Azure DevOps doesn't provide us with easily publicly visible code repositories, however GitHub does.
+
+To mirror a code repository from Azure DevOps, use the [mirror git repository extension](https://github.com/swellaby/vsts-mirror-git-repository){target="_blank" rel="noopener noreferrer"} (already installed on dfe-gov-uk instance), make use of the PAT and secure variables sections above and then add a job to your pipeline and enter your parameters in the fields as per the example below:
+
+`r knitr::include_graphics("images/mirroringGit.png")`
+
+---
