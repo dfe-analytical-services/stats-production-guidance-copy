@@ -6,8 +6,9 @@ author: "By Cam Race, Laura Selby and Sarah Wong"
 
 ---
 
+## Guidance
 
-This is a guide aimed at anyone producing official statistics. It is particularly important for those publishing using Explore Education Statistics (EES), though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walk-through guide from processing to publication, as well as being a single reference point that is easy to navigate if you just need to check on a specific part of the process, link off to other resources, or access specific guidance.
+This website is a guide aimed at anyone producing official statistics. It is particularly important for those publishing using Explore Education Statistics (EES), though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walk-through guide from processing to publication, as well as being a single reference point that is easy to navigate if you just need to check on a specific part of the process, link off to other resources, or access specific guidance.
 
 Within this guide you can read about: 
 
@@ -20,7 +21,7 @@ Guidance for how to process data, including the principles of Reproducible Analy
 * [Data standards](ud.html)  
 Guidance on how to structure data files
 
-* [Content design](cd.html)  
+* [Writing content](cd.html)  
 Best practice for content design
 
 * [Publishing statistics](pub.html)  
@@ -29,10 +30,13 @@ Guidance for where and how to publish Official and National Statistics
 * [Using Explore Education Statistics (EES)](ees.html)  
 Guidance for how to use the features in the Explore Education Statistics platform
 
+There is already a wealth of resources out there, and therefore this site unashamedly aims to pool the relevant resources for statistics production into one place. There are some things that this site does not yet have, it will develop and change over time. We hope it can prove a useful resource for everyone from the most experienced of producers, right through to those who are working on their very first publication. If you have any feedback, suggested additions, or wish to challenge any of the guidance, please contact us using the envelope button in the top right corner.
+
 ---
 
+## Applications
 
-We also have a number of other applications for statistics production teams to use, they can be accessed at the links below when using a DfE device:
+We also have a number of other applications for statistics production teams to use to help them in their processes, they can be accessed at the links below when using a DfE device:
 
 
 - DfE QA app (including the 'data screener') - [https://rsconnect/rsc/dfe-published-data-qa/](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank" rel="noopener noreferrer"}
@@ -43,5 +47,3 @@ We also have a number of other applications for statistics production teams to u
 
 
 ---
-
-In life there is generally little point to reinventing the wheel. There is already a wealth of resources out there, and therefore this site unashamedly aims to pool the relevant resources for statistics production into one place. There are some things that this site does not yet have, it will develop and change over time. We hope it can prove a useful resource for everyone from the most experienced of producers, right through to those who are working on their very first publication. If you have any feedback, suggested additions, or wish to challenge any of the guidance, please contact us using the envelope button in the top right corner.
