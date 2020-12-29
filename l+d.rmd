@@ -197,6 +197,8 @@ Git is a version control software that tracks changes to files within a folder t
 
 - While also mentioned above as a resource for learning R, chapter 6 of ESFA's [guide to R and Git](https://rsconnect/rsc/esfa-r-training/git-building-intuition.html){target="_blank" rel="noopener noreferrer"} is also worth looking at for Git alone.
 
+- GitHub have created a [cheat sheet for git commands](https://education.github.com/git-cheat-sheet-education.pdf){target="_blank" rel="noopener noreferrer"}.
+
 - Microsoft have produced documentation on [using Git](https://docs.microsoft.com/en-us/azure/devops/user-guide/code-with-git?view=azure-devops){target="_blank" rel="noopener noreferrer"} within [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops){target="_blank" rel="noopener noreferrer"}.
 
 - For those wanting to go deeper into understand the variety of git commands and what they do, there is a great [online visual resource](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1){target="_blank" rel="noopener noreferrer"}.
