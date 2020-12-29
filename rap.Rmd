@@ -1104,3 +1104,9 @@ Happy days!
 It can be useful to tag specific commits or releases at key points in time. For us a common example will be each publication cycle, to tag the version of the code used to process data for a particular release or amendment.
 
 Guidance on how to tag releases using git can be found on the draft version of the [BPI code guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#releases-tagging){target="_blank" rel="noopener noreferrer"}
+
+**Merging a branch into another one**
+
+For example if you are working on a feature branch, and want to merge the latest changes to the master branch to your feature branch.
+
+Start off by checking out your desired target branch - `git checkout mybranch`. Then merge in the branch you want (e.g. master) - `git merge master`.
