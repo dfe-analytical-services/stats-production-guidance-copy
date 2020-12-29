@@ -1075,4 +1075,16 @@ When you have got to a place with the code and your committed changes where you 
 
 * As a reviewer, to approve a pull request, follow the link in your email and click "approve" in the blue box. When all reviewers are happy for this to be the new master branch, click “complete”.
 
-Please refer to the resources above, or the other links on the [learning resources](l+d.html#git) page to learn more about how to use git in practice.
+Please refer to the resources above, or the other links on the [learning resources](l+d.html#git) page to learn more about how to use git in practice. Creating pull requests in GitHub follows a broadly similar process and should be intuitive from the above steps for Azure DevOps.
+
+**Cherry picking**
+
+If you want to cherry pick specific commits for PR, you can do this by cherry picking the commits you want to use, and creatng a new branch that has only those new commits that you want.
+
+To start off you'll need to identify the commits you want. In the terminal, run `git log --oneline` to get a log of commits for your current branch, use `git log --online BRANCHNAME` to specific the branch for the log. This gives a list of commit hashes and messages ([stackoverflow response defining git hashes and commmit ID's](https://stackoverflow.com/questions/43763896/whats-the-difference-between-commit-id-and-sha1-hash-in-git){target="_blank" rel="noreferrer noopener"}). You can press enter to get more commits, or q to quit
+
+Then go to the branch you want the commit to appear on and cherry pick your commits. Often, if this is to hop around something on a development to master pr, you would create a second development branch, cherry pick commits to there, and then PR that to master and delete the branch after merging.
+
+On the branch you want to PR (i.e. your copy of a development branch purely for merging only cherry picked commits) run `git cherry-pick COMMITHASH` to add the specified commit, or `git cherry-pick HASH1^..HASH4` for a specified list of commits (inclusive).
+
+Happy days!
