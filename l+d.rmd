@@ -152,6 +152,8 @@ Once you've downloaded RStudio, R, and RTools from the software centre, you can 
 
 - The [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank" rel="noopener noreferrer"} is a great starting point to guide you through how to get started using R and RStudio.
 
+- As an alternative, with a number of options for beginners to R, [RStudio Education](https://education.rstudio.com/learn/beginner/){target="_blank" rel="noopener noreferrer"} provide a variety of materials to suit different learning styles.
+
 - There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank" rel="noopener noreferrer"}.
 
 - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank" rel="noopener noreferrer"}, hopefully this one should be relatively self-explanatory!
