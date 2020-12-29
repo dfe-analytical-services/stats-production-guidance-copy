@@ -530,6 +530,14 @@ There is also plenty of guidance around the internet for [best practice](https:/
 
 ---
 
+#### HTML
+
+---
+
+If you ever find yourself writing html, or creating it through rmarkdown, you can check your html using [w3's validator](https://validator.w3.org/){target="_blank" rel="noopener noreferrer"}.
+
+---
+
 ## Peer reviewing code
 
 ---
