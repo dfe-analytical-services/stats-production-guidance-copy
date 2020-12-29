@@ -236,6 +236,61 @@ This can be done most easily by navigating in RStudio through `Tools > Global op
 
 ---
 
+### Mutating columns
+
+Where you have a simple if else scenario use `mutate(col = if_else(expression, TRUE, FALSE)`, rather than `mutate(col = case_when(expression ~ TRUE, TRUE ~FALSE)` it's both quicker and easier on the eye!
+
+---
+
+### Rounding
+
+The base R function of round() rounds 5's downwards. To round them upwards you can create a custom function like the one below:
+
+```
+roundFiveUp <- function(x,n){ 
+    positiveNegative = sign(x) 
+    z = abs(x)*10^n 
+    z = z + 0.5 + sqrt(.Machine$double.eps) 
+    z = trunc(z) 
+    z = z/10^n 
+    return(z*positiveNegative) 
+}
+```
+---
+
+### Passing variables as functions arguments
+
+This can be worked around by using a combination of `eval()` and `parse()`, as shown in the below function:
+
+```
+showFilterLevels <- function(data, meta) {
+  filters <- meta %>%
+    filter(col_type == "Filter") %>%
+    pull(col_name)
+
+  levelsTable <- function(filter) {
+    return(eval(parse(text = paste0("data %>% select(", filter, ") %>% distinct()"))))
+  }
+
+  output <- lapply(filters, levelsTable)
+
+  return(output)
+}
+```
+---
+
+### File locations 
+
+Struggling to get files to talk to one another, or get code to find and use another R script? Use `here::here()` and marvel at it's wondrous ability to magic away issues.
+
+---
+
+### Remember the outline
+
+In RStudio you can greatly increase the navigability of your code by taking advantage of outlines. [More information on folding and navigating outlines in RStudio]((https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank" rel="noopener noreferrer"} can be found online, though when using rmarkdown reports, remember to use names first, such as `## Rows that aren't matching: r nrow(joined %>% filter(matching == FALSE))`, rather than having the R code first, so that they are easy to discern in the outline.
+
+---
+
 # Git
 
 ---
