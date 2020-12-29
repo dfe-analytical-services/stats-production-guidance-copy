@@ -297,6 +297,8 @@ In RStudio you can greatly increase the navigability of your code by taking adva
 
 Git is a version control software that tracks changes to files within a folder that you tell git to track. These folders are generally known as repositories, and can be held and managed securely on team areas within the [DfE Azure DevOps](https://dfe-gov-uk.visualstudio.com/){target="_blank" rel="noopener noreferrer"} subscription. More specific guidance on how to setup and use your own DevOps area will follow shortly on the [production processes](rap.html#how_to_setup_an_azure_devops_area){target="_blank" rel="noopener noreferrer"} page.
 
+- If you're new to Git and are unsure of what it does, then take a look through these [Git for humans slides](https://speakerdeck.com/alicebartlett/git-for-humans){target="_blank" rel="noopener noreferrer"}
+
 - [Gooey Git](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit%2Fgooey%5Fgit%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit){target="_blank" rel="noopener noreferrer"} by David Sands, provides a very neat overview of using git with R.
 
 - Avison Ho and Linda Bennett gave this coffee and coding presentation on [version controlling SQL with Git](https://github.com/avisionh/SQL-Titbits/wiki/User-Guide:-SQL-x-Git-Version-Control){target="_blank" rel="noopener noreferrer"}.
