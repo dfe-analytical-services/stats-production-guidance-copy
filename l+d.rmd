@@ -179,6 +179,8 @@ Once you've downloaded RStudio, R, and RTools from the software centre, you can 
 
 - Also check out the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank"} package, it has some particularly powerful functions that are worth a look for tidying and QA'ing data.
 
+- Rachel Tadd ran a [Coffee and Coding session on testing R code](https://web.microsoftstream.com/video/6806b4ba-7b13-4c3c-96f1-9b91c0f1d85b){target="_blank" rel="noopener noreferrer"} that is well worth a watch for an introduction to improving your code through testing.
+
 ---
 
 # Git
