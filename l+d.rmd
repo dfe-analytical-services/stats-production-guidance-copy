@@ -14,7 +14,7 @@ As statistics producers we require a variety of tools to be able to process our 
 
 As a part of developing resources to help us integrate the principle of RAP into our processes, it is important that we set a clear direction on what tools we will be actively supporting teams to use. Below are the recommended tools that will give us the most power to do what we need, and are the best supported with resources for developing the necessary skills to use them. These have large user communities in DfE, and are already working in our current IT setup.
 
-For best practice when coding, see the [DfE Good Code Practice guide](https://dfe-analytical-services.github.io/good-code-practice/index.html){target="_blank" rel="noopener noreferrer"}.
+For best practice when using software and coding in our process, see our [guidance on RAP](RAP.html){target="_blank" rel="noopener noreferrer"} the [DfE Good Code Practice guide](https://dfe-analytical-services.github.io/good-code-practice/index.html){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
@@ -44,6 +44,12 @@ Teams are welcome to use whatever tools they want, as long as the processes invo
 
 ---
 
+**Software language** – the literal language of the code you write, this defines the syntax and commands to use.
+
+**Integrated development environment (IDE)** – a software application within which you can actively develop and execute code.
+
+Most software will have a language and a commonly used IDE. If you are looking for an all-purpose IDE for editing and running code, then we would recommend installing Visual Studio Code from the software centre.
+
 As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first and get their head around the concepts of writing code, and what it is we can do with it. Some of the guides below for R are particularly good for walking you through this step by step.
 
 <div class="alert alert-dismissible alert-info">
@@ -72,7 +78,7 @@ We are always on the look out for resources that will help you to have the skill
 
 - If the above list doesn't have something for you then check out the resources in the [awesome lists](https://github.com/sindresorhus/awesome){target="_blank" rel="noopener noreferrer"} and [awesome R](https://github.com/qinwf/awesome-R){target="_blank" rel="noopener noreferrer"}, which contain more resources than you could shake a stick at.
 
-- [DataCamp](https://learn.datacamp.com/){target="_blank" rel="noopener noreferrer"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email Learning.Academy@ons.gov.uk, they can guide you through the process of getting access to one of their premium subscriptions for a few weeks, which allows you to access the rest of the courses.
+- [DataCamp](https://learn.datacamp.com/){target="_blank" rel="noopener noreferrer"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email Learning.Academy@ons.gov.uk, they can guide you through the process of getting access to one of their premium subscriptions for a few weeks, which allows you to access the rest of the courses. Datacamp as a company are often morally objected to, and are widely vetoed across the data science community.
 
 - Earlier this year we had our Data Science week, which contained a wide variety of talks across Data Science within the department, everything was recorded and can be found on the [associated microsoft stream page](https://web.microsoftstream.com/group/df01862c-7ad4-4f25-b7f2-df7353af52a9){target="_blank" rel="noopener noreferrer"}.
 
@@ -110,25 +116,25 @@ The time commitment of the programme will be dependent on the size of the work a
 
 ---
 
-SQL provides us with an intuitive language to query databases and manipulate the data that we have in them. Once you have downloaded MSSMS, and gained access to your particular server and database, you can start writing SQL queries to extract and manipulate your data.
+### What is it
 
-- This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank" rel="noopener noreferrer"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio (downloadable through the software centre), and start playing with that query.
-
-- Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL){target="_blank" rel="noopener noreferrer"}.
-
-- The [Khan academy](https://www.khanacademy.org/computing/computer-programming/sql){target="_blank" rel="noopener noreferrer"} offers a great free introduction to the basics of SQL.
-
-- [w3schools.com](https://www.w3schools.com/sql/default.asp){target="_blank" rel="noopener noreferrer"} offers a useful guide through the most common SQL commands.
-
-- It's also worth taking a look at Jon Holman's presentation on ['good to know' SQL functions](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180321%5Fjonathan%5Fsql&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97){target="_blank" rel="noopener noreferrer"}.
-
-- MoJ have produced a [SQL from square one](https://moj-analytical-services.github.io/SQL_from_square_one/CTEs.html){target="_blank" rel="noopener noreferrer"} guide to using CTE's in SQL as well as running SQL from RStudio
+SQL or Structured Query Language is a programming language used to talk to relational database management systems.
 
 ---
 
-## SQL bitesize sessions
+### What is it for
+
+SQL provides us with a language primarily for querying databases to extract data, though it is also capable of some basic data processing and analysis.
 
 ---
+
+### How to get it
+
+Download SSMS from the DfE software centre, talk to your team about getting access to the appropriate SQL servers and databases where the data you need to access is held and start writing SQL queries.
+
+---
+
+### Best place to start
 
 Andy Brook's excellent Introduction to SQL session, giving a visual overview of the basics of querying with SQL:
 
@@ -137,14 +143,33 @@ Andy Brook's excellent Introduction to SQL session, giving a visual overview of 
 </div>
 
 
+The follow up intermediate session can be found below.
+
 ---
 
-Andy's follow up 'intermediate' session, covering more advanced features of SQL:
+### Best syntax lookup
+
+- [w3schools.com](https://www.w3schools.com/sql/default.asp){target="_blank" rel="noopener noreferrer"} offers a useful guide through the most common SQL commands.
+
+---
+
+### Other resources
+
+- This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank" rel="noopener noreferrer"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio (downloadable through the software centre), and start playing with that query.
+
+- Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL){target="_blank" rel="noopener noreferrer"}.
+
+- The [Khan academy](https://www.khanacademy.org/computing/computer-programming/sql){target="_blank" rel="noopener noreferrer"} offers a great free introduction to the basics of SQL.
+
+- It's also worth taking a look at Jon Holman's presentation on ['good to know' SQL functions](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180321%5Fjonathan%5Fsql&FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97){target="_blank" rel="noopener noreferrer"}.
+
+- MoJ have produced a [SQL from square one](https://moj-analytical-services.github.io/SQL_from_square_one/CTEs.html){target="_blank" rel="noopener noreferrer"} guide to using CTE's in SQL as well as running SQL from RStudio
+
+Andy's follow up intermediate SQL session, covering more advanced features of SQL:
 
 <div align="center">
 <iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
-
 
 ---
 
@@ -152,17 +177,33 @@ Andy's follow up 'intermediate' session, covering more advanced features of SQL:
 
 ---
 
-Once you've downloaded RStudio, R, and RTools from the software centre, you can open up RStudio and start writing code in the R language, and then execute that code on data. R is an incredibly powerful language, and you can extend the functions used in the standard 'base R' by installing extra packages such as ggplot2 for visualisations, or rmarkdown for producing reports. It is even possible to create your own packages, so the chances are that if you can think of it, there is a way to do it using R!
+### What is it
+
+R is an open-source programming language specifically aimed at statisticians and data analysts.
+
+---
+
+### What is it for
+
+R can be used for almost anything you can think of, notably data analysis, data visualisation, and creating reports and dashboards. It can also be used to extract data from SQL databases and run SQL queries.
+
+---
+
+### How to get it
+
+Download R (language), RStudio (IDE) and RTools (helpful extension) from the DfE software centre.
+
+---
+
+### Best places to start
 
 - The [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank" rel="noopener noreferrer"} is a great starting point to guide you through how to get started using R and RStudio.
 
 - As an alternative, with a number of options for beginners to R, [RStudio Education](https://education.rstudio.com/learn/beginner/){target="_blank" rel="noopener noreferrer"} provide a variety of materials to suit different learning styles.
 
-- There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank" rel="noopener noreferrer"}.
+---
 
-- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank" rel="noopener noreferrer"}, hopefully this one should be relatively self-explanatory!
-
-- [Data science in education](https://datascienceineducation.com/){target="_blank" rel="noopener noreferrer"} provides a heavily detailed guide for beginners in R learning to process data, with some well written out sections that may be of interest.
+### Best syntax lookup
 
 - If you want a useful guide for R syntax or functions, then look no further than the [R cheat sheets](https://rstudio.com/resources/cheatsheets/){target="_blank" rel="noopener noreferrer"}, these can be an invaluable point of reference. Below we've included a few particularly relevant ones:
     + Introduction to the [RStudio environment](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf){target="_blank" rel="noopener noreferrer"}
@@ -176,6 +217,15 @@ Once you've downloaded RStudio, R, and RTools from the software centre, you can 
     + Apply functions with [purrr](https://github.com/rstudio/cheatsheets/raw/master/purrr.pdf){target="_blank" rel="noopener noreferrer"}
     + Finally, [importing data into R](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf){target="_blank" rel="noopener noreferrer"}
 
+---
+
+### Other resources
+
+- There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank" rel="noopener noreferrer"}.
+
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/){target="_blank" rel="noopener noreferrer"}, hopefully this one should be relatively self-explanatory!
+
+- [Data science in education](https://datascienceineducation.com/){target="_blank" rel="noopener noreferrer"} provides a heavily detailed guide for beginners in R learning to process data, with some well written out sections that may be of interest.
 
 - Handy guide to [collapsing and sectioning R code](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank" rel="noopener noreferrer"} for easy navigation in RStudio.
 
@@ -249,18 +299,18 @@ Where you have a simple if else scenario use `mutate(col = if_else(expression, T
 The base R function of round() rounds 5's downwards. To round them upwards you can create a custom function like the one below:
 
 ```
-roundFiveUp <- function(x,n){ 
-    positiveNegative = sign(x) 
+roundFiveUp <- function(x, n){ 
     z = abs(x)*10^n 
     z = z + 0.5 + sqrt(.Machine$double.eps) 
     z = trunc(z) 
     z = z/10^n 
-    return(z*positiveNegative) 
+    positiveNegative = sign(x) 
+    return(z * positiveNegative) 
 }
 ```
 ---
 
-### Passing variables as functions arguments
+### Passing variables as arguments
 
 This can be worked around by using a combination of `eval()` and `parse()`, as shown in the below function:
 
@@ -289,7 +339,7 @@ Struggling to get files to talk to one another, or get code to find and use anot
 
 ### Remember the outline
 
-In RStudio you can greatly increase the navigability of your code by taking advantage of outlines. [More information on folding and navigating outlines in RStudio]((https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank" rel="noopener noreferrer"} can be found online, though when using rmarkdown reports, remember to use names first, such as `## Rows that aren't matching: r nrow(joined %>% filter(matching == FALSE))`, rather than having the R code first, so that they are easy to discern in the outline.
+In RStudio you can greatly increase the navigability of your code by taking advantage of outlines. [More information on folding and navigating outlines in RStudio](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank" rel="noopener noreferrer"} can be found online, though when using rmarkdown reports, remember to use names first, such as `## Rows that aren't matching: r nrow(joined %>% filter(matching == FALSE))`, rather than having the R code first, so that they are easy to discern in the outline.
 
 ---
 
@@ -297,11 +347,43 @@ In RStudio you can greatly increase the navigability of your code by taking adva
 
 ---
 
-Git is a version control software that tracks changes to files within a folder that you tell git to track. These folders are generally known as repositories, and can be held and managed securely on team areas within the [DfE Azure DevOps](https://dfe-gov-uk.visualstudio.com/){target="_blank" rel="noopener noreferrer"} subscription. More specific guidance on how to setup and use your own DevOps area will follow shortly on the [production processes](rap.html#how_to_setup_an_azure_devops_area){target="_blank" rel="noopener noreferrer"} page.
+### What is it
+
+It is a version control software. It is by far the best of its kind and is widely used by software developers and data scientists.
+
+---
+
+### What is it for
+
+Git is a version control software that tracks changes to files within a folder that you assign Git to track. It works best with plain text files such as flat data files, code scripts and markdown documents. These folders are known as repositories and can be held and managed securely in a central online place such as GitHub (best for public), GitLab (can be good for either public or private) and Azure DevOps (best for private).
+
+---
+
+### How to get it
+
+Download it from the [Git website](https://git-scm.com/downloads){target="_blank" rel="noopener noreferrer"}.
+
+Git doesn't have an IDE, instead it will either integrate with your current IDE such as RStudio or Visual Studio Code, or run in the command line.
+
+---
+
+### Best places to start
+
+<!-- worth us linking to how to create a git repo for azure and for github once our dashboard guidance is out? -->
 
 - If you're new to Git and are unsure of what it does, then take a look through these [Git for humans slides](https://speakerdeck.com/alicebartlett/git-for-humans){target="_blank" rel="noopener noreferrer"}
 
 - [Gooey Git](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit%2Fgooey%5Fgit%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F190220%5Fdavid%5Fgoeeygit){target="_blank" rel="noopener noreferrer"} by David Sands, provides a very neat overview of using git with R.
+
+---
+
+### Best syntax lookup
+
+- GitHub have created a [cheat sheet for git commands](https://education.github.com/git-cheat-sheet-education.pdf){target="_blank" rel="noopener noreferrer"}.
+
+---
+
+### Other resources
 
 - Avison Ho and Linda Bennett gave this coffee and coding presentation on [version controlling SQL with Git](https://github.com/avisionh/SQL-Titbits/wiki/User-Guide:-SQL-x-Git-Version-Control){target="_blank" rel="noopener noreferrer"}.
 
@@ -311,14 +393,11 @@ Git is a version control software that tracks changes to files within a folder t
 
 - While also mentioned above as a resource for learning R, chapter 6 of ESFA's [guide to R and Git](https://rsconnect/rsc/esfa-r-training/git-building-intuition.html){target="_blank" rel="noopener noreferrer"} is also worth looking at for Git alone.
 
-- GitHub have created a [cheat sheet for git commands](https://education.github.com/git-cheat-sheet-education.pdf){target="_blank" rel="noopener noreferrer"}.
-
 - Microsoft have produced documentation on [using Git](https://docs.microsoft.com/en-us/azure/devops/user-guide/code-with-git?view=azure-devops){target="_blank" rel="noopener noreferrer"} within [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops){target="_blank" rel="noopener noreferrer"}.
 
 - For those wanting to go deeper into understand the variety of git commands and what they do, there is a great [online visual resource](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1){target="_blank" rel="noopener noreferrer"}.
 
 - We also have a number of helpful sections on using git in practice at the end of our [RAP page](rap.html#Build_capability_within_the_team){target="_blank" rel="noopener noreferrer"}.
-
 
 
 ---
