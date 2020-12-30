@@ -53,7 +53,7 @@ Most software will have a language and a commonly used IDE. If you are looking f
 As a general approach, many people find it useful to use the resources below to get to grips with the basics of the languages first and get their head around the concepts of writing code, and what it is we can do with it. Some of the guides below for R are particularly good for walking you through this step by step.
 
 <div class="alert alert-dismissible alert-info">
-If you're overwhelmed by the list of resources below, feel free to get in touch with us so that we can advise the most suitable ones for you to at.
+If you're overwhelmed by the list of resources below, feel free to get in touch with us so that we can advise the most suitable ones for you look to at.
 </div>
 
 Getting a friend or colleague to show us around the environment on our own machine such as MSSMS or RStudio, and how to access real data using the code is a critical step. It's important not to overlook the practical element of how you use these tools on your own machine with your own data, as you will need to be using these tools in your day to day processes to properly start learning. It's like driving a car, you can have as many theory lessons as you want, but the true learning happens when you're left alone in full control of the machine!
