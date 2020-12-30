@@ -14,6 +14,8 @@ As statistics producers we require a variety of tools to be able to process our 
 
 As a part of developing resources to help us integrate the principle of RAP into our processes, it is important that we set a clear direction on what tools we will be actively supporting teams to use. Below are the recommended tools that will give us the most power to do what we need, and are the best supported with resources for developing the necessary skills to use them. These have large user communities in DfE, and are already working in our current IT setup.
 
+For best practice when coding, see the [DfE Good Code Practice guide](https://dfe-analytical-services.github.io/good-code-practice/index.html){target="_blank" rel="noopener noreferrer"}.
+
 ---
 
 # Recommended tools
@@ -70,7 +72,7 @@ We are always on the look out for resources that will help you to have the skill
 
 - If the above list doesn't have something for you then check out the resources in the [awesome lists](https://github.com/sindresorhus/awesome){target="_blank" rel="noopener noreferrer"} and [awesome R](https://github.com/qinwf/awesome-R){target="_blank" rel="noopener noreferrer"}, which contain more resources than you could shake a stick at.
 
-- [DataCamp](https://learn.datacamp.com/){target="_blank" rel="noopener noreferrer"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email Learning.Academy@ons.gov.uk, they can guide you through the process of getting access to one of their premium subsriptions for a few weeks, which allows you to access the rest of the courses.
+- [DataCamp](https://learn.datacamp.com/){target="_blank" rel="noopener noreferrer"} has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email Learning.Academy@ons.gov.uk, they can guide you through the process of getting access to one of their premium subscriptions for a few weeks, which allows you to access the rest of the courses.
 
 - Earlier this year we had our Data Science week, which contained a wide variety of talks across Data Science within the department, everything was recorded and can be found on the [associated microsoft stream page](https://web.microsoftstream.com/group/df01862c-7ad4-4f25-b7f2-df7353af52a9){target="_blank" rel="noopener noreferrer"}.
 
