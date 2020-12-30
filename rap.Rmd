@@ -317,17 +317,17 @@ Go to our [learning resources](l+d.html) page to read more about the [recommende
 
 ---
 
-### Open source
+### Open-source
 
 ---
 
-We strongly recommend that teams make use of open source software where possible, as well as making sure that our own work adheres to the same principles. There will be obvious data protection issues around sensitive data, however the code we use to process it can and should be made widely available. In practical terms this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository.
+We strongly recommend that teams make use of open-source software where possible, as well as making sure that our own work adheres to the same principles. There will be obvious data protection issues around sensitive data, however the code we use to process it can and should be made widely available. In practical terms this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository.
 
 By following [our guidance](#version-controlled-final-code-script(s)) in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.
 
-Open source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}.
+Open-source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open-source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open-source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}.
 
-This is a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} and is something that we as analysts and members of the Government Statistical Service can reap the benefits from. There are many benefits to adopting open source software and using the principles in our analytical processes.
+This is a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} and is something that we as analysts and members of the Government Statistical Service can reap the benefits from. There are many benefits to adopting open-source software and using the principles in our analytical processes.
 
 
 ---
