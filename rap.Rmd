@@ -14,7 +14,15 @@ require(knitr)
 
 ---
 
+Cam ran an introduction to RAP session for DISD in December 2020, the slides can be found on [github](https://github.com/cjrace/introduction-to-rap){target="_blank" rel="noopener noreferrer"}, and the recording is embedded below:
+
+<div align="center">
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f4fb4ae9-3149-4d7c-8968-ff4c11dc8ac3?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
+</div>
+
 [Reproducible Analytical Pipelines](https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/){target="_blank" rel="noopener noreferrer"}, or RAP for short. The full words still hide the true meaning behind buzzwords and jargon though. What it actually means is using automation to our advantage when analysing data, and this is as simple as writing code such as a SQL query that we can click a button to execute and do the job for us. 
+
+The cross-government group of RAP champions have laid out a [minimum level of RAP](https://github.com/best-practice-and-impact/rap_mvp_maturity_guidance/blob/master/Reproducible-Analytical-Pipelines-MVP.md){target="_blank" rel="noopener noreferrer"} to aim for (note that we have our own levels of practice below, which are building blocks to reach this end goal)
 
 We already have 'analytical pipelines' and have done for many years. The aim of RAP, is to automate the parts of these pipelines that can be automated, to increase efficiency and accuracy, while creating a clear audit trail to allow analyses to easily be re-run if needed. This will free us up to focus on the parts of our work where our human input can really add value. RAP is something we can use to reduce the burden on us by getting rid of some of the boring stuff, what's not to like!
 
@@ -309,17 +317,17 @@ Go to our [learning resources](l+d.html) page to read more about the [recommende
 
 ---
 
-### Open source
+### Open-source
 
 ---
 
-We strongly recommend that teams make use of open source software where possible, as well as making sure that our own work adheres to the same principles. There will be obvious data protection issues around sensitive data, however the code we use to process it can and should be made widely available. In practical terms this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository.
+We strongly recommend that teams make use of open-source software where possible, as well as making sure that our own work adheres to the same principles. There will be obvious data protection issues around sensitive data, however the code we use to process it can and should be made widely available. In practical terms this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository.
 
 By following [our guidance](#version-controlled-final-code-script(s)) in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.
 
-Open source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}.
+Open-source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open-source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open-source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}.
 
-This is a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} and is something that we as analysts and members of the Government Statistical Service can reap the benefits from. There are many benefits to adopting open source software and using the principles in our analytical processes.
+This is a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} and is something that we as analysts and members of the Government Statistical Service can reap the benefits from. There are many benefits to adopting open-source software and using the principles in our analytical processes.
 
 
 ---
@@ -445,6 +453,22 @@ Review your code and consider the following:
  - Can you move all variables that require manual input (e.g. table names, years) to be assigned at the top of the code, so it's easy to edit in one place with each iteration?
  - Are there any fixed variables that are prone to changing such as geographic boundaries, that you could start preparing for changes now by making it easy to adapt in future?
 
+
+For example, if you refer to the year of publication in your code a lot, consider replacing every instance with a named variable, which you only need to change once at the start of your code. In the example below, the year is set at the top of the code, and is used to define "prev_year", both of which are used further down the code to filter the data based on year.
+
+``` {r this_last_year, eval=FALSE}
+
+this_year <- 2020
+prev_year <- this_year - 1
+
+data_filtered <- data %>% 
+  filter(year == this_year)
+
+data_filtered_last_year <- data %>% 
+  filter(year == prev_year)
+
+```
+
 ---
 
 ## Standards for coding
@@ -477,7 +501,19 @@ Clean code is efficient, easy to write, easy to review, and easy to amend for fu
 
 **How to get started**
 
-Clean code should also include comments. Comment why you've made decisions, don't comment what you are doing unless it is particularly complex as the code itself describes what you are doing. If in doubt, more comments are better than too few though. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.
+Watch the coffee and coding session introducing good code practice below:
+
+<center>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/624e3442-aa66-44e7-bb4f-717a6508b056?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
+</center>
+
+Then you should also watch the follow up intermediate session:
+
+<center>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/92d4ba05-d304-4009-b543-e5f4563f1d30?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
+</center>
+
+Clean code should include comments. Comment why you've made decisions, don't comment what you are doing unless it is particularly complex as the code itself describes what you are doing. If in doubt, more comments are better than too few though. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.
 
 ---
 
@@ -498,6 +534,14 @@ When using R, it is generally best practice to use [R projects](https://support.
 The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank" rel="noopener noreferrer"}, which is fast becoming the global standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank" rel="noopener noreferrer"} package, which will literally style your code for you, and is well worth a look.
 
 There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank" rel="noopener noreferrer"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank" rel="noopener noreferrer"}.
+
+---
+
+#### HTML
+
+---
+
+If you ever find yourself writing html, or creating it through rmarkdown, you can check your html using [w3's validator](https://validator.w3.org/){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
@@ -928,6 +972,12 @@ Using git allows multiple people to simultaneously develop the same code using b
 
 To get started you should:
 
+---
+
+#### Get your code into a git controlled folder
+
+---
+
 Get code into a git controlled folder in whatever version it is currently in. Use the following steps to do so:
 
 1. Open the folder where your project is saved, right click anywhere in that window, and click "Git Bash Here".
@@ -938,7 +988,19 @@ Get code into a git controlled folder in whatever version it is currently in. Us
 git init
 ```
 
-3. After hitting enter, type in the following and hit enter again after each line. You will need the URL of your azure devops repository to complete this step. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you are not sure what this is or do not have one.
+2a. If you are setting up git for the first time, or haven't used it in a while, you will need to configure your proxy settings. Type the following, replacing your DfE username where appropriate, and hit enter after each line.
+
+``` {r git_config_steps, eval=FALSE}
+
+git config --global http.proxy http://USERNAME-HERE@mwg.proxy.ad.hq.dept:9090
+
+git config --global https.proxy  https://USERNAME-HERE@mwg.proxy.ad.hq.dept:9090
+
+git config --global http.sslverify false 
+
+```
+
+3. After hitting enter, type in the following and hit enter again after each line. You will need the URL of your Azure DevOps repository to complete this step. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you are not sure what this is or do not have one.
 
 ``` {r git_steps, eval=FALSE}
 git add .
@@ -956,12 +1018,102 @@ git push -f origin --all
 
   + If prompted for your **git** credentials, visit your online repository, click on the blue "clone" box, and click "generate git credentials". This will generate a username and password for you to enter.
 
-4. Visit your repository online, and check that all the files have uploaded. Other members of your team will now be able to work from your code.
+4. Visit your repository online, and check that all the files have uploaded. Other members of your team will now be able to work from your code.  
 
-- Ensure all team members have access to your project in the azure devops official-statistics-production area. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if there are any issues.
+---
 
-- Build capability within the team to understand git and version control
+#### Build capability within the team 
 
-- Make use of branches, commits, and pull requests for detailed version control and collaborative working
+---
 
-Until more guidance appears here, please refer to the resources above, or the other links on the [learning resources](l+d.html#git) page in order to learn how to use git in practice.
+
+- Ensure all team members have access to your project in the Azure DevOps official-statistics-production area. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if there are any issues.
+
+- Get team members to clone your repository in to their personal area, so everyone is able to work on code at the same time.
+
+To clone code, they will need to do the following:
+
+1. Run through steps 1 - 2a of [getting a file into a git controlled folder](#get-your-code-into-a-git-controlled-folder)
+
+3. After running those lines, type in the following with your repository URL in the "YOUR_URL_HERE" space. This will clone the online repository to your local area.
+
+``` {r git_team_steps, eval=FALSE}
+git clone YOUR_URL_HERE
+```
+
+- Make use of git and version control in your team projects regularly. Like learning anything new, putting it into practice regularly is the best way to become confident in using it.  
+
+---
+
+#### Make use of basic git commands
+
+---
+
+**Branches**
+
+When you create a git project, it will automatically create a "master" branch for you. This is where code that has been QAd and you are happy with should sit.
+
+- It is good practice to have at least one other branch, we tend to call it "development". This is the branch where you will be doing most of your work. To open a new branch, navigate to "branches" and click on the blue box highlighted below
+
+`r knitr::include_graphics("images/new_branch_git.png")`
+
+- Having two separate branches means that if anything goes wrong in the "development" branch, everything can be reverted to the last QAd version in "master", without having to lose too much work.
+
+- When working on your project, make sure that you are in the "development" branch. You can check this by navigating to the "Git" tab in RStudio as demonstrated below.
+
+`r knitr::include_graphics("images/select_branch.png")`
+
+**Commits**
+
+Once you are happy with changes and want them to be in the latest "development" version of the repository for all of your team to see, you can push "commits" up.
+
+- When you make a change to a file, this will pop up in the "Git" window of your R console. Select the files you want to commit by ticking the "staged" box next to them.
+
+`r knitr::include_graphics("images/git_stage.png")`
+
+- This will bring up a new window. Add a comment describing your additions/changes, and click commit. You will see all the staged files disappear. Then click “Push” to push the committed files up to the online repository for all to use.
+
+`r knitr::include_graphics("images/git_push.png")`
+
+- When another member of your team makes a commit and you want to pull this into your local area to check and work off the latest version, click on the blue "pull" button.
+
+`r knitr::include_graphics("images/pull_git.png")`
+
+**Pull requests**
+
+When you have got to a place with the code and your committed changes where you are happy for it to be QAd, you can open a pull request. This means that the "development" branch will be merged into "master", and will become the latest QAd version of the production code that the team falls back on.
+
+* Navigate to "Pull Requests" in the "Repos" tab of Azure DevOps and click the blue "New pull request" button.
+
+* This will take you to a new window. Here, you can add:
+   + Title, tell your team what has changed
+   + Description, tell your reviewer what they should check
+   + Reviewers, add multiple if needed.  
+
+* As a reviewer, to approve a pull request, follow the link in your email and click "approve" in the blue box. When all reviewers are happy for this to be the new master branch, click “complete”.
+
+Please refer to the resources above, or the other links on the [learning resources](l+d.html#git) page to learn more about how to use git in practice. Creating pull requests in GitHub follows a broadly similar process and should be intuitive from the above steps for Azure DevOps.
+
+**Cherry picking**
+
+If you want to cherry pick specific commits for PR, you can do this by cherry picking the commits you want to use, and creatng a new branch that has only those new commits that you want.
+
+To start off you'll need to identify the commits you want. In the terminal, run `git log --oneline` to get a log of commits for your current branch, use `git log --online BRANCHNAME` to specific the branch for the log. This gives a list of commit hashes and messages ([stackoverflow response defining git hashes and commmit ID's](https://stackoverflow.com/questions/43763896/whats-the-difference-between-commit-id-and-sha1-hash-in-git){target="_blank" rel="noopener noreferrer"}). You can press enter to get more commits, or q to quit
+
+Then go to the branch you want the commit to appear on and cherry pick your commits. Often, if this is to hop around something on a development to master pr, you would create a second development branch, cherry pick commits to there, and then PR that to master and delete the branch after merging.
+
+On the branch you want to PR (i.e. your copy of a development branch purely for merging only cherry picked commits) run `git cherry-pick COMMITHASH` to add the specified commit, or `git cherry-pick HASH1^..HASH4` for a specified list of commits (inclusive).
+
+Happy days!
+
+**Tagging release versions** <!-- future best pratice?! -->
+
+It can be useful to tag specific commits or releases at key points in time. For us a common example will be each publication cycle, to tag the version of the code used to process data for a particular release or amendment.
+
+Guidance on how to tag releases using git can be found on the draft version of the [BPI code guidance](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#releases-tagging){target="_blank" rel="noopener noreferrer"}
+
+**Merging a branch into another one**
+
+For example if you are working on a feature branch, and want to merge the latest changes to the master branch to your feature branch.
+
+Start off by checking out your desired target branch - `git checkout mybranch`. Then merge in the branch you want (e.g. master) - `git merge master`.

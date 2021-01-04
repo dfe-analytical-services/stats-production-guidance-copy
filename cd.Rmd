@@ -293,6 +293,14 @@ You do not need to recreate all of the old excel tables, users can find the numb
 
 ---
 
+## Creating hyperlinks
+
+---
+
+Best practice on creating hyperlinks, particularly how to name them and common pitfalls to avoid can be found on this [introduction to html guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks){target="_blank" rel="noopener noreferrer"}. Those of us using EES don't need to worry about writing the raw html for the anchor links, and should instead focus on the section referring to how to name and title links.
+
+---
+
 ## Methodology
 
 ---
