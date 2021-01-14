@@ -65,7 +65,7 @@ Public - https://explore-education-statistics.service.gov.uk/
 
 Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
-To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this respsonsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform.
+To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this responsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will receive an email inviting you to use the platform.
 
 At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
 
@@ -415,7 +415,7 @@ Fast-track links are similar to permalinks however instead of linking to a stati
 
 After building and saving a data block table you will see a 'Chart' tab appears. This tab will take you to the EES chart builder, where you can choose to add a chart to your data block.
 
-The first step to creating a chart is choosing the chart type, currently the EES chart builder can build line charts, horizotnal/vertical bar charts (including stacked) and maps. We intend to grow this list over the course of public beta so please let us know if a chart type you want to create is not possible. 
+The first step to creating a chart is choosing the chart type, currently the EES chart builder can build line charts, horizontal/vertical bar charts (including stacked) and maps. We intend to grow this list over the course of public beta so please let us know if a chart type you want to create is not possible. 
 
 After choosing your chart type you then need to work through the following stages and you’ll be shown a live preview as you go: 
 
@@ -554,7 +554,7 @@ Use the 'Key stats' options to add key statistic tiles to your release. For each
 
 `r knitr::include_graphics("images/key-stat.PNG")`
 
-After embedding a key stat tile you can then edit it to add trend information and a desription of what the indicator is. 
+After embedding a key stat tile you can then edit it to add trend information and a description of what the indicator is. 
 
 | Element | Content |
 |---------|---------|
@@ -595,7 +595,7 @@ Only users with ‘responsible statistician’ permissions (usually G6 or above)
 
 ---
 
-There's quite a few things to remember to do as you build your release so to help ensure you havn't missed anything a release checklist is also available via the sign off page
+There's quite a few things to remember to do as you build your release so to help ensure you haven't missed anything a release checklist is also available via the sign off page
 
 The checklist can be accessed by clicking to edit release status. 
 
