@@ -44,7 +44,7 @@ The core functionality across the environments is identical except for new chang
 On the pre-production environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
 <div class="alert alert-dismissible alert-info">
-Please note that jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
+Jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
 </div>
 
 The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
@@ -65,7 +65,7 @@ Public - https://explore-education-statistics.service.gov.uk/
 
 Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
 
-To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this respsonsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform.
+To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this responsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will receive an email inviting you to use the platform.
 
 At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
 
@@ -84,7 +84,7 @@ Analysts are able to test the service within the EES pre-production environment,
 When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
 <div class="alert alert-dismissible alert-danger">
-Please note that the pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
+The pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
 
 ---
@@ -176,7 +176,7 @@ The time period for the release should reflect the time period of the data that 
 You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) in the first instance.
 
 <div class="alert alert-dismissible alert-warning">
-For start of public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
+Whilst in public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
 </div>
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
@@ -248,6 +248,17 @@ For data files greater than 80mb we recommend uploading as a ZIP file.
 <div class="alert alert-dismissible alert-warning">
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
 </div>
+
+---
+
+### Subject names
+
+---
+
+You'll need to give a 'subject name' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name can include more technical / coverage information.
+
+When adding a subject name think about the general user and how the subjects will appear in the table tool - for example, you don't need to include the publication name in the subject name as this is always already implied within EES. 
+
 
 ---
 
@@ -404,7 +415,7 @@ Fast-track links are similar to permalinks however instead of linking to a stati
 
 After building and saving a data block table you will see a 'Chart' tab appears. This tab will take you to the EES chart builder, where you can choose to add a chart to your data block.
 
-The first step to creating a chart is choosing the chart type, currently the EES chart builder can build line charts, horizotnal/vertical bar charts (including stacked) and maps. We intend to grow this list over the course of public beta so please let us know if a chart type you want to create is not possible. 
+The first step to creating a chart is choosing the chart type, currently the EES chart builder can build line charts, horizontal/vertical bar charts (including stacked) and maps. We intend to grow this list over the course of public beta so please let us know if a chart type you want to create is not possible. 
 
 After choosing your chart type you then need to work through the following stages and you’ll be shown a live preview as you go: 
 
@@ -426,9 +437,20 @@ Note, within the vertical and horizontal bar chart types you can also create sta
 
 ---
 
-Here is where you add data to the chart. Each series is added one at a time and can be styled individually using the ‘change styling’ options.
+Here is where you add data to the chart. Each series is added one at a time.
 
 `r knitr::include_graphics("images/EES-charts-add-data.PNG")`
+
+---
+
+## Legend
+
+---
+
+You can edit the chart legend, and styling of your series via the Legend tab. 
+
+`r knitr::include_graphics("images/EES-charts-legend.PNG")`
+
 
 ---
 
@@ -500,6 +522,16 @@ You should only use complex charts where there is a clear user need, as simple c
 
 `r knitr::include_graphics("images/EES-charts-infographic.PNG")`
 
+<div class="alert alert-dismissible alert-info">
+Accessibility matters for infographics too, consider the following if you do need to upload an image - 
+
+* Keep them simple
+* Use [GDS colours](https://design-system.service.gov.uk/styles/colour/)
+* Don't put borders around images
+* Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
+
+</div>
+
 ---
 
 # Writing content
@@ -522,7 +554,7 @@ Use the 'Key stats' options to add key statistic tiles to your release. For each
 
 `r knitr::include_graphics("images/key-stat.PNG")`
 
-After embedding a key stat tile you can then edit it to add trend information and a desription of what the indicator is. 
+After embedding a key stat tile you can then edit it to add trend information and a description of what the indicator is. 
 
 | Element | Content |
 |---------|---------|
@@ -559,6 +591,20 @@ Only users with ‘responsible statistician’ permissions (usually G6 or above)
 
 ---
 
+## Release checklist
+
+---
+
+There's quite a few things to remember to do as you build your release so to help ensure you haven't missed anything a release checklist is also available via the sign off page
+
+The checklist can be accessed by clicking to edit release status. 
+
+Remember to check over it before you submit your release for approval as a release that has outstanding warnings on it will not be able to be published.
+
+`r knitr::include_graphics("images/ees-release-checklist.PNG")`
+
+---
+
 ## How to approve a release
 
 ---
@@ -584,7 +630,11 @@ Prior to each release going live the production team are also able to grant pre-
 This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
 
 <div class="alert alert-dismissible alert-info">
-Please note that jobshare emails should not be sent invites for pre-release. The personal emails for the specific individuals should be used instead, as jobshare emails do not have active accounts with DfE to access EES.
+Jobshare emails should not be sent invites for pre-release. The personal emails for the specific individuals should be used instead, as jobshare emails do not have active accounts with DfE to access EES.
+</div>
+
+<div class="alert alert-dismissible alert-danger">
+Pre-release access via Explore Education Statistics is currently limited to DFE users only, if you need to share your release with external users you will need to do so outside of the system. 
 </div>
 
 ---
