@@ -44,7 +44,7 @@ The core functionality across the environments is identical except for new chang
 On the pre-production environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
 <div class="alert alert-dismissible alert-info">
-Please note that jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
+Jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
 </div>
 
 The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
@@ -84,7 +84,7 @@ Analysts are able to test the service within the EES pre-production environment,
 When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
 <div class="alert alert-dismissible alert-danger">
-Please note that the pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
+The pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
 
 ---
@@ -176,7 +176,7 @@ The time period for the release should reflect the time period of the data that 
 You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) in the first instance.
 
 <div class="alert alert-dismissible alert-warning">
-For start of public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
+Whilst in public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
 </div>
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
