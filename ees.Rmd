@@ -251,6 +251,17 @@ If you believe your file is ‘stuck’ please contact explore.statistics@educat
 
 ---
 
+### Subject names
+
+---
+
+You'll need to give a 'subject name' to each data file you upload. The subject name should be user-friendly as this is what users will see within wherever this file is referenced within EES. The actual file name can include more technical / coverage information.
+
+When adding a subject name think about the general user and how the subjects will appear in the table tool - for example, you don't need to include the publication name in the subject name as this is always already implied within EES. 
+
+
+---
+
 ## Ancillary file uploads
 
 ---
