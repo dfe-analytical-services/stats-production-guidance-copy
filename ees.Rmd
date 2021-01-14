@@ -559,6 +559,20 @@ Only users with ‘responsible statistician’ permissions (usually G6 or above)
 
 ---
 
+## Release checklist
+
+---
+
+There's quite a few things to remember to do as you build your release so to help ensure you havn't missed anything a release checklist is also available via the sign off page
+
+The checklist can be accessed by clicking to edit release status. 
+
+Remember to check over it before you submit your release for approval as a release that has outstanding warnings on it will not be able to be published.
+
+`r knitr::include_graphics("images/ees-release-checklist.PNG")`
+
+---
+
 ## How to approve a release
 
 ---
