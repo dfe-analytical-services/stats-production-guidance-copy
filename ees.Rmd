@@ -426,9 +426,20 @@ Note, within the vertical and horizontal bar chart types you can also create sta
 
 ---
 
-Here is where you add data to the chart. Each series is added one at a time and can be styled individually using the ‘change styling’ options.
+Here is where you add data to the chart. Each series is added one at a time.
 
 `r knitr::include_graphics("images/EES-charts-add-data.PNG")`
+
+---
+
+## Legend
+
+---
+
+You can edit the chart legend, and styling of your series via the Legend tab. 
+
+`r knitr::include_graphics("images/EES-charts-legend.PNG")`
+
 
 ---
 
