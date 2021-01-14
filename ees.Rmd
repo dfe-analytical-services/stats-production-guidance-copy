@@ -522,6 +522,16 @@ You should only use complex charts where there is a clear user need, as simple c
 
 `r knitr::include_graphics("images/EES-charts-infographic.PNG")`
 
+<div class="alert alert-dismissible alert-info">
+Accessibility matters for infographics too, consider the following if you do need to upload an image - 
+
+* Keep them simple
+* Use [GDS colours](https://design-system.service.gov.uk/styles/colour/)
+* Don't put borders around images
+* Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
+
+</div>
+
 ---
 
 # Writing content
