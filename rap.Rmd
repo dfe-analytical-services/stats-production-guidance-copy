@@ -420,9 +420,17 @@ This carries all of the same benefits as having a single master script for a fil
 
 **How to get started**
 
-<!-- needs example -->
+The Education, Health and Care Plans production cycle is a good example of a single publication script. They have kept their actual data processing in SQL, but all the running and manipulation of the data happens in R.
 
-More to follow, in the meantime please contact us for advice.
+The cycle originally consisted of multiple SQL scripts, manual QA and generation of final files.
+
+`r knitr::include_graphics("images/Old process.jpg")`
+
+The team now have a single end-to-end fully documented process, which runs off of one single R script. The R code points at the SQL scripts to run them all in one go, and also creates a QA report and corresponding metadata files that pass the data screener. Each data file can still be run in isolation from this script.
+
+`r knitr::include_graphics("images/New process.jpg")`
+
+
 
 ---
 

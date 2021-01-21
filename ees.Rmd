@@ -506,11 +506,31 @@ If you create your chart and then change your mind as to what chart type would b
 
 `r knitr::include_graphics("images/EES-charts-change-type.PNG")`
 
-You can create maps too, currently this is possible for regional, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
 
 <div class="alert alert-dismissible alert-info">
 Remember to save your chart when you’re done.
 </div>
+
+---
+
+## Maps
+
+---
+
+You can create maps too, currently this is possible for regional, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
+
+To create a map, add the cuts of data you want to display in the "data sets" tab of the chart builder.
+
+`r knitr::include_graphics("images/map_add_data.PNG")`
+
+You can change the colour scale of the chart in the "legend" tab.
+
+`r knitr::include_graphics("images/map_change_legend.PNG")`
+
+You can amend the chart title, alt text and dimensions in the "chart configuration" tab. You can also change the boundaries you are plotting onto, the latest boundary file will automatically be selected, but if you are visualising historic data, you may want an older boundary file. Please contact us if the boundary you want to plot is unavailable.
+
+
+`r knitr::include_graphics("images/map_config.PNG")`
 
 ---
 
@@ -529,6 +549,8 @@ Accessibility matters for infographics too, consider the following if you do nee
 * Use [GDS colours](https://design-system.service.gov.uk/styles/colour/)
 * Don't put borders around images
 * Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
+* Try to avoid adding text to your images other than axis labels and limited annotations. Titles and headings can be added in the "chart configuration" tab instead
+
 
 </div>
 
