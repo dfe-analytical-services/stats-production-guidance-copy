@@ -26,13 +26,6 @@ The cross-government group of RAP champions have laid out a [minimum level of RA
 
 We already have 'analytical pipelines' and have done for many years. The aim of RAP, is to automate the parts of these pipelines that can be automated, to increase efficiency and accuracy, while creating a clear audit trail to allow analyses to easily be re-run if needed. This will free us up to focus on the parts of our work where our human input can really add value. RAP is something we can use to reduce the burden on us by getting rid of some of the boring stuff, what's not to like!
 
-Cam ran an introduction to RAP session for DISD in December 2020, the slides can be found on [github](https://github.com/cjrace/introduction-to-rap){target="_blank" rel="noopener noreferrer"}, and the recording is embedded below.
-
-
-<div align="center">
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f4fb4ae9-3149-4d7c-8968-ff4c11dc8ac3?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
-</div>
-
 
 ---
 
@@ -420,9 +413,17 @@ This carries all of the same benefits as having a single master script for a fil
 
 **How to get started**
 
-<!-- needs example -->
+The Education, Health and Care Plans production cycle is a good example of a single publication script. They have kept their actual data processing in SQL, but all the running and manipulation of the data happens in R.
 
-More to follow, in the meantime please contact us for advice.
+The cycle originally consisted of multiple SQL scripts, manual QA and generation of final files.
+
+`r knitr::include_graphics("images/Old process.jpg")`
+
+The team now have a single end-to-end fully documented process, which runs off of one single R script. The R code points at the SQL scripts to run them all in one go, and also creates a QA report and corresponding metadata files that pass the data screener. Each data file can still be run in isolation from this script.
+
+`r knitr::include_graphics("images/New process.jpg")`
+
+
 
 ---
 
