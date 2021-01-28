@@ -525,7 +525,7 @@ To create a map, add the cuts of data you want to display in the "data sets" tab
 
 You can change the colour scale of the chart in the "legend" tab.
 
-`r knitr::include_graphics("images/map_change_legend.PNG")`
+`r knitr::include_graphics("images/map_change_legend.png")`
 
 You can amend the chart title, alt text and dimensions in the "chart configuration" tab. You can also change the boundaries you are plotting onto, the latest boundary file will automatically be selected, but if you are visualising historic data, you may want an older boundary file. Please contact us if the boundary you want to plot is unavailable.
 
