@@ -119,7 +119,7 @@ Data files must in comma separated values (.csv) format, and use UTF-8 encoding.
 
 Variable names must be in the first row of your file as the header row, must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. **Avoid starting variable names with a numeric character.**
 
-If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell - this is often done automatically for you, though if you're unsure then you can open up your csv file in a texteditor such as notepad to check. 
+If you need to use commas within a cell, then you must add a text delimiter such as quotes to your file to define each cell - this is often done automatically for you, though if you're unsure then you can open up your csv file in a text editor such as notepad to check. 
 
 You should also ensure that your data follows the [GSS Standards on symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank" rel="noopener noreferrer"}, though be aware to ignore the ask that symbols are included in separate cells from the data, which is unpractical and unrealistic.
 
@@ -225,7 +225,7 @@ If you have any other conventions you've used in previous publications, or a sce
 
 There are no character or size limits in a csv file, but you should consider the restrictions the users will face when downloading and processing the data (excel has a cell character limit of 32,760 for example). There is no size limit for EES, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
 
-Excel has a row limit of 1,048,576. It is best to avoid exceeding this as some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files, providing school level data as a seperate file for example. With the data all being in a tidy format these are then easy enough for secondary analysts to stitch back together if needed.
+Excel has a row limit of 1,048,576. It is best to avoid exceeding this as some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files, providing school level data as a separate file for example. With the data all being in a tidy format these are then easy enough for secondary analysts to stitch back together if needed.
 
 People can tend to obsess over file size, however this is not everything, and the balance of rows and columns, and the contents of them, has a large impact on performance. We don't yet know the full extent of this, and with that caveat, a **rough guide** based on size would be:
 
@@ -414,7 +414,7 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 We publish at a number of different geography breakdowns and these vary from publication to publication. Every publication in the new platform must include the three compulsory geography columns - geographic_level, country_code and country_name in its data files. These are compulsory as the data we are producing must lie within a country boundary. 
 
-The geographic_level column should describle the level of data present in that row. Therefore data for a collection from a specific local authority would have 'Local authority' as the geographic_level, while a National aggregation would have 'National' as the geographic_level.
+The geographic_level column should describe the level of data present in that row. Therefore data for a collection from a specific local authority would have 'Local authority' as the geographic_level, while a National aggregation would have 'National' as the geographic_level.
 
 Teams should make sure that they are regularly checking their geography codes if they are not using a lookup from a maintained database (such as in the PDR). ONS have the [Open Geography portal](http://geoportal.statistics.gov.uk/){target="_blank" rel="noopener noreferrer"}, which can be a useful way of checking these. There is a wealth of data on there, though Local authority boundaries can be hard to find, they can be found using the tabs at the top – Boundaries > Administrative Boundaries > Counties and Unitary Authorities. 
 
@@ -465,7 +465,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 | Mayoral combined authority | mayoral_combined_authority_code, mayoral_combined_authority_name | |
 | Opportunity area | opportunity_area_code, opportunity_area_name | |
 | Ward | ward_code, ward_name | |
-| MAT | trust_id, trust_name | Note that Trust ID is shown as Group ID on GIAS when looking at a Trust. MAT’s also have a ‘company number’, this can be included but is not mandatory. |
+| MAT | trust_id, trust_name | Note that Trust ID is shown as Group ID on GIAS when looking at a Trust. MATs also have a ‘company number’, this can be included but is not mandatory. |
 | Sponsor | sponsor_id, sponsor_name | Note that Sponsor ID is shown as Group ID on GIAS when looking at a Sponsor. |
 | Planning area | No required columns, though we recommend both planning_area_code and planning_area_name | |
 | School | No required columns, you can use any you have, though we recommend you include laestab and/or urn with the name in the style of 'school_laestab' to make data matching easier | |
@@ -503,8 +503,9 @@ All rows must have country_code and country_name completed, regardless of geogra
 
 A filter is a variable that we break our data down by, such as school type, pupil characteristics, or NQT status. There are no required standards for these, you can include any filters that you feel benefit the users of your data. 
 
+Filter names must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. You can use abbreviations to keep the names short and usable, your users will be able to see what each variable name means in the metadata guidance. **Avoid starting variable names with a numeric character.**
 
-Aggregates should be included for all filters where possible. There will be some situations where aggregation does not work, this will not break the platform, though may make the data less user-friendly. In general, if you can't aggregate, e.g. if you have headcount and fte, then this is an indication that they are instead seperate measures and should have separate indicator columns rather than forcing them into a filter column. 
+Aggregates should be included for all filters where possible. There will be some situations where aggregation does not work, this will not break the platform, though may make the data less user-friendly. In general, if you can't aggregate, e.g. if you have headcount and fte, then this is an indication that they are instead separate measures and should have separate indicator columns rather than forcing them into a filter column. 
 
 **For aggregate rows you should refer to these as ‘Total’.** When using filters such as school type or FSM eligibility this can be quite simple, as shown in the example below:
 
@@ -620,6 +621,7 @@ As an example, the number of teachers and pupil enrolments are the indicators in
 | 201819      | ... | England      | Primary      | 50         | 5        |
 | 201819      | ... | England      | Secondary    | 50         | 8        |
 
+Like filters, indicator names must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. You can use abbreviations to keep the names short and usable, your users will be able to see what each variable name means in the metadata guidance. **Avoid starting variable names with a numeric character.**
 
 In EES, the platform itself will format large numeric values to include commas, so you do not need to have commas for separating large numbers in your data file. 
 
@@ -700,11 +702,11 @@ With some files there may be more than one way to specify the metadata that will
 |------------------------|----------------------------------------------------------------|
 | col_name               | This must exactly match the name of the corresponding column in the dataset. |
 | col_type               | This must be either ‘Filter’ or ‘Indicator’. |
-| label                  | This is the version of the column name that the users will see on the platform, therefore you must fill this in and not leave it blank. For example, pupil_headcount may be ‘Number of pupil enrolments’. You have the freedom to decide what is best to do for your users. |
+| label                  | This is the version of the column name that the users will see on the platform, therefore you must fill this in and not leave it blank. For example, pupil_headcount may be ‘Number of pupil enrolments’. You should aim to keep these short and descriptive, but have the freedom to decide what is best to do for your users. |
 | indicator_grouping     | This column gives production teams the option to add subheadings to group indicators in order to benefit the user. If this column is left blank, all indicators will be presented as one list of individual square radio boxes with no subheadings.|
 | indicator_unit         | If this column is left blank then this will be a number by default, alternatively you can use either of the following units for financial or percentage measures - "£", "£m", "%", "pp". | 
 | indicator_dp           | This column allows you to set decimal place formatting for each of your indicators. If you leave it blank the platform will default to 2 d.p |
-| filter_hint            | This column gives you the option to add in a hint such as 'Filter by school type' for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. | 
+| filter_hint            | This column gives you the option to add in a hint such as 'Filter by school type' for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. Do not duplicate the column name here, as it will just appear twice | 
 | filter_grouping_column | This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the exact name of the column/variable that you wish to group by. It is good practice to use the same variable name as that you are grouping, with _group appended at the end, i.e. 'filter' and 'filter_group' |
 
 

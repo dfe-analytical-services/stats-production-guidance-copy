@@ -257,7 +257,16 @@ If you believe your file is ‘stuck’ please contact explore.statistics@educat
 
 You'll need to give a 'subject name' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name can include more technical / coverage information.
 
-When adding a subject name think about the general user and how the subjects will appear in the table tool - for example, you don't need to include the publication name in the subject name as this is always already implied within EES. 
+When adding a subject name think about the general user and how the subjects will appear in the table tool:
+
+* You don't need to include the publication name in the subject name as this is always already implied within EES
+
+* You don't need to list what filters are in each file in the title, users can see this in the metadata guidance
+
+* Your subject names should be short and snappy, clearly explain what is in each file and include date ranges. Some good examples of this in practice are included below:
+  + Early years provision provider type (2018 - 2020)
+  + Fixed period exclusions - number of exclusions (0607 to 1819) 
+  + Permanent and fixed period exclusions - by pupil characteristics (0607 to 1819) 
 
 
 ---
