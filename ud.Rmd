@@ -612,14 +612,17 @@ else '' end as characteristic_group
 
 The indicators are the variables showing the measurements/statistics themselves, such as the number of pupils. These can be of different formats (e.g. text, numeric), although are numeric by default. The number of indicators will vary across publications and data files.
 
+<div class="alert alert-dismissible alert-danger">
+  <p> **Every variable in your dataset should have its own column, and each column should be a single data type**. E.g. do not create an indicator column called "pupils" that has both the number and percentage of pupils in it. Instead, create two separate columns for each measure.</p>
+</div>
 
-As an example, the number of teachers and pupil enrolments are the indicators in this dataset: 
+As an example, the number and percentage of pupil enrolments are the indicators in this dataset: 
 
-| time_period | ... | country_name | school_type  | enrolments | teachers |
+| time_period | ... | country_name | school_type  | enrolments_num | enrolments_pc |
 |-------------|-----|--------------|--------------|------------|----------|
-| 201819      | ... | England      | Total        | 100        | 13       |
-| 201819      | ... | England      | Primary      | 50         | 5        |
-| 201819      | ... | England      | Secondary    | 50         | 8        |
+| 201819      | ... | England      | Total        | 200        | 100      |
+| 201819      | ... | England      | Primary      | 150        | 75       |
+| 201819      | ... | England      | Secondary    | 50         | 25       |
 
 Like filters, indicator names must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. You can use abbreviations to keep the names short and usable, your users will be able to see what each variable name means in the metadata guidance. **Avoid starting variable names with a numeric character.**
 
