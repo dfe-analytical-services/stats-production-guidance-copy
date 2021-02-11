@@ -177,25 +177,25 @@ Andy's follow up intermediate SQL session, covering more advanced features of SQ
 
 ---
 
-### What is it
+## What is it
 
 R is an open-source programming language specifically aimed at statisticians and data analysts.
 
 ---
 
-### What is it for
+## What is it for
 
 R can be used for almost anything you can think of, notably data analysis, data visualisation, and creating reports and dashboards. It can also be used to extract data from SQL databases and run SQL queries.
 
 ---
 
-### How to get it
+## How to get it
 
 Download R (language), RStudio (IDE) and RTools (helpful extension) from the DfE software centre.
 
 ---
 
-### Best places to start
+## Best places to start
 
 - The [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank" rel="noopener noreferrer"} is a great starting point to guide you through how to get started using R and RStudio.
 
@@ -203,7 +203,7 @@ Download R (language), RStudio (IDE) and RTools (helpful extension) from the DfE
 
 ---
 
-### Best syntax lookup
+## Best syntax lookup
 
 - If you want a useful guide for R syntax or functions, then look no further than the [R cheat sheets](https://rstudio.com/resources/cheatsheets/){target="_blank" rel="noopener noreferrer"}, these can be an invaluable point of reference. Below we've included a few particularly relevant ones:
     + Introduction to the [RStudio environment](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf){target="_blank" rel="noopener noreferrer"}
@@ -219,7 +219,7 @@ Download R (language), RStudio (IDE) and RTools (helpful extension) from the DfE
 
 ---
 
-### Other resources
+## Other resources
 
 - There is also the DfE Analytics Academy, who host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank" rel="noopener noreferrer"}.
 
@@ -525,6 +525,14 @@ For example if you are working on a feature branch, and want to merge the latest
 
 Start off by checking out your desired target branch - `git checkout mybranch`. Then merge in the branch you want (e.g. master) - `git merge master`.
 
+---
+
+### Visualising your tree
+
+
+You can use `gitk --all` to visualise a tree of all previous commits up to this point.
+
+`r knitr::include_graphics("images/gitk.png")`
 
 ---
 
