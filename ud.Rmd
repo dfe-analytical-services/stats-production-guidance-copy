@@ -479,6 +479,20 @@ All rows must have country_code and country_name completed, regardless of geogra
 
 ---
 
+### Unknown geographic codes
+
+---
+
+| Geographical code      | Usage                                         | Example                                                   |        
+|-------------|-----------------------------------------------|-----------------------------------------------------------|
+| z           | When a geography code is **not applicable**     | Using custom geographies like "Scotland, Wales and Northern Ireland" as a group. This has no standardised geography code so will not be applicable|
+| :           | When a geography code is **unavailable** | Data is missing, the geography is unknown so no code is available|
+
+
+
+
+---
+
 <div class="jumbotron">
 
   <h3>Remember</h3>

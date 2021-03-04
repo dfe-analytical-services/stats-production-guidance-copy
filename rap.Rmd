@@ -993,9 +993,21 @@ git init
 
 ``` {r git_config_steps, eval=FALSE}
 
-git config --global http.proxy http://USERNAME-HERE@mwg.proxy.ad.hq.dept:9090
+git config --global http.proxy http://USERNAME@mwg.proxy.ad.hq.dept:9090
 
-git config --global https.proxy  https://USERNAME-HERE@mwg.proxy.ad.hq.dept:9090
+git config --global https.proxy  https://USERNAME@mwg.proxy.ad.hq.dept:9090
+
+git config --global http.sslverify false 
+
+```
+
+If git continues to return a 407 error, please try the following lines instead:
+
+``` {r git_config_steps_2, eval=FALSE}
+
+git config --global http.proxy http://[AD\\USERNAME]@mwg.proxy.ad.hq.dept:9090
+
+git config --global https.proxy  https://[AD\\USERNAME]@mwg.proxy.ad.hq.dept:9090
 
 git config --global http.sslverify false 
 
