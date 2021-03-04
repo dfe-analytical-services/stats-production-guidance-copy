@@ -536,6 +536,26 @@ You can use `gitk --all` to visualise a tree of all previous commits up to this 
 
 ---
 
+### Reverting a commit
+
+Made a mistake and need to revert? No problem!
+
+
+1. Visit the repo in Azure Devops and go to the commit you want to undo. At the top of the page there is a commit ID, use the copy button to copy this to your PC:
+
+`r knitr::include_graphics("images/git_commit_id.png")`
+
+2. Navigate to the repo in your file explorer, then open up Git Bash and type :
+
+ `git revert [PASTE COMMIT ID HERE]` 
+ 
+3. This opens up a window that asks you to write a commit message. YOu can skip this step as it automatically writes a revert message for you. Enter `:wq` which quits the writer window.
+
+4. You can now push these changes to Azure Devops by entering `git push` into the git window
+
+---
+
+
 # Further notes
 
 ---
