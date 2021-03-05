@@ -257,7 +257,16 @@ If you believe your file is ‘stuck’ please contact explore.statistics@educat
 
 You'll need to give a 'subject name' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name can include more technical / coverage information.
 
-When adding a subject name think about the general user and how the subjects will appear in the table tool - for example, you don't need to include the publication name in the subject name as this is always already implied within EES. 
+When adding a subject name think about the general user and how the subjects will appear in the table tool:
+
+* You don't need to include the publication name in the subject name as this is always already implied within EES
+
+* You don't need to list what filters are in each file in the title, users can see this in the metadata guidance
+
+* Your subject names should be short and snappy, clearly explain what is in each file and include date ranges. Some good examples of this in practice are included below:
+  + Early years provision provider type (2018 - 2020)
+  + Fixed period exclusions - number of exclusions (0607 to 1819) 
+  + Permanent and fixed period exclusions - by pupil characteristics (0607 to 1819) 
 
 
 ---
@@ -427,6 +436,10 @@ After choosing your chart type you then need to work through the following stage
 
 Within the ‘chart configuration’ tab you can add a title, alt text, move the legend and change chart dimensions. 
 
+<div class="alert alert-dismissible alert-info">
+Make sure to review your chart dimensions before you publish. Users should be able to read the labels on the axes and see the legend without having to scroll.
+</div>
+
 `r knitr::include_graphics("images/EES-charts-create.PNG")`
 
 Note, within the vertical and horizontal bar chart types you can also create stacked bar charts via the chart configuration options.
@@ -583,10 +596,14 @@ After embedding a key stat tile you can then edit it to add trend information an
 | Indicator name | Automatically generated from your data | 
 | Latest value | Automatically generated from your data |
 | Trend | A short one-sentence description of the trend; try to avoid only stating the change from the previous year and talk about the longer-term trend where appropriate |
-| Guidance title | Should be set to 'What is this?' |
+| Guidance title | Should be set to **'What is this?'** |
 | Guidance text | A simple description in plain English of what the indicator is |
 
 You can then create accordion sections to start adding your main release commentary. These sections are made up of text blocks and data blocks which can be reordered as needed. 
+
+<div class="alert alert-dismissible alert-info">
+Do not use footnotes in the text of your content. They’re designed for reference in print, not web pages. Always consider the user need first. If the information in the footnotes is important, include it in the body text. If it’s not, leave it out. 
+</div>
 
 Any data tables should be included as data blocks, however you can also embed static html tables within a text box. These should only be used to present textual tables or for any small presentations of data that are not possible to do in a data block at the moment. 
 
