@@ -536,22 +536,39 @@ You can use `gitk --all` to visualise a tree of all previous commits up to this 
 
 ---
 
+### Getting commit IDs
+
+Commit IDs are the way Git identifies unique commits. They're really helpful if you ever need to revert back to a previous commit if you've made a mistake.
+
+There are lots of different ways to find out commit IDs:
+
+* Visit the repo in Azure Devops and go to the commit of interest. At the top of the page there is a commit ID you can copy.
+
+*  Navigate to the repo in your file explorer, then open up Git Bash and type
+
+`git log --pretty=format:"%h - %an, %ar : %` 
+
+OR
+
+`git log --pretty=oneline`
+
+There are a number of customisable versions of this, more information is available on the [Git website](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History){target="_blank" rel="noopener noreferrer"}.
+ 
+
+---
+
 ### Reverting a commit
 
 Made a mistake and need to revert? No problem!
 
 
-1. Visit the repo in Azure Devops and go to the commit you want to undo. At the top of the page there is a commit ID, use the copy button to copy this to your PC:
-
-`r knitr::include_graphics("images/git_commit_id.png")`
-
-2. Navigate to the repo in your file explorer, then open up Git Bash and type :
+1. Navigate to the repo in your file explorer, then open up Git Bash and type :
 
  `git revert [PASTE COMMIT ID HERE]` 
  
-3. This opens up a window that asks you to write a commit message. YOu can skip this step as it automatically writes a revert message for you. Enter `:wq` which quits the writer window.
+2. This opens up a window that asks you to write a commit message. YOu can skip this step as it automatically writes a revert message for you. Enter `:wq` which quits the writer window.
 
-4. You can now push these changes to Azure Devops by entering `git push` into the git window
+3. You can now push these changes to Azure Devops by entering `git push` into the git window
 
 ---
 
