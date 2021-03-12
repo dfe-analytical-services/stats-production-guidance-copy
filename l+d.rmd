@@ -116,25 +116,25 @@ The time commitment of the programme will be dependent on the size of the work a
 
 ---
 
-### What is it
+## What is it
 
 SQL or Structured Query Language is a programming language used to talk to relational database management systems.
 
 ---
 
-### What is it for
+## What is it for
 
 SQL provides us with a language primarily for querying databases to extract data, though it is also capable of some basic data processing and analysis.
 
 ---
 
-### How to get it
+## How to get it
 
 Download SSMS from the DfE software centre, talk to your team about getting access to the appropriate SQL servers and databases where the data you need to access is held and start writing SQL queries.
 
 ---
 
-### Best place to start
+## Best place to start
 
 Andy Brook's excellent Introduction to SQL session, giving a visual overview of the basics of querying with SQL:
 
@@ -147,13 +147,13 @@ The follow up intermediate session can be found below.
 
 ---
 
-### Best syntax lookup
+## Best syntax lookup
 
 - [w3schools.com](https://www.w3schools.com/sql/default.asp){target="_blank" rel="noopener noreferrer"} offers a useful guide through the most common SQL commands.
 
 ---
 
-### Other resources
+## Other resources
 
 - This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank" rel="noopener noreferrer"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio (downloadable through the software centre), and start playing with that query.
 
@@ -170,6 +170,44 @@ Andy's follow up intermediate SQL session, covering more advanced features of SQ
 <div align="center">
 <iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
+
+---
+
+## Tips for using SQL
+
+---
+
+### Setting up a SQL area
+
+More information to follow.
+
+---
+
+### Giving/getting access 
+
+To gain access to a SQL database, you must have written confirmation from the database owner specifying whether your access is read-only or both read and write.
+
+If the area you require access to is in the *T1PRMDRSQL\SQLPROD,55842* SQL server, contact the [PDR team](mailto:PupilData.REPOSITORY@education.gov.uk) with your permission attached, stating the name of the database you want access to.
+
+If the area is in any other server, raise a request through the central IT service portal under "non-standard" > "any other request". In your request make sure you attach the written confirmation and specify:
+
+* The server name
+* The database name
+* Whether it's read or write access you need
+
+
+---
+
+### Copying data from the iStore
+
+More information to follow.
+
+---
+
+### SQL best practice
+
+More information to follow.
+
 
 ---
 
