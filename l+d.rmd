@@ -206,7 +206,15 @@ More information to follow.
 
 ### SQL best practice
 
-More information to follow.
+Here are some tips to follow best practice in your SQL code, making it easier to read and pick up if another person is running your code.
+
+* Avoid any trailing whitespace
+* Always capitalize SQL keywords (e.g., SELECT or AS)
+* Variable names should be in snake case - lower case words separated by underscores (e.g. pupil_age instead of PupilAge)
+* Comments should go near the top of your query, or at least near the closest SELECT
+* Try to only comment on things that aren't obvious about the query (e.g. why hardcoded filters are used, how to update them)
+* Where possible, use [Common Table Expressions (CTEs)](https://www.essentialsql.com/introduction-common-table-expressions-ctes/){target="_blank" rel="noopener noreferrer"} early and often, and name them descriptively (e.g. "pupil_age_table" rather than "p")
+
 
 
 ---
