@@ -753,7 +753,7 @@ You can add further subheadings underneath this but try to limit the number of s
 
 You can add images to methodology pages via the content editor.
 
-`r knitr::include_graphics("images/ees-wysiwyg-images.PNG")`
+`r knitr::include_graphics("images/ees-wysiwyg-images.png")`
 
 When uploading an image you will need to add alt text via by clicking the eye symbol, you may also choose to add an image caption.
 
