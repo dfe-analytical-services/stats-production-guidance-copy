@@ -462,7 +462,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 | Parliamentary constituency | pcon_code, pcon_name | |
 | Local authority district | lad_code, lad_name | |
 | Local enterprise partnership | local_enterprise_partnership_code, local_enterprise_partnership_name | |
-| Mayoral combined authority | mayoral_combined_authority_code, mayoral_combined_authority_name | |
+| English devolved area | english_devolved_area_code, english_devolved_area_name | |
 | Opportunity area | opportunity_area_code, opportunity_area_name | |
 | Ward | ward_code, ward_name | |
 | MAT | trust_id, trust_name | Note that Trust ID is shown as Group ID on GIAS when looking at a Trust. MATs also have a ‘company number’, this can be included but is not mandatory. |
