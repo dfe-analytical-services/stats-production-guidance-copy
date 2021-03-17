@@ -760,7 +760,7 @@ When uploading an image you will need to add alt text via by clicking the eye sy
 `r knitr::include_graphics("images/ees-wysiwyg-alt-text.PNG")`
 
 <div class="alert alert-dismissible alert-info">
-Accessibility matters for infographics too, consider the following if you do need to upload an image - 
+Accessibility matters for uploaded images too, consider the following if you do need to upload an image - 
 
 * Keep them simple
 * Use [GDS colours](https://design-system.service.gov.uk/styles/colour/)
