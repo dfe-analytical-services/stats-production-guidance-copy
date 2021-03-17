@@ -456,6 +456,26 @@ p <- ggplot(dat, aes(x=xvar, y=yvar)) +
 fig <- ggplotly(p)
 
 ```
+---
+
+### Updating packages in renv
+
+To update a single package run:
+
+`renv::update("dplyr")`
+
+To update all packages run:
+
+`renv::update()`
+
+
+---
+
+### Installing old package versions in renv
+
+This is surprisingly neat to do. Let's say you wanted to roll back to version 1.0.2 of dplyr, you would run the following:
+
+`renv::install("dplyr@1.0.2")`
 
 ---
 
