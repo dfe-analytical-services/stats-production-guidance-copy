@@ -263,6 +263,10 @@ Use plain English and shorter sentences, aim for an average of 15-20 words per s
 
 Explain complex concepts in plain English within the text. Remember that for many of our users, confidence intervals and significant differences are complex concepts that need explaining.
 
+<div class="alert alert-dismissible alert-info">
+Do not use footnotes in the text of your content. They’re designed for reference in print, not web pages. Always consider the user need first. If the information in the footnotes is important, include it in the body text. If it’s not, leave it out. 
+</div>
+
 ---
 
 ## Active headings and titles
@@ -297,7 +301,10 @@ You do not need to recreate all of the old excel tables, users can find the numb
 
 ---
 
+Avoid using full URLs in text. Hyperlinks should be used and they should provide a clear description of the destination. Avoid using 'For more information **click here**'. Screen readers often collate all links on a page into one list, so having numerous ‘click here’ links listed is confusing to the user and gives no description of the destinations. ‘For more information see **Guidance to support the summer 2021 exams**’ is an example of a good hyperlink.
+
 Best practice on creating hyperlinks, particularly how to name them and common pitfalls to avoid can be found on this [introduction to html guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks){target="_blank" rel="noopener noreferrer"}. Those of us using EES don't need to worry about writing the raw html for the anchor links, and should instead focus on the section referring to how to name and title links.
+
 
 ---
 
