@@ -2,6 +2,7 @@
 title: "Statistics Production Guidance"
 date: "Last updated: `r Sys.Date()`"
 author: "By Cam Race, Laura Selby and Sarah Wong"
+site: "_site.yaml"
 ---
 
 ---
