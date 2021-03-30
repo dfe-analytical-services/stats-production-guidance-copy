@@ -532,7 +532,10 @@ For best practice on writing SQL code, here is a particularly useful [word docum
 
 When using R, it is generally best practice to use [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank" rel="noopener noreferrer"} as directories for your work.
 
-The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank" rel="noopener noreferrer"}, which is fast becoming the global standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank" rel="noopener noreferrer"} package, which will literally style your code for you, and is well worth a look.
+The recommended standard for styling your code in R, is the [tidyverse styling](https://style.tidyverse.org/){target="_blank" rel="noopener noreferrer"}, which is fast becoming the global standard. What is even better is that you can automate this using the [styler](https://styler.r-lib.org/){target="_blank" rel="noopener noreferrer"} package, which will literally style your code for you at the click of a button, and is well worth a look.
+
+
+`r knitr::include_graphics("images/styler.gif")`
 
 There is also plenty of guidance around the internet for [best practice](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank" rel="noopener noreferrer"} when writing [efficient R code](https://waterdata.usgs.gov/blog/intro-best-practices/){target="_blank" rel="noopener noreferrer"}.
 
