@@ -162,7 +162,23 @@ SQL is a fantastic language for large scale data joining and manipulation; it al
 <!-- needs example -->
 For a collection of relevant resources to use when learning SQL, see our [learning resources](l+d.html) page, and for guidance on best practice when writing SQL queries, see the [writing code](#writing-code) and [documentation](#documentation) sections on this page, as well as the guides immediately below on how to setup and use a SQL database. 
 
-If your data is already in SQL, you can use this snippet of R code to move tables from one area (e.g. the Istore) to another (e.g. your team's modelling area) to ensure all data are stored in a single database.
+
+---
+
+### How to set up a SQL working area
+
+---
+
+More to follow, in the meantime please contact us for advice.
+<!-- needs example -->
+
+---
+
+### Copying data from iStore
+
+---
+
+If your data is already in SQL, you can use this snippet of R code to move tables from one area (e.g. the iStore) to another (e.g. your team's modelling area) to ensure all data are stored in a single database.
 
 ```
 library(odbc)
@@ -193,25 +209,6 @@ table_for_transfer <- tbl(con_source,in_schema("schema_name", "table_name")) %>%
 dbWriteTable(con_target,"whatever_you_want_to_call_new_table", table_for_transfer)
 
 ```
-
-
----
-
-### How to set up a SQL working area
-
----
-
-More to follow, in the meantime please contact us for advice.
-<!-- needs example -->
-
----
-
-### Copying data from iStore
-
----
-
-More to follow, in the meantime please contact us for advice.
-<!-- needs example -->
 
 ---
 
