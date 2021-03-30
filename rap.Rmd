@@ -162,6 +162,39 @@ SQL is a fantastic language for large scale data joining and manipulation; it al
 <!-- needs example -->
 For a collection of relevant resources to use when learning SQL, see our [learning resources](l+d.html) page, and for guidance on best practice when writing SQL queries, see the [writing code](#writing-code) and [documentation](#documentation) sections on this page, as well as the guides immediately below on how to setup and use a SQL database. 
 
+If your data is already in SQL, you can use this snippet of R code to move tables from one area (e.g. the Istore) to another (e.g. your team's modelling area) to ensure all data are stored in a single database.
+
+```
+library(odbc)
+library(dplyr)
+library(dbplyr)
+library(DBI)
+
+# Step 1.1.: Connect to source server -------------------------------------------
+con_source <- dbConnect(odbc(),
+                     Driver = "SQL Server Native Client 11.0",
+                     Server = "Name_of_source_server",
+                     Database = "Source_database",
+                     Trusted_Connection = "yes"
+)
+
+# Step 1.2.: Connect to target server
+con_target <- dbConnect(odbc(),
+                        Driver = "SQL Server Native Client 11.0",
+                        Server = "Name_of_target_server",
+                        Database = "Your_target_database",
+                        Trusted_Connection = "yes"
+)
+
+# Step 2.1.: Pull the table from the source database
+table_for_transfer <- tbl(con_source,in_schema("schema_name", "table_name")) %>% collect()
+
+# Step 2.2.: Copy table into target database 
+dbWriteTable(con_target,"whatever_you_want_to_call_new_table", table_for_transfer)
+
+```
+
+
 ---
 
 ### How to set up a SQL working area
@@ -594,6 +627,8 @@ If you can't answer yes, then:
 - Get a member of the team to run the code using only your documentation
 
 - Use their feedback to improve documentation/in-line comments in code
+
+- Other tips for getting started with peer review can be found in the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/peer_review.html){target="_blank" rel="noopener noreferrer"} 
 
 ---
 
