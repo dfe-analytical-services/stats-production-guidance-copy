@@ -1,4 +1,5 @@
 name: "stats-prod-guide"
+output_dir: "."
 navbar:
   title: "Statistics Production Guidance"
   left:
@@ -22,3 +23,4 @@ output:
     toc: TRUE
     toc_float: TRUE
     css: images/acalat_theme.css
+    anchor_sections: FALSE
