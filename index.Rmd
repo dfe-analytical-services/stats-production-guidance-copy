@@ -48,3 +48,7 @@ We also have a number of other applications for statistics production teams to u
 
 
 ---
+
+## Testing
+
+`r Sys.info()["nodename"]`
