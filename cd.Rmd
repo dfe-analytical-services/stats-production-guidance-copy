@@ -305,6 +305,20 @@ Avoid using full URLs in text. Hyperlinks should be used and they should provide
 
 Best practice on creating hyperlinks, particularly how to name them and common pitfalls to avoid can be found on this [introduction to html guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks){target="_blank" rel="noopener noreferrer"}. Those of us using EES don't need to worry about writing the raw html for the anchor links, and should instead focus on the section referring to how to name and title links.
 
+---
+
+## Search engine optimisation
+
+---
+
+Search engine optimisation (SEO) makes it easier for users to find your data through search engines like Google. Some top tips include:
+
+* Keeping your release title shorter than 50-60 characters. This means the full title can be displayed on the search engine results
+
+* Avoid listing key words: search engines penalise anything not recognised as a full sentence.
+
+* Make use of our [analytics app](https://rsconnect/rsc/ees-analytics/){target="_blank" rel="noopener noreferrer"} to explore what your users are doing: what accordions are they clicking on, what are they searching for? This could give an idea of what content you should focus on in future, and which areas are no longer of interest to most of your users.
+
 
 ---
 
