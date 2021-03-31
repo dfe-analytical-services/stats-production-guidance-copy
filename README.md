@@ -27,3 +27,7 @@ Are you ready to republish - https://app.diagrams.net/#G1X6c4gmaeS4-3q2N2J9yfBFm
 Create release - https://app.diagrams.net/#G1NcVNEtMtNO--2NtV6RPxceiRv3fDGQ7y
 
 PRA - https://app.diagrams.net/#G1x1VLZghqCCnmDWHqgjpdU6fSSehms4FL
+
+# Contact and contribution
+
+If you have any questions or wish to contribute to this, please get in touch with us at statistics.development@education.gov.uk.
