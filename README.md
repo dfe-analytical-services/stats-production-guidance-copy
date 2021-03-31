@@ -3,7 +3,9 @@ An rmarkdown website used as a central place to hold guidance, helpful links and
 
 Each page of the site is a single rmarkdown document, with index.Rmd as the homepage, and _site.yml being the overall yaml that sets up the navbar and links the pages together.
 
-A copy of the guidance website is also available via Gihub Pages - https://dfe-analytical-services.github.io/stats-production-guidance-copy/
+A copy of the guidance website is also publicly available via Gihub Pages - https://dfe-analytical-services.github.io/stats-production-guidance-copy/
+
+If you are looking at the public version and there is black text on a white background, please check back in 5 minutes as we are deploying an update. The text should be white on a grey background.
 
 # Environment URLs
 
@@ -27,3 +29,7 @@ Are you ready to republish - https://app.diagrams.net/#G1X6c4gmaeS4-3q2N2J9yfBFm
 Create release - https://app.diagrams.net/#G1NcVNEtMtNO--2NtV6RPxceiRv3fDGQ7y
 
 PRA - https://app.diagrams.net/#G1x1VLZghqCCnmDWHqgjpdU6fSSehms4FL
+
+# Contact and contribution
+
+If you have any questions or wish to contribute to this, please get in touch with us at statistics.development@education.gov.uk.

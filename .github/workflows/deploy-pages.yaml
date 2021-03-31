@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - github-pages
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -33,5 +33,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          branch: gh-pages
+          branch: master
           folder: .
