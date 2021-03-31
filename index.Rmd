@@ -61,7 +61,3 @@ Publication self-assessment tool:
 The code for this guidance website is mirrored at [https://github.com/dfe-analytical-services/stats-production-guidance-copy](https://github.com/dfe-analytical-services/stats-production-guidance-copy){target="_blank" rel="noopener noreferrer"}
 
 ---
-
-## Testing
-
-`r Sys.info()["nodename"]`
