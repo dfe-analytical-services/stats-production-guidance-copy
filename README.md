@@ -3,7 +3,9 @@ An rmarkdown website used as a central place to hold guidance, helpful links and
 
 Each page of the site is a single rmarkdown document, with index.Rmd as the homepage, and _site.yml being the overall yaml that sets up the navbar and links the pages together.
 
-A copy of the guidance website is also available via Gihub Pages - https://dfe-analytical-services.github.io/stats-production-guidance-copy/
+A copy of the guidance website is also publicly available via Gihub Pages - https://dfe-analytical-services.github.io/stats-production-guidance-copy/
+
+If you are looking at the public version and there is black text on a white background, please check back in 5 minutes as we are deploying an update. The text should be white on a grey background.
 
 # Environment URLs
 
