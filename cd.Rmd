@@ -45,7 +45,7 @@ This guidance and the below checklist, co-produced with local statisticians, and
 
 ---
 
-A content checklist, which breaks down the components of producing Best Practice content into achievable pieces of work with supporting links to guidance can be found [in our sharepoint folder](https://educationgovuk.sharepoint.com/:w:/r/sites/DfEStatisticsCoherence/_layouts/15/Doc.aspx?sourcedoc=%7BA4DDCE2D-20E1-4ECA-AFA8-683CFB6993CC%7D&file=CHECKLIST%20TO%20AID%20PRODUCTION%20OF%20ENGAGING%20AND%20CLEAR%20STATISTICAL%20RELEASES%20v1.docx&action=default&mobileredirect=true){target="_blank" rel="noopener noreferrer"}.
+A content checklist, which breaks down the components of producing Best Practice content into smaller chunks with prompt questions has been developed and is used in our content design scrums. [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}
 
 ---
 
