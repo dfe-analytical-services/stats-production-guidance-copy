@@ -168,11 +168,6 @@ The layout of the new platform provides a natural template and enforces a base l
 
 Essentially, your release should have a headline statistics part, followed by up to 10 headered accordion sections, most releases are already structured this way in the PDFs.
 
-<div class="alert alert-dismissible alert-info">
-Word templates for drafting the commentary, and for creating PDFs for the external metadata and pre-release-access list are saved on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=qPdc7s){target="_blank" rel="noopener noreferrer"}.
-</div>
-
-
 ---
 
 
