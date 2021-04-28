@@ -363,6 +363,7 @@ More will follow in this space, though in the meantime please contact us if you'
 ---
 
 Did you know that we collect data on every publication live on EES in our [analytics app](https://rsconnect/rsc/ees-analytics){target="_blank" rel="noopener noreferrer"}? This tells you a range of things like:
+
 * How many times each accordion has been clicked
 * How long users spend on your page
 * How many times each table has been used in the table builder or downloaded
