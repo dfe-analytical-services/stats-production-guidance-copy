@@ -328,7 +328,17 @@ A selection of handy bits of code and workarounds for common issues.
 
 ### renv::restore()
 
-Sometimes renv::restore() can fail, and when in specific renv-controlled projects install.packages() will fail saying that packages aren't available even when they clearly are. This seems to be an issue that can be worked around by specifying the renv library as the install location. It's a bit of a fudge, though these lines are helpful to get the packages from the renv lockfile installed and you running the project when needed:
+Sometimes renv::restore() can fail, and when in specific renv-controlled projects install.packages() will fail saying that packages aren't available even when they clearly are. There are a couple of workarounds we have found that get around this failure.
+
+1. Configuring the proxy settings by running the below in R - this also helps if you are getting timeout issues when trying to webscrape with R:
+
+```
+Sys.setenv(no_proxy="*") 
+
+```
+
+
+2. Specifying the renv library as the install location. It's a bit of a fudge, though these lines are helpful to get the packages from the renv lockfile installed and you running the project when needed:
 
 ```
 myPath <- .libPaths()[1]
