@@ -5,6 +5,11 @@ author: "By Cam Race, Laura Selby and Sarah Wong"
 site: "_site.yml"
 ---
 
+```{r include=FALSE}
+library(fontawesome)
+
+```
+
 ---
 
 ## Guidance
