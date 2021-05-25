@@ -557,6 +557,17 @@ You can change the colour scale of the chart in the "legend" tab.
 
 You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. If you have a an infographic or a chart that is too complex to build within our chart builder you can use the 'Choose an infographic as alternative' option to upload an image to your data block instead. These should be .svg format and you can use the sizing options within the data block editor to size your image appropriately. 
 
+<div class="alert alert-dismissible alert-info">
+Accessibility matters for infographics too, consider the following if you do need to upload an image - 
+
+* Keep them simple
+* Use only colours that are also available in EES (listed in table below)
+* Don't put borders around images
+* Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
+* Try to avoid adding text to your images other than axis labels and limited annotations. Titles and headings can be added in the "chart configuration" tab instead
+
+</div>
+
 For any charts made outside of EES you must be using [GDS colours](https://design-system.service.gov.uk/styles/colour/), the following hex codes represent the colours that are available for charts in EES, we strongly recommend you stick to these (if you can't for any reason, please get in touch with us so we can understand why):
 
 | Colour name (GDS) | Hex code |
@@ -574,21 +585,6 @@ For any charts made outside of EES you must be using [GDS colours](https://desig
 | Red               | #d4351c  |
 | Yellow            | #ffdd00  |
 | Green             | #00703c  |
-
-
-`r knitr::include_graphics("images/EES-charts-infographic.PNG")`
-
-<div class="alert alert-dismissible alert-info">
-Accessibility matters for infographics too, consider the following if you do need to upload an image - 
-
-* Keep them simple
-* Use only colours that are also available in EES (listed in table above)
-* Don't put borders around images
-* Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
-* Try to avoid adding text to your images other than axis labels and limited annotations. Titles and headings can be added in the "chart configuration" tab instead
-
-
-</div>
 
 ---
 
