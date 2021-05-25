@@ -16,7 +16,7 @@ navbar:
     - text: "EES"
       href: ees.html
   right:
-  - text: TEXT
+  - text: ""
     href: mailto:statistics.development@education.gov.uk
     icon: fa-envelope
     
