@@ -14,7 +14,7 @@ require(knitr)
 
 ---
 
-Cam ran an introduction to RAP session for DISD in December 2020, the slides can be found on [github](https://github.com/cjrace/introduction-to-rap){target="_blank" rel="noopener noreferrer"}, and the recording is embedded below:
+Cam ran an introduction to RAP session for DISD in December 2020, the slides can be found on [GitHub](https://github.com/cjrace/introduction-to-rap){target="_blank" rel="noopener noreferrer"}, and the recording is embedded below:
 
 <div align="center">
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f4fb4ae9-3149-4d7c-8968-ff4c11dc8ac3?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
@@ -968,8 +968,15 @@ It's an easy way to answer questions that your audience will likely have regardi
 
 **How to get started**
 
-More to follow, in the meantime please contact us for advice.
-<!-- needs example -->
+As a starting point, you should aim to have as many of the following sections as are applicable to your project:
+
+- Introduction
+- Requirements (access, software, skills/knowledge)
+- How to use
+- How to contribute
+- Contact details
+
+The [Self-assessment tool](https://github.com/dfe-analytical-services/publication-self-assessment-copy){target="_blank" rel="noopener noreferrer"} and the [QA app](https://github.com/dfe-analytical-services/dfe-published-data-qa){target="_blank" rel="noopener noreferrer"} give two examples of this.
 
 ---
 
@@ -1013,6 +1020,34 @@ Once you have navigated to this page, fill out the form with the following detai
 `r knitr::include_graphics("images/devops_request_details.PNG")`
 
 Access is usually granted within a few working days. Alert the [Statistics Development Team](mailto:statistics.development@education.gov.uk) when this is confirmed, and we will set up/give you access to your repository.
+
+---
+
+### Open source repositories
+
+---
+
+**What does this mean?**
+
+Repositories that are visible to the public.
+
+**Why do it?**
+
+It's a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"}. See the [open source](#open-source) section for more details.
+
+**How to get started?**
+
+Contact us to get a repository set up in our dfe-analytical-services area on GitHub.
+
+In general, if you're thinking of making an Official Statistics production repository public, you should consider the following (assuming that you are using R, though these principles will apply more widely):
+
+- Follow the guidance on [writing a readme file](#writing-a-readme-file), and add context in about what Official/National statistics are
+- Ensure no data (either input or output) is included in the repository
+- Have a clear and organised folder structure (such as having R scripts in an 'R' folder)
+- Check your code is styled according the [tidyverse styling](#clean-final-code)
+- Use [renv](https://rstudio.github.io/renv/articles/renv.html){target="_blank" rel="noopener noreferrer"} for package management
+- Use an [R project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank" rel="noopener noreferrer"}
+
 
 ---
 
