@@ -618,6 +618,33 @@ else '' end as characteristic_group
 
 </div>
 
+
+---
+
+### Dates as filters
+
+---
+
+If you are publishing data with a date assigned (e.g. daily data), you can add date in as an additional filter.
+
+It is important to maintain a **yyyy-mm-dd** format as demonstrated below, so that EES lists dates in the correct order in the table builder.
+
+
+| time_period | time_identifier | date               | geographic_level | country_code | country_name |absence_band  | 
+|-------------|-----------------|--------------------|------------------|--------------|--------------|--------------|
+| 2020        | Week 50         | 2020-05-14         | National         | E92000001    | England      | 67.0 - 67.9  |
+| 2020        |	Week 50         | 2020-05-15         | National         | E92000001    | England      | 62.0 - 62.9  |
+| 2020        |	Week 50         | 2020-05-16         | National         | E92000001    | England      | 16.0 - 16.9  |
+
+ R automatically outputs dates in this format, but you can also change this in excel if needed, by selecting the column to change and switching from "General" to the specified date format:
+ 
+ 
+ ```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/change_date_format.png")
+```
+ 
+
+
 ---
 
 # Indicators
