@@ -639,7 +639,7 @@ It is important to maintain a **yyyy-mm-dd** format as demonstrated below, so th
  R automatically outputs dates in this format, but you can also change this in excel if needed, by selecting the column to change and switching from "General" to the specified date format:
  
  
- ```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center'}
 knitr::include_graphics("images/change_date_format.png")
 ```
  
