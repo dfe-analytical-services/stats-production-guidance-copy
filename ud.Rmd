@@ -640,7 +640,7 @@ It is important to maintain a **yyyy-mm-dd** format as demonstrated below, so th
  
  
 ```{r, echo=FALSE, fig.align='center'}
-knitr::include_graphics("images/change_date_format.png")
+knitr::include_graphics("images/change_date_format.PNG")
 ```
  
 
