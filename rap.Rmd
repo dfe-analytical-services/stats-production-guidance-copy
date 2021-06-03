@@ -702,9 +702,20 @@ It is assumed that when using R, automated scripts will output .html reports tha
 
 **What does this mean?**
 
-The list of basic automated QA checks, with examples, will appear here shortly.
+The list of basic automated QA checks, with code examples can be found below and in our [GitHub repository](https://github.com/dfe-analytical-services/automated-data-qa){target="_blank" rel="noopener noreferrer"}:
 
-The Statistics Development Team are developing the QA app to include basic QA outputs, more will follow in this space when this is ready.
+* Checking for [minimum](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_minimum_values.R){target="_blank" rel="noopener noreferrer"}, [maximum](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_maximum_values.R){target="_blank" rel="noopener noreferrer"}, and [average](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_average_values.R){target="_blank" rel="noopener noreferrer"} values across your data
+
+* Checking for [extreme values and outliers](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_extreme_values.R){target="_blank" rel="noopener noreferrer"}
+
+* Ensuring there are no [duplicate rows](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_duplicate_rows.R){target="_blank" rel="noopener noreferrer"} or [duplicate columns](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_duplicate_columns.R){target="_blank" rel="noopener noreferrer"}
+
+* Checking that where appropriate, [geographical subtotals add up to totals](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_LA_subtotals_vs_region.R){target="_blank" rel="noopener noreferrer"} (e.g. all the numeric values for LAs in Yorkshire and The Humber add up to the regional total)
+
+* Basic [trend analysis using scatter plots](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/create_scatter_plot.R){target="_blank" rel="noopener noreferrer"}, to help you spot outliers and help tell the story of your data.
+
+
+The Statistics Development Team are developing the QA app to include these basic QA outputs, more will follow in this space when this is ready.
 
 **Why do it?**
 
@@ -714,8 +725,9 @@ Automating these checks ensures their accuracy and reliability, as well as being
 
 **How to get started**
 
-More to follow, in the meantime please contact us for advice.
+Try using our template code snippets to get an idea of how you could automate QA of your own publication files. A recording of our introduction to automated QA will follow in due course, but in the meantime please contact us for advice.
 
+<!-- Include link to presentation once we've recorded it -->
 <!-- there will also be a link to the QA app as well when that is ready -->
 
 ---
