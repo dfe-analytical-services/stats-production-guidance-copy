@@ -26,6 +26,11 @@ The cross-government group of RAP champions have laid out a [minimum level of RA
 
 We already have 'analytical pipelines' and have done for many years. The aim of RAP, is to automate the parts of these pipelines that can be automated, to increase efficiency and accuracy, while creating a clear audit trail to allow analyses to easily be re-run if needed. This will free us up to focus on the parts of our work where our human input can really add value. RAP is something we can use to reduce the burden on us by getting rid of some of the boring stuff, what's not to like!
 
+Cam and Sarah ran a session introducing how to get started with automated QA in relation to RAP, slides are available on [GitHub](https://sarahmwong.github.io/intro-to-automating-QA/#1){target="_blank" rel="noopener noreferrer"} and the recording of the session is below:
+
+<div align="center">
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/57eab29d-afeb-4651-a9f5-687098b84d13?autoplay=false&showinfo=false" allowfullscreen style="border:none;"></iframe>
+</div>
 
 ---
 

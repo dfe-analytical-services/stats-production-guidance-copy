@@ -458,7 +458,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 | National | No additional columns | |
 | Regional | region_code, region_name | |
 | Local authority | old_la_code, new_la_code, la_name | It is usually good practice to include the Regional aggregations where possible given the direct link between Local authorities and Regions. |
-| RSC region | rcs_region_lead_name | For RSC region data, we generally define them into lead RSC regions where the majority of the data is from. |
+| RSC region | rsc_region_lead_name | For RSC region data, we generally define them into lead RSC regions where the majority of the data is from. |
 | Parliamentary constituency | pcon_code, pcon_name | |
 | Local authority district | lad_code, lad_name | |
 | Local enterprise partnership | local_enterprise_partnership_code, local_enterprise_partnership_name | |
