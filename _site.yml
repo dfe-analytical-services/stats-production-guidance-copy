@@ -7,14 +7,16 @@ navbar:
       href: l+d.html
     - text: "Processes and RAP"
       href: rap.html
-    - text: "Data Standards"
+    - text: "Data"
       href: ud.html
-    - text: "Writing Content"
+    - text: "Writing"
       href: cd.html
-    - text: "Publishing Statistics"
+    - text: "Publishing"
       href: pub.html
     - text: "EES"
       href: ees.html
+    - text: "Understanding users"
+      href: user.html
   right:
   - text: ""
     href: mailto:statistics.development@education.gov.uk
