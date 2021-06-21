@@ -448,11 +448,6 @@ When using geographies that can be measured in multiple ways, you can achieve th
 
 All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams should use additional columns as relevant such as including Regional columns for Local authority level data.
 
-<div class="alert alert-dismissible alert-info">
-  Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that **only** consist of these levels should be uploaded as an ancillary file, rather than as a data file.
-</div>
-
-
 | geographic_level | required columns | notes |
 |------------------|------------------|-------|
 | National | No additional columns | |
@@ -467,9 +462,20 @@ All rows must have country_code and country_name completed, regardless of geogra
 | Ward | ward_code, ward_name | |
 | MAT | trust_id, trust_name | Note that Trust ID is shown as Group ID on GIAS when looking at a Trust. MATs also have a ‘company number’, this can be included but is not mandatory. |
 | Sponsor | sponsor_id, sponsor_name | Note that Sponsor ID is shown as Group ID on GIAS when looking at a Sponsor. |
+
+
+Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks if they are mixed in with other levels. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. 
+
+For School and Provider, any data files that **only** consist of these levels can be uploaded and will be usable in the table tool, contact us if you have any questions about this.
+
+For Planning area and Institution data, any data files that **only** consist of these levels should be uploaded as an ancillary file rather than a data file.
+
+| geographic_level | required columns | notes |
+|------------------|------------------|-------|
+| School | school_name, school_urn, school_laestab | |
+| Provider | provider_name, provider_ukprn | |
+|---------|--------|--------|
 | Planning area | No required columns, though we recommend both planning_area_code and planning_area_name | |
-| School | No required columns, you can use any you have, though we recommend you include laestab and/or urn with the name in the style of 'school_laestab' to make data matching easier | |
-| Provider | No required columns, you can use any you have, though we recommend you include the name and at least one code (urn, ukprn, upin) in the style 'provider_name' if possible to make data matching easier | |
 | Institution | No required columns, you can use any you have, though we recommend you include institution_id and institution_name to make data matching easier | |
 
 
