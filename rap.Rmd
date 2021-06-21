@@ -722,6 +722,8 @@ The list of basic automated QA checks, with code examples can be found below and
 
 The Statistics Development Team are developing the QA app to include these basic QA outputs, more will follow in this space when this is ready.
 
+<!-- there will also be a link to the QA app as well when that is ready -->
+
 **Why do it?**
 
 Quality is one of the three pillars that our [code of practice](https://code.statisticsauthority.gov.uk/the-code/quality/){target="_blank" rel="noopener noreferrer"} is built upon. These basic level checks allow us to have confidence that we are accurately processing the data.
@@ -730,10 +732,7 @@ Automating these checks ensures their accuracy and reliability, as well as being
 
 **How to get started**
 
-Try using our template code snippets to get an idea of how you could automate QA of your own publication files. A recording of our introduction to automated QA will follow in due course, but in the meantime please contact us for advice.
-
-<!-- Include link to presentation once we've recorded it -->
-<!-- there will also be a link to the QA app as well when that is ready -->
+Try using our [template code snippets](https://github.com/dfe-analytical-services/automated-data-qa) to get an idea of how you could automate QA of your own publication files. A recording of our introduction to automated QA is also available at the top of the page.
 
 ---
 
