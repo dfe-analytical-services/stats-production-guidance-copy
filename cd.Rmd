@@ -65,6 +65,7 @@ You can experience how a scrum runs through watching this scrum-along (features 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/73fa0d31-b8b3-4889-bfcf-c76c33c1fe87?autoplay=false&showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
 
+---
 
 <!-- 
 ---
@@ -138,6 +139,7 @@ People who write about statistics should seek to conduct a coherent statistical 
       a. Look over your work
       b. Get others who do not know subject area to review (within pre-release access rules)
 !-->
+
 
 ---
 
