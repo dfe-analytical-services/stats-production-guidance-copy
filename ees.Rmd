@@ -153,6 +153,41 @@ If you want to request a new publication, please be prepared to give the followi
 
 ---
 
+# Publication owner role
+
+---
+
+We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
+
+- Create new releases within a publication
+- Create an amendment of the latest published release within a publication
+- Cancel an amendment before it is published
+
+In future this will also include managing methodology pages and we hope to stretch it to include setting release permissions too.
+
+Options available to publication owners:
+
+`r knitr::include_graphics("images/publicationowner-options.png")`
+
+
+---
+
+## Publication management
+
+---
+
+Use this page to change the details for your publication, such as the contact information or to add links to legacy releases on gov.uk. 
+
+Any updates here will affect all releases in the series and will be published immediately. 
+
+<div class="alert alert-dismissible alert-danger">
+It is possible to change the publication title via this page, however this should be used rarely and will not affect the publications url if one or more published releases exist. 
+</div>
+
+`r knitr::include_graphics("images/manage-publication.png")`
+
+---
+
 # Create new release
 
 ---
@@ -792,8 +827,7 @@ Accessibility matters for uploaded images too, consider the following if you do 
 
 ---
 
-If you need to make an amendment to release that has already been published this is now possible to do from within the admin dashboard:
-
+If you need to make an amendment to release that has already been published this is possible to do from within the admin dashboard if you are a publication owner. If you need to create an amendment and your publication owner is not available, please contact the Statistics Development Team to do this for you.
 
 `r knitr::include_graphics("images/EES-amend-release.PNG")`
 
