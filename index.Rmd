@@ -65,4 +65,6 @@ Publication self-assessment tool:
 
 The code for this guidance website is mirrored at [https://github.com/dfe-analytical-services/stats-production-guidance-copy](https://github.com/dfe-analytical-services/stats-production-guidance-copy){target="_blank" rel="noopener noreferrer"}
 
+Other code, such as the dfeR package and our template code can be found in the [dfe-analytical-services](https://github.com/dfe-analytical-services){target="_blank" rel="noopener noreferrer"} area on GitHub.
+
 ---
