@@ -141,8 +141,6 @@ People who write about statistics should seek to conduct a coherent statistical 
 !-->
 
 
----
-
 # Introducing the Statistics
 
 ---
