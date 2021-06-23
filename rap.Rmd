@@ -6,7 +6,7 @@ title: "RAP Guidance for Statistics Producers"
 require(knitr)
 ```
 
-<p class="text-muted">Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production processes.</p>
+<p class="text-muted">Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production processes</p>
 
 ---
 

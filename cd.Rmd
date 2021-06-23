@@ -2,7 +2,7 @@
 title: "Best Practice for Content Design"
 ---
 
-<p class="text-muted">Things to consider when writing statistical commentary.</p>
+<p class="text-muted">Things to consider when writing statistical commentary</p>
 
 
 ---

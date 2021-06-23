@@ -11,7 +11,7 @@ metadata_data_example <- read_excel("data_examples/metadata_data_example.xlsx")
 
 ```
 
-<p class="text-muted">Guidance on how to structure data files.</p>
+<p class="text-muted">Guidance on how to structure data files</p>
 
 ---
 
