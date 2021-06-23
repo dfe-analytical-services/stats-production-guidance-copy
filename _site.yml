@@ -7,14 +7,21 @@ navbar:
       href: l+d.html
     - text: "Processes and RAP"
       href: rap.html
-    - text: "Data"
-      href: ud.html
-    - text: "Writing"
-      href: cd.html
+    - text: "Outputs"
+      menu:
+        - text: "Open Data"
+        - href: ud.html
+        - text: "Writing and Visualising"
+        - href: cd.html
     - text: "Publishing"
-      href: pub.html
-    - text: "EES"
-      href: ees.html
+      menu:
+        - text: "How and what"
+        - href: pub.html
+        - text: "----------"
+        - text: "Using EES"
+        - href: ees.html
+        - text: "Non-EES"
+        - href: dashboards.html
     - text: "Understanding users"
       href: user.html
   right:
