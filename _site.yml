@@ -3,15 +3,15 @@ output_dir: "."
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Learning Resources"
+    - text: "Learning resources"
       href: l+d.html
-    - text: "Creating Statistics"
+    - text: "Creating statistics"
       menu:
         - text: "Processes and RAP"
           href: rap.html
-        - text: "Open Data"
+        - text: "Open data"
           href: ud.html
-        - text: "Writing and Visualising"
+        - text: "Writing and visualising"
           href: cd.html
     - text: "Publishing statistics"
       menu:
