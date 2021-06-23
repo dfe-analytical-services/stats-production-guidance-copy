@@ -1,0 +1,7 @@
+---
+title: "Best practice for publishing outside of EES"
+---
+
+<p class="text-muted">Guidance for publishing statistics outside of EES</p>
+
+More details will follow on this page in the coming weeks.
