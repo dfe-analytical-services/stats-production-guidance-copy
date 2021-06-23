@@ -359,24 +359,11 @@ For releases that have a .html methodology page the relevant link will display a
 
 The [glossary in Explore Education Statistics](https://explore-education-statistics.service.gov.uk/glossary){target="_blank" rel="noopener noreferrer"} is intended for definitions used across all publications. Please send any definitions you would like adding to the glossary to the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
 
-Once definitions have you added, you can add them as URL links into your commentary. E.g. to see the definition for 'Otherwise vulnerable', you'd make that phrase a hyperlink, and use https://explore-education-statistics.service.gov.uk/glossary#otherwise-vulnerable as the link.
+Once definitions have been added, you can add them as URL links into your commentary. E.g. to see the definition for 'Otherwise vulnerable', you'd make that phrase a hyperlink, and use https://explore-education-statistics.service.gov.uk/glossary#otherwise-vulnerable as the link.
 
 Before creating a new definition, check the glossary to see if one is already there. When creating glossary entries you should use standard DfE definitions, only write your own if it is something that relates specifically to your statistics. Do not use technical terms in your definition, stick to plain English. 
 
 Include essential definitions in the commentary where they are relevant, you should not expect users to go to the glossary or about these statistics section for information they need to understand the statistics. Do not use the glossary to explain methodology such as classification decisions, explain these in the text if essential or otherwise in the methodology document.
-
-
----
-
-# Peer review
-<!-- keep this heading the same on this page, even if moved, as the self-assessment tool links from it -->
-
----
-
-Peer review is an important element of quality assuring our work. We often do it without realising by bouncing ideas off of one another and by getting others to 'idiot check' our work. When writing content, ensuring that we get our work formally peer reviewed is particularly important for ensuring it's clarity and value. Can others easily understand what you've written? Does it all feel important and worth writing about to them? 
-
-If you're interested in having your publication peer reviewed, please see the [publication scrums](#publication-scrums) section above.
-
 
 ---
 
