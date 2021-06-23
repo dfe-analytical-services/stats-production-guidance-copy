@@ -15,12 +15,11 @@ navbar:
           href: cd.html
     - text: "Publishing statistics"
       menu:
-        - text: "How and what"
+        - text: "How to publish"
           href: pub.html
-        - text: "----------"
         - text: "Using EES"
           href: ees.html
-        - text: "Non-EES"
+        - text: "Other options"
           href: dashboards.html
     - text: "Understanding users"
       href: user.html
