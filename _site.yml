@@ -5,23 +5,23 @@ navbar:
   left:
     - text: "Learning Resources"
       href: l+d.html
-    - text: "Creating the release"
+    - text: "Creating Statistics"
       menu:
         - text: "Processes and RAP"
-        - href: rap.html
+          href: rap.html
         - text: "Open Data"
-        - href: ud.html
+          href: ud.html
         - text: "Writing and Visualising"
-        - href: cd.html
+          href: cd.html
     - text: "Publishing statistics"
       menu:
         - text: "How and what"
-        - href: pub.html
+          href: pub.html
         - text: "----------"
         - text: "Using EES"
-        - href: ees.html
+          href: ees.html
         - text: "Non-EES"
-        - href: dashboards.html
+          href: dashboards.html
     - text: "Understanding users"
       href: user.html
   right:
