@@ -466,7 +466,7 @@ All rows must have country_code and country_name completed, regardless of geogra
 
 Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks if they are mixed in with other levels. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. 
 
-For School and Provider, any data files that **only** consist of these levels can be uploaded and will be usable in the table tool, contact us if you have any questions about this.
+For School and Provider, any data files that **only** consist of these levels will soon be able uploaded and will be usable in the table tool, contact us if you have any questions about this.
 
 For Planning area and Institution data, any data files that **only** consist of these levels should be uploaded as an ancillary file rather than a data file.
 
