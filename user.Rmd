@@ -4,7 +4,18 @@
   
 <p class="text-muted">Guidance on engaging with users and understanding how they interact with your publications</p>
     
+---
+
+# Introduction
+
+---
     
+Our statistics are used by a variety of different user groups.
+
+Some more info on them.
+
+Something on being user centred, why it's important and all the things that back it up like the code of practice and department values.
+
 ---
     
 # User analytics
