@@ -23,7 +23,7 @@ From late 2020, the Central Statistics Support Unit has been leading on developi
 
 Teams can now continually improve their publications, assessing against best practice using our [content checklist](#guidance-and-support)
 
-We are running publication scrums where teams can put forward their publication(s) for review by a group of volunteer analysts, providing feedback as ‘unfamiliar new readers’ to discuss ideas for further improvements. If any of this is of interest to you or your team, please contact Heather Brown.
+We are running publication scrums where teams can put forward their publication(s) for review by a group of volunteer analysts, providing feedback as ‘unfamiliar new readers’ to discuss ideas for further improvements. For more information, see the [publication scrums](#publication-scrums) section. 
 
 ---
 
@@ -43,13 +43,9 @@ Below is a session by Robert Cuffe from the BBC talking to DfE statisticians abo
 
 ---
 
-The guidance on content design is in the form of a handy checklist, co-produced with local statisticians, and supported by the [Good Practice Team](https://gss.civilservice.gov.uk/the-good-practice-team-gpt/#:~:text=The%20Good%20Practice%20Team%20(GPT)%20is%20here%20to%20help%20the,for%20National%20Statistics%20(ONS)){target="_blank" rel="noopener noreferrer"}. This builds on ONS’s Best Practice guidance on [Data Visualisation](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank" rel="noopener noreferrer"} and [Writing about Statistics](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/){target="_blank" rel="noopener noreferrer"}. The checklist is for team’s to use throughout their project cycle, so that good content design is at the heart of what they deliver at all stages, rather than considered late in the process [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}.
+The guidance on content design is in the form of a handy checklist, co-produced with local statisticians, and supported by the [Good Practice Team](https://gss.civilservice.gov.uk/the-good-practice-team-gpt/#:~:text=The%20Good%20Practice%20Team%20(GPT)%20is%20here%20to%20help%20the,for%20National%20Statistics%20(ONS)){target="_blank" rel="noopener noreferrer"}. This builds on ONS’s Best Practice guidance on [Data Visualisation](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank" rel="noopener noreferrer"} and [Writing about Statistics](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/){target="_blank" rel="noopener noreferrer"}. 
 
-One of the early outcomes from running publication scrums, was that great content design is more of an art form than science and the scrum process was found to be really useful in enabling a wider element of scrutiny and friendly challenge, in an enjoyable environment to consider publication content. 
-
-The checklist, although a good tool, does not enable the user to think this through as clearly from a new readers perspective, and therefore publication leads should fully consider this, and potential mitigations. 
-
-Some examples/tips on writing are included below and should be considered by publication leads.
+The content checklist is for team’s to use throughout their project cycle, so that good content design is at the heart of what they deliver at all stages, rather than considered late in the process [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
@@ -59,11 +55,15 @@ Some examples/tips on writing are included below and should be considered by pub
 
 CSSU are running publication scrums, which enable publications to be looked at with fresh eyes through a workshop with volunteers and the publication team. The content checklist, which breaks down the components of producing Best Practice content into smaller chunks with prompt questions is used [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}, along with workshop slides. 
 
+One of the early outcomes from running publication scrums, was that great content design is more of an art form than science and the scrum process was found to be really useful in enabling a wider element of scrutiny and friendly challenge, in an enjoyable environment to consider publication content. 
+
 You can experience how a scrum runs through watching this scrum-along (features the scrum up until groups breakout to discuss different elements) and [supporting slides](https://educationgovuk.sharepoint.com/:p:/r/sites/lvewp00086/WorkplaceDocuments/CSSU/Statistics%20Strategy%20Team/Content%20Design%20Scrums%20materials/Content%20Design%20Scrum.pptx?d=wb13c1dc2628647718ef9fd1690653547&csf=1&web=1&e=qKLAYn){target="_blank" rel="noopener noreferrer"}
 
 <div align=center>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/73fa0d31-b8b3-4889-bfcf-c76c33c1fe87?autoplay=false&showinfo=false" allowfullscreen style="border:none;"></iframe>
 </div>
+
+If you're interested in being involved in future scrums, please get in contact with Heather Brown.
 
 ---
 
