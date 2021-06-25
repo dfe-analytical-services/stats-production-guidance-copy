@@ -3,18 +3,26 @@ output_dir: "."
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Learning Resources"
+    - text: "Learning resources"
       href: l+d.html
-    - text: "Processes and RAP"
-      href: rap.html
-    - text: "Data Standards"
-      href: ud.html
-    - text: "Writing Content"
-      href: cd.html
-    - text: "Publishing Statistics"
-      href: pub.html
-    - text: "EES"
-      href: ees.html
+    - text: "Creating statistics"
+      menu:
+        - text: "Processes and RAP"
+          href: rap.html
+        - text: "Open data standards"
+          href: ud.html
+        - text: "Writing and visualising"
+          href: cd.html
+    - text: "Publishing statistics"
+      menu:
+        - text: "How to publish"
+          href: pub.html
+        - text: "Using EES"
+          href: ees.html
+        - text: "Other options"
+          href: dashboards.html
+    - text: "Understanding users"
+      href: user.html
   right:
   - text: ""
     href: mailto:statistics.development@education.gov.uk

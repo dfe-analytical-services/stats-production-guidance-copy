@@ -2,22 +2,28 @@
 title: "Best Practice for Content Design"
 ---
 
-<p class="text-muted">Things to consider when writing statistical commentary.</p>
+<p class="text-muted">Things to consider when writing statistical commentary</p>
 
 
 ---
   
-# Background
+# Introduction
 
 ---
 
-DfE publishes over 60 distinct Official Statistics collections each year, as well as numerous experimental and ad hoc releases.
+DfE publishes over 60 distinct Official Statistics collections each year, as well as numerous experimental and ad-hoc releases.
 
-The layout, structure, and length of these releases vary significantly across the Department - this is confusing for users and makes it hard to navigate across releases.
+The layout, structure, and length of these releases vary significantly across the Department - making it confusing and hard to navigate across releases.
 
-In many cases, our drafting is lengthy and overly-technical - again, this is confusing for users and out of line with best practice guidance on content design across Government.
+When writing content to a general audience, statisticians must explain the answers in words that the audience can understand.
 
-Migration to a new statistics dissemination platform - Explore Education Statistics - presents an opportunity for us to systematically review and redesign our content to consistent and accessible standards.
+Migration to a new statistics dissemination platform - Explore Education Statistics (EES) - presents an opportunity for publications to be reviewed and for the way this is communicated to be more consistent and accessible. 
+
+From late 2020, the Central Statistics Support Unit has been leading on developing guidance and support for producers to embed best practice in their writing.
+
+Teams can now continually improve their publications, assessing against best practice using our [content checklist](#guidance-and-support)
+
+We are running publication scrums where teams can put forward their publication(s) for review by a group of volunteer analysts, providing feedback as ‘unfamiliar new readers’ to discuss ideas for further improvements. For more information, see the [publication scrums](#publication-scrums) section. 
 
 ---
 
@@ -33,20 +39,35 @@ Below is a session by Robert Cuffe from the BBC talking to DfE statisticians abo
 
 ---
 
-# Introduction
+# Guidance and Support
 
 ---
 
-This guidance and the below checklist, co-produced with local statisticians, and supported by the [Good Practice Team](https://gss.civilservice.gov.uk/the-good-practice-team-gpt/#:~:text=The%20Good%20Practice%20Team%20(GPT)%20is%20here%20to%20help%20the,for%20National%20Statistics%20(ONS)){target="_blank" rel="noopener noreferrer"} will build on ONS’s Best Practice guidance on [Data Visualisation](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank" rel="noopener noreferrer"} and [Writing about Statistics](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/){target="_blank" rel="noopener noreferrer"}. It is for producers of official statistics who want to create statistical bulletins that are informative, consistent across DfE, engaging and easy to understand. 
+The guidance on content design is in the form of a handy checklist, co-produced with local statisticians, and supported by the [Good Practice Team](https://gss.civilservice.gov.uk/the-good-practice-team-gpt/#:~:text=The%20Good%20Practice%20Team%20(GPT)%20is%20here%20to%20help%20the,for%20National%20Statistics%20(ONS)){target="_blank" rel="noopener noreferrer"}. This builds on ONS’s Best Practice guidance on [Data Visualisation](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank" rel="noopener noreferrer"} and [Writing about Statistics](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/){target="_blank" rel="noopener noreferrer"}. 
+
+The content checklist is for team’s to use throughout their project cycle, so that good content design is at the heart of what they deliver at all stages, rather than considered late in the process [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
-# Content Checklist
+# Publication scrums
 
 ---
 
-A content checklist, which breaks down the components of producing Best Practice content into smaller chunks with prompt questions has been developed and is used in our content design scrums. [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}
+CSSU are running publication scrums, which enable publications to be looked at with fresh eyes through a workshop with volunteers and the publication team. The content checklist, which breaks down the components of producing Best Practice content into smaller chunks with prompt questions is used [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}, along with workshop slides. 
 
+One of the early outcomes from running publication scrums, was that great content design is more of an art form than science and the scrum process was found to be really useful in enabling a wider element of scrutiny and friendly challenge, in an enjoyable environment to consider publication content. 
+
+You can experience how a scrum runs through watching this scrum-along (features the scrum up until groups breakout to discuss different elements) and [supporting slides](https://educationgovuk.sharepoint.com/:p:/r/sites/lvewp00086/WorkplaceDocuments/CSSU/Statistics%20Strategy%20Team/Content%20Design%20Scrums%20materials/Content%20Design%20Scrum.pptx?d=wb13c1dc2628647718ef9fd1690653547&csf=1&web=1&e=qKLAYn){target="_blank" rel="noopener noreferrer"}
+
+<div align=center>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/73fa0d31-b8b3-4889-bfcf-c76c33c1fe87?autoplay=false&showinfo=false" allowfullscreen style="border:none;"></iframe>
+</div>
+
+If you're interested in being involved in future scrums, please get in contact with Heather Brown.
+
+---
+
+<!-- 
 ---
 
 ## Aims of Guidance and Checklist
@@ -117,8 +138,8 @@ People who write about statistics should seek to conduct a coherent statistical 
 4. **Check what you have written**
       a. Look over your work
       b. Get others who do not know subject area to review (within pre-release access rules)
+!-->
 
----
 
 # Introducing the Statistics
 
@@ -177,7 +198,7 @@ Essentially, your release should have a headline statistics part, followed by up
 
 Each release on the platform will have a summary box at the top that contains the top facts and headlines for your release - you should consider this the equivalent of the front page of what was the PDF version of your release. 
 
-It is recommended to have 3 headline statistics but you can have more or fewer. Key statistic tiles are split into the following elements. 
+It is recommended to have 3 headline statistics but you can have more (up to a maximum of 6) or fewer. Key statistic tiles are split into the following elements. 
 
 `r knitr::include_graphics("images/key-stat.PNG")`
 
@@ -336,25 +357,13 @@ For releases that have a .html methodology page the relevant link will display a
 
 ---
 
-The [glossary in Explore Education Statistics](https://explore-education-statistics.service.gov.uk/glossary){target="_blank" rel="noopener noreferrer"} is intended for definitions used across multiple publications and will be maintained by HoP Office in the first instance. When you write your publication send any definitions you think need adding to the glossary to [HoP Office](mailto:Hop.STATISTICS@education.gov.uk), in plenty of time for them to be added before the publication date.
+The [glossary in Explore Education Statistics](https://explore-education-statistics.service.gov.uk/glossary){target="_blank" rel="noopener noreferrer"} is intended for definitions used across all publications. Please send any definitions you would like adding to the glossary to the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
+
+Once definitions have been added, you can add them as URL links into your commentary. E.g. to see the definition for 'Otherwise vulnerable', you'd make that phrase a hyperlink, and use https://explore-education-statistics.service.gov.uk/glossary#otherwise-vulnerable as the link.
 
 Before creating a new definition, check the glossary to see if one is already there. When creating glossary entries you should use standard DfE definitions, only write your own if it is something that relates specifically to your statistics. Do not use technical terms in your definition, stick to plain English. 
 
 Include essential definitions in the commentary where they are relevant, you should not expect users to go to the glossary or about these statistics section for information they need to understand the statistics. Do not use the glossary to explain methodology such as classification decisions, explain these in the text if essential or otherwise in the methodology document.
-
-
----
-
-# Peer review
-<!-- keep this heading the same on this page, even if moved, as the self-assessment tool links from it -->
-
----
-
-Peer review is an important element of quality assuring our work. We often do it without realising by bouncing ideas off of one another and by getting others to 'idiot check' our work. When writing content, ensuring that we get our work formally peer reviewed is particularly important for ensuring it's clarity and value. Can others easily understand what you've written? Does it all feel important and worth writing about to them? 
-More will follow in this space, though in the meantime please contact us if you're interested in having your content peer reviewed.
-
----
-
 
 ---
 
