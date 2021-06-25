@@ -10,11 +10,12 @@
 
 ---
     
-Our statistics are used by a variety of different user groups.
+User engagement is about building sustainable relationships and feedback loops between statistics producers, users and potential users of statistics and other relevant stakeholders.
 
-Some more info on them.
+Users of statistics come from a broad range of different backgrounds and organisations and may need to use our statistics for a wide variety of reasons. We need to do our best to understand these different kinds of users and cater for them all.
 
-Something on being user centred, why it's important and all the things that back it up like the code of practice and department values.
+The [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/) states that “users of statistics and data should be at the centre of statistical production; their needs should be understood, their views sought and acted on, and their use of statistics supported”. The quality pillar of the Code of Practice also reminds us that statistics should fit their intended uses. Producers of statistics will only know whether this element of quality continues to be achieved by regularly engaging with a full range of users.
+
 
 ---
     
@@ -66,6 +67,7 @@ The launch of the strategy, as well as two further videos on the value of user e
 <iframe width="640" height="360" src="https://www.youtube.com/embed/H91A_9EnQ3U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+The ONS have also published [ten top tips to help improve user engagement](https://gss.civilservice.gov.uk/policy-store/user-engagement-top-tips/).
 ---
 
 ### User engagement successes
