@@ -2,7 +2,7 @@
 title: "Tools and learning resources"
 ---
 
-<p class="text-muted">A collection of useful learning resources, and information on the recommended tools to get you started.</p>
+<p class="text-muted">A collection of useful learning resources, and information on the recommended tools to get you started</p>
 
 ---
 

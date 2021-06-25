@@ -9,7 +9,7 @@ navbar:
       menu:
         - text: "Processes and RAP"
           href: rap.html
-        - text: "Open data"
+        - text: "Open data standards"
           href: ud.html
         - text: "Writing and visualising"
           href: cd.html
