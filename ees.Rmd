@@ -621,6 +621,9 @@ For any charts made outside of EES you must be using [GDS colours](https://desig
 | Yellow            | #ffdd00  |
 | Green             | #00703c  |
 
+DWP have created a [Data Visualisation Thinking](https://dataviztraining.dwpdata.info/index.html) course that may be useful to look at when creating more complex charts.
+
+
 ---
 
 # Writing content
