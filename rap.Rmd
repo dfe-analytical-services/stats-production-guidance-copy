@@ -1079,6 +1079,9 @@ In general, if you're thinking of making an Official Statistics production repos
 - Use [renv](https://rstudio.github.io/renv/articles/renv.html){target="_blank" rel="noopener noreferrer"} for package management
 - Use an [R project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects){target="_blank" rel="noopener noreferrer"}
 
+When naming your publication's repository you should use the publication name fully written out, in lower case, and with dashes for spaces – ‘graduate-labour-market-statistics’. 
+
+A single repository should be used for all releases of your publication, there's no need to have multiple as all the history is saved within previous commits.
 
 ---
 
