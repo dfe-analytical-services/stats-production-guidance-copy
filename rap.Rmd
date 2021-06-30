@@ -590,6 +590,21 @@ If you ever find yourself writing html, or creating it through rmarkdown, you ca
 
 Peer review is an important element of quality assuring our work. We often do it without realising by bouncing ideas off of one another and by getting others to 'idiot check' our work. When writing code, ensuring that we get our work formally peer reviewed is particularly important for ensuring it's quality and value.
 
+Prior to receiving code for peer review, the author should ensure that all code files are clean, commented appropriately and for larger projects should be held in a repo with an appropriate [README](#writing-a-readme-file) file.
+
+When peer reviewing code you should be consider the following questions - 
+
+* Does the code do what the author intended?
+* If you’re able to run the code, does it run without errors? If warnings are displayed, are they explained?
+* If the project has unit/integration tests, do they pass?
+* Are there any tests / checks that could be added into the code that would help to give greater confidence that it is doing what it is intended to?
+* Are there comments explaining why any decisions have been made?
+* Is the code written and structured sensibly?
+* Are there any ways to make the code more efficient (either in number of lines or raw speed)?
+* At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation
+
+Depending on your access you may or may not be able to run the code yourself, but there should be enough information within the code and documentation to be able to respond to these questions. 
+
 ---
 
 ### Review of code within team 
