@@ -315,7 +315,37 @@ R comes in with a built-in dataset called "iris". We'll use this for all example
 | **VLOOKUP** | Lookup to a table called "lookup" | `iris %>%  left_join(lookup, by.x="Species", by.y ="plant_species")`|
 | **Order by** | Order dataset by descending petal width | `iris %>% arrange(desc(Petal.Width))` | 
 
-More tips for moving from using Excel to using R can be found in the [excel-to-R github wiki](https://github.com/dfe-analytical-services/excel-to-R/wiki/Excel-to-R---how-do-I...).  
+More tips for moving from using Excel to using R can be found in the [excel-to-R wiki](https://github.com/dfe-analytical-services/excel-to-R/wiki/Excel-to-R---how-do-I...).  
+
+
+---
+
+## SQL functions in R
+
+---
+
+R can do a lot of the things that are possible in SQL. The reference table below shows how you would carry out some popular SQL commands in R.
+
+**REMEMBER:** R is case sensitive, so all references to column names/entries need to be as-is in the dataset you are looking at. [Functions exist](https://www.rdocumentation.org/packages/janitor/versions/1.2.0/topics/clean_names) that can translate all your columns to lower or snake case for ease!
+
+| Common SQL Task |	How to do in R (with dplyr)|
+|--|-------|--|
+| **SELECT * FROM TABLE** |	`table %>% select()` |
+| **SELECT ColA, ColB, ColC FROM TABLE** |	`table %>% select(ColA, ColB, ColC)` |
+| **SELECT DISTINCT ColA FROM TABLE** |	`table %>% select(ColA) %>% distinct()` |
+| **TABLE A LEFT JOIN (TABLE B) ON TABLEA.x = TABLEB.y** |	`tableA %>% left_join(TableB, by = c(x = y))` |
+| **CASE WHEN x = 1 THEN 1, WHEN x =2 THEN 2, ELSE 0 END AS New_column_name** |	`%>% mutate (New_column_name = case_when (x == 1 ~ 1, x == 2 ~ 2, TRUE ~ 0))` |
+| **CONCAT(LEA, ESTAB) AS LAESTAB** |	`%>% mutate(LAESTAB = paste0(LEA, ESTAB))` |
+| **SELECT COUNT(*) FROM TABLE** |	`table %>% nrow()` |
+| **SELECT COUNT(ColA) FROM TABLE** |	`table %>% count(colA)` |
+| **SELECT Date_column = CONVERT(DATE, Date_column) FROM TABLE** | `table %>% mutate(Date_column = as.Date(Date_column))` |
+| **SELECT Number_column = CONVERT(INT, Number_column ) FROM TABLE** | `table %>% mutate(Number_column = as.numeric(Number_column))` |
+| **SELECT String_column = CONVERT(VARCHAR, String_column ) FROM TABLE** | `table %>% mutate(String_column = as.character(String_column))` |
+| **DROP TableA** |	`rm(TableA)` |
+
+
+More tips for moving from using SQL to using R can be found in the [SQL-to-R wiki](https://github.com/dfe-analytical-services/excel-to-R/wiki/SQL-to-R-how-do-I...).  
+
 
 ---
 
