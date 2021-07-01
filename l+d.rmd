@@ -336,7 +336,7 @@ R can do a lot of the things that are possible in SQL. The reference table below
 | **TABLE A LEFT JOIN (TABLE B) ON TABLEA.x = TABLEB.y** |	`tableA %>% left_join(TableB, by = c(x = y))` |
 | **CASE WHEN x = 1 THEN 1, WHEN x =2 THEN 2, ELSE 0 END AS New_column_name** |	`%>% mutate (New_column_name = case_when (x == 1 ~ 1, x == 2 ~ 2, TRUE ~ 0))` |
 | **CONCAT(LEA, ESTAB) AS LAESTAB** |	`%>% mutate(LAESTAB = paste0(LEA, ESTAB))` |
-| **SELECT COUNT(*) FROM TABLE** |	`table %>% nrow()` |
+| **SELECT COUNT(\*) FROM TABLE** |	`table %>% nrow()` |
 | **SELECT COUNT(ColA) FROM TABLE** |	`table %>% count(colA)` |
 | **SELECT Date_column = CONVERT(DATE, Date_column) FROM TABLE** | `table %>% mutate(Date_column = as.Date(Date_column))` |
 | **SELECT Number_column = CONVERT(INT, Number_column ) FROM TABLE** | `table %>% mutate(Number_column = as.numeric(Number_column))` |
