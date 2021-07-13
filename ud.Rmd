@@ -346,12 +346,17 @@ You can only mix time_identifiers if they appear within the same table below. If
 |----------------------------------|---------------------------|
 | Financial year                   | 6 digits                  |
 
-| acceptable time_identifier value | Corresponding time_period |
+| Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
 | Financial year Q1                | 6 digits                  |
 | Financial year Q2                | 6 digits                  |
 | Financial year Q3                | 6 digits                  |
 | Financial year Q4                | 6 digits                  |
+
+| Acceptable time_identifier value | Corresponding time_period |
+|----------------------------------|---------------------------|
+| Part 1 (April to September)      | 6 digits                  |
+| Part 2 (October to March)        | 6 digits                  |
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
