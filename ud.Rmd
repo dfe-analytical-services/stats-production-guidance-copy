@@ -175,11 +175,9 @@ For `write_csv()`, which some of you may be using for increased processing speed
 
 ---
 
-You should publish as many years of data that you have and is practicable to do so. 
+You should publish as many years of data that you have and is practicable. 
 
-There will be scenarios were significant methodological changes impact the ability to have all of your data in a single file, and in these cases it may be practical to use a 'cut-off' point and link to any older publications containing data before that cut-off. These cut off points should be 4 or more years going backwards. We expect a minimum of 3 years of data in all time-series where it exists.
-
-If you are not providing a full timeseries, make sure that any old published data is linked to from your publication, and that it's omission is explained in your methodology and metadata documents.
+If you are not providing a full timeseries for any reason, you must link to the older published data from your publication release page, and make sure that it's omission is explained in your methodology and metadata documents.
 
 ---
 
@@ -217,24 +215,6 @@ A **rough guide** to file size would be:
 - 1gb or more in size is larger than any we have seen before and will likely need testing in the platform first.
 
 [Contact us](mailto:mailto:statistics.development@education.gov.uk) if you have any issues, or files that might be over 1gb.
-
----
-
-<div class="jumbotron">
-
-  <h3>Remember</h3>
-
-  <hr class="my-4">
-
-- All files will include [observational units](#observational-units) and [indicators](#indicators).
-- The overwhelming majority of files will also have [filters](#filters).
-- A table in Explore Education Statistics can only be created from a single file.
-- All data in a single data file can be directly compared in the table tool.
-- Break up files for different collections to avoid lots of blank or empty cells.
-- You cannot mix different types of year in the time_identifier column.
-
-</div>
-
 
 ---
 
