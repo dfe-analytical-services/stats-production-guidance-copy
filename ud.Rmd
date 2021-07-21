@@ -670,11 +670,9 @@ Like filters, indicator names must not include spaces, and ideally be formatted 
 
 In EES, the platform itself will format large numeric values to include commas, so you do not need to have commas for separating large numbers in your data file. 
 
-If you are including percentages and want to show 79% in EES, you would have the value 79 in your data file and specify % as the unit for that column in the EES metadata. As best practice we recommend that you include as much detail as possible in your underlying files when it comes to decimal places. As a default EES will round decimals to 2 d.p. in the platform, though if you would prefer to display your data to a different number of d.p. in the platform please use the [indicator_dp](#ees-metadata) column to specify this in the .csv metadata.  
+If you are including percentages and want to show 79% in EES, you would have the value 79 in your data file and specify % as the unit for that column in the EES metadata. As best practice we recommend that you include as much detail as possible in your underlying files when it comes to decimal places. As a default EES will round decimals to 2 d.p. in the platform, though if you would prefer to display your data to a different number of d.p. in the platform please use the [indicator_dp](#ees-metadata) column to specify this in the .csv metadata. Likewise with financial data, for don't include £ in the values in the data file, leave those cells as numeric only, include it as an indicator unit instead.
 
-Likewise with financial data, for don't include £ in the values in the data file, leave those cells as numeric only, include it as an indicator unit instead. In this situation it would be good practice to also include a £ symbol at the end of the variable name like `total_expenditure_£` (or `total_expenditure_£m` for million pounds), to make it clear to users when downloading the csv file.
-
-When communicating uncertainty, for confidence intervals you should report the upper and lower bounds as separate columns rather than as one confidence interval column:
+In line with GSS best practice for communicating uncertainty, when using confidence intervals you should report the upper and lower bounds as separate columns rather than as one confidence interval column:
 
 | time_period | ... | country_name | school_type  | estimate | **est_lower_ci** | **est_upper_ci** |
 |-------------|-----|--------------|--------------|------------|----------|----------------|
