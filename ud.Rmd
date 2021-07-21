@@ -77,10 +77,9 @@ For publishing on EES specifically, please note the following points:
 
 - Data files uploaded to Explore Education Statistics will be downloadable, **everything in your file must be publishable**.
 - You must remember to apply all of your usual suppression policies.
-- The data files run the table and chart tools, so any data that you wish to create a table or chart with must be included.
+- The data files run the table and chart tools, so all data that you wish to create a table or chart with must be included.
 - We expect that multiple data files may be provided for each release.
 - Keep in mind that a data block can only have a single data source. However, many blocks can share one source. 
-- The data published varies by release, in granularity of breakdowns and the indicators included within data files. 
 - You should include all years of the data you available in your data file to facilitate time series analysis.
 - Each data file must be accompanied by a corresponding .csv metadata file as outlined under [EES Metadata](#ees-metadata).
 
