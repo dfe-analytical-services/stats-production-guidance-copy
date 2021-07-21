@@ -24,7 +24,7 @@ A collection of useful learning resources, and information on the recommended to
 * [Processes and RAP](rap.html)  
 Guidance for how to process data, including the principles of Reproducible Analytical Pipelines (RAP)
 
-* [Open data](ud.html)  
+* [Open data standards](ud.html)  
 Guidance on how to structure data files
 
 * [Writing and visualising](cd.html)  
