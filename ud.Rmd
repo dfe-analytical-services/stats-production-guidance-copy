@@ -195,6 +195,29 @@ The first key consideration is that the table tool will only create tables from 
 
 A useful way to judge how to break up data files is to consider whether all of the data in the file is appropriate to show side-by-side in the same table. If there are data that are conceptually different or may be confusing to compare side by side, then these should be in separate data files. Any data file uploaded to EES is usable by all users in the table tool, and users will be able to download the exact same files as you upload.
 
+We generally recommend fewer large files over a larger number of smaller files. **If you think you are having issues with file size please tell us** so that we can investigate and work towards a solution with you.
+
+--- 
+
+
+## File size
+
+---
+
+There are no character or size limits in a csv file and there is no size limit for EES, though the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
+
+Excel has a cell character limit of 32,760 and a row limit of 1,048,576. It is best to avoid exceeding these as some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files, providing school level data as a separate file for example. With the data all being in a tidy format these are then easy enough for secondary analysts to stitch back together if needed.
+
+A **rough guide** to file size would be:
+
+- Anything under 10mb is relatively small
+- 10mb to 100mb is a fairly common file size that most teams have
+- 100mb to 500mb is a large file and will struggle to upload if not compressed to a zip folder.
+- 500mb and over are very large, and sometimes may struggle to compress small enough to upload.
+- 1gb or more in size is larger than any we have seen before and will likely need testing in the platform first.
+
+[Contact us](mailto:mailto:statistics.development@education.gov.uk) if you have any issues, or files that might be over 1gb.
+
 ---
 
 <div class="jumbotron">
@@ -203,13 +226,15 @@ A useful way to judge how to break up data files is to consider whether all of t
 
   <hr class="my-4">
 
-- Users will download a copy of the same file that you upload.
-- As long as your data meets the standards, you can include as much as you want in a single file. 
-- Remember that the larger the file is to upload, and also the larger it is for users to download and then have to process.
-- Different types of years (academic/calendar) should not be mixed in the same file, see [observational units](#observational-units).
-- If you have a lot of blank or empty indicator cells, consider breaking the files up so that the indicator columns are relevant to as many rows as possible.
+- All files will include [observational units](#observational-units) and [indicators](#indicators).
+- The overwhelming majority of files will also have [filters](#filters).
+- A table in Explore Education Statistics can only be created from a single file.
+- All data in a single data file can be directly compared in the table tool.
+- Break up files for different collections to avoid lots of blank or empty cells.
+- You cannot mix different types of year in the time_identifier column.
 
 </div>
+
 
 ---
 
@@ -229,45 +254,6 @@ In line with the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploa
 
 
 If you have any other conventions you've used in previous publications, or a scenario that isn't covered above, check the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank" rel="noopener noreferrer"} (ignoring the part around separate columns for symbols), and contact us.
-
---- 
-
-
-## File size
-
----
-
-There are no character or size limits in a csv file, but you should consider the restrictions the users will face when downloading and processing the data (excel has a cell character limit of 32,760 for example). There is no size limit for EES, we are still testing the service with large files. Ideally we want to develop the platform to work with the largest files we can produce. Do remember though that the larger a file is, the longer it will take to upload and process. Also remember that the files you upload are the files that users will download, consider the software they may access to (e.g. Excel) and whether the size of your files are compatible with this.
-
-Excel has a row limit of 1,048,576. It is best to avoid exceeding this as some end users may struggle to open the file. One good way to cut the file down is to split after a certain number of years, or to separate out different geographic levels into separate files, providing school level data as a separate file for example. With the data all being in a tidy format these are then easy enough for secondary analysts to stitch back together if needed.
-
-People can tend to obsess over file size, however this is not everything, and the balance of rows and columns, and the contents of them, has a large impact on performance. We don't yet know the full extent of this, and with that caveat, a **rough guide** based on size would be:
-
-- Anything under 10mb is relatively small
-- 10mb to 100mb is a fairly common file size that most teams have
-- 100mb to 500mb is fairly large file and may struggle to upload if not compressed - [contact us](mailto:mailto:statistics.development@education.gov.uk) if you have any issues
-- 500mb and over are pretty large, and sometimes may struggle to compress small enough to upload, and can also start to be difficult to handle, as you may be aware if you have one!
-- Files that are over 1gb in size will likely have issues in the platform, please [contact us](mailto:mailto:statistics.development@education.gov.uk) if you have any this large
-
-
-We generally recommend fewer large files over a larger number of smaller files. **If you think you are having issues with file size please tell us** so that we can investigate and work towards a solution with you. **The platform is always in development**, and we do not want teams to arbitrarily make decisions about their data (and potentially waste a lot of time) due to something that could be addressed if we are told about it.
-
----
-
-<div class="jumbotron">
-
-  <h3>Remember</h3>
-
-  <hr class="my-4">
-
-- All files will include [observational units](#observational-units) and [indicators](#indicators).
-- The overwhelming majority of files will also have [filters](#filters).
-- A table in Explore Education Statistics can only be created from a single file.
-- All data in a single data file can be directly compared in the table tool.
-- Break up files for different collections to avoid lots of blank or empty cells.
-- You cannot mix different types of year in the time_identifier column.
-
-</div>
 
 ---
 
