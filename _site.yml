@@ -3,7 +3,17 @@ output_dir: "."
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Learning resources"
+    - text: "Learning"
+      menu:
+        - text: "Introduction"
+          href: l+d.html
+        - text: "SQL"
+          href: sql.html
+        - text: "R"
+          href: r.html
+        - text: "Git"
+          href: git.html
+    
       href: l+d.html
     - text: "Creating statistics"
       menu:

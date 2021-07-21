@@ -1,14 +1,9 @@
 ---
-title: "Learning"
+title: "Introduction"
 ---
 
 <p class="text-muted">A collection of useful learning resources, and information on resources to get you started</p>
 
----
-
-# Introduction
-
----
 
 As statistics producers we require a variety of tools to be able to process our data. Below are the recommended tools that will give us the most power to do what we need. These have large user communities in DfE, and are already working in our current IT setup.
 
