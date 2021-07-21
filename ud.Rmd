@@ -187,9 +187,7 @@ If you are not providing a full timeseries for any reason, you must link to the 
 
 Explore Education Statistics is designed to give production teams the freedom of controlling what data users can access, and how they access it. It is expected that most releases on the platform will have multiple data files, and teams have control over how they break these files up.
 
-
 The first key consideration is that the table tool will only create tables from a single a data file, and cannot use multiple files as sources. Therefore any data that you want to compare within a single table must in the same data file. The table tool itself is there to allow users to narrow down the amount of data they have to absorb and to be able to efficiently take away key statistics. 
-
 
 A useful way to judge how to break up data files is to consider whether all of the data in the file is appropriate to show side-by-side in the same table. If there are data that are conceptually different or may be confusing to compare side by side, then these should be in separate data files. Any data file uploaded to EES is usable by all users in the table tool, and users will be able to download the exact same files as you upload.
 
@@ -267,7 +265,6 @@ If you think that your data can't follow this format, please contact statistics.
 - If you’re referring to a single term you should use the academic year not the calendar year in the time_period column.
 - Conceptually different years cannot be mixed in the same dataset.
 - Conceptually different year breakdowns (e.g. term, quarter, month), can be mixed with a full year of the same type using a filter column.
-
 
 ---
 
@@ -451,22 +448,37 @@ All rows must have country_code and country_name completed, regardless of geogra
 
 Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks if they are mixed in with other levels. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. 
 
-For School and Provider, any data files that **only** consist of these levels will soon be able uploaded and will be usable in the table tool, contact us if you have any questions about this.
-
-For Planning area and Institution data, any data files that **only** consist of these levels should be uploaded as an ancillary file rather than a data file.
+For School and Provider, any data files that **only** consist of these levels are able to be uploaded and will be usable in the table tool. This solution is still not ideal, though it will allow you to include additional filters at school / provider level. Wherever there are multiple values per provider/school this should be marked as a filter, and where there is a single value per provider/school this should be marked as an indicator (e.g. school type now becomes an indicator as a school only has one value for type).
 
 | geographic_level | required columns | notes |
 |------------------|------------------|-------|
 | School | school_name, school_urn, school_laestab | |
 | Provider | provider_name, provider_ukprn | |
+
+For Planning area and Institution data, any data files that **only** consist of these levels should be uploaded as an ancillary file rather than a data file.
+
+| geographic_level | required columns | notes |
 |---------|--------|--------|
 | Planning area | No required columns, though we recommend both planning_area_code and planning_area_name | |
-| Institution | No required columns, you can use any you have, though we recommend you include institution_id and institution_name to make data matching easier | |
+| Institution | No required columns, though we recommend you include institution_id and institution_name to make data matching easier | |
 
 
 <div class="alert alert-dismissible alert-warning">
-  If you have a level that isn’t covered above, then you should contact statistics.development@education.gov.uk with details and example data.
+  If you have a level that isn’t covered above, please contact statistics.development@education.gov.uk with details and example data.
 </div>
+
+---
+
+### Using School or Provider as a filter
+
+---
+
+Provider / School breakdowns can work as a filter column in your data file but only if it is the only filter in the file. We'd recommend using school_name or provider_name as the filter, and then including the code as well, such as Malton School (URN: 121681) or Malton School (UKPRN: 10004165)
+
+
+The geographic level can be anything (e.g. National or Local authority) depending on what your users would want to do. We recommend setting the level as low as possible to reduce the number of options that will appear in the later filter choice step.
+
+This approach will work for basic filtering of providers and schools but it may not be performant in the table tool and the number of choices made available to users may be overwhelming (especially for schools, or data set to national level).
 
 ---
 
@@ -478,8 +490,6 @@ For Planning area and Institution data, any data files that **only** consist of 
 |-------------|-----------------------------------------------|-----------------------------------------------------------|
 | z           | When a geography code is **not applicable**     | Using custom geographies like "Scotland, Wales and Northern Ireland" as a group. This has no standardised geography code so will not be applicable|
 | :           | When a geography code is **unavailable** | Data is missing, the geography is unknown so no code is available|
-
-
 
 
 ---
