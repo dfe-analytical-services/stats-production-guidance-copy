@@ -803,11 +803,3 @@ Note that if you are using percentage points (pp) you must include a clear expla
 `r knitr::kable(metadata_data_example, caption = "The corresponding data file.")`
 
 ---
-
-# Next steps
-
----
-
-Assuming you are publishing on EES, once your data has been screened and you have a report that shows your data has passed with 100% of tests you can then upload your data and EES metadata files to Explore Education Statistics. If your data fails for any reason on upload after passing the screening tests, please contact statistics.development@education.gov.uk, with copies of the files and the error message you receive.
-
----
