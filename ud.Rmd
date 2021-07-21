@@ -123,7 +123,7 @@ The variables (columns) in each of the uploaded data files will fall in to the f
 
 ---
 
-These standards give you the power to format the data in way that best meets the needs of the users. There are only a handful of formatting standards to follow to ensure best practice and consistency across all of our data.
+These standards give you the power to format the data in a way that best meets the needs of the users. There are only a handful of formatting standards to follow to ensure best practice and consistency across all of our data.
 
 Filenames should only include numbers, letters, underscores or hyphens. Special characters must be avoided; for example, the following characters `\ / : * ? " < > | [ ] & $ , . +` are all considered special characters and are used for specific tasks in an electronic environment, which can lead to confusion in some systems. The use of non-English language letters such as á, í, ñ, è, and õ, should also be avoided.
 
