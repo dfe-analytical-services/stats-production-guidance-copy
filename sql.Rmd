@@ -96,7 +96,7 @@ Before you set up a SQL database, make sure you have the following information t
 There are a few common servers that statistics producers make use of at DfE. Use the following contacts below to pass on the above information to get your new database set up:
 
 * PDR (T1PRMDRSQL\SQLPROD,55842) - contact the [PDR team](mailto:PupilData.REPOSITORY@education.gov.uk)
-* PDB16 (3DCPRI-PDB16\ACSQLS) - aise a request through the service desk under "non-standard" > "any other request"
+* PDB16 (3DCPRI-PDB16\ACSQLS) - raise a request through the service desk under "non-standard" > "any other request"
 * Analyse & Modelling server (T1PRANMSQL\SQLPROD,60125) - raise a request on the service desk under the following options:
 
 `r knitr::include_graphics("images/A_M_SQL.png")`
