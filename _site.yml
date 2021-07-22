@@ -31,9 +31,9 @@ navbar:
           href: ees.html
         - text: "Other options"
           href: dashboards.html
-    - text: "Understanding users"
+    - text: "Review"
       menu:
-        - text: "Review"
+        - text: "Introduction"
           href: user.html
         - text: "User engagement"
           href: user_eng.html

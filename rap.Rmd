@@ -1071,7 +1071,7 @@ In general, if you're thinking of making an Official Statistics production repos
 
 When naming your publication's repository you should use the publication name fully written out, in lower case, and with dashes for spaces – ‘graduate-labour-market-statistics’. 
 
-A single repository should be used for all releases of your publication, there's no need to have multiple as all the history is saved within previous commits.
+A single repository should be used for all releases of your publication, there's no need to have multiple as all the history is saved within previous commits. You can make use of [tagging releases in git](git.html#Tagging_release_versions) to help differentiate between each cycle.
 
 ---
 

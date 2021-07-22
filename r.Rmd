@@ -234,7 +234,7 @@ More tips for moving from using SQL to using R can be found in the [SQL-to-R wik
 
 ---
 
-A selection of handy bits of code and workarounds for common issues.
+A selection of handy bits of code and workarounds for common issues. More useful code snippets can also be found in our [github repo](https://github.com/dfe-analytical-services/automated-data-qa){target="_blank" rel="noopener noreferrer"}
 
 ---
 
@@ -249,6 +249,7 @@ This can be done most easily by navigating in RStudio through `Tools > Global op
 <!-- Where you have a simple if else scenario use `mutate(col = if_else(expression, TRUE, FALSE)`, rather than `mutate(col = case_when(expression ~ TRUE, TRUE ~FALSE)` it's both quicker and easier on the eye! -->
 
 ---
+
 <!-- This is going into DfER- remove once it's in? -->
 ### Rounding
 
