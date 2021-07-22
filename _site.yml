@@ -32,7 +32,13 @@ navbar:
         - text: "Other options"
           href: dashboards.html
     - text: "Understanding users"
-      href: user.html
+      menu:
+        - text: "Review"
+          href: user.html
+        - text: "User engagement"
+          href: user_eng.html
+        - text: "EES analytics"
+          href: user_an.html
   right:
   - text: ""
     href: mailto:statistics.development@education.gov.uk
