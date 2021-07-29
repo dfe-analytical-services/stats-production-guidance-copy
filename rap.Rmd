@@ -10,7 +10,7 @@ require(knitr)
 
 ---
 
-# What is RAP
+# What is RAP?
 
 ---
 
@@ -128,7 +128,11 @@ The key now is for us to build on the work so far and focus on how we improve th
 
 ---
 
-The Statistics Development Team invites teams to take part in our partnership programme to develop their skills and implement RAP principles to a relevant project. Visit our page on  [getting started with the partnership programme](l+d.html#getting_started) for more details.
+Measure your publication against the RAP levels using our [self assessment tool](https://rsconnect/rsc/publication-self-assessment/){target="_blank" rel="noopener noreferrer"}. This will give you a good starting point and initial points to work on to progress to the next level of RAP.
+
+Once you've assessed your publication, have a look through our guidance below to narrow down how you can get started with improving those parts of your process.
+
+The Statistics Development Team invites teams to take part in our partnership programme to develop their skills and implement RAP principles to a relevant project. Visit our page on  [getting started with the partnership programme](l+d.html#support_available) for more details.
 
 ---
 
@@ -140,7 +144,7 @@ The first place to start for your teams RAP is to store the raw data you use to 
 
 ---
 
-## All source data stored in single database 
+## All source data stored in a database 
 
 ---
 
@@ -174,16 +178,15 @@ For a collection of relevant resources to use when learning SQL, see our [learni
 
 ---
 
-More to follow, in the meantime please contact us for advice.
-<!-- needs example -->
+There are a few different options, depending on where you want your new area to exist. Visit our [SQL learning page](sql.html#Setting_up_a_SQL_area) for details.
 
 ---
 
-### Copying data from iStore
+### Moving data to different areas
 
 ---
 
-If your data is already in SQL, you can use this snippet of R code to move tables from one area (e.g. the iStore) to another (e.g. your team's modelling area) to ensure all data are stored in a single database.
+If your data is already in SQL, you can use this snippet of R code to move tables from one area (e.g. the iStore) to another (e.g. your team's modelling area) to ensure all data are stored in a database.
 
 ```
 library(odbc)
@@ -232,8 +235,7 @@ Remember that it is important to import them with consistent, thought-through [n
 
 ---
 
-More to follow, in the meantime please contact us for advice.
-<!-- needs example -->
+Much like setting up a SQL area, there are different ways to do this depending on the server your database is in. Visit our [SQL learning page](sql.html#Givinggetting_access) for details.
 
 ---
 
@@ -325,8 +327,9 @@ For further resources on learning R so that you're able to apply it to your ever
 
 **What does this mean?**
 
-Using the [recommended tools](l+d.html#recommended-tools) on our [learning resources](l+d.html) page (SQL, R and Git), or other suitable alternatives that allow you to meet the [core principles](#core-principles). Ideally any tools used would be [open source](#open-source), Python is a good example of a tool that would also be well suited, though is less widely used in DfE and has a steeper learning curve than R.
+Using the recommended tools on our [learning](l+d.html) page (SQL, R and Git), or other suitable alternatives that allow you to meet the [core principles](#core-principles). Ideally any tools used would be open source, Python is a good example of a tool that would also be well suited, though is less widely used in DfE and has a steeper learning curve than R.
 
+Open-source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open-source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open-source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}. In practical terms, this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository. 
 
 **Why do it?**
 
@@ -341,22 +344,9 @@ There are many reasons why we have recommended the tools that we have, the recom
 
 **How to get started**
 
-Go to our [learning resources](l+d.html) page to read more about the [recommended tools](l+d.html#recommended-tools) for the jobs we do, as well as looking at the resources available there for how to [build capability](l+d.html#learning-these-tools) in them. Always feel free to contact us if you have any specific questions or would like help in understanding how to use those tools in your work.
-
----
-
-### Open-source
-
----
-
-We strongly recommend that teams make use of open-source software where possible, as well as making sure that our own work adheres to the same principles. There will be obvious data protection issues around sensitive data, however the code we use to process it can and should be made widely available. In practical terms this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository.
+Go to our [learning](l+d.html) page to read more about the recommended tools for the jobs we do, as well as looking at the resources available there for how to [build capability](l+d.html#general_resources) in them. Always feel free to contact us if you have any specific questions or would like help in understanding how to use those tools in your work.
 
 By following [our guidance](#version-controlled-final-code-script(s)) in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.
-
-Open-source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open-source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open-source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}.
-
-This is a key part of the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} as an agreed standard for [digital services across government](https://www.gov.uk/guidance/be-open-and-use-open-source){target="_blank" rel="noopener noreferrer"} and is something that we as analysts and members of the Government Statistical Service can reap the benefits from. There are many benefits to adopting open-source software and using the principles in our analytical processes.
-
 
 ---
 
@@ -402,10 +392,9 @@ Having a single script for this saves time when needing to rerun processes, and 
 
 **How to get started**
 
-<!-- needs example -->
+Review your current process - how many file scripts does it take to get from source data to final output, and why are they separated? 
 
-More to follow, in the meantime please contact us for advice.
-
+If it makes sense to, move the scripts into one. If not, you can write code in [R](#R.html) to execute your scripts in order, so you are still only running one script to get the final output.
 
 ---
 
@@ -426,9 +415,7 @@ This documents the entire process around the data file in a single place. This m
 
 **How to get started**
 
-<!-- needs example -->
-
-More to follow, in the meantime please contact us for advice.
+This takes the idea of a [single production script](#Single_production_scripts) per file one step further, by integrating quality assurance. More often than not, this will be in the form of a html RMarkdown report. You can write code in [R](#R.html) to execute your scripts in order and also write your quality assurance reports, so you are still only running one script to get the final output.
 
 ---
 
@@ -735,9 +722,8 @@ The list of basic automated QA checks, with code examples can be found below and
 * Basic [trend analysis using scatter plots](https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/create_scatter_plot.R){target="_blank" rel="noopener noreferrer"}, to help you spot outliers and help tell the story of your data.
 
 
-The Statistics Development Team are developing the QA app to include these basic QA outputs, more will follow in this space when this is ready.
+The Statistics Development Team have developed [the QA app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank" rel="noopener noreferrer"} to include some of these basic QA outputs.
 
-<!-- there will also be a link to the QA app as well when that is ready -->
 
 **Why do it?**
 
@@ -794,7 +780,8 @@ As a part of automating QA, we should also be looking to automate the production
 
 Summary outputs are automated and used to explore the stories of the data. 
 
-The Statistics Development Team are developing the QA app to include basic summary outputs, more will follow in this space when this is ready.
+The Statistics Development Team have developed [the QA app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank" rel="noopener noreferrer"} to include some of these automated summaries, including minimum, maximum and average summaries for each indicator.
+
 
 <!-- potential text after the qa app is ready for this
 
@@ -810,12 +797,15 @@ At a basic level we want teams to make use of the QA app to explore their data:
 
 Value is one of the three pillars of our [code of practice](https://code.statisticsauthority.gov.uk/the-code/value/){target="_blank" rel="noopener noreferrer"}. Even more specifically it states that __'Statistics and data should be presented clearly, explained meaningfully and provide authoritative insights that serve the public good.'__.
 
-As a result, we should be developing automated summaries to help us to better understand the story of the data and be authorative and rigorous in our telling of it.
+As a result, we should be developing automated summaries to help us to better understand the story of the data and be authoritative and rigorous in our telling of it.
 
 **How to get started**
 
-More to follow, in the meantime please contact us for advice.
-<!-- needs example and link to the QA app when ready -->
+Consider:
+
+- Using the outputs of the automated QA from the screener to understand the data
+
+- Running your publication-specific automated QA, ensuring that all interesting outputs/trends are reflected in the accompanying text
 
 ---
 
@@ -1081,7 +1071,7 @@ In general, if you're thinking of making an Official Statistics production repos
 
 When naming your publication's repository you should use the publication name fully written out, in lower case, and with dashes for spaces – ‘graduate-labour-market-statistics’. 
 
-A single repository should be used for all releases of your publication, there's no need to have multiple as all the history is saved within previous commits.
+A single repository should be used for all releases of your publication, there's no need to have multiple as all the history is saved within previous commits. You can make use of [tagging releases in git](git.html#Tagging_release_versions) to help differentiate between each cycle.
 
 ---
 
