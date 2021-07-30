@@ -3,6 +3,8 @@
 ---
   
 <p class="text-muted">Guidance on engaging with users and understanding how they interact with your publications</p>
+
+<!-- Link user engagement section of SA app to here now instead -->
     
 ---
 
@@ -11,6 +13,8 @@
 ---
     
 User engagement is about building sustainable relationships and feedback loops between statistics producers, users and potential users of statistics and other relevant stakeholders.
+
+Being user centred is a key departmental priority. It is critical that we actively engage with the users of our statistics, and not just the ones who shout the loudest. There are thousands of users out there and teams should be actively be getting feedback on their publications from a variety of users - policy colleagues, local authorities, schools, media, and the general public to name but a few
 
 Users of statistics come from a broad range of different backgrounds and organisations and may need to use our statistics for a wide variety of reasons. We need to do our best to understand these different kinds of users and cater for them all.
 
