@@ -198,15 +198,42 @@ Once you have created your release you will see enter the ‘create release dash
 
 ---
 
-### Data uploads
-
----
-
 Here you will update your tidy data files and accompanying metadata. You need to make sure that the data has passed through our [data screener checks](https://rsconnect/rsc/dfe-published-data-qa/) before trying to upload it. 
 
 <div class="alert alert-dismissible alert-info">
 Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that only consist of these levels should be uploaded as an ancillary file, rather than as a data file.
 </div>
+
+---
+
+### Subject titles
+
+---
+
+You'll need to give a 'subject title' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name and metadata guidance can include more technical / coverage information.
+
+[LINK TO FILE NAME STANDARDS FROM UD.RMD]
+
+When adding a subject name think about the general user and how the subjects will appear in the service:
+
+* You don't need to include the publication name in the subject name as this is always already implied within EES
+
+* You don't need to list what filters are in each file in the title, users can see this in the metadata guidance
+
+* Your subject names should be short and snappy, clearly explain what is in each file and include date ranges. Some good examples of this in practice are included below:
+  + Early years provision provider type
+  + Number of permanent exclusions
+  + Exclusions and suspensions by pupil characteristics
+  
+---
+
+### Uploading files
+
+---
+
+When uploading files you have a choice between uploading as separate CSV files or as a combined zip file. 
+
+For data files greater than 80mb we recommend uploading as a ZIP file.
 
 Once you click to upload the file a ‘Status’ will be visible that shows the progress of the import process. It will go through the following stages:
 
@@ -217,30 +244,10 @@ Once you click to upload the file a ‘Status’ will be visible that shows the 
 
 This may take a little while depending on the size of your file and if there are numerous files queued for import. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
 
-For data files greater than 80mb we recommend uploading as a ZIP file.
-
 <div class="alert alert-dismissible alert-warning">
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
 </div>
 
----
-
-#### Subject names
-
----
-
-You'll need to give a 'subject name' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name can include more technical / coverage information.
-
-When adding a subject name think about the general user and how the subjects will appear in the table tool:
-
-* You don't need to include the publication name in the subject name as this is always already implied within EES
-
-* You don't need to list what filters are in each file in the title, users can see this in the metadata guidance
-
-* Your subject names should be short and snappy, clearly explain what is in each file and include date ranges. Some good examples of this in practice are included below:
-  + Early years provision provider type (2018 - 2020)
-  + Fixed period exclusions - number of exclusions (0607 to 1819) 
-  + Permanent and fixed period exclusions - by pupil characteristics (0607 to 1819) 
 
 
 ---
@@ -259,7 +266,7 @@ Examples of ancillary files may be:
 * Images
 
 <div class="alert alert-dismissible alert-info">
-Any data files that only consist of Planning area, School, Provider, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
+Any data files that only consist of Planning area, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
 </div>
 
 ---
@@ -275,8 +282,6 @@ Here you should also create your [public metadata](https://explore-education-sta
 The document will automatically update as you add new data files to your release, however you will need to add an overview of all the data included in the release and short summaries for each data file before the release can be published. 
 
 A list of variables in each file with an associated label (taken from metadata uploads) will also be displayed with each file. 
-
-This template follows a similar format to our previous recommended [metadata template](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy) so for most publications this will involve a copy/paste from existing content. 
 
 `r knitr::include_graphics("images/admin-public-meta-detail.PNG")`
 
@@ -316,6 +321,7 @@ If it's not possible for a data block or footnote to be recreated using the repl
 Remember to double check any data blocks or footnotes that were recreated by the platform before publishing your release.
 </div>
 
+[ADD CHANGING SUBJECT NAME GUIDANCE]
 
 ---
 
@@ -326,11 +332,6 @@ Remember to double check any data blocks or footnotes that were recreated by the
 To add footnotes, go to the footnotes tab and click 'add another footnote'. Rather than writing multiple tables and assigning individual footnotes, you write footnotes and assign them to certain indicators and filters so they appear when users select them in the table builder. For example in the below, the footnote "This is a footnote" is assigned to "the number of pupils entering each exam" for all filters.
 
 `r knitr::include_graphics("images/footnote_example.PNG")`
-
-Now, when a user goes to build a table with this indicator, the footnote automatically appears.
-
-`r knitr::include_graphics("images/footnote_output_example.PNG")`
-
 
 If you'd rather, you can assign a footnote to the whole data file by ticking this box. 
 
@@ -373,11 +374,11 @@ The manage data blocks page will list all the data blocks you have created, high
 
 You can also choose to highlight a data block table as a ‘featured table’ which means it will show in a list of featured tables within the table tool. This is designed to help users get to tables of interest more quickly (without having to create tables themselves).
 
-There is an option to choose if a table is a 'highlight table' when saving each data block, here you can name the table and add a description giving the table coverage:
+There is an option to choose if a table is a 'fea tured table' when saving each data block, here you can name the table and add a description giving the table coverage:
 
 `r knitr::include_graphics("images/EES-create-release-table-highlight.PNG")`
 
-Each highlight table will then be listed to the user within the table tool. Highlight tables do not have to be embedded within your release content to be included in this list. 
+Each featured table will then be listed to the user within the table tool. Featured tables do not have to be embedded within your release content to be included in this list. 
 
 `r knitr::include_graphics("images/EES-table-tool-highlights.PNG")`
 
@@ -413,7 +414,7 @@ After building and saving a data block table you will see a 'Chart' tab appears.
 
 The first step to creating a chart is choosing the chart type, currently the EES chart builder can build line charts, horizontal/vertical bar charts (including stacked) and maps. We intend to grow this list over the course of public beta so please let us know if a chart type you want to create is not possible. 
 
-After choosing your chart type you then need to work through the following stages and you’ll be shown a live preview as you go: 
+After choosing your chart type you then need to work through the following stages and you’ll be shown a live preview as you go.
 
 ---
 
@@ -519,7 +520,7 @@ Remember to save your chart when you’re done.
 
 You can create maps too, currently this is possible for regional, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
 
-You can amend the chart title, alt text and dimensions in the "chart configuration" tab. You can also change the boundaries you are plotting onto, the latest boundary file will automatically be selected, but if you are visualising historic data, you may want an older boundary file. Please [contact us](mailto:explore.statistics@education.gov.uk) if the boundary you want to plot is unavailable.
+You can change the boundaries you are plotting onto via the "chart configuration" tab, the latest boundary file will automatically be selected, but if you are visualising historic data, you may want an older boundary file. Please [contact us](mailto:explore.statistics@education.gov.uk) if the boundary you want to plot is unavailable.
 
 `r knitr::include_graphics("images/map_config.png")`
 
@@ -550,25 +551,9 @@ Accessibility matters for infographics too, consider the following if you do nee
 
 </div>
 
-For any charts made outside of EES you must be using [GDS colours](https://design-system.service.gov.uk/styles/colour/), the following hex codes represent the colours that are available for charts in EES, we strongly recommend you stick to these (if you can't for any reason, please get in touch with us so we can understand why):
 
-| Colour name (GDS) | Hex code |
-|-------------------|----------|
-| Blue              | #1d70b8  |
-| Bright purple     | #912b88  |
-| Pink              | #d53880  |
-| Light pink        | #f499be  |
-| Orange            | #f47738  |
-| Brown             | #b58840  |
-| Light green       | #85994b  |
-| Turquoise         | #28a197  |
-| Dark grey         | #505a5f  |
-| Black             | #0b0c0c  |
-| Red               | #d4351c  |
-| Yellow            | #ffdd00  |
-| Green             | #00703c  |
 
-DWP have created a [Data Visualisation Thinking](https://dataviztraining.dwpdata.info/index.html) course that may be useful to look at when creating more complex charts.
+[GUIDANCE FOR STYLING NON EES CHARTS IS AT CONTENT LINK]
 
 
 ---
@@ -577,7 +562,7 @@ DWP have created a [Data Visualisation Thinking](https://dataviztraining.dwpdata
 
 ---
 
-In the manage content tab you can now start creating your release, embedding the datablocks you’ve created as you go. 
+In the content tab you can now start creating your release, embedding the datablocks you’ve created as you go. 
 
 <!-- potential for gif? --> 
 
@@ -613,15 +598,14 @@ Any data tables should be included as data blocks, however you can also embed st
 
 You can create static html tables for presenting information that isn't embedded in a datablock. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable underlying data files.
 
-
+[GLOSSARY LINKS]
+[REPLACE SOME OF THIS WITH CONTENT RMD LINKS]
 
 ---
 
 ## Sign off
 
 ---
-
-text
 
 Once you’re happy with your release you need to go to the sign off page and change it’s status in order to move it through the release pipeline.
 
@@ -633,12 +617,24 @@ There are three statuses:
 
 
 <div class="alert alert-dismissible alert-warning">
-Only users with ‘responsible statistician’ permissions (usually G6 or above) can sign off the release for publication.  
+Only users with ‘approver’ permissions (usually G6 or above) can sign off the release for publication. 
+[LINK TO PERMISSIONS SECTION]
 </div>
+
 
 ---
 
-### Release checklist
+### Reviewing a release
+
+---
+
+Preview table tool
+Checklist errors
+URL info
+
+---
+
+### Errors and warnings
 
 ---
 
@@ -673,8 +669,6 @@ This page also gives you the expected release url which may be useful to know fo
 
 ---
 
-text
-
 Prior to each release going live the production team are also able to grant pre-release access to a named group of users 24 hours before it goes live. These users do not require full access to the whole admin service. They will be able to see preview versions of any releases they have been granted access to. 
 
 This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
@@ -686,12 +680,6 @@ Jobshare emails should not be sent invites for pre-release. The personal emails 
 <div class="alert alert-dismissible alert-danger">
 Pre-release access via Explore Education Statistics is currently limited to DFE users only, if you need to share your release with external users you will need to do so outside of the system. 
 </div>
-
----
-
-### Overview
-
----
 
 <html>
 <centre>
@@ -705,11 +693,6 @@ Pre-release access via Explore Education Statistics is currently limited to DFE 
 </centre>
 </html>
 
----
-
-### Walkthrough
-
----
 
 Inviting users for pre-release access and building the public pre-release list can be found within the ‘Pre-release access’ tab on the dashboard. 
 
