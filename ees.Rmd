@@ -6,6 +6,8 @@ title: "Using Explore Education Statistics"
 
 ---
 
+Explore Education Statistics (EES) is the Department’s new official statistics dissemination platform, designed to make DFE’s published statistics and data easier to find, access, use and understand.
+
 **The EES platform consists of two applications:**
 
 1. The [public](https://explore-education-statistics.service.gov.uk/) website, where users access stats
@@ -16,9 +18,9 @@ title: "Using Explore Education Statistics"
 The admin side of EES is only supported in Google Chrome and Microsoft Edge. It will not work correctly in Internet Explorer. The public side does support Internet Explorer, though we still recommend that people use Chrome or Edge instead.
 </div>
 
-Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
+Both applications were released to Minimal Viable Product (MVP) standard in March 2020, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
 
-Maintenance and BAU running of the platform is supported by the Statistics Development Team.
+Maintenance and BAU running of the platform is supported by the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
 
 ---
 
@@ -26,16 +28,11 @@ Maintenance and BAU running of the platform is supported by the Statistics Devel
 
 ---
 
-text
-
 ---
 
 ## Environments
 
 ---
-
-text 
-
 
 As stated above, EES consists of two parts. We also have four versions (environments) of EES, the banner for the admin part of each environment will inform you which environment you are on, this is also colour coded: 
 
@@ -43,52 +40,21 @@ As stated above, EES consists of two parts. We also have four versions (environm
 
 - **Test** - Pink - where our tester carries out manual testing of any new features to make sure things work as expected 
 
-- **Pre-production** - Yellow - a sandbox area for admin champions and functionality testing
-
-- **Production** - Red - the real service, anyone creating real releases that they intend to publish to the public should be using this environment
-
-
-There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out at 8:30am on the scheduled day on pre-production, mirroring the way that production runs (though one hour earlier).
-
-The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production.
-
-On the pre-production environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
-
-<div class="alert alert-dismissible alert-info">
-Jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
-</div>
-
-The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
-
-<div class="alert alert-dismissible alert-danger">
-If you are bookmarking links, please be careful to bookmark the links below exactly as they are shown. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
-</div>
-
----
-
-## Production environment
-
----
-
-Admin - https://admin.explore-education-statistics.service.gov.uk/
-
-Public - https://explore-education-statistics.service.gov.uk/
-
-Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
-
-To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this responsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will receive an email inviting you to use the platform.
-
----
-
-## Pre-production environment
-
----
+- **Pre-production** - Yellow - a sandbox area for analysts to carry out functionality testing
 
 Admin pre-production - https://admin.pre-production.explore-education-statistics.service.gov.uk
 
 Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
 
-Analysts are able to test the service within the EES pre-production environment, and it is recommended that production teams start here until they are confident they know how they want to build their release for real (again, please contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) to request access).
+- **Production** - Red - the real service, anyone creating real releases that they intend to publish to the public should be using this environment
+
+Admin - https://admin.explore-education-statistics.service.gov.uk/
+
+Public - https://explore-education-statistics.service.gov.uk/
+
+Teams can use the pre-production environment to familiarise themselves with the platform and test out what is possible. The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production. 
+
+On the pre-production environment, all analysts have full permissions to create publications and releases, and can see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
 When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
@@ -96,7 +62,23 @@ When accessing the pre-production environment you may be asked for a username an
 The pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
 
+There is no overlap between the environments and content created on one cannot be moved to any other. 
 
+<div class="alert alert-dismissible alert-danger">
+If you are bookmarking links, please be careful to bookmark the links below exactly as they are shown. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
+</div>
+
+### Getting access to admin
+
+Access to the production and pre-production admin services is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
+
+More information on roles and permissions is available at LINK. 
+
+To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will receive an email inviting you to use the platform.
+
+<div class="alert alert-dismissible alert-info">
+Jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
+</div>
 
 
 
@@ -107,13 +89,39 @@ The pre-production environment is not suitable for unpublished data. Unpublished
 
 ---
 
-text 
+The Statistics Development Team are responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
-We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
+The following roles exist within EES admin: 
+
+* BAU
+
+Full access including administrative tools, typically only used by the Statistics Development Team and EES developers.
+
+* Publication owner
+
+This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
 
 - Create new releases within a publication
 - Create an amendment of the latest published release within a publication
 - Cancel an amendment before it is published
+
+* Analyst - contributor
+
+Any analyst working on a release within EES admin will have the contributor role.
+
+* Analyst - approver
+
+The responsible statistician for a statistics release will have the approver role, allowing them to sign off releases for publication. 
+
+The release approver will usually be the responsible G5 or G6 for the statistics release. 
+
+* Pre-release
+
+Any user invited for pre-release is given a pre-release user role. 
+
+
+Within these roles we also grant specific release permissions which allow us to make sure releases are only visible by the relevant production team. 
+
 
 ---
 
@@ -121,7 +129,7 @@ We have a type of role within EES admin called ‘Publication Owner’. This per
 
 ---
 
-text
+If you have not published on EES before, or if you're creating a brand new publication, you may need to contact us to create the publication for you before you can get started. 
 
 The hierarchy of content within EES is as follows - 
 
@@ -129,8 +137,7 @@ The hierarchy of content within EES is as follows -
 knitr::include_graphics("images/ees-hierarchy.PNG")
 ```
 
-
-Publications are organised into topics and themes (as shown on the EES Find Statistics page), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. For example:
+Publications are organised into topics and themes (as shown on the EES [Find Statistics page](https://explore-education-statistics.service.gov.uk/find-statistics)), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. For example:
 
 | Level | Example |
 |:------|:------|
@@ -139,9 +146,7 @@ Publications are organised into topics and themes (as shown on the EES Find Stat
 | Publication | Pupil absence in schools in England |
 | Release | 2018/19 |
 
-Each publication should have a lead statistician's name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. 
-
-To request a change to the contact details for a publication contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk).
+Each publication should have a lead statistician's name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician should also be provided. 
 
 Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be written to cover all releases for the given publication within the service. 
 
@@ -160,21 +165,40 @@ If you want to request a new publication, please be prepared to give the followi
 + Email address for whoever is providing [senior sign off](#Signing_off_a_release)
 
 
+Publication details can be managed by publication owners or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). More information at LINK. 
+
 ---
 
 # Creating releases
 
 ---
 
-text
+New releases can be created by publication owners or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). More information at LINK. 
+
+Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
+
+1.	Data and files (uploading data files, ancillary files and creating public metadata)
+
+2.  Footnotes (creating footnotes and assigning to relevant data)
+
+2.	Data blocks (creating summary tables, charts and key stats indicators)
+
+3.	Content (drafting release content)
+
+4.	Sign off (moving through the approval process)
+
+5.  Pre-release access (invite users to pre-release and create public pre-release list)
+
+
+`r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
 
 ---
 
-# Uploading data and files
+## Data and files
 
 ---
 
-## Data uploads
+### Data uploads
 
 ---
 
@@ -201,7 +225,7 @@ If you believe your file is ‘stuck’ please contact explore.statistics@educat
 
 ---
 
-### Subject names
+#### Subject names
 
 ---
 
@@ -221,7 +245,7 @@ When adding a subject name think about the general user and how the subjects wil
 
 ---
 
-## Ancillary file uploads
+### Ancillary file uploads
 
 ---
 
@@ -240,7 +264,7 @@ Any data files that only consist of Planning area, School, Provider, and/or Inst
 
 ---
 
-## Metadata guidance
+### Metadata guidance
 
 ---
 
@@ -262,7 +286,7 @@ Releases cannot be published without a completed metadata document. If not fille
 
 ---
 
-## Replacing data
+### Replacing data
 
 ---
 
@@ -295,7 +319,7 @@ Remember to double check any data blocks or footnotes that were recreated by the
 
 ---
 
-# Adding footnotes
+## Footnotes
 
 ---
 
@@ -320,7 +344,13 @@ We recommend that you only add footnotes once you are certain the data file is f
 
 ---
 
-# Data block tables
+## Data blocks (tables and charts) 
+
+---
+
+---
+
+### Tables
 
 ---
 
@@ -337,7 +367,7 @@ The manage data blocks page will list all the data blocks you have created, high
 
 ---
 
-## Table highlights
+#### Featured tables
 
 ---
 
@@ -353,7 +383,7 @@ Each highlight table will then be listed to the user within the table tool. High
 
 ---
 
-## Fast track links
+#### Fast track links
 
 ---
 
@@ -375,7 +405,7 @@ Fast-track links are similar to permalinks however instead of linking to a stati
 
 ---
 
-# Data block charts
+### Charts
 
 ---
 
@@ -387,7 +417,7 @@ After choosing your chart type you then need to work through the following stage
 
 ---
 
-## Chart configuration
+#### Chart configuration
 
 ---
 
@@ -403,7 +433,7 @@ Note, within the vertical and horizontal bar chart types you can also create sta
 
 ---
 
-## Data sets
+#### Data sets
 
 ---
 
@@ -413,7 +443,7 @@ Here is where you add data to the chart. Each series is added one at a time.
 
 ---
 
-## Legend
+#### Legend
 
 ---
 
@@ -424,7 +454,7 @@ You can edit the chart legend, and styling of your series via the Legend tab.
 
 ---
 
-## X axis (major axis)
+#### X axis (major axis)
 
 ---
 
@@ -446,7 +476,7 @@ Here is where you configure the x-axis: You can alter gridlines, labels, sort, l
 
 ---
 
-## Y axis (minor axis)
+#### Y axis (minor axis)
 
 ---
 
@@ -468,7 +498,7 @@ Then follow a similar process for the y axis configuration, play around until th
 
 ---
 
-## Changing chart type
+#### Changing chart type
 
 ---
 
@@ -483,7 +513,7 @@ Remember to save your chart when you’re done.
 
 ---
 
-## Maps
+#### Maps
 
 ---
 
@@ -503,7 +533,7 @@ You can change the colour scale of the chart in the "legend" tab.
 
 ---
 
-## Other chart types
+#### Other chart types
 
 ---
 
@@ -543,7 +573,7 @@ DWP have created a [Data Visualisation Thinking](https://dataviztraining.dwpdata
 
 ---
 
-# Writing content
+## Content
 
 ---
 
@@ -587,7 +617,7 @@ You can create static html tables for presenting information that isn't embedded
 
 ---
 
-# Sign off
+## Sign off
 
 ---
 
@@ -608,7 +638,7 @@ Only users with ‘responsible statistician’ permissions (usually G6 or above)
 
 ---
 
-## Release checklist
+### Release checklist
 
 ---
 
@@ -622,7 +652,7 @@ Remember to check over it before you submit your release for approval as a relea
 
 ---
 
-## How to approve a release
+### How to approve a release
 
 ---
 
@@ -639,7 +669,7 @@ This page also gives you the expected release url which may be useful to know fo
 
 ---
 
-# Pre-release
+## Pre-release access
 
 ---
 
@@ -659,7 +689,7 @@ Pre-release access via Explore Education Statistics is currently limited to DFE 
 
 ---
 
-## Overview
+### Overview
 
 ---
 
@@ -677,7 +707,7 @@ Pre-release access via Explore Education Statistics is currently limited to DFE 
 
 ---
 
-## Walkthrough
+### Walkthrough
 
 ---
 
@@ -698,11 +728,9 @@ After creating your pre-release access list a text editor will appear where you 
 
 ---
 
-# Amendments
+# Release amendments
 
 ---
-
-text
 
 If you need to make an amendment to release that has already been published this is possible to do from within the admin dashboard if you are a publication owner. If you need to create an amendment and your publication owner is not available, please contact the Statistics Development Team to do this for you.
 
@@ -727,8 +755,6 @@ When publishing a new amendment you should add a 'release note' to your release 
 # Methodology
 
 ---
-
-text
 
 Methodologies work in a very similar way to the written content of a release, the text editor and static tables you can use are built on the same foundations. 
 
@@ -783,19 +809,7 @@ Accessibility matters for uploaded images too, consider the following if you do 
 
 ---
 
-text
-
-# Publication owner role
-
----
-
-We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
-
-- Create new releases within a publication
-- Create an amendment of the latest published release within a publication
-- Cancel an amendment before it is published
-
-In future this will also include managing methodology pages and we hope to stretch it to include setting release permissions too.
+We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. 
 
 Options available to publication owners:
 
@@ -840,27 +854,7 @@ The time period for the release should reflect the time period of the data that 
 
 <!-- You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) in the first instance. -->
 
-<div class="alert alert-dismissible alert-warning">
-Whilst in public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
-</div>
 
-Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
-
-1.	Data and files (uploading data files, ancillary files and creating public metadata)
-
-2.  Footnotes (creating footnotes and assigning to relevant data)
-
-2.	Data blocks (creating summary tables, charts and key stats indicators)
-
-3.	Content (drafting release content)
-
-4.	Sign off (moving through the approval process)
-
-5.  Pre-release access (invite users to pre-release and create public pre-release list)
-
---- 
-
-`r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
 
 ---
 
@@ -869,10 +863,6 @@ Once you have created your release you will see enter the ‘create release dash
 ---
 
 Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
-
-<div class="alert alert-dismissible alert-warning">
-For the time being this can only be done by the Statistics Development Team, please get in touch if you'd like us to add any legacy releases for your publication.
-</div>
 
 The video below walks through this:
 
