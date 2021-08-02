@@ -196,7 +196,9 @@ There are a number of customisable versions of this, more information is availab
 
 ### Reverting a commit
 
-Made a mistake and need to revert? No problem! For rolling back on a branch, you should revert any changes so that you're not erasing history others might have pulled/cloned. E.g. If you want to revert the last 3 commits on master:
+Made a mistake and need to revert? No problem! Reverting commits in git creates a new commit reversing your accidental commits, bringing you back to an earlier point in your branch. 
+
+For rolling back on a branch, you should revert any changes so that you're not erasing history others might have pulled/cloned. E.g. If you want to revert the last 3 commits on master:
 
 `git revert --no-commit master~3..master`
 
