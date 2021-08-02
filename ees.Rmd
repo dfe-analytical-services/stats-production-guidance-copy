@@ -22,9 +22,20 @@ Maintenance and BAU running of the platform is supported by the Statistics Devel
 
 ---
 
-# How to access EES
+# Accessing EES
 
 ---
+
+text
+
+---
+
+## Environments
+
+---
+
+text 
+
 
 As stated above, EES consists of two parts. We also have four versions (environments) of EES, the banner for the admin part of each environment will inform you which environment you are on, this is also colour coded: 
 
@@ -85,35 +96,32 @@ When accessing the pre-production environment you may be asked for a username an
 The pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
 
----
-
-## Admin dashboard
-
----
-
-<div class="alert alert-dismissible alert-warning">
-Use Google Chrome or Microsoft Edge to access and use the admin part of Explore Education Statistics.
-</div>
-
-When you enter the service you’ll see the admin dashboard, here what you can see will be dependent on your access permissions i.e. you’ll only see the publications that you have been granted access to. Within the test environment users are set up with full permissions (i.e. they can see/do everything) though in our production environment this will be restricted. 
-
-The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their EES mailbox - explore.statistics@education.gov.uk. 
 
 
-`r knitr::include_graphics("images/EES-admin-dashboard.PNG")`
 
 
-Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and scheduled releases tabs to see releases that are in progress. 
-
-Help and guidance for how to use the the admin website is available via the [administrators guide](https://admin.explore-education-statistics.service.gov.uk/documentation){target="_blank" rel="noopener noreferrer"}, this is always accessible from the top bar of the admin side of EES, as shown in the image below. 
-
-`r knitr::include_graphics("images/admin_guide_access.png")`
 
 ---
 
-# Publications 
+## Roles and permissions
 
 ---
+
+text 
+
+We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
+
+- Create new releases within a publication
+- Create an amendment of the latest published release within a publication
+- Cancel an amendment before it is published
+
+---
+
+## Requesting a new publication
+
+---
+
+text
 
 The hierarchy of content within EES is as follows - 
 
@@ -151,105 +159,14 @@ If you want to request a new publication, please be prepared to give the followi
 + List of email addresses of analysts who need access to edit the release
 + Email address for whoever is providing [senior sign off](#Signing_off_a_release)
 
----
-
-# Publication owner role
 
 ---
 
-We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
-
-- Create new releases within a publication
-- Create an amendment of the latest published release within a publication
-- Cancel an amendment before it is published
-
-In future this will also include managing methodology pages and we hope to stretch it to include setting release permissions too.
-
-Options available to publication owners:
-
-`r knitr::include_graphics("images/publicationowner-options.png")`
-
+# Creating releases
 
 ---
 
-## Publication management
-
----
-
-Use this page to change the details for your publication, such as the contact information or to add links to legacy releases on gov.uk. 
-
-Any updates here will affect all releases in the series and will be published immediately. 
-
-<div class="alert alert-dismissible alert-danger">
-It is possible to change the publication title via this page, however this should be used rarely and will not affect the publications url if one or more published releases exist. 
-</div>
-
-`r knitr::include_graphics("images/manage-publication.png")`
-
----
-
-# Create new release
-
----
-
-After finding the publication you want to create a release for, just press the button to create a new release. 
-
-Currently the following tyes of release can be created in EES: 
-
-* National Statistics (includes OSR tick mark logo at the top of the release page)  
-* Official Statistics
-* Adhoc Statistics
-
-When creating a release you will be asked to fill in some release summary fields.
-
-<div class="alert alert-dismissible alert-info">
-The time period for the release should reflect the time period of the data that this latest release adds to the time series.
-</div>
-
-<!-- You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) in the first instance. -->
-
-<div class="alert alert-dismissible alert-warning">
-Whilst in public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
-</div>
-
-Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
-
-1.	Data and files (uploading data files, ancillary files and creating public metadata)
-
-2.  Footnotes (creating footnotes and assigning to relevant data)
-
-2.	Data blocks (creating summary tables, charts and key stats indicators)
-
-3.	Content (drafting release content)
-
-4.	Sign off (moving through the approval process)
-
-5.  Pre-release access (invite users to pre-release and create public pre-release list)
-
---- 
-
-`r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
-
----
-
-# Managing legacy releases
-
----
-
-Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
-
-<div class="alert alert-dismissible alert-warning">
-For the time being this can only be done by the Statistics Development Team, please get in touch if you'd like us to add any legacy releases for your publication.
-</div>
-
-The video below walks through this:
-
-<center>
-<video width="640" height="360" controls>
-  <source src="images/manageLegacyReleases.mp4" type="video/mp4">
-</video>
-</center>
-
+text
 
 ---
 
@@ -666,11 +583,15 @@ Any data tables should be included as data blocks, however you can also embed st
 
 You can create static html tables for presenting information that isn't embedded in a datablock. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable underlying data files.
 
----
 
-# Signing off a release
 
 ---
+
+# Sign off
+
+---
+
+text
 
 Once you’re happy with your release you need to go to the sign off page and change it’s status in order to move it through the release pipeline.
 
@@ -715,11 +636,14 @@ The approver has the ability to approve the release to be published on a specifi
 This page also gives you the expected release url which may be useful to know for other things, for example, sending to the webteam to add to your gov.uk announcement page. 
 </div>
 
+
 ---
 
 # Pre-release
 
 ---
+
+text
 
 Prior to each release going live the production team are also able to grant pre-release access to a named group of users 24 hours before it goes live. These users do not require full access to the whole admin service. They will be able to see preview versions of any releases they have been granted access to. 
 
@@ -774,9 +698,37 @@ After creating your pre-release access list a text editor will appear where you 
 
 ---
 
+# Amendments
+
+---
+
+text
+
+If you need to make an amendment to release that has already been published this is possible to do from within the admin dashboard if you are a publication owner. If you need to create an amendment and your publication owner is not available, please contact the Statistics Development Team to do this for you.
+
+`r knitr::include_graphics("images/EES-amend-release.PNG")`
+
+Creating an amendment of a release will create a new version for which you can make any changes and then choose to republish, either as soon as possible or on a given date. 
+
+---
+
+## Release notes
+
+---
+
+When publishing a new amendment you should add a 'release note' to your release so users can be informed of what has changed:
+
+`r knitr::include_graphics("images/EES-release-note.PNG")`
+
+
+
+---
+
 # Methodology
 
 ---
+
+text
 
 Methodologies work in a very similar way to the written content of a release, the text editor and static tables you can use are built on the same foundations. 
 
@@ -824,24 +776,154 @@ Accessibility matters for uploaded images too, consider the following if you do 
 
 </div>
 
----
-
-# Amending a release
 
 ---
 
-If you need to make an amendment to release that has already been published this is possible to do from within the admin dashboard if you are a publication owner. If you need to create an amendment and your publication owner is not available, please contact the Statistics Development Team to do this for you.
-
-`r knitr::include_graphics("images/EES-amend-release.PNG")`
-
-Creating an amendment of a release will create a new version for which you can make any changes and then choose to republish, either as soon as possible or on a given date. 
+# Managing publications
 
 ---
 
-## Release notes
+text
+
+# Publication owner role
 
 ---
 
-When publishing a new amendment you should add a 'release note' to your release so users can be informed of what has changed:
+We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
 
-`r knitr::include_graphics("images/EES-release-note.PNG")`
+- Create new releases within a publication
+- Create an amendment of the latest published release within a publication
+- Cancel an amendment before it is published
+
+In future this will also include managing methodology pages and we hope to stretch it to include setting release permissions too.
+
+Options available to publication owners:
+
+`r knitr::include_graphics("images/publicationowner-options.png")`
+
+
+---
+
+## Publication management
+
+---
+
+Use this page to change the details for your publication, such as the contact information or to add links to legacy releases on gov.uk. 
+
+Any updates here will affect all releases in the series and will be published immediately. 
+
+<div class="alert alert-dismissible alert-danger">
+It is possible to change the publication title via this page, however this should be used rarely and will not affect the publications url if one or more published releases exist. 
+</div>
+
+`r knitr::include_graphics("images/manage-publication.png")`
+
+---
+
+## Create new release
+
+---
+
+After finding the publication you want to create a release for, just press the button to create a new release. 
+
+Currently the following tyes of release can be created in EES: 
+
+* National Statistics (includes OSR tick mark logo at the top of the release page)  
+* Official Statistics
+* Adhoc Statistics
+
+When creating a release you will be asked to fill in some release summary fields.
+
+<div class="alert alert-dismissible alert-info">
+The time period for the release should reflect the time period of the data that this latest release adds to the time series.
+</div>
+
+<!-- You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) in the first instance. -->
+
+<div class="alert alert-dismissible alert-warning">
+Whilst in public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
+</div>
+
+Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
+
+1.	Data and files (uploading data files, ancillary files and creating public metadata)
+
+2.  Footnotes (creating footnotes and assigning to relevant data)
+
+2.	Data blocks (creating summary tables, charts and key stats indicators)
+
+3.	Content (drafting release content)
+
+4.	Sign off (moving through the approval process)
+
+5.  Pre-release access (invite users to pre-release and create public pre-release list)
+
+--- 
+
+`r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
+
+---
+
+## Managing legacy releases
+
+---
+
+Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
+
+<div class="alert alert-dismissible alert-warning">
+For the time being this can only be done by the Statistics Development Team, please get in touch if you'd like us to add any legacy releases for your publication.
+</div>
+
+The video below walks through this:
+
+<center>
+<video width="640" height="360" controls>
+  <source src="images/manageLegacyReleases.mp4" type="video/mp4">
+</video>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+## Admin dashboard
+
+---
+
+<div class="alert alert-dismissible alert-warning">
+Use Google Chrome or Microsoft Edge to access and use the admin part of Explore Education Statistics.
+</div>
+
+When you enter the service you’ll see the admin dashboard, here what you can see will be dependent on your access permissions i.e. you’ll only see the publications that you have been granted access to. Within the test environment users are set up with full permissions (i.e. they can see/do everything) though in our production environment this will be restricted. 
+
+The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their EES mailbox - explore.statistics@education.gov.uk. 
+
+
+`r knitr::include_graphics("images/EES-admin-dashboard.PNG")`
+
+
+Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and scheduled releases tabs to see releases that are in progress. 
+
+Help and guidance for how to use the the admin website is available via the [administrators guide](https://admin.explore-education-statistics.service.gov.uk/documentation){target="_blank" rel="noopener noreferrer"}, this is always accessible from the top bar of the admin side of EES, as shown in the image below. 
+
+`r knitr::include_graphics("images/admin_guide_access.png")`
+
+
+
+
+
+
+
+
