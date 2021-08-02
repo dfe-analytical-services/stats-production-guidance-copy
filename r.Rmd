@@ -396,3 +396,15 @@ The [set.seed()](https://www.rdocumentation.org/packages/simEd/versions/2.0.0/to
 [1] "Q" "E" "A" "J" "D"
 
 ```
+
+---
+
+### Package usage
+
+Often we'll take chunks of code and reuse them for new projects. This can lead to building up a long list of packages to install, not all of which end up being used in your new code. The **NCmisc** package is a really handy way to check which packages and functions are used in your code.
+
+Firstly, load up all the packages the code has `library()` commands for, then run the following:
+
+```
+list.functions.in.file('your-filename-here.R', alphabetic = TRUE)
+```

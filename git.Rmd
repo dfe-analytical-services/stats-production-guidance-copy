@@ -196,8 +196,13 @@ There are a number of customisable versions of this, more information is availab
 
 ### Reverting a commit
 
-Made a mistake and need to revert? No problem!
+Made a mistake and need to revert? No problem! For rolling back on a branch, you should revert any changes so that you're not erasing history others might have pulled/cloned. E.g. If you want to revert the last 3 commits on master:
 
+`git revert --no-commit master~3..master`
+
+The no commit argument means that it just makes the reverts locally, and you can then commit them all as a single revert commit. If you don't use `--no-commit` then it will start doing individual revert commits for you for each commit you're reverting.
+
+You can also revert back to a particular commit ID:
 
 1. Navigate to the repo in your file explorer, then open up Git Bash and type :
 
