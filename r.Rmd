@@ -399,7 +399,7 @@ The [set.seed()](https://www.rdocumentation.org/packages/simEd/versions/2.0.0/to
 
 ---
 
-### Package usage
+### Finding package dependencies
 
 Often we'll take chunks of code and reuse them for new projects. This can lead to building up a long list of packages to install, not all of which end up being used in your new code. The **NCmisc** package is a really handy way to check which packages and functions are used in your code.
 
