@@ -2,6 +2,10 @@
 title: "SQL"
 ---
 
+<p class="text-muted">Guidance and tips for using the programming language SQL</p>
+
+---
+
 ## What is it
 
 SQL or Structured Query Language is a programming language used to talk to relational database management systems.

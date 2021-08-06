@@ -2,6 +2,10 @@
 title: "R"
 ---
 
+<p class="text-muted">Guidance and tips for using the programming language R</p>
+
+---
+
 ## What is it
 
 R is an open-source programming language specifically aimed at statisticians and data analysts.

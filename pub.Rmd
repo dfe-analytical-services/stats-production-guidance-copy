@@ -2,7 +2,7 @@
 title: "Publishing Statistics"
 ---
 
-<p class="text-muted">Guidance for how to publish Official and National Statistics</p>
+<p class="text-muted">Guidance for how to publish different types of statistics</p>
 
 
 <!-- Types of releases flowchart to go here - emailed Catherine to see if HoP office still have this somewhere -->
