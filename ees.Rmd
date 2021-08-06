@@ -744,11 +744,19 @@ When publishing a new amendment you should add a 'release note' to your release 
 
 Methodologies work in a very similar way to the written content of a release, the text editor and static tables you can use are built on the same foundations. 
 
-On the production environment, teams need to request a blank methodology to be created for them, please contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) to arrange this.
+If you have not created or published a methoodlogy page on EES before, the first thing your publication owner will need to do is create a methodology page. 
 
-Once the drafting has finished, a methodology should be set as 'approved for publication'. After this has happened, it will then appear in the drop down menu to attach to a publication. The methodology will then be published to the public side of the platform with the next release.
+`r knitr::include_graphics("images/EES-create-methodology.PNG")`
 
-On the test environment, teams can test creating methodologies themselves by going into the 'manage methodologies' page that is accessible from the main admin dashboard.
+Once created you can then edit the methodology content in a similar way to how you would create release page content. 
+
+Once the drafting has finished, a methodology should be set as 'approved for publication', currently approved methodology changes will be published immediately so make sure you are ready for the changes to go live before approving. 
+
+If you want to revise an existing methodology page you can amend the methodology which will generate a new version for you to edit. 
+
+`r knitr::include_graphics("images/EES-amend-methodology.PNG")`
+
+Once you're happy with your amendment it just needs to be approved in the usual way for it to be published. 
 
 ---
 
