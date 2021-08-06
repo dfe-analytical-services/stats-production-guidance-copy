@@ -93,31 +93,32 @@ The Statistics Development Team are responsible for setting up and maintaining u
 
 The following roles exist within EES admin: 
 
-* BAU
+* **BAU**
 
-Full access including administrative tools, typically only used by the Statistics Development Team and EES developers.
+    Full access including administrative tools, typically only used by the Statistics Development Team and EES developers.
 
-* Publication owner
+* **Publication owner**
 
-This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
+    This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
 
-- Create new releases within a publication
-- Create an amendment of the latest published release within a publication
-- Cancel an amendment before it is published
+    + Create new releases within a publication
+    + Create an amendment of the latest published release within a publication
+    + Cancel an amendment before it is published
 
-* Analyst - contributor
 
-Any analyst working on a release within EES admin will have the contributor role.
+* **Analyst - contributor**
 
-* Analyst - approver
+    Any analyst working on a release within EES admin will have the contributor role.
 
-The responsible statistician for a statistics release will have the approver role, allowing them to sign off releases for publication. 
+* **Analyst - approver**
 
-The release approver will usually be the responsible G5 or G6 for the statistics release. 
+    The responsible statistician for a statistics release will have the approver role, allowing them to sign off releases for publication. 
+    
+    The release approver will usually be the responsible G5 or G6 for the statistics release. 
 
-* Pre-release
+* **Pre-release**
 
-Any user invited for pre-release is given a pre-release user role. 
+    Any user invited for pre-release is given a pre-release user role. 
 
 
 Within these roles we also grant specific release permissions which allow us to make sure releases are only visible by the relevant production team. 
@@ -631,6 +632,8 @@ Only users with ‘approver’ permissions (usually G6 or above) can sign off th
 Preview table tool
 Checklist errors
 URL info
+
+`r knitr::include_graphics("images/EES-release-status-history.PNG")`
 
 ---
 
