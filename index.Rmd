@@ -12,9 +12,7 @@ library(fontawesome)
 
 ---
 
-## Guidance
-
-This website is a guide aimed at anyone producing official statistics. It is particularly important for those publishing using Explore Education Statistics (EES), though it also covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walk-through guide from processing to publication, as well as being a single reference point that is easy to navigate if you just need to check on a specific part of the process, link off to other resources, or access specific guidance.
+This website is a guide aimed at anyone producing official statistics in the Department for Education (DfE). It covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walk-through guide from processing to publication, as well as being a single reference point that is easy to navigate if you just need to check on a specific part of the process, link off to other resources, or access specific guidance.
 
 Within this guide you can read about: 
 
@@ -43,7 +41,7 @@ There is already a wealth of resources out there, and therefore this site unasha
 
 ---
 
-## Applications and code
+## Other resources
 
 We also have a number of other applications for statistics production teams to use to help them in their processes, they can be accessed at the links below when using a DfE device.
 
@@ -66,8 +64,16 @@ Publication self-assessment tool:
 
  - Code mirrored at [https://github.com/dfe-analytical-services/publication-self-assessment-copy](https://github.com/dfe-analytical-services/publication-self-assessment-copy){target="_blank" rel="noopener noreferrer"}
 
+- Template QA code
+[https://github.com/dfe-analytical-services](https://github.com/dfe-analytical-services){target="_blank" rel="noopener noreferrer"}
+
+<!--
+- dfeR package
+[https://github.com/dfe-analytical-services](https://github.com/dfe-analytical-services){target="_blank" rel="noopener noreferrer"}
+-->
+
 The code for this guidance website is mirrored at [https://github.com/dfe-analytical-services/stats-production-guidance-copy](https://github.com/dfe-analytical-services/stats-production-guidance-copy){target="_blank" rel="noopener noreferrer"}
 
-Other code, such as the dfeR package and our template code can be found in the [dfe-analytical-services](https://github.com/dfe-analytical-services){target="_blank" rel="noopener noreferrer"} area on GitHub.
+
 
 ---
