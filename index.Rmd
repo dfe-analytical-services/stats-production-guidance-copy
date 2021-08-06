@@ -55,9 +55,6 @@ Guidance for how to use the features in the Explore Education Statistics platfor
 
 **Review**
 
-* [Introduction](user.html)  
-An introduction into why reviewing your statistics is important (I don't think we need this page)
-
 * [User engagement](user_eng.html)  
 Guidance on understanding and engaging with the users of published statistics
 
