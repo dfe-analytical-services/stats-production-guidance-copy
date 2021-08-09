@@ -563,7 +563,7 @@ Accessibility matters for infographics too, consider the following if you do nee
 
 ---
 
-In the content tab you can now start creating your release, embedding the datablocks you’ve created as you go. 
+In the content tab you can now start creating your release, embedding the data blocks you’ve created as you go. 
 
 <!-- potential for gif? --> 
 
@@ -571,11 +571,11 @@ You can use the page view toggles, that float in the bottom left of the page, to
 
 <!-- potential for gif? --> 
 
-Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. 
+Use the ‘Add secondary stats’ button to add a data block to your headline stats section. 
 
 <!-- potential for gif? --> 
 
-Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock with a only a single number.
+Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a data block with a only a single number.
 
 `r knitr::include_graphics("images/key-stat.PNG")`
 
@@ -597,7 +597,7 @@ Do not use footnotes in the text of your content. They’re designed for referen
 
 Any data tables should be included as data blocks, however you can also embed static html tables within a text box. These should only be used to present textual tables or for any small presentations of data that are not possible to do in a data block at the moment. 
 
-You can create static html tables for presenting information that isn't embedded in a datablock. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable underlying data files.
+You can create static html tables for presenting information that isn't embedded in a data block. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable underlying data files.
 
 [GLOSSARY LINKS]
 [REPLACE SOME OF THIS WITH CONTENT RMD LINKS]

@@ -20,7 +20,7 @@ R can be used for almost anything you can think of, notably data analysis, data 
 
 ## How to get it
 
-Download R (language), RStudio (IDE) and RTools (helpful extension) from the DfE software centre.
+Download R (language), RStudio (IDE) and RTools (helpful extension) from the DfE software center.
 
 ---
 
