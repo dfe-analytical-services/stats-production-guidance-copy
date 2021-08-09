@@ -42,15 +42,15 @@ As stated above, EES consists of two parts. We also have four versions (environm
 
 - **Pre-production** - Yellow - a sandbox area for analysts to carry out functionality testing
 
-Admin pre-production - https://admin.pre-production.explore-education-statistics.service.gov.uk
+    Admin pre-production - https://admin.pre-production.explore-education-statistics.service.gov.uk
 
-Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
+    Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
 
 - **Production** - Red - the real service, anyone creating real releases that they intend to publish to the public should be using this environment
 
-Admin - https://admin.explore-education-statistics.service.gov.uk/
+    Admin - https://admin.explore-education-statistics.service.gov.uk/
 
-Public - https://explore-education-statistics.service.gov.uk/
+    Public - https://explore-education-statistics.service.gov.uk/
 
 Teams can use the pre-production environment to familiarise themselves with the platform and test out what is possible. The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production. 
 
@@ -163,10 +163,31 @@ If you want to request a new publication, please be prepared to give the followi
 + The [time period](https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values){target="_blank" rel="noopener noreferrer"} of the release you’re creating
 + Whether they are National statistics, an ad-hoc publication, or official statistics
 + List of email addresses of analysts who need access to edit the release
-+ Email address for whoever is providing [senior sign off](#Signing_off_a_release)
++ Email address for whoever is providing [senior sign off](#Sign_off)
 
 
 Publication details can be managed by publication owners or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). More information at LINK. 
+
+
+---
+
+## Admin dashboard
+
+---
+
+<div class="alert alert-dismissible alert-warning">
+Use Google Chrome or Microsoft Edge to access and use the admin part of Explore Education Statistics.
+</div>
+
+When you enter the service you’ll see the admin dashboard, here what you can see will be dependent on your access permissions i.e. you’ll only see the publications that you have been granted access to. Within the test environment users are set up with full permissions (i.e. they can see/do everything) though in our production environment this will be restricted. 
+
+The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their EES mailbox - explore.statistics@education.gov.uk. 
+
+
+`r knitr::include_graphics("images/EES-admin-dashboard.PNG")`
+
+
+Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and scheduled releases tabs to see releases that are in progress. 
 
 ---
 
@@ -213,7 +234,7 @@ Planning area, School, Provider, and Institution level data will upload as norma
 
 You'll need to give a 'subject title' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name and metadata guidance can include more technical / coverage information.
 
-[LINK TO FILE NAME STANDARDS FROM UD.RMD]
+<!-- [LINK TO FILE NAME STANDARDS FROM UD.RMD] --->
 
 When adding a subject name think about the general user and how the subjects will appear in the service:
 
@@ -225,7 +246,9 @@ When adding a subject name think about the general user and how the subjects wil
   + Early years provision provider type
   + Number of permanent exclusions
   + Exclusions and suspensions by pupil characteristics
-  
+
+You can make changes the subject title for your data file after it has been uploaded if needed using the 'Edit title' option. 
+
 ---
 
 ### Uploading files
@@ -296,11 +319,11 @@ Releases cannot be published without a completed metadata document. If not fille
 
 ---
 
-If you notice a mistake in your data file you can replace it with another.
+If you just need to change the subject title for your data file you do not need to go through the whole replacement process, just click the 'Edit title' option. 
+
+However, if you notice a mistake in your data file you can replace it with another. When replacing a data file the platform will attempt to recreate any data blocks and footnotes that were built using the previous file.
 
 `r knitr::include_graphics("images/replace-data-start.png")`
-
-When replacing a data file the platform will attempt to recreate any data blocks and footnotes that were built using the previous file.
 
 The first step is to upload the new file.
 
@@ -322,15 +345,13 @@ If it's not possible for a data block or footnote to be recreated using the repl
 Remember to double check any data blocks or footnotes that were recreated by the platform before publishing your release.
 </div>
 
-[ADD CHANGING SUBJECT NAME GUIDANCE]
-
 ---
 
 ## Footnotes
 
 ---
 
-To add footnotes, go to the footnotes tab and click 'add another footnote'. Rather than writing multiple tables and assigning individual footnotes, you write footnotes and assign them to certain indicators and filters so they appear when users select them in the table builder. For example in the below, the footnote "This is a footnote" is assigned to "the number of pupils entering each exam" for all filters.
+Footnotes are added via footnotes tab - rather than writing multiple tables and assigning individual footnotes, you write footnotes and assign them to certain indicators and filters so they appear when users select them in the table builder. For example in the below, the footnote "This is a footnote" is assigned to "Headcount" indicator for all options within the "School type" filter.
 
 `r knitr::include_graphics("images/footnote_example.PNG")`
 
@@ -338,7 +359,7 @@ If you'd rather, you can assign a footnote to the whole data file by ticking thi
 
 `r knitr::include_graphics("images/All_indicators.PNG")`
 
-You can assign footnotes across multiple data files.  
+You can assign the same footnote across multiple data files.  
 
 <div class="alert alert-dismissible alert-danger">
 We recommend that you only add footnotes once you are certain the data file is final. If you have to delete the data file, all the assigned footnotes will be deleted alongside it.
@@ -554,7 +575,7 @@ Accessibility matters for infographics too, consider the following if you do nee
 
 
 
-[GUIDANCE FOR STYLING NON EES CHARTS IS AT CONTENT LINK]
+<!-- [GUIDANCE FOR STYLING NON EES CHARTS IS AT CONTENT LINK] -->
 
 
 ---
@@ -599,8 +620,8 @@ Any data tables should be included as data blocks, however you can also embed st
 
 You can create static html tables for presenting information that isn't embedded in a data block. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable underlying data files.
 
-[GLOSSARY LINKS]
-[REPLACE SOME OF THIS WITH CONTENT RMD LINKS]
+<!-- [GLOSSARY LINKS]
+[REPLACE SOME OF THIS WITH CONTENT RMD LINKS] -->
 
 ---
 
@@ -618,11 +639,10 @@ There are three statuses:
 
 
 <div class="alert alert-dismissible alert-warning">
-Only users with ‘approver’ permissions (usually G6 or above) can sign off the release for publication. 
-[LINK TO PERMISSIONS SECTION]
+Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release for publication.
 </div>
 
-
+<!-- 
 ---
 
 ### Reviewing a release
@@ -634,6 +654,8 @@ Checklist errors
 URL info
 
 `r knitr::include_graphics("images/EES-release-status-history.PNG")`
+
+-->
 
 ---
 
@@ -879,30 +901,6 @@ The video below walks through this:
 
 
 
-
----
-
-## Admin dashboard
-
----
-
-<div class="alert alert-dismissible alert-warning">
-Use Google Chrome or Microsoft Edge to access and use the admin part of Explore Education Statistics.
-</div>
-
-When you enter the service you’ll see the admin dashboard, here what you can see will be dependent on your access permissions i.e. you’ll only see the publications that you have been granted access to. Within the test environment users are set up with full permissions (i.e. they can see/do everything) though in our production environment this will be restricted. 
-
-The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their EES mailbox - explore.statistics@education.gov.uk. 
-
-
-`r knitr::include_graphics("images/EES-admin-dashboard.PNG")`
-
-
-Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and scheduled releases tabs to see releases that are in progress. 
-
-Help and guidance for how to use the the admin website is available via the [administrators guide](https://admin.explore-education-statistics.service.gov.uk/documentation){target="_blank" rel="noopener noreferrer"}, this is always accessible from the top bar of the admin side of EES, as shown in the image below. 
-
-`r knitr::include_graphics("images/admin_guide_access.png")`
 
 
 
