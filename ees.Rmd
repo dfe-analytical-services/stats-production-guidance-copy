@@ -166,8 +166,7 @@ If you want to request a new publication, please be prepared to give the followi
 + Email address for whoever is providing [senior sign off](#Sign_off)
 
 
-Publication details can be managed by publication owners or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). More information at LINK. 
-
+Publication details can be [managed by publication owners](#Publication_management) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). 
 
 ---
 

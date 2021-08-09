@@ -13,8 +13,6 @@ navbar:
           href: r.html
         - text: "Git"
           href: git.html
-    
-      href: l+d.html
     - text: "Creating statistics"
       menu:
         - text: "Processes and RAP"
