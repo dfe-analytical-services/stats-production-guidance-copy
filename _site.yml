@@ -33,8 +33,6 @@ navbar:
           href: dashboards.html
     - text: "Review"
       menu:
-        - text: "Introduction"
-          href: user.html
         - text: "User engagement"
           href: user_eng.html
         - text: "EES analytics"
