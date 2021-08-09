@@ -54,7 +54,7 @@ Public - https://explore-education-statistics.service.gov.uk/
 
 Teams can use the pre-production environment to familiarise themselves with the platform and test out what is possible. The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production. 
 
-On the pre-production environment, all analysts have full permissions to create publications and releases, and can see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
+On the pre-production environment, all analysts have full permissions to create publications and releases, and can see everything else that other analysts are making. This is unique to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
 When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
@@ -375,7 +375,7 @@ The manage data blocks page will list all the data blocks you have created, high
 
 You can also choose to highlight a data block table as a ‘featured table’ which means it will show in a list of featured tables within the table tool. This is designed to help users get to tables of interest more quickly (without having to create tables themselves).
 
-There is an option to choose if a table is a 'fea tured table' when saving each data block, here you can name the table and add a description giving the table coverage:
+There is an option to choose if a table is a 'featured table' when saving each data block, here you can name the table and add a description giving the table coverage:
 
 `r knitr::include_graphics("images/EES-create-release-table-highlight.PNG")`
 
@@ -662,7 +662,7 @@ Releases are approved via the sign off tab. The release date is also set during 
 The approver has the ability to approve the release to be published on a specific date or to publish as soon as possible. Publishing as soon as possible is useful for publishing amendments to existing releases. 
 
 <div class="alert alert-dismissible alert-info">
-This page also gives you the expected release url which may be useful to know for other things, for example, sending to the webteam to add to your gov.uk announcement page. 
+This page also gives you the expected release url which may be useful to know for other things, for example, sending to the web team to add to your gov.uk announcement page. 
 </div>
 
 
@@ -744,7 +744,7 @@ When publishing a new amendment you should add a 'release note' to your release 
 
 Methodologies work in a very similar way to the written content of a release, the text editor and static tables you can use are built on the same foundations. 
 
-If you have not created or published a methoodlogy page on EES before, the first thing your publication owner will need to do is create a methodology page. 
+If you have not created or published a methodology page on EES before, the first thing your publication owner will need to do is create a methodology page. 
 
 `r knitr::include_graphics("images/EES-create-methodology.PNG")`
 
@@ -834,7 +834,7 @@ It is possible to change the publication title via this page, however this shoul
 
 After finding the publication you want to create a release for, just press the button to create a new release. 
 
-Currently the following tyes of release can be created in EES: 
+Currently the following types of release can be created in EES: 
 
 * National Statistics (includes OSR tick mark logo at the top of the release page)  
 * Official Statistics
