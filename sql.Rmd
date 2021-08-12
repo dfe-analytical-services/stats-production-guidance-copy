@@ -24,6 +24,10 @@ SQL provides us with a language primarily for querying databases to extract data
 
 Download SSMS from the DfE software center, talk to your team about getting access to the appropriate SQL servers and databases where the data you need to access is held and start writing SQL queries.
 
+There are usually a couple of different versions available for software on the software center, we'd recommend you always go for the latest (newest) version possible.
+
+<!-- gif getting this from the software center -->
+
 ---
 
 ## Best place to start
@@ -65,7 +69,7 @@ Once you have saved SQL scripts or are more familiar with writing SQL queries on
 
 ## Other resources
 
-- This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank" rel="noopener noreferrer"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio (downloadable through the software center), and start playing with that query.
+- This [tutorial script](https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql){target="_blank" rel="noopener noreferrer"} by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don't need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio and start playing with that query.
 
 - Avision Ho created the this [SQL training course](https://github.com/avisionh/Training-SQL){target="_blank" rel="noopener noreferrer"}.
 

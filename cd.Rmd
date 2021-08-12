@@ -295,7 +295,7 @@ Search engine optimisation (SEO) makes it easier for users to find your data thr
 
 ---
 
-EES allows you to build charts and tables to visually represent information from your release, this can be particularly helpful to show trends over time, across geographies or highlight interesting stories in the data. 
+EES allows you to build charts and tables to visually represent information from your release, this can be particularly helpful to show trends over time, across geographies or highlight interesting stories in the data.
 
 
 ---
@@ -332,7 +332,28 @@ You do not need to recreate all of the old excel tables, users can find the numb
 
 Any charts in your release should be appropriate for the data, reinforcing the key messages. For more detailed information on how to build charts in EES, visit our [EES charts guidance section](ees.html#Data_block_charts). 
 
-More complex charts cannot currently be built in EES. You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. For more information on how to best-practice for building infographics outside of the EES chart builder, including guidance for colours to use in charts, please see our [infographics guidance](ees.html#Other_chart_types)
+More complex charts cannot currently be built in EES. You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. 
+
+For any charts made outside of EES you must be using [GDS colours](https://design-system.service.gov.uk/styles/colour/), the following hex codes represent the colours that are available for charts in EES, we strongly recommend you stick to these (if you can't for any reason, please get in touch with us so we can understand why - we are in the process of developing more detailed guidance):
+
+| Colour name (GDS) | Hex code |
+|-------------------|----------|
+| Blue              | #1d70b8  |
+| Bright purple     | #912b88  |
+| Pink              | #d53880  |
+| Light pink        | #f499be  |
+| Orange            | #f47738  |
+| Brown             | #b58840  |
+| Light green       | #85994b  |
+| Turquoise         | #28a197  |
+| Dark grey         | #505a5f  |
+| Black             | #0b0c0c  |
+| Red               | #d4351c  |
+| Yellow            | #ffdd00  |
+| Green             | #00703c  |
+
+DWP have created a [Data Visualisation Thinking](https://dataviztraining.dwpdata.info/index.html) course that may be useful to look at when creating more complex charts.
+
 
 ---
 

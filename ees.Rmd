@@ -28,8 +28,6 @@ Maintenance and use of the platform is supported by the [Statistics Development 
 
 ---
 
----
-
 ## Environments
 
 ---
@@ -52,6 +50,12 @@ As stated above, EES consists of two parts. We also have four versions (environm
 
     Public - https://explore-education-statistics.service.gov.uk
 
+There is no overlap between the environments and content created on one cannot be moved to any other. 
+
+<div class="alert alert-dismissible alert-danger">
+If you are bookmarking links, please be careful to bookmark the links below exactly as they are shown. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
+</div>
+
 Teams can use the pre-production environment to familiarise themselves with the platform and test out what is possible. The core functionality across the environments is identical except for new changes, which are deployed through the different environments before they make it to production. 
 
 On the pre-production environment, all analysts have full permissions to create publications and releases, and can see everything else that other analysts are making. This is unique to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
@@ -62,11 +66,6 @@ When accessing the pre-production environment you may be asked for a username an
 The pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
 
-There is no overlap between the environments and content created on one cannot be moved to any other. 
-
-<div class="alert alert-dismissible alert-danger">
-If you are bookmarking links, please be careful to bookmark the links below exactly as they are shown. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
-</div>
 
 ### Getting access to admin
 
@@ -79,47 +78,68 @@ Jobshare emails can not be used to access EES. Specific personal emails should b
 </div>
 
 
-
-
 ---
 
 ## Roles and permissions
 
 ---
 
+<!-- need to include methodologies in this section? -->
+
 The Statistics Development Team are responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
-The following roles exist within EES admin: 
+The following roles exist within EES admin and are assigned to a specific release: 
 
-* **BAU**
+* **Pre-release**
 
-    Full access including administrative tools, typically only used by the Statistics Development Team and EES developers.
+    Any user invited for pre-release is given a pre-release user role. During the hours of pre-release they can:
+    
+    + Preview the release page, including downloading files
+    + Preview the table tool page for that release
+
+<br>
+
+* **Analyst - contributor**
+
+    Any analyst working on a release within EES admin will have the contributor role. They can:
+    
+    + Edit release details
+    + Upload data and other files
+    + Create footnotes, datablocks and charts
+    + Edit and comment on release content
+    + Invite PRA users
+    + Move the release status between draft and ready for higher review
+    
+<br>
+
+* **Analyst - approver**
+
+    The responsible statistician for a statistics release will have the approver role, allowing them to sign off releases for publication. This will usually be the responsible G5 or G6 for the statistics publication. They can do everything a contributor can, as well as:
+    
+    + Move the release status between draft, ready for review and approved
+    + Schedule the release for publication (either immediately or for a specific date)
+
+<br>
+
+There is also a publication owner role, which is assigned at publication level to a users account:
 
 * **Publication owner**
 
-    This permissions level gives publication owners control over their publications. As well as being able to manage the publication details, the publication owner also has access to:
+    This permissions level gives publication owners control over their publications. They can do anything a contributor can for all releases within the publication. On top of this the publication owner also has access to:
 
+    + Manage publication level details
     + Create new releases within a publication
     + Create an amendment of the latest published release within a publication
     + Cancel an amendment before it is published
 
-
-* **Analyst - contributor**
-
-    Any analyst working on a release within EES admin will have the contributor role.
-
-* **Analyst - approver**
-
-    The responsible statistician for a statistics release will have the approver role, allowing them to sign off releases for publication. 
-    
-    The release approver will usually be the responsible G5 or G6 for the statistics release. 
-
-* **Pre-release**
-
-    Any user invited for pre-release is given a pre-release user role. 
+<br>
 
 
-These roles are assigned at release level to users, with the exception of publication owners, which are assigned at a publication level to the users account
+* **BAU**
+
+    The administrative role:
+
+    + This role is assigned to a user and gives full access including administrative tools, typically only used by the Statistics Development Team and EES developers.
 
 ---
 
@@ -190,7 +210,12 @@ Within this dashboard you can view and manage existing publications, including c
 
 ---
 
-New releases can be [created by publication owners](#Create_new_release) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk).  
+New releases can be [created by publication owners](#Create_new_release) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). If you're requesting a new release via the mailbox, please give the following:
+
++ Name of the publication (including theme and topic that it sits under)
++ Time period for the release
++ [Time identifier](ud.html#List_of_allowable_time_values) for the release
++ Type of release (National, Official, Ad-hoc etc)
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
 
@@ -240,6 +265,7 @@ When adding a subject name think about the general user and how the subjects wil
 * Your subject names should be short and snappy, clearly explain what is in each file. Some good examples of this in practice are included below:
   + Early years provision by provider type
   + Exclusions and suspensions by pupil characteristics
+  + ITT new entrants by subject and training route
 
 You can make changes the subject title for your data file after it has been uploaded if needed using the 'Edit title' option. 
 
@@ -558,7 +584,7 @@ You should only use complex charts where there is a clear user need, as simple c
 Accessibility matters for infographics too, consider the following if you do need to upload an image - 
 
 * Keep them simple
-* Use only colours that are also available in EES (listed in table below)
+* Use only colours that are also available in EES - see our [visualisation guidance](cd.html#Charts-in-EES) for more details
 * Don't put borders around images
 * Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
 * Try to avoid adding text to your images other than axis labels and limited annotations. Titles and headings can be added in the "chart configuration" tab instead
@@ -574,11 +600,11 @@ Accessibility matters for infographics too, consider the following if you do nee
 
 In the content tab you can now start creating your release, embedding the data blocks you’ve created as you go. 
 
-<!-- potential for gif? --> 
+<!-- we shoud gif --> 
 
 You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode for the release and to view a preview of the table tool.
 
-<!-- potential for gif? --> 
+<!-- we should gif --> 
 
 Use the ‘Add secondary stats’ button to add a data block to your headline stats section. 
 
@@ -593,7 +619,7 @@ After embedding a key stat tile you can then edit it to add trend information an
 | Indicator name | Automatically generated from your data | 
 | Latest value | Automatically generated from your data |
 | Trend | A short one-sentence description of the trend; try to avoid only stating the change from the previous year and talk about the longer-term trend where appropriate |
-| Guidance title | Should be set to **'What is this?'** |
+| Guidance title | E.g. 'What is NEET?' or 'What are permanent exclusions?' |
 | Guidance text | A simple description in plain English of what the indicator is |
 
 You can then create accordion sections to start adding your main release commentary. These sections are made up of text blocks and data blocks which can be reordered as needed. 
@@ -604,6 +630,7 @@ Do not use footnotes in the text of your content. They’re designed for referen
 
 Any data tables should be included as data blocks, however you can also embed static html tables within a text box. These should only be used to present textual tables or for any small presentations of data that are not possible to do in a data block at the moment. 
 
+<!-- gif this -->
 You can create static html tables for presenting information that isn't embedded in a data block. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable open data files.
 
 <!-- [GLOSSARY LINKS]
@@ -672,6 +699,17 @@ The approver has the ability to approve the release to be published on a specifi
 <div class="alert alert-dismissible alert-info">
 This page also gives you the expected release url which may be useful to know for other things, for example, sending to the web team to add to your gov.uk announcement page. 
 </div>
+
+
+---
+
+### Next release expected
+
+---
+
+You also have the option to add a date for when the next release is expected. This will appear at the top of a release page and give users an idea of when to expect the next release in the publication series. You can provide the planned month and year of the next release within this publication. 
+
+If this is added but then needs to be changed or removed later in the year it is easy to do so, by creating an amendment and setting a new next release expected date on sign-off.
 
 
 ---
@@ -854,10 +892,6 @@ When creating a release you will be asked to fill in some release summary fields
 The time period for the release should reflect the time period of the data that this latest release adds to the time series.
 </div>
 
-<!-- You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) in the first instance. -->
-
-
-
 ---
 
 ## Managing legacy releases
@@ -866,32 +900,4 @@ The time period for the release should reflect the time period of the data that 
 
 Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
 
-The video below walks through this:
-
-<center>
-<video width="640" height="360" controls>
-  <source src="images/manageLegacyReleases.mp4" type="video/mp4">
-</video>
-</center>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This section can be found by publication owners in the publication management section.
