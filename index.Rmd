@@ -50,8 +50,8 @@ Guidance for how to publish different types of statistics
 * [Using EES](ees.html)  
 Guidance for how to use the features in the Explore Education Statistics platform
 
-* [Other options](dashboards.html)  
-Guidance for how to use the features in the Explore Education Statistics platform
+* [Dashboards](dashboards.html)  
+Guidance for publishing statistics dashboards outside of EES
 
 ## Review
 

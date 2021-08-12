@@ -27,7 +27,7 @@ navbar:
           href: pub.html
         - text: "Using EES"
           href: ees.html
-        - text: "Other options"
+        - text: "Dashboards"
           href: dashboards.html
     - text: "Review"
       menu:

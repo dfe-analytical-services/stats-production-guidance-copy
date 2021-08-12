@@ -25,7 +25,7 @@ More information on why EES was introduced and the functionality within the plat
 
 The following table outlines the key differences between publishing via EES and the old method via [gov.uk:](https://www.gov.uk/government/organisations/department-for-education/about/statistics){target="_blank" rel="noopener noreferrer"}
 
-| Previous service: Statistics collections on gov.uk | New service: Explore Education Statistics |
+| Statistics collections on gov.uk | Explore Education Statistics |
 |:------|:------|
 | Statisticians request pdf and excel files are uploaded to release pages on gov.uk | Statisticians load csv data files on to the service and use them to build release pages  |
 | Release attachments are reviewed and approved via emails | Releases are reviewed and approved within the service |
@@ -204,7 +204,7 @@ Before you publish a release you should have:
 
 Dashboards built to meet a particular user need can be another helpful tool to help users access and understand your data, and can be hosted outside of EES or gov.uk.
 
-<!-- Link off to Dashboards guidance page when ready -->
+Guidance to follow when creating and publishing dashboards is available via the [dashboards](#Dashboards) page.
 
 ---
 
