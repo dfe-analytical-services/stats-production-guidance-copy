@@ -8,17 +8,23 @@ title: "R"
 
 ## What is it
 
+---
+
 R is an open-source programming language specifically aimed at statisticians and data analysts.
 
 ---
 
 ## What is it for
 
+---
+
 R can be used for almost anything you can think of, notably data analysis, data visualisation, and creating reports and dashboards. It can also be used to extract data from SQL databases and run SQL queries.
 
 ---
 
 ## How to get it
+
+---
 
 Download R (language) and RStudio (IDE) from the DfE software center. We also recommend that you download RTools (a helpful R extension) at the same time.
 
@@ -29,6 +35,8 @@ There are usually a couple of different versions available for software on the s
 ---
 
 ## Best places to start
+
+---
 
 - The DfE Analytics Academy host an [online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank" rel="noopener noreferrer"}. This is a great resource full of reproducible examples using DfE data. The course takes you through initially getting R downloaded, all the way through to developing apps in RShiny.
 
@@ -41,6 +49,8 @@ There are usually a couple of different versions available for software on the s
 
 ## Best practice
 
+---
+
 Tips for reaching best practice in R can be found on our [RAP page](RAP.html#Clean_final_code), with guidance on meeting best practice in RAP for clean final code. This makes it easier to read and pick up if another person is running your code. 
 
 
@@ -51,6 +61,8 @@ Tips for reaching best practice in R can be found on our [RAP page](RAP.html#Cle
 ---
 
 ### R Projects
+
+---
 
 Whenever you are using R, you should work in an RProject. This just makes sure you are set up in the correct working directory, so your code is pointing at the right folders and files.
 
@@ -64,11 +76,15 @@ You can check which project you are working in by looking in the top right hand 
 
 ### Outlines
 
+---
+
 In RStudio you can greatly increase the navigability of your code by taking advantage of outlines. [More information on folding and navigating outlines in RStudio](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections){target="_blank" rel="noopener noreferrer"} can be found online, though when using rmarkdown reports, remember to use names first, such as `## Rows that aren't matching: r nrow(joined %>% filter(matching == FALSE))`, rather than having the R code first, so that they are easy to discern in the outline.
 
 ---
 
 ### renv
+
+---
 
 You should use the [renv package](https://rstudio.github.io/renv/articles/renv.html){target="_blank" rel="noopener noreferrer"} for package and version control in R.
 
@@ -79,6 +95,8 @@ This is really important for reproducibility, and will help you meet elements of
 ---
 
 #### renv::restore()
+
+---
 
 Sometimes renv::restore() can fail, and when in specific renv-controlled projects install.packages() will fail saying that packages aren't available even when they clearly are. There are a couple of workarounds we have found that get around this failure.
 
@@ -124,6 +142,8 @@ install.packages("rmarkdown", lib = "C:/Users/swong/OneDrive - Department for Ed
 
 #### Updating packages in renv
 
+---
+
 To update a single package run:
 
 `renv::update("dplyr")`
@@ -137,6 +157,8 @@ To update all packages run:
 
 #### Installing old package versions in renv
 
+---
+
 This is surprisingly neat to do. Let's say you wanted to roll back to version 1.0.2 of dplyr, you would run the following:
 
 `renv::install("dplyr@1.0.2")`
@@ -144,6 +166,8 @@ This is surprisingly neat to do. Let's say you wanted to roll back to version 1.
 ---
 
 ##  Quick reference lookup
+
+---
 
 - If you want a useful guide for R syntax or functions, then look no further than the [R cheat sheets](https://rstudio.com/resources/cheatsheets/){target="_blank" rel="noopener noreferrer"}, these can be an invaluable point of reference. Below we've included a few particularly relevant ones:
     + Introduction to the [RStudio environment](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf){target="_blank" rel="noopener noreferrer"}
@@ -160,6 +184,8 @@ This is surprisingly neat to do. Let's say you wanted to roll back to version 1.
 ---
 
 ## Other resources
+
+---
 
 - Here is another free introduction to R course by [Quantargo](https://www.quantargo.com/courses/course-r-introduction/){target="_blank" rel="noopener noreferrer"}.
 
@@ -179,7 +205,7 @@ This is surprisingly neat to do. Let's say you wanted to roll back to version 1.
 
 - Also check out the [janitor](https://garthtarr.github.io/meatR/janitor.html){target="_blank" rel="noopener noreferrer"} package, it has some particularly powerful functions that are worth a look for tidying and QA'ing data.
 
-
+---
 
 ## Excel functions in R
 
@@ -248,6 +274,8 @@ A selection of handy bits of code and workarounds for common issues. More useful
 
 ### Specifying a version of R to use
 
+---
+
 This can be done most easily by navigating in RStudio through `Tools > Global options > General > Basic > R version (change)`. It's likely you'll need to restart RStudio for the changes to take affect. 
 
 
@@ -260,6 +288,8 @@ This can be done most easily by navigating in RStudio through `Tools > Global op
 
 <!-- This is going into DfER- remove once it's in? -->
 ### Rounding
+
+---
 
 The base R function of round() rounds 5's downwards. To round them upwards you can create a custom function like the one below:
 
@@ -284,6 +314,8 @@ roundFiveUp <- function(x, n){
 
 ### Passing variables as arguments
 
+---
+
 This can be worked around by using a combination of `eval()` and `parse()`, as shown in the below function:
 
 ```
@@ -305,17 +337,23 @@ showFilterLevels <- function(data, meta) {
 
 ### Reverse additive filters
 
+---
+
 You might want to filter your dataset based on multiple negative conditions. Normally to filter on multiple conditions, you would use `filter(condition1 & condition2)`. The "filter" function does not work well with negative conditions (i.e. filtering for cases where condition 1 and condition 2 are not met). Instead, you can use `subset(!(condition1 & condition2)`.
 
 ---
 
-### File locations 
+### File locations
+
+---
 
 Struggling to get files to talk to one another, or get code to find and use another R script? Use `here::here()` and marvel at it's wondrous ability to magic away issues.
 
 ---
 
 ### Interweaving vectors
+
+---
 
 There's an easy way to interweave multiple vectors into one single vector using `c(rbind())`. The example below shows two vectors, but you can have even more if you need.
 
@@ -336,6 +374,8 @@ c(rbind(x, y))
 
 ### Making charts interactive
 
+---
+
 When pulling ggplot charts into RMarkdown reports, you can consider making them even more user-friendly and interactive with plotly. [Further information on how to make your charts interactive with plotly](https://plotly.com/ggplot2){target="_blank" rel="noopener noreferrer"} can be found online. 
 
 ```
@@ -352,6 +392,8 @@ fig <- ggplotly(p)
 
 ### Replace all values with another
 
+---
+
 Have you ever needed to replace every value in your data with another? This can come in handy when you are looking at suppression, e.g. converting all NAs to "z" or all values under a certain threshold to "c".
 
 ```
@@ -363,6 +405,8 @@ data %>% mutate_all(~ replace(., . == "Value to replace", "Replacement"))
 
 ### Temporary groups
 
+---
+
 The group_by() function in dplyr is really useful, but can be fiddly if you only want to use it for one operation in a chunk of code. The with_groups() function from [dplyr](https://dplyr.tidyverse.org/reference/with_groups.html){target="_blank" rel="noopener noreferrer"} lets you do this, saving you having to group and ungroup data each time.
 
 ```
@@ -372,7 +416,23 @@ data %>% mutate(annual_average = with_groups(time_period, mean))
 
 ---
 
+### Finding package dependencies
+
+---
+
+Often we'll take chunks of code and reuse them for new projects. This can lead to building up a long list of packages to install, not all of which end up being used in your new code. The **NCmisc** package is a really handy way to check which packages and functions are used in your code.
+
+Firstly, load up all the packages the code has `library()` commands for, then run the following:
+
+```
+list.functions.in.file('your-filename-here.R', alphabetic = TRUE)
+```
+
+---
+
 ### Visualise dependencies
+
+---
 
 The [depgraph package](https://github.com/crsh/depgraph){target="_blank" rel="noopener noreferrer"} allows you to plot a graph of all the dependencies in your R project, which can be a useful tool to help you cut down on the number of package dependencies. Briefly, in these graphs you can look for “hot spots” in the network (big bright dots), which represent packages that have many upstream dependencies but are potentially easy to remove because they have few downstream dependencies (that is, only your package depends on them).
 
@@ -387,6 +447,8 @@ plot_dependency_graph(
 ---
 
 ### Reproducible random numbers
+
+---
 
 The [set.seed()](https://www.rdocumentation.org/packages/simEd/versions/2.0.0/topics/set.seed){target="_blank" rel="noopener noreferrer"} function generates a sequence of random numbers, starting from the value you define in the brackets. This ensures you get the same sequence of random numbers each time you run set.seed() with the same value, which is helpful to test that your results are reproducible.
 
@@ -406,13 +468,3 @@ The [set.seed()](https://www.rdocumentation.org/packages/simEd/versions/2.0.0/to
 ```
 
 ---
-
-### Finding package dependencies
-
-Often we'll take chunks of code and reuse them for new projects. This can lead to building up a long list of packages to install, not all of which end up being used in your new code. The **NCmisc** package is a really handy way to check which packages and functions are used in your code.
-
-Firstly, load up all the packages the code has `library()` commands for, then run the following:
-
-```
-list.functions.in.file('your-filename-here.R', alphabetic = TRUE)
-```

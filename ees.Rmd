@@ -655,21 +655,6 @@ There are three statuses:
 Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release for publication.
 </div>
 
-<!-- 
----
-
-### Reviewing a release
-
----
-
-Preview table tool
-Checklist errors
-URL info
-
-`r knitr::include_graphics("images/EES-release-status-history.PNG")`
-
--->
-
 ---
 
 ### Errors and warnings
@@ -901,3 +886,5 @@ The time period for the release should reflect the time period of the data that 
 Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
 
 This section can be found by publication owners in the publication management section.
+
+---

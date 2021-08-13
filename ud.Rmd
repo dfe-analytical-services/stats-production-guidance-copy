@@ -722,9 +722,7 @@ knitr::include_graphics("images/indicator_group.png")
 
 ---
 
-
 # EES metadata
-
 
 ---
 

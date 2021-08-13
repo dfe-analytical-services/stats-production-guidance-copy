@@ -148,6 +148,8 @@ If the area is in any other server, raise a request through the central IT servi
 
 ### Moving data to different areas
 
+---
+
 Information on how to do this in R can be found in our [processes and RAP page](rap.html#Moving_data_to_different_areas)
 
 ---

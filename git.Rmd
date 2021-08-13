@@ -284,4 +284,4 @@ That should be all local branches tidied up. Now to complete the job you can pru
 
 Though you can use `git remote -v` to find other remotes if you have them.
 
-
+---
