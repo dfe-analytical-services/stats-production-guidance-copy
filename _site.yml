@@ -13,8 +13,6 @@ navbar:
           href: r.html
         - text: "Git"
           href: git.html
-    
-      href: l+d.html
     - text: "Creating statistics"
       menu:
         - text: "Processes and RAP"
@@ -29,12 +27,10 @@ navbar:
           href: pub.html
         - text: "Using EES"
           href: ees.html
-        - text: "Other options"
+        - text: "Dashboards"
           href: dashboards.html
     - text: "Review"
       menu:
-        - text: "Introduction"
-          href: user.html
         - text: "User engagement"
           href: user_eng.html
         - text: "EES analytics"

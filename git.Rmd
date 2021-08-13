@@ -2,14 +2,21 @@
 title: "Git"
 ---
 
+<p class="text-muted">Guidance and tips for using the version control software Git</p>
+
+---
 
 ## What is it
+
+---
 
 It is a version control software. It is by far the best of its kind and is widely used by software developers and data scientists.
 
 ---
 
 ## What is it for
+
+---
 
 Git is a version control software that tracks changes to files within a folder that you assign Git to track. It works best with plain text files such as flat data files, code scripts and markdown documents. These folders are known as repositories and can be held and managed securely in a central online place such as GitHub (best for public), GitLab (can be good for either public or private) and Azure DevOps (best for private). We can easily mirror our Azure DevOps repositories in the DfE Analytical Services area on [GitHub](https://github.com/dfe-analytical-services){target="_blank" rel="noopener noreferrer"}.
 
@@ -20,6 +27,8 @@ It is widely used across DfE and integrates neatly with our use of Azure DevOps,
 
 ## How to get it
 
+---
+
 Download it from the [Git website](https://git-scm.com/downloads){target="_blank" rel="noopener noreferrer"}.
 
 Git doesn't have an IDE, instead it will either integrate with your current IDE such as RStudio or Visual Studio Code, or run in the command line.
@@ -27,6 +36,8 @@ Git doesn't have an IDE, instead it will either integrate with your current IDE 
 ---
 
 ## Best places to start
+
+---
 
 <!-- worth us linking to how to create a git repo for azure and for github once our dashboard guidance is out? -->
 
@@ -44,11 +55,15 @@ Git doesn't have an IDE, instead it will either integrate with your current IDE 
 
 ### Git Bash
 
+---
+
 Git Bash allows you to run git commands without opening another IDE. You'd often need to use Git Bash to set your user settings, amend your proxy settings and clone repositories. 
 
 ---
 
 ### Git with RStudio
+
+---
 
 Git with R studio is a neat user interface for git. You don't need to use any git bash commands, and everything is done using point and click. This is useful for day-to-day version control, but does not support the full functionality of git.
 
@@ -58,11 +73,15 @@ However, you can still run the full suite of git commands by simply typing them 
 
 ##  Quick reference lookup
 
+---
+
 - GitHub have created a [cheat sheet for git commands](https://education.github.com/git-cheat-sheet-education.pdf){target="_blank" rel="noopener noreferrer"}.
 
 ---
 
 ## Other resources
+
+---
 
 - Avison Ho and Linda Bennett gave this coffee and coding presentation on [version controlling SQL with Git](https://github.com/avisionh/SQL-Titbits/wiki/User-Guide:-SQL-x-Git-Version-Control){target="_blank" rel="noopener noreferrer"}.
 
@@ -86,19 +105,21 @@ However, you can still run the full suite of git commands by simply typing them 
 
 ### Branches
 
-David Sands has produced a very helpful video on how to use branches in git which also covers how to tackle merge conflicts if and when they arise:
+---
+
+David Sands has produced a very helpful video on how to use branches in git, which also covers how to tackle merge conflicts if and when they arise:
 
 <div align=center>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/6b56e063-294c-4103-b8b7-aacc4f1c9169?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 </div>
 
-When you create a git project, it will automatically create a "master" branch for you. This is where code that has been QAd and you are happy with should sit.
+When you create a git project, it will automatically create a "main" (sometimes "master") branch for you. This is where code that has been QA'd and you are happy with should sit.
 
 - It is good practice to have at least one other branch, we tend to call it "development". This is the branch where you will be doing most of your work. To open a new branch, navigate to "branches" and click on the blue box highlighted below
 
 `r knitr::include_graphics("images/new_branch_git.png")`
 
-- Having two separate branches means that if anything goes wrong in the "development" branch, everything can be reverted to the last QAd version in "master", without having to lose too much work.
+- Having two separate branches means that if anything goes wrong in the "development" branch, the "main" or "master" branch is still unaffected and runs without issue. This lets you test and QA the code more thoroughly before merging into your main branch.
 
 - When working on your project, make sure that you are in the right branch. You can check this by navigating to the "Git" tab in RStudio as demonstrated below.
 
@@ -107,6 +128,8 @@ When you create a git project, it will automatically create a "master" branch fo
 ---
 
 ### Commits
+
+---
 
 Once you are happy with changes and want them to be in the latest version of your branch for all of your team to see, you can push "commits" up.
 
@@ -122,11 +145,15 @@ Once you are happy with changes and want them to be in the latest version of you
 
 `r knitr::include_graphics("images/pull_git.png")`
 
+Committing regularly is strongly recommended as each commit is a saved point in time that you can easily roll back to if needed. If you want to know more about how to do this, see the [reverting a commit](#revertinga-commit) section below. 
+
 ---
 
 ### Pull requests
 
-When you have got to a place with the code and your committed changes where you are happy for it to be QAd, you can open a pull request. This gives your team a chance to QA your changes before merging the branches together.
+---
+
+When you have got to a place with the code and your committed changes where you are happy for it to be QA'd, you can open a pull request. This gives your team a chance to QA your changes before merging the branches together.
 
 * Navigate to "Pull Requests" in the "Repos" tab of Azure DevOps and click the blue "New pull request" button.
 
@@ -143,13 +170,19 @@ Creating pull requests in GitHub follows a broadly similar process and should be
 
 ### Merging a branch into another one
 
-For example if you are working on a feature branch, and want to merge the latest changes to the master branch to your feature branch.
+---
+
+If you want to merge a branch into another without doing a full pull request, you can do this using a terminal.
+
+This may happen if you are working on a feature branch, and want to merge the latest changes to the master branch back into your feature branch before opening a PR to master with your own changes. Often this can let you deal with nasty conflicts up front, or allow you to keep working on your feature but update to have something new that's on master.
 
 Start off by checking out your desired target branch - `git checkout mybranch`. Then merge in the branch you want (e.g. master) - `git merge master`.
 
 ---
 
 ### Cherry picking
+
+---
 
 If you want to cherry pick specific commits for PR, you can do this by cherry picking the commits you want to use, and creating a new branch that has only those new commits that you want.
 
@@ -166,6 +199,8 @@ Happy days!
 
 ### Visualising your tree
 
+---
+
 
 You can use `gitk --all` to visualise a tree of all previous commits up to this point.
 
@@ -174,6 +209,8 @@ You can use `gitk --all` to visualise a tree of all previous commits up to this 
 ---
 
 ### Getting commit IDs
+
+---
 
 Commit IDs are the way Git identifies unique commits. They're really helpful if you ever need to revert back to a previous commit if you've made a mistake.
 
@@ -196,6 +233,8 @@ There are a number of customisable versions of this, more information is availab
 
 ### Reverting a commit
 
+---
+
 Made a mistake and need to revert? No problem! Reverting commits in git creates a new commit reversing your accidental commits, bringing you back to an earlier point in your branch. 
 
 For rolling back on a branch, you should revert any changes so that you're not erasing history others might have pulled/cloned. E.g. If you want to revert the last 3 commits on master:
@@ -217,7 +256,9 @@ You can also revert back to a particular commit ID:
 ---
 
 ### Tagging release versions
-<!-- future best pratice?! -->
+
+---
+<!-- future best practice?! -->
 
 It can be useful to tag specific commits or releases at key points in time. For us a common example will be each publication cycle, to tag the version of the code used to process data for a particular release or amendment.
 
@@ -226,6 +267,8 @@ Guidance on how to tag releases using git can be found on the draft version of t
 ---
 
 ### Cleaning up local branches
+
+---
 
 Essentially this finds all merged (old) branches, makes sure to not include master or development (can rename or add more if appropriate) and then runs those branches through the delete command. To be safe, run the first two thirds first, to print out the list of what you'll be deleting:
 
@@ -241,4 +284,4 @@ That should be all local branches tidied up. Now to complete the job you can pru
 
 Though you can use `git remote -v` to find other remotes if you have them.
 
-
+---

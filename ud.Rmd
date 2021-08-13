@@ -574,7 +574,7 @@ You can also see an example with apprenticeship data file, including the corresp
 | col_name | col_type | label | indicator_grouping | indicator_unit | filter_hint | filter_grouping_column |
 |----------|----------|-------|--------------------|----------------|-------------|------------------------|
 | starters | Indicator | Number of learners starting an apprenticeship | Apprentice starts | | | |
-| drop_outs | Indicator | Number of learners not completing an apprencticeship | Apprentice drop-outs | | | |
+| drop_outs | Indicator | Number of learners not completing an apprenticeship | Apprentice drop-outs | | | |
 | drop_out_rate | Indicator | Percentage of pupils not completing an apprenticeship | Apprentice drop-outs | % | | |
 | **appr_exact** | Filter | Type of apprenticeship | | | Select the apprenticeship types you're interested in | **appr_type** | |
 
@@ -722,9 +722,7 @@ knitr::include_graphics("images/indicator_group.png")
 
 ---
 
-
 # EES metadata
-
 
 ---
 

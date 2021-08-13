@@ -2,6 +2,9 @@
   title: "EES analytics"
 ---
 
+<p class="text-muted">Guidance on understanding how users are interacting with your statistics published via EES</p>
+
+---
 
 We track analytics of users on Explore Education Statistics using Google Analytics as well as other tools. These analytics can be found on our [EES Analytics dashboard](https://rsconnect/rsc/ees-analytics/){target="_blank" rel="noopener noreferrer"}. This tells you a range of things like:
 
