@@ -125,8 +125,6 @@ The variables (columns) in each of the uploaded data files will fall in to the f
 
 These standards give you the power to format the data in a way that best meets the needs of the users. There are only a handful of formatting standards to follow to ensure best practice and consistency across all of our data.
 
-Filenames should only include numbers, letters, underscores or hyphens. Special characters must be avoided; for example, the following characters `\ / : * ? " < > | [ ] & $ , . +` are all considered special characters and are used for specific tasks in an electronic environment, which can lead to confusion in some systems. The use of non-English language letters such as á, í, ñ, è, and õ, should also be avoided.
-
 <div class="alert alert-dismissible alert-danger">
 Data files must in comma separated values (.csv) format, and use UTF-8 encoding. You can specify this when saving the file in Excel, or exporting from elsewhere.
 </div>
@@ -137,8 +135,24 @@ If you need to use commas within a cell, then you must add a text delimiter such
 
 You should also ensure that your data follows the [GSS Standards on symbols](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank" rel="noopener noreferrer"}, though be aware to ignore the ask that symbols are included in separate cells from the data, which is unpractical and unrealistic.
 
+---
+
+### File names
+
+---
+
+File names should only include numbers, letters, underscores or hyphens. Special characters must be avoided; for example, the following characters `\ / : * ? " < > | [ ] & $ , . +` are all considered special characters and are used for specific tasks in an electronic environment, which can lead to confusion in some systems. The use of non-English language letters such as á, í, ñ, è, and õ, should also be avoided.
+
+File name should ideally be no more than 35-50 characters, file names that try to give too much information end up having the reverse affect and users skim over and get less value than from a more concise name. File names that extend beyond 200 characters will likely cause issues for users using the files in other programs.
+
+The metadata file should have exactly the same name as the data file, with a suffix of '.meta'. E.g. `mydatafile.csv` and `mydatafile.meta.csv`.
+
+You should avoid references to time periods in the file name as this information is shown elsewhere and this can make it harder for users to make use of the newer versions of files in future years. File names should be recyclable year on year.
+
+In general you should avoid including the geographic level in the file name, unless it is a file that is specifically different (e.g. a file for school level data only).
+
 <div class="alert alert-dismissible alert-danger">
-Data and metadata .csv file names must not contain any spaces. All file names should be in lower case. Any upper case characters in filenames will be forced to lower case by EES, and will appear as lower case to the users. 
+For use with EES all file names should be in lower case and avoid special characters or spaces. Any upper case characters in file names will be forced to lower case by EES, and will appear as lower case to the users. 
 </div>
 
 ---
@@ -389,7 +403,6 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 ---
 
-
 ## Geography columns
 
 ---
@@ -402,10 +415,10 @@ Teams should make sure that they are regularly checking their geography codes if
 
 If you have data from an unknown location, the standard is to use 'Not available' as name, and ':' as the code/s, this clearly marks that the geographical data for that row is unavailable, and does so in a consistent way with the wider GSS.
 
-We expect that any country codes used will come from [this list](https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data){target="_blank" rel="noopener noreferrer"}, please contact us if you have data that doesn't match this.
+We expect that all geography codes will be based on the Open Geography Portal and run checks against this for various levels in the [data screener](#How-to-check-against-these-standards), please contact us if you have data that doesn't match this.
 
 <div class="alert alert-dismissible alert-info">
-Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead. Aside from blanks, no two geographic locations should have the same code.
+Where you have data for a legacy LA that does not have a 9-digit new code, leave those cells as blank instead.
 </div>
 
 ---
