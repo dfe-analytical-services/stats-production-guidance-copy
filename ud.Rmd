@@ -193,7 +193,7 @@ When writing .csv files out of R, you'll mostly likely be using either `write.cs
 `write.csv(my_data, file = "my_data_file.csv", encoding = "UTF-8")`
 
 
-For `write_csv()`, which some of you may be using for increased processing speed, automatically encodes as UTF-8 format, meaning that you don't have to do anything different!
+For `write_csv()`, which some of you may be using for increased processing speed, the function automatically encodes as UTF-8 format, meaning that you don't have to do anything different!
 
 ---
 
@@ -259,9 +259,77 @@ In line with the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploa
 
 If you have any other conventions you've used in previous publications, or a scenario that isn't covered above, check the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank" rel="noopener noreferrer"} (ignoring the part around separate columns for symbols), and contact us.
 
+
 ---
 
-# Observational units
+
+# EES metadata
+
+
+---
+
+Metadata in a machine readable (.csv) format must accompany datasets uploaded to the Explore Education Statistics platform to ensure that the files can be processed correctly. This data will not be seen by users and is purely for EES to be able to understand and read your data.
+
+
+This EES metadata is different to any metadata files you may provide alongside your data for your users.
+
+
+We only need to provide EES metadata for filters and indicators, we do not need to provide any EES metadata for the compulsory observational units (time and geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields. 
+
+
+We do not need to provide metadata for filters that only have a single level, as this data is not useful for EES, and is there for the benefit of end users downloading the files.
+
+
+<div class="alert alert-dismissible alert-info">
+Note that any extra geography columns not specified in the [allowable values](#allowable-geographic-levels) above, or any time columns extra to time_period and time_identifier, are [filters](#filters), and should be included in EES metadata if they have two or more levels.
+</div>
+
+
+With some files there may be more than one way to specify the metadata that will work in EES and give an accurate representation of the data itself. In these cases we recommend that publication teams test out different approaches and decide their approach based on what will best meet the needs of the users of their data.
+
+---
+
+## Mandatory EES metadata columns
+
+---
+
+| column                 | details                                                        |
+|------------------------|----------------------------------------------------------------|
+| col_name               | This must exactly match the name of the corresponding column in the dataset. |
+| col_type               | This must be either ‘Filter’ or ‘Indicator’. |
+| label                  | This is the version of the column name that the users will see on the platform, therefore you must fill this in and not leave it blank. For example, pupil_headcount may be ‘Number of pupil enrolments’. You should aim to keep these short and descriptive, but have the freedom to decide what is best to do for your users. |
+| indicator_grouping     | This column gives production teams the option to add subheadings to group indicators in order to benefit the user. If this column is left blank, all indicators will be presented as one list of individual square radio boxes with no subheadings.|
+| indicator_unit         | If this column is left blank then this will be a number by default, alternatively you can use either of the following units for financial or percentage measures - "£", "£m", "%", "pp". | 
+| indicator_dp           | This column allows you to set decimal place formatting for each of your indicators. If you leave it blank the platform will default to 2 d.p |
+| filter_hint            | This column gives you the option to add in a hint such as 'Filter by school type' for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. Do not duplicate the column name here, as it will just appear twice | 
+| filter_grouping_column | This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the exact name of the column/variable that you wish to group by. It is good practice to use the same variable name as that you are grouping, with _group appended at the end, i.e. 'filter' and 'filter_group' |
+
+
+Note that if you are using percentage points (pp) you must include a clear explanation in your release and methodology, so that users can understand what you are referring to. 
+
+---
+
+## Example EES metadata
+
+---
+
+: Each row represents a corresponding column in the data file.
+
+| col_name | col_type | label | indicator_grouping | indicator_unit | indicator_dp | filter_hint | filter_grouping_column |
+|----------|----------|-------|--------------------|----------------|-------------|------------------------|
+| gender | Filter | Gender | | | | Filter by pupil gender | |
+| school_phase | Filter | School phase | | | | Filter by the phase of the school | |
+| number_children | Indicator | Number of children | | | | |
+| percent_children | Indicator | Percentage of children | | % | 1 | | |
+
+---
+
+
+`r knitr::kable(metadata_data_example, caption = "The corresponding data file.")`
+
+---
+
+# Time and geography
 
 ---
 
@@ -731,73 +799,5 @@ Example of how this would look in Explore Education Statistics:
 ```{r, echo=FALSE, fig.align='center'}
 knitr::include_graphics("images/indicator_group.png")
 ```
-
-
----
-
-
-# EES metadata
-
-
----
-
-Metadata in a machine readable (.csv) format must accompany datasets uploaded to the Explore Education Statistics platform to ensure that the files can be processed correctly. This data will not be seen by users and is purely for EES to be able to understand and read your data.
-
-
-This EES metadata is different to any metadata files you may provide alongside your data for your users.
-
-
-We only need to provide EES metadata for filters and indicators, we do not need to provide any EES metadata for the compulsory observational units (time and geography), as this has been standardised and the platform is expecting pre-defined columns and values in those fields. 
-
-
-We do not need to provide metadata for filters that only have a single level, as this data is not useful for EES, and is there for the benefit of end users downloading the files.
-
-
-<div class="alert alert-dismissible alert-info">
-Note that any extra geography columns not specified in the [allowable values](#allowable-geographic-levels) above, or any time columns extra to time_period and time_identifier, are [filters](#filters), and should be included in EES metadata if they have two or more levels.
-</div>
-
-
-With some files there may be more than one way to specify the metadata that will work in EES and give an accurate representation of the data itself. In these cases we recommend that publication teams test out different approaches and decide their approach based on what will best meet the needs of the users of their data.
-
----
-
-## Mandatory EES metadata columns
-
----
-
-| column                 | details                                                        |
-|------------------------|----------------------------------------------------------------|
-| col_name               | This must exactly match the name of the corresponding column in the dataset. |
-| col_type               | This must be either ‘Filter’ or ‘Indicator’. |
-| label                  | This is the version of the column name that the users will see on the platform, therefore you must fill this in and not leave it blank. For example, pupil_headcount may be ‘Number of pupil enrolments’. You should aim to keep these short and descriptive, but have the freedom to decide what is best to do for your users. |
-| indicator_grouping     | This column gives production teams the option to add subheadings to group indicators in order to benefit the user. If this column is left blank, all indicators will be presented as one list of individual square radio boxes with no subheadings.|
-| indicator_unit         | If this column is left blank then this will be a number by default, alternatively you can use either of the following units for financial or percentage measures - "£", "£m", "%", "pp". | 
-| indicator_dp           | This column allows you to set decimal place formatting for each of your indicators. If you leave it blank the platform will default to 2 d.p |
-| filter_hint            | This column gives you the option to add in a hint such as 'Filter by school type' for the filter to make the service easier for the users to navigate. If you leave the column blank, no hint will appear. Do not duplicate the column name here, as it will just appear twice | 
-| filter_grouping_column | This column should be blank unless you are wanting to group your filters. When you are wanting to group your filters this column should contain the exact name of the column/variable that you wish to group by. It is good practice to use the same variable name as that you are grouping, with _group appended at the end, i.e. 'filter' and 'filter_group' |
-
-
-Note that if you are using percentage points (pp) you must include a clear explanation in your release and methodology, so that users can understand what you are referring to. 
-
----
-
-## Example EES metadata
-
----
-
-: Each row represents a corresponding column in the data file.
-
-| col_name | col_type | label | indicator_grouping | indicator_unit | indicator_dp | filter_hint | filter_grouping_column |
-|----------|----------|-------|--------------------|----------------|-------------|------------------------|
-| gender | Filter | Gender | | | | Filter by pupil gender | |
-| school_phase | Filter | School phase | | | | Filter by the phase of the school | |
-| number_children | Indicator | Number of children | | | | |
-| percent_children | Indicator | Percentage of children | | % | 1 | | |
-
----
-
-
-`r knitr::kable(metadata_data_example, caption = "The corresponding data file.")`
 
 ---

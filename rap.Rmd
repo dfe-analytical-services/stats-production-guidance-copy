@@ -480,9 +480,6 @@ One huge benefit that comes with using code in our processes, is that we can pic
 
 **How to get started**
 
-<!-- could have a code example? -->
-
-
 Review your code and consider the following:
  
  - What steps might need re-editing or could become irrelevant?
@@ -796,15 +793,11 @@ Summary outputs are automated and used to explore the stories of the data.
 
 The Statistics Development Team are developing the QA app to include basic summary outputs, more will follow in this space when this is ready.
 
-<!-- potential text after the qa app is ready for this
-
 At a basic level we want teams to make use of the QA app to explore their data:
 
 - Have you used the outputs of the automated QA from the screener to understand the data?
 
 - Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text
-
--->
 
 **Why do it?**
 
@@ -814,7 +807,7 @@ As a result, we should be developing automated summaries to help us to better un
 
 **How to get started**
 
-More to follow, in the meantime please contact us for advice.
+More to follow, in the meantime if you're unsure on how to get started please contact us for advice.
 <!-- needs example and link to the QA app when ready -->
 
 ---
@@ -1007,7 +1000,7 @@ As a starting point, you should aim to have as many of the following sections as
 - How to contribute
 - Contact details
 
-The [Self-assessment tool](https://github.com/dfe-analytical-services/publication-self-assessment-copy){target="_blank" rel="noopener noreferrer"} and the [QA app](https://github.com/dfe-analytical-services/dfe-published-data-qa){target="_blank" rel="noopener noreferrer"} give two examples of this.
+The [Self-assessment tool](https://github.com/dfe-analytical-services/publication-self-assessment-copy){target="_blank" rel="noopener noreferrer"} and the [QA app](https://github.com/dfe-analytical-services/dfe-published-data-qa){target="_blank" rel="noopener noreferrer"} give two examples of readme files structured like this.
 
 ---
 
