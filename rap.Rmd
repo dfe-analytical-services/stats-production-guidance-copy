@@ -807,8 +807,7 @@ As a result, we should be developing automated summaries to help us to better un
 
 **How to get started**
 
-More to follow, in the meantime if you're unsure on how to get started please contact us for advice.
-<!-- needs example and link to the QA app when ready -->
+Use the additional tabs available after a data file passes the [data screener](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank" rel="noopener noreferrer"} as a starting point to explore trends across breakdowns and years.
 
 ---
 
