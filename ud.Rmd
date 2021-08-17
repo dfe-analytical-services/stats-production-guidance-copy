@@ -46,25 +46,6 @@ This can be run on any data file, though requires the [EES metadata](#ees-metada
 
 ---
 
-This guide aims to help statistical production teams understand and meet the standards required. This includes:
-
-- [General file requirements](#general-requirements)
-
-- [Observational units](#observational-units)
-
-- [Filters](#filters)
-
-- [Indicators](#indicators)
-
-- [Metadata requirements for Explore Education Statistics](#ees-metadata)
-
-- [How to check your data against these standards and next steps](#how-to-check-against-the-standards)
-
-
-If you have any questions, or would like any further advice on what you read here, contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
-
----
-
 # General requirements
 
 ---
