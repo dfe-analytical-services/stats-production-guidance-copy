@@ -467,9 +467,6 @@ One huge benefit that comes with using code in our processes, is that we can pic
 
 **How to get started**
 
-<!-- could have a code example? -->
-
-
 Review your code and consider the following:
  
  - What steps might need re-editing or could become irrelevant?
@@ -783,15 +780,11 @@ Summary outputs are automated and used to explore the stories of the data.
 The Statistics Development Team have developed [the QA app](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank" rel="noopener noreferrer"} to include some of these automated summaries, including minimum, maximum and average summaries for each indicator.
 
 
-<!-- potential text after the qa app is ready for this
-
 At a basic level we want teams to make use of the QA app to explore their data:
 
 - Have you used the outputs of the automated QA from the screener to understand the data?
 
 - Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text
-
--->
 
 **Why do it?**
 
@@ -803,9 +796,10 @@ As a result, we should be developing automated summaries to help us to better un
 
 Consider:
 
-- Using the outputs of the automated QA from the screener to understand the data
+- Use the additional tabs available after a data file passes the [data screener](https://rsconnect/rsc/dfe-published-data-qa/){target="_blank" rel="noopener noreferrer"} as a starting point to explore trends across breakdowns and years.
 
 - Running your publication-specific automated QA, ensuring that all interesting outputs/trends are reflected in the accompanying text
+
 
 ---
 
@@ -997,7 +991,7 @@ As a starting point, you should aim to have as many of the following sections as
 - How to contribute
 - Contact details
 
-The [Self-assessment tool](https://github.com/dfe-analytical-services/publication-self-assessment-copy){target="_blank" rel="noopener noreferrer"} and the [QA app](https://github.com/dfe-analytical-services/dfe-published-data-qa){target="_blank" rel="noopener noreferrer"} give two examples of this.
+The [Self-assessment tool](https://github.com/dfe-analytical-services/publication-self-assessment-copy){target="_blank" rel="noopener noreferrer"} and the [QA app](https://github.com/dfe-analytical-services/dfe-published-data-qa){target="_blank" rel="noopener noreferrer"} give two examples of readme files structured like this.
 
 ---
 
