@@ -94,7 +94,7 @@ Further details on tidy data, can be found by reading Hadley Wickham's academic 
 The variables (columns) in each of the uploaded data files will fall in to the following three categories. The standards for each category are discussed in detail later on this page.
 
 
-- **[Observational units](#observational-units)** - time and geography identifiers
+- **[Time and geography](#time-and-geography)** - time and level identifiers that make up our observational units
 - **[Filters](#filters)** - the things we filter our data on, e.g. school types or learner characteristics
 - **[Indicators](#indicators)** - the things we measure, e.g. pupil numbers or percentage of online applications
 
