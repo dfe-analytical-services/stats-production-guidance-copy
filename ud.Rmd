@@ -317,7 +317,7 @@ Note that if you are using percentage points (pp) you must include a clear expla
 Every observation, or row, in all of the provided data files will have a set of observational units based on the time period and geographic level that the data relates to. The number of these columns will differ across files depending on the number of geographic levels included in the publication.
 
 
-Across every single dataset of official statistics produced by DfE, the following column names MUST be present at a minimum (example cell values):
+Across every single dataset of official statistics produced by DfE, the following column names must be present at a minimum (example cell values):
 
 | time_period | time_identifier	| geographic_level | country_code | country_name |
 |-------------|-----------------|------------------|--------------|--------------|
