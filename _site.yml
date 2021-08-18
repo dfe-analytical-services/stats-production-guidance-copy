@@ -3,8 +3,16 @@ output_dir: "."
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Learning resources"
-      href: l+d.html
+    - text: "Learning and development"
+      menu:
+        - text: "General resources"
+          href: l+d.html
+        - text: "SQL"
+          href: sql.html
+        - text: "R"
+          href: r.html
+        - text: "Git"
+          href: git.html
     - text: "Creating statistics"
       menu:
         - text: "Processes and RAP"
@@ -19,10 +27,14 @@ navbar:
           href: pub.html
         - text: "Using EES"
           href: ees.html
-        - text: "Other options"
+        - text: "Dashboards"
           href: dashboards.html
     - text: "Understanding users"
-      href: user.html
+      menu:
+        - text: "User engagement"
+          href: user_eng.html
+        - text: "EES analytics"
+          href: user_an.html
   right:
   - text: ""
     href: mailto:statistics.development@education.gov.uk

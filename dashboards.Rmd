@@ -1,7 +1,9 @@
 ---
-title: "Best practice for publishing outside of EES"
+title: "Best practice for publishing dashboards"
 ---
 
-<p class="text-muted">Guidance for publishing statistics outside of EES</p>
+<p class="text-muted">Guidance for publishing statistics dashboards outside of EES</p>
+
+---
 
 More details will follow on this page in the coming weeks.

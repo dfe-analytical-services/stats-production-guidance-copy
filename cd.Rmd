@@ -1,5 +1,5 @@
 ---
-title: "Best Practice for Content Design"
+title: "Writing and visualising"
 ---
 
 <p class="text-muted">Things to consider when writing statistical commentary</p>
@@ -19,51 +19,21 @@ When writing content to a general audience, statisticians must explain the answe
 
 Migration to a new statistics dissemination platform - Explore Education Statistics (EES) - presents an opportunity for publications to be reviewed and for the way this is communicated to be more consistent and accessible. 
 
-From late 2020, the Central Statistics Support Unit has been leading on developing guidance and support for producers to embed best practice in their writing.
-
-Teams can now continually improve their publications, assessing against best practice using our [content checklist](#guidance-and-support)
+Teams should continually improve their publications, assessing against best practice using our [content checklist](#checklist).
 
 We are running publication scrums where teams can put forward their publication(s) for review by a group of volunteer analysts, providing feedback as ‘unfamiliar new readers’ to discuss ideas for further improvements. For more information, see the [publication scrums](#publication-scrums) section. 
 
----
-
-# Statistics in the media
 
 ---
 
-Below is a session by Robert Cuffe from the BBC talking to DfE statisticians about writing our publications in a way they can be used by journalists and the media. The session is a mix of Robert talking about his experience, interactive elements and a question and answer session to round off. For the interactive tasks, you can follow along to help give you a sense of how journalists use our publications.
-
-<div align=center>
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b44d821a-9b5c-437a-b321-673c4304c350?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
-</div>
-
----
-
-# Guidance and Support
+# Checklist
 
 ---
 
 The guidance on content design is in the form of a handy checklist, co-produced with local statisticians, and supported by the [Good Practice Team](https://gss.civilservice.gov.uk/the-good-practice-team-gpt/#:~:text=The%20Good%20Practice%20Team%20(GPT)%20is%20here%20to%20help%20the,for%20National%20Statistics%20(ONS)){target="_blank" rel="noopener noreferrer"}. This builds on ONS’s Best Practice guidance on [Data Visualisation](https://gss.civilservice.gov.uk/policy-store/introduction-to-data-visualisation/){target="_blank" rel="noopener noreferrer"} and [Writing about Statistics](https://gss.civilservice.gov.uk/policy-store/writing-about-statistics-2/){target="_blank" rel="noopener noreferrer"}. 
 
-The content checklist is for team’s to use throughout their project cycle, so that good content design is at the heart of what they deliver at all stages, rather than considered late in the process [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}.
+The content checklist is for teams to use throughout their project cycle, so that good content design is at the heart of what they deliver at all stages, rather than considered late in the process [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}.
 
----
-
-# Publication scrums
-
----
-
-CSSU are running publication scrums, which enable publications to be looked at with fresh eyes through a workshop with volunteers and the publication team. The content checklist, which breaks down the components of producing Best Practice content into smaller chunks with prompt questions is used [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}, along with workshop slides. 
-
-One of the early outcomes from running publication scrums, was that great content design is more of an art form than science and the scrum process was found to be really useful in enabling a wider element of scrutiny and friendly challenge, in an enjoyable environment to consider publication content. 
-
-You can experience how a scrum runs through watching this scrum-along (features the scrum up until groups breakout to discuss different elements) and [supporting slides](https://educationgovuk.sharepoint.com/:p:/r/sites/lvewp00086/WorkplaceDocuments/CSSU/Statistics%20Strategy%20Team/Content%20Design%20Scrums%20materials/Content%20Design%20Scrum.pptx?d=wb13c1dc2628647718ef9fd1690653547&csf=1&web=1&e=qKLAYn){target="_blank" rel="noopener noreferrer"}
-
-<div align=center>
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/73fa0d31-b8b3-4889-bfcf-c76c33c1fe87?autoplay=false&showinfo=false" allowfullscreen style="border:none;"></iframe>
-</div>
-
-If you're interested in being involved in future scrums, please get in contact with Heather Brown.
 
 ---
 
@@ -141,11 +111,10 @@ People who write about statistics should seek to conduct a coherent statistical 
 !-->
 
 
-# Introducing the Statistics
+# Key Messages
 
 ---
 
-This section illustrates some examples on how to write about your statistics by orientating the user to the purpose of the publication and summarising and pulling out key trends. 
 Start by introducing the topic of your work and the questions you seek to answer with the numbers that follow. To help set the scene for your statistics, begin with a topic sentence that introduces the variables and the W’s (when, where and what). 
 
 Examples (NB. Fictional): 
@@ -154,43 +123,21 @@ Examples (NB. Fictional):
 
 This jumps directly to presenting the data without orientating the reader to the topic and objectives. 
 
-**Better**: “What factors explain the observed rise and fall in overall homicides in England in the 2000s”
+**Better**: “What factors explain the observed rise and fall in overall homicides in England in the 2000s?”
 
 This uses a rhetorical question to introduce the context (where and when) and the pattern to be investigated (the time trend). However, this does not specify the possible explanatory factors. 
 
 **Best**: “Was the substantial rise and fall in the number of homicides in the 2000s in England (Figure 1) observed across all age groups and types of weapons (Figure 2)?”
 There have been no numbers presented yet, just a statement that establishes the purpose of the statistics. Introducing your topic is important especially when presenting a series of charts or tables. 
 
----
+Below is a session by Robert Cuffe from the BBC talking to DfE statisticians about writing our publications and highlighting key messages in a way they can be used by journalists and the media. 
 
-# Reporting and interpreting numbers
+<div align=center>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b44d821a-9b5c-437a-b321-673c4304c350?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
+</div>
 
-<p class="text-muted">Summarising patterns from tables and charts</p>
-
----
-
-Reporting the numbers you work with is an important first step toward writing effective numeric descriptions. By including numbers in text, table or chart, you give the user the raw materials with which to perform comparisons across time, places or groups. However, if you stop there, you leave it to your readers to figure out how those data answer the question at hand. 
-
-**Poor**: “In 2010, there were 20, 370 overall homicides related to crime, 13,000 which were related to gun incidents, 7,370 related to other weapons. In 2020, they were 18,900 overall homicides, 11,000 which were related to gun incidents, 9,900 related to other weapons (Figure 1)”.
-
-The description above simply lists statistics from charts without explaining how they relate to one another or how the statistics address the initial question in the opening paragraph. 
-
-**Better**: “The total number of homicides rose until the mid-2000s and then declined until 2020. As shown in Figure 1, the increase and subsequent decrease in homicides were driven by trends in gun-related homicides. In 2020, there was roughly 1.5 times as many homicides were committed with guns as with other types of weapons (11,000 versus 7265; Figure 1); whereas in 2010, roughly 2 times as many homicides were committed with guns versus other weapons, 13000 and 6500, respectively.  Figure 2 examines whether gun-related homicides showed the same time trend among all age groups. As shown in Figure 2 in the two youngest groups of offenders, gun-related homicides increased substantially between 2000 and 2010, and then decreased steadily until 2020. In contrast, the number of gun related homicides committed by older offenders decreased slowly throughout the time-period shown”.  
-
-Try to use prose to summarise the patterns so your user can see the general relationship in the table or chart – the forest not the individual trees. Try not to report every number from the table or chart or pick a few arbitrary numbers to contrast in sentence form without considering whether or not those numbers represent an underlying general pattern. Paint the big picture rather than reiterating all the little details. This will help you tell a clear story with numbers as evidence. 
 
 ---
-
-# Writing in EES
-
----
-
-The layout of the new platform provides a natural template and enforces a base level of consistency, whilst leaving enough flexibility to meet the needs of a range of publications. All design aspects of this layout have been iteratively user-tested to ensure it's as navigable, accessible, and understandable as possible. 
-
-Essentially, your release should have a headline statistics part, followed by up to 10 headered accordion sections, most releases are already structured this way in the PDFs.
-
----
-
 
 ## Headline facts and figures
 
@@ -238,7 +185,7 @@ We recommend that the first accordion section in each release should be 'About t
 
 ---
 
-#### What not to include in this section:
+### What not to include in this section
 
 ---
 
@@ -249,7 +196,7 @@ We recommend that the first accordion section in each release should be 'About t
 
 ---
 
-#### Things that you should include in this section are:
+### Things that you should include in this section are
 
 ---
 
@@ -265,11 +212,30 @@ We recommend that the first accordion section in each release should be 'About t
 
 ---
 
+# Writing content
+
+---
+
+The layout of the new platform provides a natural template and enforces a base level of consistency, whilst leaving enough flexibility to meet the needs of a range of publications. All design aspects of this layout have been iteratively user-tested to ensure it's as navigable, accessible, and understandable as possible. 
+
+Essentially, your release should have a headline statistics part, followed by up to 10 headered accordion sections, most releases are already structured this way in the PDFs.
+
+
+---
+
+## Active headings and titles - content
+
+---
+
+Throughout the commentary, active sub-headings outline the main messages making them memorable for users. They should be a short summary of the contents - **aim for 10 words or less** - rather than a full statistical headline. **Avoid using exaggerated or sensationalist language** that you would not use in your main commentary such as "highest ever" or "only". Be neutral in selecting the message to use in the heading rather than favouring positive or negative messages.
+
+---
+
 ## Accordion section content
 
 ---
 
-You should split your release into sections that each focus on one or two key messages, with a recommended maximum of 10 sections in the release. **The whole release should take no more than 10 minutes to read.**  
+You should split your release into sections that each focus on one or two key messages, with a recommended maximum of 10 sections in the release. **The whole release should take no more than 10 minutes to read.** Our [analytics app](https://rsconnect/rsc/ees-analytics/){target="_blank" rel="noopener noreferrer"} contains insights on how long it takes the average user to read your release.
 
 To keep the release short only include information if there is something interesting to say - the commentary is there to tell a story, people looking for specific figures will use the table tool, or download the underlying data instead. **Do not try to summarise every number in the commentary.**
 
@@ -285,31 +251,19 @@ Do not use footnotes in the text of your content. They’re designed for referen
 
 ---
 
-## Active headings and titles
+## Reporting and interpreting numbers
 
 ---
 
-Throughout the commentary, active sub-headings outline the main messages making them memorable for users. They should be a short summary of the contents - **aim for 10 words or less** - rather than a full statistical headline. **Avoid using exaggerated or sensationalist language** that you would not use in your main commentary such as "highest ever" or "only". Be neutral in selecting the message to use in the heading rather than favouring positive or negative messages.
+Reporting the numbers you work with is an important first step toward writing effective numeric descriptions. By including numbers in text, table or chart, you give the user the raw materials with which to perform comparisons across time, places or groups. However, if you stop there, you leave it to your readers to figure out how those data answer the question at hand. 
 
-For tables and charts, active titles are descriptive and tell the trend by **highlighting the main story**. They should be short - aim for 10 words or less and avoid going over more than one line. Active titles give users the main message without having to find the text that accompanies the chart, and makes it easier for journalists to use your chart directly without having to write their own summary. 
+**Poor**: “In 2010, there were 20, 370 overall homicides related to crime, 13,000 which were related to gun incidents, 7,370 related to other weapons. In 2020, they were 18,900 overall homicides, 11,000 which were related to gun incidents, 9,900 related to other weapons (Figure 1)”.
 
-Put information such as the measure, source, population, geographical coverage and time period in a caption if they are not obvious from the chart content. Add further context and information in the main text. **Remember that tables and charts should be usable even if isolated** from the rest of the release.
+The description above simply lists statistics from charts without explaining how they relate to one another or how the statistics address the initial question in the opening paragraph. 
 
----
+**Better**: “The total number of homicides rose until the mid-2000s and then declined until 2020. As shown in Figure 1, the increase and subsequent decrease in homicides were driven by trends in gun-related homicides. In 2020, there was roughly 1.5 times as many homicides were committed with guns as with other types of weapons (11,000 versus 7265; Figure 1); whereas in 2010, roughly 2 times as many homicides were committed with guns versus other weapons, 13000 and 6500, respectively.  Figure 2 examines whether gun-related homicides showed the same time trend among all age groups. As shown in Figure 2 in the two youngest groups of offenders, gun-related homicides increased substantially between 2000 and 2010, and then decreased steadily until 2020. In contrast, the number of gun related homicides committed by older offenders decreased slowly throughout the time-period shown”.  
 
-## Using data blocks effectively 
-
----
-
-**Aim for fewer tables, and keep them small. As a guide, we suggest no more than one table per accordion section.**
-
-Presentation tables are the tables you include within the accordion sections of your release to quickly visualise numbers. Unlike the underlying data files, the presentation tables focus on specific parts of the story you are telling. They are distinct from, and should never be a copy of an underlying data file. 
-
-You should only be including small tables sparingly where they add value to your release and not use them as a straight copy of the ready-made Excel tables previously published on gov.uk. The data itself is there for users to access through other means, therefore any data in the commentary should only be there if it is enhancing the story.
-
-<div class="alert alert-dismissible alert-danger">
-You do not need to recreate all of the old excel tables, users can find the numbers they are interested in using the table tool, or analyse the underlying data if they want the data behind the release. 
-</div>
+Try to use prose to summarise the patterns so your user can see the general relationship in the table or chart – the forest not the individual trees. Try not to report every number from the table or chart or pick a few arbitrary numbers to contrast in sentence form without considering whether or not those numbers represent an underlying general pattern. Paint the big picture rather than reiterating all the little details. This will help you tell a clear story with numbers as evidence. 
 
 ---
 
@@ -335,10 +289,86 @@ Search engine optimisation (SEO) makes it easier for users to find your data thr
 
 * Make use of our [analytics app](https://rsconnect/rsc/ees-analytics/){target="_blank" rel="noopener noreferrer"} to explore what your users are doing: what accordions are they clicking on, what are they searching for? This could give an idea of what content you should focus on in future, and which areas are no longer of interest to most of your users.
 
+Following best practice in writing about statistics is of increasing importance. As shown in the below example any sentence could be pulled out into a snippet and shown in a search engine to users who are searching for related information:
+
+`r knitr::include_graphics("images/google-snippet.png")`
+
+
+We should make a concerted effort to ensure that we are answering the questions people are interested in as search engines are getting smarter and pulling this information directly out of webpages. See the following example of a google search using a snippet from one of our publications as an answer in the search engine results itself:
+
+`r knitr::include_graphics("images/google-peopleAlsoAsk.png")`
+
+
 
 ---
 
-## Methodology
+# Data visualisation
+
+---
+
+EES allows you to build charts and tables to visually represent information from your release, this can be particularly helpful to show trends over time, across geographies or highlight interesting stories in the data.
+
+
+---
+
+## Active headings and titles - charts and tables
+
+---
+
+For tables and charts, active titles are descriptive and tell the trend by **highlighting the main story**. They should be short - aim for 10 words or less and avoid going over more than one line. Active titles give users the main message without having to find the text that accompanies the chart, and makes it easier for journalists to use your chart directly without having to write their own summary. 
+
+Put information such as the measure, source, population, geographical coverage and time period in a caption if they are not obvious from the chart content. Add further context and information in the main text. **Remember that tables and charts should be usable even if isolated** from the rest of the release.
+
+---
+
+## Using data blocks effectively 
+
+---
+
+**Aim for fewer tables, and keep them small. As a guide, we suggest no more than one table per accordion section.**
+
+Presentation tables are the tables you include within the accordion sections of your release to quickly visualise numbers. Unlike the underlying data files, the presentation tables focus on specific parts of the story you are telling. They are distinct from, and should never be a copy of an underlying data file. 
+
+You should only be including small tables sparingly where they add value to your release and not use them as a straight copy of the ready-made Excel tables previously published on gov.uk. The data itself is there for users to access through other means, therefore any data in the commentary should only be there if it is enhancing the story.
+
+<div class="alert alert-dismissible alert-danger">
+You do not need to recreate all of the old excel tables, users can find the numbers they are interested in using the table tool, or analyse the underlying data if they want the data behind the release. 
+</div>
+
+---
+
+## Charts in EES
+
+---
+
+Any charts in your release should be appropriate for the data, reinforcing the key messages. For more detailed information on how to build charts in EES, visit our [EES charts guidance section](ees.html#Charts). 
+
+More complex charts cannot currently be built in EES. You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. 
+
+For any charts made outside of EES you must be using [GDS colours](https://design-system.service.gov.uk/styles/colour/), the following hex codes represent the colours that are available for charts in EES, we strongly recommend you stick to these (if you can't for any reason, please get in touch with us so we can understand why - we are in the process of developing more detailed guidance):
+
+| Colour name (GDS) | Hex code |
+|-------------------|----------|
+| Blue              | #1d70b8  |
+| Bright purple     | #912b88  |
+| Pink              | #d53880  |
+| Light pink        | #f499be  |
+| Orange            | #f47738  |
+| Brown             | #b58840  |
+| Light green       | #85994b  |
+| Turquoise         | #28a197  |
+| Dark grey         | #505a5f  |
+| Black             | #0b0c0c  |
+| Red               | #d4351c  |
+| Yellow            | #ffdd00  |
+| Green             | #00703c  |
+
+DWP have created a [Data Visualisation Thinking](https://dataviztraining.dwpdata.info/index.html) course that may be useful to look at when creating more complex charts.
+
+
+---
+
+# Writing methodology
 
 ---
 
@@ -353,7 +383,7 @@ For releases that have a .html methodology page the relevant link will display a
 
 ---
 
-# Glossary
+## Glossary
 
 ---
 
@@ -365,31 +395,8 @@ Before creating a new definition, check the glossary to see if one is already th
 
 Include essential definitions in the commentary where they are relevant, you should not expect users to go to the glossary or about these statistics section for information they need to understand the statistics. Do not use the glossary to explain methodology such as classification decisions, explain these in the text if essential or otherwise in the methodology document.
 
----
-
-# User-led content improvements
 
 ---
-
-Did you know that we collect data on every publication live on EES in our [analytics app](https://rsconnect/rsc/ees-analytics){target="_blank" rel="noopener noreferrer"}? This tells you a range of things like:
-
-* How many times each accordion has been clicked
-* How long users spend on your page
-* How many times each table has been used in the table builder or downloaded
-
-The below table gives some pointers on how you can use these stats to improve your release for users:
-
-|Measure	|Guidance|
-|----|---------|
-|Search terms|	For popular search terms, add additional commentary or signposting using subheadings and accordions for to support your user's interests. If you refer to a popular search term by another name, consider changing it so users know what you're talking about.
-|Accordion openings|	Consider removing accordions with low numbers of clicks from your release. You could move them further up the page or group them into existing accordions if this commentary is essential to your release.
-|Downloads|	For files with low numbers of downloads, consider combining information into other files, or consider removing from your publication entirely if users are no longer interested in this data.
-|Tables built|	For tables with low numbers of interactions in the table tool, create featured tables to demonstrate the useful information they hold.
-|Permalinks|	Save popular permalinks as featured tables in future, so users can easily get to the data they want.
-|Traffic sources|	Consider where your users are being routed from and what is being written about your stats - clearly highlight key stories in the Headlines section and make use of the blue key stat tiles to make them easy to digest.|
-
----
-
 
 # Advice and support
 
@@ -405,11 +412,27 @@ More detailed advice and guidance on content design best practice is available f
 
 - [GSS best practice guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2018/11/Writing-about-statistics-Edition-2.0-October-2018-1.pdf){target="_blank" rel="noopener noreferrer"}
 - [GSS best practice hints and tips](https://teams.microsoft.com/_){target="_blank" rel="noopener noreferrer"}
-- [ONS style guide](https://style.ons.gov.uk/category/writing-a-statistical-bulletin/){target="_blank" rel="noopener noreferrer"}
 - [UNECE drafting guidance](http://www.unece.org/stats/documents/writing.html){target="_blank" rel="noopener noreferrer"}
 - [This link](https://support.office.com/en-gb/article/test-your-document-s-readability-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2){target="_blank" rel="noopener noreferrer"} provides details on how to get readability scores on your drafting in Word.
 - Similarly, the [Hemingway app](http://www.hemingwayapp.com/) is an online tool to assess readability. Whilst we might not want to use this directly for final drafting, it is useful to highlight areas of particular complexity in our current narrative. Additionally, the GSS Good Practice team set an exercise to try to write about your results without using any numbers: this can be really helpful to help understand the story you're trying to tell with your statistics.
 - As an illustrative example of work in other Departments - DWP's Fraud & Error statistics [before](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-201213-estimates){target="_blank" rel="noopener noreferrer"} (128 page release), and [after](https://www.gov.uk/government/statistics/fraud-and-error-in-the-benefit-system-financial-year-2017-to-2018-estimates){target="_blank" rel="noopener noreferrer"} their own modernisation work are worth a look.
 
+---
+
+## Publication scrums
+
+---
+
+CSSU are running publication scrums, which enable publications to be looked at with fresh eyes through a workshop with volunteers and the publication team. The content checklist, which breaks down the components of producing Best Practice content into smaller chunks with prompt questions is used [(Download checklist)](resources/Content_Design_Logbook.xlsx){target="_blank" rel="noopener noreferrer"}, along with workshop slides. 
+
+One of the early outcomes from running publication scrums, was that great content design is more of an art form than science and the scrum process was found to be really useful in enabling a wider element of scrutiny and friendly challenge, in an enjoyable environment to consider publication content. 
+
+You can experience how a scrum runs through watching this scrum-along (features the scrum up until groups breakout to discuss different elements) and [supporting slides](https://educationgovuk.sharepoint.com/:p:/r/sites/lvewp00086/WorkplaceDocuments/CSSU/Statistics%20Strategy%20Team/Content%20Design%20Scrums%20materials/Content%20Design%20Scrum.pptx?d=wb13c1dc2628647718ef9fd1690653547&csf=1&web=1&e=qKLAYn){target="_blank" rel="noopener noreferrer"}
+
+<div align=center>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/73fa0d31-b8b3-4889-bfcf-c76c33c1fe87?autoplay=false&showinfo=false" allowfullscreen style="border:none;"></iframe>
+</div>
+
+If you're interested in being involved in future scrums, please get in contact with Heather Brown.
 
 ---
