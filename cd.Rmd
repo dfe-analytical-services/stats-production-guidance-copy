@@ -1,5 +1,5 @@
 ---
-title: "Best Practice for Content Design"
+title: "Writing and visualising"
 ---
 
 <p class="text-muted">Things to consider when writing statistical commentary</p>
@@ -341,7 +341,7 @@ You do not need to recreate all of the old excel tables, users can find the numb
 
 ---
 
-Any charts in your release should be appropriate for the data, reinforcing the key messages. For more detailed information on how to build charts in EES, visit our [EES charts guidance section](ees.html#Data_block_charts). 
+Any charts in your release should be appropriate for the data, reinforcing the key messages. For more detailed information on how to build charts in EES, visit our [EES charts guidance section](ees.html#Charts). 
 
 More complex charts cannot currently be built in EES. You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. 
 
@@ -412,7 +412,6 @@ More detailed advice and guidance on content design best practice is available f
 
 - [GSS best practice guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2018/11/Writing-about-statistics-Edition-2.0-October-2018-1.pdf){target="_blank" rel="noopener noreferrer"}
 - [GSS best practice hints and tips](https://teams.microsoft.com/_){target="_blank" rel="noopener noreferrer"}
-- [ONS style guide](https://style.ons.gov.uk/category/writing-a-statistical-bulletin/){target="_blank" rel="noopener noreferrer"}
 - [UNECE drafting guidance](http://www.unece.org/stats/documents/writing.html){target="_blank" rel="noopener noreferrer"}
 - [This link](https://support.office.com/en-gb/article/test-your-document-s-readability-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2){target="_blank" rel="noopener noreferrer"} provides details on how to get readability scores on your drafting in Word.
 - Similarly, the [Hemingway app](http://www.hemingwayapp.com/) is an online tool to assess readability. Whilst we might not want to use this directly for final drafting, it is useful to highlight areas of particular complexity in our current narrative. Additionally, the GSS Good Practice team set an exercise to try to write about your results without using any numbers: this can be really helpful to help understand the story you're trying to tell with your statistics.

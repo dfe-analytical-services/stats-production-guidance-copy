@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "General resources"
 ---
 
 <p class="text-muted">A collection of useful learning resources, and information on resources to get you started</p>
@@ -31,8 +31,6 @@ For best practice when using software and coding in our process, see our [guidan
 - [General data science resources](https://github.com/Chris-Engelhardt/data_sci_guide){target="_blank" rel="noopener noreferrer"} - includes plenty of open-source resources for R and SQL, with Python, Git, and shell included in there too.
 
 - [Awesome lists](https://github.com/sindresorhus/awesome){target="_blank" rel="noopener noreferrer"} and [awesome R](https://github.com/qinwf/awesome-R){target="_blank" rel="noopener noreferrer"} - another great bank of learning resources.
-
-- [DataCamp](https://learn.datacamp.com/){target="_blank" rel="noopener noreferrer"} - has a multitude of courses across R, SQL, Git and other languages. Many of the courses are free to start, and if you email gss.capability@statistics.gov.uk, they can guide you through the process of getting access to one of their premium subscriptions for a few weeks, which allows you to access the rest of the courses. DataCamp as a company are often morally objected to, and are widely vetoed across the data science community.
 
 - [Data Science week streams](https://web.microsoftstream.com/group/df01862c-7ad4-4f25-b7f2-df7353af52a9){target="_blank" rel="noopener noreferrer"} - a variety of talks across Data Science within the department.
 

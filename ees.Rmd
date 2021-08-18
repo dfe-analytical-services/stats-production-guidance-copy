@@ -177,7 +177,7 @@ If you want to request a new publication, please be prepared to give the followi
 + Team email address
 + Lead statistician name
 + Lead statistician contact number
-+ The [time period](https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values){target="_blank" rel="noopener noreferrer"} of the release you’re creating
++ The [time period](ud.html#List_of_allowable_time_values) of the release you’re creating
 + Whether they are National statistics, an ad-hoc publication, or official statistics
 + List of email addresses of analysts who need access to the release and at what [permission levels](#Roles_and_permissions)
 

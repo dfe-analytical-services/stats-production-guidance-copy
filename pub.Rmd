@@ -1,5 +1,5 @@
 ---
-title: "Publishing Statistics"
+title: "How to publish"
 ---
 
 <p class="text-muted">Guidance for how to publish different types of statistics</p>
@@ -43,7 +43,7 @@ If you are unsure which route to use for publication please contact the [HoP Off
 
 ---
 
-All national, official and ad-hoc statistics should be published on EES. This section covers how to start publishing on EES and all the things you need to consider before publication. For more detailed guidance on how to use the platform, visit our [EES guidance page](EES.html)
+All national, official and ad-hoc statistics should be published on EES. This section covers how to start publishing on EES and all the things you need to consider before publication. For more detailed guidance on how to use the platform, visit our [EES guidance page](ees.html)
 
 ---
 
@@ -204,7 +204,7 @@ Before you publish a release you should have:
 
 Dashboards built to meet a particular user need can be another helpful tool to help users access and understand your data, and can be hosted outside of EES or gov.uk.
 
-Guidance to follow when creating and publishing dashboards is available via the [dashboards](#Dashboards) page.
+Guidance to follow when creating and publishing dashboards is available via the [dashboards](dashboards.html) page.
 
 ---
 
