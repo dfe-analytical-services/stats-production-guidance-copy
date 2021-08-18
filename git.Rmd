@@ -2,7 +2,7 @@
 title: "Git"
 ---
 
-<p class="text-muted">Guidance and tips for using the version control software Git</p>
+<p class="text-muted">Guidance and tips for version control with Git</p>
 
 ---
 
@@ -145,7 +145,7 @@ Once you are happy with changes and want them to be in the latest version of you
 
 `r knitr::include_graphics("images/pull_git.png")`
 
-Committing regularly is strongly recommended as each commit is a saved point in time that you can easily roll back to if needed. If you want to know more about how to do this, see the [reverting a commit](#revertinga-commit) section below. 
+Committing regularly is strongly recommended as each commit is a saved point in time that you can easily roll back to if needed. If you want to know more about how to do this, see the [reverting a commit](#reverting-a-commit) section below. 
 
 ---
 
@@ -258,6 +258,7 @@ You can also revert back to a particular commit ID:
 ### Tagging release versions
 
 ---
+
 <!-- future best practice?! -->
 
 It can be useful to tag specific commits or releases at key points in time. For us a common example will be each publication cycle, to tag the version of the code used to process data for a particular release or amendment.

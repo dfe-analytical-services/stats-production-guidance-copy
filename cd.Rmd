@@ -185,7 +185,7 @@ We recommend that the first accordion section in each release should be 'About t
 
 ---
 
-### What not to include in this section:
+### What not to include in this section
 
 ---
 
@@ -196,7 +196,7 @@ We recommend that the first accordion section in each release should be 'About t
 
 ---
 
-### Things that you should include in this section are:
+### Things that you should include in this section are
 
 ---
 

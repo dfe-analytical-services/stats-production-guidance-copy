@@ -51,7 +51,7 @@ There are usually a couple of different versions available for software on the s
 
 ---
 
-Tips for reaching best practice in R can be found on our [RAP page](RAP.html#Clean_final_code), with guidance on meeting best practice in RAP for clean final code. This makes it easier to read and pick up if another person is running your code. 
+Tips for reaching best practice in R can be found on our [RAP page](rap.html#Clean_final_code), with guidance on meeting best practice in RAP for clean final code. This makes it easier to read and pick up if another person is running your code. 
 
 
 ---

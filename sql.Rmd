@@ -2,7 +2,7 @@
 title: "SQL"
 ---
 
-<p class="text-muted">Guidance and tips for using the programming language SQL</p>
+<p class="text-muted">Guidance and tips for accessing data via databases with SQL</p>
 
 ---
 
@@ -52,7 +52,7 @@ Andy Brook's excellent Introduction to SQL session, giving a visual overview of 
 
 ---
 
-Here are some tips to follow best practice in your SQL code, making it easier to read and pick up if another person is running your code. Following best practice guidance will help you to achieve RAP best practice with [clean final code](RAP.html#Clean_final_code)
+Here are some tips to follow best practice in your SQL code, making it easier to read and pick up if another person is running your code. Following best practice guidance will help you to achieve RAP best practice with [clean final code](rap.html#Clean_final_code)
 
 * Avoid any trailing whitespace
 * Always capitalize SQL keywords (e.g., SELECT or AS)

@@ -3,9 +3,9 @@ output_dir: "."
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Learning"
+    - text: "Learning and development"
       menu:
-        - text: "Introduction"
+        - text: "General resources"
           href: l+d.html
         - text: "SQL"
           href: sql.html
@@ -29,7 +29,7 @@ navbar:
           href: ees.html
         - text: "Dashboards"
           href: dashboards.html
-    - text: "Review"
+    - text: "Understanding users"
       menu:
         - text: "User engagement"
           href: user_eng.html

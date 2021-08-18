@@ -679,23 +679,6 @@ else '' end as characteristic_group
 
 ---
 
-<div class="jumbotron">
-
-  <h3>Remember</h3>
-
-  <hr class="my-4">
-
-- All filters should have a ‘Total’ aggregation where possible.
-- If a filter has one level, you should not include it in the EES metadata.
-- Where filters do not aggregate, consider if you should have the levels as indicators instead.
-- Grouping filters is an option, but only group filters where you decide it is better for your users.
-- If a filter is used to group another, then it should not appear as a separate row in the EES metadata.
-
-</div>
-
-
----
-
 ### Dates as filters
 
 ---
@@ -718,7 +701,21 @@ It is important to maintain a **yyyy-mm-dd** format as demonstrated below, so th
 knitr::include_graphics("images/change_date_format.PNG")
 ```
  
+---
 
+<div class="jumbotron">
+
+  <h3>Remember</h3>
+
+  <hr class="my-4">
+
+- All filters should have a ‘Total’ aggregation where possible.
+- If a filter has one level, you should not include it in the EES metadata.
+- Where filters do not aggregate, consider if you should have the levels as indicators instead.
+- Grouping filters is an option, but only group filters where you decide it is better for your users.
+- If a filter is used to group another, then it should not appear as a separate row in the EES metadata.
+
+</div>
 
 ---
 
