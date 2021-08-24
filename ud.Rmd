@@ -474,7 +474,7 @@ The geographic_level column should describe the level of data present in that ro
 
 Teams should make sure that they are regularly checking their geography codes if they are not using a lookup from a maintained database (such as in the PDR). ONS have the [Open Geography portal](http://geoportal.statistics.gov.uk/){target="_blank" rel="noopener noreferrer"}, which can be a useful way of checking these. There is a wealth of data on there, though Local authority boundaries can be hard to find, they can be found using the tabs at the top – Boundaries > Administrative Boundaries > Counties and Unitary Authorities. 
 
-If you have data from an unknown location, the standard is to use 'Not available' as name, and ':' as the code/s, this clearly marks that the geographical data for that row is unavailable, and does so in a consistent way with the wider GSS.
+If you have data from an unknown location, the standard is to use 'Not available' as name, and ':' as the code/s, this clearly marks that the geographical data for that row is unavailable, and does so in a consistent way with the wider GSS. If you have a unique variation of a certain location, e.g. 'Outside of England and unknown', we may be able to add these in as exceptions. Locations like this would have a code of 'z' as no widely used code is applicable, please get in touch with us to discuss it further if you think this might apply to you.
 
 We expect that all geography codes will be based on the Open Geography Portal and run checks against this for various levels in the [data screener](#How-to-check-against-these-standards), please contact us if you have data that doesn't match this.
 
