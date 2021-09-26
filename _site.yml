@@ -1,26 +1,48 @@
 name: "stats-prod-guide"
+output_dir: "."
 navbar:
   title: "Statistics Production Guidance"
   left:
-    - text: "Learning Resources"
-      href: l+d.html
-    - text: "Processes and RAP"
-      href: rap.html
-    - text: "Data Standards"
-      href: ud.html
-    - text: "Writing Content"
-      href: cd.html
-    - text: "Publishing Statistics"
-      href: pub.html
-    - text: "EES"
-      href: ees.html
-    - text: "Dashboards"
-      href: dashboards.html
+    - text: "Learning and development"
+      menu:
+        - text: "General resources"
+          href: l+d.html
+        - text: "SQL"
+          href: sql.html
+        - text: "R"
+          href: r.html
+        - text: "Git"
+          href: git.html
+    - text: "Creating statistics"
+      menu:
+        - text: "Processes and RAP"
+          href: rap.html
+        - text: "Open data standards"
+          href: ud.html
+        - text: "Writing and visualising"
+          href: cd.html
+    - text: "Publishing statistics"
+      menu:
+        - text: "How to publish"
+          href: pub.html
+        - text: "Using EES"
+          href: ees.html
+        - text: "Dashboards"
+          href: dashboards.html
+    - text: "Understanding users"
+      menu:
+        - text: "User engagement"
+          href: user_eng.html
+        - text: "EES analytics"
+          href: user_an.html
   right:
-    - icon: fa-envelope-o
-      href: mailto:statistics.development@education.gov.uk
+  - text: ""
+    href: mailto:statistics.development@education.gov.uk
+    icon: fa-envelope
+    
 output:
   html_document:
     toc: TRUE
     toc_float: TRUE
     css: images/acalat_theme.css
+    anchor_sections: FALSE

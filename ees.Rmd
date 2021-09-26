@@ -6,23 +6,29 @@ title: "Using Explore Education Statistics"
 
 ---
 
+Explore Education Statistics (EES) is the Department’s official statistics dissemination platform, designed to make DFE’s published statistics and data easier to find, access, use and understand.
+
 **The EES platform consists of two applications:**
 
-1. The public website, where users access stats
+1. The [public](https://explore-education-statistics.service.gov.uk/) website, where users access stats
 
-2. The admin website, where production teams create their stats.
+2. The [admin](https://admin.explore-education-statistics.service.gov.uk/) website, where production teams create their stats
 
 <div class="alert alert-dismissible alert-info">
-The admin side of EES is only supported in Google Chrome and Microsoft Edge. It will not work correctly in Internet Explorer. The public side does support Internet Explorer, though we still recommend that people use Chrome or Edge instead.
+The majority of the admin side of EES is only supported in Google Chrome and Microsoft Edge and will not work correctly in Internet Explorer. The public website and pre-release previews of releases in admin can be viewed using Internet Explorer, though we still recommend that people use Chrome or Edge instead.
 </div>
 
-Both applications were initially released to Minimal Viable Product (MVP) standard, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
+Both applications were released to Minimal Viable Product (MVP) standard in March 2020, we will be iterating and improving the functionality based on user feedback throughout 2020 and 2021. 
 
-Maintence and BAU running of the platform is supported by the Statistics Development Team.
+Maintenance and use of the platform is supported by the [Statistics Development Team](mailto:explore.statistics@education.gov.uk).
 
 ---
 
-# How to access EES
+# Accessing EES
+
+---
+
+## Environments
 
 ---
 
@@ -30,62 +36,153 @@ As stated above, EES consists of two parts. We also have four versions (environm
 
 - **Development** - Green - where changes are first merged in, and often the first time different pieces of work from different developers will interact properly
 
-- **Test** - Pink - where our tester carries out manual testing of any new features to make sure things work as expected 
+- **Test** - Pink - where our developers can carry out manual testing of any new features to make sure things work as expected 
 
-- **Pre-production** - Yellow - a sandbox area for admin champions and functionality testing
+- **Pre-production** - Yellow - a sandbox area for analysts to carry out functionality testing
+
+    Admin pre-production - https://admin.pre-production.explore-education-statistics.service.gov.uk
+
+    Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
 
 - **Production** - Red - the real service, anyone creating real releases that they intend to publish to the public should be using this environment
 
+    Admin - https://admin.explore-education-statistics.service.gov.uk
 
-There is no overlap between the environments and content created on one cannot be moved to any other. We recommend that teams use the pre-production environment to familiarise themselves with the platform and test out what is possible, you can dummy publishing a publication to see what it will look like on the public website by following the process for publishing. Publications will go out at 8:30am on the scheduled day on pre-production, mirroring the way that production runs (though one hour earlier).
+    Public - https://explore-education-statistics.service.gov.uk
 
-The core functionality across the environments is identical except for new changes, which are deployed through the different environments in order before they make it to production.
-
-On the pre-production environment, all analysts have full permissions to create publications and releases, and see everything else that other analysts are making. This is unqiue to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
-
-<div class="alert alert-dismissible alert-info">
-Please note that jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
-</div>
-
-The Statistics Development Team will be responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
+There is no overlap between the environments and content created on one cannot be moved to any other. 
 
 <div class="alert alert-dismissible alert-danger">
 If you are bookmarking links, please be careful to bookmark the links below exactly as they are shown. Often when signing in you will be redirected via other url's as a part of the authentication process, and bookmarking those may lead to errors.
 </div>
 
----
+Teams can use the pre-production environment to familiarise themselves with the platform and test out what is possible. The core functionality across the environments is identical except for new changes, which are deployed through the different environments before they make it to production. 
 
-## Production environment
-
----
-
-Admin - https://admin.explore-education-statistics.service.gov.uk/
-
-Public - https://explore-education-statistics.service.gov.uk/
-
-Access to the production admin service is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
-
-To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. Approvers are traditionally DD's though sometimes this respsonsibility may be delegated. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will recieve an email inviting you to use the platform.
-
-At first we'll be inviting analysts to the admin site in phases, depending upon when they expect to first publish statistics via EES. This is so we can ensure we're providing sufficient support and have awareness of what releases are going out in the short term. 
-
----
-
-## Pre-production environment
-
----
-
-Admin pre-production - https://admin.pre-production.explore-education-statistics.service.gov.uk
-
-Public pre-production - https://pre-production.explore-education-statistics.service.gov.uk
-
-Analysts are able to test the service within the EES pre-production environment, and it is recommended that production teams start here until they are confident they know how they want to build their release for real (again, please contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) to request access).
+On the pre-production environment, all analysts have full permissions to create publications and releases, and can see everything else that other analysts are making. This is unique to the pre-production environment, on the production environment analysts will only have access to releases that they have been granted specific access to.
 
 When accessing the pre-production environment you may be asked for a username and password, these are as follows: dfe, dataresearch.
 
 <div class="alert alert-dismissible alert-danger">
-Please note that the pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
+The pre-production environment is not suitable for unpublished data. Unpublished data should only be uploaded to the production environment.
 </div>
+
+
+### Getting access to admin
+
+Access to the production and pre-production admin services is limited to DfE AD accounts only and users have to have been invited to the service by either the Statistics Development Team (for full access) or an existing user (for pre-release access). Invites to the service are sent out via email using gov.uk Notify. 
+
+To be invited to the service for full access teams need to email the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk), stating who needs access, what permissions they require (analyst or approver), and for which publications these apply. This email should be sent by the Team Leader, or accompanied with the relevant Team Leader’s approval. Once access has been granted you will receive an email inviting you to use the platform.
+
+<div class="alert alert-dismissible alert-info">
+Jobshare emails can not be used to access EES. Specific personal emails should be used instead, in the same way as you sign in to windows on your machine.
+</div>
+
+
+---
+
+## Roles and permissions
+
+---
+
+<!-- need to include methodologies in this section? -->
+
+The Statistics Development Team are responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
+
+The following roles exist within EES admin and are assigned to a specific release: 
+
+* **Pre-release**
+
+    Any user invited for pre-release is given a pre-release user role. During the hours of pre-release they can:
+    
+    + Preview the release page, including downloading files
+    + Preview the table tool page for that release
+
+<br>
+
+* **Analyst - contributor**
+
+    Any analyst working on a release within EES admin will have the contributor role. They can:
+    
+    + Edit release details
+    + Upload data and other files
+    + Create footnotes, datablocks and charts
+    + Edit and comment on release content
+    + Invite PRA users
+    + Move the release status between draft and ready for higher review
+    
+<br>
+
+* **Analyst - approver**
+
+    The responsible statistician for a statistics release will have the approver role, allowing them to sign off releases for publication. This will usually be the responsible G5 or G6 for the statistics publication. They can do everything a contributor can, as well as:
+    
+    + Move the release status between draft, ready for review and approved
+    + Schedule the release for publication (either immediately or for a specific date)
+
+<br>
+
+There is also a publication owner role, which is assigned at publication level to a users account:
+
+* **Publication owner**
+
+    This permissions level gives publication owners control over their publications. They can do anything a contributor can for all releases within the publication. On top of this the publication owner also has access to:
+
+    + Manage publication level details
+    + Create new releases within a publication
+    + Create an amendment of the latest published release within a publication
+    + Cancel an amendment before it is published
+
+<br>
+
+
+* **BAU**
+
+    The administrative role:
+
+    + This role is assigned to a user and gives full access including administrative tools, typically only used by the Statistics Development Team and EES developers.
+
+---
+
+## Requesting a new publication
+
+---
+
+If you have not published on EES before, or if you're creating a brand new publication, you will need to contact us to create the publication for you before you can get started. 
+
+The hierarchy of content within EES is as follows - 
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/ees-hierarchy.PNG")
+```
+
+Publications are organised into topics and themes (as shown on the EES [Find Statistics page](https://explore-education-statistics.service.gov.uk/find-statistics)), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. For example:
+
+| Level | Example |
+|:------|:------|
+| Theme | Pupils and Schools |
+| Topic | Pupil absence |
+| Publication | Pupil absence in schools in England |
+| Release | 2018/19 |
+
+Each publication should have a lead statistician's name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician should also be provided. 
+
+Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be written to cover all releases for the given publication within the service. 
+
+If you want to request a new publication, please be prepared to give the following:
+
++ The heading and subheading that you want the publication to sit under in our site (take a look at the current structure [here](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank" rel="noopener noreferrer"}), feel free to either use existing ones, or suggest new ones
++ The exact title of the publication
++ If the methodology already exists elsewhere and you have a URL for it, or if you want to [create one](#Methodology)
++ Team name
++ Team email address
++ Lead statistician name
++ Lead statistician contact number
++ The [time period](ud.html#List_of_allowable_time_values) of the release you’re creating
++ Whether they are National statistics, an ad-hoc publication, or official statistics
++ List of email addresses of analysts who need access to the release and at what [permission levels](#Roles_and_permissions)
+
+
+Publication details can be [managed by publication owners](#Publication_management) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). 
 
 ---
 
@@ -105,79 +202,20 @@ The Statistics Development Team will be responsible for setting up and maintaini
 `r knitr::include_graphics("images/EES-admin-dashboard.PNG")`
 
 
-Within this dashboard you can access existing publications to create/edit their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and schedule releases tabs to see releases that are in progress. 
-
-Help and guidance for how to use the the admin website is available via the [administrators guide](https://admin.explore-education-statistics.service.gov.uk/documentation){target="_blank"}, this is always accessible from the top bar of the admin side of EES, as shown in the image below. 
-
-`r knitr::include_graphics("images/admin_guide_access.png")`
+Within this dashboard you can view and manage existing publications, including creating and editing their releases. You can use the drop down lists to find releases by theme/topic/publication or use the draft and scheduled releases tabs to see releases that are in progress. 
 
 ---
 
-# Publications 
+# Creating releases
 
 ---
 
-The hierarchy of content within EES is as follows - 
+New releases can be [created by publication owners](#Create_new_release) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). If you're requesting a new release via the mailbox, please give the following:
 
-```{r, echo=FALSE, fig.align='center'}
-knitr::include_graphics("images/ees-hierarchy.PNG")
-```
-
-
-Publications are organised into topics and themes (as shown on the EES Find Statistics page), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. For example:
-
-| Level | Example |
-|:------|:------|
-| Theme | Pupils and Schools |
-| Topic | Pupil absence |
-| Publication | Pupil absence in schools in England |
-| Release | 2018/19 |
-
-Each publication should have a lead statistician's name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician must also be provided. 
-
-To request a change to the contact details for a publication contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk).
-
-Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be written to cover all releases for the given publication within the service. 
-
-If you want to request a new publication, please be prepared to give the following:
-
-+ The heading and subheading that you want the publication to sit under in our site (take a look at the current structure [here](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank"}), feel free to either use existing ones, or suggest new ones
-+ The exact title of the publication
-+ If the methodology already exists elsewhere and you have a URL for it, or if you want to [create one](#Methodology)
-+ Team name
-+ Team email address
-+ Lead statistician name
-+ Lead statistician contact number
-+ The [year](https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values){target="_blank"} of the release you’re creating
-+ Whether they are National statistics, an ad-hoc publication, or official statistics
-+ List of email addresses of analysts who need access to edit the release
-+ Email address for whoever is providing [senior sign off](#Signing_off_a_release)
-
----
-
-# Create new release
-
----
-
-After finding the publication you want to create a release for, just press the button to create a new release. 
-
-Currently the following tyes of release can be created in EES: 
-
-* National Statistics (includes OSR tick mark logo at the top of the release page)  
-* Official Statistics
-* Adhoc Statistics
-
-When creating a release you will be asked to fill in some release summary fields, including the scheduled publication date. 
-
-<div class="alert alert-dismissible alert-info">
-The time period for the release should reflect the time period of the data that this latest release adds to the time series.
-</div>
-
-You also have the option to add the 'next expected update date' for which you can provide the planned month and year of the next release within this publication. If this is added but then needs to be changed later in the year it is easy to do so, contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) in the first instance.
-
-<div class="alert alert-dismissible alert-warning">
-For start of public beta, the Statistics Development Team are the only ones who can create new releases within the production environment – this is so we have awareness of all the early users within the admin site and can supply appropriate support. 
-</div>
++ Name of the publication (including theme and topic that it sits under)
++ Time period for the release
++ [Time identifier](ud.html#List_of_allowable_time_values) for the release
++ Type of release (National, Official, Ad-hoc etc)
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
 
@@ -193,46 +231,53 @@ Once you have created your release you will see enter the ‘create release dash
 
 5.  Pre-release access (invite users to pre-release and create public pre-release list)
 
---- 
 
 `r knitr::include_graphics("images/EES-create-release-dashboard.PNG")`
 
 ---
 
-# Managing legacy releases
+## Data and files
 
 ---
 
-Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
-
-<div class="alert alert-dismissible alert-warning">
-For the time being this can only be done by the Statistics Development Team, please get in touch if you'd like us to add any legacy releases for your publication.
-</div>
-
-The video below walks through this:
-
-<center>
-<video width="640" height="360" controls>
-  <source src="images/manageLegacyReleases.mp4" type="video/mp4">
-</video>
-</center>
-
-
----
-
-# Uploading data and files
-
----
-
-## Data uploads
-
----
-
-Here you will update your tidy data files and accompanying metadata. You need to make sure that the data has passed through our data screener checks before trying to upload it. 
+Here you will update your data files and accompanying metadata. You need to make sure that the data has passed through our [data screener checks](https://rsconnect/rsc/dfe-published-data-qa/) before trying to upload it. 
 
 <div class="alert alert-dismissible alert-info">
-Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks, as they are not yet designed for these levels of data. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. Any data files that only consist of these levels should be uploaded as an ancillary file, rather than as a data file.
+All data files are accessible in the downloadable files for users to explore in the same format as they are uploaded.
 </div>
+
+---
+
+### Subject titles
+
+---
+
+You'll need to give a 'subject title' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name and metadata guidance can include more technical / coverage information.
+
+When adding a subject name think about the general user and how the subjects will appear in the service:
+
+* You don't need to include the publication name in the subject name as this is always already implied within EES
+
+* You don't need to list what filters are in each file in the title, users can see this in the metadata guidance
+
+* You don't need to include the date ranges covered in each file in the title, users can see this in the metadata guidance
+
+* Your subject names should be short and snappy, clearly explain what is in each file. Some good examples of this in practice are included below:
+  + Early years provision by provider type
+  + Exclusions and suspensions by pupil characteristics
+  + ITT new entrants by subject and training route
+
+You can make changes the subject title for your data file after it has been uploaded if needed using the 'Edit title' option. 
+
+---
+
+### Uploading files
+
+---
+
+When uploading files you have a choice between uploading as separate CSV files or as a combined ZIP file. 
+
+For data files greater than 80mb we recommend uploading as a ZIP file.
 
 Once you click to upload the file a ‘Status’ will be visible that shows the progress of the import process. It will go through the following stages:
 
@@ -243,15 +288,15 @@ Once you click to upload the file a ‘Status’ will be visible that shows the 
 
 This may take a little while depending on the size of your file and if there are numerous files queued for import. You cannot view the dataset or use it to create tables/charts until this status is ‘COMPLETE’.
 
-For data files greater than 80mb we recommend uploading as a ZIP file.
-
 <div class="alert alert-dismissible alert-warning">
 If you believe your file is ‘stuck’ please contact explore.statistics@education.gov.uk, with details of the file and the release that you are uploading to.
 </div>
 
+
+
 ---
 
-## Ancillary file uploads
+### Ancillary file uploads
 
 ---
 
@@ -262,27 +307,24 @@ Examples of ancillary files may be:
 * Infographic pages
 * Supplementary data that isn't intended for the table tool 
 * Additional technical documentation
-* Images
 
 <div class="alert alert-dismissible alert-info">
-Any data files that only consist of Planning area, School, Provider, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
+Any data files that only consist of Planning area, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
 </div>
 
 ---
 
-## Metadata guidance
+### Public data guidance
 
 ---
 
-Here you should also create your [public metadata](https://explore-education-statistics.service.gov.uk/find-statistics/permanent-and-fixed-period-exclusions-in-england/meta-guidance) guidance document, this replaces the information that would have previously been uploaded as a pdf and is designed to help users understand and use the data they download from your release.
+Here you should also create your [public data guidance](https://explore-education-statistics.service.gov.uk/find-statistics/permanent-and-fixed-period-exclusions-in-england/meta-guidance) document, this replaces the information that would have previously been uploaded as a pdf and is designed to help users understand and use the data they download from your release.
 
 `r knitr::include_graphics("images/admin-public-meta-start.PNG")`
 
 The document will automatically update as you add new data files to your release, however you will need to add an overview of all the data included in the release and short summaries for each data file before the release can be published. 
 
-A list of variables in each file with an associated label (taken from metadata uploads) will also be displayed with each file. 
-
-This template follows a similar format to our previous recommended [metadata template](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy) so for most publications this will involve a copy/paste from existing content. 
+A list of variables in each file with an associated label (taken from metadata uploads) and associated footnotes will also be displayed for each file. 
 
 `r knitr::include_graphics("images/admin-public-meta-detail.PNG")`
 
@@ -292,15 +334,15 @@ Releases cannot be published without a completed metadata document. If not fille
 
 ---
 
-## Replacing data
+### Replacing data
 
 ---
 
-If you notice a mistake in your data file you can replace it with another.
+If you just need to change the subject title for your data file you do not need to go through the whole replacement process, just click the 'Edit title' option. 
+
+However, if you notice a mistake in your data file you can replace it with another. When replacing a data file the platform will attempt to recreate any data blocks and footnotes that were built using the previous file.
 
 `r knitr::include_graphics("images/replace-data-start.png")`
-
-When replacing a data file the platform will attempt to recreate any data blocks and footnotes that were built using the previous file.
 
 The first step is to upload the new file.
 
@@ -322,27 +364,21 @@ If it's not possible for a data block or footnote to be recreated using the repl
 Remember to double check any data blocks or footnotes that were recreated by the platform before publishing your release.
 </div>
 
+---
+
+## Footnotes
 
 ---
 
-# Adding footnotes
-
----
-
-To add footnotes, go to the footnotes tab and click 'add another footnote'. Rather than writing multiple tables and assigning individual footnotes, you write footnotes and assign them to certain indicators and filters so they appear when users select them in the table builder. For example in the below, the footnote "This is a footnote" is assigned to "the number of pupils entering each exam" for all filters.
+Footnotes are added via footnotes tab - rather than writing multiple tables and assigning individual footnotes, you write footnotes and assign them to certain indicators and filters so they appear when users select them in the table builder. For example in the below, the footnote "This is a footnote" is assigned to "Headcount" indicator for all options within the "School type" filter.
 
 `r knitr::include_graphics("images/footnote_example.PNG")`
-
-Now, when a user goes to build a table with this indicator, the footnote automatically appears.
-
-`r knitr::include_graphics("images/footnote_output_example.PNG")`
-
 
 If you'd rather, you can assign a footnote to the whole data file by ticking this box. 
 
 `r knitr::include_graphics("images/All_indicators.PNG")`
 
-You can assign footnotes across multiple data files.  
+You can assign the same footnote across multiple data files.  
 
 <div class="alert alert-dismissible alert-danger">
 We recommend that you only add footnotes once you are certain the data file is final. If you have to delete the data file, all the assigned footnotes will be deleted alongside it.
@@ -350,33 +386,46 @@ We recommend that you only add footnotes once you are certain the data file is f
 
 ---
 
-# Data block tables
+## Data blocks (tables and charts) 
 
 ---
 
-Once file imports are complete move to manage data blocks tab and use the admin table tool to create your summary tables. Here you can also use the reorder table headers tool to restructure your table however you want it. 
-
-Once you're happy with your table, give it a title and some source information before clicking save. 
+A data block is a smaller cut of data from your original file that you can embed into your publication as a presentation table, build charts from, or link users directly to.
 
 ---
 
-## Table highlights
+### Tables
 
 ---
 
-You can also choose to highlight a data block table as a ‘top table’ which means it will show in a list of table highlights within the table tool. This is designed to help users get to tables of interest more quickly (without having to create tables themselves).
+Here you can create data blocks, using the admin table tool to create and save your summary tables. Remember to use the reorder table headers tool to restructure your table however you want it before you save. 
 
-There is an option to choose if a table is a 'highlight table' when saving each data block:
+Once you're happy with your table, give it a title and some source information before clicking save. The source should be the source of the data used to create the data file that was then used for the data block table, for example 'School Census'.
+
+The manage data blocks page will list all the data blocks you have created, highlighting which have charts, are used in content and are saved as highlight tables. 
+
+`r knitr::include_graphics("images/ees-manage-data-blocks.PNG")`
+
+
+---
+
+#### Featured tables
+
+---
+
+You can also choose to highlight a data block table as a ‘featured table’ which means it will show in a list of featured tables within the table tool. This is designed to help users get to tables of interest more quickly (without having to create tables themselves).
+
+There is an option to choose if a table is a 'featured table' when saving each data block, here you can name the table and add a description giving the table coverage:
 
 `r knitr::include_graphics("images/EES-create-release-table-highlight.PNG")`
 
-Each highlight table will then be listed to the user within the table tool. Highlight tables do not have to be embedded within your release content to be included in this list. 
+Each featured table will then be listed to the user within the table tool. Featured tables do not have to be embedded within your release content to be included in this list. 
 
 `r knitr::include_graphics("images/EES-table-tool-highlights.PNG")`
 
 ---
 
-## Fast track links
+#### Fast track links
 
 ---
 
@@ -398,41 +447,56 @@ Fast-track links are similar to permalinks however instead of linking to a stati
 
 ---
 
-# Data block charts
+### Charts
 
 ---
 
 After building and saving a data block table you will see a 'Chart' tab appears. This tab will take you to the EES chart builder, where you can choose to add a chart to your data block.
 
-The first step to creating a chart is choosing the chart type, currently the EES chart builder can build line charts, horizotnal/vertical bar charts (including stacked) and maps. We intend to grow this list over the course of public beta so please let us know if a chart type you want to create is not possible. 
+The first step to creating a chart is choosing the chart type, currently the EES chart builder can build line charts, horizontal/vertical bar charts (including stacked and clustered) and maps.
 
-After choosing your chart type you then need to work through the following stages and you’ll be shown a live preview as you go: 
+After choosing your chart type you then need to work through the following stages to build your chart. In each stage you’ll be shown a live preview as you make changes.
 
 ---
 
-## Chart configuration
+#### Chart configuration
 
 ---
 
 Within the ‘chart configuration’ tab you can add a title, alt text, move the legend and change chart dimensions. 
 
+<div class="alert alert-dismissible alert-info">
+Make sure to review your chart dimensions before you publish. Users should be able to read the labels on the axes and see the legend without having to scroll.
+</div>
+
 `r knitr::include_graphics("images/EES-charts-create.PNG")`
 
-Note, within the vertical and horizontal bar chart types you can also create stacked bar charts via the chart configuration options.
+Note, within the vertical and horizontal bar chart types you can also create stacked bar charts by clicking the 'Stacked bars' option within the chart configuration tab
 
 ---
 
-## Data sets
+#### Data sets
 
 ---
 
-Here is where you add data to the chart. Each series is added one at a time and can be styled individually using the ‘change styling’ options.
+Here is where you add data to the chart. You can add each series one at a time or all together.
 
 `r knitr::include_graphics("images/EES-charts-add-data.PNG")`
 
 ---
 
-## X axis (major axis)
+#### Legend
+
+---
+
+You can edit the chart legend, and styling of your series via the Legend tab. 
+
+`r knitr::include_graphics("images/EES-charts-legend.PNG")`
+
+
+---
+
+#### X axis (major axis)
 
 ---
 
@@ -443,7 +507,6 @@ Here is where you configure the x-axis: You can alter gridlines, labels, sort, l
 |Option|What it does|
 |---------|---------|
 |Size of axis |Change the width of the space given to axis tick labels|
-|Group data by |Change how the data within the chart is grouped|
 |Show grid lines |Turn grid lines on and off|
 |Show axis |Turn the axis on and off, you can also add a unit to the axis tick labels|
 |Sorting |Change how the data within the chart is sorted|
@@ -454,7 +517,7 @@ Here is where you configure the x-axis: You can alter gridlines, labels, sort, l
 
 ---
 
-## Y axis (minor axis)
+#### Y axis (minor axis)
 
 ---
 
@@ -476,7 +539,7 @@ Then follow a similar process for the y axis configuration, play around until th
 
 ---
 
-## Changing chart type
+#### Changing chart type
 
 ---
 
@@ -484,7 +547,6 @@ If you create your chart and then change your mind as to what chart type would b
 
 `r knitr::include_graphics("images/EES-charts-change-type.PNG")`
 
-You can create maps too, currently this is possible for regional, LA and LAD data, though remember your source table needs to include information for all geographies in your map to be able to map them.
 
 <div class="alert alert-dismissible alert-info">
 Remember to save your chart when you’re done.
@@ -492,55 +554,91 @@ Remember to save your chart when you’re done.
 
 ---
 
-## Other chart types
+#### Maps
+
+---
+
+You can create maps too, currently this is possible for regional, LA and LAD data.
+
+You can change the boundaries you are plotting onto via the "chart configuration" tab, the latest boundary file will automatically be selected, but if you are visualising historic data, you may want an older boundary file. Please [contact us](mailto:explore.statistics@education.gov.uk) if the boundary you want to plot is unavailable.
+
+`r knitr::include_graphics("images/map_config.png")`
+
+Then to create a map, add the cuts of data you want to display in the "data sets" tab of the chart builder.
+
+`r knitr::include_graphics("images/map_add_data.PNG")`
+
+You can change the colour scale of the chart in the "legend" tab.
+
+`r knitr::include_graphics("images/map_change_legend.png")`
+
+---
+
+#### Other chart types
 
 ---
 
 You should only use complex charts where there is a clear user need, as simple charts are the easiest for users to understand. If you have a an infographic or a chart that is too complex to build within our chart builder you can use the 'Choose an infographic as alternative' option to upload an image to your data block instead. These should be .svg format and you can use the sizing options within the data block editor to size your image appropriately. 
 
-`r knitr::include_graphics("images/EES-charts-infographic.PNG")`
+<div class="alert alert-dismissible alert-info">
+Accessibility matters for infographics too, consider the following if you do need to upload an image - 
+
+* Keep them simple
+* Use only colours that are also available in EES - see our [visualisation guidance](cd.html#Charts-in-EES) for more details
+* Don't put borders around images
+* Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
+* Try to avoid adding text to your images other than axis labels and limited annotations. Titles and headings can be added in the "chart configuration" tab instead
+
+</div>
+
 
 ---
 
-# Writing content
+## Content
 
 ---
 
-In the manage content tab you can now start creating your release, embedding the datablocks you’ve created as you go. 
+In the content tab you can now start creating your release, embedding the data blocks you’ve created as you go. 
 
-<!-- potential for gif? --> 
+<!-- we shoud gif --> 
 
-You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode.
+You can use the page view toggles, that float in the bottom left of the page, to jump between edit and preview mode for the release and to view a preview of the table tool.
 
-<!-- potential for gif? --> 
+<!-- we should gif --> 
 
-Use the ‘Add secondary stats’ button to add a datablock to your headline stats section. 
+Use the ‘Add secondary stats’ button to add a data block to your headline stats section. 
 
-<!-- potential for gif? --> 
-
-Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a datablock with a only a single number.
+Use the 'Key stats' options to add key statistic tiles to your release. For each tile you first have to have created a data block that contains only one number.
 
 `r knitr::include_graphics("images/key-stat.PNG")`
 
-After embedding a key stat tile you can then edit it to add trend information and a desription of what the indicator is. 
+After embedding a key stat tile you can then edit it to add trend information and a description of what the indicator is. 
 
 | Element | Content |
 |---------|---------|
 | Indicator name | Automatically generated from your data | 
 | Latest value | Automatically generated from your data |
 | Trend | A short one-sentence description of the trend; try to avoid only stating the change from the previous year and talk about the longer-term trend where appropriate |
-| Guidance title | Should be set to 'What is this?' |
+| Guidance title | E.g. 'What is NEET?' or 'What are permanent exclusions?' |
 | Guidance text | A simple description in plain English of what the indicator is |
 
 You can then create accordion sections to start adding your main release commentary. These sections are made up of text blocks and data blocks which can be reordered as needed. 
 
+<div class="alert alert-dismissible alert-info">
+Do not use footnotes in the text of your content. They’re designed for reference in print, not web pages. If the information in the footnotes is important, include it in the body text. If it’s not, leave it out. 
+</div>
+
 Any data tables should be included as data blocks, however you can also embed static html tables within a text box. These should only be used to present textual tables or for any small presentations of data that are not possible to do in a data block at the moment. 
 
-You can create static html tables for presenting information that isn't embedded in a datablock. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable underlying data files.
+<!-- gif this -->
+You can create static html tables for presenting information that isn't embedded in a data block. However, remember that *all of the data* included or referred to in your content should be available (or createable) from the downloadable open data files.
+
+<!-- [GLOSSARY LINKS]
+[REPLACE SOME OF THIS WITH CONTENT RMD LINKS] -->
 
 ---
 
-# Signing off a release
+## Sign off
 
 ---
 
@@ -554,12 +652,26 @@ There are three statuses:
 
 
 <div class="alert alert-dismissible alert-warning">
-Only users with ‘responsible statistician’ permissions (usually G6 or above) can sign off the release for publication.  
+Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release for publication.
 </div>
 
 ---
 
-## How to approve a release
+### Errors and warnings
+
+---
+
+There's quite a few things to remember to do as you build your release so to help ensure you haven't missed anything a release checklist is also available via the sign off page
+
+The checklist can be accessed by clicking to edit release status. 
+
+Remember to check over it before you submit your release for approval as a release that has outstanding warnings on it will not be able to be published.
+
+`r knitr::include_graphics("images/ees-release-checklist.PNG")`
+
+---
+
+### How to approve a release
 
 ---
 
@@ -570,12 +682,24 @@ Releases are approved via the sign off tab. The release date is also set during 
 The approver has the ability to approve the release to be published on a specific date or to publish as soon as possible. Publishing as soon as possible is useful for publishing amendments to existing releases. 
 
 <div class="alert alert-dismissible alert-info">
-This page also gives you the expected release url which may be useful to know for other things, for example, sending to the webteam to add to your gov.uk announcement page. 
+This page also gives you the expected release url which may be useful to know for other things, for example, sending to the web team to add to your gov.uk announcement page. 
 </div>
+
 
 ---
 
-# Pre-release
+### Next release expected
+
+---
+
+You also have the option to add a date for when the next release is expected. This will appear at the top of a release page and give users an idea of when to expect the next release in the publication series. You can provide the planned month and year of the next release within this publication. 
+
+If this is added but then needs to be changed or removed later in the year it is easy to do so, by creating an amendment and setting a new next release expected date on sign-off.
+
+
+---
+
+## Pre-release access
 
 ---
 
@@ -584,14 +708,12 @@ Prior to each release going live the production team are also able to grant pre-
 This preview is only accessible for the 24 hours before the publication date, the emails may go out to users before then. We expect teams will continue to send an email at 09:30 on pre-release day, including any additional briefing and the link to the pre-release area. 
 
 <div class="alert alert-dismissible alert-info">
-Please note that jobshare emails should not be sent invites for pre-release. The personal emails for the specific individuals should be used instead, as jobshare emails do not have active accounts with DfE to access EES.
+Jobshare emails should not be sent invites for pre-release. The personal emails for the specific individuals should be used instead, as jobshare emails do not have active accounts with DfE to access EES.
 </div>
 
----
-
-## Overview
-
----
+<div class="alert alert-dismissible alert-danger">
+Pre-release access via Explore Education Statistics is currently limited to DFE users only, if you need to share your release with external users you will need to do so outside of the system. 
+</div>
 
 <html>
 <centre>
@@ -605,11 +727,6 @@ Please note that jobshare emails should not be sent invites for pre-release. The
 </centre>
 </html>
 
----
-
-## Walkthrough
-
----
 
 Inviting users for pre-release access and building the public pre-release list can be found within the ‘Pre-release access’ tab on the dashboard. 
 
@@ -628,26 +745,11 @@ After creating your pre-release access list a text editor will appear where you 
 
 ---
 
-# Methodology
+# Release amendments
 
 ---
 
-Methodologies work in a very similar way to the written content of a release, the text editor and static tables you can use are built on the same foundations. 
-
-On the production environment, teams need to request a blank methodology to be created for them, please contact the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk) to arrange this.
-
-Once the drafting has finished, a methodology should be set as 'approved for publication'. After this has happened, it will then appear in the drop down menu to attach to a publication. The methodology will then be published to the public side of the platform with the next release.
-
-On the test environment, teams can test creating methodologies themselves by going into the 'manage methodologies' page that is accessible from the main admin dashboard.
-
----
-
-# Amending a release
-
----
-
-If you need to make an amendment to release that has already been published this is now possible to do from within the admin dashboard:
-
+If you need to make an amendment to release that has already been published this is possible to do from within the admin dashboard if you are a publication owner. If you need to create an amendment and your publication owner is not available, please contact the Statistics Development Team to do this for you.
 
 `r knitr::include_graphics("images/EES-amend-release.PNG")`
 
@@ -662,3 +764,127 @@ Creating an amendment of a release will create a new version for which you can m
 When publishing a new amendment you should add a 'release note' to your release so users can be informed of what has changed:
 
 `r knitr::include_graphics("images/EES-release-note.PNG")`
+
+
+
+---
+
+# Methodology
+
+---
+
+Methodologies work in a very similar way to the written content of a release, the text editor and static tables you can use are built on the same foundations. 
+
+If you have not created or published a methodology page on EES before, the first thing your publication owner will need to do is create a methodology page. 
+
+`r knitr::include_graphics("images/EES-create-methodology.PNG")`
+
+Once created you can then edit the methodology content in a similar way to how you would create release page content. 
+
+Once the drafting has finished, a methodology should be set as 'approved for publication', currently approved methodology changes will be published immediately so make sure you are ready for the changes to go live before approving. 
+
+If you want to revise an existing methodology page you can amend the methodology which will generate a new version for you to edit. 
+
+`r knitr::include_graphics("images/EES-amend-methodology.PNG")`
+
+Once you're happy with your amendment it just needs to be [approved](#Sign_off) in the usual way for it to be published. 
+
+---
+
+## Methodology formatting
+
+---
+
+Subheadings make it easier for your users to navigate through your methodology. When editing text blocks in your methodology, you can do this by highlighting your subheading and selecting "Heading 3" in place of "Paragraph":
+
+`r knitr::include_graphics("images/methodology_subheadings.PNG")`
+
+You can add further subheadings underneath this but try to limit the number of subheadings per accordion to 10 at the most. Too many subheadings will make it tricky for users to find what they are looking for. 
+
+---
+
+## Methodology images
+
+---
+
+You can add images to methodology pages via the content editor.
+
+`r knitr::include_graphics("images/ees-wysiwyg-images.png")`
+
+When uploading an image you will need to add alt text via by clicking the eye symbol, you may also choose to add an image caption.
+
+`r knitr::include_graphics("images/ees-wysiwyg-alt-text.PNG")`
+
+<div class="alert alert-dismissible alert-info">
+Accessibility matters for uploaded images too, consider the following if you do need to upload an image - 
+
+* Keep them simple
+* Use [GDS colours](https://design-system.service.gov.uk/styles/colour/)
+* Don't put borders around images
+* Ensure there is a high enough colour contrast ratio between elements. You can use a [colour contrast checker](https://contrast-checker.glitch.me/) to check the colours you're using
+* Try to avoid adding text to your images other than axis labels and limited annotations. 
+
+
+</div>
+
+
+---
+
+# Managing publications
+
+---
+
+We have a type of role within EES admin called ‘Publication Owner’. This permissions level gives publication owners control over their publications. 
+
+Options available to publication owners:
+
+`r knitr::include_graphics("images/publicationowner-options.png")`
+
+
+---
+
+## Publication management
+
+---
+
+Use this page to change the details for your publication, such as the contact information or to add links to legacy releases on gov.uk. 
+
+Any updates here will affect all releases in the series and will be published immediately. 
+
+<div class="alert alert-dismissible alert-danger">
+It is possible to change the publication title via this page, however this should be used rarely and will not affect the publications url if one or more published releases exist. 
+</div>
+
+`r knitr::include_graphics("images/manage-publication.png")`
+
+---
+
+## Create new release
+
+---
+
+After finding the publication you want to create a release for, just press the button to create a new release. 
+
+Currently the following types of release can be created in EES: 
+
+* National Statistics (includes OSR tick mark logo at the top of the release page)  
+* Official Statistics
+* Adhoc Statistics
+
+When creating a release you will be asked to fill in some release summary fields.
+
+<div class="alert alert-dismissible alert-info">
+The time period for the release should reflect the time period of the data that this latest release adds to the time series.
+</div>
+
+---
+
+## Managing legacy releases
+
+---
+
+Past publications on other services can be added to the previous releases links that appear on the top right of a release page by using the 'Manage legacy releases' section. In here you can add links to previous releases and choose the order in which they appear. 
+
+This section can be found by publication owners in the publication management section.
+
+---

@@ -1,0 +1,37 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout️
+        uses: actions/checkout@v2.3.1
+        
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+
+      - name: Install Curl
+        run: sudo apt install libcurl4-openssl-dev libssl-dev
+        
+      - name: Restore renv snapshot
+        shell: Rscript {0}
+        run: |
+          if (!require('renv')) install.packages('renv')
+          renv::restore()
+          
+      - name: Setup pandoc
+        uses: r-lib/actions/setup-pandoc@v1
+        
+      - name: Build site
+        shell: Rscript {0}
+        run: |
+          rmarkdown::render_site(encoding = 'UTF-8')
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: master
+          folder: .

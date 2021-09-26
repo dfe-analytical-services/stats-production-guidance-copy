@@ -1,5 +1,5 @@
 ---
-title: "Dashboards guidance"
+title: "Best practice for publishing dashboards"
 ---
 
 ```{r include=FALSE}
@@ -7,7 +7,6 @@ require(knitr)
 ```
 
 <p class="text-muted">Guidance for when to use a dashboard to accompany Official statistics and how to publish them.</p>
-
 
 ---
 
