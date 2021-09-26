@@ -6,7 +6,7 @@ title: "Best practice for publishing dashboards"
 require(knitr)
 ```
 
-<p class="text-muted">Guidance for when to use a dashboard to accompany Official statistics and how to publish them.</p>
+<p class="text-muted">Guidance for publishing Official statistics dashboards</p>
 
 ---
 
@@ -18,43 +18,93 @@ The primary route for publishing official statistics is via [Explore Education S
 
 All dashboards should have a clear use case and reasoning for why they are required. They also need to meet the latest accessibility regulations [include a link].
 
-When published dashboards can be directed to from existing EES releases [add instructions for where they should go].
+When published, dashboards can be directed to from existing EES releases [add instructions for where they should go].
 
 ---
 
-# What to think about when creating a dashboard
+# Things to consider
 
 ---
 
-Service standards
-
-User needs
-
-KPI's/analytics to assess if meeting need
-
-Accessibility
-
-Quality
+A little blurb introducing the GDS Service standards and how dashboards should be treated as a digital service. Also how this then informs the below.
 
 ---
 
-# Dashboard options
+## User needs
 
 ---
 
-The main dashboarding options available to us are - 
+Some text will go here.
 
-* R Shiny (using ShinyApp or ShinyDashboard)
-* Python Dash (or other Python packages)
+---
+
+## Accessibility
+
+---
+
+WCAG, and why accessibility is important
+
+Link to sections lower down on testing accessibility in shiny apps.
+
+---
+
+## Governance
+
+---
+
+Why governance is important.
+
+What governance is in place for all dashboards.
+
+What good governance for a dashboard looks like.
+
+---
+
+## Tools / software 
+
+<!-- Not sure on the title of this section yet -->
+
+---
+
+The main dashboard options available to us are - 
+
+* R Shiny
+* Python Dash (or other Python-based alternatives)
 * PowerBI
 
-We recommend using R Shiny where possible as it’s Open Source, gives more flexibility in formatting, and is most widely used with transferable knowledge [To meet accessibility regs?]. 
+We recommend using R Shiny where possible as it’s Open Source, gives more flexibility in formatting, and is most widely used with transferable knowledge. 
 
-This guide will focus on Shiny for now as this is the only route with an established process to follow.
+This guide will focus on R Shiny as this is the recommended route and has an established process to follow and aligns with the long term department strategy.
 
+---
 
-Something on the dept strategy in this area?
+## Iterative development
 
+---
+
+Why taking the an agile and iterative approach to development is important.
+
+How to approach this.
+
+---
+
+## Testing
+
+---
+
+Why testing is important
+
+How to set it up (link to sections lower down rather than put everything here)
+
+---
+
+## Analytics
+
+---
+
+Why analytics are important
+
+How to set them up
 
 ---
 
@@ -65,20 +115,19 @@ Something on the dept strategy in this area?
 
 ---
 
-## How to create them
+## How to start
 
 ---
 
+When using R Shiny you can choose to create an app from scratch or by using a specific dashboard package such as [shinydashboard](https://rstudio.github.io/shinydashboard/). 
 
-When using R shiny you can choose to create an app or a dashboard. 
+A straight shiny app gives full flexibility, but may take more effort to get your dashboard to look how you want it to. The shinydashboard package gives a simplified template for Shiny, it has less flexibility but gives quick and simple structures to help create your dashboard. 
 
-A shiny app gives full flexibility, but may take more effort to get your dashboard to look how you want it to. A shiny dashboard is a simplified template for Shiny, it has less flexibility but gives quick and simple structures to help create your dashboard. 
-
-There are a lot of resources already available to support you when working with Shiny. 
+There are a lot of resources already available to support you when working with 
 
 [List them]
 
-Our template shiny app [LINK] repo shuld be used a starting point for all public facing dashboards as it gives the right set up for publishing. 
+Our template shiny app [LINK] repo should be used a starting point for all public facing dashboards as it gives the right set up for publishing and provides template code for common parts.
 
 ---
 
@@ -115,14 +164,13 @@ We don’t have an agreed style for Shiny apps / dashboards yet so need to agree
 
 Have a look at how transferable the https://github.com/moj-analytical-services/shinyGovstyle stuff is. 
 
-
 ---
 
 ### Testing
 
 ---
 
-All apps/dashboards should have an appropriate amount of automated tests before they can be published.
+To ensure that they are reliable, apps/dashboards should have an appropriate amount of automated tests before they can be published.
 
 https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps 
 
@@ -130,7 +178,23 @@ Also see our guidance on testing R code on the [learning resources page](l+d.htm
 
 ---
 
-## How to publish them 
+### Connecting to databases
+
+---
+
+We don't yet have a database server set up that can be accessed by public facing dashboards, though we are working to put this in place. In the meantime there a few alternative options for storing data that the dashboard can run off.
+
+- Recommended - Store the data within the repo (e.g. CSV files in a /data folder)
+
+- Use Google sheets
+
+- Use dropbox
+
+If you are running an internal-only app then you can connect to our internal SQL servers, information on how to do this is in the R Shiny Developers teams area.
+
+---
+
+## How to publish a dashboard 
 
 ---
 
@@ -138,18 +202,20 @@ How you choose to publish your app will depend on the type of access you require
 
 ---
 
-### Internal apps
+### Internal only apps
 
 ---
 
-[Link to existing rsconnect guidance]
+It's possible to publish dashboards that are only accessible to those on DfE kit, to do this you will need to publish via the departments RSConnect servers.
 
 You will need: 
 
-* A finished app, in line with the rsconnect people’s guidance [link to it]
-* Code in dfe-gov-uk repo
-* Anything else? I’m unfamiliar with this process...
+* A finished app, in line with the guidance on this page
+* The code to be in a Git repository in the dfe-gov-uk Azure DevOps space
 
+To publish the app, you'll need to set up a pipeline in Azure DevOps, guidance for how to do this can be found in the [R Shiny Developers teams area]().
+
+Access to applications on RSConnect are locked down by default, once the pipeline is set up and you've deployed the app you' can then'll need to request for it's access to be opened up by using an RSConnect request on [ServiceNow]().
 
 ---
 
@@ -157,7 +223,7 @@ You will need:
 
 ---
 
-For public facing shiny apps you should publish via shinyapps.io. The statistics development team manage a subscription for this and can help you get set up. 
+The majority of dashboards made to support and augment our Official Statistics public facing shiny apps you should publish via shinyapps.io. The statistics development team manage a subscription for this and can help you get set up. 
 
 You will need:
 
@@ -177,7 +243,7 @@ You should also use Github Actions to run the automated tests for your app, whic
 
 ---
 
-## Learning resources and useful things
+## Learning resources
 
 ---
 
@@ -196,7 +262,9 @@ Below are a bunch of tips and tricks that we've found useful when building R Shi
 
 PATs or Personal access tokens, are a preferred way to authenticate into repositories through code. [Creating a PAT in GitHub](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token){target="_blank" rel="noopener noreferrer"} is relatively intuitive. In Azure DevOps, you can do this by following [Microsoft's documentation on creating a PAT in Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#create-personal-access-tokens-to-authenticate-access){target="_blank" rel="noopener noreferrer"}.
 
+This section feels like it should be moved to the Git page
 
+---
 
 I'm not sure where these last two bits should live?
 
@@ -214,6 +282,10 @@ CI
 
 ---
 
+#### Azure DevOps
+
+---
+
 In Azure DevOps you can securely store variables that are then used by your pipelines by making use of variable groups. 
 
 First create a variable group by navigating to `Pipelines > Library`. Enter any variables you want to store here and make sure to change the variable type to secret if appropriate (i.e. login credentials or PATs).
@@ -226,7 +298,13 @@ Then, in the pipeline you want to use the variables in, go to `Variables > Varia
 
 ---
 
-### Mirroring repo's
+#### GitHub
+
+---
+
+---
+
+### Mirroring a repository
 
 ---
 
@@ -235,5 +313,7 @@ There may be times when you have a repository in one place, such as Azure DevOps
 To mirror a code repository from Azure DevOps, use the [mirror git repository extension](https://github.com/swellaby/vsts-mirror-git-repository){target="_blank" rel="noopener noreferrer"} (already installed on dfe-gov-uk instance), make use of the PAT and secure variables sections above and then add a job to your pipeline and enter your parameters in the fields as per the example below:
 
 `r knitr::include_graphics("images/mirroringGit.png")`
+
+Again this feels like it should be moved to the Git page
 
 ---
