@@ -16,7 +16,7 @@ require(knitr)
 
 The primary route for publishing official statistics is via [Explore Education Statistics](https://explore-education-statistics.service.gov.uk/), however there may be times where you want to compliment official statistics with a dashboard. This may be to do a deeper piece of analysis for a specific user group, or to make use of functionality that isn’t available within the platform.
 
-All dashboards should have a clear use case and reasoning for why they are required. They also need to meet the latest accessibility regulations [include a link].
+All dashboards should have a clear use case and reasoning for why they are required. They also need to meet the [latest accessibility regulations](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag).
 
 When published, dashboards can be directed to from existing EES releases [add instructions for where they should go].
 
@@ -137,6 +137,8 @@ Our template shiny app [LINK] repo should be used a starting point for all publi
 
 <!-- ## Does it make more sense to move this to after publishing? Or within the external apps bit? -->
 
+<!-- Think it makes sense here! We'd want them to consider the standards while they're building rather than after so it flows nicely as is  -->
+
 ---
 
 ### Accessibility
@@ -153,6 +155,9 @@ There are existing tools/packages that can help ensure your dashboards are acces
 
 [Pull from the resources Cam found: https://trello.com/c/PStG9EkN/1019-r-shiny-accessibility]
 
+Actively consider what users need from your dashboard - can they get that from the alt text etc. that you have provided? 
+(https://www.w3.org/WAI/tutorials/images/decision-tree/)
+Use the Edge narrator tool to test out how your dashboard works in reality with a screen reader.
 
 ---
 
@@ -164,6 +169,36 @@ We don’t have an agreed style for Shiny apps / dashboards yet so need to agree
 
 Have a look at how transferable the https://github.com/moj-analytical-services/shinyGovstyle stuff is. 
 
+Teams should pick from the [gov.uk design system colours](https://design-system.service.gov.uk/styles/colour/) when creating dashboards. Our template style sheet [LINK TO CODE IN REPO] makes use of these colours, but can be extended if needed to suit your needs. Consider which colours have sufficient contrast to be placed next to each other using the [colour contrast checker](https://contrast-checker.glitch.me/)
+<!-- Palette stuff to put in here too when complete -->
+
+Charts using ggplot2 and plotly can take custom palettes using the `scale_fill_manual()` function, e.g. below:
+
+
+```
+# Create colour palette using gov.uk standard options
+
+dfe_colours <- c(
+  "#1d70b8", #`blue`
+  "#f47738",#`orange`       
+  "#28a197",#`turquoise`   
+  "#d53880",#`pink`       
+  "#6f72af"#`light-purple` 
+  )
+  
+# Create chart using palette
+
+ggplot(aes(y=value, x="", 
+                 fill = factor(rating),
+                 text = paste(rating, ": ", value, "%"))) + 
+      geom_bar(stat="identity", position = position_fill(reverse = TRUE))+
+      scale_fill_manual(values = dfe_colours)
+
+```
+
+You can use in-line CSS to make these style changes, or make edits to the style sheet. Editing the style sheet is a neater solution if you want to apply changes across your app, and keeps your UI code clean. You can find out how styles are configured by running your app, right clicking and selecting "Inspect" to view the element you wish to change. In these lines you can change fonts, font colours and background colours, for example.
+
+[DEMO HERE - GIF?]
 ---
 
 ### Testing
@@ -213,9 +248,9 @@ You will need:
 * A finished app, in line with the guidance on this page
 * The code to be in a Git repository in the dfe-gov-uk Azure DevOps space
 
-To publish the app, you'll need to set up a pipeline in Azure DevOps, guidance for how to do this can be found in the [R Shiny Developers teams area]().
+To publish the app, you'll need to set up a pipeline in Azure DevOps, guidance for how to do this can be found in the [R Shiny Developers teams area](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9).
 
-Access to applications on RSConnect are locked down by default, once the pipeline is set up and you've deployed the app you' can then'll need to request for it's access to be opened up by using an RSConnect request on [ServiceNow]().
+Access to applications on RSConnect are locked down by default, once the pipeline is set up and you've deployed the app you' can then'll need to request for it's access to be opened up by using an RSConnect request on [ServiceNow](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1e3c3cb9db80ab003b929334ca9619df&sysparm_category=09e18be6db2f8340865049ee3b96190f).
 
 ---
 
@@ -249,6 +284,11 @@ You should also use Github Actions to run the automated tests for your app, whic
 
 For learning more about shiny, the best place to start is --
 
+
+<!-- This is a nice intro blog to R shiny - covers the basics of how the files interact https://www.r-bloggers.com/2021/03/a-gentle-introduction-to-r-shiny/ -->
+
+<!-- Also can link to a template repo referenced earlier? Not just style sheets/github actions stuff but also a basic app with plots, boxes, text etc. that could be adapted -->
+
 For more advanced shiny knowledge go here - 
 
 
@@ -266,13 +306,16 @@ This section feels like it should be moved to the Git page
 
 ---
 
-I'm not sure where these last two bits should live?
+I'm not sure where these last two bits should live? 
 
 What about profiling R code?
+<!-- Have a small section on this in peer review - could link to it here too as something to consider? https://rsconnect/rsc/stats-production-guidance/rap.html#Review_of_code_within_team -->
 
 StyleR
+<!-- We have something on this in our RAP guidance https://rsconnect/rsc/stats-production-guidance/rap.html#clean-final-code so could link to that and provide more detail here about including style stuff in tests too? -->
 
 Automated testing
+<!-- Could add to the testing bit above? We have some bits in our RAP guidance https://rsconnect/rsc/stats-production-guidance/rap.html#Automated_quality_assurance but would be good to cover test that vs shiny test and point to template code repo that uses both -->
 
 CI
 
