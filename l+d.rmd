@@ -22,6 +22,8 @@ For best practice when using software and coding in our process, see our [guidan
 
 - [The DfE Analytics Academy online R training course](https://trello.com/invite/b/QdDx3VmA/96f273b3438db2bb8ee5feae3943c3d4/analytics-academy-an-r-training-course){target="_blank" rel="noopener noreferrer"} - walks you through how to get set up with R, as well as setting tasks using DfE data to learn fundamental skills in R.
 
+- [How to QA](https://dfe-analytical-services.github.io/how-to-qa/index.html){target="_blank" rel="noopener noreferrer"} - a general guide to quality assurance best practice in DfE.
+
 - [DfE Data Science resource tool](https://rsconnect/rsc/DS-Resources/){target="_blank" rel="noopener noreferrer"} - a bank of learning materials, from coffee and coding talks to online guidebooks.
 
 - [ESFA guide to using R and Git](https://rsconnect/rsc/esfa-r-training/){target="_blank" rel="noopener noreferrer"} - take you from the beginning, teaches you how to use RStudio and later on even includes some information on Shiny apps and more complex topics. For more information on RShiny apps, join the [R Shiny Developers teams group](https://teams.microsoft.com/l/channel/19%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/tab%3A%3A1fc89e11-fa70-473d-b993-df467ca0d459?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9).
