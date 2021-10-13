@@ -308,6 +308,8 @@ Examples of ancillary files may be:
 * Supplementary data that isn't intended for the table tool 
 * Additional technical documentation
 
+For ensuring that spreadsheets are accessible see the guidance from [.gov.wales](https://gov.wales/how-create-accessible-excel-spreadsheets), and this [blog post](https://gss.civilservice.gov.uk/blog/accessibility-empathy-for-users-of-spreadsheets/) that walks you through some ways that you can recreate the experience of using spreadsheets.
+
 <div class="alert alert-dismissible alert-info">
 Any data files that only consist of Planning area, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
 </div>
