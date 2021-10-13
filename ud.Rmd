@@ -502,7 +502,9 @@ When using geographies that can be measured in multiple ways, you can achieve th
 
 ---
 
-All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams should use additional columns as relevant such as including Regional columns for Local authority level data.
+All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. 
+
+Where you have multiple geographic levels in a file, leave any not applicable columns blank for other rows. For example, region_name and region_code should be blank for national rows. Some levels do fit into a hierarchy, for example local authorities all have a region, in these cases you should include the higher level information too. So for a local authority row, the region and country columns would all be completed as well as the la columns.
 
 | geographic_level | required columns | notes |
 |------------------|------------------|-------|
