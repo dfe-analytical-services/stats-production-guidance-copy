@@ -638,6 +638,61 @@ You can create static html tables for presenting information that isn't embedded
 
 ---
 
+## Glossary
+
+---
+
+Our glossary on EES is a growing page that helps us to standardise how refer to key terms and phrases across all of Official statistics - https://explore-education-statistics.service.gov.uk/glossary.
+
+---
+
+### Adding new definitions
+
+---
+
+Contact us at explore.statistics@education.gov.uk, with the title and definition and we can add this for you. It's worth having a check on the glossary for similar or related terms, and whether you should be looking to harmonise with other teams.
+
+---
+
+### Linking to definitions
+
+---
+
+You can link to any term in the glossary by appending the glossary url with #name-of-definition, replacing any spaces with hyphens.
+
+For example, to link to the definition for 'Respite care', you would use the following link:
+
+https://explore-education-statistics.service.gov.uk/glossary#respite-care
+
+You can test this works by typing the url into your browser, it should take you to that specific definition on the glossary page. If you're unsure at all, or have special characters in the title of your glossary entry, please ask us for support on getting the right link.
+
+---
+
+### Linking from your release
+
+---
+
+When writing your release content, highlight a word or phrase and click the link icon in the text editor bar.
+
+
+`r knitr::include_graphics("images/ees-glossary-texteditor.PNG")`
+
+
+Then, paste your glossary url into the box that appears. 
+
+
+`r knitr::include_graphics("images/ees-glossary-paste.PNG")`
+
+
+That's it, the system will automatically recognise that the link is for the glossary and will do the rest. You can then change to the preview mode to see how this would then appear to public users, and test that the box appears with the definition.
+ 
+`r knitr::include_graphics("images/ees-glossary-text.PNG")`
+
+`r knitr::include_graphics("images/ees-glossary-modal.PNG")`
+
+
+---
+
 ## Sign off
 
 ---
