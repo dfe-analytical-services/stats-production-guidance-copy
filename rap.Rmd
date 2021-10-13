@@ -697,6 +697,8 @@ Some teams are already making great progress with automated QA and realising the
 
 It is assumed that when using R, automated scripts will output .html reports that the team can read through to understand their data and identify any issues, and save as a part of their process documentation.
 
+For more information on general quality assurance best practice in DfE, see the [How to QA guide](https://dfe-analytical-services.github.io/how-to-qa/index.html).
+
 ---
 
 ### Basic automated QA
