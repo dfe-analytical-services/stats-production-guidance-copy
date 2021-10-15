@@ -155,7 +155,16 @@ There are existing tools/packages that can help ensure your dashboards are acces
 
 [Pull from the resources Cam found: https://trello.com/c/PStG9EkN/1019-r-shiny-accessibility]
 
-Actively consider what users need from your dashboard - can they get that from the alt text etc. that you have provided? 
+**The [shinya11y](https://github.com/ewenme/shinya11y) package** is a very useful tool to look at accessibility checks across your app. Simply install and load the package, then include `use_tota11y()` at the top of your UI script. This brings up an interface that helps you examine different accessibility aspects in your app, like colour contrast, alt-text and what screen readers will detect:
+
+`r knitr::include_graphics("images/shinya11y_demo.gif")`
+
+**The Lighthouse feature in Google Chrome** is another easy way to quickly rate your accessibility. Open your app in Chrome, right click anywhere on the page and select "Inspect". From there, navigate to "Lighthouse" in the top grey bar, and click "Generate report". This generates scores for accessibility, best practices and SEO for your application or web page:
+
+`r knitr::include_graphics("images/lighthouse.gif")`
+
+
+Automated tools can't check for everything. Actively consider what users need from your dashboard - can they get that from the alt text etc. that you have provided? Everything that you can see, you should also be able to read with a screen reader.
 (https://www.w3.org/WAI/tutorials/images/decision-tree/)
 Use the Edge narrator tool to test out how your dashboard works in reality with a screen reader.
 
