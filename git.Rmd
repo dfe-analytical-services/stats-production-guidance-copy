@@ -286,3 +286,16 @@ That should be all local branches tidied up. Now to complete the job you can pru
 Though you can use `git remote -v` to find other remotes if you have them.
 
 ---
+
+### Fixing the "JSON token 4" error
+
+---
+
+This error can appear when you are trying to push changes to Azure DevOps.
+
+If it appears and you have not changed your password recently, try locking your laptop and seeing if on re-login it prompts you for a password change.
+
+If you have changed changed your password recently, try signing out of Azure and then back in again.
+
+
+---
