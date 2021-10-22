@@ -321,6 +321,8 @@ Then, in the pipeline you want to use the variables in, go to `Variables > Varia
 
 ---
 
+Guidance to follow shortly.
+
 ---
 
 ### Mirroring a repository
@@ -334,5 +336,17 @@ To mirror a code repository from Azure DevOps, use the [mirror git repository ex
 `r knitr::include_graphics("images/mirroringGit.png")`
 
 Again this feels like it should be moved to the Git page
+
+---
+
+### Fixing the "JSON token 4" error
+
+---
+
+This error can appear when you are trying to push changes to Azure DevOps.
+
+If it appears and you have not changed your password recently, try locking your laptop and seeing if on re-login it prompts you for a password change.
+
+If you have changed changed your password recently, try signing out of Azure and then back in again.
 
 ---

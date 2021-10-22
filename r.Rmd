@@ -466,5 +466,22 @@ The [set.seed()](https://www.rdocumentation.org/packages/simEd/versions/2.0.0/to
 [1] "Q" "E" "A" "J" "D"
 
 ```
+---
+
+### Automatic logging
+
+---
+
+The [tidylog package](https://cran.r-project.org/web/packages/tidylog/readme/README.html){target="_blank" rel="noopener noreferrer"} is a really useful tool for providing automated feedback on dplyr and tidyr operations.
+
+
+```
+library(tidylog)
+
+filtered <- filter(mtcars, cyl == 4)
+#> filter: removed 21 rows (66%), 11 rows remaining
+mutated <- mutate(mtcars, new_var = wt ** 2)
+#> mutate: new variable 'new_var' (double) with 29 unique values and 0% NA
+```
 
 ---
