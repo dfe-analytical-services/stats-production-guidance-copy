@@ -236,6 +236,7 @@ In line with the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploa
 | :           | When data is **unavailable** for other reasons| Data for an indicator is not collected in a certain region|
 | c           | **Confidential** data | Data has been suppressed |
 | ~        | Rounds to 0, but is not 0 | Rounding to the nearest thousand, 499 would otherwise show as 0. Only use 0 for true 0's |
+| u       | When an observation is of *low reliability* | Data for a local authority is identified as missing returns so is removed from regional and national totals |
 
 
 If you have any other conventions you've used in previous publications, or a scenario that isn't covered above, check the [GSS guidance](https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf){target="_blank" rel="noopener noreferrer"} (ignoring the part around separate columns for symbols), and contact us.
@@ -372,6 +373,7 @@ If your row of data spans multiple years (e.g. is a cumulative sum between 2010 
 | 201718      | Academic year   | 190                 |
 | 201617      |	Academic year   | 173                 |
 
+
 ---
 
 ### List of allowable time values
@@ -392,11 +394,11 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
-| Academic year                    | 6 digits                  |
+| [Academic year](https://explore-education-statistics.service.gov.uk/glossary#academic-year){target="_blank" rel="noopener noreferrer"}                   | 6 digits                  |
 
 | acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
-| Financial year                   | 6 digits                  |
+| [Financial year](https://explore-education-statistics.service.gov.uk/glossary#financial-year){target="_blank" rel="noopener noreferrer"}                     | 6 digits                  |
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
@@ -412,7 +414,7 @@ You can only mix time_identifiers if they appear within the same table below. If
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
-| Tax year                         | 6 digits                  |
+| [Tax year](https://explore-education-statistics.service.gov.uk/glossary#tax-year){target="_blank" rel="noopener noreferrer"}                             | 6 digits                  |
 
 | Acceptable time_identifier value | Corresponding time_period |
 |----------------------------------|---------------------------|
@@ -444,6 +446,7 @@ You can only mix time_identifiers if they appear within the same table below. If
 | Week 1                           | 4 digits                  |
 | Week ...                         | 4 digits                  |
 | Week 52                          | 4 digits                  |
+
 
 ---
 
@@ -502,7 +505,9 @@ When using geographies that can be measured in multiple ways, you can achieve th
 
 ---
 
-All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. Teams should use additional columns as relevant such as including Regional columns for Local authority level data.
+All rows must have country_code and country_name completed, regardless of geographic level. The additional required columns by level are shown below. You do not have to publish at every level, this is a guide that covers every level that can be published in the platform. 
+
+Where you have multiple geographic levels in a file, leave any not applicable columns blank for other rows. For example, region_name and region_code should be blank for national rows. Some levels do fit into a hierarchy, for example local authorities all have a region, in these cases you should include the higher level information too. So for a local authority row, the region and country columns would all be completed as well as the la columns.
 
 | geographic_level | required columns | notes |
 |------------------|------------------|-------|
@@ -592,7 +597,7 @@ This approach will work for basic filtering of providers and schools but it may 
 
 A filter is a variable that we break our data down by, such as school type, pupil characteristics, or NQT status. There are no required standards for these, you can include any filters that you feel benefit the users of your data. 
 
-Filter names must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. You can use abbreviations to keep the names short and usable, your users will be able to see what each variable name means in the metadata guidance. **Avoid starting variable names with a numeric character.**
+Filter names must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. You can use abbreviations to keep the names short and usable, your users will be able to see what each variable name means in the data guidance. **Avoid starting variable names with a numeric character.**
 
 Aggregates should be included for all filters where possible. There will be some situations where aggregation does not work, this will not break the platform, though may make the data less user-friendly. In general, if you can't aggregate, e.g. if you have headcount and fte, then this is an indication that they are instead separate measures and should have separate indicator columns rather than forcing them into a filter column. 
 
@@ -737,7 +742,7 @@ As an example, the number and percentage of pupil enrolments are the indicators 
 | 201819      | ... | England      | Primary      | 150        | 75       |
 | 201819      | ... | England      | Secondary    | 50         | 25       |
 
-Like filters, indicator names must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. You can use abbreviations to keep the names short and usable, your users will be able to see what each variable name means in the metadata guidance. **Avoid starting variable names with a numeric character.**
+Like filters, indicator names must not include spaces, and ideally be formatted in [snake_case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"} for ease of use. You can use abbreviations to keep the names short and usable, your users will be able to see what each variable name means in the data guidance. **Avoid starting variable names with a numeric character.**
 
 In EES, the platform itself will format large numeric values to include commas, so you do not need to have commas for separating large numbers in your data file. 
 

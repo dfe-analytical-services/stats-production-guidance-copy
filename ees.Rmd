@@ -219,7 +219,7 @@ New releases can be [created by publication owners](#Create_new_release) or via 
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
 
-1.	Data and files (uploading data files, ancillary files and creating public metadata)
+1.	Data and files (uploading data files, ancillary files and creating data guidance)
 
 2.  Footnotes (creating footnotes and assigning to relevant data)
 
@@ -252,15 +252,15 @@ All data files are accessible in the downloadable files for users to explore in 
 
 ---
 
-You'll need to give a 'subject title' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name and metadata guidance can include more technical / coverage information.
+You'll need to give a 'subject title' to each data file you upload. The subject name should be a simple user-friendly title for the data included within the file - it is what users will see wherever the file is referenced within EES. The actual file name and data guidance can include more technical / coverage information.
 
 When adding a subject name think about the general user and how the subjects will appear in the service:
 
 * You don't need to include the publication name in the subject name as this is always already implied within EES
 
-* You don't need to list what filters are in each file in the title, users can see this in the metadata guidance
+* You don't need to list what filters are in each file in the title, users can see this in the data guidance
 
-* You don't need to include the date ranges covered in each file in the title, users can see this in the metadata guidance
+* You don't need to include the date ranges covered in each file in the title, users can see this in the data guidance
 
 * Your subject names should be short and snappy, clearly explain what is in each file. Some good examples of this in practice are included below:
   + Early years provision by provider type
@@ -307,6 +307,8 @@ Examples of ancillary files may be:
 * Infographic pages
 * Supplementary data that isn't intended for the table tool 
 * Additional technical documentation
+
+For ensuring that spreadsheets are accessible see the guidance from [.gov.wales](https://gov.wales/how-create-accessible-excel-spreadsheets), and this [blog post](https://gss.civilservice.gov.uk/blog/accessibility-empathy-for-users-of-spreadsheets/) that walks you through some ways that you can recreate the experience of using spreadsheets.
 
 <div class="alert alert-dismissible alert-info">
 Any data files that only consist of Planning area, and/or Institution level data should be uploaded as an ancillary file, rather than as a data file.
@@ -435,6 +437,21 @@ Any data block tables that are created and saved within the admin app will also 
 
 
 When your release is published, any embedded data block tables within the release will have an 'explore data button' beneath them which will utilise these fast track links to quickly direct users to the table within the table tool so they can explore the data further. You can also use fast-track links as a hyperlink within release commentary (without having to embed the data block). 
+
+In your fast-track titles, you don't want to overload information, but still want to direct the user to the right place. Remember they can go back to the table tool through your featured tables to change filters and indicators as needed.
+
+Fast-track titles should explain:
+
+* **What** the table is showing in the simplest terms
+* **Who/Where** the data covers (e.g. characteristic groups and geography levels)
+* **When** the data in the table is reported for
+
+Here are a few examples of good fast-track titles in EES:
+
+* Number of Schools and Pupils, by School Type, 2015/16 to 2020/21
+* Absence Rates by School Type, 2016/17 to 2020/21
+* Free School Meals, by Region, 2015/16 to 2020/21
+
 
 <div class="alert alert-dismissible alert-info">
 **What is the difference between a fast-track link and a permalink?**
@@ -635,6 +652,61 @@ You can create static html tables for presenting information that isn't embedded
 
 <!-- [GLOSSARY LINKS]
 [REPLACE SOME OF THIS WITH CONTENT RMD LINKS] -->
+
+---
+
+## Glossary
+
+---
+
+Our glossary on EES is a growing page that helps us to standardise how refer to key terms and phrases across all of Official statistics - https://explore-education-statistics.service.gov.uk/glossary.
+
+---
+
+### Adding new definitions
+
+---
+
+Contact us at explore.statistics@education.gov.uk, with the title and definition and we can add this for you. It's worth having a check on the glossary for similar or related terms, and whether you should be looking to harmonise with other teams.
+
+---
+
+### Linking to definitions
+
+---
+
+You can link to any term in the glossary by appending the glossary url with #name-of-definition, replacing any spaces with hyphens.
+
+For example, to link to the definition for 'Respite care', you would use the following link:
+
+https://explore-education-statistics.service.gov.uk/glossary#respite-care
+
+You can test this works by typing the url into your browser, it should take you to that specific definition on the glossary page. If you're unsure at all, or have special characters in the title of your glossary entry, please ask us for support on getting the right link.
+
+---
+
+### Linking from your release
+
+---
+
+When writing your release content, highlight a word or phrase and click the link icon in the text editor bar.
+
+
+`r knitr::include_graphics("images/ees-glossary-texteditor.PNG")`
+
+
+Then, paste your glossary url into the box that appears. 
+
+
+`r knitr::include_graphics("images/ees-glossary-paste.PNG")`
+
+
+That's it, the system will automatically recognise that the link is for the glossary and will do the rest. You can then change to the preview mode to see how this would then appear to public users, and test that the box appears with the definition.
+ 
+`r knitr::include_graphics("images/ees-glossary-text.PNG")`
+
+`r knitr::include_graphics("images/ees-glossary-modal.PNG")`
+
 
 ---
 

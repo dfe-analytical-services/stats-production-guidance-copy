@@ -586,7 +586,9 @@ When peer reviewing code you should be consider the following questions -
 * Are there comments explaining why any decisions have been made?
 * Is the code written and structured sensibly?
 * Are there any ways to make the code more efficient (either in number of lines or raw speed)?
-* At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation
+* Does the code follow best practice for styling and structure?
+* Are there any other teams/bits of code you're aware of that do similar things and would be useful to point the authors towards?
+* At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation?
 
 Depending on your access you may or may not be able to run the code yourself, but there should be enough information within the code and documentation to be able to respond to these questions. 
 
@@ -696,6 +698,8 @@ Any data files that have been created will need to be quality assured. These che
 Some teams are already making great progress with automated QA and realising the benefits of it. The Statistics Development Team are working with these to provide generalised code that teams can use as a starting point for automated QA. The intention is that teams can then run this as a minimum, before then looking to develop more area specific checks to the script and/or continue with current checking processes in tandem. If your team already use, or are working towards using, automated QA then get in touch as we'd be keen to see what you have.
 
 It is assumed that when using R, automated scripts will output .html reports that the team can read through to understand their data and identify any issues, and save as a part of their process documentation.
+
+For more information on general quality assurance best practice in DfE, see the [How to QA guide](https://dfe-analytical-services.github.io/how-to-qa/index.html).
 
 ---
 
