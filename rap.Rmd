@@ -586,7 +586,9 @@ When peer reviewing code you should be consider the following questions -
 * Are there comments explaining why any decisions have been made?
 * Is the code written and structured sensibly?
 * Are there any ways to make the code more efficient (either in number of lines or raw speed)?
-* At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation
+* Does the code follow best practice for styling and structure?
+* Are there any other teams/bits of code you're aware of that do similar things and would be useful to point the authors towards?
+* At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation?
 
 Depending on your access you may or may not be able to run the code yourself, but there should be enough information within the code and documentation to be able to respond to these questions. 
 

@@ -16,9 +16,7 @@ require(knitr)
 
 The primary route for publishing official statistics is via [Explore Education Statistics](https://explore-education-statistics.service.gov.uk/), however there may be times where you want to compliment official statistics with a dashboard. This may be to do a deeper piece of analysis for a specific user group, or to make use of functionality that isn’t available within the platform.
 
-All dashboards should have a clear use case and reasoning for why they are required. They also need to meet the [latest accessibility regulations](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag).
-
-When published, dashboards can be directed to from existing EES releases [add instructions for where they should go].
+It is important that all dashboards should have a clear use case and reasoning for why they are required.
 
 ---
 
@@ -26,7 +24,11 @@ When published, dashboards can be directed to from existing EES releases [add in
 
 ---
 
-A little blurb introducing the GDS Service standards and how dashboards should be treated as a digital service. Also how this then informs the below.
+All dashboards should have a clear use case and reasoning for why they are required. They also need to meet the [latest accessibility regulations](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag) for public sector services.
+
+Dashboards, along with the Official Statistics that they supplement, are a digital service that we provide, and we should ensure we follow the [Service Standard](https://www.gov.uk/service-manual/service-standard). The standard covers a number of aspects that all producers should be considering when developing a dashboard, and strongly influence the guidance on this page.
+
+When published, dashboards can be directed to from existing EES releases using the related links at the top right of a release page, or by being included as a url anywhere in the release content.
 
 ---
 
@@ -34,7 +36,45 @@ A little blurb introducing the GDS Service standards and how dashboards should b
 
 ---
 
-Some text will go here.
+When designing a government service, always start by learning about the people who will use it. If you do not understand who they are or what they need from your service, you cannot build the right thing.
+
+Understanding as much of the context as possible gives you the best chance of meeting users’ needs in a simple and cost effective way.
+
+The real problem might not be the one you originally thought needed solving. Testing your assumptions early and often reduces the risk of building the wrong thing.
+
+Services designed around users and their needs:
+
+- are more likely to be used
+- help more people get the right outcome for them - and so achieve their policy intent
+- cost less to operate by reducing time and money spent on resolving problems
+
+See the [service manual](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs) for more information on learning about your users and their needs.
+
+---
+
+## Tools / software 
+
+---
+
+When you make a decision about technology, you’re making a significant investment. The choices you make will have a huge impact on your ability to create, iterate and operate the service in a sustainable way. We should be choosing tools and technology that let us create a high quality service in a cost effective way and minimise the cost of changing direction in future.
+
+The main dashboard options available to us are:
+
+* R Shiny
+* Python Dash (or other Python-based alternatives)
+* PowerBI
+
+We recommend using R Shiny as we feel it is the tool that best meets the service standards. It aligns with the departments strategy for RAP in Official Statistics, and the general direction of the government analytical community. It takes advantage of transferable knowledge and shared resources to minimise the costs and maximise the shared benefits.
+
+The following are further benefits to both R and Python:
+
+- they are open source (Service standards [12](https://www.gov.uk/service-manual/service-standard/point-12-make-new-source-code-open) and [13](https://www.gov.uk/service-manual/service-standard/point-13-use-common-standards-components-patterns))
+- give more flexibility in formatting
+- give more flexibility in meeting accessibility requirements
+- allows us to develop automated testing and CI to QA our dashboards
+- aligns with the Cabinet Office call to move towards R and Python for analysis
+
+The guidance on this page will focus on R Shiny as this is the recommended route for Official Statistics dashboards, and has an established process to follow. If you are not using R Shiny then you should make sure you are confident in the decision you've made and can evidence that against Service Standard [11. Choose the right tools and technology](https://www.gov.uk/service-manual/service-standard/point-11-choose-the-right-tools-and-technology).
 
 ---
 
@@ -42,9 +82,24 @@ Some text will go here.
 
 ---
 
-WCAG, and why accessibility is important
+Government services must work for everyone who needs to use them. Public sector organisations have a legal duty to consider everyone’s needs when they’re designing and delivering services. Making a website or mobile app accessible means making sure it can be used by as many people as possible. This includes those with:
 
-Link to sections lower down on testing accessibility in shiny apps.
+- impaired vision
+- motor difficulties
+- cognitive impairments or learning disabilities
+- deafness or impaired hearing
+
+Accessibility means more than putting things online. It means making your content and design clear and simple enough so that most people can use it without needing to adapt it, while supporting those who do need to adapt things.
+
+The accessibility regulations came into force for public sector bodies on 23 September 2018. They say you must make your website or mobile app more accessible by making it ‘perceivable, operable, understandable and robust’. The full name of the accessibility regulations is the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018. The accessibility regulations build on your existing obligations to people who have a disability under the Equality Act 2010 (or the Disability Discrimination Act 1995 in Northern Ireland).
+
+These regulations apply to all dashboards created for Official statistics. All dashboards should:
+
+- have an [accessibility statement](https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement#publish-your-accessibility-statement)
+- follow the [guidance below](#accessibility-testing) for testing against [WCAG 2.1 AA accessibility standard](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag)
+
+
+Analysts should familiarise themselves with the gov.uk guidance on [service accessibility](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction#meeting-government-accessibility-requirements)
 
 ---
 
@@ -52,29 +107,16 @@ Link to sections lower down on testing accessibility in shiny apps.
 
 ---
 
-Why governance is important.
+All dashboards published to accompany Official Statistics should have approval from the Senior Statistician repsonsible for the original release and/or the HoP for statistics at DfE. Approvals should be sent to the Statistics Development Team when asking for a new dashboard to be hosted on shinyapps.io.  
 
-What governance is in place for all dashboards.
+The standards for dashboards, and department strategy is maintained by the Central Statistics Standards Unit and governed by the Statistics Leadership Group, which is made up of all senior statisticians owning Official Statistics publications in the department.
 
-What good governance for a dashboard looks like.
+Regular reflection on how teams are doing and finding ways to improve is an important part of good governance. We recommend that Senior Statisticians responsible for dashboards ensure that they are regularly reviewed, covering:
 
----
-
-## Tools / software 
-
-<!-- Not sure on the title of this section yet -->
-
----
-
-The main dashboard options available to us are - 
-
-* R Shiny
-* Python Dash (or other Python-based alternatives)
-* PowerBI
-
-We recommend using R Shiny where possible as it’s Open Source, gives more flexibility in formatting, and is most widely used with transferable knowledge. 
-
-This guide will focus on R Shiny as this is the recommended route and has an established process to follow and aligns with the long term department strategy.
+- [testing and quality assurance](#testing)
+- [accessibility](#accessibility)  
+- [performance against user needs](#assessing-performance)
+- overall coherence with central standards and strategy found on this page
 
 ---
 
@@ -82,9 +124,15 @@ This guide will focus on R Shiny as this is the recommended route and has an est
 
 ---
 
-Why taking the an agile and iterative approach to development is important.
+Using [agile](https://www.gov.uk/service-manual/agile-delivery) methods means getting your service in front of real users as soon as possible. Then observing and generating data on how they use it, and iterating the service based on what you’ve learned. Because you’re not specifying everything up front before you’ve developed an understanding of what users need, agile methods reduce the risk of delivering the wrong thing. 
 
-How to approach this.
+Teams should aim to get a working version of their dashboard out to users as soon as possible to prototype the design and content.
+
+Iteration isn’t just for the early stages of a service’s development, and services are never ‘finished’. Using agile methods means getting real people using your service as early as possible. Then making improvements throughout the lifetime of the service.
+
+Making improvements means more than doing basic maintenance like fixing bugs in code, deploying security patches and keeping call centre scripts up to date. If that’s all you do, you’ll be fixing symptoms rather than underlying problems. And over time, the service will stop meeting user needs.
+
+Continuous improvement means you can respond to changes in user needs, technology or government policy throughout the lifetime of the service. So rather than having to be replaced, the service stays relevant until it’s ready to be retired.
 
 ---
 
@@ -92,19 +140,52 @@ How to approach this.
 
 ---
 
-Why testing is important
+Testing is a way to capture desired behaviour of your code, in such a way that you can automatically verify that it keeps working the way you expect. It is essential for making sure that code works the way that you intend it to, and keeps working even after you make changes to the code. You need to test your service regularly as part of quality assurance (QA) to make sure that it:
 
-How to set it up (link to sections lower down rather than put everything here)
+- is easy to use for anyone who needs to use it, regardless of the device they’re using
+- is stable, secure and works quickly, regardless of how many people need to use it
+- can be iterated quickly to meet changes to user needs or the political environment
+
+Tests can come in a variety of shapes and sizes, good starting points for analysts new to testing are the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/testing_code.html), and [DfE good code practice](https://dfe-analytical-services.github.io/good-code-practice/testing.html).
+
+You should aim to automate as much of your testing as possible and run your test suite as part of continuous integration (where your tests form part of your codebase). By testing your code automatically every time you make a change, you’ll be able to find defects more quickly. Getting fast feedback means you can respond to any problems quickly and make changes when you need to. You can also spot defects before they develop into bigger problems that are more complicated and expensive to fix.
+
+For dashboards created in R Shiny, we generally recommend a mix of unit tests and UI tests (integration), run using GitHub Actions for continuous integration (CI). More information and details on how to get started with this can be found in the [testing R Shiny](#testing-r-shiny) section below.
 
 ---
 
-## Analytics
+## Assessing performance
 
 ---
 
-Why analytics are important
+Work out what success looks like for your service and identify metrics which will tell you what’s working and what can be improved, combined with user research. For dashboards this will likely be things like the number of users and interactions with what you have created.
 
-How to set them up
+Defining what good looks like and identifying appropriate metrics means that you’ll know whether the service is solving the problem it’s meant to solve.
+
+Collecting the right performance data means you’ll be alerted to potential problems with your service. And when you make a change to the service, you’ll be able to tell whether it had the effect you expected. In practice this will often mean setting up analytics and feedback surveys for dashboards and monitoring the data you get back.
+
+---
+
+## Peer review
+
+---
+
+Peer review is a quality assurance activity, where an analyst other than the original author, views and tests the usage of a product or specific piece of code. This allows a fresh pair of eyes to take a look at your work. It validates that you have taken a correct approach and may highlight errors. This constructive feedback helps you to improve the quality. It provides confidence in your work, and ensures that it is fit for purpose.
+
+- Dashboards must always be peer reviewed within the team they are created.
+- Dashboards should also be peer reviewed by analysts outside of the subject area of the team. 
+
+For more guidance on how to peer review, see the [peer review section of the Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/peer_review.html).
+
+<!-- Other things to consider 
+
+Service monitoring - how much of that can we set up centrally, what can teams do for themselves?
+
+Expanding on and giving templates for assessing performance
+
+
+
+-->
 
 ---
 
@@ -112,6 +193,9 @@ How to set them up
 
 ---
 
+Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage, embed them in [R Markdown documents](http://rmarkdown.rstudio.com/) or build [dashboards](http://rstudio.github.io/shinydashboard/). You can also extend your Shiny apps with [CSS themes](http://rstudio.github.io/shinythemes/), [htmlwidgets](http://www.htmlwidgets.org/), and [JavaScript actions](https://github.com/daattali/shinyjs/blob/master/README.md).
+
+The guidance on this page assumes you have prior knowledge of R, if you are new to R, then take a look at our [R resources page](r.html) to get started.
 
 ---
 
@@ -119,15 +203,17 @@ How to set them up
 
 ---
 
-When using R Shiny you can choose to create an app from scratch or by using a specific dashboard package such as [shinydashboard](https://rstudio.github.io/shinydashboard/). 
+When using R Shiny you can choose to create an app from scratch or by using a specific dashboard package such as [shinydashboard](https://rstudio.github.io/shinydashboard/). <!-- Sarah is this still right, or should we be steering people away from shinydashboard? -->
 
-A straight shiny app gives full flexibility, but may take more effort to get your dashboard to look how you want it to. The shinydashboard package gives a simplified template for Shiny, it has less flexibility but gives quick and simple structures to help create your dashboard. 
+A straight shiny app gives full flexibility, but may take more effort to get your dashboard to look how you want it to. The shinydashboard package gives a simplified template for Shiny, it has less flexibility but gives quick and simple structures to help create your dashboard. <!-- Sarah is this still right, or should we be steering people away from shinydashboard? -->
 
-There are a lot of resources already available to support you when working with 
+There are a lot of resources already available to support you when working with R Shiny, if you're new, then this [blog post](https://www.r-bloggers.com/2021/03/a-gentle-introduction-to-r-shiny/) provides a gentle introduction.
 
-[List them]
+Our template shiny app [LINK to follow soon] repository should be used a starting point for all public facing dashboards as it gives the right set up for publishing and provides template code for common parts.
 
-Our template shiny app [LINK] repo should be used a starting point for all public facing dashboards as it gives the right set up for publishing and provides template code for common parts.
+For more advanced shiny knowledge it's worth taking a look at the guide to [engineering production-grade shiny apps](https://engineering-shiny.org/).
+
+Finally, you should seek to make use of the community that is already out there, see what others are doing, ask them questions and for advice on any decisions or problems that you're facing, and share what it is that you're doing. The Statistics Development Team are experienced with R Shiny and happy to help or offer advice, and there is the [DfE R community](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9) on teams. There is a bank of [tips and tricks](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::d9f50997-7180-407d-baf9-47f9ec9d54a3?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A21%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype%22%7D&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9){target="_blank" rel="noopener noreferrer"} stored in there too. Going beyond DfE there's a wealth of resources and communities online, including [Stack Overflow](https://stackoverflow.com/) discussions, cross government slack channels (e.g. #R and #Shiny on govdatascience.slack.com) and even tweets about [R Shiny on twitter](https://twitter.com/search?q=rshiny&src=spelling_expansion_revert_click).
 
 ---
 
@@ -135,15 +221,15 @@ Our template shiny app [LINK] repo should be used a starting point for all publi
 
 ---
 
-<!-- ## Does it make more sense to move this to after publishing? Or within the external apps bit? -->
-
-<!-- Think it makes sense here! We'd want them to consider the standards while they're building rather than after so it flows nicely as is  -->
+Some initial thing around consistency and coherence, we expect that all applications published meet the following?
 
 ---
 
-### Accessibility
+### Accessibility testing
 
 ---
+
+<!-- This bit needs writing up as more of a guide based on what we've been doing -->
 
 All dashboards need to meet the latest accessibility regulations [include a link].
 
@@ -165,9 +251,13 @@ Use the Edge narrator tool to test out how your dashboard works in reality with 
 
 ---
 
-We don’t have an agreed style for Shiny apps / dashboards yet so need to agree one. 
+<!-- We don’t have an agreed style for Shiny apps / dashboards yet so need to agree one. 
 
-Have a look at how transferable the https://github.com/moj-analytical-services/shinyGovstyle stuff is. 
+Have a look at how transferable the https://github.com/moj-analytical-services/shinyGovstyle stuff is. -->
+
+Each report should include a department/agency logo in the top left corner.
+
+All dashboards should have a version control page, accessibility statement, link to the source code, and information about who to contact for feedback/issues.
 
 Teams should pick from the [gov.uk design system colours](https://design-system.service.gov.uk/styles/colour/) when creating dashboards. Our template style sheet [LINK TO CODE IN REPO] makes use of these colours, but can be extended if needed to suit your needs. Consider which colours have sufficient contrast to be placed next to each other using the [colour contrast checker](https://contrast-checker.glitch.me/)
 <!-- Palette stuff to put in here too when complete -->
@@ -199,9 +289,13 @@ ggplot(aes(y=value, x="",
 You can use in-line CSS to make these style changes, or make edits to the style sheet. Editing the style sheet is a neater solution if you want to apply changes across your app, and keeps your UI code clean. You can find out how styles are configured by running your app, right clicking and selecting "Inspect" to view the element you wish to change. In these lines you can change fonts, font colours and background colours, for example.
 
 [DEMO HERE - GIF?]
+
+
+https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style - should also reference this
+
 ---
 
-### Testing
+### Testing R Shiny
 
 ---
 
@@ -219,13 +313,13 @@ Also see our guidance on testing R code on the [learning resources page](l+d.htm
 
 We don't yet have a database server set up that can be accessed by public facing dashboards, though we are working to put this in place. In the meantime there a few alternative options for storing data that the dashboard can run off.
 
-- Recommended - Store the data within the repo (e.g. CSV files in a /data folder)
+- Store the data within the repo (e.g. CSV files in a /data folder)
 
 - Use Google sheets
 
 - Use dropbox
 
-If you are running an internal-only app then you can connect to our internal SQL servers, information on how to do this is in the R Shiny Developers teams area.
+If you are running an internal-only app then you can connect to our internal SQL servers, information on how to do this is in the [R community teams area]().
 
 ---
 
@@ -248,13 +342,15 @@ You will need:
 * A finished app, in line with the guidance on this page
 * The code to be in a Git repository in the dfe-gov-uk Azure DevOps space
 
-To publish the app, you'll need to set up a pipeline in Azure DevOps, guidance for how to do this can be found in the [R Shiny Developers teams area](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9).
+To publish the app, you'll need to set up a pipeline in Azure DevOps, guidance for how to do this can be found in the [R community teams area](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9).
 
 Access to applications on RSConnect are locked down by default, once the pipeline is set up and you've deployed the app you' can then'll need to request for it's access to be opened up by using an RSConnect request on [ServiceNow](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1e3c3cb9db80ab003b929334ca9619df&sysparm_category=09e18be6db2f8340865049ee3b96190f).
 
+If you're running the app from an internal database, you'll need to contact the database owner to set up a local login, and then store those as variables against your specific app in rsconnect. You can raise a request to do this via [ServiceNow](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1e3c3cb9db80ab003b929334ca9619df&sysparm_category=09e18be6db2f8340865049ee3b96190f) and selecting 'Change app variables'.
+
 ---
 
-### External apps
+### Public apps
 
 ---
 
@@ -262,51 +358,25 @@ The majority of dashboards made to support and augment our Official Statistics p
 
 You will need:
 
-* A finished app, in line with standards [standards TBC]
-* Code in a github repo
-* Github Actions set up 
+* A finished app that meets the accessibility and styling standards
+* Approvals from your DD, Legal, and Comms
+* Code in a GitHub repo
+* GitHub Actions set up
 
-**Github Actions:**
+To set up a new app send these to statistics.development@education.gov.uk
+
+**GitHub Actions:**
 
 We use Github Actions to deploy the latest code whenever a push to your master branch occurs - this ensure the published version of your app stays up to date. 
 
 If you’ve started from our empty project template [we should provide this] this will mostly be set up for you, but if not you’ll need to add the following folder to your repo [LINK] 
 
 
-You should also use Github Actions to run the automated tests for your app, which we recommend are done on at least every pull request. An example yaml file for running the tests is included in the template repo [LINK]. 
+You should also use GitHub Actions to run the automated tests for your app, which we recommend are done on at least every pull request. An example yaml file for running the tests is included in the template repo [LINK]. 
 
 
----
-
-## Learning resources
 
 ---
-
-For learning more about shiny, the best place to start is --
-
-
-<!-- This is a nice intro blog to R shiny - covers the basics of how the files interact https://www.r-bloggers.com/2021/03/a-gentle-introduction-to-r-shiny/ -->
-
-<!-- Also can link to a template repo referenced earlier? Not just style sheets/github actions stuff but also a basic app with plots, boxes, text etc. that could be adapted -->
-
-For more advanced shiny knowledge go here - 
-
-
-Below are a bunch of tips and tricks that we've found useful when building R Shiny applications. There are also some of these already stored on teams in the [R Shiny Developers channel](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::d9f50997-7180-407d-baf9-47f9ec9d54a3?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A21%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype%22%7D&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9){target="_blank" rel="noopener noreferrer"}.
-
----
-
-### Creating PATs
-
----
-
-PATs or Personal access tokens, are a preferred way to authenticate into repositories through code. [Creating a PAT in GitHub](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token){target="_blank" rel="noopener noreferrer"} is relatively intuitive. In Azure DevOps, you can do this by following [Microsoft's documentation on creating a PAT in Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#create-personal-access-tokens-to-authenticate-access){target="_blank" rel="noopener noreferrer"}.
-
-This section feels like it should be moved to the Git page
-
----
-
-I'm not sure where these last two bits should live? 
 
 What about profiling R code?
 <!-- Have a small section on this in peer review - could link to it here too as something to consider? https://rsconnect/rsc/stats-production-guidance/rap.html#Review_of_code_within_team -->
@@ -319,44 +389,4 @@ Automated testing
 
 CI
 
----
-
-### Storing secure variables
-
----
-
-#### Azure DevOps
-
----
-
-In Azure DevOps you can securely store variables that are then used by your pipelines by making use of variable groups. 
-
-First create a variable group by navigating to `Pipelines > Library`. Enter any variables you want to store here and make sure to change the variable type to secret if appropriate (i.e. login credentials or PATs).
-
-`r knitr::include_graphics("images/createVariableGroup.png")`
-
-Then, in the pipeline you want to use the variables in, go to `Variables > Variable groups` and link the variable group as shown below. You can then call upon the variables as needed in your pipeline.
-
-`r knitr::include_graphics("images/linkVariableGroup.png")`
-
----
-
-#### GitHub
-
----
-
----
-
-### Mirroring a repository
-
----
-
-There may be times when you have a repository in one place, such as Azure DevOps, but want to mirror the code and any changes to it in another place, such as GitHub. This can be for many different reasons, though commonly for us it will be to open up our code across government. Azure DevOps doesn't provide us with easily publicly visible code repositories, however GitHub does.
-
-To mirror a code repository from Azure DevOps, use the [mirror git repository extension](https://github.com/swellaby/vsts-mirror-git-repository){target="_blank" rel="noopener noreferrer"} (already installed on dfe-gov-uk instance), make use of the PAT and secure variables sections above and then add a job to your pipeline and enter your parameters in the fields as per the example below:
-
-`r knitr::include_graphics("images/mirroringGit.png")`
-
-Again this feels like it should be moved to the Git page
-
----
+Setting up analytics
