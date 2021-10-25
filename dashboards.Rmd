@@ -16,7 +16,9 @@ require(knitr)
 
 The primary route for publishing official statistics is via [Explore Education Statistics](https://explore-education-statistics.service.gov.uk/), however there may be times where you want to compliment official statistics with a dashboard. This may be to do a deeper piece of analysis for a specific user group, or to make use of functionality that isn’t available within the platform.
 
-It is important that all dashboards should have a clear use case and reasoning for why they are required.
+It is important that all dashboards should have a clear use case and reasoning for why they are required. 
+
+This guidance is aimed primarily at dashboards published to supplement Official Statistics to the wider public. See the [how to publish a dashboard](#how-to-publish-a-dashboard) section below for more information on the guidance for internal only dashboards.
 
 ---
 
@@ -29,6 +31,26 @@ All dashboards should have a clear use case and reasoning for why they are requi
 Dashboards, along with the Official Statistics that they supplement, are a digital service that we provide, and we should ensure we follow the [Service Standard](https://www.gov.uk/service-manual/service-standard). The standard covers a number of aspects that all producers should be considering when developing a dashboard, and strongly influence the guidance on this page.
 
 When published, dashboards can be directed to from existing EES releases using the related links at the top right of a release page, or by being included as a url anywhere in the release content.
+
+---
+
+## Governance
+
+---
+
+All dashboards published to accompany Official Statistics should have approval from the Senior Statistician repsonsible for the original release and/or the HoP for statistics at DfE. Approvals should be sent to the Statistics Development Team when asking for a new dashboard to be hosted on shinyapps.io.  
+
+The standards for dashboards, and department strategy is maintained by the Central Statistics Standards Unit and governed by the Statistics Leadership Group, which is made up of all senior statisticians responsible for Official Statistics publications in the department.
+
+The statistics leadership group will review exisiting dashboards on a semi-regular basis to ensure coherence and wider awareness of the work being done.
+
+Regular reflection on how teams are doing and finding ways to improve is an important part of good governance. We recommend that Senior Statisticians responsible for dashboards ensure that they are regularly reviewed, covering:
+
+- [user needs](#user-needs)
+- [testing and quality assurance](#code-testing)
+- [accessibility](#accessibility)  
+- [performance against user needs](#assessing-performance)
+- overall coherence with central standards and strategy found on this page
 
 ---
 
@@ -103,23 +125,6 @@ Analysts should familiarise themselves with the gov.uk guidance on [service acce
 
 ---
 
-## Governance
-
----
-
-All dashboards published to accompany Official Statistics should have approval from the Senior Statistician repsonsible for the original release and/or the HoP for statistics at DfE. Approvals should be sent to the Statistics Development Team when asking for a new dashboard to be hosted on shinyapps.io.  
-
-The standards for dashboards, and department strategy is maintained by the Central Statistics Standards Unit and governed by the Statistics Leadership Group, which is made up of all senior statisticians owning Official Statistics publications in the department.
-
-Regular reflection on how teams are doing and finding ways to improve is an important part of good governance. We recommend that Senior Statisticians responsible for dashboards ensure that they are regularly reviewed, covering:
-
-- [testing and quality assurance](#testing)
-- [accessibility](#accessibility)  
-- [performance against user needs](#assessing-performance)
-- overall coherence with central standards and strategy found on this page
-
----
-
 ## Iterative development
 
 ---
@@ -136,7 +141,7 @@ Continuous improvement means you can respond to changes in user needs, technolog
 
 ---
 
-## Testing
+## Code testing
 
 ---
 
@@ -150,7 +155,7 @@ Tests can come in a variety of shapes and sizes, good starting points for analys
 
 You should aim to automate as much of your testing as possible and run your test suite as part of continuous integration (where your tests form part of your codebase). By testing your code automatically every time you make a change, you’ll be able to find defects more quickly. Getting fast feedback means you can respond to any problems quickly and make changes when you need to. You can also spot defects before they develop into bigger problems that are more complicated and expensive to fix.
 
-For dashboards created in R Shiny, we generally recommend a mix of unit tests and UI tests (integration), run using GitHub Actions for continuous integration (CI). More information and details on how to get started with this can be found in the [testing R Shiny](#testing-r-shiny) section below.
+For dashboards created in R Shiny, we strongly recommend a mix of unit tests and UI tests (integration), run using GitHub Actions for continuous integration (CI). All applications should have an appropriate level of test coverage before being published. More information and details on how to get started with this can be found in the [testing R Shiny](#testing-r-shiny) section below.
 
 ---
 
@@ -164,6 +169,8 @@ Defining what good looks like and identifying appropriate metrics means that you
 
 Collecting the right performance data means you’ll be alerted to potential problems with your service. And when you make a change to the service, you’ll be able to tell whether it had the effect you expected. In practice this will often mean setting up analytics and feedback surveys for dashboards and monitoring the data you get back.
 
+At a minumum you should be requesting feedback from users via a survey hosted on the dashboard and reviewing this on a regular basis. <!-- TODO: Add in how to set up google analytics (or equivalent)-->
+
 ---
 
 ## Peer review
@@ -175,14 +182,57 @@ Peer review is a quality assurance activity, where an analyst other than the ori
 - Dashboards must always be peer reviewed within the team they are created.
 - Dashboards should also be peer reviewed by analysts outside of the subject area of the team. 
 
-For more guidance on how to peer review, see the [peer review section of the Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/peer_review.html).
+The Central Statistics Unit has a number of analysts experience with R Shiny dashboards and are happy to review any dashboards created, contact statistcs.development@education.gov.uk if you're interested in this. For more guidance on how to peer review, see the [peer review section of the Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/peer_review.html).
 
-<!-- Other things to consider 
+<!-- 
 
-Service monitoring - how much of that can we set up centrally, what can teams do for themselves?
+TODO: Service monitoring - how much of that can we set up centrally, what can teams do for themselves?
 
-Expanding on and giving templates for assessing performance
+TODO: Expanding on and giving templates for assessing performance
 -->
+
+---
+
+# How to publish a dashboard 
+
+---
+
+How you choose to publish your R Shiny application will depend on the type of access you require for it.
+
+---
+
+## Internal only apps
+
+---
+
+It's possible to publish dashboards that are only accessible to those on DfE kit, to do this you will need to publish via the departments RSConnect servers.
+
+You will need: 
+
+* A finished app, in line with the guidance on this page
+* The code to be in a Git repository in the dfe-gov-uk Azure DevOps space
+
+To publish the app, you'll need to set up a pipeline in Azure DevOps, guidance for how to do this can be found in the [R community teams area](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9).
+
+Access to applications on RSConnect are locked down by default, once the pipeline is set up and you've deployed the app you'll need to request for its access to be opened up by using an RSConnect request on [ServiceNow](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1e3c3cb9db80ab003b929334ca9619df&sysparm_category=09e18be6db2f8340865049ee3b96190f).
+
+If you're running the app from an internal database, you'll need to contact the database owner to set up a local login, and then store those as variables against your specific app in rsconnect. You can raise a request to do this via [ServiceNow](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1e3c3cb9db80ab003b929334ca9619df&sysparm_category=09e18be6db2f8340865049ee3b96190f) and selecting 'Change app variables'.
+
+---
+
+## Public apps
+
+---
+
+The majority of dashboards made to support and augment our Official Statistics will be public facing. For public facing shiny apps you should publish via shinyapps.io. The statistics development team manage a subscription for this and can help you get set up. 
+
+You will need:
+
+* A finished app that meets the accessibility and styling standards
+* Code in the dfe-analytical-services GitHub repo
+* Approval from your DD
+
+To set up a new app, send the above to statistics.development@education.gov.uk. If your code is not yet hosted in the dfe-analytical-services area you can request for the repository to be moved at the same time as sending approvals.
 
 ---
 
@@ -200,13 +250,11 @@ The guidance on this page assumes you have prior knowledge of R, if you are new 
 
 ---
 
-When using R Shiny you can choose to create an app from scratch or by using a specific dashboard package such as [shinydashboard](https://rstudio.github.io/shinydashboard/). <!-- Sarah is this still right, or should we be steering people away from shinydashboard? -->
-
-A straight shiny app gives full flexibility, but may take more effort to get your dashboard to look how you want it to. The shinydashboard package gives a simplified template for Shiny, it has less flexibility but gives quick and simple structures to help create your dashboard. <!-- Sarah is this still right, or should we be steering people away from shinydashboard? -->
-
 There are a lot of resources already available to support you when working with R Shiny, if you're new, then this [blog post](https://www.r-bloggers.com/2021/03/a-gentle-introduction-to-r-shiny/) provides a gentle introduction.
 
-Our template shiny app [LINK to follow soon] repository should be used a starting point for all public facing dashboards as it gives the right set up for publishing and provides template code for common parts.
+Our template shiny app [Link to follow soon] repository should be used a starting point for all public facing dashboards as it gives the right set up for publishing and provides template code for common parts. You can create your own repo from the template by using the 'use template' button available in GitHub:
+
+GIF! <!-- https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/?utm_campaign=1559837005&utm_medium=social&utm_source=twitter&utm_content=1559837005 -->
 
 For more advanced shiny knowledge it's worth taking a look at the guide to [engineering production-grade shiny apps](https://engineering-shiny.org/).
 
@@ -218,7 +266,9 @@ Finally, you should seek to make use of the community that is already out there,
 
 ---
 
-Some initial thing around consistency and coherence, we expect that all applications published meet the following?
+We expect all dashboards to follow a minimum set of standards to ensure coherence between our products and a minimum standard of quality for our end users.
+
+These standards are constantly evolving, and all feedback and contributions are welcome, contact us at statistics.development@education.gov.uk.
 
 ---
 
@@ -226,26 +276,23 @@ Some initial thing around consistency and coherence, we expect that all applicat
 
 ---
 
-All dashboards need to meet the latest accessibility regulations [include a link].
+In line with [recent legislation]() for public sector websites, all dashboards need to meet the latest [Web Content Accessibility Guidance](https://www.w3.org/TR/WCAG21/).
 
-Key things to be aware of are:
+As a minimum we expect all dashboards to be checked using at least one of the tools below, and have an accessibility statement, before being published. 
 
-[List main requirements for accessibility regs]
+Your statement should be written in line with the [accessibility statement guidance](https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement#publish-your-accessibility-statement), and you can make use of a [template accessibility statement](https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website) provided by .gov.uk.
 
-There are existing tools/packages that can help ensure your dashboards are accessible - 
-
-**The [shinya11y](https://github.com/ewenme/shinya11y) package** is a very useful tool to look at accessibility checks across your app. Simply install and load the package, then include `use_tota11y()` at the top of your UI script. This brings up an interface that helps you examine different accessibility aspects in your app, like colour contrast, alt-text and what screen readers will detect:
-
-`r knitr::include_graphics("images/shinya11y_demo.gif")`
-
-**The Lighthouse feature in Google Chrome** is another easy way to quickly rate your accessibility. Open your app in Chrome, right click anywhere on the page and select "Inspect". From there, navigate to "Lighthouse" in the top grey bar, and click "Generate report". This generates scores for accessibility, best practices and SEO for your application or web page:
+Lighthouse in Google Chrome is an easy way to quickly rate your accessibility. Open your app in Chrome, right click anywhere on the page and select "Inspect". From there, navigate to "Lighthouse" in the top grey bar, and click "Generate report". This generates scores for accessibility, best practices and SEO for your application or web page:
 
 `r knitr::include_graphics("images/lighthouse.gif")`
 
+To complement this, we recommend also using the [shinya11y](https://github.com/ewenme/shinya11y) package to look at accessibility across your dashboard. Simply install and load the package, then include `use_tota11y()` at the top of your UI script. This brings up an interface that helps you examine different accessibility aspects in your app, like colour contrast, alt-text and what screen readers will detect:
 
-Automated tools can't check for everything. Actively consider what users need from your dashboard - can they get that from the alt text etc. that you have provided? Everything that you can see, you should also be able to read with a screen reader.
-(https://www.w3.org/WAI/tutorials/images/decision-tree/)
-Use the Edge narrator tool to test out how your dashboard works in reality with a screen reader.
+`r knitr::include_graphics("images/shinya11y_demo.gif")`
+
+Automated tools can't check for everything and theres no subsitute for giving your dashboard a manual check. You should consider what users need from your dashboard and ensure that that information is accessible to all. For example, can someone using a screen reader get the same information as you can see on the screen from a downloadable csv or from the alt text that you have provided? Everything that you can see, you should also be able to read with a screen reader. Use the [Edge narrator tool](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) to test out how your dashboard works in practice.
+
+<!-- Couldn't work out how to fit this in, but worth keeping and combining with the gov.uk guidance on alt text? (https://www.w3.org/WAI/tutorials/images/decision-tree/) -->
 
 ---
 
@@ -253,15 +300,20 @@ Use the Edge narrator tool to test out how your dashboard works in reality with 
 
 ---
 
-<!-- We don’t have an agreed style for Shiny apps / dashboards yet so need to agree one. 
+<!--
 
-Have a look at how transferable the https://github.com/moj-analytical-services/shinyGovstyle stuff is. -->
+We don’t have an agreed style for Shiny apps / dashboards yet so need to agree one. 
 
-Each report should include a department/agency logo in the top left corner.
+Have a look at how transferable the https://github.com/moj-analytical-services/shinyGovstyle stuff is. 
 
-All dashboards should have a version control page, accessibility statement, link to the source code, and information about who to contact for feedback/issues.
+Each report should include the department/agency logo in the top left corner. a version control page, accessibility statement,
 
-Teams should pick from the [gov.uk design system colours](https://design-system.service.gov.uk/styles/colour/) when creating dashboards. Our template style sheet [LINK TO CODE IN REPO] makes use of these colours, but can be extended if needed to suit your needs. Consider which colours have sufficient contrast to be placed next to each other using the [colour contrast checker](https://contrast-checker.glitch.me/)
+-->
+
+All dashboards should have a link to the source code, and information about who to contact for feedback/issues. You should be familiar with and follow the [gov.uk style guide](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style) as appropriate.
+
+Teams should pick from the [gov.uk design system colours](https://design-system.service.gov.uk/styles/colour/) when creating dashboards. The [style sheet]() in our [template repository]() makes use of these colours, though this can be extended if needed to suit your needs. Be careful when choosing colours, and make sure that colours have sufficient contrast to be placed next to each other to meet WCAG AA standards using the [colour contrast checker](https://webaim.org/resources/contrastchecker/).
+
 <!-- Palette stuff to put in here too when complete -->
 
 Charts using ggplot2 and plotly can take custom palettes using the `scale_fill_manual()` function, e.g. below:
@@ -292,20 +344,61 @@ You can use in-line CSS to make these style changes, or make edits to the style 
 
 [DEMO HERE - GIF?]
 
-
-https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style - should also reference this
-
 ---
 
 ### Testing R Shiny
 
 ---
 
-To ensure that they are reliable, apps/dashboards should have an appropriate amount of automated tests before they can be published.
+To ensure that they are reliable, dashboards should have an appropriate amount of automated tests before they can be published. We recommend using a mix of UI and unit tests. 
 
-https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps 
+---
 
-Also see our guidance on testing R code on the [learning resources page](l+d.html#R).
+#### UI tests
+
+---
+
+Something on UI tests with shiny (and link to here https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps)
+
+---
+
+#### Unit tests
+
+---
+
+Something on unit tests with testthat (and link to here https://dfe-analytical-services.github.io/good-code-practice/testing.html#testthat. For more guidance, see see our guidance on testing R code section on the [learning resources page](l+d.html#R).
+
+---
+
+#### Continuous integration
+
+---
+
+We use Github Actions to deploy the latest code whenever a push to your master branch occurs - this ensure the published version of your app stays up to date. 
+
+If you’ve started from our [template repository]() this will mostly be set up for you, but if not you’ll need to add the following folder to your repo [LINK](). 
+
+You should also use GitHub Actions to run the automated tests for your app, which we recommend are done on at least every pull request. An example yaml file for running the tests is included in the [template repository](). 
+
+GitHub actions are already well documentated and [their own guidance](https://docs.github.com/en/actions) should be able to walk you through anything you need. That being said, if there's anything else you'd like to see here let us know.
+
+<!-- TODO:
+
+What about profiling R code?
+
+Have a small section on this in peer review - could link to it here too as something to consider? https://rsconnect/rsc/stats-production-guidance/rap.html#Review_of_code_within_team 
+
+StyleR
+
+We have something on this in our RAP guidance https://rsconnect/rsc/stats-production-guidance/rap.html#clean-final-code so could link to that and provide more detail here about including style stuff in tests too? 
+
+Automated testing
+
+Could add to the testing bit above? We have some bits in our RAP guidance https://rsconnect/rsc/stats-production-guidance/rap.html#Automated_quality_assurance but would be good to cover test that vs shiny test and point to template code repo that uses both
+
+CI
+
+-->
 
 ---
 
@@ -313,82 +406,22 @@ Also see our guidance on testing R code on the [learning resources page](l+d.htm
 
 ---
 
-We don't yet have a database server set up that can be accessed by public facing dashboards, though we are working to put this in place. In the meantime there a few alternative options for storing data that the dashboard can run off.
+We don't yet have a database server set up that can be accessed by public facing dashboards, though we are working to put this in place. In the meantime, there a few alternative options for storing data that the dashboard can run off.
 
 - Store the data within the repo (e.g. CSV files in a /data folder)
 
 - Use Google sheets
 
-- Use dropbox
+- Use Dropbox
 
-If you are running an internal-only app then you can connect to our internal SQL servers, information on how to do this is in the [R community teams area]().
-
----
-
-## How to publish a dashboard 
+If you are running an internal-only app then you can connect to our internal SQL servers, information on how to do this is in the [R community teams area](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9).
 
 ---
 
-How you choose to publish your app will depend on the type of access you require for it.  
+### Secure variables
 
 ---
 
-### Internal only apps
+See our [Git](git.html#storing-secure-variables) page for guidance on storing secure variables in repositories.
 
 ---
-
-It's possible to publish dashboards that are only accessible to those on DfE kit, to do this you will need to publish via the departments RSConnect servers.
-
-You will need: 
-
-* A finished app, in line with the guidance on this page
-* The code to be in a Git repository in the dfe-gov-uk Azure DevOps space
-
-To publish the app, you'll need to set up a pipeline in Azure DevOps, guidance for how to do this can be found in the [R community teams area](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9).
-
-Access to applications on RSConnect are locked down by default, once the pipeline is set up and you've deployed the app you' can then'll need to request for it's access to be opened up by using an RSConnect request on [ServiceNow](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1e3c3cb9db80ab003b929334ca9619df&sysparm_category=09e18be6db2f8340865049ee3b96190f).
-
-If you're running the app from an internal database, you'll need to contact the database owner to set up a local login, and then store those as variables against your specific app in rsconnect. You can raise a request to do this via [ServiceNow](https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=1e3c3cb9db80ab003b929334ca9619df&sysparm_category=09e18be6db2f8340865049ee3b96190f) and selecting 'Change app variables'.
-
----
-
-### Public apps
-
----
-
-The majority of dashboards made to support and augment our Official Statistics public facing shiny apps you should publish via shinyapps.io. The statistics development team manage a subscription for this and can help you get set up. 
-
-You will need:
-
-* A finished app that meets the accessibility and styling standards
-* Approvals from your DD, Legal, and Comms
-* Code in a GitHub repo
-* GitHub Actions set up
-
-To set up a new app send these to statistics.development@education.gov.uk
-
-**GitHub Actions:**
-
-We use Github Actions to deploy the latest code whenever a push to your master branch occurs - this ensure the published version of your app stays up to date. 
-
-If you’ve started from our empty project template [we should provide this] this will mostly be set up for you, but if not you’ll need to add the following folder to your repo [LINK] 
-
-
-You should also use GitHub Actions to run the automated tests for your app, which we recommend are done on at least every pull request. An example yaml file for running the tests is included in the template repo [LINK]. 
-
-
-
----
-
-What about profiling R code?
-<!-- Have a small section on this in peer review - could link to it here too as something to consider? https://rsconnect/rsc/stats-production-guidance/rap.html#Review_of_code_within_team -->
-
-StyleR
-<!-- We have something on this in our RAP guidance https://rsconnect/rsc/stats-production-guidance/rap.html#clean-final-code so could link to that and provide more detail here about including style stuff in tests too? -->
-
-Automated testing
-<!-- Could add to the testing bit above? We have some bits in our RAP guidance https://rsconnect/rsc/stats-production-guidance/rap.html#Automated_quality_assurance but would be good to cover test that vs shiny test and point to template code repo that uses both -->
-
-CI
-
-Setting up analytics
