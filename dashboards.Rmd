@@ -226,7 +226,7 @@ Some initial thing around consistency and coherence, we expect that all applicat
 
 ---
 
-All dashboards need to meet the latest accessibility regulations [include a link].
+All dashboards need to meet the [latest accessibility regulations](https://www.w3.org/TR/WCAG21/).
 
 Key things to be aware of are:
 
@@ -301,11 +301,50 @@ https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style - should also ref
 
 ---
 
-To ensure that they are reliable, apps/dashboards should have an appropriate amount of automated tests before they can be published.
+To ensure that they are reliable, apps/dashboards should have an appropriate amount of automated tests before they can be published. The type of tests that you need to run will depend on the content of your application.
 
-https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps 
+---
 
-Also see our guidance on testing R code on the [learning resources page](l+d.html#R).
+#### UI Tests
+
+---
+
+User interface (UI) tests should be used for all apps. These tests should check that:
+
+* Your app loads up correctly
+* Content appears as expected when you switch between tabs
+* Content updates as expected when you change inputs
+
+The [shinytest package](https://rstudio.github.io/shinytest/) is a really easy way to create these tests on an RShiny app. Simply load in the package and run `shinytest::recordTest()` to open up the testing environment to get started. 
+
+Each test should produce one "expected results" JSON file. You can track particular elements of your app by holding CTRL and clicking on an element in the testing window.
+
+An example of a basic shiny test to check that your app loads up correctly can be found in our Shiny template repo [LINK TO TEMPLATE REPO HERE]
+
+---
+
+#### Unit Tests
+
+---
+
+Unit tests should be used for apps that contain custom functions created from scratch, or that rely on existing functions being combined to interact in a certain way. 
+
+Unit testing checks, for a set of defined variables, that the output is always the same when you run your application. This ensures that if slight tweaks are made to your custom function, or functions within packages are updated, then the custom function still works.
+
+For example, our QA app has many custom functions that we create to screen files before upload to EES. We have a series of dummy files that we have created to either pass or fail certain tests. Unit tests are written to check that these files always pass or fail as expected.
+
+
+---
+
+#### Tests and deployment
+
+---
+
+Both UI and unit tests need to be added to your app's deployment pipeline. This ensures that the app will not be published if any of the tests fail. 
+
+[INFO ON HOW TO DO THAT HERE]
+
+Further guidance on setting up testing can be found in the [DfE good code practice guide](https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps). Also see our guidance on testing R code on the [learning resources page](l+d.html#R).
 
 ---
 
