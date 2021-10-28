@@ -169,7 +169,11 @@ Defining what good looks like and identifying appropriate metrics means that you
 
 Collecting the right performance data means you’ll be alerted to potential problems with your service. And when you make a change to the service, you’ll be able to tell whether it had the effect you expected. In practice this will often mean setting up analytics and feedback surveys for dashboards and monitoring the data you get back.
 
-At a minumum you should be requesting feedback from users via a survey hosted on the dashboard and reviewing this on a regular basis. <!-- TODO: Add in how to set up google analytics (or equivalent)-->
+At a minumum you should be requesting feedback from users via a survey hosted on the dashboard and reviewing this on a regular basis. An example of this kind of feedback survey is the [beta banner survey](https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-XMiKzsnr8xJoWM_DeGwIu9UNDJHOEJDRklTNVA1SDdLOFJITEwyWU1OQS4u) on Explore Education Statistics.
+
+`r knitr::include_graphics("images/betaBanner.png")`
+
+More details on setting up analytics for your dashboard will follow shortly, for help and advice on this in the meantime please take a look at this [example file](https://github.com/dfe-analytical-services/exclusion-statistics/blob/master/www/google-analytics.js) adding Google Analytics to a shiny dashboard, or contact statistics.development@education.gov.uk.
 
 ---
 
@@ -252,13 +256,17 @@ The guidance on this page assumes you have prior knowledge of R, if you are new 
 
 There are a lot of resources already available to support you when working with R Shiny, if you're new, then this [blog post](https://www.r-bloggers.com/2021/03/a-gentle-introduction-to-r-shiny/) provides a gentle introduction.
 
-Our template shiny app [Link to follow soon] repository should be used a starting point for all public facing dashboards as it gives the right set up for publishing and provides template code for common parts. You can create your own repo from the template by using the 'use template' button available in GitHub:
+Our template shiny app [Link to follow soon] repository should be used a starting point for all public facing dashboards as it gives the right set up for publishing and provides template code for common parts. 
 
-GIF! <!-- https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/?utm_campaign=1559837005&utm_medium=social&utm_source=twitter&utm_content=1559837005 -->
+<!-- You can create your own repo from the template by using the 'use template' button available in GitHub:
+GIF!  https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/?utm_campaign=1559837005&utm_medium=social&utm_source=twitter&utm_content=1559837005 -->
 
 For more advanced shiny knowledge it's worth taking a look at the guide to [engineering production-grade shiny apps](https://engineering-shiny.org/).
 
-Finally, you should seek to make use of the community that is already out there, see what others are doing, ask them questions and for advice on any decisions or problems that you're facing, and share what it is that you're doing. The Statistics Development Team are experienced with R Shiny and happy to help or offer advice, and there is the [DfE R community](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9) on teams. There is a bank of [tips and tricks](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::d9f50997-7180-407d-baf9-47f9ec9d54a3?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A21%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype%22%7D&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9){target="_blank" rel="noopener noreferrer"} stored in there too. Going beyond DfE there's a wealth of resources and communities online, including [Stack Overflow](https://stackoverflow.com/) discussions, cross government slack channels (e.g. #R and #Shiny on govdatascience.slack.com) and even tweets about [R Shiny on twitter](https://twitter.com/search?q=rshiny&src=spelling_expansion_revert_click).
+Finally, you should seek to make use of the community that is already out there, see what others are doing, ask them questions and for advice on any decisions or problems that you're facing, and share what it is that you're doing. 
+- The Statistics Development Team are experienced with R Shiny and happy to help or offer advice, and there is the [DfE R community](https://teams.microsoft.com/l/team/19%3a311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype/conversations?groupId=b95c605d-8fbc-4e4d-9a76-2f7d1c55e70a&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9) on teams.
+- There is a bank of [tips and tricks](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::d9f50997-7180-407d-baf9-47f9ec9d54a3?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A21%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3A311ec2e4d46b4dd38f0d61f05fb93383%40thread.skype%22%7D&tenantId=fad277c9-c60a-4da1-b5f3-b3b8b34a82f9){target="_blank" rel="noopener noreferrer"} stored in the DfE R teams area too. 
+- Going beyond DfE there's a wealth of resources and communities online, including [Stack Overflow](https://stackoverflow.com/) discussions, cross government slack channels (e.g. #R and #Shiny on govdatascience.slack.com) and even tweets about [R Shiny on twitter](https://twitter.com/search?q=rshiny&src=spelling_expansion_revert_click).
 
 ---
 
@@ -277,9 +285,9 @@ These standards are constantly evolving, and all feedback and contributions are 
 ---
 
 
-In line with [recent legislation]() for public sector websites, all dashboards need to meet the latest [Web Content Accessibility Guidance](https://www.w3.org/TR/WCAG21/).
+In line with [recent legislation](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) for public sector websites, all dashboards need to meet the latest [Web Content Accessibility Guidance](https://www.w3.org/TR/WCAG21/).
 
-As a minimum we expect all dashboards to be checked using at least one of the tools below, and have an accessibility statement, before being published. 
+As a minimum we expect all dashboards to be checked using the two tools below (lighthouse and shinya11y) and have an accessibility statement before being published. 
 
 Your statement should be written in line with the [accessibility statement guidance](https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement#publish-your-accessibility-statement), and you can make use of a [template accessibility statement](https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website) provided by .gov.uk.
 
@@ -341,9 +349,7 @@ ggplot(aes(y=value, x="",
 
 ```
 
-You can use in-line CSS to make these style changes, or make edits to the style sheet. Editing the style sheet is a neater solution if you want to apply changes across your app, and keeps your UI code clean. You can find out how styles are configured by running your app, right clicking and selecting "Inspect" to view the element you wish to change. In these lines you can change fonts, font colours and background colours, for example.
-
-[DEMO HERE - GIF?]
+You can use in-line CSS to make these style changes, or make edits to the style sheet. Editing the style sheet is a neater solution if you want to apply changes across your app, and keeps your UI code clean. You can find out how styles are configured by running your app, right clicking and selecting "Inspect" to view the element you wish to change. You can then find these lines in the CSS stylesheet and change a number of things including fonts, font colours and background colours.
 
 ---
 
@@ -352,6 +358,8 @@ You can use in-line CSS to make these style changes, or make edits to the style 
 ---
 
 To ensure that they are reliable, dashboards should have an appropriate amount of automated tests before they can be published. We recommend using a mix of UI and unit tests, but the number and type of tests that you need to run will depend on the content of your application.
+
+Further guidance on setting up testing can be found in the [DfE good code practice guide](https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps). Also see our guidance on testing R code on the [learning resources page](l+d.html#R).
 
 ---
 
@@ -379,10 +387,9 @@ An example of a basic shiny test to check that your app loads up correctly can b
 
 Unit tests should be used for apps that contain custom functions created from scratch, or that rely on existing functions being combined to interact in a certain way. 
 
-Unit testing checks, for a set of defined variables, that the output is always the same when you run your application. This ensures that if slight tweaks are made to your custom function, or functions within packages are updated, then the custom function still works.
+Unit testing checks, for a set of defined variables, that the output is always the same when you run your custom function/s. This ensures that if slight tweaks are made to your function, or functions within packages you are using are updated, that your custom function still works.
 
-For example, our QA app has many custom functions that we create to screen files before upload to EES. We have a series of dummy files that we have created to either pass or fail certain tests. Unit tests are written to check that these files always pass or fail as expected.
-
+For example, our [QA app](https://github.com/dfe-analytical-services/dfe-published-data-qa/tree/master/tests/testthat) has many custom functions that we create to screen files before upload to EES. We have a series of dummy files that we have created to either pass or fail certain tests. Unit tests are written to check that these files always pass or fail as expected.
 
 ---
 
@@ -392,37 +399,11 @@ For example, our QA app has many custom functions that we create to screen files
 
 Both UI and unit tests need to be added to your app's deployment pipeline. This ensures that the app will not be published if any of the tests fail. 
 
-[INFO ON HOW TO DO THAT HERE]
+We recommend using Github Actions to deploy the latest code whenever a push to your master branch occurs - this ensure the published version of your app stays up to date. 
 
-Further guidance on setting up testing can be found in the [DfE good code practice guide](https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps). Also see our guidance on testing R code on the [learning resources page](l+d.html#R).
+You should also use GitHub Actions to run the automated tests for your app, which we recommend are done on at least every pull request.
 
----
-
-#### UI tests
-
----
-
-Something on UI tests with shiny (and link to here https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps)
-
----
-
-#### Unit tests
-
----
-
-Something on unit tests with testthat (and link to here https://dfe-analytical-services.github.io/good-code-practice/testing.html#testthat. For more guidance, see see our guidance on testing R code section on the [learning resources page](l+d.html#R).
-
----
-
-#### Continuous integration
-
----
-
-We use Github Actions to deploy the latest code whenever a push to your master branch occurs - this ensure the published version of your app stays up to date. 
-
-If you’ve started from our [template repository]() this will mostly be set up for you, but if not you’ll need to add the following folder to your repo [LINK](). 
-
-You should also use GitHub Actions to run the automated tests for your app, which we recommend are done on at least every pull request. An example yaml file for running the tests is included in the [template repository](). 
+If you’ve started from our [template repository]() then all of this will be mostly set up for you to tweak and expand on, but if you haven't then you’ll need to add the yaml files from the [.github/workflows]() folder to your repository.
 
 GitHub actions are already well documentated and [their own guidance](https://docs.github.com/en/actions) should be able to walk you through anything you need. That being said, if there's anything else you'd like to see here let us know.
 
