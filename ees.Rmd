@@ -344,6 +344,11 @@ If you just need to change the subject title for your data file you do not need 
 
 However, if you notice a mistake in your data file you can replace it with another. When replacing a data file the platform will attempt to recreate any data blocks and footnotes that were built using the previous file.
 
+<div class="alert alert-dismissible alert-warning">
+The replacement file must contain the exact same column names and types as the original. For example, a character column named "date" must also be replaced with a character column named "date". A numeric column named "date" will not work in the replacement.
+</div>
+
+
 `r knitr::include_graphics("images/replace-data-start.png")`
 
 The first step is to upload the new file.
