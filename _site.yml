@@ -46,3 +46,5 @@ output:
     toc_float: TRUE
     css: images/acalat_theme.css
     anchor_sections: FALSE
+    includes:
+     in_header: "header.html"
