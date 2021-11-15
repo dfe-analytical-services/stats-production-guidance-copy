@@ -520,6 +520,11 @@ All rows must have country_code and country_name completed, regardless of geogra
 | Sponsor | sponsor_id, sponsor_name | Note that Sponsor ID is shown as Group ID on GIAS when looking at a Sponsor. |
 
 
+<div class="alert alert-dismissible alert-info">
+[English devolved area](https://explore-education-statistics.service.gov.uk/glossary#english-devolved-area){target="_blank" rel="noopener noreferrer"} is used to refer to combined authorities, mayoral combined authorities and the Greater London Authority.
+</div>
+
+
 Planning area, School, Provider, and Institution level data will upload as normal to EES, though will not be read into the table tool or data blocks if they are mixed in with other levels. All data, including these levels are accessible in the downloadable files for users to explore in the same format as they are uploaded. 
 
 For School and Provider, any data files that **only** consist of these levels are able to be uploaded and will be usable in the table tool. This solution is still not ideal, though it will allow you to include additional filters at school / provider level. Wherever there are multiple values per provider/school this should be marked as a filter, and where there is a single value per provider/school this should be marked as an indicator (e.g. school type now becomes an indicator as a school only has one value for type).
