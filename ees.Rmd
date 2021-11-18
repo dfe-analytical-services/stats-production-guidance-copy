@@ -85,6 +85,11 @@ Jobshare emails can not be used to access EES. Specific personal emails should b
 ---
 
 <!-- need to include methodologies in this section? -->
+<!-- An overview of roles and permissions is illustrated below: -->
+
+<!-- ```{r, echo=FALSE, fig.align='center'} -->
+<!-- knitr::include_graphics("images/EES_roles.svg") -->
+<!-- ``` -->
 
 The Statistics Development Team are responsible for setting up and maintaining user permissions during the beta phase. Change requests will be monitored via their main mailbox - explore.statistics@education.gov.uk. 
 
@@ -140,6 +145,8 @@ There is also a publication owner role, which is assigned at publication level t
     The administrative role:
 
     + This role is assigned to a user and gives full access including administrative tools, typically only used by the Statistics Development Team and EES developers.
+    
+
 
 ---
 
@@ -160,11 +167,13 @@ Publications are organised into topics and themes (as shown on the EES [Find Sta
 | Level | Example |
 |:------|:------|
 | Theme | Pupils and Schools |
-| Topic | Pupil absence |
-| Publication | Pupil absence in schools in England |
-| Release | 2018/19 |
+| Topic | School and pupil numbers |
+| Publication | Schools, pupils and their characteristics |
+| Release | 2020/21 |
 
 Each publication should have a lead statistician's name and contact details attached to it as a requirement of the Code of Practice. You may use a team email address but the name and telephone number of a named statistician should also be provided. 
+
+Publication titles should not include any references to geography (e.g. "in England"), time period or badging of statistics, all of this information will be made clear at release level in the header and summary boxes.
 
 Methodology documentation is also attached at a publication level within EES - meaning one standalone piece should be written to cover all releases for the given publication within the service. 
 
@@ -642,7 +651,17 @@ You can create static html tables for presenting information that isn't embedded
 
 ---
 
-Once you’re happy with your release you need to go to the sign off page and change it’s status in order to move it through the release pipeline.
+<div class="alert alert-dismissible alert-warning">
+Only users with ‘approver’ [permissions](#Roles_and_permissions) (usually G6 or above) can sign off the release and methodology for publication.
+</div>
+
+---
+
+### Releases
+
+---
+
+Once you’re happy with your release, you need to go to the sign off page and change their status in order to move them through the release pipeline.
 
 There are three statuses:
 
@@ -650,10 +669,19 @@ There are three statuses:
 2.	**Ready for higher review** (where the senior statistician checks over the release before approving)
 3.	**Approved for publication** (after approval has been given, releases in this status will be published on their scheduled date)
 
+---
 
-<div class="alert alert-dismissible alert-warning">
-Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release for publication.
-</div>
+### Methodology
+
+---
+
+Once you’re happy with your methodology, your approver can approve it to go live either immediately or with a release.
+
+There are two statuses:
+
+1.	**In draft** (where the production team work on drafting the release)
+2.	**Approved for publication** (after approval has been given, releases in this status will be published either immediately or with a release)
+
 
 ---
 
@@ -781,9 +809,9 @@ If you have not created or published a methodology page on EES before, the first
 
 Once created you can then edit the methodology content in a similar way to how you would create release page content. 
 
-Once the drafting has finished, a methodology should be set as 'approved for publication', currently approved methodology changes will be published immediately so make sure you are ready for the changes to go live before approving. 
+Once the drafting has finished, notify your approver. When they approve, your approver can either set your methodology to go live immediately, or set it to be published alongside a particular release.
 
-If you want to revise an existing methodology page you can amend the methodology which will generate a new version for you to edit. 
+If you want to revise an existing methodology page, you can amend the methodology, which will generate a new version for you to edit. 
 
 `r knitr::include_graphics("images/EES-amend-methodology.PNG")`
 
@@ -852,7 +880,7 @@ Use this page to change the details for your publication, such as the contact in
 Any updates here will affect all releases in the series and will be published immediately. 
 
 <div class="alert alert-dismissible alert-danger">
-It is possible to change the publication title via this page, however this should be used rarely and will not affect the publications url if one or more published releases exist. 
+Only BAU Users (the Statistics Development Team) can amend publication titles, however this should only be requested rarely and will not affect the publications url if one or more published releases exist. 
 </div>
 
 `r knitr::include_graphics("images/manage-publication.png")`

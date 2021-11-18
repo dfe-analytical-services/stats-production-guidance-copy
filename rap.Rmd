@@ -632,6 +632,7 @@ If you can't answer yes, then:
 
 - Other tips for getting started with peer review can be found in the [Duck Book](https://best-practice-and-impact.github.io/qa-of-code-guidance/peer_review.html){target="_blank" rel="noopener noreferrer"} 
 
+- The Duck Book also contains some helpful [code QA checklists](https://best-practice-and-impact.github.io/qa-of-code-guidance/checklists.html){target="_blank" rel="noopener noreferrer"} to help get you thinking about what to check
 
 ---
 
@@ -1107,30 +1108,6 @@ Get code into a git controlled folder in whatever version it is currently in. Us
 
 ``` {r git_init, eval=FALSE}
 git init
-```
-
-+ If you are setting up git for the first time, or haven't used it in a while, you will need to configure your proxy settings. Type the following, replacing your DfE username where appropriate, and hit enter after each line.
-
-``` {r git_config_steps, eval=FALSE}
-
-git config --global http.proxy http://USERNAME@mwg.proxy.ad.hq.dept:9090
-
-git config --global https.proxy  https://USERNAME@mwg.proxy.ad.hq.dept:9090
-
-git config --global http.sslverify false 
-
-```
-
-+ If git continues to return a 407 error, please try the following lines instead:
-
-``` {r git_config_steps_2, eval=FALSE}
-
-git config --global http.proxy http://[AD\\USERNAME]@mwg.proxy.ad.hq.dept:9090
-
-git config --global https.proxy  https://[AD\\USERNAME]@mwg.proxy.ad.hq.dept:9090
-
-git config --global http.sslverify false 
-
 ```
 
 3. After hitting enter, type in the following and hit enter again after each line. You will need the URL of your Azure DevOps repository to complete this step. Contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) if you are not sure what this is or do not have one.
