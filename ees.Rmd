@@ -651,7 +651,17 @@ You can create static html tables for presenting information that isn't embedded
 
 ---
 
-Once you’re happy with your release and methodology, you need to go to the sign off page and change their status in order to move them through the release pipeline.
+<div class="alert alert-dismissible alert-warning">
+Only users with ‘approver’ [permissions](#Roles_and_permissions) (usually G6 or above) can sign off the release and methodology for publication.
+</div>
+
+---
+
+### Releases
+
+---
+
+Once you’re happy with your release, you need to go to the sign off page and change their status in order to move them through the release pipeline.
 
 There are three statuses:
 
@@ -659,10 +669,19 @@ There are three statuses:
 2.	**Ready for higher review** (where the senior statistician checks over the release before approving)
 3.	**Approved for publication** (after approval has been given, releases in this status will be published on their scheduled date)
 
+---
 
-<div class="alert alert-dismissible alert-warning">
-Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release and methodology for publication.
-</div>
+### Methodology
+
+---
+
+Once you’re happy with your methodology, your approver can approve it to go live either immediately or with a release.
+
+There are two statuses:
+
+1.	**In draft** (where the production team work on drafting the release)
+2.	**Approved for publication** (after approval has been given, releases in this status will be published either immediately or with a release)
+
 
 ---
 
@@ -790,7 +809,7 @@ If you have not created or published a methodology page on EES before, the first
 
 Once created you can then edit the methodology content in a similar way to how you would create release page content. 
 
-Once the drafting has finished, [update your methodology status](#Sign_off) to mark it as ready for review. Your approver can then either set your methodology to go live immediately, or set it to be published alongside a particular release.
+Once the drafting has finished, notify your approver. When they approve, your approver can either set your methodology to go live immediately, or set it to be published alongside a particular release.
 
 If you want to revise an existing methodology page, you can amend the methodology, which will generate a new version for you to edit. 
 
