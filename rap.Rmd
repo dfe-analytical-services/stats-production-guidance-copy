@@ -1071,6 +1071,21 @@ A single repository should be used for all releases of your publication, there's
 
 ---
 
+#### Avoid revealing sensitive information
+
+---
+
+Here are some general best practice tips:
+- Using .gitignore to ignore files and folders to prevent committing anything sensitive
+- Never committing outputs unless they’ve been checked over, even aggregates. We suggest only outputting to an output folder which is in the .gitignore file, to ensure this doesn’t happen by mistake
+- Keeping datasets and secrets (e.g. API keys) outside the repository as much as possible, make use of secure variables
+- Checking git histories: if someone is planning on open-sourcing code that has previously been in a private repository or only version-controlled locally, you want to be careful not to have anything sensitive in the commit history. You can do this by following the above rules. When in doubt, you can remove the git history and start the public repo without it
+- You can [remove a file from the entire commit history](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) if you did commit anything sensitive, although you still need to follow the usual procedures if this was a data breach
+
+You can find out more in the duck book's [guidance on using git](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories). 
+
+---
+
 ### Collaboratively develop code using git 
 
 ---
@@ -1152,6 +1167,5 @@ git clone YOUR_URL_HERE
 ```
 
 - Make use of git and version control in your team projects regularly. Like learning anything new, putting it into practice regularly is the best way to become confident in using it.  
-
 
 Please refer to the other links on the [learning resources](l+d.html#git) page to learn more about how to use git in practice.
