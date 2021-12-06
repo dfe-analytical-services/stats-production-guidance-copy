@@ -1076,7 +1076,7 @@ A single repository should be used for all releases of your publication, there's
 ---
 
 Here are some general best practice tips:
-add 
+
 - Using .gitignore to ignore files and folders to prevent committing anything sensitive
 - Never committing outputs unless they’ve been checked over, even aggregates. We suggest only outputting to an output folder which is in the .gitignore file, to ensure this doesn’t happen by mistake
 - Keeping datasets and secrets (e.g. API keys) outside the repository as much as possible, make use of secure variables
