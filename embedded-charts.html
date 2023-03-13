@@ -13,7 +13,6 @@
 
 <title>Creating embedded visualisations</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -461,114 +460,68 @@ div.tocify {
 
 
 <p class="text-muted">
-Guidance for creating and embedding R-Shiny visualisations in EES
-publications
+Guidance for creating and embedding R-Shiny visualisations in EES publications
 </p>
 <hr />
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <hr />
-<p>EES now offers the option to add an embedded block, which allows
-analysts to present custom R created charts within their publications.
-This necessitates analysts creating an R-Shiny based app on GitHub
-containing the required chart that can then be hosted on a shiny server
-(currently using the DfE’s account on shinyapps.io).</p>
-<p><strong>Note that this current combination of GitHub and ShinyApps
-for publishing Shiny Apps does not offer the appropriate security
-required for unpublished DfE data. Unpublished uderlying app data should
-therefore never be uploaded to GitHub/ShinyApps until such time as it
-has been published (i.e. via EES).</strong> Prior to publication, either
-dummy data or the already published data should be substituted in for
-the purposes of uploading to GitHub and deploying to ShinyApps.</p>
-<p>If you need a live version of the dashboard with the unpublished data
-for pre-release reviews and access, the following options are
-available:</p>
+<p>EES now offers the option to add an embedded block, which allows analysts to present custom R created charts within their publications. This necessitates analysts creating an R-Shiny based app on GitHub containing the required chart that can then be hosted on a shiny server (currently using the DfE’s account on shinyapps.io).</p>
+<p><strong>Note that this current combination of GitHub and ShinyApps for publishing Shiny Apps does not offer the appropriate security required for unpublished DfE data. Unpublished uderlying app data should therefore never be uploaded to GitHub/ShinyApps until such time as it has been published (i.e. via EES).</strong> Prior to publication, either dummy data or the already published data should be substituted in for the purposes of uploading to GitHub and deploying to ShinyApps.</p>
+<p>If you need a live version of the dashboard with the unpublished data for pre-release reviews and access, the following options are available:</p>
 <ul>
 <li>Demo the chart in R-Studio</li>
-<li>Create a copy of the chart repository on Dev Ops, deploy this to
-rsconnect and use the rsconnect link as the embedded URL prior to
-publication (note this will need updating to the public ShinyApps link
-before the publication goes live).</li>
+<li>Create a copy of the chart repository on Dev Ops, deploy this to rsconnect and use the rsconnect link as the embedded URL prior to publication (note this will need updating to the public ShinyApps link before the publication goes live).</li>
 </ul>
-<p>We are currently putting in place a case to provide an in ternal
-shiny server platform, which will allow greater control of security
-around our data and allow draft Shiny applications to use unpublished
-data for internal use.</p>
+<p>We are currently putting in place a case to provide an in ternal shiny server platform, which will allow greater control of security around our data and allow draft Shiny applications to use unpublished data for internal use.</p>
 <hr />
 <div id="when-to-use-an-embedded-chart" class="section level2">
 <h2>When to use an embedded chart</h2>
 <hr />
-<p>EES provides a wide range of inbuilt chart options and will always be
-the first preference for static line, bar and geographical charts. This
-helps us to clearly maintain consistent styling and accessibility levels
-across the site.</p>
-<p>However, there are some instances where you might want to publish
-something that we can’t provide through EES. Example use cases would
-be:</p>
+<p>EES provides a wide range of inbuilt chart options and will always be the first preference for static line, bar and geographical charts. This helps us to clearly maintain consistent styling and accessibility levels across the site.</p>
+<p>However, there are some instances where you might want to publish something that we can’t provide through EES. Example use cases would be:</p>
 <ul>
 <li>interactive charts controlled by drop-down filters;</li>
-<li>chart types not provided by EES, e.g. sankey diagrams, box plots,
-waffle charts, pie charts, dumbbell charts, etc.</li>
+<li>chart types not provided by EES, e.g. sankey diagrams, box plots, waffle charts, pie charts, dumbbell charts, etc.</li>
 </ul>
 <hr />
 </div>
 <div id="tools" class="section level2">
 <h2>Tools</h2>
 <hr />
-<p>We currently only support custom charts created using R-Shiny. These
-should be created with ggplot and plotly. We provide a template example
-of a demo R-Shiny/ggplot chart on the DfE Analytical Services GitHub
-site, which is described <a
-href="#the-dfe-tiny-shiny-template">below</a>.</p>
+<p>We currently only support custom charts created using R-Shiny. These should be created with ggplot and plotly. We provide a template example of a demo R-Shiny/ggplot chart on the DfE Analytical Services GitHub site, which is described <a href="#the-dfe-tiny-shiny-template">below</a>.</p>
 <hr />
 </div>
 <div id="review-and-authorisation" class="section level2">
 <h2>Review and authorisation</h2>
 <hr />
-<p>To get a custom chart approved for embedding within a publication,
-you’ll need to get it reviewed by the <a
-href="mailto:statistics.development@education.gov.uk">Statistics
-Development team</a> (in addition to your standard approval chain).</p>
+<p>To get a custom chart approved for embedding within a publication, you’ll need to get it reviewed by the <a href="mailto:statistics.development@education.gov.uk">Statistics Development team</a> (in addition to your standard approval chain).</p>
 <hr />
 </div>
 </div>
 <div id="creating-an-embeddable-r-shiny-app" class="section level1">
 <h1>Creating an embeddable R-Shiny App</h1>
 <hr />
-<p>An embedded chart should take the form of a single chart, with
-necessary input options and nothing else. Avoid incorporating:</p>
+<p>An embedded chart should take the form of a single chart, with necessary input options and nothing else. Avoid incorporating:</p>
 <ul>
 <li>multiple different charts</li>
 <li>using navigation elements</li>
 <li>images and logos</li>
 </ul>
-<p><strong>And definitely don’t include unpublished data in any app
-uploaded to GitHub/ShinyApps prior to publication.</strong></p>
-<p>Other elements such as tables may also be possible if there’s a clear
-use case for them that EES alone can’t meet. Get in touch with us if you
-want to check that what you’d like to include is compatible with the
-intended use of the embed block.</p>
+<p><strong>And definitely don’t include unpublished data in any app uploaded to GitHub/ShinyApps prior to publication.</strong></p>
+<p>Other elements such as tables may also be possible if there’s a clear use case for them that EES alone can’t meet. Get in touch with us if you want to check that what you’d like to include is compatible with the intended use of the embed block.</p>
 <hr />
 <div id="the-dfe-tiny-shiny-template" class="section level2">
 <h2>The DfE Tiny-Shiny template</h2>
 <hr />
-<p>Our <a
-href="https://github.com/dfe-analytical-services/dfe-tiny-shiny">template
-tiny shiny app repository</a> should be used a starting point for all
-embedded shiny charts.</p>
-<p>To get an app set-up for use with EES, you’ll need the <a
-href="mailto:statistics.development@education.gov.uk">Statistics
-Development Team</a> team to create a repo for the app within the <a
-href="https://github.com/dfe-analytical-services/dfe-tiny-shiny">DfE
-Analytical Services area on GitHub</a>.</p>
+<p>Our <a href="https://github.com/dfe-analytical-services/dfe-tiny-shiny">template tiny shiny app repository</a> should be used a starting point for all embedded shiny charts.</p>
+<p>To get an app set-up for use with EES, you’ll need the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a> team to create a repo for the app within the <a href="https://github.com/dfe-analytical-services/dfe-tiny-shiny">DfE Analytical Services area on GitHub</a>.</p>
 <hr />
 </div>
 <div id="whats-in-the-template" class="section level2">
 <h2>What’s in the template</h2>
 <hr />
-<p>The template provides code for some basic interactive plots. Each
-example plot is contained with one of the existing branches below for
-demonstration purposes:</p>
+<p>The template provides code for some basic interactive plots. Each example plot is contained with one of the existing branches below for demonstration purposes:</p>
 <ul>
 <li>demo-interactive-bar</li>
 <li>demo-interactive-line</li>
@@ -578,59 +531,34 @@ demonstration purposes:</p>
 <div id="working-with-data" class="section level2">
 <h2>Working with data</h2>
 <hr />
-<p>As with the full dashboards, the embedded charts currently require
-the underlying data to be either included within the app repository on
-GitHub or uploaded elsewhere publicly accessible such as Google Drive or
-Dropbox. This currently means that any embedded charts being developed
-will need to use either dummy data or previously published data until
-the moment of publication. At the point of the parent release going
-live, the chart can then be updated with the latest data. Do not upload
-unpublished data to GitHub, Google Drive or Dropbox.</p>
-<p>As described earlier, where you need to use unpublished data in your
-chart prior to publication, you can either a) run the chart locally in
-R-Studio (without pushing the unpublished data to GitHub) or b) create a
-DevOps/rsconnect deploy of your app, which can be temporarily used as
-the embed block URL. Note, this will need updating to a URL to the
-public dashboard on ShinyApps ready for publication.</p>
-<p>We are currently developing a route to allow charts via R-Shiny apps
-to be hosted on DfE servers, such that draft publications will be able
-to incorporate embedded charts with the unpublished data. The data
-itself will then be accessed either from a SQL database on DfE
-servers.</p>
+<p>As with the full dashboards, the embedded charts currently require the underlying data to be either included within the app repository on GitHub or uploaded elsewhere publicly accessible such as Google Drive or Dropbox. This currently means that any embedded charts being developed will need to use either dummy data or previously published data until the moment of publication. At the point of the parent release going live, the chart can then be updated with the latest data. Do not upload unpublished data to GitHub, Google Drive or Dropbox.</p>
+<p>As described earlier, where you need to use unpublished data in your chart prior to publication, you can either a) run the chart locally in R-Studio (without pushing the unpublished data to GitHub) or b) create a DevOps/rsconnect deploy of your app, which can be temporarily used as the embed block URL. Note, this will need updating to a URL to the public dashboard on ShinyApps ready for publication.</p>
+<p>We are currently developing a route to allow charts via R-Shiny apps to be hosted on DfE servers, such that draft publications will be able to incorporate embedded charts with the unpublished data. The data itself will then be accessed either from a SQL database on DfE servers.</p>
 <hr />
 </div>
 </div>
 <div id="development-requirements" class="section level1">
 <h1>Development requirements</h1>
 <hr />
-<p>Many of the same principles that apply to creating a full R-Shiny
-dashboard apply to creating a custom embeddable charts. These are:</p>
+<p>Many of the same principles that apply to creating a full R-Shiny dashboard apply to creating a custom embeddable charts. These are:</p>
 <ul>
-<li><a
-href="dashboards.html#accessibility-testing">Accessibility</a>;</li>
+<li><a href="dashboards.html#accessibility-testing">Accessibility</a>;</li>
 <li><a href="dashboards.html#testing-r-shiny">Reliability</a>;</li>
 <li><a href="dashboards.html#performance-testing">Performance</a>;</li>
 <li><a href="dashboards.html#styling">Coherent styling</a>.</li>
 </ul>
 <hr />
-<div id="specific-design-recommendations-for-embedded-plots"
-class="section level2">
+<div id="specific-design-recommendations-for-embedded-plots" class="section level2">
 <h2>Specific design recommendations for embedded plots</h2>
 <hr />
-<p>Example code for producing an embeddable shiny chart is given in the
-<a
-href="https://github.com/dfe-analytical-services/dfe-tiny-shiny/server.R">template
-tiny shiny app repository</a>. The following recommendations should be
-followed in adapting this code:</p>
+<p>Example code for producing an embeddable shiny chart is given in the <a href="https://github.com/dfe-analytical-services/dfe-tiny-shiny/server.R">template tiny shiny app repository</a>. The following recommendations should be followed in adapting this code:</p>
 <ul>
 <li>Figures should be produced using plotly/ggplot2</li>
 <li>Figure lengths and heights should be in the range 6-10cm</li>
 <li>Text sizes in plots should be no smaller than 12pt</li>
 <li>Plotly overlays should be turned off</li>
 </ul>
-<p>Example code for creating charts using ggplot can be found in the <a
-href="ees.html#example-ggplot-chart-code">Using Explore Education
-Statistics guidance</a></p>
+<p>Example code for creating charts using ggplot can be found in the <a href="ees.html#example-ggplot-chart-code">Using Explore Education Statistics guidance</a></p>
 </div>
 </div>
 
