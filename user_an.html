@@ -13,7 +13,6 @@
 
 <title>EES analytics</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -38,6 +37,33 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/duck_guidance.png"/>
+<script>
+// Define dataLayer and the gtag function.
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// Default ad_storage to 'denied' as a placeholder
+// Determine actual values based on your own requirements
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'granted'
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+/*
+The tracking number below MUST be replaced with a unique number, contact the statistics development team to set this up.
+*/
+  gtag('config', 'G-KBJCBD114T');
+
+</script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -148,11 +174,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -357,6 +387,9 @@ div.tocify {
       <a href="rap.html">Processes and RAP</a>
     </li>
     <li>
+      <a href="rap_managers.html">RAP for managers</a>
+    </li>
+    <li>
       <a href="ud.html">Open data standards</a>
     </li>
     <li>
@@ -382,6 +415,9 @@ div.tocify {
     </li>
     <li>
       <a href="dashboards.html">Dashboards</a>
+    </li>
+    <li>
+      <a href="embedded-charts.html">Embedded R-Shiny charts</a>
     </li>
   </ul>
 </li>
@@ -424,27 +460,20 @@ div.tocify {
 
 
 <p class="text-muted">
-Guidance on understanding how users are interacting with your statistics
-published via EES
+Guidance on understanding how users are interacting with your statistics published via EES
 </p>
 <hr />
-<p>We track analytics of users on Explore Education Statistics using
-Google Analytics as well as other tools. These analytics can be found on
-our <a href="https://rsconnect/rsc/ees-analytics/" target="_blank"
-rel="noopener noreferrer">EES Analytics dashboard</a>. This tells you a
-range of things like:</p>
+<p>We track analytics of users on Explore Education Statistics using Google Analytics as well as other tools. These analytics can be found on our <a href="https://rsconnect/rsc/ees-analytics/" target="_blank" rel="noopener noreferrer">EES Analytics dashboard</a>. This tells you a range of things like:</p>
 <ul>
 <li>How many times each accordion has been clicked</li>
 <li>How long users spend on your page</li>
-<li>How many times each table has been used in the table builder or
-downloaded</li>
+<li>How many times each table has been used in the table builder or downloaded</li>
 </ul>
 <hr />
 <div id="user-led-content-improvements" class="section level1">
 <h1>User-led content improvements</h1>
 <hr />
-<p>The below table gives some pointers on how you can use these stats to
-improve your release for users:</p>
+<p>The below table gives some pointers on how you can use these stats to improve your release for users:</p>
 <table>
 <colgroup>
 <col width="30%" />
@@ -459,44 +488,38 @@ improve your release for users:</p>
 <tbody>
 <tr class="odd">
 <td>Search terms</td>
-<td>For popular search terms, add additional commentary or signposting
-using subheadings and accordions for to support your user’s interests.
-If you refer to a popular search term by another name, consider changing
-it so users know what you’re talking about.</td>
+<td>For popular search terms, add additional commentary or signposting using subheadings and accordions for to support your user’s interests. If you refer to a popular search term by another name, consider changing it so users know what you’re talking about.</td>
 </tr>
 <tr class="even">
 <td>Accordion openings</td>
-<td>Consider removing accordions with low numbers of clicks from your
-release. You could move them further up the page or group them into
-existing accordions if this commentary is essential to your
-release.</td>
+<td>Consider removing accordions with low numbers of clicks from your release. You could move them further up the page or group them into existing accordions if this commentary is essential to your release.</td>
 </tr>
 <tr class="odd">
 <td>Downloads</td>
-<td>For files with low numbers of downloads, consider combining
-information into other files, or consider removing from your publication
-entirely if users are no longer interested in this data.</td>
+<td>For files with low numbers of downloads, consider combining information into other files, or consider removing from your publication entirely if users are no longer interested in this data.</td>
 </tr>
 <tr class="even">
 <td>Tables built</td>
-<td>For tables with low numbers of interactions in the table tool,
-create featured tables to demonstrate the useful information they
-hold.</td>
+<td>For tables with low numbers of interactions in the table tool, create featured tables to demonstrate the useful information they hold.</td>
 </tr>
 <tr class="odd">
 <td>Permalinks</td>
-<td>Save popular permalinks as featured tables in future, so users can
-easily get to the data they want.</td>
+<td>Save popular permalinks as featured tables in future, so users can easily get to the data they want.</td>
 </tr>
 <tr class="even">
 <td>Traffic sources</td>
-<td>Consider where your users are being routed from and what is being
-written about your stats - clearly highlight key stories in the
-Headlines section and make use of the blue key stat tiles to make them
-easy to digest.</td>
+<td>Consider where your users are being routed from and what is being written about your stats - clearly highlight key stories in the Headlines section and make use of the blue key stat tiles to make them easy to digest.</td>
 </tr>
 </tbody>
 </table>
+<hr />
+</div>
+<div id="guidance-for-analytics" class="section level1">
+<h1>Guidance for analytics</h1>
+<hr />
+<p><a href="/resources/performance_analysis_ga_guide.pdf">Performance analysis: GDS starter guide to using Google Analytics</a></p>
+<p><a href="/resources/performance_analysis_advance_reporting.pdf">Performance analysis: GDS Advanced Analytics Reporting Techniques</a></p>
+<hr />
 </div>
 
 

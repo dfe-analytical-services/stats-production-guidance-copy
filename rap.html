@@ -13,7 +13,6 @@
 
 <title>RAP Guidance for Statistics Producers</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -38,6 +37,33 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/duck_guidance.png"/>
+<script>
+// Define dataLayer and the gtag function.
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// Default ad_storage to 'denied' as a placeholder
+// Determine actual values based on your own requirements
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'granted'
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+/*
+The tracking number below MUST be replaced with a unique number, contact the statistics development team to set this up.
+*/
+  gtag('config', 'G-KBJCBD114T');
+
+</script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -148,11 +174,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -357,6 +387,9 @@ div.tocify {
       <a href="rap.html">Processes and RAP</a>
     </li>
     <li>
+      <a href="rap_managers.html">RAP for managers</a>
+    </li>
+    <li>
       <a href="ud.html">Open data standards</a>
     </li>
     <li>
@@ -382,6 +415,9 @@ div.tocify {
     </li>
     <li>
       <a href="dashboards.html">Dashboards</a>
+    </li>
+    <li>
+      <a href="embedded-charts.html">Embedded R-Shiny charts</a>
     </li>
   </ul>
 </li>
@@ -424,47 +460,22 @@ div.tocify {
 
 
 <p class="text-muted">
-Guidance for how to implement the principles of Reproducible Analytical
-Pipelines (RAP) into our production processes
+Guidance for how to implement the principles of Reproducible Analytical Pipelines (RAP) into our production processes
 </p>
 <hr />
 <div id="what-is-rap" class="section level1">
 <h1>What is RAP?</h1>
 <hr />
-<p>Cam ran an introduction to RAP session for DISD in December 2020, the
-slides can be found on <a
-href="https://github.com/cjrace/introduction-to-rap" target="_blank"
-rel="noopener noreferrer">GitHub</a>, and the recording is embedded
-below:</p>
+<p>RAP (Reproducible Analytical Pipelines) is doing well documented, reproducible, quality analysis using the best tools available to us as analysts.</p>
+<p>Cam ran an introduction to RAP session for DISD in December 2020, the slides can be found on <a href="https://github.com/cjrace/introduction-to-rap" target="_blank" rel="noopener noreferrer">GitHub</a>, and the recording is embedded below:</p>
 <div align="center">
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f4fb4ae9-3149-4d7c-8968-ff4c11dc8ac3?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;">
 </iframe>
 </div>
-<p><a
-href="https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/"
-target="_blank" rel="noopener noreferrer">Reproducible Analytical
-Pipelines</a>, or RAP for short. The full words still hide the true
-meaning behind buzzwords and jargon though. What it actually means is
-using automation to our advantage when analysing data, and this is as
-simple as writing code such as a SQL query that we can click a button to
-execute and do the job for us.</p>
-<p>The cross-government group of RAP champions have laid out a <a
-href="https://github.com/best-practice-and-impact/rap_mvp_maturity_guidance/blob/master/Reproducible-Analytical-Pipelines-MVP.md"
-target="_blank" rel="noopener noreferrer">minimum level of RAP</a> to
-aim for (note that we have our own levels of practice below, which are
-building blocks to reach this end goal)</p>
-<p>We already have ‘analytical pipelines’ and have done for many years.
-The aim of RAP, is to automate the parts of these pipelines that can be
-automated, to increase efficiency and accuracy, while creating a clear
-audit trail to allow analyses to easily be re-run if needed. This will
-free us up to focus on the parts of our work where our human input can
-really add value. RAP is something we can use to reduce the burden on us
-by getting rid of some of the boring stuff, what’s not to like!</p>
-<p>Cam and Sarah ran a session introducing how to get started with
-automated QA in relation to RAP, slides are available on <a
-href="https://sarahmwong.github.io/intro-to-automating-QA/#1"
-target="_blank" rel="noopener noreferrer">GitHub</a> and the recording
-of the session is below:</p>
+<p><a href="https://dataingovernment.blog.gov.uk/2017/03/27/reproducible-analytical-pipeline/" target="_blank" rel="noopener noreferrer">Reproducible Analytical Pipelines</a>, or RAP for short. The full words still hide the true meaning behind buzzwords and jargon though. What it actually means is using automation to our advantage when analysing data, and this is as simple as writing code such as a SQL query that we can click a button to execute and do the job for us.</p>
+<p>The cross-government group of RAP champions have laid out a <a href="https://github.com/best-practice-and-impact/rap_mvp_maturity_guidance/blob/master/Reproducible-Analytical-Pipelines-MVP.md" target="_blank" rel="noopener noreferrer">minimum level of RAP</a> to aim for (note that we have our own levels of practice below, which are building blocks to reach this end goal)</p>
+<p>We already have ‘analytical pipelines’ and have done for many years. The aim of RAP, is to automate the parts of these pipelines that can be automated, to increase efficiency and accuracy, while creating a clear audit trail to allow analyses to easily be re-run if needed. This will free us up to focus on the parts of our work where our human input can really add value. RAP is something we can use to reduce the burden on us by getting rid of some of the boring stuff, what’s not to like!</p>
+<p>Cam and Sarah ran a session introducing how to get started with automated QA in relation to RAP, slides are available on <a href="https://sarahmwong.github.io/intro-to-automating-QA/#1" target="_blank" rel="noopener noreferrer">GitHub</a> and the recording of the session is below:</p>
 <div align="center">
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/57eab29d-afeb-4651-a9f5-687098b84d13?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;">
 </iframe>
@@ -473,62 +484,26 @@ of the session is below:</p>
 <div id="our-scope" class="section level2">
 <h2>Our scope</h2>
 <hr />
-<p>We want to focus on the parts of the production process that we have
-ownership and control over – so we are focussing on the process from
-data sources to publishable data files. This is the part of the process
-where RAP can currently add the most value - automating the production
-and quality assurance of our outputs currently takes up huge amount of
-analytical resource, which could be better spent providing insight and
-other value adding activity. </p>
+<p>We want to focus on the parts of the production process that we have ownership and control over – so we are focussing on the process from data sources to publishable data files. This is the part of the process where RAP can currently add the most value - automating the production and quality assurance of our outputs currently takes up huge amount of analytical resource, which could be better spent providing insight and other value adding activity. </p>
 <p><img src="images/RAP-Scope-Arrow.png" /><!-- --></p>
-<p>In Official Statistics production we are using RAP as a framework for
-best practice when producing our published data files, as these are the
-foundations of our publications moving forward. Following this framework
-will help us to improve and standardise our current production processes
-and provide a clear ‘pipeline’ for analysts to follow. This will have
-the added benefit of setting a clear and defined world of tools and
-skills required, making learning and development that much clearer and
-easier. To get started with RAP, we first need to be able to understand
-what it actually means in practice, and be able to <a
-href="#what-is-expected">assess our own work against the principles of
-RAP</a>.</p>
-<p>Implementing RAP for us will involve combining the use of SQL, R, and
-clear, consistent version control to increase efficiency and accuracy in
-our work. For more information on what these tools are, why we are using
-them, and resources to help up-skill in those areas, see our <a
-href="l+d.html">learning resources</a> page.</p>
-<p>The collection of, and routine checking of data as it is coming into
-the department is also an area that RAP can be applied to. We have kept
-this out of scope at the moment as the levels of control in this area
-vary wildly from team to team. If you would like advice and help to
-automate any particular processes, feel free to <a
-href="mailto:statistics.development@education.gov.uk">contact
-us</a>.</p>
+<p>In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear ‘pipeline’ for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to <a href="#what-is-expected">assess our own work against the principles of RAP</a>.</p>
+<p>Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help up-skill in those areas, see our <a href="l+d.html">learning resources</a> page.</p>
+<p>The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to <a href="mailto:statistics.development@education.gov.uk">contact us</a>.</p>
 <hr />
 </div>
 </div>
 <div id="core-principles" class="section level1">
 <h1>Core principles</h1>
 <hr />
-<p><strong>Data sources for a publication are stored in the same
-database</strong> <em>- <a href="#preparing-data">Preparing
-data</a></em></p>
-<p><strong>Underlying data files are produced using code, with no manual
-steps</strong> <em>- <a href="#writing-code">Writing code</a></em></p>
-<p><strong>Files and scripts should be appropriately version
-controlled</strong> <em>- <a href="#version-control">Version
-control</a></em></p>
+<p><strong>Data sources for a publication are stored in the same database</strong> <em>- <a href="#preparing-data">Preparing data</a></em></p>
+<p><strong>Underlying data files are produced using code, with no manual steps</strong> <em>- <a href="#writing-code">Writing code</a></em></p>
+<p><strong>Files and scripts should be appropriately version controlled</strong> <em>- <a href="#version-control">Version control</a></em></p>
 <hr />
 </div>
 <div id="rap-in-practice" class="section level1">
 <h1>RAP in practice</h1>
 <hr />
-<p>The diagram below highlights what RAP means for us, and the varying
-levels in which it can be applied. The general expectation is that all
-teams will have shifted towards the good practice implementation of RAP
-by the end of their next production cycle. It’s worth acknowledging that
-some teams are already working around great and best practice levels,
-and that we appreciate every team’s situation is unique.</p>
+<p>The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The expectation is that all publications will meet the department’s baseline implementation of RAP in the self-assessment tool. It’s worth acknowledging that some teams are already working around great and best practice levels, and that we appreciate every team’s situation is unique, our guidance is designed to be applicable across all official statistcs publications by DfE.</p>
 <html>
 <head>
 <title>
@@ -537,8 +512,7 @@ hex-diagram
 <meta charset="utf-8"/>
 </head>
 <body>
-<div class="mxgraph" style="max-width:100%;"
-data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2021-08-18T10:25:02.923Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36\&quot; etag=\&quot;jSyYB7bDkOPA0TCQu9Kf\&quot; version=\&quot;14.9.7\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;_ltWYIdbVKAG_Xyvna0Y\&quot; name=\&quot;Page-1\&quot;&gt;7Zvdc5s4EMD/Gk+fdIPBNsljYje9m7lrc8307jEjozWoAUSFiJ3+9adFfNqEOHNpDWnyErTa1edPH7uYibOMdh8kTYK/BINwYltsN3FWE9uezixb/0PJg5EszgqBLzkzIqsW3PDvUFiW0owzSAuZESkhQsWTttATcQyeasmolGLbVtuIkLUECfWh1QwU3Hg0hAO1fzlTgZGe2W4t/x24H5Q1TxfnJieipXJRcBpQJrYNkfN+4iylEMo8RbslhDh47XG5eiS3apiEWHUYfElBflp/xTGxrZCu9bzkSjcQp3ytu2cGAyQOVMwwyXNpqmTmqUyCqSDk8Z2xnNhOWhgTY0q0IUEzsmdUNlLZn/yP3+j5x+318uvV7c3D17s/yLzqfNWpVD2UA66HKcHHAHbUF/HEuUxA8giUbmklvS5FuqDLbcAV3CTUQ7OtxlDLAhVhf6f6ccN3UIKFaSkUVRxLXp1bOp2aLAefGZd6wEwm0FRhSULy7yJWFMtDnY1OLEUoZN5e5yr/w3KUFHdQ5sQihrzyMGwoz2auvZyhsm4uj/0/YYNz59aSzwVLKIrEPV3n44L1StAtbaaxH420XnnQTAPjzWSxQBoS7Eg5LtimQ6AKxu5BKtg1RMXkfQChJ0E+aJUit4S/WOyOvTDpbb10puV6CJrLphTSYrn6VdE10fqhAKZMNhjvZV7LsewkkSKRnCoodpG0A/GGFmno9BK9eJ1E/y94pchiBqyootr88sQdKC8oEmvq3fm58qdM6Zko6fQlZVyTuGp0IBYSMXpkqb08zmQ+HyTP11J4kKZ6xJHMFI9XHANsl24WHoasa/dOKjPCU4ImBA1Ird5Lufs6KX/5ffsHkOi2OJyVeJ2Yw0uacg9Lz5TQ9x3AW8TfFx3krVGRVGrkGz2Ct7M33k7G29SxB0nchcFAZNLD/Y7pG1COhZA5fDzGmosMDV3XLkjDkJgCCGoRY0x4TChpm/XSef5G58noJNPp2SDxvNK+EB7HEYBq4qn9JCrZwXUzY7/lU2w7gdjeKnHrBeDd3VKf8jhVtyqA2z3bXiSn1huTp2Ny76441wUPAcmV8LJId8vMzOF2yA7z+yGbvkF2Msj2/OuhMPYPyDSnB8NwehzDEExAKaZh5Y5YqSd5orp87ntjT2prktvmnglp2fWzaY+czTZurnWxmrl9/m4nyCdic2YtWnAOxVn+DN6DF1IT8ixQ3AgMe24yE7G0ss6LoqwMDYfaiBgTkh11RZw6bzieDEe7fNEwMBxvdNdzFBMpWGamoG9vTHN9Ums/Zz+cvQF4MgD1bWGQPsp1tg65R0vwEvD45rgoTlJbktLuuUGd6djf/owZydne/XEoSF40yEuzKKKSQ+e7mYq1Pa1+5MYeuB4zcvvH8FBclmvI33xLuOew1Q9iU98O8aVIHklUQKPOiyEaEbEx90KjTmrlfhrHHtYeM437PspQaNRjpFNC6pm5hxAbzEA/iKSGMite9/lcdSDptQsghbkBNDcllWE/nmOPa7fxfL9yV850LHi6s2H6LO+WIdD43UFI5xBD1GvEbo4Azh570HrMwC323qMMBbgnnOTydw48VuDLPpflUe/Z/PKhLuA478Uee/B71LCeWYP0XmpYW551B7o9gDZc6wNYjwHzdUW+xwXmmTUfJJhHRXr6/O0nAj7PccLt1xULHxeg+8f8UNyePid8I0WEokylPBeoAI52ydGYFKZEGx7rnNuvK2A+Lkr3vZ+fTenBJxbdiBR7/T0NMyj5W4SqGJMWMItvmSgziJlLfUm1HDvZ1Zk58uUs1ML8xwberCla+Pj/gxAsv15QTQP+Cs5Urjtk6jdappENdvUkqDZ8NOQ+wuTpKUOAL3Gq9HYfXhQZEWcMzQ8+PUiEvjjnYz2/nMxXWJY+FNKa48fQegFKiNM+bO3F4WFbfT3UpMR5PiRHErH4SUS4FmUzt4MICVT9wkg4lvM0El0bx49Dwv1JSABzmd7hD5C4hPRXJmIxO3+aCOtliNDJ+iO+PK/xKaTz/j8=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}">
+<div class="mxgraph" style="max-width:100%;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2023-01-25T13:50:00.816Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36\&quot; etag=\&quot;fFHFq3WaFkuAxXLjLQzX\&quot; version=\&quot;20.8.10\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;_ltWYIdbVKAG_Xyvna0Y\&quot; name=\&quot;Page-1\&quot;&gt;7Zzdc5s4EMD/Gk+f1DFfxnmM46TXm17rNnPXm3vJyCDbSjCiQsRO//rTSnxDiHOX1JAkL0YrrRDST8vuAhlZZ9v9B46jzR/MJ8HIHPv7kTUfmaZhG1P5A5I7LZlMXS1Yc+pr0bgQXNKfJNXMpAn1SZzKtEgwFggaVYUeC0PiiYoMc8521WYrFvgVQYTXpDIMEFx6OCCNZt+pLzZaOjXdQv4boetNdmZjcqJrtjhrnHYcb7DPdiWRdT6yzjhjQh9t92ckgMmrzsvFPbX5wDgJRYvCnzHhX5bXMCfmOMBLuS6q0SUJY7qUl6cng3CYqNCHIlXSWPDEEwkn+gQBDW+05si04lQZaVUkFRGooZpSNkhhfll//oFPPu8WZ9cXV5d31zcfkZNffH5RsbjLJlxOUwSHG7LHaxaOrFlEON0SIUeaSxeZSHY0222oIJcR9kBtJzGUso3YwvUa8nBF9yQDC8qcCSwo9Dw/GctyrKssOPYplxOmKwmOBfTEOP3JQoGhP2izkoUzFjCuxmtdqD/oR3B2Q7KakIVEnTwISo1t2zXPbGgsh0vD9SeygrVzC8m3lCUQbdktXqp5gfNyIkdaLsN1lMpy55Fymfi0XEw3SEkCF5LNC4ypCVTK2C3hguxLonTxPhAmF4HfySZpbQZ/utktc6LLu2LrGNl+2JS3TSbE6XZd510XRMuDFJisWGK8k3kph76jiLOIUyxIakXiFsRLrVCpTSfRk5dJ9P+Cl7Mk9ImfniI3fqpwQ4S3SQtL7N2sVeMviZArkdG55tinksR56QJCxgGje7ba0+OMHKeXPC8480gcyxkHMmO4vcIcwLjksOBm6LdZ7yhXQzRGoIJAARXNOyl3XyblT2+3n4FEt8KhneF1ZA5nOKYe9J4IJv0dAl7E19MW8pbQEOXN0A98AG/TN96Oxpthmb0k7lRjwBLugb3zpQeksGBcwUdDOHNaIaFrs4I4CJDuAEErpJURDRFGVbVOOk/e6DwancjIwsqe4XkhYyG4HW8JEWU8ZZyEud9wNxP/vVpi09qw3ZVgV96GeDdXeI1pGIsrsSFXNd1OJI3xG5PHY7LmKzqy4z4gOWdespWXpVemaQ79Zn03ZMYbZEeDrBZf94WxvwiPFT2QhpPzGAREJ5RCHOThyDj2OI1EW8x9q/VRoY2UropMUEWvm01z4GxWcXPHp3Pb7Yp3W0E+EptWxljPguVvxLvzAqxTnimKKwZpz1WiM5bjpNVR5Lmi5lAqIa2CkoNcRMN6w/F4EcxJPXfTD1s5lz5hrLzDiDM/0WvQZRx9rYCK5o+xiPYbgkdD0HQmvYxSFskyoB7OyIuIR1eH5XGiQhNleo9N6xhDf/4zZCStqdFLJE9L5MXJdos5Ja1PZ3LWaq26kRt66nrIyNVvxH0JWhZEPfvm5JaSnTxgq8I/hMciKpcoCN62uoaghNhKe4a6OSoad9M49MT2kGm0apnDvtAo50iWGJcrc0sCGLBP5AGLCiiT9IHfmooWJL1qByhV14AqVZQrduM59Mx2Fc/zuTu3jKHgOXHtWtTSjyD63VlAcPiukdRpYgjtStmbA4Azh562HjJwjtPPrM3InARCLcBtBYfJjwRemJtVjtbpr9KASWpVgQqkF1fGNmPDjvatHX3fMJUriiphUnu0rk8pr0uftToSKVbDz6SNzbKDM6FyUPWfgnxz6Cn5o20gHNA1jMyTGwhm40lMuNHPR+f6JTgWEQVw9gSdk4jFVLB74q0kJghUsifmzebdZL6shPywTLtr9fOtoYPST11JgAeyUI/JDJgvK0U/LEDrvkdfYrGuzMCKsy2IEhFTJRAbcnCeAJRRqoqk4qEZA/NlZfGHRWk9JPvVlDa+/GhHJE2y3eIgIVUX+lCH2DKlQ1zyhiXy2SoUQvUOhGc3veYPjPnKTcaSBnAt7nGNzSq7chFEFb6GTwZLJc19cJpWbKnvg3rji4iI0VCouXZmI2cOfcmbQlxwfB9aT0AJsqp5pYljNijJP2oqU2I9HpIDiZj8IiLcMfZtt4UITrB4xUiY48nDSLQZjudDwv1FSBDf9aWFbyAxI/FrJsJxzYeJGD8TEZdTe/z378509tW7WnxdJB//WV0jowWI2uRn3oWX8OBuJlfuhoiHXYji8x8oKedqAZGjdhQCdRPPF+1TrTpfvGyZuZ6K+1e5fN+32jwW5WlkX3CaDd+juLEVXx7V/JInWH9jMn1ffRjWkm2z3eb6O9nd5ckBMI/sNsxwTNRXX+aY7CP4QFHHha/LMFhOnQujCYal3yerkfFclsF+swzZSqd3s+e0DBOn+mavYTsHGQbzxHym9X8wnjjwxv94A6L3+ul2SV+jKainj9ssgWE/jSWQxeL/D6i60n9xsM7/BQ==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}">
 
 </div>
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
@@ -549,139 +523,67 @@ data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:fa
 <div id="what-is-expected" class="section level1">
 <h1>What is expected</h1>
 <hr />
-<div class="alert alert-dismissible alert-info">
-<p>Teams are expected to review their own processes using the <a
-href="https://rsconnect/rsc/publication-self-assessment" target="_blank"
-rel="noopener noreferrer">publication self-assessment tool</a> and use
-the guidance on this site to start making improvements towards meeting
-the four core principles if they aren’t already. If you would like
-additional help to review your processes, please contact the <a
-href="mailto:statistics.development@education.gov.uk">Statistics
-Development Team</a>.</p>
+<div class="alert alert-dismissible alert-warning">
+<p>It is expected that <strong>all teams’ processes meet all elements of good and great practice</strong> as a baseline.</p>
+<p>Teams are expected to review their own processes using the <a href="https://rsconnect/rsc/publication-self-assessment" target="_blank" rel="noopener noreferrer">publication self-assessment tool</a> and use the guidance on this site to start making improvements towards meeting the four core principles if they aren’t already. If you would like additional help to review your processes, please contact the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a>.</p>
 </div>
-<p>Teams will start from different places and implement changes at
-different rates, and in different ways. We do not expect that every team
-will follow the same path, or even end at the same point. Don’t worry if
-this seems overwhelming at first, use the guidance here to identify
-areas for improvement and then tackle them with confidence.</p>
+<p>Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don’t worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.</p>
+<p>While working to reach our baseline expectation of good and great practice, you can track your progress in the <a href="https://rsconnect/rsc/publication-self-assessment" target="_blank" rel="noopener noreferrer">publication self-assessment tool</a> and contact the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a> for help and support.</p>
 <hr />
 <div id="how-to-assess-your-publication" class="section level2">
 <h2>How to assess your publication</h2>
 <hr />
-<p>The checklist provided in the <a
-href="https://rsconnect/rsc/publication-self-assessment" target="_blank"
-rel="noopener noreferrer">publication self-assessment tool</a> is
-designed to make reviewing our processes against our RAP levels easier,
-giving a straightforward list of questions to check your work against.
-This will flag potential areas of improvement, and you can then use the
-links to go to the specific section with more detail and guidance on how
-to develop your current processes in line with best practice.</p>
-<p>Some teams will already be looking at best practice, while others
-will still have work to do to achieve good practice. We know that all
-teams are starting this from different points, and are here to support
-all teams from their respective starting positions.</p>
+<p>The checklist provided in the <a href="https://rsconnect/rsc/publication-self-assessment" target="_blank" rel="noopener noreferrer">publication self-assessment tool</a> is designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag potential areas of improvement, and you can then use the links to go to the specific section with more detail and guidance on how to develop your current processes in line with best practice.</p>
+<p>Some teams will already be looking at best practice, while others will still have work to do to achieve the department’s baseline of good and great practice. We know that all teams are starting this from different points, and are here to support all teams from their respective starting positions.</p>
 <hr />
 </div>
 <div id="where-we-need-to-focus" class="section level2">
 <h2>Where we need to focus</h2>
 <hr />
-<p>Most teams have already made progress with their production of tidy
-data files, and the release of the automated screener has now tied up
-that end point of the pipeline that we are all currently working
-towards. The standard pipeline for all teams will roughly resemble
-this:</p>
+<p>Most teams have already made progress with their production of tidy data files, and the release of the automated screener has now tied up that end point of the pipeline that we are all currently working towards. The standard pipeline for all teams will roughly resemble this:</p>
 <p><img src="images/RAP-Process-Overview.png" /><!-- --></p>
-<p>The key now is for us to build on the work so far and focus on how we
-improve the quality and efficiency of our production processes up to
-that point. To do this, we need to make a concerted effort to
-standardise how we store and access our data, before then automating
-what we can to reduce the burden of getting the numbers ready and see
-the benefits of RAP. The exact meaning of this will vary within
-teams.</p>
+<p>The key now is for us to build on the work so far and focus on how we improve the quality and efficiency of our production processes up to that point. To do this, we need to make a concerted effort to standardise how we store and access our data, before then automating what we can to reduce the burden of getting the numbers ready and see the benefits of RAP. The exact meaning of this will vary within teams.</p>
 <hr />
 </div>
 <div id="how-to-get-started" class="section level2">
 <h2>How to get started</h2>
 <hr />
-<p>Measure your publication against the RAP levels using our <a
-href="https://rsconnect/rsc/publication-self-assessment/"
-target="_blank" rel="noopener noreferrer">self assessment tool</a>. This
-will give you a good starting point and initial points to work on to
-progress to the next level of RAP.</p>
-<p>Once you’ve assessed your publication, have a look through our
-guidance below to narrow down how you can get started with improving
-those parts of your process.</p>
-<p>The Statistics Development Team invites teams to take part in our
-partnership programme to develop their skills and implement RAP
-principles to a relevant project. Visit our page on <a
-href="l+d.html#Support_available">getting started with the partnership
-programme</a> for more details.</p>
+<p>Measure your publication against the RAP levels using our <a href="https://rsconnect/rsc/publication-self-assessment/" target="_blank" rel="noopener noreferrer">self assessment tool</a>. This will give you a good starting point and initial points to work on to progress to the next level of RAP.</p>
+<p>Once you’ve assessed your publication, have a look through our guidance below to narrow down how you can get started with improving those parts of your process.</p>
+<p>The Statistics Development Team invites teams to take part in our partnership programme to develop their skills and implement RAP principles to a relevant project. Visit our page on <a href="l+d.html#Support_available">getting started with the partnership programme</a> for more details.</p>
 <hr />
 </div>
 </div>
 <div id="preparing-data" class="section level1">
 <h1>Preparing data</h1>
 <hr />
-<p>The first place to start for your teams RAP is to store the raw data
-you use to create underlying data in a Microsoft SQL Server database.
-This is similar to a sharepoint area or a shared folder, but it’s a
-dedicated data storage area which allows multiple users to use the same
-file at once, and for you to run code against the data in one place.</p>
+<p>The first place to start for your teams RAP is to store the raw data you use to create underlying data in a Microsoft SQL Server database. This is similar to a sharepoint area or a shared folder, but it’s a dedicated data storage area which allows multiple users to use the same file at once, and for you to run code against the data in one place.</p>
 <hr />
 <div id="all-source-data-stored-in-a-database" class="section level2">
 <h2>All source data stored in a database</h2>
 <hr />
 <p><img src="images/good.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>When we refer to ‘source data’, we take this to mean the data you use
-at the start of the process to create the underlying data files. Any
-cleaning at the end of a collection will happen before this.</p>
-<p>In order for us to be able to have an end-to-end data pipeline where
-we can replicate our analysis across the department, we should store all
-of the raw data needed to create aggregate statistics in a managed
-Microsoft SQL Server. This includes any lookup tables and all
-administrative data from collections prior to any manual processing.
-This allows us to then match and join the data together in an end-to-end
-process using SQL queries.</p>
-<p>As far as meeting the requirement to have all source data in a
-database, databases other than SQL may be acceptable, though we can’t
-support them in the same way.</p>
+<p>When we refer to ‘source data’, we take this to mean the data you use at the start of the process to create the underlying data files. Any cleaning at the end of a collection will happen before this.</p>
+<p>In order for us to be able to have an end-to-end data pipeline where we can replicate our analysis across the department, we should store all of the raw data needed to create aggregate statistics in a managed Microsoft SQL Server. This includes any lookup tables and all administrative data from collections prior to any manual processing. This allows us to then match and join the data together in an end-to-end process using SQL queries.</p>
+<p>As far as meeting the requirement to have all source data in a database, databases other than SQL may be acceptable, though we can’t support them in the same way.</p>
 <p><strong>Why do it?</strong></p>
-<p>The principle is that this source data will remain stable and is the
-point you can go back to and re-run the processes from if necessary. If
-for any reason the source data needs to change, your processes will be
-set up in a way that you can easily re-run them to get updated outputs
-based on the amended source data with minimal effort.</p>
-<p>SQL is a fantastic language for large scale data joining and
-manipulation; it allows us to replicate end-to-end from raw data to
-final aggregate statistics output. Having all the data in one place and
-processing it in one place makes our lives easier, and also helps us
-when auditing our work and ensuring reproducibility of results.</p>
+<p>The principle is that this source data will remain stable and is the point you can go back to and re-run the processes from if necessary. If for any reason the source data needs to change, your processes will be set up in a way that you can easily re-run them to get updated outputs based on the amended source data with minimal effort.</p>
+<p>SQL is a fantastic language for large scale data joining and manipulation; it allows us to replicate end-to-end from raw data to final aggregate statistics output. Having all the data in one place and processing it in one place makes our lives easier, and also helps us when auditing our work and ensuring reproducibility of results.</p>
 <p><strong>How to get started</strong></p>
 <!-- needs example -->
-<p>For a collection of relevant resources to use when learning SQL, see
-our <a href="l+d.html">learning resources</a> page, and for guidance on
-best practice when writing SQL queries, see the <a
-href="#writing-code">writing code</a> and <a
-href="#documentation">documentation</a> sections on this page, as well
-as the guides immediately below on how to setup and use a SQL
-database.</p>
+<p>For a collection of relevant resources to use when learning SQL, see our <a href="l+d.html">learning resources</a> page, and for guidance on best practice when writing SQL queries, see the <a href="#writing-code">writing code</a> and <a href="#documentation">documentation</a> sections on this page, as well as the guides immediately below on how to setup and use a SQL database.</p>
 <hr />
 <div id="how-to-set-up-a-sql-working-area" class="section level3">
 <h3>How to set up a SQL working area</h3>
 <hr />
-<p>There are a few different options, depending on where you want your
-new area to exist. Visit our <a
-href="sql.html#Setting_up_a_SQL_area">SQL learning page</a> for
-details.</p>
+<p>There are a few different options, depending on where you want your new area to exist. Visit our <a href="sql.html#Setting_up_a_SQL_area">SQL learning page</a> for details.</p>
 <hr />
 </div>
 <div id="moving-data-to-different-areas" class="section level3">
 <h3>Moving data to different areas</h3>
 <hr />
-<p>If your data is already in SQL, you can use this snippet of R code to
-move tables from one area (e.g. the iStore) to another (e.g. your team’s
-modelling area) to ensure all data are stored in a database.</p>
+<p>If your data is already in SQL, you can use this snippet of R code to move tables from one area (e.g. the iStore) to another (e.g. your team’s modelling area) to ensure all data are stored in a database.</p>
 <pre><code>library(odbc)
 library(dplyr)
 library(dbplyr)
@@ -714,22 +616,14 @@ dbWriteTable(con_target,&quot;whatever_you_want_to_call_new_table&quot;, table_f
 <div id="importing-data-to-sql-server" class="section level3">
 <h3>Importing data to SQL Server</h3>
 <hr />
-<p>There’s lots of guidance online of how to import flat files from
-shared areas into Microsoft SQL server on the internet, including <a
-href="https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017"
-target="_blank" rel="noopener noreferrer">this guide</a>.</p>
-<p>Remember that it is important to import them with consistent,
-thought-through <a href="#naming-conventions">naming conventions</a>.
-You will thank yourself later.</p>
+<p>There’s lots of guidance online of how to import flat files from shared areas into Microsoft SQL server on the internet, including <a href="https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017" target="_blank" rel="noopener noreferrer">this guide</a>.</p>
+<p>Remember that it is important to import them with consistent, thought-through <a href="#naming-conventions">naming conventions</a>. You will thank yourself later.</p>
 <hr />
 </div>
 <div id="how-to-grant-access-to-your-area" class="section level3">
 <h3>How to grant access to your area</h3>
 <hr />
-<p>Much like setting up a SQL area, there are different ways to do this
-depending on the server your database is in. Visit our <a
-href="sql.html#Givinggetting_access">SQL learning page</a> for
-details.</p>
+<p>Much like setting up a SQL area, there are different ways to do this depending on the server your database is in. Visit our <a href="sql.html#Givinggetting_access">SQL learning page</a> for details.</p>
 <hr />
 </div>
 </div>
@@ -737,89 +631,36 @@ details.</p>
 <div id="writing-code" class="section level1">
 <h1>Writing code</h1>
 <hr />
-<p>The key thing to remember is that <strong>we should be automating
-everything we can</strong>, and the key to automation is writing code.
-Using code is as simple as telling your computer what to do. Code is
-just a list of instructions in a language that your computer can
-understand.</p>
+<p>The key thing to remember is that <strong>we should be automating everything we can</strong>, and the key to automation is writing code. Using code is as simple as telling your computer what to do. Code is just a list of instructions in a language that your computer can understand.</p>
 <hr />
 <div id="processing-is-done-with-code" class="section level2">
 <h2>Processing is done with code</h2>
 <hr />
 <p><img src="images/good.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>All extraction, and processing of data should be done using code,
-avoiding any manual steps and moving away from a reliance on Excel,
-SPSS, and other manual processing. In order to carry out our jobs to the
-best of our ability it is imperative that we use the <a
-href="#appropriate-tools">appropriate tools</a> for the work that we
-do.</p>
-<p>Even steps such as copy and pasting data, or pointing and clicking,
-are fraught with danger, and these risks should be minimised by using
-code to document and execute these processes instead.</p>
+<p>All extraction, and processing of data should be done using code, avoiding any manual steps and moving away from a reliance on Excel, SPSS, and other manual processing. In order to carry out our jobs to the best of our ability it is imperative that we use the <a href="#appropriate-tools">appropriate tools</a> for the work that we do.</p>
+<p>Even steps such as copy and pasting data, or pointing and clicking, are fraught with danger, and these risks should be minimised by using code to document and execute these processes instead.</p>
 <p><strong>Why do it?</strong></p>
-<p>Using code brings numerous benefits, computers are far quicker, more
-accurate, and far more reliable than humans in many of the tasks that we
-do. Writing out these instructions saves us significant amounts of time,
-particularly when it can be reused in future years, or even next week
-when one specific number in the source file suddenly changes, and also
-provides us with editable documentation for our production processes,
-saving the need for writing down information in extra documents.</p>
-<p>Reliability is a huge benefit of the automation that RAP brings -
-when one of the lines of data has to be amended a week before
-publication, it’s a life saver to know that you can re-run your process
-in minutes, and reassuring to know that it will give you the result you
-want. You can run the same code 100 times, and be confident that it will
-follow the same steps in the same order every single time.</p>
+<p>Using code brings numerous benefits, computers are far quicker, more accurate, and far more reliable than humans in many of the tasks that we do. Writing out these instructions saves us significant amounts of time, particularly when it can be reused in future years, or even next week when one specific number in the source file suddenly changes, and also provides us with editable documentation for our production processes, saving the need for writing down information in extra documents.</p>
+<p>Reliability is a huge benefit of the automation that RAP brings - when one of the lines of data has to be amended a week before publication, it’s a life saver to know that you can re-run your process in minutes, and reassuring to know that it will give you the result you want. You can run the same code 100 times, and be confident that it will follow the same steps in the same order every single time.</p>
 <p><strong>How to get started</strong></p>
-<p>See our <a href="l+d.html">learning resources</a> for a wealth of
-resources on SQL and R to learn the skills required to translate your
-process into code.</p>
-<p>There are also two sections below with examples of tidying data in
-SQL and R to get you started.</p>
-<p>Ensure that any last-minute fixes to the process are written in the
-code and not done with manual changes.</p>
+<p>See our <a href="l+d.html">learning resources</a> for a wealth of resources on SQL and R to learn the skills required to translate your process into code.</p>
+<p>There are also two sections below with examples of tidying data in SQL and R to get you started.</p>
+<p>Ensure that any last-minute fixes to the process are written in the code and not done with manual changes.</p>
 <hr />
 <div id="producing-tidy-underlying-data-in-sql" class="section level3">
 <h3>Producing tidy underlying data in SQL</h3>
 <hr />
-<p>To get started, here is a <a
-href="https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql"
-target="_blank" rel="noopener noreferrer">SQL query</a> that you can run
-on your own machine and walks you through the basics of tidying a simple
-example dataset in SQL.</p>
+<p>To get started, here is a <a href="https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql" target="_blank" rel="noopener noreferrer">SQL query</a> that you can run on your own machine and walks you through the basics of tidying a simple example dataset in SQL.</p>
 <hr />
 </div>
 <div id="tidying-and-processing-data-in-r" class="section level3">
 <h3>Tidying and processing data in R</h3>
 <hr />
 <!-- could have better examples -->
-<p><a href="https://vimeo.com/33727555" target="_blank"
-rel="noopener noreferrer">Here is a video</a> of Hadley Wickham talking
-about how to tidy your data to these principles in R. This covers useful
-functions and how to complete common data tidying tasks in R. Also worth
-taking a look at <a href="https://www.youtube.com/watch?v=1ELALQlO-yM"
-target="_blank" rel="noopener noreferrer">applied data tidying in R, by
-RStudio</a>.</p>
-<p>Using the <code>%&gt;%</code> pipe in R can be incredibly powerful,
-and make your code much easier to follow, as well as more efficient. If
-you aren’t yet familiar with this, have a look at <a
-href="https://seananderson.ca/2014/09/13/dplyr-intro/" target="_blank"
-rel="noopener noreferrer">this article</a> that provides a useful
-beginners guide to piping and the kinds of functions you can use it for.
-The possibilities stretch about as far as your imagination, and if you
-have a function or task you want to do within a pipe, googling ‘how do I
-do X in dplyr r’ will usually start to point you in the right direction,
-alternatively you can <a
-href="mailto:statistics.development@education.gov.uk">contact us</a>,
-and we’ll be happy to help you figure out how to do what you need.</p>
-<p>A quick example of how powerful this is is below, where my_data is
-processed to create new columns, have column names renamed, have the
-column names tidied using the <a
-href="https://garthtarr.github.io/meatR/janitor.html" target="_blank"
-rel="noopener noreferrer">janitor</a> package, blank rows and columns
-removed, data filtered to only include specific geographic levels, and
-rows rearranged in order, all in a few lines of easy to follow code:</p>
+<p><a href="https://vimeo.com/33727555" target="_blank" rel="noopener noreferrer">Here is a video</a> of Hadley Wickham talking about how to tidy your data to these principles in R. This covers useful functions and how to complete common data tidying tasks in R. Also worth taking a look at <a href="https://www.youtube.com/watch?v=1ELALQlO-yM" target="_blank" rel="noopener noreferrer">applied data tidying in R, by RStudio</a>.</p>
+<p>Using the <code>%&gt;%</code> pipe in R can be incredibly powerful, and make your code much easier to follow, as well as more efficient. If you aren’t yet familiar with this, have a look at <a href="https://seananderson.ca/2014/09/13/dplyr-intro/" target="_blank" rel="noopener noreferrer">this article</a> that provides a useful beginners guide to piping and the kinds of functions you can use it for. The possibilities stretch about as far as your imagination, and if you have a function or task you want to do within a pipe, googling ‘how do I do X in dplyr r’ will usually start to point you in the right direction, alternatively you can <a href="mailto:statistics.development@education.gov.uk">contact us</a>, and we’ll be happy to help you figure out how to do what you need.</p>
+<p>A quick example of how powerful this is is below, where my_data is processed to create new columns, have column names renamed, have the column names tidied using the <a href="https://garthtarr.github.io/meatR/janitor.html" target="_blank" rel="noopener noreferrer">janitor</a> package, blank rows and columns removed, data filtered to only include specific geographic levels, and rows rearranged in order, all in a few lines of easy to follow code:</p>
 <pre class="r"><code>processed_regional_data &lt;- my_data %&gt;% 
   mutate(newPercentageColumn = (numberColumn / totalPopulationColumn) * 100) %&gt;% 
   rename(newPercentageColumn = percentageRate,
@@ -829,16 +670,8 @@ rows rearranged in order, all in a few lines of easy to follow code:</p>
   remove_empty() %&gt;% 
   filter(geographic_level == &quot;Regional&quot;) %&gt;% 
   arrange(time_period, region_name)</code></pre>
-<p><a
-href="https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da"
-target="_blank" rel="noopener noreferrer">Helpful new functions</a> in
-the tidyverse packages can help you to easily transform data from wide
-to long format (see tip 2 in the linked article for this, as it is often
-required for tidy data), as well as providing you with tools to allow
-you quickly and efficiently change the structure of your variables.</p>
-<p>For further resources on learning R so that you’re able to apply it
-to your everyday work, have a look at the <a href="l+d.html">learning
-resources</a> page.</p>
+<p><a href="https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da" target="_blank" rel="noopener noreferrer">Helpful new functions</a> in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 in the linked article for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables.</p>
+<p>For further resources on learning R so that you’re able to apply it to your everyday work, have a look at the <a href="l+d.html">learning resources</a> page.</p>
 <hr />
 </div>
 </div>
@@ -847,144 +680,65 @@ resources</a> page.</p>
 <hr />
 <p><img src="images/good.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>Using the recommended tools on our <a href="l+d.html">learning</a>
-page (<a href="sql.html">SQL</a>, <a href="r.html">R</a> and <a
-href="git.html">Git</a>), or other suitable alternatives that allow you
-to meet the <a href="#core-principles">core principles</a>. Ideally any
-tools used would be open source, Python is a good example of a tool that
-would also be well suited, though is less widely used in DfE and has a
-steeper learning curve than R.</p>
-<p>Open-source refers to something people can modify and share because
-its design is publicly accessible. For more information, take a look at
-this <a href="https://opensource.com/resources/what-open-source"
-target="_blank" rel="noopener noreferrer">explanation of
-open-source</a>, as well as this guide to <a
-href="https://opensource.com/open-source-way" target="_blank"
-rel="noopener noreferrer">working in an open-source way</a>. In
-practical terms, this means moving away from the likes of SPSS, SASS and
-Excel VBA, and utilising the likes of R or Python, version controlled
-with git, and hosted in a publicly accessible repository.</p>
+<p>Using the recommended tools on our <a href="l+d.html">learning</a> page (<a href="sql.html">SQL</a>, <a href="r.html">R</a> and <a href="git.html">Git</a>), or other suitable alternatives that allow you to meet the <a href="#core-principles">core principles</a>. Ideally any tools used would be open source, Python is a good example of a tool that would also be well suited, though is less widely used in DfE and has a steeper learning curve than R.</p>
+<p>Open-source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this <a href="https://opensource.com/resources/what-open-source" target="_blank" rel="noopener noreferrer">explanation of open-source</a>, as well as this guide to <a href="https://opensource.com/open-source-way" target="_blank" rel="noopener noreferrer">working in an open-source way</a>. In practical terms, this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository.</p>
 <p><strong>Why do it?</strong></p>
-<p>There are many reasons why we have recommended the tools that we
-have, the recommended tools are:</p>
+<p>There are many reasons why we have recommended the tools that we have, the recommended tools are:</p>
 <ul>
 <li>already in use at the department and easy for us to access</li>
 <li>easy and <strong>free</strong> to learn</li>
 <li>designed for the work that we do</li>
-<li>used widely across data science in both the public and private
-sector</li>
-<li>allow us to meet best practice when applying RAP to our
-processes</li>
+<li>used widely across data science in both the public and private sector</li>
+<li>allow us to meet best practice when applying RAP to our processes</li>
 </ul>
 <p><strong>How to get started</strong></p>
-<p>Go to our <a href="l+d.html">learning</a> page to read more about the
-recommended tools for the jobs we do, as well as looking at the
-resources available there for how to <a
-href="l+d.html#general_resources">build capability</a> in them. Always
-feel free to contact us if you have any specific questions or would like
-help in understanding how to use those tools in your work.</p>
-<p>By following <a href="#Version_controlled_final_code_scripts">our
-guidance</a> in saving versions of code in an Azure DevOps, we will then
-be able to mirror those repositories in a publicly available GitHub
-area.</p>
+<p>Go to our <a href="l+d.html">learning</a> page to read more about the recommended tools for the jobs we do, as well as looking at the resources available there for how to <a href="l+d.html#general_resources">build capability</a> in them. Always feel free to contact us if you have any specific questions or would like help in understanding how to use those tools in your work.</p>
+<p>By following <a href="#Version_controlled_final_code_scripts">our guidance</a> in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.</p>
 <hr />
 </div>
-<div id="using-single-code-scripts" class="section level2">
-<h2>Using single code scripts</h2>
+<div id="using-run-scripts" class="section level2">
+<h2>Using ‘run’ scripts</h2>
 <hr />
-<p>Utilising a single script to run processes brings a number of
-benefits, not least by allowing us to fully automate the process and
-remove the need to manually trigger different code scripts to get the
-outputs.</p>
+<p>Utilising a single ‘run’ script to execute processes written in other scripts brings a number of benefits. It isn’t just about removing the need to manually trigger different code scripts to get the outputs, but it means the entire process, from start to finish, is fully documented in one place. This has a huge number of benefits, particularly for enabling new team members to pick up existing work quickly, without wasting time struggling to understand what has been done in the past.</p>
 <hr />
 <div id="connecting-r-to-sql" class="section level3">
 <h3>Connecting R to SQL</h3>
 <hr />
-<p>In order to create a single script to run all processes from, it is
-likely that you will need to use R to run SQL queries. If you are unsure
-of how to do this, take a look at the materials from Cathy Atkinson’s
-coffee and coding session on <a
-href="https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&amp;View=%7B2B35083D%2D7626%2D48E2%2D9615%2D451544742692%7D&amp;id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL%2FConnecting%5Fto%5FSQL%5FRevA%2Ehtml&amp;parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL">connecting
-R to SQL using DBI and odbc</a>.</p>
-<p>Chris Mason-Thom recently did another coffee and coding session on
-this, which you can watch below:</p>
+<p>In order to create a single script to run all processes from, it is likely that you will need to use R to run SQL queries. If you are unsure of how to do this, take a look at the materials from Cathy Atkinson’s coffee and coding session on <a href="https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&amp;View=%7B2B35083D%2D7626%2D48E2%2D9615%2D451544742692%7D&amp;id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL%2FConnecting%5Fto%5FSQL%5FRevA%2Ehtml&amp;parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL">connecting R to SQL using DBI and odbc</a>.</p>
+<p>Chris Mason-Thom did another coffee and coding session on this, which you can watch below:</p>
 <center>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c9b7fd97-c854-4a1a-9074-cd80d2ea285e?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;">
 </iframe>
 </center>
 <hr />
 </div>
-<div id="single-production-scripts" class="section level3">
-<h3>Single production scripts</h3>
+<div id="dataset-production-scripts" class="section level3">
+<h3>Dataset production scripts</h3>
 <hr />
 <p><img src="images/great.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>Each file can be created by running a single script.</p>
-<p>This script should take the source data right through to final output
-at the push of a button, including any manipulation, aggregation,
-suppression etc.</p>
+<p>Each dataset can be created by running a single script, which may ‘source’ multiple scripts within it. This <strong>does not</strong> mean that all of the code to create a file must be written in a single script, but instead that there is a single ‘create file’ or ‘run’ script that sources every step in the correct order such that every step from beginning to end will be executed if you run that single ‘run’ script.</p>
+<p>This ‘run’ script should take the source data right through to final output at the push of a button, including any manipulation, aggregation, suppression etc.</p>
 <p><strong>Why do it?</strong></p>
-<p>Having a single script for this saves time when needing to rerun
-processes, and provides a clear documentation of how a file is
-produced.</p>
+<p>Having a script that documents the whole process for this saves time when needing to rerun processes, and provides a clear documentation of how a file is produced.</p>
 <p><strong>How to get started</strong></p>
-<p>Review your current process - how many file scripts does it take to
-get from source data to final output, and why are they separated?</p>
-<p>If it makes sense to, move the scripts into one. If not, you can
-write code in <a href="r.html">R</a> to execute your scripts in order,
-so you are still only running one script to get the final output.</p>
+<p>Review your current process - how many file scripts does it take to get from source data to final output, why are they separated, and what order should they be run in? Do you still have manual steps that could introduce human error (for example, manually moving column orders around in excel)?</p>
+<p>You should automate any manual steps such as the example above. If it makes sense to, you could combine certain scripts to reduce the number. You can then write code in <a href="r.html">R</a> to execute your scripts in order, so you are still only running one script to get the final output.</p>
 <hr />
 </div>
-<div id="single-production-scripts-with-integrated-qa"
-class="section level3">
-<h3>Single production scripts with integrated QA</h3>
+<div id="whole-publication-production-scripts" class="section level3">
+<h3>Whole publication production scripts</h3>
 <hr />
 <p><img src="images/best.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>All quality assurance for a file is also included in the single
-script that can be used to create a file from source data.</p>
+<p>The ultimate aim is to utilise a single script to document and run off everything for a publication, the data files, any QA, any summary reports. This script should allow you to run individual outputs by themselves as well, so make sure that each data file can be run in isolation by running single lines of this script. All quality assurance for a file is also included in the single script that can be used to create a file from source data (see the <a href="#dataset-production-scripts">dataset production scripts section</a>)</p>
 <p><strong>Why do it?</strong></p>
-<p>This documents the entire process around the data file in a single
-place. This makes it easier for new analysts to pick up the process, as
-well as making it quicker and easier to rerun as all reports relating to
-that file are immediately available if you ever make changes file.</p>
+<p>This carries all of the same benefits as having a single ‘run’ script for a file, but at a wider publication level, effectively documenting the entire publication process in one place. This makes it easier for new analysts to pick up the process, as well as making it quicker and easier to rerun as all reports relating to that file are immediately available if you ever make changes file.</p>
 <p><strong>How to get started</strong></p>
-<p>This takes the idea of a <a href="#Single_production_scripts">single
-production script</a> per file one step further, by integrating quality
-assurance. More often than not, this will be in the form of a html
-RMarkdown report. You can write code in <a href="r.html">R</a> to
-execute your scripts in order and also write your quality assurance
-reports, so you are still only running one script to get the final
-output.</p>
-<hr />
-</div>
-<div id="single-publication-production-script" class="section level3">
-<h3>Single publication production script</h3>
-<hr />
-<p><img src="images/best.svg" /><!-- --></p>
-<p><strong>What does this mean?</strong></p>
-<p>The ultimate aim is to utilise a single script to run off everything
-for a publication, the data files, any QA, any summary reports. This
-script should allow you to run individual outputs by themselves as well,
-so make sure that each data file can be run in isolation by running
-single lines of this script.</p>
-<p><strong>Why do it?</strong></p>
-<p>This carries all of the same benefits as having a single master
-script for a file, but at a wider publication level, effectively
-documenting the entire publication process in one place.</p>
-<p><strong>How to get started</strong></p>
-<p>The Education, Health and Care Plans production cycle is a good
-example of a single publication script. They have kept their actual data
-processing in SQL, but all the running and manipulation of the data
-happens in R.</p>
-<p>The cycle originally consisted of multiple SQL scripts, manual QA and
-generation of final files.</p>
+<p>The Education, Health and Care Plans production cycle is a good example of a single publication ‘run’ script. They have kept their actual data processing in SQL, but all the running and manipulation of the data happens in R.</p>
+<p>The cycle originally consisted of multiple SQL scripts, manual QA and generation of final files.</p>
 <p><img src="images/Old%20process.jpg" /><!-- --></p>
-<p>The team now have a single end-to-end fully documented process, which
-runs off of one single R script. The R code points at the SQL scripts to
-run them all in one go, and also creates a QA report and corresponding
-metadata files that pass the data screener. Each data file can still be
-run in isolation from this script.</p>
+<p>The team now have their end-to-end process fully documented, which can be run off of one single R script. The ‘run’ script points at the SQL scripts to run them all in one go, and also creates a QA report and corresponding metadata files that pass the data screener. Each data file can still be run in isolation from this script.</p>
 <p><img src="images/New%20process.jpg" /><!-- --></p>
 <hr />
 </div>
@@ -994,32 +748,17 @@ run in isolation from this script.</p>
 <hr />
 <p><img src="images/great.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>We’d expect that any recyclable code would take less than 30 minutes
-of editing before being able to run again in a future iteration of the
-publication.</p>
+<p>We’d expect that any recyclable code would take less than 30 minutes of editing before being able to run again in a future iteration of the publication.</p>
 <p><strong>Why do it?</strong></p>
-<p>One huge benefit that comes with using code in our processes, is that
-we can pick them up in future years and reuse with minimum effort,
-saving us huge amounts of resource. To be able to do this, we need to be
-conscious of how we write our code, and write it in a way that makes it
-easy to use in future releases for the publication.</p>
+<p>One huge benefit that comes with using code in our processes, is that we can pick them up in future years and reuse with minimum effort, saving us huge amounts of resource. To be able to do this, we need to be conscious of how we write our code, and write it in a way that makes it easy to use in future releases for the publication.</p>
 <p><strong>How to get started</strong></p>
 <p>Review your code and consider the following:</p>
 <ul>
 <li>What steps might need re-editing or could become irrelevant?</li>
-<li>Can you move all variables that require manual input (e.g. table
-names, years) to be assigned at the top of the code, so it’s easy to
-edit in one place with each iteration?</li>
-<li>Are there any fixed variables that are prone to changing such as
-geographic boundaries, that you could start preparing for changes now by
-making it easy to adapt in future?</li>
+<li>Can you move all variables that require manual input (e.g. table names, years) to be assigned at the top of the code, so it’s easy to edit in one place with each iteration?</li>
+<li>Are there any fixed variables that are prone to changing such as geographic boundaries, that you could start preparing for changes now by making it easy to adapt in future?</li>
 </ul>
-<p>For example, if you refer to the year of publication in your code a
-lot, consider replacing every instance with a named variable, which you
-only need to change once at the start of your code. In the example
-below, the year is set at the top of the code, and is used to define
-“prev_year”, both of which are used further down the code to filter the
-data based on year.</p>
+<p>For example, if you refer to the year of publication in your code a lot, consider replacing every instance with a named variable, which you only need to change once at the start of your code. In the example below, the year is set at the top of the code, and is used to define “prev_year”, both of which are used further down the code to filter the data based on year.</p>
 <pre class="r"><code>this_year &lt;- 2020
 prev_year &lt;- this_year - 1
 
@@ -1033,13 +772,7 @@ data_filtered_last_year &lt;- data %&gt;%
 <div id="standards-for-coding" class="section level2">
 <h2>Standards for coding</h2>
 <hr />
-<p>Code can often be written in many different ways, and in languages
-such as R, there are often many different functions and routes that you
-can take to get to the same end result. On top of that, there are even
-more possibilities for how you can format the code. This section will
-take you through some widely used standards for coding to help bring
-standardisation to this area and make it easier to both write and use
-our code.</p>
+<p>Code can often be written in many different ways, and in languages such as R, there are often many different functions and routes that you can take to get to the same end result. On top of that, there are even more possibilities for how you can format the code. This section will take you through some widely used standards for coding to help bring standardisation to this area and make it easier to both write and use our code.</p>
 <hr />
 <div id="clean-final-code" class="section level3">
 <h3>Clean final code</h3>
@@ -1047,26 +780,14 @@ our code.</p>
 <p><img src="images/best.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
 <ul>
-<li><p>This code should meet the best practice standards below (for SQL
-and R). If you are using a different language, such as Python, then
-contact us for advice on the best standards to use when writing
-code.</p></li>
-<li><p>There should be no redundant or duplicated code, even if this has
-been commented out. It should be removed from the files to prevent
-confusion further down the line.</p></li>
-<li><p>The only comments left in the code should be those describing the
-decisions you have made to help other analysts (and future you) to
-understand your code. More guidance on <a
-href="#commenting-in-code">commenting in code</a> can be found later on
-this page.</p></li>
+<li><p>This code should meet the best practice standards below (for SQL and R). If you are using a different language, such as Python, then contact us for advice on the best standards to use when writing code.</p></li>
+<li><p>There should be no redundant or duplicated code, even if this has been commented out. It should be removed from the files to prevent confusion further down the line.</p></li>
+<li><p>The only comments left in the code should be those describing the decisions you have made to help other analysts (and future you) to understand your code. More guidance on <a href="#commenting-in-code">commenting in code</a> can be found later on this page.</p></li>
 </ul>
 <p><strong>Why do it?</strong></p>
-<p>Clean code is efficient, easy to write, easy to review, and easy to
-amend for future use. Below are some recommended standards to follow
-when writing code in SQL and R.</p>
+<p>Clean code is efficient, easy to write, easy to review, and easy to amend for future use. Below are some recommended standards to follow when writing code in SQL and R.</p>
 <p><strong>How to get started</strong></p>
-<p>Watch the coffee and coding session introducing good code practice
-below:</p>
+<p>Watch the coffee and coding session introducing good code practice below:</p>
 <center>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/624e3442-aa66-44e7-bb4f-717a6508b056?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;">
 </iframe>
@@ -1076,55 +797,27 @@ below:</p>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/92d4ba05-d304-4009-b543-e5f4563f1d30?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;">
 </iframe>
 </center>
-<p>Clean code should include comments. Comment why you’ve made
-decisions, don’t comment what you are doing unless it is particularly
-complex as the code itself describes what you are doing. If in doubt,
-more comments are better than too few though. Ideally any specific
-comments or documentation should be alongside the code itself, rather
-than in separate documents.</p>
+<p>Clean code should include comments. Comment why you’ve made decisions, don’t comment what you are doing unless it is particularly complex as the code itself describes what you are doing. If in doubt, more comments are better than too few though. Ideally any specific comments or documentation should be alongside the code itself, rather than in separate documents.</p>
 <hr />
 <div id="sql" class="section level4">
 <h4>SQL</h4>
 <hr />
-<p>For best practice on writing SQL code, here is a particularly useful
-<a href="resources/TSQL_Coding_Standards.docx" target="_blank"
-rel="noopener noreferrer">word document</a> produced by our <a
-href="https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf"
-target="_blank" rel="noopener noreferrer">Data Hub</a>. This outlines a
-variety of best practices, ranging from naming conventions, to to
-formatting your SQL code so that it is easy to follow visually.</p>
+<p>For best practice on writing SQL code, here is a particularly useful <a href="resources/TSQL_Coding_Standards.docx" target="_blank" rel="noopener noreferrer">word document</a> produced by our <a href="https://educationgovuk.sharepoint.com/sites/DataHubProgramme2/Shared%20Documents/Content%20Management/Data%20Hub%20one%20pager.pdf" target="_blank" rel="noopener noreferrer">Data Hub</a>. This outlines a variety of best practices, ranging from naming conventions, to to formatting your SQL code so that it is easy to follow visually.</p>
 <hr />
 </div>
 <div id="r" class="section level4">
 <h4>R</h4>
 <hr />
-<p>When using R, it is generally best practice to use <a
-href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects"
-target="_blank" rel="noopener noreferrer">R projects</a> as directories
-for your work.</p>
-<p>The recommended standard for styling your code in R, is the <a
-href="https://style.tidyverse.org/" target="_blank"
-rel="noopener noreferrer">tidyverse styling</a>, which is fast becoming
-the global standard. What is even better is that you can automate this
-using the <a href="https://styler.r-lib.org/" target="_blank"
-rel="noopener noreferrer">styler</a> package, which will literally style
-your code for you at the click of a button, and is well worth a
-look.</p>
+<p>When using R, it is generally best practice to use <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects" target="_blank" rel="noopener noreferrer">R projects</a> as directories for your work.</p>
+<p>The recommended standard for styling your code in R, is the <a href="https://style.tidyverse.org/" target="_blank" rel="noopener noreferrer">tidyverse styling</a>, which is fast becoming the global standard. What is even better is that you can automate this using the <a href="https://styler.r-lib.org/" target="_blank" rel="noopener noreferrer">styler</a> package, which will literally style your code for you at the click of a button, and is well worth a look.</p>
 <p><img src="images/styler.gif" /><!-- --></p>
-<p>There is also plenty of guidance around the internet for <a
-href="https://waterdata.usgs.gov/blog/intro-best-practices/"
-target="_blank" rel="noopener noreferrer">best practice</a> when writing
-<a href="https://waterdata.usgs.gov/blog/intro-best-practices/"
-target="_blank" rel="noopener noreferrer">efficient R code</a>.</p>
+<p>There is also plenty of guidance around the internet for <a href="https://waterdata.usgs.gov/blog/intro-best-practices/" target="_blank" rel="noopener noreferrer">best practice</a> when writing <a href="https://waterdata.usgs.gov/blog/intro-best-practices/" target="_blank" rel="noopener noreferrer">efficient R code</a>.</p>
 <hr />
 </div>
 <div id="html" class="section level4">
 <h4>HTML</h4>
 <hr />
-<p>If you ever find yourself writing html, or creating it through
-rmarkdown, you can check your html using <a
-href="https://validator.w3.org/" target="_blank"
-rel="noopener noreferrer">w3’s validator</a>.</p>
+<p>If you ever find yourself writing html, or creating it through rmarkdown, you can check your html using <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">w3’s validator</a>.</p>
 <hr />
 </div>
 </div>
@@ -1132,39 +825,22 @@ rel="noopener noreferrer">w3’s validator</a>.</p>
 <div id="peer-reviewing-code" class="section level2">
 <h2>Peer reviewing code</h2>
 <hr />
-<p>Peer review is an important element of quality assuring our work. We
-often do it without realising by bouncing ideas off of one another and
-by getting others to ‘idiot check’ our work. When writing code, ensuring
-that we get our work formally peer reviewed is particularly important
-for ensuring it’s quality and value.</p>
-<p>Prior to receiving code for peer review, the author should ensure
-that all code files are clean, commented appropriately and for larger
-projects should be held in a repo with an appropriate <a
-href="#writing-a-readme-file">README</a> file.</p>
-<p>When peer reviewing code you should be consider the following
-questions -</p>
+<p>Peer review is an important element of quality assuring our work. We often do it without realising by bouncing ideas off of one another and by getting others to ‘idiot check’ our work. When writing code, ensuring that we get our work formally peer reviewed is particularly important for ensuring it’s quality and value.</p>
+<p>Prior to receiving code for peer review, the author should ensure that all code files are clean, commented appropriately and for larger projects should be held in a repo with an appropriate <a href="#writing-a-readme-file">README</a> file.</p>
+<p>When peer reviewing code you should be consider the following questions -</p>
 <ul>
 <li>Does the code do what the author intended?</li>
-<li>If you’re able to run the code, does it run without errors? If
-warnings are displayed, are they explained?</li>
+<li>If you’re able to run the code, does it run without errors? If warnings are displayed, are they explained?</li>
 <li>If the project has unit/integration tests, do they pass?</li>
-<li>Are there any tests / checks that could be added into the code that
-would help to give greater confidence that it is doing what it is
-intended to?</li>
+<li>Are there any tests / checks that could be added into the code that would help to give greater confidence that it is doing what it is intended to?</li>
 <li>Are there comments explaining why any decisions have been made?</li>
 <li>Is the code written and structured sensibly?</li>
-<li>Are there any ways to make the code more efficient (either in number
-of lines or raw speed)?</li>
+<li>Are there any ways to make the code more efficient (either in number of lines or raw speed)?</li>
 <li>Does the code follow best practice for styling and structure?</li>
-<li>Are there any other teams/bits of code you’re aware of that do
-similar things and would be useful to point the authors towards?</li>
-<li>At the end of the review, was there any information you needed to
-ask about that should be made more apparent in the code or
-documentation?</li>
+<li>Are there any other teams/bits of code you’re aware of that do similar things and would be useful to point the authors towards?</li>
+<li>At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation?</li>
 </ul>
-<p>Depending on your access you may or may not be able to run the code
-yourself, but there should be enough information within the code and
-documentation to be able to respond to these questions.</p>
+<p>Depending on your access you may or may not be able to run the code yourself, but there should be enough information within the code and documentation to be able to respond to these questions.</p>
 <hr />
 <div id="review-of-code-within-team" class="section level3">
 <h3>Review of code within team</h3>
@@ -1172,10 +848,8 @@ documentation to be able to respond to these questions.</p>
 <p><img src="images/great.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
 <ul>
-<li><p>Is someone else in the team able to generate the same
-outputs?</p></li>
-<li><p>Has someone else in the team reviewed the code and given
-feedback?</p></li>
+<li><p>Is someone else in the team able to generate the same outputs?</p></li>
+<li><p>Has someone else in the team reviewed the code and given feedback?</p></li>
 <li><p>Have you taken on their feedback and improved the code?</p></li>
 </ul>
 <p><strong>Why do it?</strong></p>
@@ -1190,39 +864,23 @@ feedback?</p></li>
 <p><strong>How to get started</strong></p>
 <p>If you can’t answer yes, then:</p>
 <ul>
-<li><p>Get a member of the team to run the code using only your
-documentation</p></li>
-<li><p>Use their feedback to improve documentation/in-line comments in
-code</p></li>
-<li><p>Other tips for getting started with peer review can be found in
-the <a
-href="https://best-practice-and-impact.github.io/qa-of-code-guidance/peer_review.html"
-target="_blank" rel="noopener noreferrer">Duck Book</a></p></li>
-<li><p>The Duck Book also contains some helpful <a
-href="https://best-practice-and-impact.github.io/qa-of-code-guidance/checklists.html"
-target="_blank" rel="noopener noreferrer">code QA checklists</a> to help
-get you thinking about what to check</p></li>
+<li><p>Get a member of the team to run the code using only your documentation</p></li>
+<li><p>Use their feedback to improve documentation/in-line comments in code</p></li>
+<li><p>Other tips for getting started with peer review can be found in the <a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/peer_review.html" target="_blank" rel="noopener noreferrer">Duck Book</a></p></li>
+<li><p>The Duck Book also contains some helpful <a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/checklists.html" target="_blank" rel="noopener noreferrer">code QA checklists</a> to help get you thinking about what to check</p></li>
 </ul>
 <hr />
 <div id="improving-code-performance" class="section level4">
 <h4>Improving code performance</h4>
 <hr />
-<p>Peer reviewing code and not sure where to start? Improving code
-performance can be a great quick-win for many production teams. There
-will be cases where code you are reviewing does things in a slightly
-different way to how you would: profiling the R code with the
-microbenchmark package is a way to objectively figure out which method
-is more efficient.</p>
-<p>For example below, we are testing out case_when, if_else and
-ifelse.</p>
+<p>Peer reviewing code and not sure where to start? Improving code performance can be a great quick-win for many production teams. There will be cases where code you are reviewing does things in a slightly different way to how you would: profiling the R code with the microbenchmark package is a way to objectively figure out which method is more efficient.</p>
+<p>For example below, we are testing out case_when, if_else and ifelse.</p>
 <pre><code>microbenchmark::microbenchmark( 
    case_when(1:1000 &lt; 3 ~ &quot;low&quot;, TRUE ~ &quot;high&quot;), 
    if_else(1:1000 &lt; 3, &quot;low&quot;, &quot;high&quot;),
    ifelse(1:1000 &lt; 3, &quot;low&quot;, &quot;high&quot;) 
 )</code></pre>
-<p>Running the code outputs a table in the R console, giving profile
-stats for each expression. Here, it is clear that on average, if_else()
-is the fastest function for the job.</p>
+<p>Running the code outputs a table in the R console, giving profile stats for each expression. Here, it is clear that on average, if_else() is the fastest function for the job.</p>
 <pre><code>Unit: microseconds
                                          expr     min       lq     mean   median       uq      max neval
  case_when(1:1000 &lt; 3 ~ &quot;low&quot;, TRUE ~ &quot;high&quot;) 167.901 206.2510 372.7321 300.2515 420.1005 4187.001   100
@@ -1238,107 +896,43 @@ is the fastest function for the job.</p>
 <p><img src="images/best.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
 <ul>
-<li><p>Has someone from outside of the team and publication area
-reviewed the code and given feedback?</p></li>
+<li><p>Has someone from outside of the team and publication area reviewed the code and given feedback?</p></li>
 <li><p>Have you taken on their feedback and improved the code?</p></li>
 </ul>
 <p><strong>Why do it?</strong></p>
-<p>All of the benefits you get from peer reviewing within your own team,
-multiple times over. Having someone external offers new perspectives,
-holds you to account by breaking down assumptions, and offers far
-greater opportunity for building capability through knowledge
-sharing.</p>
+<p>All of the benefits you get from peer reviewing within your own team, multiple times over. Having someone external offers new perspectives, holds you to account by breaking down assumptions, and offers far greater opportunity for building capability through knowledge sharing.</p>
 <p><strong>How to get started</strong></p>
-<p>While peer reviewing code within the team is often practical, having
-external analysts peer review your code can bring a fresh perspective.
-If you’re interested in this, please contact us, and we can help you to
-arrange someone external to your team to review your processes. For this
-to work smoothly, we recommend that your code is easily accessible for
-other analysts, such as hosted in an Azure DevOps repo and mirrored to
-github.</p>
+<p>While peer reviewing code within the team is often practical, having external analysts peer review your code can bring a fresh perspective. If you’re interested in this, please contact us, and we can help you to arrange someone external to your team to review your processes. For this to work smoothly, we recommend that your code is easily accessible for other analysts, such as hosted in an Azure DevOps repo and mirrored to github.</p>
 <hr />
 </div>
 </div>
 <div id="automated-quality-assurance" class="section level2">
 <h2>Automated quality assurance</h2>
 <hr />
-<p>Any data files that have been created will need to be quality
-assured. These checks should be automated where possible, so the
-computer is doing the hard work - saving us time, and to ensure their
-reliability.</p>
-<p>Some teams are already making great progress with automated QA and
-realising the benefits of it. The Statistics Development Team are
-working with these to provide generalised code that teams can use as a
-starting point for automated QA. The intention is that teams can then
-run this as a minimum, before then looking to develop more area specific
-checks to the script and/or continue with current checking processes in
-tandem. If your team already use, or are working towards using,
-automated QA then get in touch as we’d be keen to see what you have.</p>
-<p>It is assumed that when using R, automated scripts will output .html
-reports that the team can read through to understand their data and
-identify any issues, and save as a part of their process
-documentation.</p>
-<p>For more information on general quality assurance best practice in
-DfE, see the <a
-href="https://dfe-analytical-services.github.io/how-to-qa/index.html">How
-to QA guide</a>.</p>
+<p>Any data files that have been created will need to be quality assured. These checks should be automated where possible, so the computer is doing the hard work - saving us time, and to ensure their reliability.</p>
+<p>Some teams are already making great progress with automated QA and realising the benefits of it. The Statistics Development Team are working with these to provide generalised code that teams can use as a starting point for automated QA. The intention is that teams can then run this as a minimum, before then looking to develop more area specific checks to the script and/or continue with current checking processes in tandem. If your team already use, or are working towards using, automated QA then get in touch as we’d be keen to see what you have.</p>
+<p>It is assumed that when using R, automated scripts will output .html reports that the team can read through to understand their data and identify any issues, and save as a part of their process documentation.</p>
+<p>For more information on general quality assurance best practice in DfE, see the <a href="https://dfe-analytical-services.github.io/how-to-qa/index.html">How to QA guide</a>.</p>
 <hr />
 <div id="basic-automated-qa" class="section level3">
 <h3>Basic automated QA</h3>
 <hr />
 <p><img src="images/good.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>The list of basic automated QA checks, with code examples can be
-found below and in our <a
-href="https://github.com/dfe-analytical-services/automated-data-qa"
-target="_blank" rel="noopener noreferrer">GitHub repository</a>:</p>
+<p>The list of basic automated QA checks, with code examples can be found below and in our <a href="https://github.com/dfe-analytical-services/automated-data-qa" target="_blank" rel="noopener noreferrer">GitHub repository</a>:</p>
 <ul>
-<li><p>Checking for <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_minimum_values.R"
-target="_blank" rel="noopener noreferrer">minimum</a>, <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_maximum_values.R"
-target="_blank" rel="noopener noreferrer">maximum</a>, and <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_average_values.R"
-target="_blank" rel="noopener noreferrer">average</a> values across your
-data</p></li>
-<li><p>Checking for <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_extreme_values.R"
-target="_blank" rel="noopener noreferrer">extreme values and
-outliers</a></p></li>
-<li><p>Ensuring there are no <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_duplicate_rows.R"
-target="_blank" rel="noopener noreferrer">duplicate rows</a> or <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_duplicate_columns.R"
-target="_blank" rel="noopener noreferrer">duplicate columns</a></p></li>
-<li><p>Checking that where appropriate, <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_LA_subtotals_vs_region.R"
-target="_blank" rel="noopener noreferrer">geographical subtotals add up
-to totals</a> (e.g. all the numeric values for LAs in Yorkshire and The
-Humber add up to the regional total)</p></li>
-<li><p>Basic <a
-href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/create_scatter_plot.R"
-target="_blank" rel="noopener noreferrer">trend analysis using scatter
-plots</a>, to help you spot outliers and help tell the story of your
-data.</p></li>
+<li><p>Checking for <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_minimum_values.R" target="_blank" rel="noopener noreferrer">minimum</a>, <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_maximum_values.R" target="_blank" rel="noopener noreferrer">maximum</a>, and <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_average_values.R" target="_blank" rel="noopener noreferrer">average</a> values across your data</p></li>
+<li><p>Checking for <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_extreme_values.R" target="_blank" rel="noopener noreferrer">extreme values and outliers</a></p></li>
+<li><p>Ensuring there are no <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_duplicate_rows.R" target="_blank" rel="noopener noreferrer">duplicate rows</a> or <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_duplicate_columns.R" target="_blank" rel="noopener noreferrer">duplicate columns</a></p></li>
+<li><p>Checking that where appropriate, <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/check_LA_subtotals_vs_region.R" target="_blank" rel="noopener noreferrer">geographical subtotals add up to totals</a> (e.g. all the numeric values for LAs in Yorkshire and The Humber add up to the regional total)</p></li>
+<li><p>Basic <a href="https://github.com/dfe-analytical-services/automated-data-qa/blob/main/R/create_scatter_plot.R" target="_blank" rel="noopener noreferrer">trend analysis using scatter plots</a>, to help you spot outliers and help tell the story of your data.</p></li>
 </ul>
-<p>The Statistics Development Team have developed <a
-href="https://rsconnect/rsc/dfe-published-data-qa/" target="_blank"
-rel="noopener noreferrer">the QA app</a> to include some of these basic
-QA outputs.</p>
+<p>The Statistics Development Team have developed <a href="https://rsconnect/rsc/dfe-published-data-qa/" target="_blank" rel="noopener noreferrer">the QA app</a> to include some of these basic QA outputs.</p>
 <p><strong>Why do it?</strong></p>
-<p>Quality is one of the three pillars that our <a
-href="https://code.statisticsauthority.gov.uk/the-code/quality/"
-target="_blank" rel="noopener noreferrer">code of practice</a> is built
-upon. These basic level checks allow us to have confidence that we are
-accurately processing the data.</p>
-<p>Automating these checks ensures their accuracy and reliability, as
-well as being dramatically quicker than doing these manually.</p>
+<p>Quality is one of the three pillars that our <a href="https://code.statisticsauthority.gov.uk/the-code/quality/" target="_blank" rel="noopener noreferrer">code of practice</a> is built upon. These basic level checks allow us to have confidence that we are accurately processing the data.</p>
+<p>Automating these checks ensures their accuracy and reliability, as well as being dramatically quicker than doing these manually.</p>
 <p><strong>How to get started</strong></p>
-<p>Try using our <a
-href="https://github.com/dfe-analytical-services/automated-data-qa">template
-code snippets</a> to get an idea of how you could automate QA of your
-own publication files. A recording of our introduction to automated QA
-is also available at the top of the page.</p>
+<p>Try using our <a href="https://github.com/dfe-analytical-services/automated-data-qa">template code snippets</a> to get an idea of how you could automate QA of your own publication files. A recording of our introduction to automated QA is also available at the top of the page.</p>
 <hr />
 </div>
 <div id="publication-specific-automated-qa" class="section level3">
@@ -1346,123 +940,60 @@ is also available at the top of the page.</p>
 <hr />
 <p><img src="images/great.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>Many teams will have aspects of their data and processes that require
-Quality Assuring beyond the generalisable basic checks above. Therefore
-it is expected that teams develop their own automated QA checks to QA
-specificities of their publications not covered by the basic checks.</p>
+<p>Many teams will have aspects of their data and processes that require Quality Assuring beyond the generalisable basic checks above. Therefore it is expected that teams develop their own automated QA checks to QA specificities of their publications not covered by the basic checks.</p>
 <p><strong>Why do it?</strong></p>
-<p>Quality is one of the three pillars that our <a
-href="https://code.statisticsauthority.gov.uk/the-code/quality/"
-target="_blank" rel="noopener noreferrer">code of practice</a> is built
-upon. By building upon the basic checks to develop bespoke QA for our
-publications, we can increase our confidence in the quality of the
-processes and outputs that they produce.</p>
+<p>Quality is one of the three pillars that our <a href="https://code.statisticsauthority.gov.uk/the-code/quality/" target="_blank" rel="noopener noreferrer">code of practice</a> is built upon. By building upon the basic checks to develop bespoke QA for our publications, we can increase our confidence in the quality of the processes and outputs that they produce.</p>
 <p><strong>How to get started</strong></p>
-<p>We expect that the basic level of automated QA will cover most needs
-that publication teams have. However, we also expect that each
-publication will have it’s own quirks that require a more bespoke
-approach. An example of a publication with it’s own bespoke QA checks
-will appear in this space shortly. For the time being, try to consider
-what things you’d usually check as flags that something hasn’t gone
-right with your data. What are the unique aspects of your publication’s
-data, and how can you automate checks against them to give you
-confidence in it’s accuracy and reliability?</p>
-<p>For those who are interested in starting writing their own QA
-scripts, it’s worth looking at packages in R such as <a
-href="https://testthat.r-lib.org/" target="_blank"
-rel="noopener noreferrer">testthat</a>, including the <a
-href="https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&amp;FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&amp;View=%7b2B35083D-7626-48E2-9615-451544742692%7d"
-target="_blank" rel="noopener noreferrer">coffee and coding talk</a> on
-it by Peter Curtis, as well as this <a
-href="http://r-pkgs.had.co.nz/tests.html" target="_blank"
-rel="noopener noreferrer">guide on testing</a> by Hadley Wickham.</p>
-<p>The <a href="https://garthtarr.github.io/meatR/janitor.html"
-target="_blank" rel="noopener noreferrer">janitor</a> package in R also
-has some particularly useful functions, such as
-<code>clean_names()</code> to automatically clean up your variable
-names, <code>remove_empty()</code> to remove any completely empty rows
-and columns, and <code>get_dupes()</code> which retrieves any duplicate
-rows in your data - this last one is particularly powerful as you can
-feed it specific columns and see if there’s any duplicate instances of
-values across those columns.</p>
+<p>We expect that the basic level of automated QA will cover most needs that publication teams have. However, we also expect that each publication will have it’s own quirks that require a more bespoke approach. An example of a publication with it’s own bespoke QA checks will appear in this space shortly. For the time being, try to consider what things you’d usually check as flags that something hasn’t gone right with your data. What are the unique aspects of your publication’s data, and how can you automate checks against them to give you confidence in it’s accuracy and reliability?</p>
+<p>For those who are interested in starting writing their own QA scripts, it’s worth looking at packages in R such as <a href="https://testthat.r-lib.org/" target="_blank" rel="noopener noreferrer">testthat</a>, including the <a href="https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=/sites/sarpi/g/WorkplaceDocuments/Inducation%20learning%20and%20career%20development/Coffee%20and%20Coding/190306_peter_autotesting&amp;FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&amp;View=%7b2B35083D-7626-48E2-9615-451544742692%7d" target="_blank" rel="noopener noreferrer">coffee and coding talk</a> on it by Peter Curtis, as well as this <a href="http://r-pkgs.had.co.nz/tests.html" target="_blank" rel="noopener noreferrer">guide on testing</a> by Hadley Wickham.</p>
+<p>The <a href="https://garthtarr.github.io/meatR/janitor.html" target="_blank" rel="noopener noreferrer">janitor</a> package in R also has some particularly useful functions, such as <code>clean_names()</code> to automatically clean up your variable names, <code>remove_empty()</code> to remove any completely empty rows and columns, and <code>get_dupes()</code> which retrieves any duplicate rows in your data - this last one is particularly powerful as you can feed it specific columns and see if there’s any duplicate instances of values across those columns.</p>
 <hr />
 </div>
 </div>
 <div id="automating-summary-statistics" class="section level2">
 <h2>Automating summary statistics</h2>
 <hr />
-<p>As a part of automating QA, we should also be looking to automate the
-production of summary statistics alongside the tidy underlying data
-files, this then provides us with instant insight into the stories
-underneath the numbers.</p>
+<p>As a part of automating QA, we should also be looking to automate the production of summary statistics alongside the tidy underlying data files, this then provides us with instant insight into the stories underneath the numbers.</p>
 <hr />
 <div id="automated-summaries" class="section level3">
 <h3>Automated summaries</h3>
 <hr />
 <p><img src="images/great.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>Summary outputs are automated and used to explore the stories of the
-data.</p>
-<p>The Statistics Development Team have developed <a
-href="https://rsconnect/rsc/dfe-published-data-qa/" target="_blank"
-rel="noopener noreferrer">the QA app</a> to include some of these
-automated summaries, including minimum, maximum and average summaries
-for each indicator.</p>
-<p>At a basic level we want teams to make use of the QA app to explore
-their data:</p>
+<p>Summary outputs are automated and used to explore the stories of the data.</p>
+<p>The Statistics Development Team have developed <a href="https://rsconnect/rsc/dfe-published-data-qa/" target="_blank" rel="noopener noreferrer">the QA app</a> to include some of these automated summaries, including minimum, maximum and average summaries for each indicator.</p>
+<p>At a basic level we want teams to make use of the QA app to explore their data:</p>
 <ul>
-<li><p>Have you used the outputs of the automated QA from the screener
-to understand the data?</p></li>
-<li><p>Run automated QA, ensure that all interesting outputs/trends are
-reflected in the accompanying text</p></li>
+<li><p>Have you used the outputs of the automated QA from the screener to understand the data?</p></li>
+<li><p>Run automated QA, ensure that all interesting outputs/trends are reflected in the accompanying text</p></li>
 </ul>
 <p><strong>Why do it?</strong></p>
-<p>Value is one of the three pillars of our <a
-href="https://code.statisticsauthority.gov.uk/the-code/value/"
-target="_blank" rel="noopener noreferrer">code of practice</a>. Even
-more specifically it states that <strong>‘Statistics and data should be
-presented clearly, explained meaningfully and provide authoritative
-insights that serve the public good.’</strong>.</p>
-<p>As a result, we should be developing automated summaries to help us
-to better understand the story of the data and be authoritative and
-rigorous in our telling of it.</p>
+<p>Value is one of the three pillars of our <a href="https://code.statisticsauthority.gov.uk/the-code/value/" target="_blank" rel="noopener noreferrer">code of practice</a>. Even more specifically it states that <strong>‘Statistics and data should be presented clearly, explained meaningfully and provide authoritative insights that serve the public good.’</strong>.</p>
+<p>As a result, we should be developing automated summaries to help us to better understand the story of the data and be authoritative and rigorous in our telling of it.</p>
 <p><strong>How to get started</strong></p>
 <p>Consider:</p>
 <ul>
-<li><p>Use the additional tabs available after a data file passes the <a
-href="https://rsconnect/rsc/dfe-published-data-qa/" target="_blank"
-rel="noopener noreferrer">data screener</a> as a starting point to
-explore trends across breakdowns and years.</p></li>
-<li><p>Running your publication-specific automated QA, ensuring that all
-interesting outputs/trends are reflected in the accompanying
-text</p></li>
+<li><p>Use the additional tabs available after a data file passes the <a href="https://rsconnect/rsc/dfe-published-data-qa/" target="_blank" rel="noopener noreferrer">data screener</a> as a starting point to explore trends across breakdowns and years.</p></li>
+<li><p>Running your publication-specific automated QA, ensuring that all interesting outputs/trends are reflected in the accompanying text</p></li>
 </ul>
 <hr />
 </div>
-<div id="publication-specific-automated-summaries"
-class="section level3">
+<div id="publication-specific-automated-summaries" class="section level3">
 <h3>Publication specific automated summaries</h3>
 <hr />
 <p><img src="images/best.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
 <ul>
-<li><p>Have you gone beyond the outputs of the QA app to consider
-automating further insights for your publication specifically? E.g. year
-on year changes for specific measures, comparisons of different
-characteristics that are of interest to the general public</p></li>
+<li><p>Have you gone beyond the outputs of the QA app to consider automating further insights for your publication specifically? E.g. year on year changes for specific measures, comparisons of different characteristics that are of interest to the general public</p></li>
 <li><p>Are you using these outputs to write your commentary?</p></li>
 </ul>
 <p><strong>Why do it?</strong></p>
-<p>All publications are different, and therefore it is important that
-for each publication, teams go beyond the basics and produce automated
-summaries specific to their area.</p>
+<p>All publications are different, and therefore it is important that for each publication, teams go beyond the basics and produce automated summaries specific to their area.</p>
 <p><strong>How to get started</strong></p>
 <p>Consider:</p>
 <ul>
-<li><p>Integrating extra publication-specific QA into the production
-process</p></li>
-<li><p>Consider outputs specific to your publication that would help you
-to write commentary/draw out interesting analysis</p></li>
+<li><p>Integrating extra publication-specific QA into the production process</p></li>
+<li><p>Consider outputs specific to your publication that would help you to write commentary/draw out interesting analysis</p></li>
 </ul>
 <hr />
 </div>
@@ -1471,61 +1002,36 @@ to write commentary/draw out interesting analysis</p></li>
 <div id="version-control" class="section level1">
 <h1>Version control</h1>
 <hr />
-<p><em>When you assume you make an ‘ass’ out of ‘u’ and ‘me’</em>.
-Everyone knows this saying, yet few of us heed it’s warning.</p>
-<p>The aim should be to leave your work in a state that others
-(including future you!), can pick it up and immediately find what they
-need, understanding the processes that have happened previously. Changes
-to files should be documented, and published versions should be clearly
-named and stored in their own folder.</p>
-<p>As we work with code to process our data more and more, we can begin
-to utilise version control software to make this process much easier,
-allowing simultaneous collaboration on files.</p>
+<p><em>When you assume you make an ‘ass’ out of ‘u’ and ‘me’</em>. Everyone knows this saying, yet few of us heed it’s warning.</p>
+<p>The aim should be to leave your work in a state that others (including future you!), can pick it up and immediately find what they need, understanding the processes that have happened previously. Changes to files should be documented, and published versions should be clearly named and stored in their own folder.</p>
+<p>As we work with code to process our data more and more, we can begin to utilise version control software to make this process much easier, allowing simultaneous collaboration on files.</p>
 <hr />
 <div id="sensible-folder-and-file-structure" class="section level2">
 <h2>Sensible folder and file structure</h2>
 <hr />
 <p><img src="images/good.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>As a minimum you should have a folder that includes all of the final
-versions of documents produced and published, per release, within a
-folder for the wider publication. Ask yourself if it would be easy for
-someone who isn’t in the team to find specific files, and if not, is
-there a better way that you could name and structure your folders to
-make them more intuitive to navigate?</p>
+<p>As a minimum you should have a folder that includes all of the final versions of documents produced and published, per release, within a folder for the wider publication. Ask yourself if it would be easy for someone who isn’t in the team to find specific files, and if not, is there a better way that you could name and structure your folders to make them more intuitive to navigate?</p>
 <p><strong>Why do it?</strong></p>
-<p>How you organize and name your files will have a big impact on your
-ability to find those files later and to understand what they contain.
-You should be consistent and descriptive in naming and organizing files
-so that it is obvious where to find specific data and what the files
-contain.</p>
+<p>How you organize and name your files will have a big impact on your ability to find those files later and to understand what they contain. You should be consistent and descriptive in naming and organizing files so that it is obvious where to find specific data and what the files contain.</p>
 <p><strong>How to get started</strong></p>
-<p>Some questions to help you consider whether your folder structure is
-sensible are:</p>
+<p>Some questions to help you consider whether your folder structure is sensible are:</p>
 <ul>
-<li>Are all documentation, code and outputs for the publication saved in
-one folder area?</li>
-<li>Is simple version control clearly applied (e.g. having all final
-files in a folder named “final”?</li>
-<li>Are there sub-folders like ‘code’, ‘documentation’‘, ’outputs’ and
-‘final’ to save the relevant working files in?</li>
-<li>Are you keeping a version log up to date with any changes made to
-files in this final folder?</li>
+<li>Are all documentation, code and outputs for the publication saved in one folder area?</li>
+<li>Is simple version control clearly applied (e.g. having all final files in a folder named “final”?</li>
+<li>Are there sub-folders like ‘code’, ‘documentation’‘, ’outputs’ and ‘final’ to save the relevant working files in?</li>
+<li>Are you keeping a version log up to date with any changes made to files in this final folder?</li>
 </ul>
 <hr />
 <div id="naming-conventions" class="section level3">
 <h3>Naming conventions</h3>
 <hr />
-<p>Having a <strong>clear</strong> and <strong>consistent</strong>
-naming convention for your files is critical. Remember that file names
-should:</p>
+<p>Having a <strong>clear</strong> and <strong>consistent</strong> naming convention for your files is critical. Remember that file names should:</p>
 <p><strong>Be machine readable</strong></p>
 <ul>
 <li>Avoid spaces.</li>
-<li>Avoid special characters such as: ~ ! @ # $ % ^ &amp; * ( ) ` ; &lt;
-&gt; ? , [ ] { } ‘ “.</li>
-<li>Be as short as practicable; overly long names do not work well with
-all types of software.</li>
+<li>Avoid special characters such as: ~ ! @ # $ % ^ &amp; * ( ) ` ; &lt; &gt; ? , [ ] { } ‘ “.</li>
+<li>Be as short as practicable; overly long names do not work well with all types of software.</li>
 </ul>
 <p><strong>Be human readable</strong></p>
 <ul>
@@ -1533,19 +1039,11 @@ all types of software.</li>
 </ul>
 <p><strong>Play well with default ordering</strong></p>
 <ul>
-<li>Often (though not always!) you should have numbers first,
-particularly if your file names include dates.</li>
-<li>Follow the ISO 8601 date standard (YYYYMMDD) to ensure that all of
-your files stay in chronological order.</li>
-<li>Use leading zeros to left pad numbers and ensure files sort
-properly, avoiding 1,10,2,3.</li>
+<li>Often (though not always!) you should have numbers first, particularly if your file names include dates.</li>
+<li>Follow the ISO 8601 date standard (YYYYMMDD) to ensure that all of your files stay in chronological order.</li>
+<li>Use leading zeros to left pad numbers and ensure files sort properly, avoiding 1,10,2,3.</li>
 </ul>
-<p>If in doubt, take a look at this <a
-href="https://speakerdeck.com/jennybc/how-to-name-files" target="_blank"
-rel="noopener noreferrer">presentation</a>, or this <a
-href="https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming"
-target="_blank" rel="noopener noreferrer">naming convention guide by
-Stanford</a>, for examples reinforcing the above.</p>
+<p>If in doubt, take a look at this <a href="https://speakerdeck.com/jennybc/how-to-name-files" target="_blank" rel="noopener noreferrer">presentation</a>, or this <a href="https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming" target="_blank" rel="noopener noreferrer">naming convention guide by Stanford</a>, for examples reinforcing the above.</p>
 <hr />
 </div>
 </div>
@@ -1555,41 +1053,20 @@ Stanford</a>, for examples reinforcing the above.</p>
 <p><img src="images/good.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
 <ul>
-<li><p>You should be annotating as you go, ensuring that every process
-and decision made is written down. Processes are ideally written with
-code, and decisions in comments.</p></li>
-<li><p>There should be a <a href="#writing-a-readme-file">README</a>
-notes file, that clearly details the steps in the process, any
-dependencies (such as places where access needs to be requested to) and
-how to carry out the process.</p></li>
-<li><p>Any specialist terms should also be defined if required (e.g. The
-NFTYPE lookup can be found in xxxxx. “NFTYPE” means school
-type).</p></li>
+<li><p>You should be annotating as you go, ensuring that every process and decision made is written down. Processes are ideally written with code, and decisions in comments.</p></li>
+<li><p>There should be a <a href="#writing-a-readme-file">README</a> notes file, that clearly details the steps in the process, any dependencies (such as places where access needs to be requested to) and how to carry out the process.</p></li>
+<li><p>Any specialist terms should also be defined if required (e.g. The NFTYPE lookup can be found in xxxxx. “NFTYPE” means school type).</p></li>
 </ul>
 <p><strong>Why do it?</strong></p>
-<p>When documenting your processes you should leave nothing to chance,
-we all have wasted time in the past trying to work out what it was that
-we had done before, and that time increases even more when we are
-picking up someone else’s work. Thorough documentation saves us time,
-and provides a clear audit trail of what we do. This is key for the
-‘Reproducible’ part of RAP, our processes must be easily reproducible
-and clear documentation is fundamental to that.</p>
+<p>When documenting your processes you should leave nothing to chance, we all have wasted time in the past trying to work out what it was that we had done before, and that time increases even more when we are picking up someone else’s work. Thorough documentation saves us time, and provides a clear audit trail of what we do. This is key for the ‘Reproducible’ part of RAP, our processes must be easily reproducible and clear documentation is fundamental to that.</p>
 <p><strong>How to get started</strong></p>
-<p>Take a look at your processes and be critical - could another analyst
-pick them up without you there to help them? If the answer is no (don’t
-feel ashamed, it will be for many teams) then go through and note down
-areas that require improvement, so that you can revise them with your
-team.</p>
-<p>Take a look at the sections below for further guidance on improving
-your documentation.</p>
+<p>Take a look at your processes and be critical - could another analyst pick them up without you there to help them? If the answer is no (don’t feel ashamed, it will be for many teams) then go through and note down areas that require improvement, so that you can revise them with your team.</p>
+<p>Take a look at the sections below for further guidance on improving your documentation.</p>
 <hr />
 <div id="commenting-in-code" class="section level3">
 <h3>Commenting in code</h3>
 <hr />
-<p>When writing code, whether that is SQL, R, or something else, make
-sure you’re commenting as you go. Start off every file by outlining the
-date, author, purpose, and if applicable, the structure of the file,
-like this:</p>
+<p>When writing code, whether that is SQL, R, or something else, make sure you’re commenting as you go. Start off every file by outlining the date, author, purpose, and if applicable, the structure of the file, like this:</p>
 <pre><code>----------------------------------------------------------------------------------------------
 -- Script Name:     Section 251 Table A 2019 - s251_tA_2019.sql
 -- Description:     Extraction of data from IStore and production of underlying data file
@@ -1605,47 +1082,25 @@ like this:</p>
 -- 4. Tidy up and output results
 -- 5. Metadata creation
 ----------------------------------------------------------------------------------------------</code></pre>
-<p>Commented lines should begin with – (SQL) or # (R), followed by one
-space and your comment. Remember that <strong>comments should explain
-the why, not the what.</strong></p>
-<p>In SQL you can also use <code>/**</code> and <code>**/</code> to
-bookend comments over multiple lines.</p>
-<p>In rmarkdown documents you can bookend comments by using
-<code>&lt;!--</code> and <code>--&gt;</code>.</p>
-<p>Use commented lines of - to break up your files into scannable chunks
-based upon the structure and subheadings, like the R example below:</p>
+<p>Commented lines should begin with – (SQL) or # (R), followed by one space and your comment. Remember that <strong>comments should explain the why, not the what.</strong></p>
+<p>In SQL you can also use <code>/**</code> and <code>**/</code> to bookend comments over multiple lines.</p>
+<p>In rmarkdown documents you can bookend comments by using <code>&lt;!--</code> and <code>--&gt;</code>.</p>
+<p>Use commented lines of - to break up your files into scannable chunks based upon the structure and subheadings, like the R example below:</p>
 <pre><code># Importing the data -----------------------------------------------------------------------------------
 </code></pre>
-<p>Doing this can visually break up your code into sections that are
-easy to navigate around. It will also add that section to your outline,
-which can be used in RStudio using Ctrl-Shift-O. More details on the
-possibilities for this can be found in the <a
-href="https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections"
-target="_blank" rel="noopener noreferrer">RStudio guidance on folding
-and sectioning code</a>.</p>
-<p>You might be thinking that it would be nice if there was software
-that could help you with documentation, if so, read on, as Git is an
-incredibly powerful tool that can help us easily and thoroughly document
-versions of our files. If you’re at the stage where you are developing
-your own functions and packages in R, then take a look at <a
-href="https://roxygen2.r-lib.org/" target="_blank"
-rel="noopener noreferrer">roxygen2</a> as well.</p>
+<p>Doing this can visually break up your code into sections that are easy to navigate around. It will also add that section to your outline, which can be used in RStudio using Ctrl-Shift-O. More details on the possibilities for this can be found in the <a href="https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections" target="_blank" rel="noopener noreferrer">RStudio guidance on folding and sectioning code</a>.</p>
+<p>You might be thinking that it would be nice if there was software that could help you with documentation, if so, read on, as Git is an incredibly powerful tool that can help us easily and thoroughly document versions of our files. If you’re at the stage where you are developing your own functions and packages in R, then take a look at <a href="https://roxygen2.r-lib.org/" target="_blank" rel="noopener noreferrer">roxygen2</a> as well.</p>
 <hr />
 </div>
 <div id="writing-a-readme-file" class="section level3">
 <h3>Writing a README file</h3>
 <hr />
 <p><strong>What does this mean?</strong></p>
-<p>A README is a text file (.txt) that introduces and explains a
-project. It contains information that is required to understand what the
-project is about and how to use it.</p>
+<p>A README is a text file (.txt) that introduces and explains a project. It contains information that is required to understand what the project is about and how to use it.</p>
 <p><strong>Why do it?</strong></p>
-<p>It’s an easy way to answer questions that your audience will likely
-have regarding how to install and use your project and also how to
-collaborate with you.</p>
+<p>It’s an easy way to answer questions that your audience will likely have regarding how to install and use your project and also how to collaborate with you.</p>
 <p><strong>How to get started</strong></p>
-<p>As a starting point, you should aim to have as many of the following
-sections as are applicable to your project:</p>
+<p>As a starting point, you should aim to have as many of the following sections as are applicable to your project:</p>
 <ul>
 <li>Introduction</li>
 <li>Requirements (access, software, skills/knowledge)</li>
@@ -1653,129 +1108,70 @@ sections as are applicable to your project:</p>
 <li>How to contribute</li>
 <li>Contact details</li>
 </ul>
-<p>The <a
-href="https://github.com/dfe-analytical-services/publication-self-assessment-copy"
-target="_blank" rel="noopener noreferrer">Self-assessment tool</a> and
-the <a
-href="https://github.com/dfe-analytical-services/dfe-published-data-qa"
-target="_blank" rel="noopener noreferrer">QA app</a> give two examples
-of readme files structured like this.</p>
+<p>The <a href="https://github.com/dfe-analytical-services/publication-self-assessment-copy" target="_blank" rel="noopener noreferrer">Self-assessment tool</a> and the <a href="https://github.com/dfe-analytical-services/dfe-published-data-qa" target="_blank" rel="noopener noreferrer">QA app</a> give two examples of readme files structured like this.</p>
 <hr />
 </div>
 </div>
 <div id="version-control-with-git" class="section level2">
 <h2>Version control with git</h2>
 <hr />
-<p>If you do not already have git downloaded, you can <a
-href="https://git-scm.com/downloads">download the latest version from
-their website</a>.</p>
-<p>For now, take a look at at the <a href="l+d.html#git">resources for
-learning Git</a> on the learning resources page.</p>
+<p>If you do not already have git downloaded, you can <a href="https://git-scm.com/downloads">download the latest version from their website</a>.</p>
+<p>For now, take a look at at the <a href="l+d.html#git">resources for learning Git</a> on the learning resources page.</p>
 <hr />
 <div id="version-controlled-final-code-scripts" class="section level3">
 <h3>Version controlled final code scripts</h3>
 <hr />
 <p><img src="images/great.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>This means having the final copies of code and documentation saved in
-a git-controlled Azure DevOps repo in the official-statistics-production
-area.</p>
+<p>This means having the final copies of code and documentation saved in a git-controlled Azure DevOps repo in the official-statistics-production area.</p>
 <p><strong>Why do it?</strong></p>
-<p>Having the final copy of the scripts version controlled gives
-assurance around how the data was created. It also allows teams to
-easily record any last minute changes to the code after the initial
-final version by using the version control to log this.</p>
+<p>Having the final copy of the scripts version controlled gives assurance around how the data was created. It also allows teams to easily record any last minute changes to the code after the initial final version by using the version control to log this.</p>
 <p><strong>How to get started</strong></p>
-<p>The first step is to get your final versions of code and
-documentation together in a single folder.</p>
-<p>We have a specific area set up for you to host your publication code
-in on the dfe-gov-uk instance of Azure DevOps, entitled
-official-statistics-production.</p>
-<p>To gain access to this area, please raise a request on service desk
-by navigating through the pages detailed in the animation below.</p>
+<p>The first step is to get your final versions of code and documentation together in a single folder.</p>
+<p>We have a specific area set up for you to host your publication code in on the dfe-gov-uk instance of Azure DevOps, entitled official-statistics-production.</p>
+<p>To gain access to this area, please raise a request on service desk by navigating through the pages detailed in the animation below.</p>
 <p><img src="images/servicedesk_request.gif" /><!-- --></p>
-<p>Once you have navigated to this page, fill out the form with the
-following details and send your request off.</p>
+<p>Once you have navigated to this page, fill out the form with the following details and send your request off.</p>
 <p><img src="images/devops_request_details.PNG" /><!-- --></p>
-<p>Access is usually granted within a few working days. Alert the <a
-href="mailto:statistics.development@education.gov.uk">Statistics
-Development Team</a> when this is confirmed, and we will set up/give you
-access to your repository.</p>
+<p>Access is usually granted within a few working days. Alert the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a> when this is confirmed, and we will set up your repository and give your team access.</p>
 <hr />
 </div>
-<div id="open-source-repositories" class="section level3">
-<h3>Open source repositories</h3>
+<div id="use-open-source-repositories" class="section level3">
+<h3>Use open source repositories</h3>
 <hr />
+<p><img src="images/best.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
-<p>Repositories that are visible to the public.</p>
+<p>Saving or cloning your work into a repository that is visible to the public. We currently have brilliant examples of this in our <a href="https://github.com/dfe-analytical-services">DfE analytical services GitHub area</a>, in which all of the code used to create public dashboards is publicly available.</p>
+<p>For statistics publications we expect teams to be able to mirror their proccess code on GitHub after publication, which will help open up their code for other analysts to learn from.</p>
+<p>We are currently working on ways to mirror private repos (i.e. AzureDevOps) to public repos on publication of your data. If you are interested in this please contact the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a>.</p>
 <p><strong>Why do it?</strong></p>
-<p>It’s a key part of the <a
-href="https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source"
-target="_blank" rel="noopener noreferrer">technology code of
-practice</a> as an agreed standard for <a
-href="https://www.gov.uk/guidance/be-open-and-use-open-source"
-target="_blank" rel="noopener noreferrer">digital services across
-government</a>.</p>
+<p>It’s a key part of the <a href="https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice#be-open-and-use-open-source" target="_blank" rel="noopener noreferrer">technology code of practice</a> as an agreed standard for <a href="https://www.gov.uk/guidance/be-open-and-use-open-source" target="_blank" rel="noopener noreferrer">digital services across government</a>.</p>
 <p><strong>How to get started?</strong></p>
-<p>Contact us to get a repository set up in our dfe-analytical-services
-area on GitHub.</p>
-<p>In general, if you’re thinking of making an Official Statistics
-production repository public, you should consider the following
-(assuming that you are using R, though these principles will apply more
-widely):</p>
+<p>Contact us to get a repository set up in Azure DevOps, to set up a mirroring process to GitHub or to set up a repository on our dfe-analytical-services area on GitHub.</p>
+<p>You should consider the following principles making an Official Statistics production repository public (some examples are R specific though can be applied to other languages):</p>
 <ul>
-<li>Follow the guidance on <a href="#writing-a-readme-file">writing a
-readme file</a>, and add context in about what Official/National
-statistics are</li>
-<li>Ensure no data (either input or output) is included in the
-repository</li>
-<li>Have a clear and organised folder structure (such as having R
-scripts in an ‘R’ folder)</li>
-<li>Check your code is styled according the <a
-href="#clean-final-code">tidyverse styling</a></li>
-<li>Use <a href="https://rstudio.github.io/renv/articles/renv.html"
-target="_blank" rel="noopener noreferrer">renv</a> for package
-management</li>
-<li>Use an <a
-href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects"
-target="_blank" rel="noopener noreferrer">R project</a></li>
+<li>Follow the guidance on <a href="#writing-a-readme-file">writing a readme file</a>, and add context in about what Official/National statistics are</li>
+<li>Ensure no data (either input or output) is included in the repository</li>
+<li>Have a clear and organised folder structure (such as having R scripts in an ‘R’ folder)</li>
+<li>Check your code is styled according the <a href="#clean-final-code">tidyverse styling</a></li>
+<li>Use <a href="https://rstudio.github.io/renv/articles/renv.html" target="_blank" rel="noopener noreferrer">renv</a> for package management</li>
+<li>Use an <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects" target="_blank" rel="noopener noreferrer">R project</a></li>
 </ul>
-<p>When naming your publication’s repository you should use the
-publication name fully written out, in lower case, and with dashes for
-spaces – ‘graduate-labour-market-statistics’.</p>
-<p>A single repository should be used for all releases of your
-publication, there’s no need to have multiple as all the history is
-saved within previous commits. You can make use of <a
-href="git.html#Tagging_release_versions">tagging releases in git</a> to
-help differentiate between each cycle.</p>
+<p>When naming your publication’s repository you should use the publication name fully written out, in lower case, and with dashes for spaces – ‘graduate-labour-market-statistics’.</p>
+<p>A single repository should be used for all releases of your publication, there’s no need to have multiple as all the history is saved within previous commits. You can make use of <a href="git.html#Tagging_release_versions">tagging releases in git</a> to help differentiate between each cycle.</p>
 <hr />
 <div id="avoid-revealing-sensitive-information" class="section level4">
 <h4>Avoid revealing sensitive information</h4>
 <hr />
 <p>Here are some general best practice tips:</p>
 <ul>
-<li>Using .gitignore to ignore files and folders to prevent committing
-anything sensitive</li>
-<li>Never committing outputs unless they’ve been checked over, even
-aggregates. We suggest only outputting to an output folder which is in
-the .gitignore file, to ensure this doesn’t happen by mistake</li>
-<li>Keeping datasets and secrets (e.g. API keys) outside the repository
-as much as possible, make use of secure variables</li>
-<li>Checking git histories: if someone is planning on open-sourcing code
-that has previously been in a private repository or only
-version-controlled locally, you want to be careful not to have anything
-sensitive in the commit history. You can do this by following the above
-rules. When in doubt, you can remove the git history and start the
-public repo without it</li>
-<li>You can <a
-href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">remove
-a file from the entire commit history</a> if you did commit anything
-sensitive, although you still need to follow the usual procedures if
-this was a data breach</li>
+<li>Using .gitignore to ignore files and folders to prevent committing anything sensitive</li>
+<li>Never committing outputs unless they’ve been checked over, even aggregates. We suggest only outputting to an output folder which is in the .gitignore file, to ensure this doesn’t happen by mistake</li>
+<li>Keeping datasets and secrets (e.g. API keys) outside the repository as much as possible, make use of secure variables</li>
+<li>Checking git histories: if someone is planning on open-sourcing code that has previously been in a private repository or only version-controlled locally, you want to be careful not to have anything sensitive in the commit history. You can do this by following the above rules. When in doubt, you can remove the git history and start the public repo without it</li>
+<li>You can <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">remove a file from the entire commit history</a> if you did commit anything sensitive, although you still need to follow the usual procedures if this was a data breach</li>
 </ul>
-<p>You can find out more in the duck book’s <a
-href="https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories">guidance
-on using git</a>.</p>
+<p>You can find out more in the duck book’s <a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#avoid-commiting-sensitive-information-to-git-repositories">guidance on using git</a>.</p>
 <hr />
 </div>
 </div>
@@ -1785,41 +1181,26 @@ on using git</a>.</p>
 <p><img src="images/best.svg" /><!-- --></p>
 <p><strong>What does this mean?</strong></p>
 <ul>
-<li><p>Has code development taken place in git, collaboratively across
-the team?</p></li>
-<li><p>Are you making use of pull requests for team members to review
-and comment on code updates?</p></li>
-<li><p>Is there a clear paper trail of changes to code
-(commits)?</p></li>
+<li><p>Has code development taken place in git, collaboratively across the team?</p></li>
+<li><p>Are you making use of pull requests for team members to review and comment on code updates?</p></li>
+<li><p>Is there a clear paper trail of changes to code (commits)?</p></li>
 </ul>
 <p><strong>Why do it?</strong></p>
-<p>Using git allows multiple people to simultaneously develop the same
-code using branches, all with a crystal clear audit trail showing what
-changes were made when using commits. It makes it easy for team members
-to review changes via pull requests.</p>
+<p>Using git allows multiple people to simultaneously develop the same code using branches, all with a crystal clear audit trail showing what changes were made when using commits. It makes it easy for team members to review changes via pull requests.</p>
 <p><strong>How to get started</strong></p>
 <p>To get started you should:</p>
 <hr />
-<div id="get-your-code-into-a-git-controlled-folder"
-class="section level4">
+<div id="get-your-code-into-a-git-controlled-folder" class="section level4">
 <h4>Get your code into a git controlled folder</h4>
 <hr />
-<p>Get code into a git controlled folder in whatever version it is
-currently in. Use the following steps to do so:</p>
+<p>Get code into a git controlled folder in whatever version it is currently in. Use the following steps to do so:</p>
 <ol style="list-style-type: decimal">
-<li><p>Open the folder where your project is saved, right click anywhere
-in that window, and click “Git Bash Here”.</p></li>
-<li><p>This will open a black box. Type in the following and hit
-enter</p></li>
+<li><p>Open the folder where your project is saved, right click anywhere in that window, and click “Git Bash Here”.</p></li>
+<li><p>This will open a black box. Type in the following and hit enter</p></li>
 </ol>
 <pre class="r"><code>git init</code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li>After hitting enter, type in the following and hit enter again after
-each line. You will need the URL of your Azure DevOps repository to
-complete this step. Contact the <a
-href="mailto:statistics.development@education.gov.uk">Statistics
-Development Team</a> if you are not sure what this is or do not have
-one.</li>
+<li>After hitting enter, type in the following and hit enter again after each line. You will need the URL of your Azure DevOps repository to complete this step. Contact the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a> if you are not sure what this is or do not have one.</li>
 </ol>
 <pre class="r"><code>git add .
 
@@ -1829,22 +1210,14 @@ git remote add origin YOUR_URL_HERE
 
 git push -f origin --all</code></pre>
 <ul>
-<li><p>You may be prompted for either your windows or git credentials at
-this stage.</p>
+<li><p>You may be prompted for either your windows or git credentials at this stage.</p>
 <ul>
-<li><p>If prompted for your <strong>windows</strong> credentials, enter
-the username and password combination you use to log into your DfE
-device.</p></li>
-<li><p>If prompted for your <strong>git</strong> credentials, visit your
-online repository, click on the blue “clone” box, and click “generate
-git credentials”. This will generate a username and password for you to
-enter.</p></li>
+<li><p>If prompted for your <strong>windows</strong> credentials, enter the username and password combination you use to log into your DfE device.</p></li>
+<li><p>If prompted for your <strong>git</strong> credentials, visit your online repository, click on the blue “clone” box, and click “generate git credentials”. This will generate a username and password for you to enter.</p></li>
 </ul></li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
-<li>Visit your repository online, and check that all the files have
-uploaded. Other members of your team will now be able to work from your
-code.</li>
+<li>Visit your repository online, and check that all the files have uploaded. Other members of your team will now be able to work from your code.</li>
 </ol>
 <hr />
 </div>
@@ -1852,31 +1225,19 @@ code.</li>
 <h4>Build capability within the team</h4>
 <hr />
 <ul>
-<li><p>Ensure all team members have access to your project in the Azure
-DevOps official-statistics-production area. Contact the <a
-href="mailto:statistics.development@education.gov.uk">Statistics
-Development Team</a> if there are any issues.</p></li>
-<li><p>Get team members to clone your repository in to their personal
-area, so everyone is able to work on code at the same time.</p></li>
+<li><p>Ensure all team members have access to your project in the Azure DevOps official-statistics-production area. Contact the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a> if there are any issues.</p></li>
+<li><p>Get team members to clone your repository in to their personal area, so everyone is able to work on code at the same time.</p></li>
 </ul>
 <p>To clone code, they will need to do the following:</p>
 <ol style="list-style-type: decimal">
-<li><p>Run through steps 1 - 2a of <a
-href="#get-your-code-into-a-git-controlled-folder">getting a file into a
-git controlled folder</a></p></li>
-<li><p>After running those lines, type in the following with your
-repository URL in the “YOUR_URL_HERE” space. This will clone the online
-repository to your local area.</p></li>
+<li><p>Run through steps 1 - 2a of <a href="#get-your-code-into-a-git-controlled-folder">getting a file into a git controlled folder</a></p></li>
+<li><p>After running those lines, type in the following with your repository URL in the “YOUR_URL_HERE” space. This will clone the online repository to your local area.</p></li>
 </ol>
 <pre class="r"><code>git clone YOUR_URL_HERE</code></pre>
 <ul>
-<li>Make use of git and version control in your team projects regularly.
-Like learning anything new, putting it into practice regularly is the
-best way to become confident in using it.</li>
+<li>Make use of git and version control in your team projects regularly. Like learning anything new, putting it into practice regularly is the best way to become confident in using it.</li>
 </ul>
-<p>Please refer to the other links on the <a
-href="l+d.html#git">learning resources</a> page to learn more about how
-to use git in practice.</p>
+<p>Please refer to the other links on the <a href="l+d.html#git">learning resources</a> page to learn more about how to use git in practice.</p>
 </div>
 </div>
 </div>

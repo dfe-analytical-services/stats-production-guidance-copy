@@ -13,7 +13,6 @@
 
 <title>SQL</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -38,6 +37,33 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/duck_guidance.png"/>
+<script>
+// Define dataLayer and the gtag function.
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// Default ad_storage to 'denied' as a placeholder
+// Determine actual values based on your own requirements
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'granted'
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+/*
+The tracking number below MUST be replaced with a unique number, contact the statistics development team to set this up.
+*/
+  gtag('config', 'G-KBJCBD114T');
+
+</script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -148,11 +174,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -357,6 +387,9 @@ div.tocify {
       <a href="rap.html">Processes and RAP</a>
     </li>
     <li>
+      <a href="rap_managers.html">RAP for managers</a>
+    </li>
+    <li>
       <a href="ud.html">Open data standards</a>
     </li>
     <li>
@@ -382,6 +415,9 @@ div.tocify {
     </li>
     <li>
       <a href="dashboards.html">Dashboards</a>
+    </li>
+    <li>
+      <a href="embedded-charts.html">Embedded R-Shiny charts</a>
     </li>
   </ul>
 </li>
@@ -430,37 +466,28 @@ Guidance and tips for accessing data via databases with SQL
 <div id="what-is-it" class="section level2">
 <h2>What is it</h2>
 <hr />
-<p>SQL or Structured Query Language, is a programming language used to
-talk to relational database management systems.</p>
+<p>SQL or Structured Query Language, is a programming language used to talk to relational database management systems.</p>
 <hr />
 </div>
 <div id="what-is-it-for" class="section level2">
 <h2>What is it for</h2>
 <hr />
-<p>SQL servers are where most of DfE’s data is held, making it ideal for
-database management.</p>
-<p>SQL provides us with a language primarily for querying databases to
-extract data, though it is also capable of some basic data processing
-and analysis.</p>
+<p>SQL servers are where most of DfE’s data is held, making it ideal for database management.</p>
+<p>SQL provides us with a language primarily for querying databases to extract data, though it is also capable of some basic data processing and analysis.</p>
 <hr />
 </div>
 <div id="how-to-get-it" class="section level2">
 <h2>How to get it</h2>
 <hr />
-<p>Download SSMS from the DfE software center, talk to your team about
-getting access to the appropriate SQL servers and databases where the
-data you need to access is held and start writing SQL queries.</p>
-<p>There are usually a couple of different versions available for
-software on the software center, we’d recommend you always go for the
-latest (newest) version possible.</p>
+<p>Download SSMS from the DfE software center, talk to your team about getting access to the appropriate SQL servers and databases where the data you need to access is held and start writing SQL queries.</p>
+<p>There are usually a couple of different versions available for software on the software center, we’d recommend you always go for the latest (newest) version possible.</p>
 <!-- gif getting this from the software center -->
 <hr />
 </div>
 <div id="best-place-to-start" class="section level2">
 <h2>Best place to start</h2>
 <hr />
-<p>Andy Brook’s excellent Introduction to SQL session, giving a visual
-overview of the basics of querying with SQL:</p>
+<p>Andy Brook’s excellent Introduction to SQL session, giving a visual overview of the basics of querying with SQL:</p>
 <div align="center">
 <iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/2a42789f-5183-4a79-b159-ec4a46e530d7?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;">
 </iframe>
@@ -470,49 +497,29 @@ overview of the basics of querying with SQL:</p>
 <div id="best-practice" class="section level2">
 <h2>Best practice</h2>
 <hr />
-<p>Here are some tips to follow best practice in your SQL code, making
-it easier to read and pick up if another person is running your code.
-Following best practice guidance will help you to achieve RAP best
-practice with <a href="rap.html#Clean_final_code">clean final
-code</a></p>
+<p>Here are some tips to follow best practice in your SQL code, making it easier to read and pick up if another person is running your code. Following best practice guidance will help you to achieve RAP best practice with <a href="rap.html#Clean_final_code">clean final code</a></p>
 <ul>
 <li>Avoid any trailing whitespace</li>
 <li>Always capitalize SQL keywords (e.g., SELECT or AS)</li>
-<li>Variable names should be in snake case - lower case words separated
-by underscores (e.g. pupil_age instead of PupilAge)</li>
-<li>Comments should go near the top of your query, or at least near the
-closest SELECT</li>
-<li>Try to only comment on things that aren’t obvious about the query
-(e.g. why hardcoded filters are used, how to update them)</li>
-<li>Where possible, use <a
-href="https://www.essentialsql.com/introduction-common-table-expressions-ctes/"
-target="_blank" rel="noopener noreferrer">Common Table Expressions
-(CTEs)</a> early and often, and name them descriptively
-(e.g. “pupil_age_table” rather than “p”)</li>
+<li>Variable names should be in snake case - lower case words separated by underscores (e.g. pupil_age instead of PupilAge)</li>
+<li>Comments should go near the top of your query, or at least near the closest SELECT</li>
+<li>Try to only comment on things that aren’t obvious about the query (e.g. why hardcoded filters are used, how to update them)</li>
+<li>Where possible, use <a href="https://www.essentialsql.com/introduction-common-table-expressions-ctes/" target="_blank" rel="noopener noreferrer">Common Table Expressions (CTEs)</a> early and often, and name them descriptively (e.g. “pupil_age_table” rather than “p”)</li>
 </ul>
 <hr />
 </div>
 <div id="how-to-work-with-sql" class="section level2">
 <h2>How to work with SQL</h2>
 <hr />
-<p>SSMS is the best tool to get started with writing SQL queries and
-saving SQL scripts that produce your desired outputs.</p>
-<p>Once you have saved SQL scripts or are more familiar with writing SQL
-queries on the fly, you can look at running your scripts or lines of SQL
-code <a href="rap.html#Connecting_R_to_SQL">directly in R</a>. This will
-streamline your process, saving copying and pasting SQL outputs into
-csvs, and ultimately help with reaching RAP best practice by aiding
-production of <a href="rap.html#Single_publication_production_script">a
-single publication production script</a></p>
+<p>SSMS is the best tool to get started with writing SQL queries and saving SQL scripts that produce your desired outputs.</p>
+<p>Once you have saved SQL scripts or are more familiar with writing SQL queries on the fly, you can look at running your scripts or lines of SQL code <a href="rap.html#Connecting_R_to_SQL">directly in R</a>. This will streamline your process, saving copying and pasting SQL outputs into csvs, and ultimately help with reaching RAP best practice by aiding production of <a href="rap.html#Single_publication_production_script">a single publication production script</a></p>
 <hr />
 </div>
 <div id="quick-reference-lookup" class="section level2">
 <h2>Quick reference lookup</h2>
 <hr />
 <ul>
-<li><a href="https://www.w3schools.com/sql/default.asp" target="_blank"
-rel="noopener noreferrer">w3schools.com</a> offers a useful guide
-through the most common SQL commands.</li>
+<li><a href="https://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener noreferrer">w3schools.com</a> offers a useful guide through the most common SQL commands.</li>
 </ul>
 <hr />
 </div>
@@ -520,32 +527,13 @@ through the most common SQL commands.</li>
 <h2>Other resources</h2>
 <hr />
 <ul>
-<li><p>This <a
-href="https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql"
-target="_blank" rel="noopener noreferrer">tutorial script</a> by Tom
-Franklin is a particularly good starting point as it includes the data
-you are manipulating, so you don’t need to worry about connecting to or
-getting access to specific databases before you can then run anything.
-Simply open up Microsoft SQL Server Management Studio and start playing
-with that query.</p></li>
-<li><p>Avision Ho created the this <a
-href="https://github.com/avisionh/Training-SQL" target="_blank"
-rel="noopener noreferrer">SQL training course</a>.</p></li>
-<li><p>The <a
-href="https://www.khanacademy.org/computing/computer-programming/sql"
-target="_blank" rel="noopener noreferrer">Khan academy</a> offers a
-great free introduction to the basics of SQL.</p></li>
-<li><p>It’s also worth taking a look at Jon Holman’s presentation on <a
-href="https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180321%5Fjonathan%5Fsql&amp;FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97"
-target="_blank" rel="noopener noreferrer">‘good to know’ SQL
-functions</a>.</p></li>
-<li><p>MoJ have produced a <a
-href="https://moj-analytical-services.github.io/SQL_from_square_one/CTEs.html"
-target="_blank" rel="noopener noreferrer">SQL from square one</a> guide
-to using CTE’s in SQL as well as running SQL from RStudio</p></li>
+<li><p>This <a href="https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql" target="_blank" rel="noopener noreferrer">tutorial script</a> by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don’t need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio and start playing with that query.</p></li>
+<li><p>Avision Ho created the this <a href="https://github.com/avisionh/Training-SQL" target="_blank" rel="noopener noreferrer">SQL training course</a>.</p></li>
+<li><p>The <a href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener noreferrer">Khan academy</a> offers a great free introduction to the basics of SQL.</p></li>
+<li><p>It’s also worth taking a look at Jon Holman’s presentation on <a href="https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180321%5Fjonathan%5Fsql&amp;FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97" target="_blank" rel="noopener noreferrer">‘good to know’ SQL functions</a>.</p></li>
+<li><p>MoJ have produced a <a href="https://moj-analytical-services.github.io/SQL_from_square_one/CTEs.html" target="_blank" rel="noopener noreferrer">SQL from square one</a> guide to using CTE’s in SQL as well as running SQL from RStudio</p></li>
 </ul>
-<p>Andy’s follow up intermediate SQL session, covering more advanced
-features of SQL:</p>
+<p>Andy’s follow up intermediate SQL session, covering more advanced features of SQL:</p>
 <div align="center">
 <iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;">
 </iframe>
@@ -558,33 +546,18 @@ features of SQL:</p>
 <div id="setting-up-a-sql-area" class="section level3">
 <h3>Setting up a SQL area</h3>
 <hr />
-<p>Before you set up a SQL database, make sure you have the following
-information to pass on:</p>
+<p>Before you set up a SQL database, make sure you have the following information to pass on:</p>
 <ul>
-<li>The name of the database you want to set up - Different servers will
-have different naming conventions, make sure to check this with the
-server owner before you confirm the name.</li>
-<li>Who the database owners should be - This will most likely be
-yourself, but you can have multiple (e.g. your team leader). It can be
-helpful to have more than one owner, so one can grant permissions when
-the other is unavailable.</li>
-<li>Who should have access, and what their access levels should be -
-Users can have read or read/write access. Make sure you have a list of
-users (with their AD names) and their access levels ready.</li>
-<li>The database structure - Do you need certain schemas setting up?
-This will help organise your database. Without schemas, all tables will
-be saved under [dbo].</li>
+<li>The name of the database you want to set up - Different servers will have different naming conventions, make sure to check this with the server owner before you confirm the name.</li>
+<li>Who the database owners should be - This will most likely be yourself, but you can have multiple (e.g. your team leader). It can be helpful to have more than one owner, so one can grant permissions when the other is unavailable.</li>
+<li>Who should have access, and what their access levels should be - Users can have read or read/write access. Make sure you have a list of users (with their AD names) and their access levels ready.</li>
+<li>The database structure - Do you need certain schemas setting up? This will help organise your database. Without schemas, all tables will be saved under [dbo].</li>
 </ul>
-<p>There are a few common servers that statistics producers make use of
-at DfE. Use the following contacts below to pass on the above
-information to get your new database set up:</p>
+<p>There are a few common servers that statistics producers make use of at DfE. Use the following contacts below to pass on the above information to get your new database set up:</p>
 <ul>
-<li>PDR (T1PRMDRSQL,55842) - contact the <a
-href="mailto:PupilData.REPOSITORY@education.gov.uk">PDR team</a></li>
-<li>PDB16 (3DCPRI-PDB16) - raise a request through the service desk
-under “non-standard” &gt; “any other request”</li>
-<li>Analyse &amp; Modelling server (T1PRANMSQL,60125) - raise a request
-on the service desk under the following options:</li>
+<li>PDR (T1PRMDRSQL,55842) - contact the <a href="mailto:PupilData.REPOSITORY@education.gov.uk">PDR team</a></li>
+<li>PDB16 (3DCPRI-PDB16) - raise a request through the service desk under “non-standard” &gt; “any other request”</li>
+<li>Analyse &amp; Modelling server (T1PRANMSQL,60125) - raise a request on the service desk under the following options:</li>
 </ul>
 <p><img src="images/A_M_SQL.PNG" /><!-- --></p>
 <hr />
@@ -592,18 +565,9 @@ on the service desk under the following options:</li>
 <div id="givinggetting-access" class="section level3">
 <h3>Giving/getting access</h3>
 <hr />
-<p>To gain access to a SQL database, you must have written confirmation
-from the database owner specifying whether your access is read-only or
-both read and write.</p>
-<p>If the area you require access to is in the <em>T1PRMDRSQL,55842</em>
-SQL server, contact the <a
-href="mailto:PupilData.REPOSITORY@education.gov.uk">PDR team</a> with
-your permission attached, stating the name of the database you want
-access to.</p>
-<p>If the area is in any other server, raise a request through the
-central IT service portal under “non-standard” &gt; “any other request”.
-In your request make sure you attach the written confirmation and
-specify:</p>
+<p>To gain access to a SQL database, you must have written confirmation from the database owner specifying whether your access is read-only or both read and write.</p>
+<p>If the area you require access to is in the <em>T1PRMDRSQL,55842</em> SQL server, contact the <a href="mailto:PupilData.REPOSITORY@education.gov.uk">PDR team</a> with your permission attached, stating the name of the database you want access to.</p>
+<p>If the area is in any other server, raise a request through the central IT service portal under “non-standard” &gt; “any other request”. In your request make sure you attach the written confirmation and specify:</p>
 <ul>
 <li>The server name</li>
 <li>The database name</li>
@@ -614,9 +578,7 @@ specify:</p>
 <div id="moving-data-to-different-areas" class="section level3">
 <h3>Moving data to different areas</h3>
 <hr />
-<p>Information on how to do this in R can be found in our <a
-href="rap.html#Moving_data_to_different_areas">processes and RAP
-page</a></p>
+<p>Information on how to do this in R can be found in our <a href="rap.html#Moving_data_to_different_areas">processes and RAP page</a></p>
 <hr />
 </div>
 </div>
