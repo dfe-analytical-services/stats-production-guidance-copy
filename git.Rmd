@@ -33,6 +33,8 @@ Download it from the [Git website](https://git-scm.com/downloads){target="_blank
 
 Git doesn't have an IDE, instead it will either integrate with your current IDE such as RStudio or Visual Studio Code, or run in the command line.
 
+When you first try to use Git you may be prompted for a GitHub username and password, if this happens you should generate a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and use this as your password. 
+
 ---
 
 ## Best places to start
@@ -267,6 +269,20 @@ Guidance on how to tag releases using git can be found on the draft version of t
 
 ---
 
+### Fix: cannot resolve proxy
+
+---
+
+If you get this error when trying to pull / push to a repository from a DfE laptop: 
+
+`fatal: unable to access 'https://dfe-gov-uk.visualstudio.com/stats-development/_git/ees-analytics-new/': Could not resolve proxy: mwg.proxy.ad.hq.dept`
+
+Then try running the following git command to clear the proxy settings in your git config file:
+
+`git config --global --unset http.proxy`
+
+---
+
 ### Cleaning up local branches
 
 ---
@@ -284,5 +300,67 @@ That should be all local branches tidied up. Now to complete the job you can pru
 `git remote prune origin`
 
 Though you can use `git remote -v` to find other remotes if you have them.
+
+---
+
+### Creating PATs
+
+---
+
+PATs or Personal access tokens, are a preferred way to authenticate into repositories through code. [Creating a PAT in GitHub](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token){target="_blank" rel="noopener noreferrer"} is relatively intuitive. 
+
+In Azure DevOps, you can do this by following [Microsoft's documentation on creating a PAT in Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#create-personal-access-tokens-to-authenticate-access){target="_blank" rel="noopener noreferrer"}.
+
+---
+
+### Storing secure variables
+
+---
+
+#### Azure DevOps
+
+---
+
+In Azure DevOps you can securely store variables that are then used by your pipelines by making use of variable groups. 
+
+First create a variable group by navigating to `Pipelines > Library`. Enter any variables you want to store here and make sure to change the variable type to secret if appropriate (i.e. login credentials or PATs).
+
+`r knitr::include_graphics("images/createVariableGroup.png")`
+
+Then, in the pipeline you want to use the variables in, go to `Variables > Variable groups` and link the variable group as shown below. You can then call upon the variables as needed in your pipeline.
+
+`r knitr::include_graphics("images/linkVariableGroup.png")`
+
+---
+
+#### GitHub
+
+---
+
+In GitHub you can store sensitive variables as [encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+
+---
+
+### Mirroring a repository
+
+---
+
+There may be times when you have a repository in one place, such as Azure DevOps, but want to mirror the code and any changes to it in another place, such as GitHub. This can be for many different reasons, though commonly for us it will be to open up our code across government. Azure DevOps doesn't provide us with easily publicly visible code repositories, however GitHub does.
+
+To mirror a code repository from Azure DevOps, use the [mirror git repository extension](https://github.com/swellaby/vsts-mirror-git-repository){target="_blank" rel="noopener noreferrer"} (already installed on dfe-gov-uk instance), make use of the PAT and secure variables sections above and then add a job to your pipeline and enter your parameters in the fields as per the example below:
+
+`r knitr::include_graphics("images/mirroringGit.png")`
+
+---
+
+### Fixing the "JSON token 4" error
+
+---
+
+This error can appear when you are trying to push changes to Azure DevOps.
+
+If it appears and you have not changed your password recently, try locking your laptop and seeing if on re-login it prompts you for a password change.
+
+If you have changed changed your password recently, try signing out of Azure and then back in again.
 
 ---

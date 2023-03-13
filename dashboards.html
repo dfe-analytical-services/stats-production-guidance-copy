@@ -13,7 +13,7 @@
 
 <title>Best practice for publishing dashboards</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -148,15 +148,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -382,6 +378,9 @@ div.tocify {
       <a href="ees.html">Using EES</a>
     </li>
     <li>
+      <a href="examples.html">EES examples</a>
+    </li>
+    <li>
       <a href="dashboards.html">Dashboards</a>
     </li>
   </ul>
@@ -459,12 +458,6 @@ teams using PowerBI, the department has a set of PowerBI dashboard
 standards that can be found on the <a
 href="https://dfe-analytical-services.github.io/powerbi_dashboardstandards/">DfE’s
 analytical services GitHub area</a>.</p>
-<p>There is also a dashboards version of the content design checklist.
-This checklist runs through a number of things to think about when
-developing dashboards to compliment official statistics and is worth
-using to design and also review any dashboards you own - <a
-href="resources/Content_Design_Logbook_Dashboards.xslx">Dashboards
-checklist (.xlsx)</a>.</p>
 <hr />
 </div>
 <div id="things-to-consider" class="section level1">
@@ -739,16 +732,11 @@ example of this kind of feedback survey is the <a
 href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-XMiKzsnr8xJoWM_DeGwIu9UNDJHOEJDRklTNVA1SDdLOFJITEwyWU1OQS4u">beta
 banner survey</a> on Explore Education Statistics.</p>
 <p><img src="images/betaBanner.png" /><!-- --></p>
-<p>Google Analytics is a free service that collects information on who
-visits your webpage and how they interact with it. You can set up basic
-Google Analytics for your published dashboard in a few simple steps
-outlined in this article: <a
-href="https://shiny.rstudio.com/articles/google-analytics.html">Add
-Google Analytics to a Shiny app</a> and view a more complex example in
-this <a
+<p>More details on setting up analytics for your dashboard will follow
+shortly, for help and advice on this in the meantime please take a look
+at this <a
 href="https://github.com/dfe-analytical-services/exclusion-statistics/blob/master/www/google-analytics.js">example
-file</a>. If you’re planning to publish a dashboard, or to set up Google
-Analytics for a published dashboard, please contact <a
+file</a> adding Google Analytics to a shiny dashboard, or contact <a
 href="mailto:statistics.development@education.gov.uk"
 class="email">statistics.development@education.gov.uk</a>.</p>
 <hr />
@@ -833,10 +821,6 @@ a subscription for this and can help you get set up.</p>
 standards</li>
 <li>Code in the dfe-analytical-services GitHub repo</li>
 <li>Approval from your DD</li>
-<li>If the data underlying the dashboard is currently unpublished, you
-will need to create dummy data to use in GitHub until the data becomes
-published (see <a href="#dummy-data">dummy data guidance</a>
-section).</li>
 </ul>
 <p>To set up a new app, send the above to <a
 href="mailto:statistics.development@education.gov.uk"
@@ -845,54 +829,6 @@ is not yet hosted in the dfe-analytical-services area you can request
 for the repository to be moved at the same time as sending
 approvals.</p>
 <hr />
-<div id="dummy-data" class="section level3">
-<h3>Dummy data</h3>
-<hr />
-<p>When creating a public dashboard, all code and data will be hosted in
-the dfe-analytical-services GitHub repo. This is a public repo, meaning
-anything stored in here is publicly available. Therefore if you are
-creating a dashboard with previously unpublished data, you should
-provide dummy data for the GitHub repo, and only add the real data on
-your publication date.</p>
-<p>Your dummy data should:</p>
-<ul>
-<li>Use the exact same structure and variable names as your real
-data</li>
-<li>Use random values in place of real values (one example of how to do
-this is using the <code>rnorm()</code> function)</li>
-<li>Simulate the types of suppression, missing data or anomalies seen in
-your real data, to ensure the dashboard can account for these.</li>
-</ul>
-<hr />
-</div>
-<div id="testing-with-unpublished-data" class="section level3">
-<h3>Testing with unpublished data</h3>
-<hr />
-<p>While you must use <a href="#dummy-data">dummy data</a> in your
-GitHub repo, it is understandable that we should test the dashboard
-works with the real data before it goes live.</p>
-<p>This can be done using the .gitignore file alongside the
-datafiles_log.csv and commit hooks explained in the <a
-href="#stopping-accidental-data-uploads">Stopping accidental data
-uploads guidance</a>.</p>
-<p>The .gitignore file is a plain text file that tells git to ignore
-specified files in commits and pushes to the repo. Therefore, the first
-step when wanting to test unpublished data in a dashboard is to add the
-unpublished data file names to the .gitignore file.</p>
-<p>Adding the file name alone will ensure it is ignored no matter where
-in the project area you save it (i.e. in any folder). Once this is done,
-you can add your unpublished data file to your local area, run the app
-locally, and make edits/commits without uploading the data to
-Github.</p>
-<p>This <a
-href="https://linuxize.com/post/gitignore-ignoring-files-in-git/#:~:text=.gitignore%20is%20a%20plain%20text%20file%20in%20which,a%20single%20backslash%20%28%29%20to%20escape%20the%20character.">.GitIgnore
-guidance page</a> has great guidance on how you can utilize wildcards to
-capture all the files you might want to ignore.</p>
-<p>If you have any questions on this process please do contact us at <a
-href="mailto:statistics.development@education.gov.uk"
-class="email">statistics.development@education.gov.uk</a>.</p>
-<hr />
-</div>
 </div>
 </div>
 <div id="r-shiny" class="section level1">
@@ -921,10 +857,13 @@ href="https://www.r-bloggers.com/2021/03/a-gentle-introduction-to-r-shiny/">blog
 post</a> provides a gentle introduction.</p>
 <p>Our <a
 href="https://github.com/dfe-analytical-services/shiny-template">template
-shiny app repository</a> is a useful starting point for all public
-facing dashboards in the department. Please see the <a
-href="#dfe-dashboard-template">dashboard template section</a> for
-guidance on what the dashboard template includes and how to use it.</p>
+shiny app repository</a> should be used a starting point for all public
+facing dashboards as it gives a consistent set up for publishing and
+provides template code for common parts. You can start your own
+repository using the ‘Use this template’ green button on the template
+repository. You will need a GitHub account to do this. If you are unsure
+or need help, contact the Statistics Development team who will be able
+to walk you through this.</p>
 <!-- You can create your own repo from the template by using the 'use template' button available in GitHub:
 GIF!  https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/?utm_campaign=1559837005&utm_medium=social&utm_source=twitter&utm_content=1559837005 -->
 <p>For more advanced shiny knowledge it’s worth taking a look at the
@@ -1192,9 +1131,7 @@ the meantime, there a few alternative options for storing data that the
 dashboard can run off.</p>
 <ul>
 <li><p>Store the data within the repo (e.g. CSV files in a /data
-folder). Note that only published data should be stored in a repo. If
-your working on a dashboard that uses unpublished data then please see
-the <a href="#dummy-data">dummy data section</a> for guidance.</p></li>
+folder)</p></li>
 <li><p>Use Google sheets</p></li>
 <li><p>Use Dropbox</p></li>
 </ul>
@@ -1209,77 +1146,6 @@ community teams area</a>.</p>
 <hr />
 <p>See our <a href="git.html#storing-secure-variables">Git</a> page for
 guidance on storing secure variables in repositories.</p>
-<hr />
-<hr />
-</div>
-</div>
-</div>
-<div id="dfe-dashboard-template" class="section level1">
-<h1>DfE Dashboard template</h1>
-<hr />
-<p>Our <a
-href="https://github.com/dfe-analytical-services/shiny-template">template
-shiny app repository</a> should be used a starting point for all public
-facing dashboards as it gives a consistent set up for publishing and
-provides template code for common parts. You can start your own
-repository using the ‘Use this template’ green button on the template
-repository. You will need a GitHub account to do this. If you are unsure
-or need help, contact the Statistics Development team who will be able
-to walk you through this.</p>
-<hr />
-<div id="whats-in-the-template" class="section level2">
-<h2>What’s in the template</h2>
-<hr />
-<p>The template provides code for a basic interactive dashboard, with an
-example line chart using drop-downs for education level and geographic
-levels. It also includes an example accessibility statement (this is a
-requirement for all public dashboards and must be filled in, see the <a
-href="#accessibility">Accessibility</a> and <a
-href="#accessibility-testing">Accessibility testing</a> sections earlier
-in this guidance), and a ‘Support and feedback’ page with suggested
-contact information and links.</p>
-<!-- Add a screenshot here when Rich finalises styling -->
-<hr />
-<div id="google-analytics" class="section level3">
-<h3>Google analytics</h3>
-<hr />
-<p>The template has a google_analytics.html file which is set up to
-track all basic metrics, plus the inputs from both drop-downs. To set
-this up with your own app you will need a new tracking tag (the long
-number in the gtag()) which the statistics development team can provide
-you with. Please contact us in order to set this up.</p>
-<hr />
-</div>
-<div id="data-files-log" class="section level3">
-<h3>Data files log</h3>
-<hr />
-<p>The datafiles_log.csv file is a record of all of the data files saved
-in the repo, and whether or not the data is published. You should log
-all data files here and accurately record whether the data is published,
-unpublished or reference data.</p>
-<hr />
-</div>
-<div id="stopping-accidental-data-uploads" class="section level3">
-<h3>Stopping accidental data uploads</h3>
-<hr />
-<p>If you see any of the following errors, it is because you are trying
-to commit a data file to the GitHub repo that hasn’t been recorded as
-published:</p>
-<p><code>Error: data/test_data.csv is not recorded in datafiles_log.csv.</code></p>
-<p><code>Error: data/test_data.csv is not logged as published or reference data in datafiles_log.csv and is not found in .gitignore.</code></p>
-<p>The template uses commit hooks and a datafiles_log.csv file. Commit
-hooks run automatically whenever you try to commit changes, and prevent
-any unpublished data being uploaded to the GitHub repo (see the <a
-href="#public-dashboards">public dashboards</a> and <a
-href="#dummy-data">dummy data</a> sections) by checking the
-datafiles_log.csv file.You should therefore record all data in the
-datafiles_log and record whether it is published, unpublished or
-reference dara. If you try to commit a file that is not recorded or is
-recorded as unpublished, git will not allow the commit. If you would
-like to save an unpublished data file locally to test the dashboard you
-should use the .gitignore file to ensure git ignores this file in your
-commits (see the <a href="#testing-with-unpublished-data">testing with
-unpublished data guidance</a>)</p>
 <hr />
 </div>
 </div>

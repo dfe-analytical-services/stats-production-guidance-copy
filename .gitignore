@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+site_libs
+*.html
+!header.html
+!google-analytics.html

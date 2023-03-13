@@ -17,6 +17,8 @@ navbar:
       menu:
         - text: "Processes and RAP"
           href: rap.html
+        - text: "RAP for managers"
+          href: rap_managers.html
         - text: "Open data standards"
           href: ud.html
         - text: "Writing and visualising"
@@ -27,8 +29,12 @@ navbar:
           href: pub.html
         - text: "Using EES"
           href: ees.html
+        - text: "EES examples"
+          href: examples.html
         - text: "Dashboards"
           href: dashboards.html
+        - text: Embedded R-Shiny charts
+          href: embedded-charts.html
     - text: "Understanding users"
       menu:
         - text: "User engagement"
@@ -39,7 +45,7 @@ navbar:
   - text: ""
     href: mailto:statistics.development@education.gov.uk
     icon: fa-envelope
-    
+
 output:
   html_document:
     toc: TRUE
@@ -47,4 +53,6 @@ output:
     css: images/acalat_theme.css
     anchor_sections: FALSE
     includes:
-     in_header: "header.html"
+     in_header:
+       - "header.html"
+       - "google-analytics.html"

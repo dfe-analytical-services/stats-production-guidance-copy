@@ -13,7 +13,8 @@
 
 <title>EES analytics</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -62,6 +63,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="images/acalat_theme.css" type="text/css" />
 
 
@@ -86,6 +88,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -311,7 +316,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -321,7 +326,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Learning and development
      
     <span class="caret"></span>
@@ -342,7 +347,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Creating statistics
      
     <span class="caret"></span>
@@ -360,7 +365,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Publishing statistics
      
     <span class="caret"></span>
@@ -373,12 +378,15 @@ div.tocify {
       <a href="ees.html">Using EES</a>
     </li>
     <li>
+      <a href="examples.html">EES examples</a>
+    </li>
+    <li>
       <a href="dashboards.html">Dashboards</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Understanding users
      
     <span class="caret"></span>
@@ -396,7 +404,7 @@ div.tocify {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="mailto:statistics.development@education.gov.uk">
-    <span class="fas fa-envelope"></span>
+    <span class="fa fa-envelope"></span>
      
     
   </a>
@@ -416,20 +424,27 @@ div.tocify {
 
 
 <p class="text-muted">
-Guidance on understanding how users are interacting with your statistics published via EES
+Guidance on understanding how users are interacting with your statistics
+published via EES
 </p>
 <hr />
-<p>We track analytics of users on Explore Education Statistics using Google Analytics as well as other tools. These analytics can be found on our <a href="https://rsconnect/rsc/ees-analytics/" target="_blank" rel="noopener noreferrer">EES Analytics dashboard</a>. This tells you a range of things like:</p>
+<p>We track analytics of users on Explore Education Statistics using
+Google Analytics as well as other tools. These analytics can be found on
+our <a href="https://rsconnect/rsc/ees-analytics/" target="_blank"
+rel="noopener noreferrer">EES Analytics dashboard</a>. This tells you a
+range of things like:</p>
 <ul>
 <li>How many times each accordion has been clicked</li>
 <li>How long users spend on your page</li>
-<li>How many times each table has been used in the table builder or downloaded</li>
+<li>How many times each table has been used in the table builder or
+downloaded</li>
 </ul>
 <hr />
 <div id="user-led-content-improvements" class="section level1">
 <h1>User-led content improvements</h1>
 <hr />
-<p>The below table gives some pointers on how you can use these stats to improve your release for users:</p>
+<p>The below table gives some pointers on how you can use these stats to
+improve your release for users:</p>
 <table>
 <colgroup>
 <col width="30%" />
@@ -444,27 +459,41 @@ Guidance on understanding how users are interacting with your statistics publish
 <tbody>
 <tr class="odd">
 <td>Search terms</td>
-<td>For popular search terms, add additional commentary or signposting using subheadings and accordions for to support your user’s interests. If you refer to a popular search term by another name, consider changing it so users know what you’re talking about.</td>
+<td>For popular search terms, add additional commentary or signposting
+using subheadings and accordions for to support your user’s interests.
+If you refer to a popular search term by another name, consider changing
+it so users know what you’re talking about.</td>
 </tr>
 <tr class="even">
 <td>Accordion openings</td>
-<td>Consider removing accordions with low numbers of clicks from your release. You could move them further up the page or group them into existing accordions if this commentary is essential to your release.</td>
+<td>Consider removing accordions with low numbers of clicks from your
+release. You could move them further up the page or group them into
+existing accordions if this commentary is essential to your
+release.</td>
 </tr>
 <tr class="odd">
 <td>Downloads</td>
-<td>For files with low numbers of downloads, consider combining information into other files, or consider removing from your publication entirely if users are no longer interested in this data.</td>
+<td>For files with low numbers of downloads, consider combining
+information into other files, or consider removing from your publication
+entirely if users are no longer interested in this data.</td>
 </tr>
 <tr class="even">
 <td>Tables built</td>
-<td>For tables with low numbers of interactions in the table tool, create featured tables to demonstrate the useful information they hold.</td>
+<td>For tables with low numbers of interactions in the table tool,
+create featured tables to demonstrate the useful information they
+hold.</td>
 </tr>
 <tr class="odd">
 <td>Permalinks</td>
-<td>Save popular permalinks as featured tables in future, so users can easily get to the data they want.</td>
+<td>Save popular permalinks as featured tables in future, so users can
+easily get to the data they want.</td>
 </tr>
 <tr class="even">
 <td>Traffic sources</td>
-<td>Consider where your users are being routed from and what is being written about your stats - clearly highlight key stories in the Headlines section and make use of the blue key stat tiles to make them easy to digest.</td>
+<td>Consider where your users are being routed from and what is being
+written about your stats - clearly highlight key stories in the
+Headlines section and make use of the blue key stat tiles to make them
+easy to digest.</td>
 </tr>
 </tbody>
 </table>
@@ -508,6 +537,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

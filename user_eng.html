@@ -13,7 +13,8 @@
 
 <title>User engagement</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -62,6 +63,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="images/acalat_theme.css" type="text/css" />
 
 
@@ -86,6 +88,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -311,7 +316,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -321,7 +326,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Learning and development
      
     <span class="caret"></span>
@@ -342,7 +347,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Creating statistics
      
     <span class="caret"></span>
@@ -360,7 +365,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Publishing statistics
      
     <span class="caret"></span>
@@ -373,12 +378,15 @@ div.tocify {
       <a href="ees.html">Using EES</a>
     </li>
     <li>
+      <a href="examples.html">EES examples</a>
+    </li>
+    <li>
       <a href="dashboards.html">Dashboards</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Understanding users
      
     <span class="caret"></span>
@@ -396,7 +404,7 @@ div.tocify {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="mailto:statistics.development@education.gov.uk">
-    <span class="fas fa-envelope"></span>
+    <span class="fa fa-envelope"></span>
      
     
   </a>
@@ -416,41 +424,244 @@ div.tocify {
 
 
 <p class="text-muted">
-Guidance on understanding and engaging with the users of published statistics
+Guidance on understanding and engaging with the users of published
+statistics
 </p>
 <hr />
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <hr />
-<p>User engagement is about building sustainable relationships and feedback loops between statistics producers, users and potential users of statistics and other relevant stakeholders.</p>
-<p>Being user centred is a key departmental priority. It is critical that we actively engage with the users of our statistics, and not just the ones who shout the loudest. There are thousands of users out there and teams should be actively be getting feedback on their publications from a variety of users - policy colleagues, local authorities, schools, media, and the general public to name but a few.</p>
-<p>Users of statistics come from a broad range of different backgrounds and organisations and may need to use our statistics for a wide variety of reasons. We need to do our best to understand these different kinds of users and cater for them all.</p>
-<p>The <a href="https://code.statisticsauthority.gov.uk/">Code of Practice for Statistics</a> states that “users of statistics and data should be at the centre of statistical production; their needs should be understood, their views sought and acted on, and their use of statistics supported”. The quality pillar of the Code of Practice also reminds us that statistics should fit their intended uses. Producers of statistics will only know whether this element of quality continues to be achieved by regularly engaging with a full range of users.</p>
+<p>User engagement is about building sustainable relationships and
+feedback loops between statistics producers, users and potential users
+of statistics and other relevant stakeholders.</p>
+<p>Being user centred is a key departmental priority. It is critical
+that we actively engage with the users of our statistics, and not just
+the ones who shout the loudest. There are thousands of users out there
+and teams should be actively be getting feedback on their publications
+from a variety of users - policy colleagues, local authorities, schools,
+media, and the general public to name but a few.</p>
+<p>Users of statistics come from a broad range of different backgrounds
+and organisations and may need to use our statistics for a wide variety
+of reasons. We need to do our best to understand these different kinds
+of users and cater for them all.</p>
+<p>The <a href="https://code.statisticsauthority.gov.uk/">Code of
+Practice for Statistics</a> states that “users of statistics and data
+should be at the centre of statistical production; their needs should be
+understood, their views sought and acted on, and their use of statistics
+supported”. The quality pillar of the Code of Practice also reminds us
+that statistics should fit their intended uses. Producers of statistics
+will only know whether this element of quality continues to be achieved
+by regularly engaging with a full range of users.</p>
 <hr />
 <div id="user-hub" class="section level2">
 <h2>USER hub</h2>
 <hr />
-<p>The USER hub is now available on the <a href="https://gss.civilservice.gov.uk/user-support-and-engagement-resource-hub/">GSS website</a>, this is a central resource to help producers of statistics develop the knowledge, skills and techniques needed to engage effectively with their audiences.</p>
+<p>The USER hub is now available on the <a
+href="https://gss.civilservice.gov.uk/user-support-and-engagement-resource-hub/">GSS
+website</a>, this is a central resource to help producers of statistics
+develop the knowledge, skills and techniques needed to engage
+effectively with their audiences.</p>
 <hr />
 </div>
-<div id="top-tips" class="section level2">
-<h2>Top tips</h2>
+<div id="improving-your-own-engagmenent" class="section level2">
+<h2>Improving your own engagmenent</h2>
 <hr />
-<p>Download this <a href="resources/2021_05_14_Top_Tips.docx" target="_blank" rel="noopener noreferrer">top tips document</a> produced for the GSS, as a starting point for understanding how you can improve your user engagement.</p>
+<p>Download this <a href="resources/2021_05_14_Top_Tips.docx"
+target="_blank" rel="noopener noreferrer">top tips document</a> produced
+for the GSS, as a starting point for understanding how you can improve
+your user engagement.</p>
+<p>Through our work engaging users on EES we have built up a list of
+interested users who have stated a willingness to be contacted about
+opportunities to be involved in user testing of our statistics on the
+platform, if you have any suggestions for things for us to test on EES
+with these users, please contact <a
+href="mailto:explore.statistics@education.gov.uk">explore.statistics@education.gov.uk</a>.</p>
+<p>More advice and guidance will follow in this space. In the meantime,
+if you’re interested in user engagement please contact Heather
+Brown.</p>
 <hr />
+</div>
+<div id="case-studies" class="section level2">
+<h2>Case studies</h2>
+<hr />
+<div id="explore-education-statistics-service" class="section level3">
+<h3>Explore Education Statistics service</h3>
+<hr />
+<p>Explore Education Statistics was born from a discovery project, where
+the emphasis of the discovery was to understand who the users of the
+Department’s official statistics are, what they need, and where the DfE
+are currently meeting, exceeding or failing to meet those needs. We
+spoke to over 90 users directly, via 1 to 1 sessions or workshops and
+had over 130 survey responses. We used this research to create user
+personas and user stories which we then assessed ourselves against to
+see how well we were meeting those needs - the result of this was a
+recommendation that we needed to do something better. <a
+href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/721729/HiveIT_-_DfE_dissemination_discovery.pdf">Our
+discovery report</a> is published on gov.uk.</p>
+<p>Following the discovery we moved through to the alpha phase, where we
+built prototypes and carried out extensive user testing to firm up the
+functionality that might be required - focussing on different user
+journeys and the user experience at each step. We then passed a GDS
+service assessment where our approach was tested against the <a
+href="https://www.gov.uk/service-manual/service-standard">GDS service
+standard</a> before moving into the private beta phase where we started
+building the service for real. We user-tested every bit of the journey
+thoroughly and used feedback from users to iterate on the functionality
+we were making available. User testing was primarily through 1 on 1
+sessions where users would be set activities to work through and we
+would watch how the user clicked through each part of the relevant
+journey and to ask what they might expect to see at any different steps
+of the process - both when creating/publishing statistics releases and
+using releases after publishing. We also ran workshops and carried out
+user surveys to collect as much evidence as possible, for more
+information on this take a look at the <a
+href="https://hiveit.co.uk/our-work/dfe-private-beta/">write up of our
+private beta phase on Hive IT’s website</a>.</p>
+<p><img src="images/dfe-beta-engagements.jpg" style="display: block; margin: auto;" /></p>
+<p>In March 2020 we wrapped up the build of the service and were given
+the green light via a GDS service assessment to move into our public
+beta phase. That’s when we started using the service for real and teams
+started publishing statistics via EES only. Ongoing user feedback has
+been really important throughout public beta as it has helped us move
+the service from a minimal viable product to one that works in the best
+way possible for everyone. We also use this engagement to help us
+understand how well we are meeting our KPIs, which we review regularly
+to see how well we are meeting the original aims of the service thinking
+back to our original discovery and what users told us they needed. There
+are a number of ongoing feedback routes open to users during the public
+beta phase of the service:</p>
+<ul>
+<li><p>Beta banner (service focus) Users can submit feedback through the
+beta banner from any EES page, and responses are managed by the
+statistics development team. Feedback so far has mostly been aimed at
+the service functionality more generally but we do regularly get
+publication specific feedback which we share with the relevant
+teams.</p></li>
+<li><p>Formal user testing (service focus) Our EES team will speak to
+users via user testing sessions to help inform future iterations to
+functionality.</p></li>
+<li><p>In-release feedback requests (publication focus) Some teams have
+been including specific calls for feedback within their release pages
+e.g. - <a
+href="https://explore-education-statistics.service.gov.uk/find-statistics/apprenticeships-and-traineeships"
+class="uri">https://explore-education-statistics.service.gov.uk/find-statistics/apprenticeships-and-traineeships</a></p></li>
+<li><p>Google analytics We collect user analytics to help us understand
+what users are doing with our statistics. This information is shared
+with production teams via our <a
+href="https://rsconnect/rsc/ees-analytics/">EES analytics
+app</a>.</p></li>
+</ul>
+<p>For more information, get in touch with the team at <a
+href="mailto:explore.statistics@education.gov.uk">explore.statistics@education.gov.uk</a>.</p>
+<hr />
+</div>
+<div id="school-places-local-authority-scorecard"
+class="section level3">
+<h3>School places local authority scorecard</h3>
+<hr />
+<p>In 2021 the annual ‘Local Authority School Places Scorecard’
+publication was cancelled, due to Covid- 19, allowing time for
+user-engagement and development of the scorecard. This is a dashboard
+publication allowing users to select a specific local authority in
+England, to view it’s progress in providing quality school places.
+Firstly, internal feedback was sought and received, and generally users
+found the Scorecard a useful tool. Longer-term additions were
+identified, however short-term development was also needed to improve
+the accessibility of the Scorecard so this was the first developmental
+focus. The Scorecard has been previously published as an excel-based
+dashboard, however this method of publication was no longer viable due
+to new rules and regulations for official statistics publications. A new
+platform was therefore needed and R shiny was suggested as an accessible
+platform. A new version of a previously published scorecard was produced
+in R shiny. This was then published externally to gather feedback from
+users to check they could obtain the required information. The scorecard
+contained a link to a short survey and over 90 internal and external
+users responded (after email invitations were sent allowing a month to
+complete). Most users found the R shiny version easier to use compared
+to the excel based dashboard which was positive. Suggestions for
+improvement were gathered and quite a few users mentioned they missed
+the one-page format of the excel scorecard (the R shiny version has tabs
+to get to some visualisations) and found some of the newer charts
+slightly confusing. Therefore solutions were proposed e.g. a
+downloadable one page PDF summary and alternative charts/clearer
+guidance. Development work is still ongoing with the new R shiny
+scorecard due for publication in June 2022. When published this should
+include improvements to address the most frequent suggestions mentioned
+in the survey, to ensure users can gather the information they need from
+the scorecard. For any further information contact Natalie Paterson in
+the Pupil Place Planning Data team.</p>
+<hr />
+</div>
+<div id="cin-cla-outcomes-statistical-release" class="section level3">
+<h3>CIN-CLA outcomes statistical release</h3>
+<hr />
+<p>In 2020 we created a new statistical release which incorporated
+changes to the annual <a
+href="https://www.gov.uk/government/collections/statistics-looked-after-children">Outcomes
+for children looked after by LAs</a> statistical release and outcomes
+within the <a
+href="https://www.gov.uk/government/collections/statistics-children-in-need">Characteristics
+of children in need</a> statistical release, proposed by the department
+in September 2020. Improving these statistics was a commitment made at
+the end of the <a
+href="https://www.gov.uk/government/publications/children-in-need-of-help-and-protection-data-and-analysis">CIN
+review</a>. As part of the review of the National Statistics, an ad-hoc
+release was published <a
+href="https://explore-education-statistics.service.gov.uk/find-statistics/outcomes-of-children-in-need-including-looked-after-children">(Outcomes
+of children in need including looked after children)</a> and we asked
+users to submit feedback on the proposals through the running of a
+consultation via Gov.UK to which people could respond <a
+href="https://www.gov.uk/government/publications/children-in-need-and-looked-after-children-statistics-proposed-changes">(Children
+in need and looked after children statistics: proposed changes)</a>. We
+involved policy colleagues (including policy analysts) in the proposed
+changes ahead of publishing. We engaged with colleagues across the
+department to identify known users and user groups and notified them of
+the request for feedback on the proposals We also followed up with a
+reminder as we got closer to the deadline. As part of this process, we
+had a meeting with the main stakeholders (the board of the National
+Association of Virtual School Heads). These key were very keen to
+respond to the proposals but were having difficulty with resource and
+time to provide a comprehensive response, so we agreed to have a meeting
+to talk through everything and we took notes. Reaching out to users and
+actively engaging with them produced a great result - we received a wide
+range of feedback from a range of sources including previously unknown
+users. We received external and internal feedback. We published the
+results of the feedback on the proposals on gov.uk, including a summary
+of the feedback received and what we were able to incorporate into the
+new publication. This was not an official Government consultation and we
+had to negotiate with gov.uk on how to publish the documents. We were
+advised that going forward, it would be preferable for user engagement
+of this type to be published alongside the statistical releases as part
+of the new EES platform. For any further information contact Bree
+Waine.</p>
+<hr />
+</div>
 </div>
 </div>
 <div id="ons-strategy" class="section level1">
 <h1>ONS strategy</h1>
 <hr />
-<p>The ONS published a <a href="https://gss.civilservice.gov.uk/policy-store/user-engagement-strategy-for-statistics-ensuring-official-statistics-meet-societys-need/" target="_blank" rel="noopener noreferrer">user engagement strategy</a> in February 2021.</p>
-<p>The strategy sets out that many producers of statistics are already carrying out regular and effective user engagement. The strategy aims to build on this good work to embed user engagement as an essential part of a statistician’s role. The strategy sets out a vision and addresses the barriers to effective user engagement via three goals:</p>
+<p>The ONS published a <a
+href="https://gss.civilservice.gov.uk/policy-store/user-engagement-strategy-for-statistics-ensuring-official-statistics-meet-societys-need/"
+target="_blank" rel="noopener noreferrer">user engagement strategy</a>
+in February 2021.</p>
+<p>The strategy sets out that many producers of statistics are already
+carrying out regular and effective user engagement. The strategy aims to
+build on this good work to embed user engagement as an essential part of
+a statistician’s role. The strategy sets out a vision and addresses the
+barriers to effective user engagement via three goals:</p>
 <ol style="list-style-type: decimal">
-<li><p>Collaboration – collaborate across boundaries to offer a more coherent user experience</p></li>
-<li><p>Capability – build capability and equip producers of statistics with the practical skills and tools to deliver effective user engagement activities</p></li>
-<li><p>Culture – strengthen our culture and ensure user engagement is always an ongoing and essential part of a statistics producer’s role</p></li>
+<li><p>Collaboration – collaborate across boundaries to offer a more
+coherent user experience</p></li>
+<li><p>Capability – build capability and equip producers of statistics
+with the practical skills and tools to deliver effective user engagement
+activities</p></li>
+<li><p>Culture – strengthen our culture and ensure user engagement is
+always an ongoing and essential part of a statistics producer’s
+role</p></li>
 </ol>
-<p>The launch of the strategy, as well as two further videos on the value of user engagement are embedded below:</p>
+<p>The launch of the strategy, as well as two further videos on the
+value of user engagement are embedded below:</p>
 <div align="center">
 <iframe width="640" height="360" src="https://www.youtube.com/embed/n7VYdVpNRXU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
@@ -463,7 +674,9 @@ Guidance on understanding and engaging with the users of published statistics
 <iframe width="640" height="360" src="https://www.youtube.com/embed/H91A_9EnQ3U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
-<p>The ONS have also published <a href="https://gss.civilservice.gov.uk/policy-store/user-engagement-top-tips/">ten top tips to help improve user engagement</a>.</p>
+<p>The ONS have also published <a
+href="https://gss.civilservice.gov.uk/policy-store/user-engagement-top-tips/">ten
+top tips to help improve user engagement</a>.</p>
 <hr />
 </div>
 <div id="user-engagement-successes" class="section level2">
@@ -475,18 +688,86 @@ Guidance on understanding and engaging with the users of published statistics
 </div>
 <hr />
 </div>
-<div id="dfe-user-engagement-strategy" class="section level2">
-<h2>DfE user engagement strategy</h2>
+</div>
+<div id="dfe-user-engagement-strategy" class="section level1">
+<h1>DfE user engagement strategy</h1>
 <hr />
-<p>DfE are working with ONS and others to consider how to take forward work in this area. DfE have put together an initial statement (note that this is in draft and should only be used as a guide internally):</p>
+<p>DfE are working with ONS and others to consider how to take forward
+work in this area. DfE have put together an initial statement (note that
+this is in draft and should only be used as a guide internally):</p>
 <blockquote>
-<p>Work to understand and engage our users is vital to ensuring statistics are suitably and best communicated, and help the department in continuously reflecting and improving products and its services. DfE welcomes the ONS strategy and collective focus on user engagement.</p>
-<p>As part of our efforts to meet wider user needs, the Department has undertaken <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/721729/HiveIT_-_DfE_dissemination_discovery.pdf">extensive user research</a> over the past few years in development of the new Explore Education Statistics platform to disseminate our statistics. We continue to develop this platform in line with user research and feedback. Through the intelligent use of supporting analytics, we are learning more about how our wide range of users find and use statistics, and how best to tailor our outputs to meet their needs. This will help us embed user need even more strongly into our statistics development.</p>
-<p>In addition and more broadly, the department is working with ONS Best Practice Team to consider guidance around user engagement and how best to take forward the strategy for the department. In line with this, as part of these developments we will be reviewing and refreshing our current <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/287444/User_engagement_policy.pdf">public-facing user engagement strategy</a> which will then be reviewed annually.</p>
+<p>Work to understand and engage our users is vital to ensuring
+statistics are suitably and best communicated, and help the department
+in continuously reflecting and improving products and its services. DfE
+welcomes the ONS strategy and collective focus on user engagement.</p>
+<p>As part of our efforts to meet wider user needs, the Department has
+undertaken <a
+href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/721729/HiveIT_-_DfE_dissemination_discovery.pdf">extensive
+user research</a> over the past few years in development of the new
+Explore Education Statistics platform to disseminate our statistics. We
+continue to develop this platform in line with user research and
+feedback. Through the intelligent use of supporting analytics, we are
+learning more about how our wide range of users find and use statistics,
+and how best to tailor our outputs to meet their needs. This will help
+us embed user need even more strongly into our statistics
+development.</p>
+<p>In addition and more broadly, the department is working with ONS Best
+Practice Team to consider guidance around user engagement and how best
+to take forward the strategy for the department. In line with this, as
+part of these developments we will be reviewing and refreshing our
+current <a
+href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/287444/User_engagement_policy.pdf">public-facing
+user engagement strategy</a> which will then be reviewed annually.</p>
 </blockquote>
-<p>Teams are encouraged to already start to think about who their users are, the channels they use to understand their needs and the user experience. Publication teams should keep abreast of <a href="user_an.html">user analytics</a> to understand more about how users use and access their statistics and whether further improvements could be made. In addition, teams should also think about the ways they can glean feedback on their publication(s), this may include internal checks regards enhancements such as participating in <a href="cd.html#publication-scrums">content design scrum(s)</a>.</p>
+<p>Teams are encouraged to already start to think about who their users
+are, the channels they use to understand their needs and the user
+experience. Publication teams should keep abreast of <a
+href="user_an.html">user analytics</a> to understand more about how
+users use and access their statistics and whether further improvements
+could be made. In addition, teams should also think about the ways they
+can glean feedback on their publication(s), this may include internal
+checks regards enhancements such as participating in <a
+href="cd.html#publication-scrums">content design scrum(s)</a>.</p>
 <hr />
-<p>More details and example case studies to follow.</p>
+<div id="consultations" class="section level2">
+<h2>Consultations</h2>
+<hr />
+<p>If you are considering changes to your publication and are
+contemplating a formal consultation do get in touch with HOP office
+early on to discuss.</p>
+<p>To read more about consultations for background information please
+see the following two links:</p>
+<ul>
+<li><a
+href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/100807/file47158.pdf">Code
+of Practice on Consultations</a></li>
+<li><a
+href="https://www.gov.uk/government/publications/consultation-principles-guidance">Consultation
+principles: guidance - GOV.UK (www.gov.uk)</a></li>
+</ul>
+<p>With the first of the above links, please bear in mind this was
+written back in 2008 so certain aspects may have been updated but the
+background and principles do remain the same.</p>
+<p>Some examples of previous consultations are included below:</p>
+<ul>
+<li><a
+href="https://www.officeforstudents.org.uk/publications/student-outcomes-and-teaching-excellence-consultations/outcome-and-experience-data/">Outcome
+and experience data - Office for Students</a></li>
+<li><a
+href="https://www.officeforstudents.org.uk/publications/consultation-on-data-futures-and-data-collection/">Consultation
+on Data Futures and data collection - Office for Students</a></li>
+<li><a
+href="https://www.gov.uk/government/consultations/surveys-on-childcare-and-early-years-in-england">Surveys
+on childcare and early years in England - GOV.UK (www.gov.uk)</a></li>
+<li><a
+href="https://www.gov.uk/government/consultations/the-publication-income-related-benefits-estimates-of-take-up">Proposed
+cessation of ‘Income related benefits: estimates of take-up’ statistics
+- GOV.UK (www.gov.uk)</a></li>
+<li><a
+href="https://www.gov.uk/government/consultations/proposals-for-a-new-statistical-series-to-count-unemployed-claimants">Proposals
+for a new statistical series to count unemployed claimants - GOV.UK
+(www.gov.uk)</a></li>
+</ul>
 <hr />
 </div>
 </div>
@@ -529,6 +810,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

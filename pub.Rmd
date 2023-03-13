@@ -84,7 +84,7 @@ Before you publish a release you have created in the platform you should have:
 * Checked all the data has loaded successfully
 * Written footnotes
 * Written content (including tables and charts)
-* Created a public metadata document
+* Created a data guidance document
 * Created a public pre-release access list
 * Ensured methodology information is either linked off to or attached to the release
 * Passed the release for higher review (senior sign-off)
@@ -94,7 +94,7 @@ Before you publish a release you have created in the platform you should have:
 * Raised a web ticket for the associated gov.uk page 
 
 <div class="alert alert-dismissible alert-info">
-Word templates for the external metadata, pra-list, and content can be found on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy){target="_blank" rel="noopener noreferrer"}.
+Word templates for the data guidance, pra-list, and content can be found on [sharepoint](https://educationgovuk.sharepoint.com/:f:/r/sites/DfEStatisticsCoherence/Shared%20Documents/Templates%20-%20Explore%20Education%20Statistics?csf=1&e=7iJoUy){target="_blank" rel="noopener noreferrer"}.
 </div>
 
 ---

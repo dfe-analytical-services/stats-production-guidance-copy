@@ -14,6 +14,8 @@ require(knitr)
 
 ---
 
+RAP (Reproducible Analytical Pipelines) is doing well documented, reproducible, quality analysis using the best tools available to us as analysts.
+
 Cam ran an introduction to RAP session for DISD in December 2020, the slides can be found on [GitHub](https://github.com/cjrace/introduction-to-rap){target="_blank" rel="noopener noreferrer"}, and the recording is embedded below:
 
 <div align="center">
@@ -70,7 +72,7 @@ The collection of, and routine checking of data as it is coming into the departm
 
 ---
 
-The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The general expectation is that all teams will have shifted towards the good practice implementation of RAP by the end of their next production cycle. It's worth acknowledging that some teams are already working around great and best practice levels, and that we appreciate every team's situation is unique.
+The diagram below highlights what RAP means for us, and the varying levels in which it can be applied. The expectation is that all publications will meet the department's baseline implementation of RAP in the self-assessment tool. It's worth acknowledging that some teams are already working around great and best practice levels, and that we appreciate every team's situation is unique, our guidance is designed to be applicable across all official statistcs publications by DfE.
 
 
 <html>
@@ -78,7 +80,7 @@ The diagram below highlights what RAP means for us, and the varying levels in wh
 <title>hex-diagram</title>
 <meta charset="utf-8"/>
 </head>
-<body><div class="mxgraph" style="max-width:100%;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2021-08-18T10:25:02.923Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36\&quot; etag=\&quot;jSyYB7bDkOPA0TCQu9Kf\&quot; version=\&quot;14.9.7\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;_ltWYIdbVKAG_Xyvna0Y\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<body><div class="mxgraph" style="max-width:100%;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2023-01-25T13:50:00.816Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36\&quot; etag=\&quot;fFHFq3WaFkuAxXLjLQzX\&quot; version=\&quot;20.8.10\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;_ltWYIdbVKAG_Xyvna0Y\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 </body>
 </html>
@@ -89,12 +91,15 @@ The diagram below highlights what RAP means for us, and the varying levels in wh
 
 ---
 
-<div class="alert alert-dismissible alert-info">
+<div class="alert alert-dismissible alert-warning">
+It is expected that **all teams' processes meet all elements of good and great practice** as a baseline.
+
 Teams are expected to review their own processes using the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank" rel="noopener noreferrer"} and use the guidance on this site to start making improvements towards meeting the four core principles if they aren't already. If you would like additional help to review your processes, please contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
 </div>
 
 Teams will start from different places and implement changes at different rates, and in different ways. We do not expect that every team will follow the same path, or even end at the same point. Don't worry if this seems overwhelming at first, use the guidance here to identify areas for improvement and then tackle them with confidence.
 
+While working to reach our baseline expectation of good and great practice, you can track your progress in the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank" rel="noopener noreferrer"} and contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk) for help and support.
 
 ---
 
@@ -106,7 +111,7 @@ Teams will start from different places and implement changes at different rates,
 The checklist provided in the [publication self-assessment tool](https://rsconnect/rsc/publication-self-assessment){target="_blank" rel="noopener noreferrer"} is designed to make reviewing our processes against our RAP levels easier, giving a straightforward list of questions to check your work against. This will flag potential areas of improvement, and you can then use the links to go to the specific section with more detail and guidance on how to develop your current processes in line with best practice.
 
 
-Some teams will already be looking at best practice, while others will still have work to do to achieve good practice. We know that all teams are starting this from different points, and are here to support all teams from their respective starting positions.
+Some teams will already be looking at best practice, while others will still have work to do to achieve the department's baseline of good and great practice. We know that all teams are starting this from different points, and are here to support all teams from their respective starting positions.
 
 ---
 
@@ -351,11 +356,11 @@ By following [our guidance](#Version_controlled_final_code_scripts) in saving ve
 
 ---
 
-## Using single code scripts
+## Using 'run' scripts
 
 ---
 
-Utilising a single script to run processes brings a number of benefits, not least by allowing us to fully automate the process and remove the need to manually trigger different code scripts to get the outputs.
+Utilising a single 'run' script to execute processes written in other scripts brings a number of benefits. It isn't just about removing the need to manually trigger different code scripts to get the outputs, but it means the entire process, from start to finish, is fully documented in one place. This has a huge number of benefits, particularly for enabling new team members to pick up existing work quickly, without wasting time struggling to understand what has been done in the past. 
 
 ---
 
@@ -365,7 +370,7 @@ Utilising a single script to run processes brings a number of benefits, not leas
 
 In order to create a single script to run all processes from, it is likely that you will need to use R to run SQL queries. If you are unsure of how to do this, take a look at the materials from Cathy Atkinson's coffee and coding session on [connecting R to SQL using DBI and odbc](https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97&View=%7B2B35083D%2D7626%2D48E2%2D9615%2D451544742692%7D&id=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL%2FConnecting%5Fto%5FSQL%5FRevA%2Ehtml&parent=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180718%5Fcathy%5FR%5FSQL).
 
-Chris Mason-Thom recently did another coffee and coding session on this, which you can watch below: 
+Chris Mason-Thom did another coffee and coding session on this, which you can watch below: 
 
 <center>
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c9b7fd97-c854-4a1a-9074-cd80d2ea285e?autoplay=false&amp;showinfo=false" allowfullscreen style="border:none;"></iframe>
@@ -373,7 +378,7 @@ Chris Mason-Thom recently did another coffee and coding session on this, which y
 
 ---
 
-### Single production scripts 
+### Dataset production scripts 
 
 ---
 
@@ -381,25 +386,25 @@ Chris Mason-Thom recently did another coffee and coding session on this, which y
 
 **What does this mean?**
 
-Each file can be created by running a single script. 
+Each dataset can be created by running a single script, which may 'source' multiple scripts within it. This **does not** mean that all of the code to create a file must be written in a single script, but instead that there is a single 'create file' or 'run' script that sources every step in the correct order such that every step from beginning to end will be executed if you run that single 'run' script.
 
-This script should take the source data right through to final output at the push of a button, including any manipulation, aggregation, suppression etc.
+This 'run' script should take the source data right through to final output at the push of a button, including any manipulation, aggregation, suppression etc.
 
 
 **Why do it?**
 
-Having a single script for this saves time when needing to rerun processes, and provides a clear documentation of how a file is produced.
+Having a script that documents the whole process for this saves time when needing to rerun processes, and provides a clear documentation of how a file is produced.
 
 
 **How to get started**
 
-Review your current process - how many file scripts does it take to get from source data to final output, and why are they separated? 
+Review your current process - how many file scripts does it take to get from source data to final output, why are they separated, and what order should they be run in? Do you still have manual steps that could introduce human error (for example, manually moving column orders around in excel)?
 
-If it makes sense to, move the scripts into one. If not, you can write code in [R](r.html) to execute your scripts in order, so you are still only running one script to get the final output.
+You should automate any manual steps such as the example above. If it makes sense to, you could combine certain scripts to reduce the number. You can then write code in [R](r.html) to execute your scripts in order, so you are still only running one script to get the final output.
 
 ---
 
-### Single production scripts with integrated QA 
+### Whole publication production scripts
 
 ---
 
@@ -407,46 +412,24 @@ If it makes sense to, move the scripts into one. If not, you can write code in [
 
 **What does this mean?**
 
-All quality assurance for a file is also included in the single script that can be used to create a file from source data.
+The ultimate aim is to utilise a single script to document and run off everything for a publication, the data files, any QA, any summary reports. This script should allow you to run individual outputs by themselves as well, so make sure that each data file can be run in isolation by running single lines of this script.
+All quality assurance for a file is also included in the single script that can be used to create a file from source data (see the [dataset production scripts section](#dataset-production-scripts))
 
 **Why do it?**
 
-This documents the entire process around the data file in a single place. This makes it easier for new analysts to pick up the process, as well as making it quicker and easier to rerun as all reports relating to that file are immediately available if you ever make changes file.
-
-
-**How to get started**
-
-This takes the idea of a [single production script](#Single_production_scripts) per file one step further, by integrating quality assurance. More often than not, this will be in the form of a html RMarkdown report. You can write code in [R](r.html) to execute your scripts in order and also write your quality assurance reports, so you are still only running one script to get the final output.
-
----
-
-### Single publication production script 
-
----
-
-`r knitr::include_graphics("images/best.svg")`
-
-**What does this mean?**
-
-The ultimate aim is to utilise a single script to run off everything for a publication, the data files, any QA, any summary reports. This script should allow you to run individual outputs by themselves as well, so make sure that each data file can be run in isolation by running single lines of this script.
-
-**Why do it?**
-
-This carries all of the same benefits as having a single master script for a file, but at a wider publication level, effectively documenting the entire publication process in one place. 
+This carries all of the same benefits as having a single 'run' script for a file, but at a wider publication level, effectively documenting the entire publication process in one place. This makes it easier for new analysts to pick up the process, as well as making it quicker and easier to rerun as all reports relating to that file are immediately available if you ever make changes file.
 
 **How to get started**
 
-The Education, Health and Care Plans production cycle is a good example of a single publication script. They have kept their actual data processing in SQL, but all the running and manipulation of the data happens in R.
+The Education, Health and Care Plans production cycle is a good example of a single publication 'run' script. They have kept their actual data processing in SQL, but all the running and manipulation of the data happens in R.
 
 The cycle originally consisted of multiple SQL scripts, manual QA and generation of final files.
 
 `r knitr::include_graphics("images/Old process.jpg")`
 
-The team now have a single end-to-end fully documented process, which runs off of one single R script. The R code points at the SQL scripts to run them all in one go, and also creates a QA report and corresponding metadata files that pass the data screener. Each data file can still be run in isolation from this script.
+The team now have their end-to-end process fully documented, which can be run off of one single R script. The 'run' script points at the SQL scripts to run them all in one go, and also creates a QA report and corresponding metadata files that pass the data screener. Each data file can still be run in isolation from this script.
 
 `r knitr::include_graphics("images/New process.jpg")`
-
-
 
 ---
 
@@ -586,7 +569,9 @@ When peer reviewing code you should be consider the following questions -
 * Are there comments explaining why any decisions have been made?
 * Is the code written and structured sensibly?
 * Are there any ways to make the code more efficient (either in number of lines or raw speed)?
-* At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation
+* Does the code follow best practice for styling and structure?
+* Are there any other teams/bits of code you're aware of that do similar things and would be useful to point the authors towards?
+* At the end of the review, was there any information you needed to ask about that should be made more apparent in the code or documentation?
 
 Depending on your access you may or may not be able to run the code yourself, but there should be enough information within the code and documentation to be able to respond to these questions. 
 
@@ -697,6 +682,8 @@ Any data files that have been created will need to be quality assured. These che
 Some teams are already making great progress with automated QA and realising the benefits of it. The Statistics Development Team are working with these to provide generalised code that teams can use as a starting point for automated QA. The intention is that teams can then run this as a minimum, before then looking to develop more area specific checks to the script and/or continue with current checking processes in tandem. If your team already use, or are working towards using, automated QA then get in touch as we'd be keen to see what you have.
 
 It is assumed that when using R, automated scripts will output .html reports that the team can read through to understand their data and identify any issues, and save as a part of their process documentation.
+
+For more information on general quality assurance best practice in DfE, see the [How to QA guide](https://dfe-analytical-services.github.io/how-to-qa/index.html).
 
 ---
 
@@ -1036,17 +1023,23 @@ Once you have navigated to this page, fill out the form with the following detai
 
 `r knitr::include_graphics("images/devops_request_details.PNG")`
 
-Access is usually granted within a few working days. Alert the [Statistics Development Team](mailto:statistics.development@education.gov.uk) when this is confirmed, and we will set up/give you access to your repository.
+Access is usually granted within a few working days. Alert the [Statistics Development Team](mailto:statistics.development@education.gov.uk) when this is confirmed, and we will set up your repository and give your team access.
 
 ---
 
-### Open source repositories
+### Use open source repositories
 
 ---
+
+`r knitr::include_graphics("images/best.svg")`
 
 **What does this mean?**
 
-Repositories that are visible to the public.
+Saving or cloning your work into a repository that is visible to the public. We currently have brilliant examples of this in our [DfE analytical services GitHub area](https://github.com/dfe-analytical-services), in which all of the code used to create public dashboards is publicly available. 
+
+For statistics publications we expect teams to be able to mirror their proccess code on GitHub after publication, which will help open up their code for other analysts to learn from.
+
+We are currently working on ways to mirror private repos (i.e. AzureDevOps) to public repos on publication of your data. If you are interested in this please contact the [Statistics Development Team](mailto:statistics.development@education.gov.uk).
 
 **Why do it?**
 
@@ -1054,9 +1047,9 @@ It's a key part of the [technology code of practice](https://www.gov.uk/governme
 
 **How to get started?**
 
-Contact us to get a repository set up in our dfe-analytical-services area on GitHub.
+Contact us to get a repository set up in Azure DevOps, to set up a mirroring process to GitHub or to set up a repository on our dfe-analytical-services area on GitHub.
 
-In general, if you're thinking of making an Official Statistics production repository public, you should consider the following (assuming that you are using R, though these principles will apply more widely):
+You should consider the following principles making an Official Statistics production repository public (some examples are R specific though can be applied to other languages):
 
 - Follow the guidance on [writing a readme file](#writing-a-readme-file), and add context in about what Official/National statistics are
 - Ensure no data (either input or output) is included in the repository
