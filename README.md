@@ -1,3 +1,8 @@
+# **IMPORTANT - THIS PROJECT IS NO LONGER ACTIVELY MAINTAINED.**
+
+# **Have a look at our [Analysts' guide](https://github.com/dfe-analytical-services/analysts-guide) instead.**
+
+
 <h1 align="center">
   <br>
   DfE statistics production guidance 
